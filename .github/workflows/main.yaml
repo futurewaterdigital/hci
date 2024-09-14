@@ -21,7 +21,12 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }} # Your SSH username
           password: ${{ secrets.SSH_PASSWORD }} # SSH password stored in GitHub Secrets
           port: 22 # Default SSH port
-
-          # Commands to run on the server
           script: |
             cd /var/www/html/website
+            git pull origin main
+
+      # Step 3: Add Debugging to Output SSH Command Details
+      - name: Enable Debugging
+        run: |
+          set -x
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /var/www/html/website && git pull origin main"
