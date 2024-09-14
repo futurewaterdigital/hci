@@ -25,6 +25,3 @@ jobs:
           # Commands to run on the server
           script: |
             cd /var/www/html/website
-            git pull origin main
-            # Optionally build the app if needed (e.g., npm install, npm run build)
-            # Restart the service if necessary (e.g., sudo systemctl restart <your-service>)
