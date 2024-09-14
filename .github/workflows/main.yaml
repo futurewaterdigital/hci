@@ -21,3 +21,5 @@ jobs:
             cd /var/www/html/website
             sudo git config --global --add safe.directory /var/www/html/website
             sudo git pull origin main
+            sudo npm run build
+            sudo pm2 restart 0
