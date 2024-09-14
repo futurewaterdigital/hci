@@ -13,13 +13,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Deploy the code to the DigitalOcean droplet via SSH
+      # Step 2: Deploy the code to the DigitalOcean droplet via SSH (with password)
       - name: Deploy to DigitalOcean Droplet
-        uses: appleboy/ssh-action@v0.1.4 # Use the latest stable version
+        uses: appleboy/ssh-action@v0.1.4
         with:
           host: ${{ secrets.SSH_HOST }} # DigitalOcean Droplet IP
           username: ${{ secrets.SSH_USERNAME }} # Your SSH username
-          key: ${{ secrets.SSH_KEY }} # SSH private key stored in GitHub Secrets
+          password: ${{ secrets.SSH_PASSWORD }} # SSH password stored in GitHub Secrets
           port: 22 # Default SSH port
 
           # Commands to run on the server
