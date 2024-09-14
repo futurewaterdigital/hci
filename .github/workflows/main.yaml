@@ -21,3 +21,5 @@ jobs:
             cd /var/www/html/website
             sudo git config --global --add safe.directory /var/www/html/website
             sudo git pull origin main
+            npm install  # Ensure all dependencies are installed
+            npm run build  # Run the build script
