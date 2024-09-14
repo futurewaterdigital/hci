@@ -26,5 +26,3 @@ jobs:
           script: |
             cd /var/www/html/website
             git pull origin main
-            # npm install # Install dependencies if necessary
-            # sudo systemctl restart your-nodejs-service # Restart the app service (change to your service)
