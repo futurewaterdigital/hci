@@ -166,14 +166,14 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center justify-end gap-10">
-          <div className="bg-red-200 w-[250px]">
+          <div className="w-[230px] group">
             <form className="max-w-sm mx-auto">
               <div className="relative flex items-center  z-50">
                 {/* <!-- Search input initially hidden --> */}
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-0 p-4 pe-10 text-sm text-gray-900 border-0 bg-transparent transition-all duration-300 group-hover:w-[500px] group-hover:border-b-blue-500 hover:border-b-2 focus:ring-0 focus:border-b-blue-500"
+                  className="block w-0 group-hover:w-[230px] p-4 pe-10 text-sm text-gray-900 border-0 bg-transparent transition-all duration-300  group-hover:border-b-blue-500 hover:border-b-2 focus:ring-0 focus:border-b-blue-500"
                   placeholder="Search Doctors, Treatments, Hospitals"
                   required
                 />
