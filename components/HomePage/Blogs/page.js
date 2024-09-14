@@ -24,7 +24,7 @@ export default function Testimonials() {
               className="bg-white border border-gray-200 rounded-lg group overflow-hidden transition-all duration-300 hover:border-[#0E56A0]"
             >
               <Image
-                className="rounded transition-transform duration-300 group-hover:scale-105"
+                className="rounded transition-transform duration-300 group-hover:scale-105 mx-auto w-full h-72"
                 src={items.featureImage}
                 alt={items.title} // Added alt text for accessibility
                 width={200}
