@@ -7,15 +7,24 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Deploy Node.js App via SSH
-        uses: appleboy/ssh-action@master
+      # Step 1: Checkout the code from the GitHub repository
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
+      # Step 2: Deploy the code to the DigitalOcean droplet via SSH
+      - name: Deploy to DigitalOcean Droplet
+        uses: appleboy/ssh-action@v0.1.0 # Use a stable version of the SSH action
         with:
-          host: ${{ secrets.SSH_HOST }} # Your server's IP address
-          username: ${{ secrets.SSH_USERNAME }} # Your server's SSH username
-          password: ${{ secrets.SSH_PASSWORD }} # Password for SSH login
+          host: ${{ secrets.SSH_HOST }} # DigitalOcean Droplet IP
+          username: ${{ secrets.SSH_USERNAME }} # Your SSH username
+          key: ${{ secrets.SSH_KEY }} # SSH private key stored in GitHub Secrets
+          port: 22 # Default SSH port
 
+          # Commands to run on the server
           script: |
             cd /var/www/html/nemonode
             git pull origin main
+            npm install # Install dependencies if necessary
+            sudo systemctl restart your-nodejs-service # Restart the app service (change to your service)
