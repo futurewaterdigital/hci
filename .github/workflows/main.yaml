@@ -8,21 +8,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Next.js App via SSH
+      - name: Deploy Node.js App via SSH
         uses: appleboy/ssh-action@master
 
         with:
           host: ${{ secrets.SSH_HOST }} # Your server's IP address
           username: ${{ secrets.SSH_USERNAME }} # Your server's SSH username
-          password: ${{ secrets.SSH_PASSWORD }} # Password for SSH instead of key-based authentication
+          password: ${{ secrets.SSH_PASSWORD }} # Password for SSH login
 
           script: |
-            # Change to the project directory
-            cd /var/www/html/website
-
-            # Pull the latest code from the main branch
+            cd /var/www/html/nemonode
             git pull origin main
-
-            # Switch to sudo user and run commands
-            echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S whoami  # Check sudo access
-            # sudo -S systemctl restart your-nodejs-service # Restart the service (update to your actual service name)
