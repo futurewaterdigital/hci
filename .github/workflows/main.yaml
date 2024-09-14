@@ -1,20 +1,20 @@
-name: Build & Deploy
+name: SSH Login Check
 
 on:
   push:
     branches: [main]
 
 jobs:
-  deploy:
+  ssh-login-check:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the code from the GitHub repository
+      # Step 1: Checkout the code from the GitHub repository (Optional, can be removed)
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Deploy the code to the DigitalOcean droplet via SSH (with password)
-      - name: Deploy to DigitalOcean Droplet
+      # Step 2: Test SSH connection to DigitalOcean droplet
+      - name: SSH Login Check
         uses: appleboy/ssh-action@v0.1.4
         with:
           host: ${{ secrets.SSH_HOST }} # DigitalOcean Droplet IP
@@ -22,11 +22,4 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }} # SSH password stored in GitHub Secrets
           port: 22 # Default SSH port
           script: |
-            cd /var/www/html/website
-            git pull origin main
-
-      # Step 3: Add Debugging to Output SSH Command Details
-      - name: Enable Debugging
-        run: |
-          set -x
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /var/www/html/website && git pull origin main"
+            echo "SSH login successful!"
