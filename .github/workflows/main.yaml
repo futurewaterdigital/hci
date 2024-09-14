@@ -11,11 +11,11 @@ jobs:
     steps:
       # Step 1: Checkout the code from the GitHub repository
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Step 2: Deploy the code to the DigitalOcean droplet via SSH
       - name: Deploy to DigitalOcean Droplet
-        uses: appleboy/ssh-action@v0.1.0 # Use a stable version of the SSH action
+        uses: appleboy/ssh-action@v0.1.4 # Use the latest stable version
         with:
           host: ${{ secrets.SSH_HOST }} # DigitalOcean Droplet IP
           username: ${{ secrets.SSH_USERNAME }} # Your SSH username
@@ -26,3 +26,5 @@ jobs:
           script: |
             cd /var/www/html/website
             git pull origin main
+            # Optionally build the app if needed (e.g., npm install, npm run build)
+            # Restart the service if necessary (e.g., sudo systemctl restart <your-service>)
