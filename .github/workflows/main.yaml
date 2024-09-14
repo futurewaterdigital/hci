@@ -24,7 +24,7 @@ jobs:
 
           # Commands to run on the server
           script: |
-            cd /var/www/html/nemonode
+            cd /var/www/html/website
             git pull origin main
-            npm install # Install dependencies if necessary
-            sudo systemctl restart your-nodejs-service # Restart the app service (change to your service)
+            # npm install # Install dependencies if necessary
+            # sudo systemctl restart your-nodejs-service # Restart the app service (change to your service)
