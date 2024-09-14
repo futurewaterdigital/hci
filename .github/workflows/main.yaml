@@ -19,5 +19,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /var/www/html/website
-            sudo su
-            git pull origin main
+            sudo git config --global --add safe.directory /var/www/html/website
+            sudo git pull origin main
