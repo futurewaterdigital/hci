@@ -16,7 +16,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: |
-            whoami
-            cd /var/www/html/website
-            git pull origin main
+          script: cd /var/www/html/website
