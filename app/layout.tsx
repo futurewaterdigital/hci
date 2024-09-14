@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Healthcare International',
-  description: 'Healthcare International',
+  description: 'Healthcare International.',
 }
 
 export default function RootLayout({
