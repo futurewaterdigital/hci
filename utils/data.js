@@ -1,34 +1,10 @@
 export const bannerContent = [
-  {
-    treatment: 'Cardiac Sciences',
-    treatmentDesc:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
-  {
-    treatment: 'Oncology',
-    treatmentDesc:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
-  {
-    treatment: 'Neuro Sciences',
-    treatmentDesc:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
-  {
-    treatment: 'Gastroenterology',
-    treatmentDesc:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
-  {
-    treatment: 'Orthopaedics',
-    treatmentDesc:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
-  {
-    treatment: 'Others',
-    treatmentDesc:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  },
+  { treatment: 'Cardiac Sciences' },
+  { treatment: 'Oncology' },
+  { treatment: 'Neuro Sciences' },
+  { treatment: 'Gastroenterology' },
+  { treatment: 'Orthopaedics' },
+  { treatment: 'Others' },
 ]
 
 export const hciNetwork = [

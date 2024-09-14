@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-
+// import Link from 'next/link'
 import { bannerContent } from '../../../utils/data'
 
 function Banner() {
@@ -20,6 +19,7 @@ function Banner() {
           <div className="grid grid-cols-3 gap-4 p-20">
             {bannerContent.map((items, index) => (
               <button
+                key={index}
                 type="button"
                 class="py-2.5 px-5 me-2 mb-2 text-[30px] font-light text-[#0E56A0] focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#0E56A0] hover:text-white focus:z-10 focus:ring-4 focus:ring-[#0E56A0]"
               >
