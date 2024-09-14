@@ -1,25 +1,15 @@
-name: SSH Login Check
-
-on:
-  push:
-    branches: [main]
-
+name: remote ssh command
+on: [push]
 jobs:
-  ssh-login-check:
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the code from the GitHub repository (Optional, can be removed)
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      # Step 2: Test SSH connection to DigitalOcean droplet
-      - name: SSH Login Check
-        uses: appleboy/ssh-action@v0.1.4
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.2
         with:
-          host: ${{ secrets.SSH_HOST }} # DigitalOcean Droplet IP
-          username: ${{ secrets.SSH_USERNAME }} # Your SSH username
-          password: ${{ secrets.SSH_PASSWORD }} # SSH password stored in GitHub Secrets
-          port: 22 # Default SSH port
-          script: |
-            echo "SSH login successful!"
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: whoami
