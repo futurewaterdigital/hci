@@ -19,7 +19,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /var/www/html/website
-            sudo git config --global --add safe.directory /var/www/html/website
-            sudo git pull origin main
-            sudo npm install  # Ensure all dependencies are installed
-            sudo npm run build  # Run the build script
+            echo ${{ secrets.PASSWORD }} | sudo -S git config --global --add safe.directory /var/www/html/website
+            echo ${{ secrets.PASSWORD }} | sudo -S git pull origin main
+            echo ${{ secrets.PASSWORD }} | sudo -S npm install
+            echo ${{ secrets.PASSWORD }} | sudo -S npm run build
