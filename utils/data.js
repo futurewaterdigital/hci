@@ -113,3 +113,4 @@ export const faqs = [
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
   },
 ]
+export const menu = [{ options: 'About Us' }, { options: 'Contact Us' }]

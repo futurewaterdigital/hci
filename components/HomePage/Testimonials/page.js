@@ -1,6 +1,7 @@
 import React from 'react'
 import { testimonials } from '@/utils/data'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Testimonials() {
   return (
@@ -47,10 +48,12 @@ export default function Testimonials() {
               class=" bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group"
               key={index}
             >
-              <img
+              <Image
                 class="w-24 h-24 my-3 rounded-full shadow-lg mx-auto"
                 src={items.profile}
                 alt=""
+                width={100}
+                height={100}
               />
               <div class="p-5">
                 <h5 class="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]">

@@ -46,9 +46,10 @@ export default function Patients() {
             width={800}
             height={800}
             className="z-50"
+            alt="Assisting patients in india"
           />
           <div className="absolute bg-[#B8DEFF] h-[27em] w-[40em] right-9 top-12 rounded-2xl p-10">
-            hello
+            Assisting patients
           </div>
         </div>
       </div>

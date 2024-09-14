@@ -1,6 +1,7 @@
 import React from 'react'
 import { blogs } from '@/utils/data'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Testimonials() {
   return (
@@ -22,10 +23,12 @@ export default function Testimonials() {
               key={index}
               className="bg-white border border-gray-200 rounded-lg group overflow-hidden transition-all duration-300 hover:border-[#0E56A0]"
             >
-              <img
+              <Image
                 className="rounded transition-transform duration-300 group-hover:scale-105"
                 src={items.featureImage}
                 alt={items.title} // Added alt text for accessibility
+                width={200}
+                height={200}
               />
               <div className="p-5">
                 <h5 className="text-xl font-normal tracking-tight text-black">

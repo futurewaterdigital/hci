@@ -31,7 +31,12 @@ function Network() {
               class="p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group"
               key={index}
             >
-              <Image src={items.image} width={100} height={100} />
+              <Image
+                src={items.image}
+                width={100}
+                height={100}
+                alt={`Health Care in ${items.cityName}`}
+              />
               <h4 className="text-2xl font-medium text-[#0E56A0] py-4">
                 {items.cityName}
               </h4>
