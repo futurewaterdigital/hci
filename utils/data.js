@@ -143,7 +143,7 @@ export const footerMenu = [
     category: 'Contacts',
     links: [
       {
-        name: '354/428, 1st FLOOR, 27TH MAIN ROAD, SECTOR-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka',
+        name: '354/428, 1st Floor, 27TH Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka',
         url: '',
       },
       { name: 'Phone: +91 70550 18181', url: '' },
