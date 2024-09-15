@@ -184,7 +184,7 @@ export default function Header() {
             }`}
           >
             <Link
-              href="/"
+              href="/contact-us"
               className="sm:py-1 sm:px-1 sm:me-1 sm:mb-1 md:py-2 md:px-4 md:me-2 md:mb-2 py-2 px-4 me-2 mb-2 text-lg font-medium text-[#D84498] rounded-lg border border-[#D84498] hover:bg-[#D84498] hover:text-white opacity-100 z-50 tracking-[2px]"
             >
               CONTACT US
