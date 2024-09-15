@@ -74,7 +74,7 @@ export default function Faqs() {
           </h4>
         </div>
 
-        <div className="items-center justify-center mx-auto py-10 text-left">
+        <div className="items-center justify-center mx-auto py-4 text-left">
           {faqs.map((item, index) => (
             <div
               key={index}
