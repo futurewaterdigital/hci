@@ -1,5 +1,6 @@
 import React from 'react'
 import { whyHCI } from '@/utils/data'
+import Image from 'next/image'
 
 export default function whoHCI() {
   return (
@@ -14,11 +15,13 @@ export default function whoHCI() {
             key={index}
           >
             <div className="flex items-center justify-center relative">
-              <img
+              <Image
                 class="rounded-t-lg w-40 absolute"
                 src={items.icon}
                 alt={items.title}
                 className="text-center"
+                width={150}
+                height={150}
               />
             </div>
 
