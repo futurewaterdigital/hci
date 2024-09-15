@@ -13,7 +13,7 @@ export default function WhoHCI() {
             class="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center"
             key={index}
           >
-            <div className="flex items-center bg-red-500 justify-center relative">
+            <div className="flex items-center justify-center relative">
               <img
                 class="rounded-t-lg w-40 absolute"
                 src={items.icon}
