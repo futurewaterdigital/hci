@@ -8,11 +8,11 @@ export const bannerContent = [
 ]
 
 export const hciNetwork = [
-  { image: '/cities/bangalore.png', cityName: 'Bangalore', linkUrl: '' },
-  { image: '/cities/bangalore.png', cityName: 'Chennai', linkUrl: '' },
-  { image: '/cities/bangalore.png', cityName: 'Delhi', linkUrl: '' },
-  { image: '/cities/bangalore.png', cityName: 'Hyderabad', linkUrl: '' },
-  { image: '/cities/bangalore.png', cityName: 'Mumbai', linkUrl: '' },
+  { image: '/cities/bangalore.svg', cityName: 'Bangalore', linkUrl: '' },
+  { image: '/cities/chennai.svg', cityName: 'Chennai', linkUrl: '' },
+  { image: '/cities/delhi.svg', cityName: 'Delhi', linkUrl: '' },
+  { image: '/cities/hyderabad.svg', cityName: 'Hyderabad', linkUrl: '' },
+  { image: '/cities/mumbai.svg', cityName: 'Mumbai', linkUrl: '' },
 ]
 
 export const testimonials = [
@@ -95,11 +95,18 @@ export const faqs = [
       'This is how you go about selecting  the right doctor for your condition. First, ensure their expertise in treating your condition. Check patient reviews and hospital affiliations as well. Then, it will also be worthwhile to seek a consultation with our medical team here at Healthcare International for recommendations bespoked  to your individual healthcare needs.',
   },
 ]
-export const menu = [{ options: 'About Us' }, { options: 'Contact Us' }]
+export const menu = [
+  { options: 'About Us', url: '/about-us' },
+  { options: 'Contact Us', url: '/contact-us' },
+]
 
 export const medicalConditions = [
-  { condition: 'Heart Surgery' },
-  { condition: 'Heart Surgery' },
+  { condition: 'Cardiac Sciences' },
+  { condition: 'Oncology' },
+  { condition: 'Neuro Sciences' },
+  { condition: 'Gastroenterology' },
+  { condition: 'Orthopaedics' },
+  { condition: 'Others' },
 ]
 
 export const hospitalName = [
@@ -152,3 +159,61 @@ export const bottomSection = {
   ],
   copyright: 'Copyright © 2024, Healthcare International',
 }
+export const whyHCI = [
+  {
+    title: 'Accurate information',
+    icon: '/images/point-1.svg',
+    excerpt: `Patients are provided accurate and authentic information on
+              various centres, locations, expertise, and treatments helping them
+              take informed decisions.`,
+  },
+  {
+    title: 'Global expertise',
+    icon: '/images/point-2.svg',
+    excerpt: `Patients can avail the latest treatments from across the world and have access to world-renowned specialists ensuring the best care at optimum costs.`,
+  },
+  {
+    title: 'Comprehensive support',
+    icon: '/images/point-3.svg',
+    excerpt: `Right from travel documentation to post-treatment care, we work closely with patients to offer a compassionate, reassuring experience.`,
+  },
+]
+
+export const valueHCI = [
+  {
+    title: 'Excellence',
+    excerpt:
+      'We are committed to top-class healthcare that includes the best of options for the patient in terms of location, facility, expertise and post-treatment care. We are committed to make the entire experience smooth and stress-free.',
+  },
+  {
+    title: 'Compassion',
+    excerpt:
+      'We are concerned about the patient’s well-being and work in their best interests at all times. We are empathetic to the patient’s point of view and offer advice that works best in his/ her interest. Always.',
+  },
+  {
+    title: 'Integrity',
+    excerpt:
+      'We are governed by honesty and integrity in all our actions. We are transparent when it comes to advice on choice of centres, procedures, or treatment options.',
+  },
+]
+
+export const locations = [
+  {
+    title: 'Phone',
+    icon: '/images/phone.svg',
+    excerpt: `+91 7055018181`,
+    url: 'tel:+91 7055018181',
+  },
+  {
+    title: 'Email',
+    icon: '/images/email.svg',
+    excerpt: `info@healthcareinternational.in`,
+    url: 'mailto:info@healthcareinternational.in',
+  },
+  {
+    title: 'Address',
+    icon: '/images/location.svg',
+    excerpt: `354/428, 1st FLOOR, 27TH MAIN ROAD, SECTOR-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka`,
+    url: '',
+  },
+]

@@ -104,7 +104,7 @@ export default function Header() {
                   key={index}
                 >
                   <Link
-                    href="#"
+                    href={items.url}
                     className="text-black hover:text-blue-800  font-medium rounded-0 text-lg"
                   >
                     {items.options}
@@ -132,14 +132,16 @@ export default function Header() {
         </div>
 
         <div className="relative h-20 flex justify-center items-center">
-          <div className="bg-white h-28 rounded-lg w-64 flex justify-center p-4">
-            <Image
-              src="/images/logo.png"
-              width={500}
-              height={100}
-              className="rounded-lg"
-            />
-          </div>
+          <Link href="/">
+            <div className="bg-white h-28 rounded-lg w-64 flex justify-center p-4">
+              <Image
+                src="/images/logo.png"
+                width={500}
+                height={100}
+                className="rounded-lg"
+              />
+            </div>
+          </Link>
         </div>
 
         <div className="relative flex items-center justify-end gap-0">

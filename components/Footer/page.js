@@ -24,7 +24,12 @@ export default function Footer() {
             medical outcomes for each of its patients.
           </p>
           <p className="text-[12px]">
-            Email : <b>info@healthcareinternational.in</b>
+            Email :{' '}
+            <b>
+              <Link href="mailto:info@healthcareinternational.in">
+                info@healthcareinternational.in
+              </Link>
+            </b>
           </p>
         </div>
         {footerMenu.map((section, index) => (

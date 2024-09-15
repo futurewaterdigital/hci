@@ -12,7 +12,7 @@ import Faqs from '../components/HomePage/Faqs/page'
 // import Appointment from '../components/HomePage/Appointment/page'
 import Footer from '../components/Footer/page'
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <Header />
