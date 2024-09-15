@@ -111,7 +111,7 @@ export const medicalConditions = [
 
 export const hospitalName = [
   { name: 'Apollo Hospital' },
-  { name: 'Sakara Hospital' },
+  { name: 'Manipal Hospital' },
 ]
 
 export const doctorsName = [
