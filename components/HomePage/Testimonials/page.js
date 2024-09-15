@@ -58,56 +58,56 @@ export default function Testimonials() {
     }`
   }
 
-  if (loading) {
-    return (
-      <div className="py-10 w-11/12 text-center mx-auto">
-        <div className="text-3xl font-bold pb-10 font-roboto">
-          <h4 className="animate-pulse bg-gray-200 h-8 w-60 mx-auto rounded"></h4>
-          <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
-        </div>
-        <p className="text-1xl font-light w-6/12 mx-auto">
-          <span className="animate-pulse bg-gray-200 h-6 w-full block rounded"></span>
-        </p>
-        <div className="grid grid-cols-3 py-10 w-7/12 mx-auto">
-          {categories.map((item) => (
-            <div key={item.id} className="flex justify-end items-center">
-              <button
-                type="button"
-                className={`animate-pulse bg-gray-200 text-transparent border border-gray-300 rounded-lg text-sm px-16 py-2.5 text-center me-2 mb-2`}
-              >
-                <span className="block h-4 w-24 bg-gray-300 rounded"></span>
-              </button>
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
-          {Array(3)
-            .fill(null)
-            .map((_, index) => (
-              <div
-                className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative animate-pulse"
-                key={index}
-              >
-                <div className="w-24 h-24 my-3 rounded-full mx-auto bg-gray-200"></div>
-                <div className="p-5">
-                  <h5 className="text-xl font-normal tracking-tight text-black bg-gray-200 h-6 w-3/4 rounded"></h5>
-                  <p className="py-3 font-light text-gray-400 text-[12px] h-[150px] bg-gray-200 rounded"></p>
-                </div>
-                <div className="absolute mt-[-35px] right-4 bg-gray-200 h-6 w-12 rounded"></div>
-              </div>
-            ))}
-        </div>
-        <div>
-          <Link
-            href=""
-            className="text-[#d8449880] text-[16px] font-semibold tracking-widest"
-          >
-            <span className="animate-pulse bg-gray-200 h-6 w-24 rounded inline-block"></span>
-          </Link>
-        </div>
-      </div>
-    )
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="py-10 w-11/12 text-center mx-auto">
+  //       <div className="text-3xl font-bold pb-10 font-roboto">
+  //         <h4 className="animate-pulse bg-gray-200 h-8 w-60 mx-auto rounded"></h4>
+  //         <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
+  //       </div>
+  //       <p className="text-1xl font-light w-6/12 mx-auto">
+  //         <span className="animate-pulse bg-gray-200 h-6 w-full block rounded"></span>
+  //       </p>
+  //       <div className="grid grid-cols-3 py-10 w-7/12 mx-auto">
+  //         {categories.map((item) => (
+  //           <div key={item.id} className="flex justify-end items-center">
+  //             <button
+  //               type="button"
+  //               className={`animate-pulse bg-gray-200 text-transparent border border-gray-300 rounded-lg text-sm px-16 py-2.5 text-center me-2 mb-2`}
+  //             >
+  //               <span className="block h-4 w-24 bg-gray-300 rounded"></span>
+  //             </button>
+  //           </div>
+  //         ))}
+  //       </div>
+  //       <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
+  //         {Array(3)
+  //           .fill(null)
+  //           .map((_, index) => (
+  //             <div
+  //               className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative animate-pulse"
+  //               key={index}
+  //             >
+  //               <div className="w-24 h-24 my-3 rounded-full mx-auto bg-gray-200"></div>
+  //               <div className="p-5">
+  //                 <h5 className="text-xl font-normal tracking-tight text-black bg-gray-200 h-6 w-3/4 rounded"></h5>
+  //                 <p className="py-3 font-light text-gray-400 text-[12px] h-[150px] bg-gray-200 rounded"></p>
+  //               </div>
+  //               <div className="absolute mt-[-35px] right-4 bg-gray-200 h-6 w-12 rounded"></div>
+  //             </div>
+  //           ))}
+  //       </div>
+  //       <div>
+  //         <Link
+  //           href=""
+  //           className="text-[#d8449880] text-[16px] font-semibold tracking-widest"
+  //         >
+  //           <span className="animate-pulse bg-gray-200 h-6 w-24 rounded inline-block"></span>
+  //         </Link>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 
   if (error) {
     return <div>Error: {error}</div>
@@ -148,55 +148,87 @@ export default function Testimonials() {
             ))}
           </div>
         </div>
-        {noData ? (
-          <div className="py-10 w-11/12 text-center mx-auto">
-            <p className="text-xl font-light">{noData}</p>
-          </div>
-        ) : (
+        {loading ? (
           <>
             <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
-              {testimonials.map((item, index) => (
-                <div
-                  className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative"
-                  key={index}
-                >
-                  <Image
-                    className="w-24 h-24 my-3 rounded-full shadow-lg mx-auto"
-                    src={item.featured_media_url} // Assuming the API has this field for the image URL
-                    alt={item.title.rendered} // Alt text from the title
-                    width={100}
-                    height={100}
-                  />
-                  <div className="p-5">
-                    <h5 className="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]">
-                      {item.title.rendered}
-                    </h5>
-                    <p
-                      className="py-3 font-light text-gray-400 text-[12px] h-[150px]"
-                      dangerouslySetInnerHTML={{
-                        __html: item.content.rendered,
-                      }}
-                    />
+              {Array(3)
+                .fill(null)
+                .map((_, index) => (
+                  <div
+                    className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative animate-pulse"
+                    key={index}
+                  >
+                    <div className="w-24 h-24 my-3 rounded-full mx-auto bg-gray-200"></div>
+                    <div className="p-5">
+                      <h5 className="text-xl font-normal tracking-tight text-black bg-gray-200 h-6 w-3/4 rounded"></h5>
+                      <p className="py-3 font-light text-gray-400 text-[12px] h-[150px] bg-gray-200 rounded"></p>
+                    </div>
+                    <div className="absolute mt-[-35px] right-4 bg-gray-200 h-6 w-12 rounded"></div>
                   </div>
-                  <div className="absolute mt-[-35px] right-4">
-                    <Image
-                      src="/images/quotes.svg"
-                      alt={item.title.rendered}
-                      width={60}
-                      height={60}
-                    />
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
             <div>
               <Link
                 href=""
                 className="text-[#d8449880] text-[16px] font-semibold tracking-widest"
               >
-                VIEW MORE
+                <span className="animate-pulse bg-gray-200 h-6 w-24 rounded inline-block"></span>
               </Link>
             </div>
+          </>
+        ) : (
+          <>
+            {noData ? (
+              <div className="py-10 w-11/12 text-center mx-auto">
+                <p className="text-xl font-light">{noData}</p>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
+                  {testimonials.map((item, index) => (
+                    <div
+                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative"
+                      key={index}
+                    >
+                      <Image
+                        className="w-24 h-24 my-3 rounded-full shadow-lg mx-auto"
+                        src={item.featured_media_url} // Assuming the API has this field for the image URL
+                        alt={item.title.rendered} // Alt text from the title
+                        width={100}
+                        height={100}
+                      />
+                      <div className="p-5">
+                        <h5 className="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]">
+                          {item.title.rendered}
+                        </h5>
+                        <p
+                          className="py-3 font-light text-gray-400 text-[12px] h-[150px]"
+                          dangerouslySetInnerHTML={{
+                            __html: item.content.rendered,
+                          }}
+                        />
+                      </div>
+                      <div className="absolute mt-[-35px] right-4">
+                        <Image
+                          src="/images/quotes.svg"
+                          alt={item.title.rendered}
+                          width={60}
+                          height={60}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <Link
+                    href=""
+                    className="text-[#d8449880] text-[16px] font-semibold tracking-widest"
+                  >
+                    VIEW MORE
+                  </Link>
+                </div>
+              </>
+            )}
           </>
         )}
       </div>
