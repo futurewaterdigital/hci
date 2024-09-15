@@ -15,6 +15,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        hciSecondary: '#D84498',
+      },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },

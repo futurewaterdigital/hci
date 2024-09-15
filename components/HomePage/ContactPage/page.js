@@ -1,105 +1,388 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import { medicalConditions, hospitalName, doctorsName } from '@/utils/data'
+import { FaFileAlt } from 'react-icons/fa'
+import axios from 'axios'
 
 function ConsultantForm() {
+  const [yourName, setYourName] = useState('')
+  const [yourPhone, setYourPhone] = useState('')
+  const [yourEmail, setYourEmail] = useState('')
+  const [medicalCondition, setMedicalCondition] = useState('')
+  const [hospital, setHospital] = useState('')
+  const [doctor, setDoctor] = useState('')
+  const [yourFile, setYourFile] = useState(null)
+  const [additionalMessage, setAdditionalMessage] = useState('')
+  const [errors, setErrors] = useState({})
+  const [post, setPost] = useState('')
+  const [fileName, setFileName] = useState('')
+
+  // Regex for email validation
+  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+  const customErrors = {
+    field: 'yourEmail',
+    message: 'Please enter a valid email address.',
+  }
+  const customDomainErrors = {
+    field: 'yourEmail',
+    message: 'This email domain is not allowed.',
+  }
+  const notAllowedDomains = [
+    'test.com',
+    'sample.com',
+    'example.com',
+    'testing.com',
+    'gmail.co',
+    'gmail.c',
+    'gmail.',
+  ]
+
+  const isValidEmail = (email) => {
+    const [, domain] = email.split('@')
+    return !notAllowedDomains.includes(domain)
+  }
+
+  // Regex for name and phone number validation
+  const nameRegex = /^[a-zA-Z\s]*$/
+  const nameErrors = {
+    field: 'yourName',
+    message: 'Invalid character in name',
+  }
+
+  const numRegex = /^[0-9]{1,10}$/ // Adjusted to allow up to 10 digits
+  const numErrors = {
+    field: 'yourPhone',
+    message: 'Please enter a valid phone number (up to 10 digits).',
+  }
+
+  // Validate the medical condition, hospital, and doctor fields
+  const selectErrors = {
+    field: 'medicalCondition',
+    message: 'Please select a medical condition.',
+  }
+  const hospitalErrors = {
+    field: 'hospital',
+    message: 'Please select a hospital.',
+  }
+  const doctorErrors = {
+    field: 'doctor',
+    message: 'Please select a doctor.',
+  }
+
+  // Validate file input
+  const fileErrors = {
+    field: 'yourFile',
+    message:
+      'Please upload a valid file (PDF, JPG, JPEG,PNG) not exceeding 4MB.',
+  }
+
+  const handleTextChange = (e) => {
+    const { name, value } = e.target
+
+    if (name === 'yourName') {
+      if (!nameRegex.test(value)) {
+        setErrors({ [name]: nameErrors.message })
+      } else {
+        setErrors({})
+        setYourName(value)
+      }
+    }
+
+    if (name === 'yourEmail') {
+      if (!emailRegex.test(value)) {
+        setErrors({ [name]: customErrors.message })
+      } else if (!isValidEmail(value)) {
+        setErrors({ [name]: customDomainErrors.message })
+      } else {
+        setErrors({})
+      }
+      setYourEmail(value)
+    }
+
+    if (name === 'yourPhone') {
+      if (!numRegex.test(value)) {
+        setErrors({ [name]: numErrors.message })
+      } else {
+        setErrors({})
+        setYourPhone(value)
+      }
+    }
+
+    if (name === 'additionalMessage') {
+      setAdditionalMessage(value)
+    }
+  }
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0]
+
+    if (!file) {
+      setErrors({ yourFile: 'Please select a file.' })
+      setYourFile(null)
+      return
+    }
+
+    const fileTypes = [
+      'application/pdf',
+      'image/jpeg', // For JPG and JPEG
+      'image/png', // For PNG
+    ]
+
+    if (!fileTypes.includes(file.type)) {
+      setErrors({ yourFile: 'Please select a PDF, DOC, or DOCX file.' })
+      setYourFile(null)
+      setFileName('')
+      return
+    }
+
+    if (file.size > 4 * 1024 * 1024) {
+      setErrors({ yourFile: 'File size exceeds 4MB limit.' })
+      setYourFile(null)
+      setFileName('')
+    } else {
+      setErrors({})
+      setYourFile(file)
+      setFileName(file.name) // Update the file name state
+    }
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    // Check if all required fields are filled
+    const validationErrors = {}
+    if (!yourName) validationErrors.yourName = 'Name is required.'
+    if (!yourEmail) validationErrors.yourEmail = 'Email is required.'
+    if (!yourPhone) validationErrors.yourPhone = 'Phone number is required.'
+    if (yourPhone.length > 10)
+      validationErrors.yourPhone = 'Phone number cannot exceed 10 digits.'
+    if (!medicalCondition)
+      validationErrors.medicalCondition = selectErrors.message
+    if (!hospital) validationErrors.hospital = hospitalErrors.message
+    if (!doctor) validationErrors.doctor = doctorErrors.message
+    if (!yourFile) validationErrors.yourFile = fileErrors.message
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors)
+      return
+    }
+
+    const formData = new FormData()
+    formData.append('yourName', yourName)
+    formData.append('yourEmail', yourEmail)
+    formData.append('yourPhone', yourPhone)
+    formData.append('medicalCondition', medicalCondition)
+    formData.append('hospital', hospital)
+    formData.append('doctor', doctor)
+    formData.append('additionalMessage', additionalMessage)
+    if (yourFile) {
+      formData.append('yourFile', yourFile)
+    }
+
+    try {
+      const response = await axios.post(
+        'https://cdn.healthcareinternational.in/wp-json/contact-form-7/v1/contact-forms/8/feedback',
+        formData,
+        {
+          headers: { 'Content-Type': 'multipart/form-data' },
+        }
+      )
+      setPost(response.data.message)
+      const msg = response.data.status
+      console.log(response.data)
+
+      if (msg === 'mail_sent') {
+        setLoading(true)
+        resetForm()
+      } else if (msg === 'validation_failed') {
+        const fieldErrors = {}
+        const { invalid_fields } = response.data
+        invalid_fields.forEach((field) => {
+          fieldErrors[field.field] = field.message
+        })
+        setErrors(fieldErrors)
+      } else if (msg === 'mail_failed') {
+        setPost('failed to sent request')
+      }
+    } catch (error) {
+      console.error('There was an error submitting the form!', error)
+    }
+  }
+
+  const resetForm = () => {
+    setYourName('')
+    setYourEmail('')
+    setYourPhone('')
+    setMedicalCondition('')
+    setHospital('')
+    setDoctor('')
+    setYourFile(null)
+    setAdditionalMessage('')
+    setErrors({})
+  }
+
   return (
     <div className="w-full my-20">
-      <div className="bg-white  w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
+      <div className="bg-white w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
         <h3 className="py-4 text-3xl">
           To Get The Best Treatment Options, Please Provide Details
         </h3>
         <div className="w-full mx-auto p-10">
-          <form>
-            <div class="grid gap-6 mb-6 md:grid-cols-3">
+          <form onSubmit={handleSubmit}>
+            <div className="grid gap-6 mb-6 md:grid-cols-3">
               <div>
                 <input
                   type="text"
-                  id="name"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
+                  name="yourName"
+                  value={yourName}
+                  onChange={handleTextChange}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
                   placeholder="Name"
-                  required
                 />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-                  placeholder="Email"
-                  required
-                />
+                {errors.yourName && (
+                  <p className="text-red-500 text-start text-[14px]">
+                    {errors.yourName}
+                  </p>
+                )}
               </div>
               <div>
                 <input
                   type="tel"
-                  id="phone"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
-                  placeholder="123-45-678"
-                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                  required
+                  name="yourPhone"
+                  value={yourPhone}
+                  onChange={handleTextChange}
+                  maxLength="10"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                  placeholder="Phone Number"
+                />
+                {errors.yourPhone && (
+                  <p className="text-red-500 text-start text-[14px]">
+                    {errors.yourPhone}
+                  </p>
+                )}
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="yourEmail"
+                  value={yourEmail}
+                  onChange={handleTextChange}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                  placeholder="Email ID"
+                />
+                {errors.yourEmail && (
+                  <p className="text-red-500 text-start text-[14px]">
+                    {errors.yourEmail}
+                  </p>
+                )}
+              </div>
+
+              <div>
+                <select
+                  name="medicalCondition"
+                  value={medicalCondition}
+                  onChange={(e) => setMedicalCondition(e.target.value)}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                >
+                  <option value="">Select Medical Condition</option>
+                  {medicalConditions.map((item, index) => (
+                    <option value={item.condition} key={index}>
+                      {item.condition}
+                    </option>
+                  ))}
+                </select>
+                {errors.medicalCondition && (
+                  <p className="text-red-500 text-start text-[14px]">
+                    {errors.medicalCondition}
+                  </p>
+                )}
+              </div>
+              <div>
+                <select
+                  name="hospital"
+                  value={hospital}
+                  onChange={(e) => setHospital(e.target.value)}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                >
+                  <option value="">Select Hospital</option>
+                  {hospitalName.map((item, index) => (
+                    <option value={item.name} key={index}>
+                      {item.name}
+                    </option>
+                  ))}
+                </select>
+                {errors.hospital && (
+                  <p className="text-red-500 text-start text-[14px]">
+                    {errors.hospital}
+                  </p>
+                )}
+              </div>
+              <div>
+                <select
+                  name="doctor"
+                  value={doctor}
+                  onChange={(e) => setDoctor(e.target.value)}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                >
+                  <option value="">Select Doctor</option>
+                  {doctorsName.map((item, index) => (
+                    <option value={item.name} key={index}>
+                      {item.name}
+                    </option>
+                  ))}
+                </select>
+                {errors.doctor && (
+                  <p className="text-red-500 text-start text-[14px]">
+                    {errors.doctor}
+                  </p>
+                )}
+              </div>
+            </div>
+            <div className="grid gap-6 mb-6 md:grid-cols-2">
+              <div className="relative w-full">
+                {/* Hidden file input */}
+                <input
+                  type="file"
+                  id="file-upload"
+                  onChange={handleFileChange}
+                  className="hidden"
+                />
+
+                {/* Custom label to replace the default file input */}
+                <label
+                  htmlFor="file-upload"
+                  className="flex items-center justify-between w-full h-[53px] mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-200 transition-colors"
+                >
+                  <span className="pl-4 text-start">
+                    {fileName || 'Upload Report'}
+                  </span>
+                  <FaFileAlt className="text-gray-600 mr-2" size={20} />
+                </label>
+                {errors.yourFile && (
+                  <p className="text-red-500 text-start text-[14px] mt-[-20px]">
+                    {errors.yourFile}
+                  </p>
+                )}
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="additionalMessage"
+                  value={additionalMessage}
+                  onChange={handleTextChange}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                  placeholder="Additional information"
                 />
               </div>
-              <div>
-                <select
-                  id="countries"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                >
-                  <option selected>City</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
-                </select>
-              </div>
-              <div>
-                <select
-                  id="countries"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                >
-                  <option selected>Hospital</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
-                </select>
-              </div>
-              <div>
-                <select
-                  id="countries"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                >
-                  <option selected class="text-gray-200">
-                    Doctor
-                  </option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
-                </select>
-              </div>
-            </div>
-            <div class="mb-6">
-              <textarea
-                id="message"
-                rows="4"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 "
-                placeholder="Medical Conditions"
-              ></textarea>
-            </div>
-            <div>
-              <input
-                class="block w-full p-2.5 mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none "
-                id="default_size"
-                type="file"
-              />
             </div>
             <button
               type="submit"
-              class="text-[#D84498] focus:ring-4 focus:outline-none focus:ring-[#D84498] font-medium rounded-lg text-sm w-full sm:w-auto px-20 py-2.5 text-center border-2 border-[#D84498] hover:bg-[#D84498] hover:text-white"
+              className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto px-60 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white"
             >
-               Check Availability
+              Submit
             </button>
           </form>
         </div>
+        {post}
       </div>
     </div>
   )

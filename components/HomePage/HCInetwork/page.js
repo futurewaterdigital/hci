@@ -42,9 +42,9 @@ function Network() {
               </h4>
               <Link
                 href="/"
-                class="py-2.5 px-5 me-2 mb-2 text-1xl font-medium text-[#0E56A0] rounded-lg border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white opacity-100 z-50"
+                class="py-1 px-4 me-2 mb-2 text-1xl font-[30px] text-[#0E56A0] rounded-lg border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white opacity-100 z-50 tracking-wider"
               >
-                Know More
+                KNOW MORE
               </Link>
             </div>
           ))}

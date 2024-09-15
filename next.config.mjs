@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ['cdn.healthcareinternational.in'],
+  },
+}
 
-export default nextConfig;
+export default nextConfig

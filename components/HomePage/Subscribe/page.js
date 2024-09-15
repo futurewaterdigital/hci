@@ -10,14 +10,14 @@ export default function aSubscribe() {
           Subscribe & Stay updated <hr className="w-28 mx-auto h-1 bg-white" />
         </h4>
         <p className="text-xl text-center py-4 font-thin">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.Lorem Ipsum the industrys standard dummy text.
+          Get the latest health tips, news, and exclusive offers from Healthcare
+          International delivered straight to your inbox
         </p>
         <button
           type="button"
-          class="border border-white hover:bg-white hover:text-black font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 "
+          class="border border-white hover:bg-white hover:text-black font-medium rounded-xl text-[16px] px-8 py-2.5 text-center me-2 mb-2 tracking-widest mt-6"
         >
-          Subscribe
+          SUBSCRIBE
         </button>
       </div>
     </div>

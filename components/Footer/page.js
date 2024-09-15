@@ -1,27 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { footerMenu, bottomSection } from '@/utils/data'
 
 export default function Footer() {
-  const footerMenu = [
-    {
-      category: 'Useful Links',
-      links: ['Branding', 'Design', 'Marketing', 'Advertisement'],
-    },
-    {
-      category: 'Departments',
-      links: ['About us', 'Contact', 'Jobs', 'Press kit'],
-    },
-    {
-      category: 'Contacts',
-      links: ['Terms of use', 'Privacy policy', 'Cookie policy'],
-    },
-  ]
-
-  const bottomSection = {
-    links: ['Sitemap', 'Privacy Statement', 'Disclaimer'],
-    copyright: 'Copyright © 2024, Healthcare International',
-  }
-
   return (
     <>
       <div className="bg-[#F1F8FF] p-10 grid grid-cols-4 font-light">
@@ -33,11 +15,16 @@ export default function Footer() {
             width={250}
             height={250}
           />
-          <p className="py-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry standard dummy text ever
-            since when an unknown printer took a galley of type and scrambled it
-            to make a type specimen book.
+          <p className="py-4 text-[12px]">
+            Healthcare International is a medical value travel undertaking that
+            connects patients with world-class healthcare services across India
+            and other medical destinations. It is a top-tier hospital network
+            and over hundreds of expert clinicians to accord personalized care,
+            advanced treatment, and global access to ensure the best possible
+            medical outcomes for each of its patients.
+          </p>
+          <p className="text-[12px]">
+            Email : <b>info@healthcareinternational.in</b>
           </p>
         </div>
         {footerMenu.map((section, index) => (
@@ -46,9 +33,15 @@ export default function Footer() {
               {section.category}
             </h6>
             {section.links.map((link, linkIndex) => (
-              <a key={linkIndex} className="link link-hover">
-                {link}
-              </a>
+              <Link
+                key={linkIndex}
+                className={`py-2 list-decimal  ${
+                  link.url ? 'link link-hover' : ''
+                }`}
+                href={link.url}
+              >
+                {link.name}
+              </Link>
             ))}
           </div>
         ))}
@@ -58,9 +51,9 @@ export default function Footer() {
           {bottomSection.links.map((link, index) => (
             <React.Fragment key={index}>
               {index > 0 && ' | '}
-              <a href="#" className="link link-hover">
-                {link}
-              </a>
+              <Link href="#" className="link link-hover">
+                {link.name}
+              </Link>
             </React.Fragment>
           ))}
         </div>

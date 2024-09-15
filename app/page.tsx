@@ -9,7 +9,7 @@ import Testimonials from '../components/HomePage/Testimonials/page'
 import Subscribe from '../components/HomePage/Subscribe/page'
 import Blogs from '../components/HomePage/Blogs/page'
 import Faqs from '../components/HomePage/Faqs/page'
-import Appointment from '../components/HomePage/Appointment/page'
+// import Appointment from '../components/HomePage/Appointment/page'
 import Footer from '../components/Footer/page'
 
 export default function page() {
@@ -25,7 +25,7 @@ export default function page() {
       <Subscribe />
       <Blogs />
       <Faqs />
-      <Appointment />
+      {/* <Appointment /> */}
       <Footer />
     </>
   )

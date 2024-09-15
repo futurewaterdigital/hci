@@ -19,68 +19,50 @@ export const testimonials = [
   {
     profile: '/images/profile.jpg',
     name: 'Jones Raplh',
-    designation: 'UX Designer',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      'My experience with Healthcare International was exceptional. From the moment I reached out, the team provided personalized care and seamless coordination. The treatment I received was top-notch, and I felt supported every step of the way. Being a part of the HCI family has truly been transformative for my health journey.',
   },
   {
     profile: '/images/profile.jpg',
-    name: 'Jones Raplh',
-    designation: 'UX Designer',
+    name: 'Francis Jara',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      'Healthcare International exceeded my expectations in every way. The medical professionals were highly skilled, and the care was tailored specifically to my needs. The entire process was smooth, from consultations to treatment, making me feel like I was truly valued. I am grateful for the dedicated support and exceptional care I received from HCI.',
   },
   {
     profile: '/images/profile.jpg',
-    name: 'Jones Raplh',
+    name: 'David Baer',
     designation: 'UX Designer',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-  },
-  {
-    profile: '/images/profile.jpg',
-    name: 'Jones Raplh',
-    designation: 'UX Designer',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      'Joining the Healthcare International network was one of the best decisions I made for my health. The expertise and compassion from the specialists were remarkable, and the personalized approach made all the difference. HCI not only provided excellent medical care but also made me feel like a part of their family. My recovery has been incredible, thanks to their outstanding support.',
   },
 ]
 
 export const blogs = [
   {
-    featureImage: '/images/profile.jpg',
-    title: 'Working in emergency medicine',
-    date: 'Aug 21, 2024',
+    featureImage: '/images/blog-1.png',
+    title: 'Individual Treatment and Assistance',
+    date: 'Aug 21,2024',
     posted: 'Williams',
     excerpt:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum the industry's standard dummy text.",
+      'Learn about the personalized approach to healthcare that ensures each patient receives tailored treatment and dedicated support. Discover how individual care plans are crafted to meet unique needs and enhance overall health outcomes.',
     readmore: '',
   },
   {
-    featureImage: '/images/profile.jpg',
-    title: 'Working in emergency medicine',
+    featureImage: '/images/blog-1.png',
+    title: 'Proton Therapy for Brain Tumors',
     date: 'Aug 21, 2024',
     posted: 'Williams',
     excerpt:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum the industry's standard dummy text.",
+      'Learn how proton therapy is offering new hope for the treatment of brain tumors with its innovative and precise approach that helps to spare surrounding tissues while maximizing treatment outcomes.',
     readmore: '',
   },
   {
-    featureImage: '/images/profile.jpg',
-    title: 'Working in emergency medicine',
+    featureImage: '/images/blog-1.png',
+    title: 'CyberKnife for Brain Tumors',
     date: 'Aug 21, 2024',
     posted: 'Williams',
     excerpt:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum the industry's standard dummy text.",
-    readmore: '',
-  },
-  {
-    featureImage: '/images/profile.jpg',
-    title: 'Working in emergency medicine',
-    date: 'Aug 21, 2024',
-    posted: 'Williams',
-    excerpt:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum the industry's standard dummy text.",
+      'Learn about the benefits of CyberKnife technology: a non-invasive, precision-driven treatment that allows accurate irradiation of brain tumors with minimal side effects.',
     readmore: '',
   },
 ]
@@ -89,28 +71,84 @@ export const faqs = [
   {
     title: 'What is Healthcare International?',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      'Healthcare International (HCI) is a global medical tourism platform, connecting patients with many leading hospitals and hundreds of  top clinicians across various countries . We provide personalized care, cutting-edge treatments, and comprehensive support, ensuring access to world-class healthcare and expertise for a transformative medical journey',
   },
   {
     title: 'How do I choose the right doctor for my specific condition?',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      'This is how you go about selecting  the right doctor for your condition. First, ensure their expertise in treating your condition. Check patient reviews and hospital affiliations as well. Then, it will also be worthwhile to seek a consultation with our medical team here at Healthcare International for recommendations bespoked  to your individual healthcare needs.',
   },
   {
     title: 'What should I look for in a reputable hospital or clinic?',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      'This is how you go about selecting  the right doctor for your condition. First, ensure their expertise in treating your condition. Check patient reviews and hospital affiliations as well. Then, it will also be worthwhile to seek a consultation with our medical team here at Healthcare International for recommendations bespoked  to your individual healthcare needs.',
   },
   {
     title: 'How can I ensure I receive personalized care?',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      'This is how you go about selecting  the right doctor for your condition. First, ensure their expertise in treating your condition. Check patient reviews and hospital affiliations as well. Then, it will also be worthwhile to seek a consultation with our medical team here at Healthcare International for recommendations bespoked  to your individual healthcare needs.',
   },
   {
     title:
       'What are the options for managing the cost of high-quality medical care?',
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+      'This is how you go about selecting  the right doctor for your condition. First, ensure their expertise in treating your condition. Check patient reviews and hospital affiliations as well. Then, it will also be worthwhile to seek a consultation with our medical team here at Healthcare International for recommendations bespoked  to your individual healthcare needs.',
   },
 ]
 export const menu = [{ options: 'About Us' }, { options: 'Contact Us' }]
+
+export const medicalConditions = [
+  { condition: 'Heart Surgery' },
+  { condition: 'Heart Surgery' },
+]
+
+export const hospitalName = [
+  { name: 'Apollo Hospital' },
+  { name: 'Sakara Hospital' },
+]
+
+export const doctorsName = [
+  { name: 'Dr. Amit Kumar' },
+  { name: 'Dr. Sumit Kumar' },
+]
+
+export const footerMenu = [
+  {
+    category: 'Useful Links',
+    links: [
+      { name: 'FAQs', url: '/' },
+      { name: 'Blog', url: '/' },
+      { name: 'Terms & Conditions', url: '/' },
+    ],
+  },
+  {
+    category: 'Departments',
+    links: [
+      { name: 'Cardiac Sciences', url: '/' },
+      { name: 'Oncology', url: '/' },
+      { name: 'Neuro Science', url: '/' },
+      { name: 'Gastroenterology', url: '/' },
+      { name: 'Orthopaedics', url: '/' },
+      { name: 'Others', url: '/' },
+    ],
+  },
+  {
+    category: 'Contacts',
+    links: [
+      {
+        name: '354/428, 1st FLOOR, 27TH MAIN ROAD, SECTOR-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka',
+        url: '',
+      },
+      { name: 'Phone: +91 70550 18181', url: '' },
+    ],
+  },
+]
+
+export const bottomSection = {
+  links: [
+    { name: 'Sitemap', url: '/' },
+    { name: 'Privacy Statement', url: '/' },
+    { name: 'Disclaimer', url: '/' },
+  ],
+  copyright: 'Copyright © 2024, Healthcare International',
+}
