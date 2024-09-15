@@ -26,7 +26,7 @@ export default function ourValue() {
             Our values <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
           {valueHCI.map((items, index) => (
-            <div className="bg-[#EEB133] p-4 text-start rounded-lg">
+            <div className="bg-[#EEB133] p-4 text-start rounded-lg" key={index}>
               <h2 className="font-semibold text-xl">{items.title}</h2>
               <p dangerouslySetInnerHTML={{ __html: items.excerpt }} />
             </div>

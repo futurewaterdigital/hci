@@ -1,5 +1,6 @@
 import React from 'react'
 import { locations } from '@/utils/data'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function contactUs() {
@@ -28,10 +29,12 @@ export default function contactUs() {
               key={index}
             >
               <div className="flex items-center bg-red-500 justify-center relative">
-                <img
+                <Image
                   className="rounded-t-lg w-40 absolute text-center"
                   src={items.icon}
                   alt={items.title}
+                  width={100}
+                  height={100}
                 />
               </div>
 

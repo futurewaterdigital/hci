@@ -1,7 +1,7 @@
 import React from 'react'
 import { whyHCI } from '@/utils/data'
 
-export default function WhoHCI() {
+export default function whoHCI() {
   return (
     <div className="mt-0 flex flex-col justify-center items-center text-center py-8 bg-[#FFE7B6]">
       <h4 className="text-3xl font-bold pb-10 font-roboto">

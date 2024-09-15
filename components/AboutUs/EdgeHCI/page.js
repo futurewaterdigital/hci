@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function EdgeHCI() {
+export default function edgeHCI() {
   return (
     <div className="mt-0 flex flex-col justify-center items-center text-center py-8">
       <div className="pt-0 w-10/12 gap-10">

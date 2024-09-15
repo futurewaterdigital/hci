@@ -1,6 +1,4 @@
 import React from 'react'
-// import Link from 'next/link'
-import { bannerContent } from '../../../utils/data'
 
 function Banner() {
   return (
