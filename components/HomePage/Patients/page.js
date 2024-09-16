@@ -48,9 +48,9 @@ export default function Patients() {
             className="z-50"
             alt="Assisting patients in india"
           />
-          <div className="absolute bg-[#B8DEFF] h-[27em] w-[40em] right-9 top-12 rounded-2xl p-10">
+          {/* <div className="absolute bg-[#B8DEFF] h-[53vh] w-[47vw] lg:right-0 md:right-0 top-12 rounded-2xl p-10">
             Assisting patients
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -28,8 +28,10 @@ export default function WhoWeAre() {
             Vision
           </h5>
           <p className="text-black font-roboto font-light group-hover:text-white">
-            To create a global platform that unites healthcare providers and
-            bridges the gap between caregivers and patients.
+            To create a global platform that unites
+            <br />
+            healthcare providers and bridges the gap <br />
+            between caregivers and patients.
           </p>
         </div>
         <div className="h-56 text-left p-4 bg-[#D84498] transition-colors duration-300 ease-in-out group-hover:bg-[#F1F8FF] rounded-r-3xl">
