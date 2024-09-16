@@ -83,9 +83,12 @@ export default function Testimonials() {
           </p>
         </div>
         <div>
-          <div className="grid grid-cols-3 py-10 w-7/12 mx-auto">
+          <div className="grid grid-cols-3 py-10 mx-auto w-7/12">
             {categories.map((item) => (
-              <div key={item.id} className="flex justify-end items-center">
+              <div
+                key={item.id}
+                className="flex justify-end items-center mx-auto"
+              >
                 <button
                   type="button"
                   className={getButtonClass(item.id)}
