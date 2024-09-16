@@ -101,23 +101,212 @@ export const menu = [
   { options: 'Contact Us', url: '/contact-us' },
 ]
 
+// export const medicalConditions = [
+//   { condition: 'Cardiac Sciences' },
+//   { condition: 'Oncology' },
+//   { condition: 'Neuro Sciences' },
+//   { condition: 'Gastroenterology' },
+//   { condition: 'Orthopaedics' },
+//   { condition: 'Others' },
+// ]
+
+// export const hospitalName = [
+//   { name: 'Apollo Hospital' },
+//   { name: 'Manipal Hospital' },
+// ]
+
+// export const doctorsName = [
+//   { name: 'Dr. Amit Kumar' },
+//   { name: 'Dr. Sumit Kumar' },
+// ]
+
 export const medicalConditions = [
-  { condition: 'Cardiac Sciences' },
-  { condition: 'Oncology' },
-  { condition: 'Neuro Sciences' },
-  { condition: 'Gastroenterology' },
-  { condition: 'Orthopaedics' },
-  { condition: 'Others' },
-]
-
-export const hospitalName = [
-  { name: 'Apollo Hospital' },
-  { name: 'Manipal Hospital' },
-]
-
-export const doctorsName = [
-  { name: 'Dr. Amit Kumar' },
-  { name: 'Dr. Sumit Kumar' },
+  {
+    condition: 'Cardiac Sciences',
+    hospitals: [
+      {
+        name: 'Apollo Hospital',
+        doctors: ['Dr. Sathyaki Nambala', 'Dr. Girish B Navasundi'],
+      },
+      {
+        name: 'Manipal Hospitals',
+        doctors: [
+          'Dr. Bipin Kumar Dubey',
+          'Dr. Samanjoy Mukherjee',
+          'Dr. Sarita Gulati',
+          'Dr. Yugal Kishore Mishra',
+        ],
+      },
+      {
+        name: 'Aster Hospital',
+        doctors: [
+          'Prof. Dr. Nagamalesh U M',
+          'Dr. Sanjay Bhat',
+          'Dr. Ganeshakrishnan Iyer',
+          'Dr. Prashanth Y M',
+        ],
+      },
+    ],
+  },
+  {
+    condition: 'Oncology',
+    hospitals: [
+      {
+        name: 'Apollo Hospital',
+        doctors: [
+          'Dr. (Prof.) Vijay Agarwal',
+          'Dr. (Prof.) Vishwanath S.',
+          'Dr. Neema Bhat',
+          'Dr. Anil Kamath',
+          'Dr. Rani Akhil Bhat',
+          'Dr. Sridhar P. S',
+          'Dr. Jayanti Thumsi',
+          'Dr. Narasimhaiah Srinivasaiah',
+          'Dr. Manohar T',
+        ],
+      },
+      {
+        name: 'Manipal Hospitals',
+        doctors: [
+          'Dr. Divya Bansal',
+          'Dr. Durgatosh Pandey',
+          'Dr. Divya Sehra',
+          'Dr. Vikas Choudhary',
+          'Dr. Peush Bajpai',
+        ],
+      },
+      {
+        name: 'Aster Hospital',
+        doctors: [
+          'Prof. Dr. Somashekhar S P',
+          'Dr. Ashwin K R',
+          'Dr. Jagannath Dixit',
+          'Dr. C N Patil',
+          'Dr. CP Raghuram',
+          'Dr. Gokul Krishna PJ',
+          'Dr. Anoop P',
+          'Dr. M S Belliappa',
+          'Dr. Girish S. Shetkar',
+          'Dr. Ravindra Pamakar Deo',
+        ],
+      },
+    ],
+  },
+  {
+    condition: 'Neuro Sciences',
+    hospitals: [
+      {
+        name: 'Apollo Hospital',
+        doctors: [
+          'Dr. P Satishchandra',
+          'Dr. Satish Satyanarayana',
+          'Dr. B Ravi Mohan Rao',
+          'Dr. Vikram Kamath',
+          'Dr. Suryanarayana Sharma P M',
+          'Dr. Sujit Kumar',
+          'Dr. B A Chandramouli',
+          'Dr. Krishna K N',
+          'Dr. Sharath Kumar G G',
+        ],
+      },
+      {
+        name: 'Manipal Hospitals',
+        doctors: [
+          'Dr. Anurag Saxena',
+          'Lt Gen Dr. C S Narayanan',
+          'Dr. Kadam Nagpal',
+          'Dr. Khushbu Goel',
+        ],
+      },
+      {
+        name: 'Aster Hospital',
+        doctors: [
+          'Dr. P Satishchandra',
+          'Dr. Satish Satyanarayana',
+          'Dr. B Ravi Mohan Rao',
+          'Dr. Vikram Kamath',
+          'Dr. Suryanarayana Sharma P M',
+          'Dr. Sujit Kumar',
+          'Dr. B A Chandramouli',
+          'Dr. Krishna K N',
+          'Dr. Sharath Kumar G G',
+        ],
+      },
+    ],
+  },
+  {
+    condition: 'Gastroenterology',
+    hospitals: [
+      {
+        name: 'Apollo Hospital',
+        doctors: [
+          'Dr. Sanjay Govil',
+          'Dr. Jayanth Reddy',
+          'Dr. Raje Gowda A S',
+          'Dr. Dinesh Kini',
+          'Dr. Aashish R Shah',
+          'Dr. Sachin S Shetty',
+          'Dr. Prasanna K S',
+          'Dr. Ravishankar Bhat',
+          'Dr Saurabh Misra',
+          'Dr. Sriharsha Ajjur',
+          'Dr. V Sreedhar Reddy',
+          'Dr. Prashanth Ganesh',
+        ],
+      },
+      {
+        name: 'Manipal Hospitals',
+        doctors: [
+          'Dr. Sandeep Aggarwal',
+          'Dr. Pankaj Gupta',
+          'Dr. Shailendra Lalwani',
+          'Dr. Sandeep K Jha',
+        ],
+      },
+      {
+        name: 'Aster Hospital',
+        doctors: [
+          'Dr. H R S Girn',
+          'Dr. Abhijit B R',
+          'Dr. Mallikarjun Sakpal',
+          'Dr. Ashritha A',
+          'Dr. Sonal Asthana',
+          'Dr. Vachan S Hukkeri',
+        ],
+      },
+    ],
+  },
+  {
+    condition: 'Orthopaedics',
+    hospitals: [
+      {
+        name: 'Apollo Hospital',
+        doctors: [
+          'Dr. Sanjay Pai',
+          'Dr. Rajashekhar K T',
+          'Dr. Manish Samson',
+          'Dr. Vasudev N Prabhu',
+          'Dr.Raviraj A',
+        ],
+      },
+      {
+        name: 'Manipal Hospitals',
+        doctors: [
+          'Dr. Rajeev Verma',
+          'Dr. Bharat Bhushan Chauhan',
+          'Dr. Gaurav Rastogi',
+        ],
+      },
+      {
+        name: 'Aster Hospital',
+        doctors: [
+          'Dr. Kumardev Arvind Rajamanya',
+          'Dr. Jayant Sampath',
+          'Dr. Rahul Shah',
+        ],
+      },
+    ],
+  },
 ]
 
 export const footerMenu = [
@@ -141,7 +330,7 @@ export const footerMenu = [
     ],
   },
   {
-    category: 'Contacts',
+    category: 'Contact Us',
     links: [
       {
         name: '354/428, 1st Floor, 27TH Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka',

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { medicalConditions, hospitalName, doctorsName } from '@/utils/data'
+import { medicalConditions } from '@/utils/data' // Assuming you've updated the data to include hospital and doctor mappings
 import { FaFileAlt } from 'react-icons/fa'
 import axios from 'axios'
 
@@ -16,6 +16,8 @@ function ConsultantForm() {
   const [errors, setErrors] = useState({})
   const [post, setPost] = useState('')
   const [fileName, setFileName] = useState('')
+  const [hospitalOptions, setHospitalOptions] = useState([])
+  const [doctorOptions, setDoctorOptions] = useState([])
 
   // Regex for email validation
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
@@ -122,11 +124,7 @@ function ConsultantForm() {
       return
     }
 
-    const fileTypes = [
-      'application/pdf',
-      'image/jpeg', // For JPG and JPEG
-      'image/png', // For PNG
-    ]
+    const fileTypes = ['application/pdf', 'image/jpeg', 'image/png']
 
     if (!fileTypes.includes(file.type)) {
       setErrors({ yourFile: 'Please select a PDF, DOC, or DOCX file.' })
@@ -142,13 +140,53 @@ function ConsultantForm() {
     } else {
       setErrors({})
       setYourFile(file)
-      setFileName(file.name) // Update the file name state
+      setFileName(file.name)
+    }
+  }
+
+  // Handle change in medical condition
+  const handleConditionChange = (condition) => {
+    setMedicalCondition(condition)
+
+    const selectedCondition = medicalConditions.find(
+      (item) => item.condition === condition
+    )
+
+    if (selectedCondition) {
+      setHospitalOptions(selectedCondition.hospitals.map((h) => h.name))
+      setDoctorOptions([]) // Reset doctors when condition changes
+      setHospital('')
+      setDoctor('')
+    } else {
+      setHospitalOptions([])
+      setDoctorOptions([])
+    }
+  }
+
+  // Handle change in hospital
+  const handleHospitalChange = (selectedHospital) => {
+    setHospital(selectedHospital)
+
+    const selectedCondition = medicalConditions.find(
+      (item) => item.condition === medicalCondition
+    )
+
+    if (selectedCondition) {
+      const selectedHospitalData = selectedCondition.hospitals.find(
+        (h) => h.name === selectedHospital
+      )
+
+      if (selectedHospitalData) {
+        setDoctorOptions(selectedHospitalData.doctors)
+      } else {
+        setDoctorOptions([])
+      }
     }
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // Check if all required fields are filled
+
     const validationErrors = {}
     if (!yourName) validationErrors.yourName = 'Name is required.'
     if (!yourEmail) validationErrors.yourEmail = 'Email is required.'
@@ -182,29 +220,23 @@ function ConsultantForm() {
       const response = await axios.post(
         'https://cdn.healthcareinternational.in/wp-json/contact-form-7/v1/contact-forms/8/feedback',
         formData,
-        {
-          headers: { 'Content-Type': 'multipart/form-data' },
-        }
+        { headers: { 'Content-Type': 'multipart/form-data' } }
       )
       setPost(response.data.message)
       const msg = response.data.status
-      console.log(response.data)
-
       if (msg === 'mail_sent') {
-        setLoading(true)
         resetForm()
       } else if (msg === 'validation_failed') {
         const fieldErrors = {}
-        const { invalid_fields } = response.data
-        invalid_fields.forEach((field) => {
+        response.data.invalid_fields.forEach((field) => {
           fieldErrors[field.field] = field.message
         })
         setErrors(fieldErrors)
       } else if (msg === 'mail_failed') {
-        setPost('failed to sent request')
+        setPost('Failed to send request')
       }
     } catch (error) {
-      console.error('There was an error submitting the form!', error)
+      console.error('Error submitting the form!', error)
     }
   }
 
@@ -267,7 +299,7 @@ function ConsultantForm() {
                   value={yourEmail}
                   onChange={handleTextChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                  placeholder="Email ID"
+                  placeholder="Email"
                 />
                 {errors.yourEmail && (
                   <p className="text-red-500 text-start text-[14px]">
@@ -275,18 +307,22 @@ function ConsultantForm() {
                   </p>
                 )}
               </div>
-
+            </div>
+            <div className="grid gap-6 mb-6 md:grid-cols-3">
               <div>
                 <select
-                  name="medicalCondition"
+                  id="medicalCondition"
                   value={medicalCondition}
-                  onChange={(e) => setMedicalCondition(e.target.value)}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                  onChange={(e) => handleConditionChange(e.target.value)}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
                 >
-                  <option value="">Select Medical Condition</option>
-                  {medicalConditions.map((item, index) => (
-                    <option value={item.condition} key={index}>
-                      {item.condition}
+                  <option value="">Select Condition</option>
+                  {medicalConditions.map((condition) => (
+                    <option
+                      key={condition.condition}
+                      value={condition.condition}
+                    >
+                      {condition.condition}
                     </option>
                   ))}
                 </select>
@@ -297,36 +333,42 @@ function ConsultantForm() {
                 )}
               </div>
               <div>
-                <select
-                  name="hospital"
-                  value={hospital}
-                  onChange={(e) => setHospital(e.target.value)}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
-                >
-                  <option value="">Select Hospital</option>
-                  {hospitalName.map((item, index) => (
-                    <option value={item.name} key={index}>
-                      {item.name}
-                    </option>
-                  ))}
-                </select>
-                {errors.hospital && (
-                  <p className="text-red-500 text-start text-[14px]">
-                    {errors.hospital}
-                  </p>
-                )}
+                {/* {hospitalOptions.length > 0 && ( */}
+                <div className="mb-4">
+                  <select
+                    id="hospital"
+                    value={hospital}
+                    onChange={(e) => handleHospitalChange(e.target.value)}
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                    disabled={!hospitalOptions.length}
+                  >
+                    <option value="">Select Hospital</option>
+                    {hospitalOptions.map((hosp) => (
+                      <option key={hosp} value={hosp}>
+                        {hosp}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.hospital && (
+                    <p className="text-red-500 text-start text-[14px]">
+                      {errors.hospital}
+                    </p>
+                  )}
+                </div>
+                {/* )} */}
               </div>
               <div>
                 <select
                   name="doctor"
                   value={doctor}
                   onChange={(e) => setDoctor(e.target.value)}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                  disabled={!doctorOptions.length}
                 >
                   <option value="">Select Doctor</option>
-                  {doctorsName.map((item, index) => (
-                    <option value={item.name} key={index}>
-                      {item.name}
+                  {doctorOptions.map((doctor) => (
+                    <option key={doctor} value={doctor}>
+                      {doctor}
                     </option>
                   ))}
                 </select>
@@ -337,6 +379,7 @@ function ConsultantForm() {
                 )}
               </div>
             </div>
+
             <div className="grid gap-6 mb-6 md:grid-cols-2">
               <div className="relative w-full">
                 {/* Hidden file input */}
@@ -374,15 +417,21 @@ function ConsultantForm() {
                 />
               </div>
             </div>
-            <button
-              type="submit"
-              className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto px-60 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white"
-            >
-              Submit
-            </button>
+            <div>
+              <button
+                type="submit"
+                className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto px-60 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white"
+              >
+                Submit
+              </button>
+              {post && (
+                <p className="mt-4 text-[15px] text-green-500 text-center">
+                  {post}
+                </p>
+              )}
+            </div>
           </form>
         </div>
-        {post}
       </div>
     </div>
   )

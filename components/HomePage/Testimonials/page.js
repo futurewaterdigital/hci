@@ -150,9 +150,13 @@ export default function Testimonials() {
                         height={100}
                       />
                       <div className="p-5">
-                        <h5 className="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]">
-                          {item.title.rendered}
-                        </h5>
+                        <h5
+                          className="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]"
+                          dangerouslySetInnerHTML={{
+                            __html: item.title.rendered,
+                          }}
+                        />
+
                         <p
                           className="py-3 font-light text-gray-400 text-[12px] h-[150px]"
                           dangerouslySetInnerHTML={{
