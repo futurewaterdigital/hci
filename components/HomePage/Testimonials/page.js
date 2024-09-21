@@ -175,14 +175,14 @@ export default function Testimonials() {
                     </div>
                   ))}
                 </div>
-                <div>
+                {/* <div>
                   <Link
                     href=""
                     className="text-[#d8449880] text-[16px] font-semibold tracking-widest"
                   >
                     VIEW MORE
                   </Link>
-                </div>
+                </div> */}
               </>
             )}
           </>
