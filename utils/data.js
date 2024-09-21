@@ -314,7 +314,7 @@ export const footerMenu = [
     category: 'Useful Links',
     links: [
       { name: 'FAQs', url: '/' },
-      { name: 'Medical Updates', url: '/' },
+      { name: 'Blog', url: '/' },
       { name: 'Terms & Conditions', url: '/' },
     ],
   },
