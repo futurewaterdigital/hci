@@ -16,12 +16,12 @@ function Banner() {
             Medical Condition Guided by Us
           </h1>
 
-          <div className="grid grid-cols-3 gap-4 p-[5.5em]">
+          <div className="grid grid-cols-3 gap-4 p-[4.4em]">
             {bannerContent.map((items, index) => (
               <button
                 key={index}
                 type="button"
-                class="py-2.5 px-5 me-2 mb-2 text-[30px] font-light text-[#0E56A0] focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#0E56A0] hover:text-white focus:z-10 focus:ring-4 focus:ring-[#0E56A0]"
+                class="py-4 px-6 me-2 mb-2 text-[28px] font-light text-[#0E56A0] focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#0E56A0] hover:text-white focus:z-10 focus:ring-4 focus:ring-[#0E56A0]"
               >
                 {items.treatment}
               </button>
