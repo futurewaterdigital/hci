@@ -339,7 +339,7 @@ export const footerMenu = [
       { name: '+91 70550 18181', url: '' },
       {
         name: 'info@healthcareinternational.in',
-        url: 'info@healthcareinternational.in',
+        url: 'mailto:info@healthcareinternational.in',
       },
     ],
   },

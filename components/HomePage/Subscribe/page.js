@@ -7,7 +7,7 @@ export default function aSubscribe() {
       <div className="absolute inset-0 bg-[#0E56A0] opacity-80"></div>
       <div className="relative flex flex-col items-center text-white w-6/12 mx-auto">
         <h4 className="text-3xl font-bold py-4 font-roboto">
-          Subscribe & Stay updated <hr className="w-28 mx-auto h-1 bg-white" />
+          Subscribe & Stay Updated <hr className="w-28 mx-auto h-1 bg-white" />
         </h4>
         <p className="text-xl text-center py-4 font-thin">
           Get the latest health tips, news, and exclusive offers from Healthcare

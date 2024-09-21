@@ -9,7 +9,7 @@ function Network() {
       <div className="w-11/12 mx-auto">
         <div className="text-center">
           <h4 className="text-3xl font-bold pb-10 font-roboto">
-            The HCI network
+            The HCI Network
             <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
           <p className="font-light">
