@@ -53,7 +53,7 @@ export default function Header() {
                   width={50}
                   height={50}
                   onClick={() => setIsOpen(true)}
-                  className="cursor-pointer"
+                  className="cursor-pointer w-[37px] h-[40px]"
                 />
               </div>
               <Drawer open={isOpen} onClose={handleClose}>
