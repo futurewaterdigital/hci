@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="bg-[#F1F8FF] p-10 grid grid-cols-4 font-light">
         <div className="p-6">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.svg"
             className="rounded-lg"
             alt="Logo"
             width={250}
@@ -23,14 +23,14 @@ export default function Footer() {
             advanced treatment, and global access to ensure the best possible
             medical outcomes for each of its patients.
           </p>
-          <p className="text-[12px]">
+          {/* <p className="text-[12px]">
             Email :{' '}
             <b>
               <Link href="mailto:info@healthcareinternational.in">
                 info@healthcareinternational.in
               </Link>
             </b>
-          </p>
+          </p> */}
         </div>
         {footerMenu.map((section, index) => (
           <div key={index} className="flex flex-col p-6">

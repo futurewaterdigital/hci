@@ -94,7 +94,7 @@ export default function Header() {
           <Link href="/">
             <div className="bg-white h-28 rounded-lg w-64 flex justify-center p-4 ">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 width={500}
                 height={100}
                 className="rounded-lg"

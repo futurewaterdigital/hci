@@ -336,7 +336,11 @@ export const footerMenu = [
         name: '354/428, 1st Floor, 27TH Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka',
         url: '',
       },
-      { name: 'Phone: +91 70550 18181', url: '' },
+      { name: '+91 70550 18181', url: '' },
+      {
+        name: 'info@healthcareinternational.in',
+        url: 'info@healthcareinternational.in',
+      },
     ],
   },
 ]
