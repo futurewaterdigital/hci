@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className="bg-[#0E56A0] p-10 grid grid-cols-2 px-16 text-white font-light text-1xl">
+      <div className="bg-[#0E56A0] p-4 grid grid-cols-2 px-16 text-white font-light text-1xl">
         <div>
           {bottomSection.links.map((link, index) => (
             <React.Fragment key={index}>
