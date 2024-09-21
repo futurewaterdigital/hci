@@ -42,7 +42,7 @@ export default function Patients() {
         </div>
         <div className="flex justify-center items-center relative">
           <Image
-            src="/images/patient.png"
+            src="/images/patients.png"
             width={800}
             height={800}
             className="z-50"
