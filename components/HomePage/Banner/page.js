@@ -16,7 +16,7 @@ function Banner() {
             Medical Condition Guided by Us
           </h1>
 
-          <div className="grid grid-cols-3 gap-4 p-20">
+          <div className="grid grid-cols-3 gap-4 p-[5.5em]">
             {bannerContent.map((items, index) => (
               <button
                 key={index}
