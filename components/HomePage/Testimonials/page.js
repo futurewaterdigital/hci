@@ -1,25 +1,23 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Testimonials() {
-  const [selectedCategory, setSelectedCategory] = useState('7') // Default to 7 or whatever initial category you want
+  const [selectedCategory, setSelectedCategory] = useState('7') // Default to the first category
   const [testimonials, setTestimonials] = useState([])
-  const [loading, setLoading] = useState(true) // State for loading status
-  const [error, setError] = useState(null) // State for error handling
-  const [noData, setNoData] = useState(null) // State for no data
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [noData, setNoData] = useState(null)
 
   const categories = [
-    { category: 'PATIENTS', id: '7' },
-    { category: 'DOCTORS', id: '9' },
-    { category: 'HOSPITALS', id: '8' },
+    { category: 'PATIENTS', id: 'testimonials', categoryId: '7' },
+    { category: 'DOCTORS', id: 'testimonialsdoctors', categoryId: '9' },
+    { category: 'HOSPITALS', id: 'testimonialshospitals', categoryId: '8' },
   ]
 
   useEffect(() => {
-    setLoading(true) // Set loading true when fetching new data
-
-    // Fetch data based on the selected category
+    setLoading(true)
     fetch(
       `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&categories=${selectedCategory}&status=publish`
     )
@@ -32,7 +30,7 @@ export default function Testimonials() {
       .then((data) => {
         if (data.length > 0) {
           setTestimonials(data)
-          setNoData(null) // Clear no data message if data is fetched
+          setNoData(null)
         } else {
           setNoData('No Data Available')
           setTestimonials([])
@@ -43,11 +41,10 @@ export default function Testimonials() {
         setError(error.message)
         setLoading(false)
       })
-  }, [selectedCategory]) // Depend on selectedCategory
+  }, [selectedCategory])
 
-  const handleTestimonails = (id) => {
-    setSelectedCategory(id) // Update the selected category
-    // setLoading(true) is now set in useEffect
+  const handleTestimonials = (id) => {
+    setSelectedCategory(id)
   }
 
   const getButtonClass = (id) => {
@@ -58,17 +55,28 @@ export default function Testimonials() {
     }`
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      categories.forEach((category) => {
+        const section = document.getElementById(category.id)
+        if (section) {
+          const { top, bottom } = section.getBoundingClientRect()
+          if (top >= 0 && bottom <= window.innerHeight) {
+            setSelectedCategory(category.categoryId)
+          }
+        }
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [categories])
+
   if (error) {
     return <div>Error: {error}</div>
   }
-
-  // if (noData) {
-  //   return (
-  //     <div className="py-10 w-11/12 text-center mx-auto">
-  //       <p className="text-xl font-light">{noData}</p>
-  //     </div>
-  //   )
-  // }
 
   return (
     <div className="py-10">
@@ -86,13 +94,14 @@ export default function Testimonials() {
           <div className="grid grid-cols-3 py-10 mx-auto w-7/12">
             {categories.map((item) => (
               <div
-                key={item.id}
+                key={item.categoryId}
                 className="flex justify-end items-center mx-auto"
+                id={item.id}
               >
                 <button
                   type="button"
-                  className={getButtonClass(item.id)}
-                  onClick={() => handleTestimonails(item.id)}
+                  className={getButtonClass(item.categoryId)}
+                  onClick={() => handleTestimonials(item.categoryId)}
                 >
                   {item.category}
                 </button>
@@ -101,33 +110,23 @@ export default function Testimonials() {
           </div>
         </div>
         {loading ? (
-          <>
-            <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
-              {Array(3)
-                .fill(null)
-                .map((_, index) => (
-                  <div
-                    className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative animate-pulse"
-                    key={index}
-                  >
-                    <div className="w-24 h-24 my-3 rounded-full mx-auto bg-gray-200"></div>
-                    <div className="p-5">
-                      <h5 className="text-xl font-normal tracking-tight text-black bg-gray-200 h-6 w-3/4 rounded"></h5>
-                      <p className="py-3 font-light text-gray-400 text-[12px] h-[150px] bg-gray-200 rounded"></p>
-                    </div>
-                    <div className="absolute mt-[-35px] right-4 bg-gray-200 h-6 w-12 rounded"></div>
+          <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
+            {Array(3)
+              .fill(null)
+              .map((_, index) => (
+                <div
+                  className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative animate-pulse"
+                  key={index}
+                >
+                  <div className="w-24 h-24 my-3 rounded-full mx-auto bg-gray-200"></div>
+                  <div className="p-5">
+                    <h5 className="text-xl font-normal tracking-tight text-black bg-gray-200 h-6 w-3/4 rounded"></h5>
+                    <p className="py-3 font-light text-gray-400 text-[12px] h-[150px] bg-gray-200 rounded"></p>
                   </div>
-                ))}
-            </div>
-            <div>
-              <Link
-                href=""
-                className="text-[#d8449880] text-[16px] font-semibold tracking-widest"
-              >
-                <span className="animate-pulse bg-gray-200 h-6 w-24 rounded inline-block"></span>
-              </Link>
-            </div>
-          </>
+                  <div className="absolute mt-[-35px] right-4 bg-gray-200 h-6 w-12 rounded"></div>
+                </div>
+              ))}
+          </div>
         ) : (
           <>
             {noData ? (
@@ -135,55 +134,44 @@ export default function Testimonials() {
                 <p className="text-xl font-light">{noData}</p>
               </div>
             ) : (
-              <>
-                <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
-                  {testimonials.map((item, index) => (
-                    <div
-                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative"
-                      key={index}
-                    >
-                      <Image
-                        className="w-24 h-24 my-3 rounded-full shadow-lg mx-auto"
-                        src={item.featured_media_url} // Assuming the API has this field for the image URL
-                        alt={item.title.rendered} // Alt text from the title
-                        width={100}
-                        height={100}
-                      />
-                      <div className="p-5">
-                        <h5
-                          className="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]"
-                          dangerouslySetInnerHTML={{
-                            __html: item.title.rendered,
-                          }}
-                        />
-
-                        <p
-                          className="py-3 font-light text-gray-400 text-[12px] h-[150px]"
-                          dangerouslySetInnerHTML={{
-                            __html: item.content.rendered,
-                          }}
-                        />
-                      </div>
-                      <div className="absolute mt-[-35px] right-4">
-                        <Image
-                          src="/images/quotes.svg"
-                          alt={item.title.rendered}
-                          width={60}
-                          height={60}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                {/* <div>
-                  <Link
-                    href=""
-                    className="text-[#d8449880] text-[16px] font-semibold tracking-widest"
+              <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
+                {testimonials.map((item, index) => (
+                  <div
+                    className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative"
+                    key={index}
                   >
-                    VIEW MORE
-                  </Link>
-                </div> */}
-              </>
+                    <Image
+                      className="w-24 h-24 my-3 rounded-full shadow-lg mx-auto"
+                      src={item.featured_media_url}
+                      alt={item.title.rendered}
+                      width={100}
+                      height={100}
+                    />
+                    <div className="p-5">
+                      <h5
+                        className="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]"
+                        dangerouslySetInnerHTML={{
+                          __html: item.title.rendered,
+                        }}
+                      />
+                      <p
+                        className="py-3 font-light text-gray-400 text-[12px] h-[150px]"
+                        dangerouslySetInnerHTML={{
+                          __html: item.content.rendered,
+                        }}
+                      />
+                    </div>
+                    <div className="absolute mt-[-35px] right-4">
+                      <Image
+                        src="/images/quotes.svg"
+                        alt={item.title.rendered}
+                        width={60}
+                        height={60}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
             )}
           </>
         )}

@@ -45,7 +45,7 @@ export default function Patients() {
             src="/images/patients.png"
             width={800}
             height={800}
-            className="z-50"
+            className="z-20"
             alt="Assisting patients in india"
           />
           {/* <div className="absolute bg-[#B8DEFF] h-[53vh] w-[47vw] lg:right-0 md:right-0 top-12 rounded-2xl p-10">

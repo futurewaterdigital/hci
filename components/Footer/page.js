@@ -4,6 +4,13 @@ import Link from 'next/link'
 import { footerMenu, bottomSection } from '@/utils/data'
 
 export default function Footer() {
+  // const scrollToSection = (id) => {
+  //   const element = document.getElementById(id)
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' })
+  //   }
+  // }
+
   return (
     <>
       <div className="bg-[#F1F8FF] p-10 grid grid-cols-4 font-light">
@@ -41,9 +48,10 @@ export default function Footer() {
               <Link
                 key={linkIndex}
                 className={`py-2 list-decimal  ${
-                  link.url ? 'link link-hover' : ''
+                  link.url ? 'link link-hover cursor-pointer' : 'cursor-pointer'
                 }`}
                 href={link.url}
+                // onClick={() => handleResultClick(result.categories[0]?.slug)}
               >
                 {link.name}
               </Link>

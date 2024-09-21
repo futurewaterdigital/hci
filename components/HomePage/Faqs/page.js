@@ -66,7 +66,7 @@ export default function Faqs() {
   }
 
   return (
-    <div className="pb-4">
+    <div className="pb-4" id="faqs">
       <div className="w-11/12 text-center mx-auto">
         <div>
           <h4 className="text-3xl font-bold pb-2 font-roboto">
@@ -104,10 +104,11 @@ export default function Faqs() {
                   selectedIndex === index ? 'block' : 'hidden'
                 }`}
               >
-                <p
+                <div
                   className="font-light py-6"
                   dangerouslySetInnerHTML={{ __html: item.content.rendered }}
                 />
+                {/* {item.content.rendered} */}
               </div>
             </div>
           ))}

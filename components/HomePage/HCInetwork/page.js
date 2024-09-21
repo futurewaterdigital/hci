@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 function Network() {
   return (
-    <div className="py-10">
+    <div className="py-10 z-10">
       <div className="w-11/12 mx-auto">
         <div className="text-center">
           <h4 className="text-3xl font-bold pb-10 font-roboto">
@@ -25,7 +25,7 @@ function Network() {
             of the centre or the speciality they choose.
           </p>
         </div>
-        <div className="grid grid-cols-5 gap-4 py-10">
+        <div className="grid grid-cols-5 gap-4 py-10 z-10">
           {hciNetwork.map((items, index) => (
             <div
               class="p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group"
@@ -41,8 +41,8 @@ function Network() {
                 {items.cityName}
               </h4>
               <Link
-                href="/"
-                class="py-1 px-4 me-2 mb-2 text-1xl font-[30px] text-[#0E56A0] rounded-lg border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white opacity-100 z-50 tracking-wider"
+                href={items.linkUrl}
+                class="py-1 px-4 me-2 mb-2 text-1xl font-[30px] text-[#0E56A0] rounded-lg border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white opacity-100 z-20 tracking-wider"
               >
                 KNOW MORE
               </Link>

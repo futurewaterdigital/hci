@@ -1,12 +1,14 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]) // State to store fetched blogs
   const [loading, setLoading] = useState(true) // State for loading status
   const [error, setError] = useState(null) // State for error handling
+
+  const [isExpanded, setIsExpanded] = useState(false)
 
   useEffect(() => {
     // Fetching data when the component mounts
@@ -70,7 +72,7 @@ export default function Blogs() {
   }
 
   return (
-    <div className="py-10">
+    <div className="py-10" id="medical-updates">
       <div className="w-11/12 text-center mx-auto">
         <div>
           <h4 className="text-3xl font-bold pb-10 font-roboto">
@@ -85,36 +87,47 @@ export default function Blogs() {
         </div>
 
         <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
-          {blogs.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white group overflow-hidden transition-all duration-300 hover:border-[#0E56A0] text-start h-full"
-            >
-              <Image
-                className="transition-transform duration-300 group-hover:scale-105 mx-auto w-full h-50"
-                src={item.featured_media_url} // Assuming the API has this field for the image URL
-                alt={item.title.rendered} // Alt text from the title
-                width={150}
-                height={150}
-              />
-              <div className="pt-5 py-4">
-                <h5 className="text-xl font-normal tracking-tight text-black">
-                  {item.title.rendered}
-                </h5>
-                <p>{new Date(item.date).toLocaleDateString()}</p>
-                <p
-                  className="text-gray-400 font-light py-4 h-[170px]"
-                  dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }}
+          {blogs.map((item, index) => {
+            const excerptText = item.excerpt.rendered.replace(
+              /(<([^>]+)>)/gi,
+              ''
+            ) // Strip HTML tags
+            const isLong = excerptText.length > 233
+            const displayedText = isExpanded
+              ? excerptText
+              : excerptText.slice(0, 233)
+            return (
+              <div
+                key={index}
+                className="bg-white group overflow-hidden transition-all duration-300 hover:border-[#0E56A0] text-start h-full"
+              >
+                <Image
+                  className="transition-transform duration-300 group-hover:scale-105 mx-auto w-full h-50"
+                  src={item.featured_media_url}
+                  alt={item.title.rendered}
+                  width={150}
+                  height={150}
                 />
-                <Link
-                  href={item.link}
-                  className="border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white font-medium rounded-xl text-sm px-5 py-2.5 text-center me-2 mb-2 text-[#0E56A0] transition-colors duration-300 cursor-pointer tracking-widest"
-                >
-                  READ MORE
-                </Link>
+                <div className="pt-5 py-4">
+                  <h5 className="text-xl font-normal tracking-tight text-black">
+                    {item.title.rendered}
+                  </h5>
+                  <p>{new Date(item.date).toLocaleDateString()}</p>
+                  <p className="text-gray-400 font-light py-4 h-auto">
+                    {displayedText}
+                  </p>
+                  {isLong && (
+                    <button
+                      onClick={() => setIsExpanded(!isExpanded)}
+                      className="text-[#0E56A0] border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white font-medium rounded-xl text-sm px-5 py-2.5 text-center me-2 mb-2 transition-colors duration-300 cursor-pointer"
+                    >
+                      {isExpanded ? 'SHOW LESS' : 'READ MORE'}
+                    </button>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </div>

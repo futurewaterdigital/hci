@@ -1,39 +1,37 @@
 export const bannerContent = [
-  { treatment: 'Cardiac Sciences' },
-  { treatment: 'Oncology' },
-  { treatment: 'Neuro Sciences' },
-  { treatment: 'Gastroenterology' },
-  { treatment: 'Orthopaedics' },
-  { treatment: 'Others' },
+  { treatment: 'Cardiac Sciences', linkUrl: '/treatment/cardiac-sciences' },
+  { treatment: 'Oncology', linkUrl: '/treatment/oncology' },
+  { treatment: 'Neuro Sciences', linkUrl: '/treatment/neuro-sciences' },
+  { treatment: 'Gastroenterology', linkUrl: '/treatment/gastroenterology' },
+  { treatment: 'Orthopaedics', linkUrl: '/treatment/orthopaedics' },
+  { treatment: 'Others', linkUrl: '/treatment/others' },
 ]
 
 export const hciNetwork = [
-  { image: '/cities/bangalore.svg', cityName: 'Bangalore', linkUrl: '' },
-  { image: '/cities/chennai.svg', cityName: 'Chennai', linkUrl: '' },
-  { image: '/cities/delhi.svg', cityName: 'Delhi', linkUrl: '' },
-  { image: '/cities/hyderabad.svg', cityName: 'Hyderabad', linkUrl: '' },
-  { image: '/cities/mumbai.svg', cityName: 'Mumbai', linkUrl: '' },
-]
-
-export const testimonials = [
   {
-    profile: '/images/profile.jpg',
-    name: 'Jones Raplh',
-    description:
-      'My experience with Healthcare International was exceptional. From the moment I reached out, the team provided personalized care and seamless coordination. The treatment I received was top-notch, and I felt supported every step of the way. Being a part of the HCI family has truly been transformative for my health journey.',
+    image: '/cities/bangalore.svg',
+    cityName: 'Bangalore',
+    linkUrl: '/city/bangalore',
   },
   {
-    profile: '/images/profile.jpg',
-    name: 'Francis Jara',
-    description:
-      'Healthcare International exceeded my expectations in every way. The medical professionals were highly skilled, and the care was tailored specifically to my needs. The entire process was smooth, from consultations to treatment, making me feel like I was truly valued. I am grateful for the dedicated support and exceptional care I received from HCI.',
+    image: '/cities/chennai.svg',
+    cityName: 'Chennai',
+    linkUrl: '/city/chennai',
   },
   {
-    profile: '/images/profile.jpg',
-    name: 'David Baer',
-    designation: 'UX Designer',
-    description:
-      'Joining the Healthcare International network was one of the best decisions I made for my health. The expertise and compassion from the specialists were remarkable, and the personalized approach made all the difference. HCI not only provided excellent medical care but also made me feel like a part of their family. My recovery has been incredible, thanks to their outstanding support.',
+    image: '/cities/delhi.svg',
+    cityName: 'Delhi',
+    linkUrl: '/city/delhi',
+  },
+  {
+    image: '/cities/hyderabad.svg',
+    cityName: 'Hyderabad',
+    linkUrl: '/city/hyderabad',
+  },
+  {
+    image: '/cities/mumbai.svg',
+    cityName: 'Mumbai',
+    linkUrl: '/city/mumbai',
   },
 ]
 
@@ -333,7 +331,7 @@ export const footerMenu = [
     category: 'Contact Us',
     links: [
       {
-        name: '354/428, 1st Floor, 27TH Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka',
+        name: '354/428, 1st Floor, 27th Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka',
         url: '',
       },
       { name: '+91 70550 18181', url: '' },
