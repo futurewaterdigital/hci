@@ -16,14 +16,14 @@ export default function ourValue() {
               alt="Assisting patients in india"
             />
             <div className="absolute bg-[#FFE7B6] h-[27em] w-[37em] left-[9px] top-1 rounded-2xl p-10">
-              Assisting patients
+              Assisting Patients
             </div>
           </div>
         </div>
 
         <div className="flex justify-start flex-col items-start gap-2">
           <h4 className="text-3xl font-bold pb-4 font-roboto">
-            Our values <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
+            Our Values <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
           {valueHCI.map((items, index) => (
             <div className="bg-[#EEB133] p-4 text-start rounded-lg" key={index}>

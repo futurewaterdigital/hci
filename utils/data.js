@@ -355,19 +355,19 @@ export const bottomSection = {
 }
 export const whyHCI = [
   {
-    title: 'Accurate information',
+    title: 'Accurate Information',
     icon: '/images/point-1.svg',
     excerpt: `Patients are provided accurate and authentic information on
               various centres, locations, expertise, and treatments helping them
               take informed decisions.`,
   },
   {
-    title: 'Global expertise',
+    title: 'Global Expertise',
     icon: '/images/point-2.svg',
     excerpt: `Patients can avail the latest treatments from across the world and have access to world-renowned specialists ensuring the best care at optimum costs.`,
   },
   {
-    title: 'Comprehensive support',
+    title: 'Comprehensive Support',
     icon: '/images/point-3.svg',
     excerpt: `Right from travel documentation to post-treatment care, we work closely with patients to offer a compassionate, reassuring experience.`,
   },

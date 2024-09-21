@@ -5,18 +5,18 @@ import Image from 'next/image'
 export default function whoHCI() {
   return (
     <div className="mt-0 flex flex-col justify-center items-center text-center py-8 bg-[#FFE7B6]">
-      <h4 className="text-3xl font-bold pb-10 font-roboto">
+      <h4 className="text-3xl font-bold pb-0 font-roboto">
         Why HCI? <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
       </h4>
-      <div className="pt-28 w-10/12 gap-10 grid grid-cols-3 mx-auto">
+      <div className="pt-24 w-10/12 gap-10 grid grid-cols-3 mx-aut">
         {whyHCI.map((items, index) => (
           <div
-            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center"
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center mx-auto"
             key={index}
           >
             <div className="flex items-center justify-center relative">
               <Image
-                class="rounded-t-lg w-40 absolute"
+                class="rounded-t-lg w-36 absolute top-[-4em]"
                 src={items.icon}
                 alt={items.title}
                 className="text-center"
@@ -25,7 +25,7 @@ export default function whoHCI() {
               />
             </div>
 
-            <div class="p-5 mt-20">
+            <div class="p-5 mt-16">
               <h5 class="mb-2 text-[25px] font-normal tracking-tight text-[#0E56A0]">
                 {items.title}
               </h5>

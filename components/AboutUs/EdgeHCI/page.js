@@ -5,7 +5,7 @@ export default function edgeHCI() {
     <div className="mt-0 flex flex-col justify-center items-center text-center py-8">
       <div className="pt-0 w-10/12 gap-10">
         <h4 className="text-3xl font-bold pb-10 font-roboto">
-          The HCI edge <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
+          The HCI Edge <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
         </h4>
         <p className="font-light">
           Healthcare organisations joining hands with HCI can benefit in more
