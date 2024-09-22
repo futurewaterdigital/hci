@@ -73,12 +73,12 @@ export default function Blogs() {
 
   return (
     <div className="py-10" id="medical-updates">
-      <div className="w-11/12 text-center mx-auto">
+      <div className="lg:w-11/12 text-center mx-auto">
         <div>
           <h4 className="text-3xl font-bold pb-10 font-roboto">
             Medical Updates <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
-          <p className="text-1xl font-light w-6/12 mx-auto">
+          <p className="text-1xl font-light lg:w-6/12 mx-auto">
             Update yourself with the latest happenings and knowledge in the
             field of healthcare. Stay updated with expert analyses, trends, and
             all the information that you may want to know to stay ahead in
@@ -86,7 +86,7 @@ export default function Blogs() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
           {blogs.map((item, index) => {
             const excerptText = item.excerpt.rendered.replace(
               /(<([^>]+)>)/gi,

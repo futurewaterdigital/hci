@@ -36,7 +36,7 @@ const SearchBar = ({ currentPlaceholder }) => {
   }, [searchQuery])
 
   const handleBlur = () => {
-    setLoading(false)
+    // setLoading(false)
     // Delay hiding results to allow click event to register
     setTimeout(() => {
       if (!searchQuery) {
@@ -48,7 +48,7 @@ const SearchBar = ({ currentPlaceholder }) => {
 
   const handleFocus = () => {
     setIsFocused(true)
-    setLoading(false)
+    // setLoading(false)
   }
 
   const scrollToSection = (id) => {

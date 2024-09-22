@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 export default function Patients() {
   return (
-    <div className="h-[35em] relative mx-auto flex justify-center items-center">
-      <div className="absolute w-full h-[35em]">
+    <div className="h-[43em] lg:h-[35em] relative mx-auto flex justify-center items-center bg-[#EEF7FF] lg:bg-transparent">
+      <div className="lg:absolute w-full lg:h-[35em]">
         <svg
           width="100%"
           height="100%"
@@ -23,9 +23,9 @@ export default function Patients() {
           </g>
         </svg>
       </div>
-      <div className="grid grid-cols-2 w-11/12 absolute h-[30em] gap-4 mt-4">
-        <div className="flex flex-col justify-center w-9/12">
-          <h4 className="text-3xl font-bold pb-10 font-roboto text-left">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:w-11/12 absolute lg:h-[30em] gap-4 lg:mt-4 p-4 lg:p-0">
+        <div className="flex flex-col justify-center lg:w-9/12 order-2 lg:order-1">
+          <h4 className="text-3xl font-bold pb-10 font-roboto lg:text-left">
             Assisting Patients <hr className="w-28 h-1 bg-[#D84498]" />
           </h4>
           <p className="font-light">
@@ -40,7 +40,7 @@ export default function Patients() {
             stakeholders concerned.
           </p>
         </div>
-        <div className="flex justify-center items-center relative">
+        <div className="flex justify-center items-center relative order-1 lg:order-2">
           <Image
             src="/images/patients.png"
             width={800}

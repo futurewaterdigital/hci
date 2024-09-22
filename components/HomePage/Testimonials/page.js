@@ -55,24 +55,24 @@ export default function Testimonials() {
     }`
   }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      categories.forEach((category) => {
-        const section = document.getElementById(category.id)
-        if (section) {
-          const { top, bottom } = section.getBoundingClientRect()
-          if (top >= 0 && bottom <= window.innerHeight) {
-            setSelectedCategory(category.categoryId)
-          }
-        }
-      })
-    }
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     categories.forEach((category) => {
+  //       const section = document.getElementById(category.id)
+  //       if (section) {
+  //         const { top, bottom } = section.getBoundingClientRect()
+  //         if (top >= 0 && bottom <= window.innerHeight) {
+  //           setSelectedCategory(category.categoryId)
+  //         }
+  //       }
+  //     })
+  //   }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [categories])
+  //   window.addEventListener('scroll', handleScroll)
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [categories])
 
   if (error) {
     return <div>Error: {error}</div>
@@ -85,13 +85,13 @@ export default function Testimonials() {
           <h4 className="text-3xl font-bold pb-10 font-roboto">
             Testimonials <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
-          <p className="text-1xl font-light w-6/12 mx-auto">
+          <p className="text-1xl font-light lg:w-6/12 mx-auto">
             Experience the inspiring stories from our patients and partners with
             their actual experience of excellence and impact of our service.
           </p>
         </div>
         <div>
-          <div className="grid grid-cols-3 py-10 mx-auto w-7/12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 py-10 mx-auto lg:w-7/12">
             {categories.map((item) => (
               <div
                 key={item.categoryId}
@@ -110,7 +110,7 @@ export default function Testimonials() {
           </div>
         </div>
         {loading ? (
-          <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
+          <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center mx-auto gap-4 py-10 w-11/12">
             {Array(3)
               .fill(null)
               .map((_, index) => (
@@ -134,7 +134,7 @@ export default function Testimonials() {
                 <p className="text-xl font-light">{noData}</p>
               </div>
             ) : (
-              <div className="grid grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
+              <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center mx-auto lg:gap-4 gap-10 py-10 w-11/12">
                 {testimonials.map((item, index) => (
                   <div
                     className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative"

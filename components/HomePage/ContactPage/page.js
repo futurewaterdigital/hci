@@ -253,9 +253,9 @@ function ConsultantForm() {
   }
 
   return (
-    <div className="w-full my-20">
-      <div className="bg-white w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
-        <h3 className="py-4 text-3xl">
+    <div className="w-full my-20 px-2 lg:px-0">
+      <div className="bg-white lg:w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
+        <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
           To Get The Best Treatment Options, Please Provide Details
         </h3>
         <div className="w-full mx-auto p-10">
@@ -420,10 +420,11 @@ function ConsultantForm() {
             <div>
               <button
                 type="submit"
-                className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto px-60 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white"
+                className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white"
               >
                 Submit
               </button>
+
               {post && (
                 <p className="mt-4 text-[15px] text-green-500 text-center">
                   {post}

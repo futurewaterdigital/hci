@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="bg-[#F1F8FF] p-10 grid grid-cols-4 font-light">
+      <div className="bg-[#F1F8FF] p-10 grid lg:grid-cols-4 font-light">
         <div className="p-6">
           <Image
             src="/images/logo.svg"
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className="bg-[#0E56A0] p-4 grid grid-cols-2 px-16 text-white font-light text-1xl">
+      <div className="bg-[#0E56A0] p-4 grid lg:grid-cols-2 lg:px-16 text-white font-light text-1xl">
         <div>
           {bottomSection.links.map((link, index) => (
             <React.Fragment key={index}>
@@ -70,7 +70,7 @@ export default function Footer() {
             </React.Fragment>
           ))}
         </div>
-        <div className="text-end">
+        <div className="lg:text-end">
           <p>{bottomSection.copyright}</p>
         </div>
       </div>

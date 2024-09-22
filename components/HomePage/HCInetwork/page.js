@@ -25,7 +25,7 @@ function Network() {
             of the centre or the speciality they choose.
           </p>
         </div>
-        <div className="grid grid-cols-5 gap-4 py-10 z-10">
+        <div className="grid lg:grid-cols-5 md:grid-cols-1 gap-4 py-10 z-10">
           {hciNetwork.map((items, index) => (
             <div
               class="p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group"

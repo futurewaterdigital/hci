@@ -56,11 +56,11 @@ export default function Header() {
       className={`z-40 transition-all duration-300 ${
         isScrolled
           ? 'fixed w-full bg-white shadow-lg top-0'
-          : 'absolute w-full top-10'
+          : 'absolute w-full lg:top-10'
       }`}
     >
-      <div className="bg-white w-11/12 mx-auto rounded-lg px-6 flex justify-between">
-        <div className="h-20 flex items-center justify-start gap-10 p-2 w-1/2 ">
+      <div className="lg:w-11/12 mx-auto lg:rounded-lg px-6 flex justify-between bg-white">
+        <div className="h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px]">
           <div className="relative group flex items-center">
             <div className="">
               <div className="flex min-h-[10vh] items-center justify-center">
@@ -96,32 +96,34 @@ export default function Header() {
                 </Drawer.Items>
               </Drawer>
             </div>
-            <Image
-              src="/qr-codes/hci.png"
-              className={` w-16 ml-12 `}
-              width={200}
-              height={200}
-              alt="healthcare international in bangalore"
-            />
+            <div className="">
+              <Image
+                src="/qr-codes/hci.png"
+                className={`w-16 ml-12 `}
+                width={200}
+                height={200}
+                alt="healthcare international in bangalore"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="relative h-20 flex justify-center items-center z-50 cursor-pointer">
+        <div className="lg:relative lg:h-20 flex lg:justify-center items-center z-20 cursor-pointer">
           <Link href="/">
-            <div className="bg-white h-28 rounded-lg w-64 flex justify-center p-4">
+            <div className="bg-white lg:h-28 lg:rounded-lg lg:w-64 flex justify-center p-4 mx-auto ">
               <Image
                 src="/images/logo.svg"
                 width={500}
                 height={100}
                 className={`rounded-lg cursor-pointer ${
-                  isScrolled ? 'w-8/12' : 'w-full'
+                  isScrolled ? 'lg:w-8/12 w-[100px]' : 'lg:w-full w-[100px]'
                 }`}
               />
             </div>
           </Link>
         </div>
 
-        <div className="flex items-center justify-end gap-0 w-1/2">
+        <div className="lg:flex items-center justify-end gap-0 w-1/2 hidden">
           <div className="z-20 flex flex-row justify-between">
             <div className="relative flex items-center justify-center right-[40px]">
               <Search currentPlaceholder={currentPlaceholder} />
