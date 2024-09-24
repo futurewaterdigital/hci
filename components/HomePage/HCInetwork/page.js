@@ -1,9 +1,47 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { hciNetwork } from '@/utils/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
 function Network() {
+  const [selectedCategory, setSelectedCategory] = useState('10') // Default to the first category
+  const [network, setNetworks] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [noData, setNoData] = useState(null)
+
+  useEffect(() => {
+    setLoading(true)
+    fetch(
+      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&categories=${selectedCategory}&status=publish`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        return response.json()
+      })
+      .then((data) => {
+        if (data.length > 0) {
+          const sortedData = data.sort((a, b) =>
+            a.title.rendered.localeCompare(b.title.rendered)
+          ) // Alphabetical sort
+          console.log(data)
+          setNetworks(sortedData)
+          setNoData(null)
+        } else {
+          setNoData('No Data Available')
+          setNetworks([])
+        }
+        setLoading(false)
+      })
+      .catch((error) => {
+        setError(error.message)
+        setLoading(false)
+      })
+  }, [selectedCategory])
+
   return (
     <div className="py-10 z-10">
       <div className="w-11/12 mx-auto">
@@ -25,29 +63,43 @@ function Network() {
             of the centre or the speciality they choose.
           </p>
         </div>
+
         <div className="grid lg:grid-cols-5 md:grid-cols-1 gap-4 py-10 z-10">
-          {hciNetwork.map((items, index) => (
-            <div
-              class="p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group"
-              key={index}
-            >
-              <Image
-                src={items.image}
-                width={100}
-                height={100}
-                alt={`Health Care in ${items.cityName}`}
-              />
-              <h4 className="text-2xl font-medium text-[#0E56A0] py-4">
-                {items.cityName}
-              </h4>
-              <Link
-                href={items.linkUrl}
-                class="py-1 px-4 me-2 mb-2 text-1xl font-[30px] text-[#0E56A0] rounded-lg border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white opacity-100 z-20 tracking-wider"
-              >
-                KNOW MORE
-              </Link>
-            </div>
-          ))}
+          {loading
+            ? Array(5)
+                .fill(0)
+                .map((_, index) => (
+                  <div
+                    key={index}
+                    className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] rounded-lg shadow flex flex-col items-center animate-pulse"
+                  >
+                    <div className="bg-gray-300 h-24 w-24 mb-4 rounded-full"></div>
+                    <div className="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
+                    <div className="h-6 bg-gray-300 rounded w-1/2"></div>
+                  </div>
+                ))
+            : network.map((items, index) => (
+                <div
+                  className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group"
+                  key={index}
+                >
+                  <Image
+                    src={items.featured_media_url}
+                    width={100}
+                    height={100}
+                    alt={`Health Care in ${items.title.rendered}`}
+                  />
+                  <h4 className="text-2xl font-medium text-[#0E56A0] py-4">
+                    {items.title.rendered}
+                  </h4>
+                  <Link
+                    href={`city/${items.slug}`}
+                    className="py-1 px-4 me-2 mb-2 text-1xl font-[30px] text-[#0E56A0] rounded-lg border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white opacity-100 z-20 tracking-wider"
+                  >
+                    KNOW MORE
+                  </Link>
+                </div>
+              ))}
         </div>
       </div>
     </div>
