@@ -8,6 +8,9 @@ export default function City({ params }) {
   const [selectedCategory] = useState(params.slug) // Default to the first category
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [noData, setNoData] = useState(null)
+
   useEffect(() => {
     setLoading(true)
     fetch(
@@ -41,7 +44,8 @@ export default function City({ params }) {
   return (
     <>
       <Header />
-
+      {error}
+      {noData}
       {loading ? (
         // Skeleton Loader
         <>

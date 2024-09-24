@@ -7,6 +7,8 @@ function Network() {
   const [selectedCategory] = useState('10') // Default to the first category
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [noData, setNoData] = useState(null)
 
   useEffect(() => {
     setLoading(true)
@@ -62,6 +64,8 @@ function Network() {
         </div>
 
         <div className="grid lg:grid-cols-5 md:grid-cols-1 gap-4 py-10 z-10">
+          {error}
+          {noData}
           {loading
             ? Array(5)
                 .fill(0)
