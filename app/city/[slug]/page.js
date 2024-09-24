@@ -5,11 +5,9 @@ import Banner from '../../../components/Networks/Banner/page'
 import Footer from '../../../components/Footer/page'
 
 export default function City({ params }) {
-  const [selectedCategory, setSelectedCategory] = useState(params.slug) // Default to the first category
+  const [selectedCategory] = useState(params.slug) // Default to the first category
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [noData, setNoData] = useState(null)
 
   useEffect(() => {
     setLoading(true)

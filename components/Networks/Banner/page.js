@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Banner({ city, banner }) {
+function Banner({ banner }) {
   return (
     <div className="relative h-[70vh]">
       <div

@@ -1,15 +1,12 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { hciNetwork } from '@/utils/data'
 import Image from 'next/image'
 import Link from 'next/link'
 
 function Network() {
-  const [selectedCategory, setSelectedCategory] = useState('10') // Default to the first category
+  const [selectedCategory] = useState('10') // Default to the first category
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [noData, setNoData] = useState(null)
 
   useEffect(() => {
     setLoading(true)
