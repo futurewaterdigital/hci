@@ -6,6 +6,8 @@ function Banner() {
   const [selectedCategory] = useState('11') // Default to the first category
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [noData, setNoData] = useState(null)
 
   useEffect(() => {
     setLoading(true)
@@ -49,7 +51,8 @@ function Banner() {
           <h1 className="text-5xl text-center font-medium pt-8 lg:pt-2">
             Medical Condition Guided by Us
           </h1>
-
+          {error}
+          {noData}
           {loading ? (
             // Skeleton Loader
             <div className="grid lg:grid-cols-3 gap-4 p-[4.4em] lg:min-w-9/12 max-w-full lg:grid-flow-row grid-flow-col overflow-auto lg:overflow-visible">
