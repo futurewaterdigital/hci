@@ -319,12 +319,12 @@ export const footerMenu = [
   {
     category: 'Departments',
     links: [
-      { name: 'Cardiac Sciences', url: '/' },
-      { name: 'Oncology', url: '/' },
-      { name: 'Neuro Science', url: '/' },
-      { name: 'Gastroenterology', url: '/' },
-      { name: 'Orthopaedics', url: '/' },
-      { name: 'Others', url: '/' },
+      { name: 'Cardiac Sciences', url: '/treatment/cardiac-sciences' },
+      { name: 'Oncology', url: '/treatment/oncology' },
+      { name: 'Neuro Science', url: '/treatment/neuro-sciences' },
+      { name: 'Gastroenterology', url: '/treatment/gastroenterology' },
+      { name: 'Orthopaedics', url: '/treatment/orthopaedics' },
+      { name: 'Others', url: '/treatment/others' },
     ],
   },
   {

@@ -74,7 +74,7 @@ export default function City({ params }) {
 
               <div className="w-9/12 mx-auto">
                 <div className="">
-                  <h1 className="w-full text-[#D84598] text-[60px] text-center font-normal">
+                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
                     {items.title.rendered}
                   </h1>
                 </div>

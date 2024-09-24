@@ -66,10 +66,10 @@ export default function Header() {
               <div className="flex min-h-[10vh] items-center justify-center">
                 <Image
                   src="/images/menu.svg"
-                  width={50}
-                  height={50}
+                  width={80}
+                  height={80}
                   onClick={() => setIsOpen(true)}
-                  className="cursor-pointer w-[37px] h-[40px]"
+                  className="cursor-pointer lg:w-[37px] lg:h-[40px] w-[80px]"
                 />
               </div>
               <Drawer open={isOpen} onClose={handleClose}>
@@ -78,7 +78,7 @@ export default function Header() {
                   <div className="flex flex-col">
                     {menu.map((items, index) => (
                       <Link
-                        className="w-full p-2 py-3 hover:text-white hover:bg-[#D84498] rounded-lg gap-2 my-1 text-lg flex items-center justify-between"
+                        className="w-full p-2 lg:py-3 hover:text-white hover:bg-[#D84498] rounded-lg gap-2 my-1 text-lg flex items-center justify-between"
                         key={index}
                         href={items.url}
                         onMouseEnter={() => setHoveredIndex(index)}

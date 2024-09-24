@@ -22,10 +22,10 @@ export default function contactUs() {
       </div>
 
       <div className="pt-0 w-10/12 gap-10">
-        <div className="pt-28 w-10/12 gap-4 grid grid-cols-3 mx-auto">
+        <div className="pt-28 w-10/12 gap-4 grid lg:grid-cols-3 mx-auto ">
           {locations.map((items, index) => (
             <div
-              className="bg-white border border-gray-200 border-t-0 rounded-lg shadow-lg shadow-b shadow-custom justify-center"
+              className="bg-white border border-gray-200 border-t-0 rounded-lg shadow-lg shadow-b shadow-custom justify-center mt-20"
               key={index}
             >
               <div className="flex items-center bg-red-500 justify-center relative">
@@ -54,7 +54,7 @@ export default function contactUs() {
                 ) : (
                   // Show only the excerpt if the URL is missing, and no "no" text.
                   <p
-                    className="mb-3 font-normal text-[#333333] text-[18px]"
+                    className="mb-3 font-normal text-[#333333] text-[18px] text-start"
                     dangerouslySetInnerHTML={{ __html: items.excerpt }}
                   />
                 )}

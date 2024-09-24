@@ -5,19 +5,16 @@ import { valueHCI } from '@/utils/data'
 export default function ourValue() {
   return (
     <div className="mt-0 flex flex-col justify-center items-center text-center py-8">
-      <div className="pt-0 w-10/12 gap-10 grid grid-cols-2">
+      <div className="pt-0 w-10/12 gap-10 grid lg:grid-cols-2">
         <div className="flex justify-center items-center">
           <div className="flex justify-center items-center relative">
             <Image
               src="/images/our-values.png"
               width={800}
               height={800}
-              className="z-50"
+              className="z-20"
               alt="Assisting patients in india"
             />
-            <div className="absolute bg-[#FFE7B6] h-[27em] w-[37em] left-[9px] top-1 rounded-2xl p-10">
-              Assisting Patients
-            </div>
           </div>
         </div>
 

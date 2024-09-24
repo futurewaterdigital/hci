@@ -8,10 +8,10 @@ export default function whoHCI() {
       <h4 className="text-3xl font-bold pb-0 font-roboto">
         Why HCI? <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
       </h4>
-      <div className="pt-24 w-10/12 gap-10 grid grid-cols-3 mx-aut">
+      <div className="pt-24 w-10/12 gap-10 grid lg:grid-cols-3 mx-auto grid-cols-1">
         {whyHCI.map((items, index) => (
           <div
-            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center mx-auto"
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center mx-auto mt-10"
             key={index}
           >
             <div className="flex items-center justify-center relative">

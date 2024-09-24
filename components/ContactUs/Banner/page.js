@@ -2,7 +2,7 @@ import React from 'react'
 
 function Banner() {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-[70vh]">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/contact-us.png')]"></div>
       <div className="absolute h-[170px] w-full bottom-0">
         <div className="absolute inset-0 bg-gradient-to-t from-[#0E56A0] via-[#0E56A0] to-transparent opacity-80"></div>

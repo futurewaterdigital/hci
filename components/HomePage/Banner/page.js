@@ -22,9 +22,9 @@ function Banner() {
       })
       .then((data) => {
         if (data.length > 0) {
-          const sortedData = data.sort((a, b) =>
-            a.title.rendered.localeCompare(b.title.rendered)
-          ) // Alphabetical sort
+          const sortedData = data.sort(
+            (a, b) => new Date(b.date) - new Date(a.date)
+          )
           setNetworks(sortedData)
           setNoData(null)
         } else {
