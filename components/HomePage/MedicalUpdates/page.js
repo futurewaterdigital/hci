@@ -98,7 +98,7 @@ export default function Blogs() {
             const isLong = item.content.rendered.length > 240
             const displayedText = expandedPosts[index]
               ? item.content.rendered // Show full content if expanded
-              : item.content.rendered.slice(0, 240) + '...' // Otherwise show a part of the content with ellipsis
+              : item.content.rendered.slice(0, 214) // Otherwise show a part of the content with ellipsis
 
             return (
               <div
