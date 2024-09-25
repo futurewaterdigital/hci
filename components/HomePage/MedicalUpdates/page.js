@@ -96,9 +96,9 @@ export default function Blogs() {
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
           {blogs.map((item, index) => {
             const isLong = item.content.rendered.length > 240
-            const excerptText = expandedPosts[index]
+            const displayedText = expandedPosts[index]
               ? item.content.rendered // Show full content if expanded
-              : item.content.rendered.slice(0, 240) // Otherwise show a part of the content
+              : item.content.rendered.slice(0, 240) + '...' // Otherwise show a part of the content with ellipsis
 
             return (
               <div
@@ -119,7 +119,7 @@ export default function Blogs() {
                   <p>{new Date(item.date).toLocaleDateString()}</p>
                   <div
                     className="text-gray-400 font-light py-4 h-auto"
-                    dangerouslySetInnerHTML={{ __html: excerptText }}
+                    dangerouslySetInnerHTML={{ __html: displayedText }}
                   ></div>
                   {isLong && (
                     <button
