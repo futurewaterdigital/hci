@@ -29,15 +29,17 @@ export default function Patients() {
             Assisting Patients <hr className="w-28 h-1 bg-[#D84498]" />
           </h4>
           <p className="font-light">
-            Patients can benefit from HCI’s vast, proven ecosystem to connect
-            with service providers in various locations across India. They can
-            choose the location and the specialist they wish to receive their
-            treatment from. Further, HCI provides logistical support including
-            travel, accommodation, and local transportation assistance. The
-            patient is also offered support in areas such as follow-up care
-            including post-treatment and monitoring. We are committed to making
-            medical tourism a hassle-free and positive experience for all
-            stakeholders concerned.
+            At HCI, we are dedicated to providing a seamless and enriching
+            experience for our patients. Our extensive network connects you with
+            top-notch service providers across India, allowing you to choose the
+            location and specialist that best suits your needs. We take care of
+            all the details, offering comprehensive logistical support for
+            travel, accommodation, and local transportation, so you can focus on
+            your health and recovery. Additionally, we ensure you receive
+            ongoing support through follow-up care and monitoring
+            post-treatment. With HCI, your journey into medical tourism is not
+            just a process; it’s a personalized experience designed to
+            prioritize your comfort and well-being every step of the way.
           </p>
         </div>
         <div className="flex justify-center items-center relative order-1 lg:order-2">
