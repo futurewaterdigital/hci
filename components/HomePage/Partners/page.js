@@ -20,7 +20,7 @@ function ConsultantForm() {
     <div className="w-full mt-20 px-2 lg:px-0">
       <div className="bg-white lg:w-11/12 mx-auto text-center">
         <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
-          Our Partner Hospital
+          Our Network Hospitals
         </h3>
         <div className="w-full mx-auto p-10">
           <Slider {...settings}>
