@@ -10,7 +10,7 @@ function ConsultantForm() {
   var settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 800,
     autoplay: true,
     slidesToShow: 6,
     slidesToScroll: 6,
