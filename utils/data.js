@@ -409,3 +409,15 @@ export const locations = [
     url: '',
   },
 ]
+
+export const medicalPartners = [
+  { imageUrl: '/partners/1.png' },
+  { imageUrl: '/partners/2.png' },
+  { imageUrl: '/partners/3.png' },
+  { imageUrl: '/partners/4.png' },
+  { imageUrl: '/partners/5.png' },
+  { imageUrl: '/partners/6.png' },
+  { imageUrl: '/partners/7.png' },
+  { imageUrl: '/partners/8.png' },
+  { imageUrl: '/partners/9.png' },
+]
