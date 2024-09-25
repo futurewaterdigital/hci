@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-// import Link from 'next/link'
+import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Blogs() {
@@ -92,10 +92,10 @@ export default function Blogs() {
               /(<([^>]+)>)/gi,
               ''
             ) // Strip HTML tags
-            const isLong = excerptText.length > 233
+            const isLong = excerptText.length > 240
             const displayedText = isExpanded
               ? excerptText
-              : excerptText.slice(0, 233)
+              : excerptText.slice(0, 240)
             return (
               <div
                 key={index}
@@ -113,9 +113,15 @@ export default function Blogs() {
                     {item.title.rendered}
                   </h5>
                   <p>{new Date(item.date).toLocaleDateString()}</p>
-                  <p className="text-gray-400 font-light py-4 h-auto">
+                  <p className="text-gray-400 font-light py-4 lg:h-[170px]">
                     {displayedText}
                   </p>
+                  {/* <Link
+                    className="text-[#0E56A0] border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white font-medium rounded-xl text-sm px-5 py-2.5 text-center me-2 mb-2 transition-colors duration-300 cursor-pointer"
+                    href="/"
+                  >
+                    READ MORE
+                  </Link> */}
                   {isLong && (
                     <button
                       onClick={() => setIsExpanded(!isExpanded)}
