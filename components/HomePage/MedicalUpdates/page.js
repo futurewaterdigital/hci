@@ -1,14 +1,12 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-// import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Blogs() {
   const [blogs, setBlogs] = useState([]) // State to store fetched blogs
   const [loading, setLoading] = useState(true) // State for loading status
   const [error, setError] = useState(null) // State for error handling
-
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [expandedPosts, setExpandedPosts] = useState([]) // State to track expanded posts
 
   useEffect(() => {
     // Fetching data when the component mounts
@@ -27,6 +25,7 @@ export default function Blogs() {
           .sort((a, b) => new Date(b.date) - new Date(a.date))
           .slice(0, 3)
         setBlogs(sortedBlogs) // Update blogs state with fetched data
+        setExpandedPosts(Array(sortedBlogs.length).fill(false)) // Initialize the expansion state
         setLoading(false) // Set loading to false after data is fetched
       })
       .catch((error) => {
@@ -34,6 +33,14 @@ export default function Blogs() {
         setLoading(false)
       })
   }, []) // Empty dependency array to run the effect only once on mount
+
+  const handleToggleExpand = (index) => {
+    setExpandedPosts((prevState) => {
+      const newExpandedState = [...prevState]
+      newExpandedState[index] = !newExpandedState[index]
+      return newExpandedState
+    })
+  }
 
   if (loading) {
     return (
@@ -88,14 +95,11 @@ export default function Blogs() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-center mx-auto gap-4 py-10 w-11/12">
           {blogs.map((item, index) => {
-            const excerptText = item.excerpt.rendered.replace(
-              /(<([^>]+)>)/gi,
-              ''
-            ) // Strip HTML tags
-            const isLong = excerptText.length > 240
-            const displayedText = isExpanded
-              ? excerptText
-              : excerptText.slice(0, 240)
+            const isLong = item.content.rendered.length > 240
+            const excerptText = expandedPosts[index]
+              ? item.content.rendered // Show full content if expanded
+              : item.content.rendered.slice(0, 240) // Otherwise show a part of the content
+
             return (
               <div
                 key={index}
@@ -113,21 +117,16 @@ export default function Blogs() {
                     {item.title.rendered}
                   </h5>
                   <p>{new Date(item.date).toLocaleDateString()}</p>
-                  <p className="text-gray-400 font-light py-4 lg:h-[170px]">
-                    {displayedText}
-                  </p>
-                  {/* <Link
-                    className="text-[#0E56A0] border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white font-medium rounded-xl text-sm px-5 py-2.5 text-center me-2 mb-2 transition-colors duration-300 cursor-pointer"
-                    href="/"
-                  >
-                    READ MORE
-                  </Link> */}
+                  <div
+                    className="text-gray-400 font-light py-4 h-auto"
+                    dangerouslySetInnerHTML={{ __html: excerptText }}
+                  ></div>
                   {isLong && (
                     <button
-                      onClick={() => setIsExpanded(!isExpanded)}
+                      onClick={() => handleToggleExpand(index)}
                       className="text-[#0E56A0] border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white font-medium rounded-xl text-sm px-5 py-2.5 text-center me-2 mb-2 transition-colors duration-300 cursor-pointer"
                     >
-                      {isExpanded ? 'SHOW LESS' : 'READ MORE'}
+                      {expandedPosts[index] ? 'SHOW LESS' : 'READ MORE'}
                     </button>
                   )}
                 </div>
