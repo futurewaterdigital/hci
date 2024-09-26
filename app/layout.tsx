@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-// import Script from 'next/script'
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
           rel="stylesheet"
         />
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+        <Script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></Script>
         {children}
       </body>
     </html>
