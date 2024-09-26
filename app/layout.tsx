@@ -19,7 +19,7 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
           rel="stylesheet"
         />
-        <Script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></Script>
+        <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
         {children}
       </body>
     </html>
