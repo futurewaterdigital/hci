@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 export default function edgeHCI() {
   return (
@@ -14,6 +15,9 @@ export default function edgeHCI() {
           effectively to deliver services to patients from across geographies.
           They can also have access to information on the latest in equipment,
           processes and expertise, leveraging our ecosystem.
+        </p>
+        <p className="font-light text-blue-500">
+          <Link href="/contact-us">For more information, contact us.</Link>
         </p>
       </div>
     </div>

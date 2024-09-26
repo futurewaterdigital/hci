@@ -16,7 +16,7 @@ export default function whoHCI() {
           >
             <div className="flex items-center justify-center relative">
               <Image
-                class="rounded-t-lg w-36 absolute top-[-4em]"
+                class="rounded-t-lg w-36 absolute"
                 src={items.icon}
                 alt={items.title}
                 className="text-center"

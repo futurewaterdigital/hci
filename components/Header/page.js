@@ -14,11 +14,7 @@ export default function Header() {
 
   const handleClose = () => setIsOpen(false)
 
-  const placeholders = [
-    'Search for Hospital',
-    'Search for Doctor',
-    'Search for Treatment City',
-  ]
+  const placeholders = ['Hospital', 'Doctor', 'Treatment']
   const [currentPlaceholder, setCurrentPlaceholder] = useState(placeholders[0])
   const [index, setIndex] = useState(0)
 
@@ -56,7 +52,7 @@ export default function Header() {
       className={`z-40 transition-all duration-300 ${
         isScrolled
           ? 'fixed w-full bg-white shadow-lg top-0'
-          : 'absolute w-full lg:top-10'
+          : 'absolute w-full lg:top-4'
       }`}
     >
       <div className="lg:w-11/12 mx-auto lg:rounded-lg px-6 flex justify-between bg-white">

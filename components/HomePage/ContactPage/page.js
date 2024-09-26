@@ -60,7 +60,7 @@ function ConsultantForm() {
   // Validate the medical condition, hospital, and doctor fields
   const selectErrors = {
     field: 'medicalCondition',
-    message: 'Please select a medical condition.',
+    message: 'Please select a speciality.',
   }
   const hospitalErrors = {
     field: 'hospital',
@@ -316,7 +316,7 @@ function ConsultantForm() {
                   onChange={(e) => handleConditionChange(e.target.value)}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
                 >
-                  <option value="">Select Condition</option>
+                  <option value="">Select Speciality</option>
                   {medicalConditions.map((condition) => (
                     <option
                       key={condition.condition}

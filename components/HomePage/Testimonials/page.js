@@ -30,6 +30,7 @@ export default function Testimonials() {
       .then((data) => {
         if (data.length > 0) {
           setTestimonials(data)
+          console.log(data)
           setNoData(null)
         } else {
           setNoData('No Data Available')
@@ -86,8 +87,9 @@ export default function Testimonials() {
             Testimonials <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
           <p className="text-1xl font-light lg:w-6/12 mx-auto">
-            Experience the inspiring stories from our patients and partners with
-            their actual experience of excellence and impact of our service.
+            Discover the transformative power of our services through the
+            inspiring stories of <br />
+            our patients and partners.
           </p>
         </div>
         <div>
@@ -154,8 +156,18 @@ export default function Testimonials() {
                           __html: item.title.rendered,
                         }}
                       />
+                      {item.categories[0] === 9 && (
+                        <p className="text-gray-500 text-sm">
+                          {item.acf.designation ? item.acf.designation : ''}
+                        </p>
+                      )}
+                      {item.categories[0] === 8 && (
+                        <p className="text-gray-500 text-sm">
+                          {item.acf.designation ? item.acf.designation : ''}
+                        </p>
+                      )}
                       <p
-                        className="py-3 font-light text-gray-400 text-[12px] h-[150px]"
+                        className="py-3 font-light text-gray-400 text-[14px] h-[190px]"
                         dangerouslySetInnerHTML={{
                           __html: item.content.rendered,
                         }}
