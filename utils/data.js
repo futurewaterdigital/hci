@@ -305,6 +305,16 @@ export const medicalConditions = [
       },
     ],
   },
+
+  {
+    condition: 'Others',
+    hospitals: [
+      {
+        name: 'Others',
+        doctors: ['Others'],
+      },
+    ],
+  },
 ]
 
 export const footerMenu = [

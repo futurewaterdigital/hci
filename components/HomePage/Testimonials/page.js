@@ -86,10 +86,9 @@ export default function Testimonials() {
           <h4 className="text-3xl font-bold pb-10 font-roboto">
             Testimonials <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
-          <p className="text-1xl font-light lg:w-6/12 mx-auto">
+          <p className="text-1xl lg:w-11/12 mx-auto font-bold ">
             Discover the transformative power of our services through the
-            inspiring stories of <br />
-            our patients and partners.
+            inspiring stories of our patients and partners.
           </p>
         </div>
         <div>

@@ -419,11 +419,11 @@ function ConsultantForm() {
                       </option>
                     ))}
                   </select>
-                  {/* {errors.hospital && (
+                  {errors.hospital && (
                     <p className="text-red-500 text-start text-[14px]">
                       {errors.hospital}
                     </p>
-                  )} */}
+                  )}
                 </div>
                 {/* )} */}
               </div>
@@ -442,11 +442,11 @@ function ConsultantForm() {
                     </option>
                   ))}
                 </select>
-                {/* {errors.doctor && (
+                {errors.doctor && (
                   <p className="text-red-500 text-start text-[14px]">
                     {errors.doctor}
                   </p>
-                )} */}
+                )}
               </div>
             </div>
 
