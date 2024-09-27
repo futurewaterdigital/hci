@@ -5,6 +5,24 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Healthcare International',
   description: 'Healthcare International.',
+  metadataBase: new URL('https://healthcareinternational.in/'),
+  openGraph: {
+    url: 'https://healthcareinternational.in/',
+    title: 'Healthcare International',
+    description: 'Healthcare International',
+    images: [
+      {
+        url: '/images/homeBanner.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Healthcare International',
+      },
+    ],
+  },
+  icons: {
+    icon: 'favicon_io/favicon-32x32.png',
+    shortcut: 'favicon_io/favicon.ico',
+  },
 }
 
 export default function RootLayout({
