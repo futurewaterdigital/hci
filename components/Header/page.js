@@ -59,7 +59,7 @@ export default function Header() {
         <div className="h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px]">
           <div className="relative group flex items-center">
             <div className="">
-              <div className="flex min-h-[10vh] items-center justify-center">
+              <div className="flex min-h-[10vh] items-center justify-center cursor-pointer">
                 <Image
                   src="/images/menu.svg"
                   width={80}
@@ -106,13 +106,15 @@ export default function Header() {
 
         <div className="lg:relative lg:h-20 flex lg:justify-center items-center z-20 cursor-pointer">
           <Link href="/">
-            <div className="bg-white lg:h-28 lg:rounded-lg lg:w-64 flex justify-center p-4 mx-auto ">
+            <div className="bg-white lg:h-28 lg:rounded-lg lg:w-64 flex justify-center p-4 mx-auto cursor-pointer ">
               <Image
                 src="/images/logo.svg"
                 width={500}
                 height={100}
                 className={`rounded-lg cursor-pointer ${
-                  isScrolled ? 'lg:w-8/12 w-[100px]' : 'lg:w-full w-[100px]'
+                  isScrolled
+                    ? 'lg:w-8/12 w-[100px] cursor-pointer'
+                    : 'lg:w-full w-[100px] cursor-pointer'
                 }`}
               />
             </div>

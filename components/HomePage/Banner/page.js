@@ -41,7 +41,7 @@ function Banner() {
 
   return (
     <div className="relative h-screen">
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/banner.png')]"></div>
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/homeBanner.jpg')]"></div>
       <div className="absolute lg:h-[300px] w-full bottom-0 h-[400px]">
         <div className="absolute inset-0 bg-gradient-to-t from-[#0E56A0] via-[#0E56A0] to-transparent opacity-80"></div>
         <div className="relative flex flex-col items-center h-full text-white">

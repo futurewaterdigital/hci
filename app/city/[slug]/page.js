@@ -1,53 +1,42 @@
-'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Header from '../../../components/Header/page'
 import Banner from '../../../components/Networks/Banner/page'
 import Footer from '../../../components/Footer/page'
 
-export default function City({ params }) {
-  const [selectedCategory] = useState(params.slug) // Default to the first category
-  const [network, setNetworks] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [noData, setNoData] = useState(null)
+export default async function City({ params }) {
+  let network = []
+  let noData = null
+  let error = null
 
-  useEffect(() => {
-    setLoading(true)
-    fetch(
-      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${selectedCategory}`
+  try {
+    const res = await fetch(
+      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${params.slug}`,
+      { next: { revalidate: 60 } } // Optional: Revalidate data every 60 seconds
     )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok')
-        }
-        return response.json()
-      })
-      .then((data) => {
-        if (data.length > 0) {
-          const sortedData = data.sort((a, b) =>
-            a.title.rendered.localeCompare(b.title.rendered)
-          ) // Alphabetical sort
-          setNetworks(sortedData)
-          setNoData(null)
-        } else {
-          setNoData('No Data Available')
-          setNetworks([])
-        }
-        setLoading(false)
-      })
-      .catch((error) => {
-        setError(error.message)
-        setLoading(false)
-      })
-  }, [selectedCategory])
+
+    if (!res.ok) {
+      throw new Error('Failed to fetch data')
+    }
+
+    const data = await res.json()
+
+    // Sort the data alphabetically if available
+    network =
+      data.length > 0
+        ? data.sort((a, b) => a.title.rendered.localeCompare(b.title.rendered))
+        : []
+    noData = network.length === 0 ? 'No Data Available' : null
+  } catch (err) {
+    error = err.message
+  }
 
   return (
     <>
       <Header />
-      {error}
-      {noData}
-      {loading ? (
-        // Skeleton Loader
+      {error && <div>Error: {error}</div>}
+      {noData && <div>{noData}</div>}
+      {network.length === 0 ? (
+        // Skeleton Loader when no network data is available
         <>
           <div className="animate-pulse">
             <div className="relative h-screen bg-gray-300"></div>
@@ -65,19 +54,19 @@ export default function City({ params }) {
           {network.map((items, index) => (
             <React.Fragment key={index}>
               {items.acf && items.acf.banner && items.acf.banner.url ? (
-                // If banner URL exists
-                <Banner city={params.slug} banner={items.acf.banner.url} />
+                <Banner
+                  city={params.slug}
+                  banner={items.acf.banner.url}
+                  name={items.title.rendered}
+                />
               ) : (
-                // Skeleton Placeholder if no banner URL
                 <div className="relative h-screen bg-gray-300 animate-pulse"></div>
               )}
 
               <div className="w-9/12 mx-auto">
-                <div className="">
-                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
-                    {items.title.rendered}
-                  </h1>
-                </div>
+                {/* <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
+                  {items.title.rendered}
+                </h1> */}
                 <div
                   dangerouslySetInnerHTML={{ __html: items.content.rendered }}
                   className="font-light"
@@ -87,7 +76,6 @@ export default function City({ params }) {
           ))}
         </>
       )}
-
       <Footer />
     </>
   )

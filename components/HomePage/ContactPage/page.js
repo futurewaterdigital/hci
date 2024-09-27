@@ -299,7 +299,7 @@ function ConsultantForm() {
               </div>
 
               <div>
-                <div class="flex">
+                <div className="flex">
                   <div>
                     <input
                       type="text"
@@ -325,7 +325,7 @@ function ConsultantForm() {
                       </div>
                     )}
                   </div>
-                  <div class="relative w-full">
+                  <div className="relative w-full">
                     <input
                       type="tel"
                       name="yourPhone"
@@ -333,7 +333,7 @@ function ConsultantForm() {
                       onChange={handleTextChange}
                       maxLength="10"
                       id="search-dropdown"
-                      class="block w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 p-4"
+                      className="block w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 p-4"
                       placeholder="Phone Number"
                     />
                   </div>

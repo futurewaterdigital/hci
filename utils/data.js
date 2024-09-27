@@ -420,6 +420,8 @@ export const medicalPartners = [
   { imageUrl: '/partners/7.png' },
   { imageUrl: '/partners/8.png' },
   { imageUrl: '/partners/9.png' },
+  { imageUrl: '/partners/10.png' },
+  { imageUrl: '/partners/11.png' },
 ]
 
 export const countryCode = [
