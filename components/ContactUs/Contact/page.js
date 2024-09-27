@@ -2,7 +2,6 @@ import React from 'react'
 import { locations } from '@/utils/data'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaWhatsapp } from 'react-icons/fa6'
 
 export default function contactUs() {
   return (

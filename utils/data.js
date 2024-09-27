@@ -404,7 +404,7 @@ export const locations = [
     title: 'Phone',
     icon: '/images/phone.svg',
     excerpt: `<div class="flex gap-2 justify-center items-center"><img src="/images/whatsapp.png" width="30" height="30"/> +91 7055018181</div>`,
-    url: 'tel:+91 7055018181',
+    url: 'https://wa.me/+917055018181',
   },
   {
     title: 'Email',
