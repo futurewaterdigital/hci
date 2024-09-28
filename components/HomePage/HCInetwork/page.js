@@ -103,7 +103,7 @@ function Network() {
           <div
             className="flex gap-4 overflow-x-scroll scrollbar-hide"
             ref={scrollContainerRef}
-            onScroll={handleScroll}
+            // onScroll={handleScroll}
           >
             {loading
               ? Array(5)
