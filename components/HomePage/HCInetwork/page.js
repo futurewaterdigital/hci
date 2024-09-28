@@ -10,8 +10,8 @@ function Network() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [noData, setNoData] = useState(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
+  // const [canScrollLeft, setCanScrollLeft] = useState(false)
+  // const [canScrollRight, setCanScrollRight] = useState(true)
 
   const scrollContainerRef = useRef(null)
 
@@ -45,19 +45,19 @@ function Network() {
       })
   }, [selectedCategory])
 
-  const handleScroll = () => {
-    const container = scrollContainerRef.current
-    setCanScrollLeft(container.scrollLeft > 0)
-    setCanScrollRight(
-      container.scrollLeft + container.clientWidth < container.scrollWidth
-    )
-  }
+  // const handleScroll = () => {
+  //   const container = scrollContainerRef.current
+  //   setCanScrollLeft(container.scrollLeft > 0)
+  //   setCanScrollRight(
+  //     container.scrollLeft + container.clientWidth < container.scrollWidth
+  //   )
+  // }
 
-  const scroll = (direction) => {
-    const container = scrollContainerRef.current
-    const scrollAmount = direction === 'left' ? -300 : 300
-    container.scrollBy({ left: scrollAmount, behavior: 'smooth' })
-  }
+  // const scroll = (direction) => {
+  //   const container = scrollContainerRef.current
+  //   const scrollAmount = direction === 'left' ? -300 : 300
+  //   container.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+  // }
 
   return (
     <div className="py-10 z-10 relative">
