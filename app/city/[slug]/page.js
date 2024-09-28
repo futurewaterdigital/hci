@@ -54,9 +54,9 @@ export default function City({ params }) {
     }
   }, [])
 
-  const parallaxStyle = {
-    backgroundPositionY: `${scrollPosition * 0.5}px`, // Adjust the multiplier for parallax speed
-  }
+  // const parallaxStyle = {
+  //   backgroundPositionY: `${scrollPosition * 0.5}px`, // Adjust the multiplier for parallax speed
+  // }
 
   return (
     <>
