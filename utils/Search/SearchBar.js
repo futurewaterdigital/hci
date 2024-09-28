@@ -77,7 +77,7 @@ const SearchBar = ({ currentPlaceholder }) => {
               onChange={(e) => setSearchQuery(e.target.value)}
               onBlur={handleBlur}
               onFocus={handleFocus}
-              className="block w-0 group-hover:w-full focus:w-full transition-all duration-300 ease-in-out p-4 pe-10 text-sm text-gray-900 border-0 bg-transparent border-b-white border-b-0 group-hover:border-b-2 focus:border-b-blue-500 focus:ring-0"
+              className="block lg:w-0 group-hover:w-full focus:w-full transition-all duration-300 ease-in-out p-4 pe-10 text-sm text-gray-900 border-0 bg-transparent border-b-white border-b-0 group-hover:border-b-2 focus:border-b-blue-500 focus:ring-0"
               placeholder={currentPlaceholder}
               required
             />

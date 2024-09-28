@@ -65,7 +65,7 @@ export default function Header() {
                   width={80}
                   height={80}
                   onClick={() => setIsOpen(true)}
-                  className="cursor-pointer lg:w-[37px] lg:h-[40px] w-[80px]"
+                  className="cursor-pointer xl:w-[37px] xl:h-[40px] lg:w-[50px]"
                 />
               </div>
               <Drawer open={isOpen} onClose={handleClose}>
@@ -113,8 +113,8 @@ export default function Header() {
                 height={100}
                 className={`rounded-lg cursor-pointer ${
                   isScrolled
-                    ? 'lg:w-8/12 w-[100px] cursor-pointer'
-                    : 'lg:w-full w-[100px] cursor-pointer'
+                    ? 'xl:w-8/12 lg:w-[70%] w-[100px] cursor-pointer'
+                    : 'xl:w-full lg:w-[70%] w-[100px] cursor-pointer'
                 }`}
               />
             </div>
