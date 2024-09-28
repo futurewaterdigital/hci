@@ -14,7 +14,7 @@ function ConsultantForm() {
     speed: 2000,
     autoplay: true,
     slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToScroll: 6,
     responsive: [
       {
         breakpoint: 1024, // For tablet and below

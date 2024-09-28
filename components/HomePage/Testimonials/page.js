@@ -116,10 +116,10 @@ export default function Testimonials() {
               </div>
             ) : (
               <div className="overflow-x-scroll whitespace-nowrap scrollbar-hide py-10">
-                <div className="lg:inline-flex md:inline-flex gap-4 sms:grid-cols-1 sms:grid">
+                <div className="xl:inline-flex lg:inline-flex gap-4 sms:grid-cols-1 sms:grid xs:grid xs:grid-cols-3">
                   {testimonials.map((item, index) => (
                     <div
-                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative inline-block xl:w-80 lg:w-[380px] md:w-[380px]"
+                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative inline-block mx-auto xl:w-[100%] lg:w-[380px] md:w-[380px] "
                       key={index}
                     >
                       <Image
