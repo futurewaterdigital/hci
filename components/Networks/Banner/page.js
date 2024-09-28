@@ -2,9 +2,9 @@ import React from 'react'
 
 function Banner({ banner, name }) {
   return (
-    <div className="relative h-[70vh]">
+    <div className="relative h-[100vh]">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-top bg-no-repeat"
         style={{ backgroundImage: `url(${banner})` }} // Use inline styles for the dynamic URL
       >
         {/* {banner} */}

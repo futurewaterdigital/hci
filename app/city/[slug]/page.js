@@ -1,44 +1,69 @@
-import React from 'react'
-
-import Link from 'next/link'
+'use client'
+import React, { useEffect, useState } from 'react'
 import Header from '../../../components/Header/page'
-import Banner from '../../../components/Networks/Banner/page'
 import Footer from '../../../components/Footer/page'
 
-export default async function City({ params }) {
-  let network = []
-  let noData = null
-  let error = null
+export default function City({ params }) {
+  const [selectedCategory] = useState(params.slug) // Default to the first category
+  const [network, setNetworks] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [noData, setNoData] = useState(null)
+  const [scrollPosition, setScrollPosition] = useState(0) // New state for parallax
 
-  try {
-    const res = await fetch(
-      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${params.slug}`,
-      { next: { revalidate: 60 } } // Optional: Revalidate data every 60 seconds
+  useEffect(() => {
+    setLoading(true)
+    fetch(
+      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${selectedCategory}`
     )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        return response.json()
+      })
+      .then((data) => {
+        if (data.length > 0) {
+          const sortedData = data.sort((a, b) =>
+            a.title.rendered.localeCompare(b.title.rendered)
+          ) // Alphabetical sort
+          setNetworks(sortedData)
+          setNoData(null)
+        } else {
+          setNoData('No Data Available')
+          setNetworks([])
+        }
+        setLoading(false)
+      })
+      .catch((error) => {
+        setError(error.message)
+        setLoading(false)
+      })
+  }, [selectedCategory])
 
-    if (!res.ok) {
-      throw new Error('Failed to fetch data')
+  // Parallax scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY)
     }
 
-    const data = await res.json()
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
-    // Sort the data alphabetically if available
-    network =
-      data.length > 0
-        ? data.sort((a, b) => a.title.rendered.localeCompare(b.title.rendered))
-        : []
-    noData = network.length === 0 ? 'No Data Available' : null
-  } catch (err) {
-    error = err.message
+  const parallaxStyle = {
+    backgroundPositionY: `${scrollPosition * 0.5}px`, // Adjust the multiplier for parallax speed
   }
 
   return (
     <>
       <Header />
-      {error && <div>Error: {error}</div>}
-      {noData && <div>{noData}</div>}
-      {network.length === 0 ? (
-        // Skeleton Loader when no network data is available
+      {error}
+      {noData}
+      {loading ? (
+        // Skeleton Loader
         <>
           <div className="animate-pulse">
             <div className="relative h-screen bg-gray-300"></div>
@@ -56,19 +81,27 @@ export default async function City({ params }) {
           {network.map((items, index) => (
             <React.Fragment key={index}>
               {items.acf && items.acf.banner && items.acf.banner.url ? (
-                <Banner
-                  city={params.slug}
-                  banner={items.acf.banner.url}
-                  name={items.title.rendered}
-                />
+                // If banner URL exists
+                <div
+                  className="relative h-screen bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${items.acf.banner.url})`,
+                    ...parallaxStyle, // Add parallax style here
+                  }}
+                >
+                  {/* Additional content inside banner if necessary */}
+                </div>
               ) : (
+                // Skeleton Placeholder if no banner URL
                 <div className="relative h-screen bg-gray-300 animate-pulse"></div>
               )}
 
-              <div className="w-9/12 mx-auto mt-8">
-                {/* <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
-                  {items.title.rendered}
-                </h1> */}
+              <div className="w-9/12 mx-auto">
+                <div className="">
+                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
+                    {items.title.rendered}
+                  </h1>
+                </div>
                 <div
                   dangerouslySetInnerHTML={{ __html: items.content.rendered }}
                   className="font-light"
@@ -78,15 +111,7 @@ export default async function City({ params }) {
           ))}
         </>
       )}
-      <div className="flex justify-center">
-        <Link
-          href="/#cities"
-          className="bg-[#d84498] p-2 rounded-lg px-8 text-center text-white font-light"
-        >
-          {' '}
-          Back
-        </Link>
-      </div>
+
       <Footer />
     </>
   )
