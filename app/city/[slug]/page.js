@@ -10,7 +10,7 @@ export default function City({ params }) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [noData, setNoData] = useState(null)
-  const [scrollPosition, setScrollPosition] = useState(0) // New state for parallax
+  // const [scrollPosition, setScrollPosition] = useState(0) // New state for parallax
 
   useEffect(() => {
     setLoading(true)
@@ -44,9 +44,9 @@ export default function City({ params }) {
 
   // Parallax scroll effect
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY)
-    }
+    // const handleScroll = () => {
+    //   setScrollPosition(window.scrollY)
+    // }
 
     window.addEventListener('scroll', handleScroll)
     return () => {
