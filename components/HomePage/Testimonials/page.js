@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-// import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Testimonials() {
@@ -49,31 +48,12 @@ export default function Testimonials() {
   }
 
   const getButtonClass = (id) => {
-    return `border border-pink-500 font-medium rounded-lg text-sm px-16 py-2.5 text-center me-2 mb-2 ${
+    return `border border-pink-500 font-medium rounded-lg text-sm px-16 lg:py-2.5 py-4 text-center me-2 mb-2 md:w-auto sms:w-[400px] sxs:w-[250px] ${
       id === selectedCategory
         ? 'bg-pink-500 text-white'
         : 'hover:bg-hciSecondary hover:text-white text-[#D84498]'
     }`
   }
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     categories.forEach((category) => {
-  //       const section = document.getElementById(category.id)
-  //       if (section) {
-  //         const { top, bottom } = section.getBoundingClientRect()
-  //         if (top >= 0 && bottom <= window.innerHeight) {
-  //           setSelectedCategory(category.categoryId)
-  //         }
-  //       }
-  //     })
-  //   }
-
-  //   window.addEventListener('scroll', handleScroll)
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll)
-  //   }
-  // }, [categories])
 
   if (error) {
     return <div>Error: {error}</div>
@@ -92,7 +72,7 @@ export default function Testimonials() {
           </p>
         </div>
         <div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 py-10 mx-auto lg:w-7/12">
+          <div className="grid sms:grid-cols-1 md:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 py-10 mx-auto xl:w-7/12 md:w-11/12 sm:w-11/12">
             {categories.map((item) => (
               <div
                 key={item.categoryId}
@@ -111,7 +91,7 @@ export default function Testimonials() {
           </div>
         </div>
         {loading ? (
-          <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center mx-auto gap-4 py-10 w-11/12">
+          <div className="grid lg:grid-cols-3 md:grid-cols-3 sms:grid-cols-1 grid-cols-1 items-center justify-center mx-auto gap-4 py-10 xl:w-11/12 lg:w-full">
             {Array(3)
               .fill(null)
               .map((_, index) => (
@@ -135,53 +115,55 @@ export default function Testimonials() {
                 <p className="text-xl font-light">{noData}</p>
               </div>
             ) : (
-              <div className="grid lg:grid-cols-3 grid-cols-1 items-center justify-center mx-auto lg:gap-4 gap-10 py-10 w-11/12">
-                {testimonials.map((item, index) => (
-                  <div
-                    className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative"
-                    key={index}
-                  >
-                    <Image
-                      className="w-24 h-24 my-3 rounded-full shadow-lg mx-auto"
-                      src={item.featured_media_url}
-                      alt={item.title.rendered}
-                      width={100}
-                      height={100}
-                    />
-                    <div className="p-5">
-                      <h5
-                        className="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]"
-                        dangerouslySetInnerHTML={{
-                          __html: item.title.rendered,
-                        }}
-                      />
-                      {item.categories[0] === 9 && (
-                        <p className="text-gray-500 text-sm">
-                          {item.acf.designation ? item.acf.designation : ''}
-                        </p>
-                      )}
-                      {item.categories[0] === 8 && (
-                        <p className="text-gray-500 text-sm">
-                          {item.acf.designation ? item.acf.designation : ''}
-                        </p>
-                      )}
-                      <p
-                        className="py-3 font-light text-gray-400 text-[14px] h-[190px]"
-                        dangerouslySetInnerHTML={{
-                          __html: item.content.rendered,
-                        }}
-                      />
-                    </div>
-                    <div className="absolute mt-[-35px] right-4">
+              <div className="overflow-x-scroll whitespace-nowrap scrollbar-hide py-10">
+                <div className="lg:inline-flex md:inline-flex gap-4 sms:grid-cols-1 sms:grid">
+                  {testimonials.map((item, index) => (
+                    <div
+                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative inline-block xl:w-80 lg:w-[380px] md:w-[380px]"
+                      key={index}
+                    >
                       <Image
-                        src="/images/quotes.svg"
+                        className="w-24 h-24 my-3 rounded-full shadow-lg mx-auto"
+                        src={item.featured_media_url}
                         alt={item.title.rendered}
-                        width={60}
-                        height={60}
+                        width={100}
+                        height={100}
                       />
+                      <div className="p-5">
+                        <h5
+                          className="text-xl font-normal tracking-tight text-black group-hover:text-[#D84498]"
+                          dangerouslySetInnerHTML={{
+                            __html: item.title.rendered,
+                          }}
+                        />
+                        {item.categories[0] === 9 && (
+                          <p className="text-gray-500 text-sm text-wrap">
+                            {item.acf.designation ? item.acf.designation : ''}
+                          </p>
+                        )}
+                        {item.categories[0] === 8 && (
+                          <p className="text-gray-500 text-sm text-wrap">
+                            {item.acf.designation ? item.acf.designation : ''}
+                          </p>
+                        )}
+                        <p
+                          className="py-3 font-light text-gray-400 text-[14px] lg:h-[190px] xl:h-[190px] md:h-[190px] sms:h-[190px] text-wrap sxs:h-[300px]"
+                          dangerouslySetInnerHTML={{
+                            __html: item.content.rendered,
+                          }}
+                        />
+                      </div>
+                      <div className="absolute mt-[-35px] right-4">
+                        <Image
+                          src="/images/quotes.svg"
+                          alt={item.title.rendered}
+                          width={60}
+                          height={60}
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
           </>

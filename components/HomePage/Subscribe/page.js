@@ -100,7 +100,7 @@ export default function Subscribe() {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/subscribe.png')]"></div>
         <div className="absolute inset-0 bg-[#0E56A0] opacity-80"></div>
         <div className="relative flex flex-col items-center text-white lg:w-6/12 mx-auto">
-          <h4 className="text-3xl font-bold py-4 font-roboto">
+          <h4 className="lg:text-3xl font-bold py-4 font-roboto sxs:text-2xl">
             Subscribe & Stay Updated{' '}
             <hr className="w-28 mx-auto h-1 bg-white" />
           </h4>

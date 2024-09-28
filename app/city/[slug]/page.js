@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Header from '../../../components/Header/page'
 import Banner from '../../../components/Networks/Banner/page'
 import Footer from '../../../components/Footer/page'
@@ -63,7 +64,7 @@ export default async function City({ params }) {
                 <div className="relative h-screen bg-gray-300 animate-pulse"></div>
               )}
 
-              <div className="w-9/12 mx-auto">
+              <div className="w-9/12 mx-auto mt-8">
                 {/* <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
                   {items.title.rendered}
                 </h1> */}
@@ -76,6 +77,15 @@ export default async function City({ params }) {
           ))}
         </>
       )}
+      <div className="flex justify-center">
+        <Link
+          href="/#cities"
+          className="bg-[#d84498] p-2 rounded-lg px-8 text-center text-white font-light"
+        >
+          {' '}
+          Back
+        </Link>
+      </div>
       <Footer />
     </>
   )
