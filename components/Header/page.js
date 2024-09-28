@@ -168,7 +168,7 @@ export default function Header() {
             <div className="flex items-center">
               <Link
                 href="/contact-us"
-                className="lg:w-full xs:py-2 xs:px-4 lg:px-2 lg:py-2 lg:text-lg lg:text-[12px]
+                className="lg:w-full xs:py-2 xs:px-4 lg:px-2 lg:py-2 xl:text-lg lg:text-[12px]
                 font-medium text-[#D84498] rounded-lg border border-[#D84498] 
                 hover:bg-[#D84498] hover:text-white opacity-100 z-50 tracking-[2px]"
               >

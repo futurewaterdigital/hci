@@ -19,16 +19,15 @@ function ConsultantForm() {
       {
         breakpoint: 1024, // For tablet and below
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
+          slidesToShow: 3,
+          slidesToScroll: 3,
         },
       },
-
       {
         breakpoint: 768, // For mobile
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
         },
       },
       {
@@ -42,8 +41,8 @@ function ConsultantForm() {
   }
 
   return (
-    <div className="xl:w-11/12 lg:w-full mt-20 px-2 lg:px-0 mx-auto">
-      <div className="bg-white lg:w-full mx-auto text-center">
+    <div className="w-full mt-20 px-2 lg:px-0">
+      <div className="bg-white lg:w-11/12 mx-auto text-center">
         <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
           Our Network Hospitals
         </h3>
@@ -56,7 +55,6 @@ function ConsultantForm() {
                   width={200}
                   height={200}
                   alt={`Partner ${index}`}
-                  className="lg:w-full xl:w-11/12 xs:w-full md:w-full sm:w-full w-full"
                 />
               </div>
             ))}

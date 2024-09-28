@@ -52,14 +52,14 @@ function Network() {
   }, [selectedCategory])
 
   return (
-    <div className="py-10 z-10 relative">
+    <div className="py-10 z-10 relative" id="cities">
       <div className="w-11/12 mx-auto">
-        <div className="text-center">
+        <div className="text-center ">
           <h4 className="text-3xl font-bold pb-10 font-roboto">
             The HCI Network
             <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
-          <p className="font-light">
+          <p className="font-light w-8/12 mx-auto">
             The HCI, an undertaking of GSC Pvt. Ltd, consists of leading
             hospitals and clinics with state-of-the-art infrastructure with
             50,000 enlisted medical beds, accredited by the Joint Commission

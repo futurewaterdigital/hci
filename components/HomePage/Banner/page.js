@@ -50,7 +50,7 @@ function Banner() {
   }, [selectedCategory])
 
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen" id="home">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/homeBanner.jpg')]"></div>
       <div className="absolute lg:h-[300px] w-full bottom-0 h-[400px]">
         <div className="absolute inset-0 bg-gradient-to-t from-[#0e57a0] via-[#0e57a0cf] to-transparent opacity-80"></div>

@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import dynamic from 'next/dynamic' // Lazy load Footer
 import Header from '../../../components/Header/page'
 import Banner from '../../../components/Treatment/Banner/page'
+import Link from 'next/link'
 
 // Dynamically import Footer to lazy-load
 const Footer = dynamic(() => import('../../../components/Footer/page'), {
@@ -103,6 +104,14 @@ export default function City({ params }) {
               </div>
             </React.Fragment>
           ))}
+          <div className="w-full mx-auto text-center">
+            <Link
+              href="/#cities"
+              className="bg-[#D84598] px-8 py-4 text-white rounded-lg"
+            >
+              Back
+            </Link>
+          </div>
         </>
       )}
 

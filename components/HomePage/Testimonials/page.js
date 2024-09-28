@@ -147,7 +147,7 @@ export default function Testimonials() {
                           </p>
                         )}
                         <p
-                          className="py-3 font-light text-gray-400 text-[14px] lg:h-[190px] xl:h-[190px] md:h-[190px] sms:h-[190px] text-wrap sxs:h-[300px]"
+                          className="py-3 font-light text-gray-800 text-[14px] lg:h-[190px] xl:h-[190px] md:h-[190px] sms:h-[190px] text-wrap sxs:h-[300px]"
                           dangerouslySetInnerHTML={{
                             __html: item.content.rendered,
                           }}

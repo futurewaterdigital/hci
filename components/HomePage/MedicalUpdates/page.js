@@ -118,7 +118,7 @@ export default function Blogs() {
                   </h5>
                   <p>{new Date(item.date).toLocaleDateString()}</p>
                   <div
-                    className={`text-gray-400 font-light py-4 ${
+                    className={`text-gray-800 font-light py-4 ${
                       expandedPosts[index] ? 'h-auto' : 'h-[170px]'
                     }`}
                     dangerouslySetInnerHTML={{ __html: displayedText }}
