@@ -6,8 +6,11 @@ import Link from 'next/link'
 import { menu } from '../../utils/data'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import Search from '../../utils/Search/SearchBar'
+import { usePathname } from 'next/navigation'
+import clsx from 'clsx'
 
 export default function Header() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const [isScrolled, setIsScrolled] = useState(false) // To track scroll status
@@ -47,15 +50,26 @@ export default function Header() {
     }
   }, [])
 
+  if (pathname === '/') {
+    var classnew = `z-40 transition-all duration-300 ${
+      isScrolled
+        ? 'fixed w-full bg-white shadow-lg top-0'
+        : 'absolute w-full lg:top-4'
+    }`
+  } else {
+    var classnew = `fixed z-40 w-full bg-white transition-all duration-300`
+  }
+
   return (
-    <div
-      className={`z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'fixed w-full bg-white shadow-lg top-0'
-          : 'absolute w-full lg:top-4'
-      }`}
-    >
-      <div className="lg:w-11/12 mx-auto lg:rounded-lg px-6 flex justify-between bg-white">
+    // <div
+    //   className={`z-40 transition-all duration-300 ${
+    //     isScrolled
+    //       ? 'fixed w-full bg-white shadow-lg top-0'
+    //       : ' w-full lg:top-4'
+    //   }`}
+    // >
+    <div className={classnew}>
+      <div className="lg:w-11/12 mx-auto lg:rounded-lg px-6 flex justify-between items-center bg-white">
         <div className="h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px]">
           <div className="relative group flex items-center">
             <div className="">
@@ -104,18 +118,26 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="lg:relative lg:h-20 flex lg:justify-center items-center z-20 cursor-pointer">
+        <div
+          className={`lg:relative flex lg:justify-center items-center z-20 cursor-pointer ${
+            pathname === '/' ? 'lg:h-20' : 'lg:h-10 p-12 top-0'
+          }`}
+        >
           <Link href="/">
-            <div className="bg-white lg:h-28 lg:rounded-lg lg:w-64 flex justify-center p-4 mx-auto cursor-pointer ">
+            <div
+              className={`bg-white lg:rounded-lg lg:w-64 flex justify-center items-center p-4 mx-auto cursor-pointer ${
+                pathname === '/' ? 'lg:h-28' : 'lg:h-10'
+              }`}
+            >
               <Image
                 src="/images/logo.svg"
                 width={500}
                 height={100}
                 className={`rounded-lg cursor-pointer ${
                   isScrolled
-                    ? 'xl:w-8/12 lg:w-[70%] w-[100px] cursor-pointer'
-                    : 'xl:w-full lg:w-[70%] w-[100px] cursor-pointer'
-                }`}
+                    ? 'xl:w-8/12 lg:w-[70%] w-[100px] cursor-pointer p-4'
+                    : 'xl:w-10/12 lg:w-[70%] w-[100px] cursor-pointer p-4'
+                } `}
               />
             </div>
           </Link>

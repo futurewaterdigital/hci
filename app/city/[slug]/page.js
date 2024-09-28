@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../../components/Header/page'
 import Footer from '../../../components/Footer/page'
+import Banner from '../../../components/Networks/Banner/page'
 
 export default function City({ params }) {
   const [selectedCategory] = useState(params.slug) // Default to the first category
@@ -82,15 +83,16 @@ export default function City({ params }) {
             <React.Fragment key={index}>
               {items.acf && items.acf.banner && items.acf.banner.url ? (
                 // If banner URL exists
-                <div
-                  className="relative h-screen bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url(${items.acf.banner.url})`,
-                    ...parallaxStyle, // Add parallax style here
-                  }}
-                >
-                  {/* Additional content inside banner if necessary */}
-                </div>
+                // <div
+                //   className="relative h-[75vh]  bg-top bg-no-repeat"
+                //   style={{
+                //     backgroundImage: `url(${items.acf.banner.url})`,
+                //     ...parallaxStyle, // Add parallax style here
+                //   }}
+                // >
+                //   {/* Additional content inside banner if necessary */}
+                // </div>
+                <Banner city={params.slug} banner={items.acf.banner.url} />
               ) : (
                 // Skeleton Placeholder if no banner URL
                 <div className="relative h-screen bg-gray-300 animate-pulse"></div>
