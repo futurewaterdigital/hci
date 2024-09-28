@@ -421,17 +421,17 @@ export const locations = [
 ]
 
 export const medicalPartners = [
-  { imageUrl: '/partners/1.png' },
-  { imageUrl: '/partners/2.png' },
-  { imageUrl: '/partners/3.png' },
-  { imageUrl: '/partners/4.png' },
-  { imageUrl: '/partners/5.png' },
-  { imageUrl: '/partners/6.png' },
-  { imageUrl: '/partners/7.png' },
-  { imageUrl: '/partners/8.png' },
-  { imageUrl: '/partners/9.png' },
-  { imageUrl: '/partners/10.png' },
-  { imageUrl: '/partners/11.png' },
+  { imageUrl: '/hospitalsPartner/1.png' },
+  { imageUrl: '/hospitalsPartner/2.png' },
+  { imageUrl: '/hospitalsPartner/3.png' },
+  { imageUrl: '/hospitalsPartner/4.png' },
+  { imageUrl: '/hospitalsPartner/5.png' },
+  { imageUrl: '/hospitalsPartner/6.png' },
+  { imageUrl: '/hospitalsPartner/7.png' },
+  { imageUrl: '/hospitalsPartner/8.png' },
+  { imageUrl: '/hospitalsPartner/9.png' },
+  { imageUrl: '/hospitalsPartner/10.png' },
+  { imageUrl: '/hospitalsPartner/11.png' },
 ]
 
 export const countryCode = [
