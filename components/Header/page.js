@@ -7,7 +7,7 @@ import { menu } from '../../utils/data'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import Search from '../../utils/Search/SearchBar'
 import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
+// import clsx from 'clsx'
 
 export default function Header() {
   const pathname = usePathname()
