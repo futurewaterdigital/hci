@@ -72,7 +72,7 @@ function Network() {
           {noData && <p>{noData}</p>}
 
           <div
-            className="flex gap-4 overflow-x-scroll scrollbar-hide"
+            className="flex gap-4 overflow-x-scroll scrollbar-hide scrollbar-thin scrollbar-thumb-[#0E56A0] scrollbar-track-[#EEF7FF]"
             ref={scrollContainerRef}
           >
             {loading
