@@ -3,16 +3,25 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 function Banner() {
-  const [selectedCategory] = useState('11') // Default to the first category
+  const [selectedCategory] = useState('11')
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [noData, setNoData] = useState(null)
 
+  // Caching API results in memory
+  const cache = new Map()
+
   useEffect(() => {
+    if (cache.has(selectedCategory)) {
+      setNetworks(cache.get(selectedCategory))
+      setLoading(false)
+      return
+    }
+
     setLoading(true)
     fetch(
-      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&categories=${selectedCategory}&status=publish`
+      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&categories=${selectedCategory}&status=publish&_fields=title,slug,date`
     )
       .then((response) => {
         if (!response.ok) {
@@ -27,6 +36,7 @@ function Banner() {
           )
           setNetworks(sortedData)
           setNoData(null)
+          cache.set(selectedCategory, sortedData) // Caching the result
         } else {
           setNoData('No Data Available')
           setNetworks([])
@@ -51,12 +61,11 @@ function Banner() {
           <h1 className="text-5xl text-center font-medium pt-8 lg:pt-2">
             Medical Condition Guided by Us
           </h1>
-          {error}
-          {noData}
+          {error && <p>{error}</p>}
+          {noData && <p>{noData}</p>}
           {loading ? (
-            // Skeleton Loader
             <div className="grid lg:grid-cols-3 gap-4 p-[4.4em] lg:min-w-9/12 max-w-full lg:grid-flow-row grid-flow-col overflow-auto lg:overflow-visible">
-              {Array(6) // Create 3 skeleton placeholders
+              {Array(6)
                 .fill()
                 .map((_, index) => (
                   <div

@@ -1,21 +1,34 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import dynamic from 'next/dynamic' // Lazy load Footer
 import Header from '../../../components/Header/page'
-import Footer from '../../../components/Footer/page'
-import Banner from '../../../components/Networks/Banner/page'
+import Banner from '../../../components/Treatment/Banner/page'
+
+// Dynamically import Footer to lazy-load
+const Footer = dynamic(() => import('../../../components/Footer/page'), {
+  loading: () => <div className="bg-gray-300 h-24 w-full"></div>, // Placeholder while Footer is loading
+})
 
 export default function City({ params }) {
-  const [selectedCategory] = useState(params.slug) // Default to the first category
+  const [selectedCategory] = useState(params.slug) // Default to the slug from params
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [noData, setNoData] = useState(null)
-  // const [scrollPosition, setScrollPosition] = useState(0) // New state for parallax
+
+  const cache = useRef(new Map()) // Cache to store API responses
 
   useEffect(() => {
+    // Check if data is already cached to prevent redundant API calls
+    if (cache.current.has(selectedCategory)) {
+      setNetworks(cache.current.get(selectedCategory))
+      setLoading(false)
+      return
+    }
+
     setLoading(true)
     fetch(
-      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${selectedCategory}`
+      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${selectedCategory}&_fields=title,content,acf.banner`
     )
       .then((response) => {
         if (!response.ok) {
@@ -25,10 +38,12 @@ export default function City({ params }) {
       })
       .then((data) => {
         if (data.length > 0) {
+          // Sort the data if necessary
           const sortedData = data.sort((a, b) =>
             a.title.rendered.localeCompare(b.title.rendered)
-          ) // Alphabetical sort
+          )
           setNetworks(sortedData)
+          cache.current.set(selectedCategory, sortedData) // Cache the response
           setNoData(null)
         } else {
           setNoData('No Data Available')
@@ -42,27 +57,13 @@ export default function City({ params }) {
       })
   }, [selectedCategory])
 
-  // Parallax scroll effect
-  useEffect(() => {
-    // const handleScroll = () => {
-    //   setScrollPosition(window.scrollY)
-    // }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
-
-  // const parallaxStyle = {
-  //   backgroundPositionY: `${scrollPosition * 0.5}px`, // Adjust the multiplier for parallax speed
-  // }
-
   return (
     <>
       <Header />
-      {error}
-      {noData}
+
+      {error && <p className="text-red-500">{error}</p>}
+      {noData && <p className="text-gray-500">{noData}</p>}
+
       {loading ? (
         // Skeleton Loader
         <>
@@ -81,20 +82,11 @@ export default function City({ params }) {
         <>
           {network.map((items, index) => (
             <React.Fragment key={index}>
-              {items.acf && items.acf.banner && items.acf.banner.url ? (
-                // If banner URL exists
-                // <div
-                //   className="relative h-[75vh]  bg-top bg-no-repeat"
-                //   style={{
-                //     backgroundImage: `url(${items.acf.banner.url})`,
-                //     ...parallaxStyle, // Add parallax style here
-                //   }}
-                // >
-                //   {/* Additional content inside banner if necessary */}
-                // </div>
+              {items.acf?.banner?.url ? (
+                // Render Banner component with the banner URL
                 <Banner city={params.slug} banner={items.acf.banner.url} />
               ) : (
-                // Skeleton Placeholder if no banner URL
+                // Skeleton Placeholder for banner if no URL
                 <div className="relative h-screen bg-gray-300 animate-pulse"></div>
               )}
 

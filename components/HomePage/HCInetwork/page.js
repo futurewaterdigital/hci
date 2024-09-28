@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -10,15 +9,21 @@ function Network() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [noData, setNoData] = useState(null)
-  // const [canScrollLeft, setCanScrollLeft] = useState(false)
-  // const [canScrollRight, setCanScrollRight] = useState(true)
 
+  const cache = useRef(new Map()) // Use cache to prevent redundant API calls
   const scrollContainerRef = useRef(null)
 
   useEffect(() => {
+    // Check if data for this category is already cached
+    if (cache.current.has(selectedCategory)) {
+      setNetworks(cache.current.get(selectedCategory))
+      setLoading(false)
+      return
+    }
+
     setLoading(true)
     fetch(
-      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&categories=${selectedCategory}&status=publish`
+      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&categories=${selectedCategory}&status=publish&_fields=title,slug,featured_media_url`
     )
       .then((response) => {
         if (!response.ok) {
@@ -32,6 +37,7 @@ function Network() {
             a.title.rendered.localeCompare(b.title.rendered)
           ) // Alphabetical sort
           setNetworks(sortedData)
+          cache.current.set(selectedCategory, sortedData) // Cache the result
           setNoData(null)
         } else {
           setNoData('No Data Available')
@@ -45,20 +51,6 @@ function Network() {
       })
   }, [selectedCategory])
 
-  // const handleScroll = () => {
-  //   const container = scrollContainerRef.current
-  //   setCanScrollLeft(container.scrollLeft > 0)
-  //   setCanScrollRight(
-  //     container.scrollLeft + container.clientWidth < container.scrollWidth
-  //   )
-  // }
-
-  // const scroll = (direction) => {
-  //   const container = scrollContainerRef.current
-  //   const scrollAmount = direction === 'left' ? -300 : 300
-  //   container.scrollBy({ left: scrollAmount, behavior: 'smooth' })
-  // }
-
   return (
     <div className="py-10 z-10 relative">
       <div className="w-11/12 mx-auto">
@@ -71,10 +63,7 @@ function Network() {
             The HCI, an undertaking of GSC Pvt. Ltd, consists of leading
             hospitals and clinics with state-of-the-art infrastructure with
             50,000 enlisted medical beds, accredited by the Joint Commission
-            International (JCI). The ecosystem includes specialised medical
-            centres with expertise in cardiology, oncology, neurology, and more.
-            Included are 700 top-tier doctors and surgeons providing
-            compassionate care with access to 700 operation theatres.
+            International (JCI).
           </p>
         </div>
 
@@ -82,28 +71,9 @@ function Network() {
           {error && <p>{error}</p>}
           {noData && <p>{noData}</p>}
 
-          {/* Arrows */}
-          {/* {canScrollLeft && (
-            <button
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow z-20"
-              onClick={() => scroll('left')}
-            >
-              ◀
-            </button>
-          )}
-          {canScrollRight && (
-            <button
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow z-20"
-              onClick={() => scroll('right')}
-            >
-              ▶
-            </button>
-          )} */}
-
           <div
             className="flex gap-4 overflow-x-scroll scrollbar-hide"
             ref={scrollContainerRef}
-            // onScroll={handleScroll}
           >
             {loading
               ? Array(5)
@@ -111,7 +81,7 @@ function Network() {
                   .map((_, index) => (
                     <div
                       key={index}
-                      className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] rounded-lg shadow flex flex-col items-center animate-pulse"
+                      className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] rounded-lg shadow flex flex-col items-center animate-pulse w-full"
                     >
                       <div className="bg-gray-300 h-24 w-24 mb-4 rounded-full"></div>
                       <div className="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
@@ -124,7 +94,9 @@ function Network() {
                     key={index}
                   >
                     <Image
-                      src={items.featured_media_url}
+                      src={
+                        items.featured_media_url || '/images/placeholder.png'
+                      } // Placeholder for missing images
                       width={100}
                       height={100}
                       alt={`Health Care in ${items.title.rendered}`}

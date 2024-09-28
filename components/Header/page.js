@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { Drawer } from 'flowbite-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,41 +7,61 @@ import { menu } from '../../utils/data'
 import { FaArrowCircleRight } from 'react-icons/fa'
 import Search from '../../utils/Search/SearchBar'
 import { usePathname } from 'next/navigation'
-// import clsx from 'clsx'
+
+// Throttling utility function
+const throttle = (fn, wait) => {
+  let lastTime = 0
+  return (...args) => {
+    const now = new Date().getTime()
+    if (now - lastTime >= wait) {
+      fn(...args)
+      lastTime = now
+    }
+  }
+}
 
 export default function Header() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [hoveredIndex, setHoveredIndex] = useState(null)
-  const [isScrolled, setIsScrolled] = useState(false) // To track scroll status
-
-  const handleClose = () => setIsOpen(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const placeholders = ['Hospital', 'Doctor', 'Treatment']
   const [currentPlaceholder, setCurrentPlaceholder] = useState(placeholders[0])
   const [index, setIndex] = useState(0)
 
+  // Memoized handler to open the drawer
+  const handleOpen = useCallback(() => {
+    if (!isOpen) {
+      setIsOpen(true)
+    }
+  }, [isOpen])
+
+  // Memoized handler to close the drawer
+  const handleClose = useCallback(() => setIsOpen(false), [])
+
+  // Update the placeholder every 2 seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % placeholders.length)
     }, 2000) // Change text every 2 seconds
 
-    return () => clearInterval(intervalId) // Clean up on unmount
-  }, [])
+    return () => clearInterval(intervalId)
+  }, [placeholders.length])
 
   useEffect(() => {
     setCurrentPlaceholder(placeholders[index])
-  }, [index])
+  }, [index, placeholders])
 
-  // Detect scroll position and update the header state
+  // Throttle scroll handler
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = throttle(() => {
       if (window.scrollY > 50) {
-        setIsScrolled(true) // Trigger full width and sticky on scroll
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false) // Reset to original position
+        setIsScrolled(false)
       }
-    }
+    }, 100)
 
     window.addEventListener('scroll', handleScroll)
 
@@ -50,69 +70,65 @@ export default function Header() {
     }
   }, [])
 
-  if (pathname === '/') {
-    var classnew = `z-40 transition-all duration-300 ${
-      isScrolled
-        ? 'fixed w-full bg-white shadow-lg top-0'
-        : 'absolute w-full lg:top-4'
-    }`
-  } else {
-    var classnew = `fixed z-40 w-full bg-white transition-all duration-300`
-  }
+  // Memoize the class based on scroll and pathname
+  const classnew = useMemo(() => {
+    if (pathname === '/') {
+      return `z-40 transition-all duration-300 ${
+        isScrolled
+          ? 'fixed w-full bg-white shadow-lg top-0'
+          : 'absolute w-full lg:top-4'
+      }`
+    }
+    return 'fixed z-40 w-full bg-white transition-all duration-300'
+  }, [pathname, isScrolled])
 
   return (
-    // <div
-    //   className={`z-40 transition-all duration-300 ${
-    //     isScrolled
-    //       ? 'fixed w-full bg-white shadow-lg top-0'
-    //       : ' w-full lg:top-4'
-    //   }`}
-    // >
     <div className={classnew}>
       <div className="lg:w-11/12 mx-auto lg:rounded-lg px-6 flex justify-between items-center bg-white">
         <div className="h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px]">
           <div className="relative group flex items-center">
-            <div className="">
-              <div className="flex min-h-[10vh] items-center justify-center cursor-pointer">
-                <Image
-                  src="/images/menu.svg"
-                  width={80}
-                  height={80}
-                  onClick={() => setIsOpen(true)}
-                  className="cursor-pointer xl:w-[37px] xl:h-[40px] lg:w-[50px]"
-                />
-              </div>
-              <Drawer open={isOpen} onClose={handleClose}>
-                <Drawer.Header title="Main Menu" />
-                <Drawer.Items className="">
-                  <div className="flex flex-col">
-                    {menu.map((items, index) => (
-                      <Link
-                        className="w-full p-2 lg:py-3 hover:text-white hover:bg-[#D84498] rounded-lg gap-2 my-1 text-lg flex items-center justify-between"
-                        key={index}
-                        href={items.url}
-                        onMouseEnter={() => setHoveredIndex(index)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                      >
-                        {items.options}
-                        <FaArrowCircleRight
-                          className={`transition-opacity duration-300 ${
-                            hoveredIndex === index ? 'opacity-100' : 'opacity-0'
-                          }`}
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                </Drawer.Items>
-              </Drawer>
+            <div className="flex min-h-[10vh] items-center justify-center cursor-pointer">
+              {/* Optimized image with lazy loading */}
+              <Image
+                src="/images/menu.svg"
+                width={80}
+                height={80}
+                loading="lazy"
+                onClick={handleOpen}
+                className="cursor-pointer xl:w-[37px] xl:h-[40px] lg:w-[50px]"
+              />
             </div>
-            <div className="">
+            <Drawer open={isOpen} onClose={handleClose}>
+              <Drawer.Header title="Main Menu" />
+              <Drawer.Items>
+                <div className="flex flex-col">
+                  {menu.map((items, index) => (
+                    <Link
+                      className="w-full p-2 lg:py-3 hover:text-white hover:bg-[#D84498] rounded-lg gap-2 my-1 text-lg flex items-center justify-between"
+                      key={index}
+                      href={items.url}
+                      onMouseEnter={() => setHoveredIndex(index)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                    >
+                      {items.options}
+                      <FaArrowCircleRight
+                        className={`transition-opacity duration-300 ${
+                          hoveredIndex === index ? 'opacity-100' : 'opacity-0'
+                        }`}
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </Drawer.Items>
+            </Drawer>
+            <div>
               <Image
                 src="/qr-codes/hci.png"
-                className={`w-16 ml-12 `}
+                className="w-16 ml-12"
                 width={200}
                 height={200}
                 alt="healthcare international in bangalore"
+                loading="lazy"
               />
             </div>
           </div>
@@ -137,7 +153,8 @@ export default function Header() {
                   isScrolled
                     ? 'xl:w-8/12 lg:w-[70%] w-[100px] cursor-pointer p-4'
                     : 'xl:w-10/12 lg:w-[70%] w-[100px] cursor-pointer p-4'
-                } `}
+                }`}
+                loading="lazy"
               />
             </div>
           </Link>
@@ -148,7 +165,6 @@ export default function Header() {
             <div className="relative flex items-center justify-center right-[40px]">
               <Search currentPlaceholder={currentPlaceholder} />
             </div>
-
             <div className="flex items-center">
               <Link
                 href="/contact-us"
