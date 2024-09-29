@@ -91,9 +91,9 @@ export default function City({ params }) {
                 <div className="relative h-screen bg-gray-300 animate-pulse"></div>
               )}
 
-              <div className="w-9/12 mx-auto">
+              <div className="w-9/12 mx-auto py-4">
                 <div className="">
-                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
+                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[30px] py-4">
                     {items.title.rendered}
                   </h1>
                 </div>
@@ -104,7 +104,7 @@ export default function City({ params }) {
               </div>
             </React.Fragment>
           ))}
-          <div className="w-full mx-auto text-center">
+          <div className="w-full mx-auto text-center pt-4">
             <Link
               href="/"
               className="bg-[#D84598] px-8 py-4 text-white rounded-lg"

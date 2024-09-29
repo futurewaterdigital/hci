@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="p-6">
           <Image
             src="/images/logo.svg"
-            className="rounded-lg"
+            className="rounded-lg w-6/12 lg:w-10/12"
             alt="Logo"
             width={250}
             height={250}

@@ -79,18 +79,18 @@ function ConsultantForm() {
   }
 
   // Validate the medical condition, hospital, and doctor fields
-  const selectErrors = {
-    field: 'medicalCondition',
-    message: 'Please select a speciality.',
-  }
-  const hospitalErrors = {
-    field: 'hospital',
-    message: 'Please select a hospital.',
-  }
-  const doctorErrors = {
-    field: 'doctor',
-    message: 'Please select a doctor.',
-  }
+  // const selectErrors = {
+  //   field: 'medicalCondition',
+  //   message: 'Please select a speciality.',
+  // }
+  // const hospitalErrors = {
+  //   field: 'hospital',
+  //   message: 'Please select a hospital.',
+  // }
+  // const doctorErrors = {
+  //   field: 'doctor',
+  //   message: 'Please select a doctor.',
+  // }
 
   // Validate file input
   const fileErrors = {
@@ -214,10 +214,10 @@ function ConsultantForm() {
     if (!yourPhone) validationErrors.yourPhone = 'Phone number is required.'
     if (yourPhone.length > 10)
       validationErrors.yourPhone = 'Phone number cannot exceed 10 digits.'
-    if (!medicalCondition)
-      validationErrors.medicalCondition = selectErrors.message
-    if (!hospital) validationErrors.hospital = hospitalErrors.message
-    if (!doctor) validationErrors.doctor = doctorErrors.message
+    // if (!medicalCondition)
+    //   validationErrors.medicalCondition = selectErrors.message
+    // if (!hospital) validationErrors.hospital = hospitalErrors.message
+    // if (!doctor) validationErrors.doctor = doctorErrors.message
     if (!yourFile) validationErrors.yourFile = fileErrors.message
 
     if (Object.keys(validationErrors).length > 0) {
