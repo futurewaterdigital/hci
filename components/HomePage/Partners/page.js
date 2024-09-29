@@ -13,6 +13,8 @@ function ConsultantForm() {
     infinite: true,
     speed: 2000,
     autoplay: true,
+    arrows: false,
+    className: 'mx-auto',
     slidesToShow: 6,
     slidesToScroll: 6,
     responsive: [
@@ -41,12 +43,12 @@ function ConsultantForm() {
   }
 
   return (
-    <div className="w-full mt-20 px-2 lg:px-0">
+    <div className="w-full mt-16 px-2 lg:px-0 ">
       <div className="bg-white lg:w-11/12 mx-auto text-center">
         <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
           Our Network Hospitals
         </h3>
-        <div className="w-full mx-auto p-10">
+        <div className="w-full mx-auto p-10 ">
           <Slider {...settings}>
             {medicalPartners.map((partner, index) => (
               <div key={index}>
@@ -55,6 +57,7 @@ function ConsultantForm() {
                   width={200}
                   height={200}
                   alt={`Partner ${index}`}
+                  className="w-full"
                 />
               </div>
             ))}

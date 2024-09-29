@@ -1,31 +1,25 @@
 'use client'
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import { Drawer } from 'flowbite-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { menu } from '../../utils/data'
-import { FaArrowCircleRight } from 'react-icons/fa'
-import Search from '../../utils/Search/SearchBar'
+// import Search from '../../utils/Search/SearchBar'
+import NewSearch from '../../components/Header/searchModal'
 import { usePathname } from 'next/navigation'
+import Drawer from '../../components/Header/Drawer'
 
-// Throttling utility function
-const throttle = (fn, wait) => {
-  let lastTime = 0
+// Debounce utility function
+const debounce = (fn, delay) => {
+  let timeout
   return (...args) => {
-    const now = new Date().getTime()
-    if (now - lastTime >= wait) {
-      fn(...args)
-      lastTime = now
-    }
+    clearTimeout(timeout)
+    timeout = setTimeout(() => fn(...args), delay)
   }
 }
 
 export default function Header() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
-  const [hoveredIndex, setHoveredIndex] = useState(null)
   const [isScrolled, setIsScrolled] = useState(false)
-
   const placeholders = ['Hospital', 'Doctor', 'Treatment']
   const [currentPlaceholder, setCurrentPlaceholder] = useState(placeholders[0])
   const [index, setIndex] = useState(0)
@@ -53,20 +47,24 @@ export default function Header() {
     setCurrentPlaceholder(placeholders[index])
   }, [index, placeholders])
 
-  // Throttle scroll handler
+  // Debounced scroll handler
   useEffect(() => {
-    const handleScroll = throttle(() => {
-      if (window.scrollY > 50) {
+    const handleScroll = debounce(() => {
+      if (window.scrollY > 70) {
         setIsScrolled(true)
       } else {
         setIsScrolled(false)
       }
-    }, 100)
+    }, 50) // 50ms debounce delay
 
-    window.addEventListener('scroll', handleScroll)
+    const scrollListener = () => {
+      requestAnimationFrame(handleScroll)
+    }
+
+    window.addEventListener('scroll', scrollListener)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', scrollListener)
     }
   }, [])
 
@@ -76,19 +74,23 @@ export default function Header() {
       return `z-40 transition-all duration-300 ${
         isScrolled
           ? 'fixed w-full bg-white shadow-lg top-0'
-          : 'absolute w-full lg:top-4'
+          : 'absolute lg:top-6 w-full '
       }`
     }
-    return 'fixed z-40 w-full bg-white transition-all duration-300'
+    // If not home and not scrolled, no shadow
+    return `fixed z-40 w-full bg-white transition-all duration-300 ${
+      isScrolled ? 'shadow' : ''
+    }`
   }, [pathname, isScrolled])
 
   return (
     <div className={classnew}>
-      <div className="lg:w-11/12 mx-auto lg:rounded-lg px-6 flex justify-between items-center bg-white">
+      <div
+        className={`lg:w-11/12 mx-auto lg:rounded-lg px-6 flex justify-between items-center bg-white }`}
+      >
         <div className="h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px]">
           <div className="relative group flex items-center">
-            <div className="flex min-h-[10vh] items-center justify-center cursor-pointer">
-              {/* Optimized image with lazy loading */}
+            <div className="flex lg:min-h-[10vh] items-center justify-center cursor-pointer">
               <Image
                 src="/images/menu.svg"
                 width={80}
@@ -98,29 +100,7 @@ export default function Header() {
                 className="cursor-pointer xl:w-[37px] xl:h-[40px] lg:w-[50px]"
               />
             </div>
-            <Drawer open={isOpen} onClose={handleClose}>
-              <Drawer.Header title="Main Menu" />
-              <Drawer.Items>
-                <div className="flex flex-col">
-                  {menu.map((items, index) => (
-                    <Link
-                      className="w-full p-2 lg:py-3 hover:text-white hover:bg-[#D84498] rounded-lg gap-2 my-1 text-lg flex items-center justify-between"
-                      key={index}
-                      href={items.url}
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                      {items.options}
-                      <FaArrowCircleRight
-                        className={`transition-opacity duration-300 ${
-                          hoveredIndex === index ? 'opacity-100' : 'opacity-0'
-                        }`}
-                      />
-                    </Link>
-                  ))}
-                </div>
-              </Drawer.Items>
-            </Drawer>
+            <Drawer isOpen={isOpen} handleClose={handleClose} />
             <div>
               <Image
                 src="/qr-codes/hci.png"
@@ -136,7 +116,7 @@ export default function Header() {
 
         <div
           className={`lg:relative flex lg:justify-center items-center z-20 cursor-pointer ${
-            pathname === '/' ? 'lg:h-20' : 'lg:h-10 p-12 top-0'
+            pathname === '/' ? 'lg:h-20' : 'lg:h-10 lg:p-12 top-0'
           }`}
         >
           <Link href="/">
@@ -151,8 +131,8 @@ export default function Header() {
                 height={100}
                 className={`rounded-lg cursor-pointer ${
                   isScrolled
-                    ? 'xl:w-8/12 lg:w-[70%] w-[100px] cursor-pointer p-4'
-                    : 'xl:w-10/12 lg:w-[70%] w-[100px] cursor-pointer p-4'
+                    ? 'xl:w-9/12 lg:w-[70%] w-[100px] cursor-pointer p-4 transition-all duration-300'
+                    : 'xl:w-10/12 lg:w-[70%] w-[100px] cursor-pointer p-4 transition-all duration-300'
                 }`}
                 loading="lazy"
               />
@@ -163,7 +143,7 @@ export default function Header() {
         <div className="lg:flex items-center justify-end gap-0 w-1/2 hidden">
           <div className="z-20 flex flex-row justify-between">
             <div className="relative flex items-center justify-center right-[40px]">
-              <Search currentPlaceholder={currentPlaceholder} />
+              <NewSearch currentPlaceholder={currentPlaceholder} />
             </div>
             <div className="flex items-center">
               <Link

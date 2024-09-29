@@ -29,7 +29,7 @@ export default function Testimonials() {
       .then((data) => {
         if (data.length > 0) {
           setTestimonials(data)
-          console.log(data)
+          // console.log(data)
           setNoData(null)
         } else {
           setNoData('No Data Available')
@@ -119,7 +119,7 @@ export default function Testimonials() {
                 <div className="xl:inline-flex lg:inline-flex gap-4 sms:grid-cols-1 sms:grid xs:grid xs:grid-cols-3">
                   {testimonials.map((item, index) => (
                     <div
-                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative inline-block mx-auto xl:w-[100%] lg:w-[380px] md:w-[380px] "
+                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative inline-block mx-auto xl:w-[100%] lg:w-[380px] md:w-[380px] shadow"
                       key={index}
                     >
                       <Image

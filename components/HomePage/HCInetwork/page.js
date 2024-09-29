@@ -37,6 +37,7 @@ function Network() {
             a.title.rendered.localeCompare(b.title.rendered)
           ) // Alphabetical sort
           setNetworks(sortedData)
+          // console.log(sortedData)
           cache.current.set(selectedCategory, sortedData) // Cache the result
           setNoData(null)
         } else {

@@ -22,7 +22,7 @@ export default function WhoWeAre() {
           wellness and recovery begins on the right note.
         </p>
       </div>
-      <div className="md:grid lg:w-5/6 xl:w-4/6 mx-auto lg:h-56 lg:grid grid-cols-2 rounded-3xl group my-12 p-4 lg:p-0">
+      <div className="md:grid lg:w-5/6 xl:w-4/6 mx-auto lg:h-56 lg:grid grid-cols-2 rounded-3xl group my-12 p-4 lg:p-0 shadow">
         <div className="h-56 text-start md:text-right lg:text-right p-4 bg-[#F1F8FF] transition-colors duration-300 ease-in-out group-hover:bg-[#D84498] lg:rounded-l-3xl md:rounded-l-3xl">
           <h5 className="text-4xl py-4 text-[#0E56A0] group-hover:text-white">
             Vision

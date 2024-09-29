@@ -109,8 +109,8 @@ export default function Blogs() {
                   className="transition-transform duration-300 group-hover:scale-105 mx-auto w-full h-50"
                   src={item.featured_media_url}
                   alt={item.title.rendered}
-                  width={150}
-                  height={150}
+                  width={300}
+                  height={300}
                 />
                 <div className="pt-5 py-4">
                   <h5 className="text-xl font-normal tracking-tight text-black">
