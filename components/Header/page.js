@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-// import Search from '../../utils/Search/SearchBar'
 import NewSearch from '../../components/Header/searchModal'
 import { usePathname } from 'next/navigation'
 import Drawer from '../../components/Header/Drawer'

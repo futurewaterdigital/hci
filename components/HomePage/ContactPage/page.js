@@ -276,7 +276,7 @@ function ConsultantForm() {
   return (
     <div className="w-full mb-20 px-2 lg:px-0">
       <div className="bg-white lg:w-11/12 xl:w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
-        <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
+        <h3 className="py-4 lg:text-3xl text-1xl p-4 lg:p-4">
           To Get The Best Treatment Options, Please Provide Details
         </h3>
         <div className="w-full mx-auto p-10">

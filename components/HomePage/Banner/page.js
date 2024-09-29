@@ -50,12 +50,12 @@ function Banner() {
   }, [selectedCategory])
 
   return (
-    <div className="relative lg:h-screen h-[80vh]" id="home">
-      <div className="absolute inset-0 bg-center  bg-no-repeat bg-[url('/mobile/homeBanner.jpg')] bg-cover lg:hidden"></div>
-      <div className="absolute inset-0 bg-right  bg-no-repeat bg-[url('/images/homeBanner.jpg')] bg-cover hidden lg:block"></div>
+    <div className="relative lg:h-screen h-[100vh]" id="home">
+      {/* <div className="absolute inset-0 bg-center  bg-no-repeat bg-[url('/mobile/homeBanner.jpg')] bg-cover lg:hidden"></div> */}
+      <div className="absolute inset-0 bg-right  bg-no-repeat bg-[url('/images/homeBanner.jpg')] bg-cover"></div>
       <div className="absolute lg:h-[300px] w-full bottom-0">
         <div className="absolute inset-0 bg-gradient-to-t from-[#0e57a0] via-[#0e57a0cf] to-transparent opacity-80"></div>
-        <div className="relative flex flex-col items-center lg:h-full text-white">
+        <div className="relative flex flex-col items-center lg:h-full text-white p-4">
           <p className="lg:text-4xl text-center text-2xl">
             The Best Doctors and Hospitals for your
           </p>

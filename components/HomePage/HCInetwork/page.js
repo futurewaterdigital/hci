@@ -73,7 +73,7 @@ function Network() {
           {noData && <p>{noData}</p>}
 
           <div
-            className="flex gap-4 overflow-x-scroll scrollbar-hide scrollbar-thin scrollbar-thumb-[#0E56A0] scrollbar-track-[#EEF7FF]"
+            className="flex gap-4 overflow-x-scroll scrollbar-hide scrollbar-thin scrollbar-thumb-[#0E56A0] scrollbar-track-[#EEF7FF] mx-auto xl:w-10/12 2xl-10/12 w-full"
             ref={scrollContainerRef}
           >
             {loading
@@ -91,7 +91,7 @@ function Network() {
                   ))
               : network.map((items, index) => (
                   <div
-                    className="min-w-[250px] p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group"
+                    className="min-w-[250px] p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group mx-auto"
                     key={index}
                   >
                     <Image

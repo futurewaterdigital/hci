@@ -57,7 +57,7 @@ function ConsultantForm() {
                   width={200}
                   height={200}
                   alt={`Partner ${index}`}
-                  className="w-full"
+                  className="w-full lg:w-11/12"
                 />
               </div>
             ))}
