@@ -18,6 +18,7 @@ function ConsultantForm() {
   const [fileName, setFileName] = useState('')
   const [hospitalOptions, setHospitalOptions] = useState([])
   const [doctorOptions, setDoctorOptions] = useState([])
+  const [loading, setLoading] = useState(false) // To manage the loading state
 
   const [filteredCountryCodes, setFilteredCountryCodes] = useState([])
   const [selectedCode, setSelectedCode] = useState('+91')
@@ -244,6 +245,8 @@ function ConsultantForm() {
         { headers: { 'Content-Type': 'multipart/form-data' } }
       )
       setPost(response.data.message)
+      console.log(response.data.message)
+      console.log(response.data)
       const msg = response.data.status
       if (msg === 'mail_sent') {
         resetForm()
@@ -258,6 +261,8 @@ function ConsultantForm() {
       }
     } catch (error) {
       console.error('Error submitting the form!', error)
+    } finally {
+      setLoading(false) // Stop the loading once the request is done
     }
   }
 
@@ -490,10 +495,21 @@ function ConsultantForm() {
             <div>
               <button
                 type="submit"
-                className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white"
+                disabled={loading}
+                className={`text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white ${
+                  loading ? 'bg-gray-200 cursor-not-allowed' : ''
+                }`}
               >
-                Submit
+                {loading ? 'Processing...' : 'Submit'}
               </button>
+              {loading && (
+                <div className="mt-4 w-full text-center">
+                  <div className="h-4 bg-gray-200 rounded w-3/4 mx-auto animate-pulse"></div>
+                  <p className="mt-2 text-gray-500">
+                    Processing your request...
+                  </p>
+                </div>
+              )}
 
               {post && (
                 <p className="mt-4 text-[15px] text-green-500 text-center">

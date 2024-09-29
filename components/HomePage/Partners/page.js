@@ -11,7 +11,7 @@ function ConsultantForm() {
   var settings = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 4000,
     autoplay: true,
     arrows: false,
     className: 'mx-auto',
