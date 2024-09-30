@@ -85,11 +85,11 @@ export default function Header() {
   return (
     <div className={classnew}>
       <div
-        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white}`}
+        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white`}
       >
         <div className="lg:h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px] ">
-          <div className="relative group flex items-center">
-            <div className="flex lg:min-h-[10vh] items-center justify-center cursor-pointer  w-[30px]">
+          <div className="relative group flex items-center ">
+            <div className="flex lg:min-h-[10vh] items-center justify-center cursor-pointer w-[30px] ">
               <Image
                 src="/images/menu.svg"
                 width={80}
