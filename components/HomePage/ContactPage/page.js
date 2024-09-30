@@ -310,17 +310,18 @@ function ConsultantForm() {
 
               <div>
                 <div className="flex">
-                  <div>
+                  {/* Country Code Input */}
+                  <div className="w-3/12">
                     <input
                       type="text"
                       name="countryCode"
                       value={selectedCode}
                       onChange={handleCodeInputChange}
-                      className="block w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-s-lg border border-gray-300 p-4"
-                      placeholder="Country Code"
+                      className="block w-full text-sm text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 p-4"
+                      placeholder="Code"
                     />
                     {filteredCountryCodes.length > 0 && (
-                      <div className="absolute z-10 bg-white border border-gray-300 mt-1 w-2/12 max-h-40 overflow-y-auto rounded-md shadow-lg text-start">
+                      <div className="absolute z-10 bg-white border border-gray-300 mt-1 lg:w-2/12 max-h-40 overflow-y-auto rounded-md shadow-lg text-start">
                         <ul className="py-2 text-sm text-gray-700">
                           {filteredCountryCodes.map((country) => (
                             <li
@@ -335,15 +336,16 @@ function ConsultantForm() {
                       </div>
                     )}
                   </div>
-                  <div className="relative w-full">
+
+                  {/* Phone Number Input */}
+                  <div className="relative w-9/12">
                     <input
                       type="tel"
                       name="yourPhone"
                       value={yourPhone}
                       onChange={handleTextChange}
                       maxLength="10"
-                      id="search-dropdown"
-                      className="block w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 p-4"
+                      className="block w-full text-sm text-gray-900 bg-gray-50 rounded-r-lg border border-gray-300 p-4"
                       placeholder="Phone Number"
                     />
                   </div>
@@ -478,11 +480,19 @@ function ConsultantForm() {
               >
                 For a free medical opinion from global experts, Email your
                 updated reports to{' '}
-                <Link href="mailto:info@healthcareinternational.in">
+                <Link
+                  href="mailto:info@healthcareinternational.in"
+                  className="text-blue-600"
+                >
                   info@healthcareinternational.in
                 </Link>{' '}
                 or WhatsApp{' '}
-                <Link href="https://wa.me/+919008764954">+91 9008764954</Link>
+                <Link
+                  href="https://wa.me/+919008764954"
+                  className="text-blue-600"
+                >
+                  +91 9008764954
+                </Link>
               </Link>
               {/* <div className="relative w-full">
                 <input
