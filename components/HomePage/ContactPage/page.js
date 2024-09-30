@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from 'react'
 import { medicalConditions, countryCode } from '@/utils/data' // Assuming you've updated the data to include hospital and doctor mappings
-import { FaFileAlt } from 'react-icons/fa'
+// import { FaFileAlt } from 'react-icons/fa'
 import axios from 'axios'
+import Link from 'next/link'
 
 function ConsultantForm() {
   const [yourName, setYourName] = useState('')
@@ -460,8 +461,11 @@ function ConsultantForm() {
             </div>
 
             <div className="grid gap-6 mb-6 md:grid-cols-2">
-              <div className="relative w-full">
-                {/* Hidden file input */}
+              <Link href="mailto:info@healthcareinternational.in">
+                For a free medical opinion from experts across the globe .<br />
+                Please email or whatsapp your updates reports to ----
+              </Link>
+              {/* <div className="relative w-full">
                 <input
                   type="file"
                   id="file-upload"
@@ -469,7 +473,6 @@ function ConsultantForm() {
                   className="hidden"
                 />
 
-                {/* Custom label to replace the default file input */}
                 <label
                   htmlFor="file-upload"
                   className="flex items-center justify-between w-full h-[53px] mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-200 transition-colors"
@@ -484,7 +487,7 @@ function ConsultantForm() {
                     {errors.yourFile}
                   </p>
                 )}
-              </div>
+              </div> */}
               <div>
                 <input
                   type="text"

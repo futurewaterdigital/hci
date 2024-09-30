@@ -85,11 +85,11 @@ export default function Header() {
   return (
     <div className={classnew}>
       <div
-        className={`lg:w-11/12 mx-auto lg:rounded-lg px-6 flex justify-between items-center bg-white }`}
+        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white }`}
       >
-        <div className="h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px]">
+        <div className="lg:h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px]">
           <div className="relative group flex items-center">
-            <div className="flex lg:min-h-[10vh] items-center justify-center cursor-pointer">
+            <div className="flex lg:min-h-[10vh] items-center justify-center cursor-pointer  w-[30px]">
               <Image
                 src="/images/menu.svg"
                 width={80}
@@ -100,7 +100,7 @@ export default function Header() {
               />
             </div>
             <Drawer isOpen={isOpen} handleClose={handleClose} />
-            <div>
+            <div className="hidden lg:block">
               <Image
                 src="/qr-codes/hci.png"
                 className="w-16 ml-12"
@@ -115,13 +115,13 @@ export default function Header() {
 
         <div
           className={`lg:relative flex lg:justify-center items-center z-20 cursor-pointer ${
-            pathname === '/' ? 'lg:h-20' : 'lg:h-10 lg:p-12 top-0'
+            pathname === '/' ? 'lg:h-20 ' : 'lg:h-10 lg:p-12 top-0 '
           }`}
         >
           <Link href="/">
             <div
               className={`bg-white lg:rounded-lg lg:w-64 flex justify-center items-center p-4 mx-auto cursor-pointer ${
-                pathname === '/' ? 'lg:h-28' : 'lg:h-10'
+                pathname === '/' ? 'lg:h-28 h-14' : 'lg:h-10 h-14'
               }`}
             >
               <Image
@@ -130,13 +130,24 @@ export default function Header() {
                 height={100}
                 className={`rounded-lg cursor-pointer ${
                   isScrolled
-                    ? 'xl:w-9/12 lg:w-[70%] w-[100px] cursor-pointer p-4 transition-all duration-300'
-                    : 'xl:w-10/12 lg:w-[70%] w-[100px] cursor-pointer p-4 transition-all duration-300'
+                    ? 'xl:w-9/12 lg:w-[70%] w-[120px] cursor-pointer p-4 transition-all duration-300'
+                    : 'xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer p-4 transition-all duration-300'
                 }`}
                 loading="lazy"
               />
             </div>
           </Link>
+        </div>
+
+        <div className="lg:hidden block">
+          <Image
+            src="/qr-codes/hci.png"
+            className="w-16 ml-12"
+            width={200}
+            height={200}
+            alt="healthcare international in bangalore"
+            loading="lazy"
+          />
         </div>
 
         <div className="lg:flex items-center justify-end gap-0 w-1/2 hidden">
