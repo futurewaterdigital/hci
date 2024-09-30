@@ -461,9 +461,17 @@ function ConsultantForm() {
             </div>
 
             <div className="grid gap-6 mb-6 md:grid-cols-2">
-              <Link href="mailto:info@healthcareinternational.in">
-                For a free medical opinion from experts across the globe .<br />
-                Please email or whatsapp your updates reports to ----
+              <Link
+                href="mailto:info@healthcareinternational.in"
+                className="text-[15px]"
+              >
+                For a free medical opinion from global experts, <br />
+                Email your updated reports to{' '}
+                <Link href="mailto:info@healthcareinternational.in">
+                  info@healthcareinternational.in
+                </Link>{' '}
+                or WhatsApp{' '}
+                <Link href="https://wa.me/+919008764954">+91 9008764954</Link>
               </Link>
               {/* <div className="relative w-full">
                 <input

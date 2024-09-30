@@ -70,10 +70,10 @@ export default function Header() {
   // Memoize the class based on scroll and pathname
   const classnew = useMemo(() => {
     if (pathname === '/') {
-      return `z-40 transition-all duration-300 ${
+      return `z-40 transition-all duration-300  ${
         isScrolled
           ? 'fixed w-full bg-white shadow-lg top-0'
-          : 'absolute lg:top-6 w-full '
+          : 'absolute lg:top-6 w-full'
       }`
     }
     // If not home and not scrolled, no shadow
@@ -85,9 +85,9 @@ export default function Header() {
   return (
     <div className={classnew}>
       <div
-        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white }`}
+        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white}`}
       >
-        <div className="lg:h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px]">
+        <div className="lg:h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px] ">
           <div className="relative group flex items-center">
             <div className="flex lg:min-h-[10vh] items-center justify-center cursor-pointer  w-[30px]">
               <Image
@@ -114,14 +114,16 @@ export default function Header() {
         </div>
 
         <div
-          className={`lg:relative flex lg:justify-center items-center z-20 cursor-pointer ${
+          className={`lg:relative flex lg:justify-center items-center z-10 cursor-pointer ${
             pathname === '/' ? 'lg:h-20 ' : 'lg:h-10 lg:p-12 top-0 '
           }`}
         >
           <Link href="/">
             <div
               className={`bg-white lg:rounded-lg lg:w-64 flex justify-center items-center p-4 mx-auto cursor-pointer ${
-                pathname === '/' ? 'lg:h-28 h-14' : 'lg:h-10 h-14'
+                pathname === '/'
+                  ? 'lg:h-28 xs:h-14 sxs:h-14 sm:h-14'
+                  : 'lg:h-10 xs:h-14 sxs:h-14 sm:h-14'
               }`}
             >
               <Image
