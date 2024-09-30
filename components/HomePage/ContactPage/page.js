@@ -16,7 +16,7 @@ function ConsultantForm() {
   const [additionalMessage, setAdditionalMessage] = useState('')
   const [errors, setErrors] = useState({})
   const [post, setPost] = useState('')
-  const [fileName, setFileName] = useState('')
+  // const [fileName, setFileName] = useState('')
   const [hospitalOptions, setHospitalOptions] = useState([])
   const [doctorOptions, setDoctorOptions] = useState([])
   const [loading, setLoading] = useState(false) // To manage the loading state
@@ -138,34 +138,34 @@ function ConsultantForm() {
     }
   }
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0]
+  // const handleFileChange = (e) => {
+  //   const file = e.target.files[0]
 
-    if (!file) {
-      setErrors({ yourFile: 'Please select a file.' })
-      setYourFile(null)
-      return
-    }
+  //   if (!file) {
+  //     setErrors({ yourFile: 'Please select a file.' })
+  //     setYourFile(null)
+  //     return
+  //   }
 
-    const fileTypes = ['application/pdf', 'image/jpeg', 'image/png']
+  //   const fileTypes = ['application/pdf', 'image/jpeg', 'image/png']
 
-    if (!fileTypes.includes(file.type)) {
-      setErrors({ yourFile: 'Please select a PDF, DOC, or DOCX file.' })
-      setYourFile(null)
-      setFileName('')
-      return
-    }
+  //   if (!fileTypes.includes(file.type)) {
+  //     setErrors({ yourFile: 'Please select a PDF, DOC, or DOCX file.' })
+  //     setYourFile(null)
+  //     setFileName('')
+  //     return
+  //   }
 
-    if (file.size > 4 * 1024 * 1024) {
-      setErrors({ yourFile: 'File size exceeds 4MB limit.' })
-      setYourFile(null)
-      setFileName('')
-    } else {
-      setErrors({})
-      setYourFile(file)
-      setFileName(file.name)
-    }
-  }
+  //   if (file.size > 4 * 1024 * 1024) {
+  //     setErrors({ yourFile: 'File size exceeds 4MB limit.' })
+  //     setYourFile(null)
+  //     setFileName('')
+  //   } else {
+  //     setErrors({})
+  //     setYourFile(file)
+  //     setFileName(file.name)
+  //   }
+  // }
 
   // Handle change in medical condition
   const handleConditionChange = (condition) => {
