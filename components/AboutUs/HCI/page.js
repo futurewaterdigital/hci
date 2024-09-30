@@ -11,7 +11,7 @@ export default function whoHCI() {
       <div className="pt-24 w-10/12 gap-10 grid lg:grid-cols-3 mx-auto grid-cols-1">
         {whyHCI.map((items, index) => (
           <div
-            className="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center mx-auto "
+            className="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center mx-auto mt-10 lg:mt-0"
             key={index}
           >
             <div className="flex items-center justify-center relative">
