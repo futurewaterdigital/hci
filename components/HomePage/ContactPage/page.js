@@ -460,13 +460,24 @@ function ConsultantForm() {
               </div>
             </div>
 
-            <div className="grid gap-6 mb-6 md:grid-cols-2">
+            <div>
+              <input
+                type="text"
+                name="additionalMessage"
+                value={additionalMessage}
+                onChange={handleTextChange}
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                placeholder="Additional information"
+              />
+            </div>
+
+            <div className="grid gap-6 my-6 ">
               <Link
                 href="mailto:info@healthcareinternational.in"
                 className="text-[15px]"
               >
-                For a free medical opinion from global experts, <br />
-                Email your updated reports to{' '}
+                For a free medical opinion from global experts, Email your
+                updated reports to{' '}
                 <Link href="mailto:info@healthcareinternational.in">
                   info@healthcareinternational.in
                 </Link>{' '}
@@ -496,16 +507,6 @@ function ConsultantForm() {
                   </p>
                 )}
               </div> */}
-              <div>
-                <input
-                  type="text"
-                  name="additionalMessage"
-                  value={additionalMessage}
-                  onChange={handleTextChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                  placeholder="Additional information"
-                />
-              </div>
             </div>
             <div>
               {loading ? (
