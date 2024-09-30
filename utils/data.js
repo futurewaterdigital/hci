@@ -344,7 +344,7 @@ export const footerMenu = [
         name: '354/428, 1st Floor, 27th Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka, India',
         url: '',
       },
-      { name: '+91 70550 18181', url: '' },
+      { name: '+91 9008 764 954', url: '' },
       {
         name: 'info@healthcareinternational.in',
         url: 'mailto:info@healthcareinternational.in',
@@ -403,8 +403,8 @@ export const locations = [
   {
     title: 'Phone',
     icon: '/images/phone.svg',
-    excerpt: `<div class="flex gap-2 justify-center items-center"><img src="/images/whatsapp.png" width="30" height="30"/> +91 7055018181</div>`,
-    url: 'https://wa.me/+917055018181',
+    excerpt: `<div class="flex gap-2 justify-center items-center"><img src="/images/whatsapp.png" width="30" height="30"/> +91 9008 764 954</div>`,
+    url: 'https://wa.me/+919008764954',
   },
   {
     title: 'Email',
