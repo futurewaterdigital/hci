@@ -132,8 +132,8 @@ export default function Header() {
                 height={100}
                 className={`rounded-lg cursor-pointer ${
                   isScrolled
-                    ? 'xl:w-9/12 lg:w-[70%] w-[120px] cursor-pointer p-4 transition-all duration-300'
-                    : 'xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer p-4 transition-all duration-300'
+                    ? 'xl:w-9/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300'
+                    : 'xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300'
                 }`}
                 loading="lazy"
               />
