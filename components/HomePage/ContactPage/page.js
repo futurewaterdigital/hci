@@ -208,7 +208,7 @@ function ConsultantForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
+    setLoading(true)
     const validationErrors = {}
     if (!yourName) validationErrors.yourName = 'Name is required.'
     if (!yourEmail) validationErrors.yourEmail = 'Email is required.'
@@ -220,9 +220,9 @@ function ConsultantForm() {
     // if (!hospital) validationErrors.hospital = hospitalErrors.message
     // if (!doctor) validationErrors.doctor = doctorErrors.message
     if (!yourFile) validationErrors.yourFile = fileErrors.message
-
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors)
+      setLoading(false) // Stop loading if validation fails
       return
     }
 
@@ -250,17 +250,21 @@ function ConsultantForm() {
       const msg = response.data.status
       if (msg === 'mail_sent') {
         resetForm()
+        setLoading(false)
       } else if (msg === 'validation_failed') {
         const fieldErrors = {}
         response.data.invalid_fields.forEach((field) => {
           fieldErrors[field.field] = field.message
         })
+        setLoading(false)
         setErrors(fieldErrors)
       } else if (msg === 'mail_failed') {
         setPost('Failed to send request')
+        setLoading(false)
       }
     } catch (error) {
       console.error('Error submitting the form!', error)
+      setLoading(false)
     } finally {
       setLoading(false) // Stop the loading once the request is done
     }
@@ -493,22 +497,22 @@ function ConsultantForm() {
               </div>
             </div>
             <div>
-              <button
-                type="submit"
-                disabled={loading}
-                className={`text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white ${
-                  loading ? 'bg-gray-200 cursor-not-allowed' : ''
-                }`}
-              >
-                {loading ? 'Processing...' : 'Submit'}
-              </button>
-              {loading && (
+              {loading ? (
                 <div className="mt-4 w-full text-center">
-                  <div className="h-4 bg-gray-200 rounded w-3/4 mx-auto animate-pulse"></div>
-                  <p className="mt-2 text-gray-500">
-                    Processing your request...
-                  </p>
+                  <div className=" bg-gray-200 rounded-lg w-7/12 mx-auto animate-pulse py-2 text-[#D84498] border border-[#D84498]">
+                    Please wait...
+                  </div>
                 </div>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={`text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white ${
+                    loading ? 'bg-gray-200 cursor-not-allowed' : ''
+                  }`}
+                >
+                  {loading ? 'Processing...' : 'Submit'}
+                </button>
               )}
 
               {post && (
