@@ -2,9 +2,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 
 function Network() {
   const [selectedCategory] = useState('10') // Default to the first category
@@ -40,6 +37,7 @@ function Network() {
             a.title.rendered.localeCompare(b.title.rendered)
           ) // Alphabetical sort
           setNetworks(sortedData)
+          // console.log(sortedData)
           cache.current.set(selectedCategory, sortedData) // Cache the result
           setNoData(null)
         } else {
@@ -53,47 +51,6 @@ function Network() {
         setLoading(false)
       })
   }, [selectedCategory])
-
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 4000,
-    autoplay: false,
-    arrows: false,
-    className: 'mx-auto',
-    slidesToShow: 5,
-    slidesToScroll: 5,
-
-    responsive: [
-      {
-        breakpoint: 1024, // For tablet and below
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          dots: true,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 768, // For mobile
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          dots: true,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 480, // For smaller devices
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          centerMode: true,
-        },
-      },
-    ],
-  }
 
   return (
     <div className="py-10 z-10 relative" id="cities">
@@ -116,27 +73,25 @@ function Network() {
           {noData && <p>{noData}</p>}
 
           <div
-            className={`w-full ${loading ? 'flex' : ''}`}
+            className="flex gap-4 overflow-x-scroll scrollbar-hide scrollbar-thin scrollbar-thumb-[#0E56A0] scrollbar-track-[#EEF7FF] mx-auto xl:w-10/12 2xl-10/12 w-full"
             ref={scrollContainerRef}
           >
-            {loading ? (
-              Array(5)
-                .fill(0)
-                .map((_, index) => (
+            {loading
+              ? Array(5)
+                  .fill(0)
+                  .map((_, index) => (
+                    <div
+                      key={index}
+                      className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] rounded-lg shadow flex flex-col items-center animate-pulse w-full"
+                    >
+                      <div className="bg-gray-300 h-24 w-24 mb-4 rounded-full"></div>
+                      <div className="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
+                      <div className="h-6 bg-gray-300 rounded w-1/2"></div>
+                    </div>
+                  ))
+              : network.map((items, index) => (
                   <div
-                    key={index}
-                    className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] rounded-lg shadow flex flex-col items-center animate-pulse w-full"
-                  >
-                    <div className="bg-gray-300 h-24 w-24 mb-4 rounded-full"></div>
-                    <div className="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
-                    <div className="h-6 bg-gray-300 rounded w-1/2"></div>
-                  </div>
-                ))
-            ) : (
-              <Slider {...settings}>
-                {network.map((items, index) => (
-                  <div
-                    className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center text-center group" // Added mx-2 for horizontal margin
+                    className="min-w-[250px] p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group mx-auto"
                     key={index}
                   >
                     <Image
@@ -146,7 +101,6 @@ function Network() {
                       width={100}
                       height={100}
                       alt={`Health Care in ${items.title.rendered}`}
-                      className="mx-auto"
                     />
                     <h4 className="text-2xl font-medium text-[#0E56A0] py-4">
                       {items.title.rendered}
@@ -159,8 +113,6 @@ function Network() {
                     </Link>
                   </div>
                 ))}
-              </Slider>
-            )}
           </div>
         </div>
       </div>
