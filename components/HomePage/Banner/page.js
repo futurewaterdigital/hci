@@ -76,7 +76,7 @@ function Banner() {
                 ))}
             </div>
           ) : (
-            <div className="grid lg:grid-cols-3 gap-4 lg:p-[4.4em] lg:min-w-9/12 max-w-full lg:grid-flow-row grid-flow-col overflow-auto lg:overflow-visible mt-10 lg:mt-0">
+            <div className="grid lg:grid-cols-3 gap-4 lg:p-[4.4em] lg:min-w-9/12 max-w-full lg:grid-flow-row grid-flow-col overflow-auto lg:overflow-visible  scrollbar-hide mt-10 lg:mt-0">
               {network.map((items, index) => (
                 <Link
                   key={index}

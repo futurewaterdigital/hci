@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
@@ -29,7 +30,6 @@ export default function Testimonials() {
       .then((data) => {
         if (data.length > 0) {
           setTestimonials(data)
-          // console.log(data)
           setNoData(null)
         } else {
           setNoData('No Data Available')
@@ -115,11 +115,11 @@ export default function Testimonials() {
                 <p className="text-xl font-light">{noData}</p>
               </div>
             ) : (
-              <div className="overflow-x-scroll whitespace-nowrap scrollbar-hide py-10">
-                <div className="xl:inline-flex lg:inline-flex gap-4 sms:grid-cols-1 sms:grid xs:grid xs:grid-cols-3">
+              <div className="overflow-x-scroll scrollbar-hide whitespace-nowrap py-10">
+                <div className="inline-flex gap-4">
                   {testimonials.map((item, index) => (
                     <div
-                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative inline-block mx-auto xl:w-[100%] lg:w-[380px] md:w-[380px] shadow"
+                      className="bg-white border border-gray-200 rounded-lg hover:border-[#D84498] group relative inline-block mx-auto w-[350px] lg:w-[380px] md:w-[380px] shadow"
                       key={index}
                     >
                       <Image
