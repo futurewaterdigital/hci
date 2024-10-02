@@ -13,11 +13,11 @@ export default function Footer() {
 
   return (
     <>
-      <div className="bg-[#F1F8FF] p-10 grid lg:grid-cols-4 font-light">
+      <div className="bg-[#F1F8FF] lg:p-10 grid lg:grid-cols-4 font-light mt-10">
         <div className="p-6">
           <Image
             src="/images/logo.svg"
-            className="rounded-lg"
+            className="rounded-lg w-6/12 lg:w-10/12"
             alt="Logo"
             width={250}
             height={250}

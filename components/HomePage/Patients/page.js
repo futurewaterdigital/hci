@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Patients() {
   return (
-    <div className="h-[43em] lg:h-[35em] relative mx-auto flex justify-center items-center bg-[#EEF7FF] lg:bg-transparent">
+    <div className="h-[46em] lg:h-[35em] relative mx-auto flex justify-center items-center bg-[#EEF7FF] lg:bg-transparent">
       <div className="lg:absolute w-full lg:h-[35em]">
         <svg
           width="100%"
@@ -24,9 +24,10 @@ export default function Patients() {
         </svg>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:w-11/12 absolute lg:h-[30em] gap-4 lg:mt-4 p-4 lg:p-0">
-        <div className="flex flex-col justify-center lg:w-9/12 order-2 lg:order-1">
-          <h4 className="text-3xl font-bold pb-10 font-roboto lg:text-left">
-            Assisting Patients <hr className="w-28 h-1 bg-[#D84498]" />
+        <div className="flex flex-col justify-center lg:w-11/12 xl:w-11/12 order-2 lg:order-1 ">
+          <h4 className="text-3xl font-bold pb-10 font-roboto xl:text-left lg:text-left md:text-center sms:text-center xs:text-center sxs:text-center">
+            Assisting Patients{' '}
+            <hr className="xl:mx-0 lg:mx-0 md:mx-auto sms:mx-auto sxs:mx-auto xs:mx-auto w-28 h-1 bg-[#D84498]" />
           </h4>
           <p className="font-light">
             At HCI, we are dedicated to providing a seamless and enriching

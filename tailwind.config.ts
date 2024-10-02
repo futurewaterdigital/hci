@@ -15,6 +15,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        sxs: '320px', // Extra small devices
+        xs: '480px', // Extra small devices
+        sm: '640px', // Small devices (phones)
+        sms: '600px', // Small devices (phones)
+        md: '768px', // Medium devices (tablets)
+        lg: '1024px', // Large devices (laptops)
+        xl: '1280px', // Extra large devices (desktops)
+        '2xl': '1536px', // Larger screens
+        '3xl': '1920px', // Full HD
+        '4xl': '2560px', // Ultra-wide screens
+      },
       colors: {
         hciSecondary: '#D84498',
       },
@@ -23,7 +35,12 @@ const config: Config = {
       },
     },
   },
-  plugins: [flowbite, daisyui],
+  plugins: [
+    flowbite,
+    daisyui,
+    require('flowbite/plugin'),
+    require('tailwind-scrollbar-hide'),
+  ],
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: 'light', // name of one of the included themes for dark mode

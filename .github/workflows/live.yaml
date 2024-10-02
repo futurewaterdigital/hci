@@ -1,4 +1,4 @@
-name: Remote SSH Command
+name: Workflow Live Server
 
 on:
   workflow_dispatch:
@@ -12,7 +12,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Deploy the code to the DigitalOcean droplet via SSH
+      # Step 2: Modify package.json to update port number for live environment
+      - name: Update Port in package.json
+        run: |
+          sed -i 's/-p 3001/-p 3002/g' package.json  # Change port 3001 to 8080 or any port you need
+          cat package.json  # Verify the modification
+
+      # Step 3: Deploy the code to the DigitalOcean droplet via SSH
       - name: Deploy to DigitalOcean Droplet Live
         uses: appleboy/ssh-action@v1.0.2
         with:
@@ -26,4 +32,4 @@ jobs:
             echo ${{ secrets.PASSWORD }} | sudo -S git pull origin live
             echo ${{ secrets.PASSWORD }} | sudo -S npm install
             echo ${{ secrets.PASSWORD }} | sudo -S npm run build
-            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart all
+            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart 1

@@ -1,8 +1,9 @@
 'use client'
 import React, { useState } from 'react'
-import { medicalConditions } from '@/utils/data' // Assuming you've updated the data to include hospital and doctor mappings
-import { FaFileAlt } from 'react-icons/fa'
+import { medicalConditions, countryCode } from '@/utils/data' // Assuming you've updated the data to include hospital and doctor mappings
+// import { FaFileAlt } from 'react-icons/fa'
 import axios from 'axios'
+import Link from 'next/link'
 
 function ConsultantForm() {
   const [yourName, setYourName] = useState('')
@@ -15,9 +16,31 @@ function ConsultantForm() {
   const [additionalMessage, setAdditionalMessage] = useState('')
   const [errors, setErrors] = useState({})
   const [post, setPost] = useState('')
-  const [fileName, setFileName] = useState('')
+  // const [fileName, setFileName] = useState('')
   const [hospitalOptions, setHospitalOptions] = useState([])
   const [doctorOptions, setDoctorOptions] = useState([])
+  const [loading, setLoading] = useState(false) // To manage the loading state
+
+  const [filteredCountryCodes, setFilteredCountryCodes] = useState([])
+  const [selectedCode, setSelectedCode] = useState('+91')
+
+  // Handle input change for filtering country codes
+  const handleCodeInputChange = (e) => {
+    const input = e.target.value.toLowerCase()
+    const filtered = countryCode.filter(
+      (country) =>
+        country.name.toLowerCase().includes(input) ||
+        country.code.includes(input)
+    )
+    setFilteredCountryCodes(filtered)
+    setSelectedCode(input)
+  }
+
+  // Handle selecting a country from the list
+  const handleCountrySelect = (code) => {
+    setSelectedCode(code)
+    setFilteredCountryCodes([]) // Hide the dropdown after selection
+  }
 
   // Regex for email validation
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
@@ -58,18 +81,18 @@ function ConsultantForm() {
   }
 
   // Validate the medical condition, hospital, and doctor fields
-  const selectErrors = {
-    field: 'medicalCondition',
-    message: 'Please select a medical condition.',
-  }
-  const hospitalErrors = {
-    field: 'hospital',
-    message: 'Please select a hospital.',
-  }
-  const doctorErrors = {
-    field: 'doctor',
-    message: 'Please select a doctor.',
-  }
+  // const selectErrors = {
+  //   field: 'medicalCondition',
+  //   message: 'Please select a speciality.',
+  // }
+  // const hospitalErrors = {
+  //   field: 'hospital',
+  //   message: 'Please select a hospital.',
+  // }
+  // const doctorErrors = {
+  //   field: 'doctor',
+  //   message: 'Please select a doctor.',
+  // }
 
   // Validate file input
   const fileErrors = {
@@ -115,34 +138,34 @@ function ConsultantForm() {
     }
   }
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0]
+  // const handleFileChange = (e) => {
+  //   const file = e.target.files[0]
 
-    if (!file) {
-      setErrors({ yourFile: 'Please select a file.' })
-      setYourFile(null)
-      return
-    }
+  //   if (!file) {
+  //     setErrors({ yourFile: 'Please select a file.' })
+  //     setYourFile(null)
+  //     return
+  //   }
 
-    const fileTypes = ['application/pdf', 'image/jpeg', 'image/png']
+  //   const fileTypes = ['application/pdf', 'image/jpeg', 'image/png']
 
-    if (!fileTypes.includes(file.type)) {
-      setErrors({ yourFile: 'Please select a PDF, DOC, or DOCX file.' })
-      setYourFile(null)
-      setFileName('')
-      return
-    }
+  //   if (!fileTypes.includes(file.type)) {
+  //     setErrors({ yourFile: 'Please select a PDF, DOC, or DOCX file.' })
+  //     setYourFile(null)
+  //     setFileName('')
+  //     return
+  //   }
 
-    if (file.size > 4 * 1024 * 1024) {
-      setErrors({ yourFile: 'File size exceeds 4MB limit.' })
-      setYourFile(null)
-      setFileName('')
-    } else {
-      setErrors({})
-      setYourFile(file)
-      setFileName(file.name)
-    }
-  }
+  //   if (file.size > 4 * 1024 * 1024) {
+  //     setErrors({ yourFile: 'File size exceeds 4MB limit.' })
+  //     setYourFile(null)
+  //     setFileName('')
+  //   } else {
+  //     setErrors({})
+  //     setYourFile(file)
+  //     setFileName(file.name)
+  //   }
+  // }
 
   // Handle change in medical condition
   const handleConditionChange = (condition) => {
@@ -186,28 +209,28 @@ function ConsultantForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
+    setLoading(true)
     const validationErrors = {}
     if (!yourName) validationErrors.yourName = 'Name is required.'
     if (!yourEmail) validationErrors.yourEmail = 'Email is required.'
     if (!yourPhone) validationErrors.yourPhone = 'Phone number is required.'
     if (yourPhone.length > 10)
       validationErrors.yourPhone = 'Phone number cannot exceed 10 digits.'
-    if (!medicalCondition)
-      validationErrors.medicalCondition = selectErrors.message
-    if (!hospital) validationErrors.hospital = hospitalErrors.message
-    if (!doctor) validationErrors.doctor = doctorErrors.message
+    // if (!medicalCondition)
+    //   validationErrors.medicalCondition = selectErrors.message
+    // if (!hospital) validationErrors.hospital = hospitalErrors.message
+    // if (!doctor) validationErrors.doctor = doctorErrors.message
     if (!yourFile) validationErrors.yourFile = fileErrors.message
-
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors)
+      setLoading(false) // Stop loading if validation fails
       return
     }
 
     const formData = new FormData()
     formData.append('yourName', yourName)
     formData.append('yourEmail', yourEmail)
-    formData.append('yourPhone', yourPhone)
+    formData.append('yourPhone', selectedCode + '-' + yourPhone)
     formData.append('medicalCondition', medicalCondition)
     formData.append('hospital', hospital)
     formData.append('doctor', doctor)
@@ -223,20 +246,28 @@ function ConsultantForm() {
         { headers: { 'Content-Type': 'multipart/form-data' } }
       )
       setPost(response.data.message)
+      console.log(response.data.message)
+      console.log(response.data)
       const msg = response.data.status
       if (msg === 'mail_sent') {
         resetForm()
+        setLoading(false)
       } else if (msg === 'validation_failed') {
         const fieldErrors = {}
         response.data.invalid_fields.forEach((field) => {
           fieldErrors[field.field] = field.message
         })
+        setLoading(false)
         setErrors(fieldErrors)
       } else if (msg === 'mail_failed') {
         setPost('Failed to send request')
+        setLoading(false)
       }
     } catch (error) {
       console.error('Error submitting the form!', error)
+      setLoading(false)
+    } finally {
+      setLoading(false) // Stop the loading once the request is done
     }
   }
 
@@ -253,9 +284,9 @@ function ConsultantForm() {
   }
 
   return (
-    <div className="w-full my-20 px-2 lg:px-0">
-      <div className="bg-white lg:w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
-        <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
+    <div className="w-full mb-20 px-2 lg:px-0">
+      <div className="bg-white lg:w-11/12 xl:w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
+        <h3 className="py-4 lg:text-3xl text-1xl p-4 lg:p-4">
           To Get The Best Treatment Options, Please Provide Details
         </h3>
         <div className="w-full mx-auto p-10">
@@ -276,7 +307,57 @@ function ConsultantForm() {
                   </p>
                 )}
               </div>
+
               <div>
+                <div className="flex">
+                  {/* Country Code Input */}
+                  <div className="w-3/12">
+                    <input
+                      type="text"
+                      name="countryCode"
+                      value={selectedCode}
+                      onChange={handleCodeInputChange}
+                      className="block w-full text-sm text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 p-4"
+                      placeholder="Code"
+                    />
+                    {filteredCountryCodes.length > 0 && (
+                      <div className="absolute z-10 bg-white border border-gray-300 mt-1 lg:w-2/12 max-h-40 overflow-y-auto rounded-md shadow-lg text-start">
+                        <ul className="py-2 text-sm text-gray-700">
+                          {filteredCountryCodes.map((country) => (
+                            <li
+                              key={country.code}
+                              onClick={() => handleCountrySelect(country.code)}
+                              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                            >
+                              {country.name} ({country.code})
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Phone Number Input */}
+                  <div className="relative w-9/12">
+                    <input
+                      type="tel"
+                      name="yourPhone"
+                      value={yourPhone}
+                      onChange={handleTextChange}
+                      maxLength="10"
+                      className="block w-full text-sm text-gray-900 bg-gray-50 rounded-r-lg border border-gray-300 p-4"
+                      placeholder="Phone Number"
+                    />
+                  </div>
+                </div>
+                {errors.yourPhone && (
+                  <p className="text-red-500 text-start text-[14px]">
+                    {errors.yourPhone}
+                  </p>
+                )}
+              </div>
+
+              {/* <div>
                 <input
                   type="tel"
                   name="yourPhone"
@@ -291,7 +372,8 @@ function ConsultantForm() {
                     {errors.yourPhone}
                   </p>
                 )}
-              </div>
+              </div> */}
+
               <div>
                 <input
                   type="email"
@@ -316,7 +398,7 @@ function ConsultantForm() {
                   onChange={(e) => handleConditionChange(e.target.value)}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
                 >
-                  <option value="">Select Condition</option>
+                  <option value="">Select Speciality</option>
                   {medicalConditions.map((condition) => (
                     <option
                       key={condition.condition}
@@ -349,11 +431,11 @@ function ConsultantForm() {
                       </option>
                     ))}
                   </select>
-                  {errors.hospital && (
+                  {/* {errors.hospital && (
                     <p className="text-red-500 text-start text-[14px]">
                       {errors.hospital}
                     </p>
-                  )}
+                  )} */}
                 </div>
                 {/* )} */}
               </div>
@@ -372,17 +454,47 @@ function ConsultantForm() {
                     </option>
                   ))}
                 </select>
-                {errors.doctor && (
+                {/* {errors.doctor && (
                   <p className="text-red-500 text-start text-[14px]">
                     {errors.doctor}
                   </p>
-                )}
+                )} */}
               </div>
             </div>
 
-            <div className="grid gap-6 mb-6 md:grid-cols-2">
-              <div className="relative w-full">
-                {/* Hidden file input */}
+            <div>
+              <input
+                type="text"
+                name="additionalMessage"
+                value={additionalMessage}
+                onChange={handleTextChange}
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                placeholder="Additional information"
+              />
+            </div>
+
+            <div className="grid gap-6 my-6 ">
+              <Link
+                href="mailto:info@healthcareinternational.in"
+                className="text-[15px]"
+              >
+                For a free medical opinion from global experts, Email your
+                updated reports to{' '}
+                <Link
+                  href="mailto:info@healthcareinternational.in"
+                  className="text-blue-600"
+                >
+                  info@healthcareinternational.in
+                </Link>{' '}
+                or WhatsApp{' '}
+                <Link
+                  href="https://wa.me/+919008764954"
+                  className="text-blue-600"
+                >
+                  +91 9008764954
+                </Link>
+              </Link>
+              {/* <div className="relative w-full">
                 <input
                   type="file"
                   id="file-upload"
@@ -390,7 +502,6 @@ function ConsultantForm() {
                   className="hidden"
                 />
 
-                {/* Custom label to replace the default file input */}
                 <label
                   htmlFor="file-upload"
                   className="flex items-center justify-between w-full h-[53px] mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-200 transition-colors"
@@ -405,25 +516,26 @@ function ConsultantForm() {
                     {errors.yourFile}
                   </p>
                 )}
-              </div>
-              <div>
-                <input
-                  type="text"
-                  name="additionalMessage"
-                  value={additionalMessage}
-                  onChange={handleTextChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                  placeholder="Additional information"
-                />
-              </div>
+              </div> */}
             </div>
             <div>
-              <button
-                type="submit"
-                className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white"
-              >
-                Submit
-              </button>
+              {loading ? (
+                <div className="mt-4 w-full text-center">
+                  <div className=" bg-gray-200 rounded-lg w-7/12 mx-auto animate-pulse py-2 text-[#D84498] border border-[#D84498]">
+                    Please wait...
+                  </div>
+                </div>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={`text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white ${
+                    loading ? 'bg-gray-200 cursor-not-allowed' : ''
+                  }`}
+                >
+                  {loading ? 'Processing...' : 'Submit'}
+                </button>
+              )}
 
               {post && (
                 <p className="mt-4 text-[15px] text-green-500 text-center">

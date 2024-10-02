@@ -1,20 +1,58 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import dynamic from 'next/dynamic' // Lazy load Footer
 import Header from '../../../components/Header/page'
 import Banner from '../../../components/Treatment/Banner/page'
-import Footer from '../../../components/Footer/page'
+import Link from 'next/link'
+
+// export function generateMetadata() {
+//   return {
+//     title: 'Blogs and insights on sustainable impact',
+//     description:
+//       'Our blogs detail our various partnerships that facilitate sustainable change',
+//     metadataBase: new URL('https://cms.org.in/insights'),
+//     openGraph: {
+//       url: 'https://cms.org.in/insights',
+//       title: 'Blogs and insights on sustainable impact',
+//       description:
+//         'Our blogs detail our various partnerships that facilitate sustainable change',
+//       images: [
+//         {
+//           url: '/social.png',
+//           width: 800,
+//           height: 600,
+//           alt: 'CMS',
+//         },
+//       ],
+//     },
+//   }
+// }
+
+// Dynamically import Footer to lazy-load
+const Footer = dynamic(() => import('../../../components/Footer/page'), {
+  loading: () => <div className="bg-gray-300 h-24 w-full"></div>, // Placeholder while Footer is loading
+})
 
 export default function City({ params }) {
-  const [selectedCategory] = useState(params.slug) // Default to the first category
+  const [selectedCategory] = useState(params.slug) // Default to the slug from params
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [noData, setNoData] = useState(null)
 
+  const cache = useRef(new Map()) // Cache to store API responses
+
   useEffect(() => {
+    // Check if data is already cached to prevent redundant API calls
+    if (cache.current.has(selectedCategory)) {
+      setNetworks(cache.current.get(selectedCategory))
+      setLoading(false)
+      return
+    }
+
     setLoading(true)
     fetch(
-      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${selectedCategory}`
+      `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${selectedCategory}&_fields=title,content,acf.banner`
     )
       .then((response) => {
         if (!response.ok) {
@@ -24,10 +62,12 @@ export default function City({ params }) {
       })
       .then((data) => {
         if (data.length > 0) {
+          // Sort the data if necessary
           const sortedData = data.sort((a, b) =>
             a.title.rendered.localeCompare(b.title.rendered)
-          ) // Alphabetical sort
+          )
           setNetworks(sortedData)
+          cache.current.set(selectedCategory, sortedData) // Cache the response
           setNoData(null)
         } else {
           setNoData('No Data Available')
@@ -44,8 +84,10 @@ export default function City({ params }) {
   return (
     <>
       <Header />
-      {error}
-      {noData}
+
+      {error && <p className="text-red-500">{error}</p>}
+      {noData && <p className="text-gray-500">{noData}</p>}
+
       {loading ? (
         // Skeleton Loader
         <>
@@ -64,17 +106,17 @@ export default function City({ params }) {
         <>
           {network.map((items, index) => (
             <React.Fragment key={index}>
-              {items.acf && items.acf.banner && items.acf.banner.url ? (
-                // If banner URL exists
+              {items.acf?.banner?.url ? (
+                // Render Banner component with the banner URL
                 <Banner city={params.slug} banner={items.acf.banner.url} />
               ) : (
-                // Skeleton Placeholder if no banner URL
+                // Skeleton Placeholder for banner if no URL
                 <div className="relative h-screen bg-gray-300 animate-pulse"></div>
               )}
 
-              <div className="w-9/12 mx-auto">
+              <div className="w-9/12 mx-auto py-4">
                 <div className="">
-                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
+                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[30px] py-4">
                     {items.title.rendered}
                   </h1>
                 </div>
@@ -85,6 +127,14 @@ export default function City({ params }) {
               </div>
             </React.Fragment>
           ))}
+          <div className="w-full mx-auto text-center pt-4">
+            <Link
+              href="/"
+              className="bg-[#D84598] px-8 py-4 text-white rounded-lg"
+            >
+              Back
+            </Link>
+          </div>
         </>
       )}
 

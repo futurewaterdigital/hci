@@ -11,27 +11,26 @@ export default function whoHCI() {
       <div className="pt-24 w-10/12 gap-10 grid lg:grid-cols-3 mx-auto grid-cols-1">
         {whyHCI.map((items, index) => (
           <div
-            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center mx-auto mt-10"
+            className="max-w-sm bg-white border border-gray-200 rounded-lg shadow justify-center mx-auto mt-10 lg:mt-0"
             key={index}
           >
             <div className="flex items-center justify-center relative">
               <Image
-                class="rounded-t-lg w-36 absolute top-[-4em]"
+                className="rounded-t-lg w-36 absolute"
                 src={items.icon}
                 alt={items.title}
-                className="text-center"
                 width={150}
                 height={150}
               />
             </div>
 
-            <div class="p-5 mt-16">
-              <h5 class="mb-2 text-[25px] font-normal tracking-tight text-[#0E56A0]">
+            <div className="p-5 mt-16">
+              <h5 className="mb-2 text-[25px] font-normal tracking-tight text-[#0E56A0]">
                 {items.title}
               </h5>
 
               <p
-                class="mb-3 font-light text-[#333333] text-[16px]"
+                className="mb-3 font-light text-[#333333] text-[16px]"
                 dangerouslySetInnerHTML={{ __html: items.excerpt }}
               />
             </div>

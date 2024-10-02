@@ -98,7 +98,7 @@ export default function Blogs() {
             const isLong = item.content.rendered.length > 240
             const displayedText = expandedPosts[index]
               ? item.content.rendered // Show full content if expanded
-              : item.content.rendered.slice(0, 214) // Otherwise show a part of the content with ellipsis
+              : item.content.rendered.slice(0, 200) // Otherwise show a part of the content with ellipsis
 
             return (
               <div
@@ -109,8 +109,8 @@ export default function Blogs() {
                   className="transition-transform duration-300 group-hover:scale-105 mx-auto w-full h-50"
                   src={item.featured_media_url}
                   alt={item.title.rendered}
-                  width={150}
-                  height={150}
+                  width={300}
+                  height={300}
                 />
                 <div className="pt-5 py-4">
                   <h5 className="text-xl font-normal tracking-tight text-black">
@@ -118,7 +118,9 @@ export default function Blogs() {
                   </h5>
                   <p>{new Date(item.date).toLocaleDateString()}</p>
                   <div
-                    className="text-gray-400 font-light py-4 h-auto"
+                    className={`text-gray-800 font-light py-4 ${
+                      expandedPosts[index] ? 'h-auto' : 'h-[170px]'
+                    }`}
                     dangerouslySetInnerHTML={{ __html: displayedText }}
                   ></div>
                   {isLong && (
