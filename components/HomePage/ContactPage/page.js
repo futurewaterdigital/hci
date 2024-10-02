@@ -12,7 +12,7 @@ function ConsultantForm() {
   const [medicalCondition, setMedicalCondition] = useState('')
   const [hospital, setHospital] = useState('')
   const [doctor, setDoctor] = useState('')
-  const [yourFile, setYourFile] = useState(null)
+  // const [yourFile, setYourFile] = useState(null)
   const [additionalMessage, setAdditionalMessage] = useState('')
   const [errors, setErrors] = useState({})
   const [post, setPost] = useState('')
@@ -95,11 +95,11 @@ function ConsultantForm() {
   // }
 
   // Validate file input
-  const fileErrors = {
-    field: 'yourFile',
-    message:
-      'Please upload a valid file (PDF, JPG, JPEG,PNG) not exceeding 4MB.',
-  }
+  // const fileErrors = {
+  //   field: 'yourFile',
+  //   message:
+  //     'Please upload a valid file (PDF, JPG, JPEG,PNG) not exceeding 4MB.',
+  // }
 
   const handleTextChange = (e) => {
     const { name, value } = e.target
@@ -220,7 +220,7 @@ function ConsultantForm() {
     //   validationErrors.medicalCondition = selectErrors.message
     // if (!hospital) validationErrors.hospital = hospitalErrors.message
     // if (!doctor) validationErrors.doctor = doctorErrors.message
-    if (!yourFile) validationErrors.yourFile = fileErrors.message
+    // if (!yourFile) validationErrors.yourFile = fileErrors.message
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors)
       setLoading(false) // Stop loading if validation fails
@@ -235,9 +235,9 @@ function ConsultantForm() {
     formData.append('hospital', hospital)
     formData.append('doctor', doctor)
     formData.append('additionalMessage', additionalMessage)
-    if (yourFile) {
-      formData.append('yourFile', yourFile)
-    }
+    // if (yourFile) {
+    //   formData.append('yourFile', yourFile)
+    // }
 
     try {
       const response = await axios.post(
