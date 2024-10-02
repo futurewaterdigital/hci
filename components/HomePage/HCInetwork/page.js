@@ -71,7 +71,7 @@ function Network() {
           slidesToShow: 4,
           slidesToScroll: 4,
           dots: true,
-          centerMode: true,
+          // centerMode: true,
         },
       },
       {
@@ -80,7 +80,7 @@ function Network() {
           slidesToShow: 2,
           slidesToScroll: 2,
           dots: true,
-          centerMode: true,
+          // centerMode: true,
         },
       },
       {
@@ -89,7 +89,7 @@ function Network() {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          centerMode: true,
+          // centerMode: true,
         },
       },
     ],
@@ -136,7 +136,7 @@ function Network() {
               <Slider {...settings}>
                 {network.map((items, index) => (
                   <div
-                    className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center text-center group" // Added mx-2 for horizontal margin
+                    className="w-min-[300px] p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center text-center group" // Added mx-2 for horizontal margin
                     key={index}
                   >
                     <Image
