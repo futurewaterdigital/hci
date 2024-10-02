@@ -1,4 +1,4 @@
-name: Remote SSH Command
+name: Workflow Live
 
 on:
   workflow_dispatch:
