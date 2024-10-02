@@ -1,4 +1,4 @@
-name: Workflow Live Server
+name: WorkFlow Live Server
 
 on:
   workflow_dispatch:
@@ -12,13 +12,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Modify package.json to update port number for live environment
-      - name: Update Port in package.json
-        run: |
-          sed -i 's/-p 3001/-p 3002/g' package.json  # Change port 3001 to 8080 or any port you need
-          cat package.json  # Verify the modification
-
-      # Step 3: Deploy the code to the DigitalOcean droplet via SSH
+      # Step 2: Deploy the code and modify package.json on the DigitalOcean droplet
       - name: Deploy to DigitalOcean Droplet Live
         uses: appleboy/ssh-action@v1.0.2
         with:
@@ -30,6 +24,14 @@ jobs:
             cd /var/www/html/hci
             echo ${{ secrets.PASSWORD }} | sudo -S git config --global --add safe.directory /var/www/html/hci
             echo ${{ secrets.PASSWORD }} | sudo -S git pull origin live
+            
+            # Modify the port in package.json directly on the droplet
+            echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/-p 3001/-p 8080/g' package.json
+            cat package.json  # Verify the change in package.json
+
+            # Install dependencies and build the app
             echo ${{ secrets.PASSWORD }} | sudo -S npm install
             echo ${{ secrets.PASSWORD }} | sudo -S npm run build
-            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart 1
+
+            # Restart the application using pm2
+            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart all
