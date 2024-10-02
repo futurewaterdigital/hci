@@ -26,7 +26,7 @@ jobs:
             echo ${{ secrets.PASSWORD }} | sudo -S git pull origin live
             
             # Modify the port in package.json directly on the droplet
-            echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/-p 8080/-p 3002/g' package.json
+            echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/-p 3001/-p 3002/g' package.json
             cat package.json  # Verify the change in package.json
 
             # Install dependencies and build the app
