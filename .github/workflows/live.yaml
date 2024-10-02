@@ -26,4 +26,4 @@ jobs:
             echo ${{ secrets.PASSWORD }} | sudo -S git pull origin live
             echo ${{ secrets.PASSWORD }} | sudo -S npm install
             echo ${{ secrets.PASSWORD }} | sudo -S npm run build
-            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart all
+            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart 1
