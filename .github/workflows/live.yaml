@@ -1,0 +1,29 @@
+name: Remote SSH Command
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout the code from the GitHub repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Deploy the code to the DigitalOcean droplet via SSH
+      - name: Deploy to DigitalOcean Droplet Live
+        uses: appleboy/ssh-action@v1.0.2
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /var/www/html/hci
+            echo ${{ secrets.PASSWORD }} | sudo -S git config --global --add safe.directory /var/www/html/hci
+            echo ${{ secrets.PASSWORD }} | sudo -S git pull origin live
+            echo ${{ secrets.PASSWORD }} | sudo -S npm install
+            echo ${{ secrets.PASSWORD }} | sudo -S npm run build
+            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart all
