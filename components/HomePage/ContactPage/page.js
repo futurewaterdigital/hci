@@ -210,12 +210,14 @@ function ConsultantForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
+
     const validationErrors = {}
     if (!yourName) validationErrors.yourName = 'Name is required.'
     if (!yourEmail) validationErrors.yourEmail = 'Email is required.'
     if (!yourPhone) validationErrors.yourPhone = 'Phone number is required.'
     if (yourPhone.length > 10)
       validationErrors.yourPhone = 'Phone number cannot exceed 10 digits.'
+
     // if (!medicalCondition)
     //   validationErrors.medicalCondition = selectErrors.message
     // if (!hospital) validationErrors.hospital = hospitalErrors.message
@@ -235,6 +237,7 @@ function ConsultantForm() {
     formData.append('hospital', hospital)
     formData.append('doctor', doctor)
     formData.append('additionalMessage', additionalMessage)
+
     // if (yourFile) {
     //   formData.append('yourFile', yourFile)
     // }
@@ -278,7 +281,7 @@ function ConsultantForm() {
     setMedicalCondition('')
     setHospital('')
     setDoctor('')
-    setYourFile(null)
+    // setYourFile(null)
     setAdditionalMessage('')
     setErrors({})
   }
@@ -461,7 +464,6 @@ function ConsultantForm() {
                 )} */}
               </div>
             </div>
-
             <div>
               <input
                 type="text"
@@ -472,7 +474,6 @@ function ConsultantForm() {
                 placeholder="Additional information"
               />
             </div>
-
             <div className="grid gap-6 my-6 ">
               <Link
                 href="mailto:info@healthcareinternational.in"
@@ -518,6 +519,7 @@ function ConsultantForm() {
                 )}
               </div> */}
             </div>
+
             <div>
               {loading ? (
                 <div className="mt-4 w-full text-center">

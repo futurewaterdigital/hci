@@ -141,17 +141,16 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="lg:hidden block">
-          <Image
-            src="/qr-codes/hci.png"
-            className="w-16 ml-12"
-            width={200}
-            height={200}
-            alt="healthcare international in bangalore"
-            loading="lazy"
-          />
+        <div className="flex items-center lg:hidden">
+          <Link
+            href="/contact-us"
+            className="lg:w-full py-2 px-2 text-[12px]
+                font-medium text-[#D84498] rounded-lg border border-[#D84498] 
+                hover:bg-[#D84498] hover:text-white opacity-100 z-50 tracking-[2px] mr-2"
+          >
+            CONTACT US
+          </Link>
         </div>
-
         <div className="lg:flex items-center justify-end gap-0 w-1/2 hidden">
           <div className="z-20 flex flex-row justify-between">
             <div className="relative flex items-center justify-center right-[40px]">
