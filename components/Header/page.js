@@ -151,7 +151,6 @@ export default function Header() {
             CONTACT US
           </Link>
         </div>
-
         <div className="lg:flex items-center justify-end gap-0 w-1/2 hidden">
           <div className="z-20 flex flex-row justify-between">
             <div className="relative flex items-center justify-center right-[40px]">
