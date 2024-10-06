@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { medicalConditions, countryCode } from '@/utils/data' // Assuming you've updated the data to include hospital and doctor mappings
 // import { FaFileAlt } from 'react-icons/fa'
 import axios from 'axios'
