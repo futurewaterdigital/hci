@@ -146,7 +146,7 @@ export default function Header() {
             href="/contact-us"
             className="lg:w-full py-2 px-2 text-[12px]
                 font-medium text-[#D84498] rounded-lg border border-[#D84498] 
-                hover:bg-[#D84498] hover:text-white opacity-100 z-50 tracking-[2px] mr-2"
+                hover:bg-[#D84498] hover:text-white opacity-100 z-30 tracking-[2px] mr-2"
           >
             CONTACT US
           </Link>
