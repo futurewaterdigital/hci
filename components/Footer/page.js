@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { footerMenu, bottomSection } from '@/utils/data'
+import ScrollToTop from 'react-scroll-to-top'
 
 export default function Footer() {
   // const scrollToSection = (id) => {
@@ -13,6 +15,10 @@ export default function Footer() {
 
   return (
     <>
+      <ScrollToTop
+        className="w-12 h-12 rounded-full flex justify-center items-center z-50 mb-10"
+        smooth
+      />
       <div className="bg-[#F1F8FF] lg:p-10 grid lg:grid-cols-4 font-light mt-10">
         <div className="p-6">
           <Image

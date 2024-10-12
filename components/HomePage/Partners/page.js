@@ -17,6 +17,7 @@ function ConsultantForm() {
     className: 'mx-auto',
     slidesToShow: 6,
     slidesToScroll: 6,
+    touchMove: true,
     responsive: [
       {
         breakpoint: 1024, // For tablet and below

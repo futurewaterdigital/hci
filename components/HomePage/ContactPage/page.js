@@ -474,19 +474,21 @@ function ConsultantForm() {
                 placeholder="Additional information"
               />
             </div>
-            <div className="grid gap-6 my-6 ">
-              <Link
-                href="mailto:info@healthcareinternational.in"
-                className="text-[15px]"
-              >
+            <div className="py-6 gap-2">
+              <p>
                 For a free medical opinion from global experts, Email your
-                updated reports to{' '}
+                updated reports to
+              </p>
+
+              <p>
                 <Link
                   href="mailto:info@healthcareinternational.in"
                   className="text-blue-600"
                 >
                   info@healthcareinternational.in
-                </Link>{' '}
+                </Link>
+                {'     '}
+                {''}
                 or WhatsApp{' '}
                 <Link
                   href="https://wa.me/+919008764954"
@@ -494,7 +496,7 @@ function ConsultantForm() {
                 >
                   +91 9008764954
                 </Link>
-              </Link>
+              </p>
               {/* <div className="relative w-full">
                 <input
                   type="file"
