@@ -63,7 +63,6 @@ export default function Page({ params }) {
         // Skeleton Loader
         <>
           <div className="animate-pulse">
-            <div className="relative h-screen bg-gray-300"></div>
             <div className="w-9/12 mx-auto mt-10">
               <div className="h-10 bg-gray-300 w-full mb-4"></div>
               <div className="h-6 bg-gray-300 w-full mb-2"></div>
