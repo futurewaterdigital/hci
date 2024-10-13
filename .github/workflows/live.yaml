@@ -30,7 +30,6 @@ jobs:
             
             # Modify the robots.txt in the public folder to change Disallow rule
             echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/Disallow: \//Disallow:/' public/robots.txt
-
             
             cat package.json  # Verify the change in package.json
             cat public/robots.txt  # Verify the change in robots.txt
