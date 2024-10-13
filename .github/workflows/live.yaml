@@ -28,8 +28,9 @@ jobs:
             # Modify the port in package.json directly on the droplet
             echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/-p 3001/-p 3002/g' package.json
             
-            # Modify the robots.txt in the public folder to allow crawling
-            echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/Disallow: .*/Disallow: /' public/robots.txt
+            # Modify the robots.txt in the public folder to change Disallow rule
+            echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/Disallow: \//Disallow:/' public/robots.txt
+
             
             cat package.json  # Verify the change in package.json
             cat public/robots.txt  # Verify the change in robots.txt
