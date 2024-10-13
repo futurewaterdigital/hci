@@ -337,20 +337,21 @@ export const footerMenu = [
       { name: 'Others', url: '/treatment/others' },
     ],
   },
-  {
-    category: 'Contact Us',
-    links: [
-      // {
-      //   name: '354/428, 1st Floor, 27th Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka, India',
-      //   url: '',
-      // },
-      { name: '+91 9008 764 954', url: '' },
-      {
-        name: 'info@healthcareinternational.in',
-        url: 'mailto:info@healthcareinternational.in',
-      },
-    ],
-  },
+  // {
+  //   category: 'Contact Us',
+  //   links: [
+  //     // {
+  //     //   name: '354/428, 1st Floor, 27th Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka, India',
+  //     //   url: '',
+  //     // },
+  //     { name: '+91 9008 764 954', url: '' },
+  //     {
+  //       name: 'info@healthcareinternational.in',
+  //       url: 'mailto:info@healthcareinternational.in',
+  //     },
+  //     { name: 'Follow Us', url: '' },
+  //   ],
+  // },
 ]
 
 export const bottomSection = {
@@ -410,7 +411,7 @@ export const locations = [
     title: 'Telegram',
     icon: '/images/phone.svg',
     excerpt: `+91 9008 764 954`,
-    url: 'https://wa.me/+919008764954',
+    url: 'https://t.me/HCI_MVT',
   },
   {
     title: 'Email',
