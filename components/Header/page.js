@@ -97,6 +97,7 @@ export default function Header() {
                 loading="lazy"
                 onClick={handleOpen}
                 className="cursor-pointer xl:w-[37px] xl:h-[40px] lg:w-[50px]"
+                alt="healthcare international in bangalore"
               />
             </div>
             <Drawer isOpen={isOpen} handleClose={handleClose} />
@@ -136,6 +137,7 @@ export default function Header() {
                     : 'xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300'
                 }`}
                 loading="lazy"
+                alt="healthcare international in bangalore"
               />
             </div>
           </Link>

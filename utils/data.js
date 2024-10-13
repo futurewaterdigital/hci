@@ -337,20 +337,21 @@ export const footerMenu = [
       { name: 'Others', url: '/treatment/others' },
     ],
   },
-  {
-    category: 'Contact Us',
-    links: [
-      {
-        name: '354/428, 1st Floor, 27th Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka, India',
-        url: '',
-      },
-      { name: '+91 9008 764 954', url: '' },
-      {
-        name: 'info@healthcareinternational.in',
-        url: 'mailto:info@healthcareinternational.in',
-      },
-    ],
-  },
+  // {
+  //   category: 'Contact Us',
+  //   links: [
+  //     // {
+  //     //   name: '354/428, 1st Floor, 27th Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka, India',
+  //     //   url: '',
+  //     // },
+  //     { name: '+91 9008 764 954', url: '' },
+  //     {
+  //       name: 'info@healthcareinternational.in',
+  //       url: 'mailto:info@healthcareinternational.in',
+  //     },
+  //     { name: 'Follow Us', url: '' },
+  //   ],
+  // },
 ]
 
 export const bottomSection = {
@@ -401,10 +402,16 @@ export const valueHCI = [
 
 export const locations = [
   {
-    title: 'Phone',
-    icon: '/images/phone.svg',
-    excerpt: `<div class="flex gap-2 justify-center items-center"><img src="/images/whatsapp.png" width="30" height="30"/> +91 9008 764 954</div>`,
+    title: 'Whatsapp',
+    icon: '/images/whatsapp.svg',
+    excerpt: `+91 9008 764 954`,
     url: 'https://wa.me/+919008764954',
+  },
+  {
+    title: 'Telegram',
+    icon: '/images/telegram.svg',
+    excerpt: `+91 9008 764 954`,
+    url: 'https://t.me/HCI_MVT',
   },
   {
     title: 'Email',
@@ -412,12 +419,12 @@ export const locations = [
     excerpt: `info@healthcareinternational.in`,
     url: 'mailto:info@healthcareinternational.in',
   },
-  {
-    title: 'Address',
-    icon: '/images/location.svg',
-    excerpt: `354/428, 1st Floor, 27th Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka, India`,
-    url: '',
-  },
+  // {
+  //   title: 'Address',
+  //   icon: '/images/location.svg',
+  //   excerpt: `354/428, 1st Floor, 27th Main Road, Sector-1, HSR Layout, Bangalore South, Bangalore- 560102, Karnataka, India`,
+  //   url: '',
+  // },
 ]
 
 export const medicalPartners = [
