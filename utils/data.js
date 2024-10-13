@@ -402,14 +402,14 @@ export const valueHCI = [
 
 export const locations = [
   {
-    title: 'Phone',
-    icon: '/images/phone.svg',
-    excerpt: `<div class="flex gap-2 justify-center items-center"><img src="/images/whatsapp.png" width="30" height="30"/> +91 9008 764 954</div>`,
+    title: 'Whatsapp',
+    icon: '/images/whatsapp.svg',
+    excerpt: `+91 9008 764 954`,
     url: 'https://wa.me/+919008764954',
   },
   {
     title: 'Telegram',
-    icon: '/images/phone.svg',
+    icon: '/images/telegram.svg',
     excerpt: `+91 9008 764 954`,
     url: 'https://t.me/HCI_MVT',
   },
