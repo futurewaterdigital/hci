@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Deploy the code and modify package.json on the DigitalOcean droplet
+      # Step 2: Deploy the code and modify package.json and robots.txt on the DigitalOcean droplet
       - name: Deploy to DigitalOcean Droplet Live
         uses: appleboy/ssh-action@v1.0.2
         with:
@@ -27,7 +27,12 @@ jobs:
             
             # Modify the port in package.json directly on the droplet
             echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/-p 3001/-p 3002/g' package.json
+            
+            # Modify the robots.txt in the public folder to allow crawling
+            echo ${{ secrets.PASSWORD }} | sudo -S sed -i 's/Disallow: .*/Disallow: /' public/robots.txt
+            
             cat package.json  # Verify the change in package.json
+            cat public/robots.txt  # Verify the change in robots.txt
 
             # Install dependencies and build the app
             echo ${{ secrets.PASSWORD }} | sudo -S npm install
