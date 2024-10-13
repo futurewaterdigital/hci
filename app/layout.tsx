@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: 'favicon_io/favicon-32x32.png',
-    shortcut: 'favicon_io/favicon.ico',
+    icon: '/favicon_io/favicon-32x32.png',
+    shortcut: '/favicon_io/favicon.ico',
   },
 }
 

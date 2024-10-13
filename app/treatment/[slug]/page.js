@@ -5,29 +5,6 @@ import Header from '../../../components/Header/page'
 import Banner from '../../../components/Treatment/Banner/page'
 import Link from 'next/link'
 
-// export function generateMetadata() {
-//   return {
-//     title: 'Blogs and insights on sustainable impact',
-//     description:
-//       'Our blogs detail our various partnerships that facilitate sustainable change',
-//     metadataBase: new URL('https://cms.org.in/insights'),
-//     openGraph: {
-//       url: 'https://cms.org.in/insights',
-//       title: 'Blogs and insights on sustainable impact',
-//       description:
-//         'Our blogs detail our various partnerships that facilitate sustainable change',
-//       images: [
-//         {
-//           url: '/social.png',
-//           width: 800,
-//           height: 600,
-//           alt: 'CMS',
-//         },
-//       ],
-//     },
-//   }
-// }
-
 // Dynamically import Footer to lazy-load
 const Footer = dynamic(() => import('../../../components/Footer/page'), {
   loading: () => <div className="bg-gray-300 h-24 w-full"></div>, // Placeholder while Footer is loading
@@ -67,7 +44,7 @@ export default function City({ params }) {
             a.title.rendered.localeCompare(b.title.rendered)
           )
           setNetworks(sortedData)
-          console.log(sortedData)
+          console.log(object)
           cache.current.set(selectedCategory, sortedData) // Cache the response
           setNoData(null)
         } else {
