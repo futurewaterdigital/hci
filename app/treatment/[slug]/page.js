@@ -67,6 +67,7 @@ export default function City({ params }) {
             a.title.rendered.localeCompare(b.title.rendered)
           )
           setNetworks(sortedData)
+          console.log(sortedData)
           cache.current.set(selectedCategory, sortedData) // Cache the response
           setNoData(null)
         } else {

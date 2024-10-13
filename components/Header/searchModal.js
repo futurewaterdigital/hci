@@ -134,7 +134,7 @@ export default function SearchModal() {
                           className="p-2 border-b flex justify-between"
                         >
                           {result.title}{' '}
-                          <span class="bg-pink-600 text-white text-xs font-medium me-2 px-2.5 py-1 rounded dark:bg-gray-700 dark:text-gray-300 right-0">
+                          <span className="bg-pink-600 text-white text-xs font-medium me-2 px-2.5 py-1 rounded dark:bg-gray-700 dark:text-gray-300 right-0">
                             {result.categories[0].name}
                             {/* {result.slug} */}
                           </span>
