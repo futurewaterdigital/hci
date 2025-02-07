@@ -33,7 +33,7 @@ function Banner() {
               </p>
               <Link
                 href="/"
-                class="py-2.5 px-5 me-2 mb-2 text-lg font-medium text-white  rounded-full border border-white group-hover:bg-[#D84498] opacity-100 z-50"
+                className="py-2.5 px-5 me-2 mb-2 text-lg font-medium text-white  rounded-full border border-white group-hover:bg-[#D84498] opacity-100 z-50"
               >
                 Contact Us
               </Link>

@@ -10,12 +10,12 @@ export default function Appointment() {
 
       <div className="w-9/12 mx-auto py-4">
         <form>
-          <div class="grid gap-6 mb-6 md:grid-cols-3 justify-center items-center">
+          <div className="grid gap-6 mb-6 md:grid-cols-3 justify-center items-center">
             <div>
               <input
                 type="text"
                 id="name"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
                 placeholder="Name"
                 required
               />
@@ -24,7 +24,7 @@ export default function Appointment() {
               <input
                 type="text"
                 id="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Email"
                 required
               />
@@ -33,20 +33,20 @@ export default function Appointment() {
               <input
                 type="text"
                 id="phone_number"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 "
                 placeholder="Phone Number"
                 required
               />
             </div>
             <div>
-              <div class="relative max-w-sm">
+              <div className="relative max-w-sm">
                 <Datepicker />
               </div>
             </div>
             <div>
               <select
                 id="countries"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected>Choose a country</option>
                 <option value="US">United States</option>
@@ -58,7 +58,7 @@ export default function Appointment() {
             <div>
               <select
                 id="countries"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected>Choose a country</option>
                 <option value="US">United States</option>
@@ -68,18 +68,18 @@ export default function Appointment() {
               </select>
             </div>
           </div>
-          <div class="mb-6">
+          <div className="mb-6">
             <textarea
               id="message"
               rows="4"
-              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 "
+              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 "
               placeholder="Message"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            class="text-[#D84498] focus:ring-4 focus:outline-none focus:ring-[#D84498] font-medium rounded-lg text-sm w-full sm:w-auto px-20 py-2.5 text-center border-2 border-[#D84498] hover:bg-[#D84498] hover:text-white"
+            className="text-[#D84498] focus:ring-4 focus:outline-none focus:ring-[#D84498] font-medium rounded-lg text-sm w-full sm:w-auto px-20 py-2.5 text-center border-2 border-[#D84498] hover:bg-[#D84498] hover:text-white"
           >
              Check Availability
           </button>

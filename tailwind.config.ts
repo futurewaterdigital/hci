@@ -29,6 +29,9 @@ const config: Config = {
       },
       colors: {
         hciSecondary: '#D84498',
+        hciPrimary: '#0E56A0',
+        hciYellow: '#FFE7B6',
+        hciLightBlue: '#F1F8FF',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],

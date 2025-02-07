@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Hospitals from '@/components/HomePage/Hospitals/HomeHospitals'
 
 function ConsultantForm() {
   var settings = {
@@ -49,6 +50,9 @@ function ConsultantForm() {
         <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
           Our Network Hospitals
         </h3>
+        <div>
+          <Hospitals />
+        </div>
         <div className="w-full mx-auto p-10 ">
           <Slider {...settings}>
             {medicalPartners.map((partner, index) => (
