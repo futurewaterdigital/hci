@@ -3,7 +3,7 @@ import Header from '../../components/Header/page'
 import Footer from '../../components/Footer/page'
 
 export const metadata = {
-  title: 'Price Comparison',
+  title: 'Hospitals',
   description: 'Healthcare International.',
   metadataBase: new URL('https://healthcareinternational.in/'),
   openGraph: {
