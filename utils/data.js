@@ -96,6 +96,8 @@ export const faqs = [
 export const menu = [
   { options: 'Home', url: '/' },
   { options: 'About Us', url: '/about-us' },
+  { options: 'Our Services', url: '/our-services' },
+  { options: 'Price Comparison', url: '/price-comparison' },
   { options: 'Contact Us', url: '/contact-us' },
 ]
 
