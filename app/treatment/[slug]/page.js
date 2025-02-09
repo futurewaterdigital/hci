@@ -4,6 +4,11 @@ import dynamic from 'next/dynamic' // Lazy load Footer
 import Header from '../../../components/Header/page'
 import Banner from '../../../components/Treatment/Banner/page'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import CardioMenu from '../../../components/cardiacComponents/Menu'
+import BookNow from '@/components/cardiacComponents/BookButton'
+import OurNetwork from '@/components/HomePage/Partners/page'
+import Testimonials from '@/components/HomePage/Testimonials/page'
 
 // Dynamically import Footer to lazy-load
 const Footer = dynamic(() => import('../../../components/Footer/page'), {
@@ -11,6 +16,7 @@ const Footer = dynamic(() => import('../../../components/Footer/page'), {
 })
 
 export default function City({ params }) {
+  const pathname = usePathname()
   const [selectedCategory] = useState(params.slug) // Default to the slug from params
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
@@ -105,13 +111,18 @@ export default function City({ params }) {
               </div>
             </React.Fragment>
           ))}
-          <div className="w-full mx-auto text-center pt-4">
-            <Link
+          <div className="w-full mx-auto text-center pt-4 space-y-8">
+            {pathname === '/treatment/cardiac-sciences' && <CardioMenu />}
+            {/* <Link
               href="/"
               className="bg-[#D84598] px-8 py-4 text-white rounded-lg"
             >
               Back
-            </Link>
+            </Link> */}
+
+            <OurNetwork />
+            <Testimonials />
+            <BookNow />
           </div>
         </>
       )}

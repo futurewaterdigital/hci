@@ -3,8 +3,10 @@ import React, { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Header from '../../components/Header/page'
 import Footer from '../../components/Footer/page'
+import { usePathname } from 'next/navigation'
 
 export default function Page({ params }) {
+  const pathname = usePathname()
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)

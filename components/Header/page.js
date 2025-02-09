@@ -83,7 +83,7 @@ export default function Header() {
   }, [pathname, isScrolled])
 
   return (
-    <div className={classnew}>
+    <div className={`${classnew} border`}>
       <div
         className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white`}
       >

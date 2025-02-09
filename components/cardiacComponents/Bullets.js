@@ -1,9 +1,9 @@
 import React from 'react'
 import { GoDotFill } from 'react-icons/go'
 
-function Bullets({ data, desc }) {
+function Bullets({ data, desc, footerdata, head, footerTitle }) {
   return (
-    <div>
+    <div className="py-4">
       {data.map((data, index) => (
         <div
           className="border border-[#D84498] rounded-lg shadow-lg flex flex-col p-4"
@@ -12,6 +12,12 @@ function Bullets({ data, desc }) {
           {data && <h2 className="text-lg font-bold mb-4">{data.heading}</h2>}
           {desc && (
             <p className=" mb-4" dangerouslySetInnerHTML={{ __html: desc }} />
+          )}
+          {head && (
+            <p
+              className="font-semibold pb-2"
+              dangerouslySetInnerHTML={{ __html: head }}
+            />
           )}
           <ul className="space-y-4">
             {data.aneurysmSymptoms.map((symptom, index) => (
@@ -24,6 +30,10 @@ function Bullets({ data, desc }) {
               </li>
             ))}
           </ul>
+          <div className="py-4">
+            {footerTitle && <p className="font-semibold">{footerTitle}</p>}
+            <p className="">{footerdata}</p>
+          </div>
         </div>
       ))}
     </div>

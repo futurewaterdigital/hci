@@ -5,9 +5,11 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
-import SingleLink from '@/components/cardiacComponents/SinlgeLink'
+import KnowMore from '@/components/cardiacComponents/KnowMore'
 import DataSurgery from '@/components/cardiacComponents/Button'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
 
+const title = 'Congenital Heart Disease (CHD)'
 const symptomsData = [
   {
     category: 'Cyanosis',
@@ -89,7 +91,6 @@ const heartEvaluation = [
     ],
   },
 ]
-
 const heartTreatmentOptions = [
   {
     category: 'Medications',
@@ -146,6 +147,20 @@ const surgeryData = [
     description: 'Exposure to toxins during pregnancy.',
   },
 ]
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+       Congenital heart disease is a lifelong condition, but advances in
+            medical care have significantly improved survival and quality of
+            life for those affected. While CHD cannot be entirely prevented,
+            expecting mothers can reduce risks by avoiding harmful substances,
+            managing chronic conditions, and following medical advice during
+            pregnancy. Regular check-ups with a cardiologist are essential to
+            monitor the condition and prevent complications. With appropriate
+            care, many people with CHD live fulfilling lives.`,
+  },
+]
 
 function page() {
   return (
@@ -153,10 +168,10 @@ function page() {
       <div className="relative">
         <Banner image={bannerImage} />
       </div>
-      <main className="container mx-auto py-8 px-6">
-        <section className="text-center">
-          <h1 className="text-3xl font-bold text-pink-600 mb-4">
-            Congenital Heart Disease (CHD)
+      <main className="lg:container mx-auto py-8 px-6">
+        <section className="space-y-4">
+          <h1 className="text-3xl font-bold text-pink-600 mb-4 text-center">
+            {title}
           </h1>
           <p className="text-gray-700 mb-6">
             Congenital Heart Disease (CHD) refers to structural abnormalities in
@@ -174,67 +189,20 @@ function page() {
             levels remain normal, but the heart&apos;s function is impaired).
           </p>
         </section>
-        <div className="space-y-4 py-12">
+        <div className="space-y-4 py-4">
           <DataSurgery data={surgeryData} />
-          <SingleLink head="Congenital Heart Disease (CHD)" />
+          <KnowMore title={title} />
         </div>
-        {/* <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Causes</h2>
-          <p className="text-gray-700 mb-6">
-            CHD occurs due to improper development of the fetal heart during
-            pregnancy. While the exact causes are often unknown, several factors
-            can increase the risk:
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            <div className="bg-pink-100 p-4 rounded-lg">
-              <h3 className="text-pink-600 font-bold mb-2">Genetic factors:</h3>
-              <p className="text-gray-700">
-                Inherited mutations or chromosomal abnormalities, such as Down
-                Syndrome.
-              </p>
-            </div>
-            <div className="bg-pink-100 p-4 rounded-lg">
-              <h3 className="text-pink-600 font-bold mb-2">Maternal health:</h3>
-              <p className="text-gray-700">
-                Conditions like diabetes, viral infections (e.g., rubella), or
-                phenylketonuria.
-              </p>
-            </div>
-            <div className="bg-pink-100 p-4 rounded-lg">
-              <h3 className="text-pink-600 font-bold mb-2">Medications:</h3>
-              <p className="text-gray-700">
-                Exposure to certain drugs for high blood pressure, cholesterol,
-                or acne during pregnancy.
-              </p>
-            </div>
-            <div className="bg-pink-100 p-4 rounded-lg">
-              <h3 className="text-pink-600 font-bold mb-2">
-                Lifestyle factors:
-              </h3>
-              <p className="text-gray-700">
-                Smoking, alcohol consumption, or exposure to secondhand smoke.
-              </p>
-            </div>
-            <div className="bg-pink-100 p-4 rounded-lg">
-              <h3 className="text-pink-600 font-bold mb-2">
-                Environmental influences:
-              </h3>
-              <p className="text-gray-700">
-                Exposure to toxins during pregnancy.
-              </p>
-            </div>
-          </div>
-          <SingleLink head="Congenital Heart Disease (CHD)" />
-        </section> */}
-        <div>
+
+        <div className="space-y-4">
           <DataBoxes
             title="Symptoms"
             data={symptomsData}
             text="Symptoms of CHD vary depending on the type and severity of the condition. Some defects present symptoms at birth, while others may become evident later in childhood or adulthood. Common symptoms include:"
             header=""
-            myclass="grid grid-cols-2"
+            myclass="grid lg:grid-cols-2"
           />
-          <SingleLink head="Congenital Heart Disease (CHD)" />
+          <KnowMore title={title} />
         </div>
         <div className="py-8">
           <h2 className="text-2xl font-bold mb-4 text-center">Diagnosis</h2>
@@ -243,7 +211,7 @@ function page() {
             pregnancy, infancy, or later in life:
           </p>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <div>
               <DataLists data={heartEvaluationTests} />
             </div>
@@ -258,24 +226,14 @@ function page() {
             data={heartTreatmentOptions}
             text="Treatment depends on the type and severity of CHD. Options include:"
             header=""
-            myclass="grid grid-cols-2"
+            myclass="grid lg:grid-cols-2"
           />
         </div>
-        <section className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Conclusion</h2>
-          <p className="text-gray-700 mb-6">
-            Congenital heart disease is a lifelong condition, but advances in
-            medical care have significantly improved survival and quality of
-            life for those affected. While CHD cannot be entirely prevented,
-            expecting mothers can reduce risks by avoiding harmful substances,
-            managing chronic conditions, and following medical advice during
-            pregnancy. Regular check-ups with a cardiologist are essential to
-            monitor the condition and prevent complications. With appropriate
-            care, many people with CHD live fulfilling lives.
-          </p>
-        </section>
-        <FooterLinks head="Congenital Heart Disease (CHD)" />
-        <BookButton />
+        <div className="container mx-auto py-8">
+          <Conclusion data={footerData} />
+          <FooterLinks head={title} />
+          <BookButton />
+        </div>
       </main>
     </div>
   )

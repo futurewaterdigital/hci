@@ -4,11 +4,13 @@ const bannerImage = '/cardio/DeepVeinThrombosis.png'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import SingleLink from '@/components/cardiacComponents/SinlgeLink'
 import DataSurgery from '@/components/cardiacComponents/Button'
-
 import TreatmentBox from '@/components/cardiacComponents/TreatmentBox'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
+import KnowMore from '@/components/cardiacComponents/KnowMore'
+
+const title = 'Deep Vein Thrombosis (DVT)'
 
 const conditionsData = [
   {
@@ -64,7 +66,6 @@ const conditionsData = [
     bgColor: 'bg-hciLightBlue text-hciPrimary',
   },
 ]
-
 const symptomsDVT = [
   {
     category: '',
@@ -157,7 +158,6 @@ const surgeryData = [
     description: `<strong>Take medications as prescribed</strong> to prevent clotting.`,
   },
 ]
-
 const treatmentData = [
   {
     heading: 'Anticoagulants (blood thinners):',
@@ -248,26 +248,24 @@ function page() {
       <div className="relative">
         <Banner image={bannerImage} />
       </div>
-      <div className="container mx-auto p-6">
-        <section className="relative py-8">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-pink-500">
-              Deep Vein Thrombosis (DVT)
-            </h1>
-          </div>
-        </section>
+      <div className="lg:container mx-auto p-6">
+        <div className="space-y-4">
+          <h1 className="text-3xl font-bold text-center text-hciSecondary">
+            {title}
+          </h1>
+          <p className="text-start">
+            Deep Vein Thrombosis (DVT) is a medical condition where a blood clot
+            (thrombus) forms in a vein located deep inside the body, typically
+            in the legs, thighs, or pelvis. However, it can also occur in other
+            areas such as the arms, brain, or abdominal organs. When blood flow
+            is sluggish or there is damage, clots may form obstructing blood
+            circulation. While DVT cases may not always be life-threatening, it
+            can result in severe issues if the clot travels to the lungs,
+            causing pulmonary embolism (PE), a potentially fatal condition.
+          </p>
+        </div>
       </div>
-      <section className="container mx-auto px-6">
-        <p className="mt-4 text-gray-700">
-          Deep Vein Thrombosis (DVT) is a medical condition where a blood clot
-          (thrombus) forms in a vein located deep inside the body, typically in
-          the legs, thighs, or pelvis. However, it can also occur in other areas
-          such as the arms, brain, or abdominal organs. When blood flow is
-          sluggish or there is damage, clots may form obstructing blood
-          circulation. While DVT cases may not always be life-threatening, it
-          can result in severe issues if the clot travels to the lungs, causing
-          pulmonary embolism (PE), a potentially fatal condition.
-        </p>
+      <section className="lg:container mx-auto px-6">
         <p>
           <strong>Post-thrombotic syndrome</strong> may develop in some
           individuals, causing chronic pain and swelling and leading to skin
@@ -284,20 +282,20 @@ function page() {
           </ul>
         </div>
 
-        <div>
+        <div className="space-y-4">
           <DataBoxes
             title="Causes"
             data={conditionsData}
             text="Several factors increase the risk of developing DVT, including:"
             header=""
-            myclass="grid grid-cols-2"
+            myclass="grid lg:grid-cols-2"
           />
+          <KnowMore title={title} />
         </div>
-        <SingleLink head="Deep Vein Thrombosis (DVT)" />
       </section>
 
       <section className="container mx-auto py-8">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4">
           <DataBoxes
             title="Symptoms"
             data={symptomsDVT}
@@ -315,7 +313,7 @@ function page() {
         </div>
       </section>
       <section className="container mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-4">Prevention</h2>
+        <h2 className="text-2xl font-bold text-center space-y-4">Prevention</h2>
         <p className="text-center">To reduce the risk of DVT:</p>
         <DataSurgery data={surgeryData} />
       </section>
@@ -333,7 +331,7 @@ function page() {
       </section>
       <section className="container mx-auto py-8">
         <Conclusion data={footerData} />
-        <FooterLinks head="Deep Vein Thrombosis (DVT)" />
+        <FooterLinks head={title} />
         <BookButton />
       </section>
     </div>

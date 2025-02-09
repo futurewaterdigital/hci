@@ -8,6 +8,7 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 import SimpleLists from '@/components/cardiacComponents/SimpleLists'
 import DataLists from '@/components/cardiacComponents/Bullets'
 
+const title = 'Coronary Artery Bypass Surgery'
 const surgeryInclude = [
   {
     title: 'Coronary artery bypass grafting',
@@ -26,7 +27,6 @@ const surgeryInclude = [
     description: '',
   },
 ]
-
 const vascularConditions = [
   {
     category: '',
@@ -59,7 +59,6 @@ const vascularConditions = [
     bgColor: 'bg-hciYellow',
   },
 ]
-
 const dataLists = [
   {
     title: 'Bleeding or infection at the surgical site',
@@ -82,7 +81,6 @@ const dataLists = [
     description: '',
   },
 ]
-
 const dataList = [
   {
     title: 'Follow instructions on dietary changes and medication adjustments.',
@@ -98,7 +96,6 @@ const dataList = [
     description: '',
   },
 ]
-
 const bypassSurgery = [
   {
     heading: '',
@@ -153,9 +150,9 @@ function page() {
         <Banner image={bannerImage} />
       </div>
       {/* <!-- Content --> */}
-      <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold text-pink-500 text-center mb-4">
-          Coronary Artery Bypass Surgery
+      <div className="lg:container mx-auto p-6">
+        <h1 className="text-3xl font-bold text-hciSecondary text-center mb-4">
+          {title}
         </h1>
         <p className="text-center mb-8">
           Coronary artery bypass surgery, often called
@@ -186,11 +183,11 @@ function page() {
             title="Why is it Performed"
             text="This surgery is recommended for restoring blood flow when one or more coronary arteries are severely blocked or narrowed.<p class='py-4'><strong>Your healthcare provider may suggest coronary artery bypass surgery if:</strong></p>"
             data={vascularConditions}
-            myclass="grid grid-cols-2"
+            myclass="grid lg:grid-cols-2"
           />
         </div>
         <div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <SimpleLists
               data={dataLists}
               heading="Risks of Coronary Artery Bypass Surgery"
@@ -213,7 +210,7 @@ function page() {
           <h2 className="text-2xl font-bold mb-4 text-center">
             What to Expect During the Procedure
           </h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <div>
               <p>
                 Coronary artery bypass surgery typically lasts 3 to 6 hours and
@@ -228,7 +225,7 @@ function page() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2">
+        <div className="grid lg:grid-cols-2">
           <section className="mb-8">
             <h2 className="text-2xl font-bold mb-4">After the Surgery</h2>
             <p className="mb-4">
@@ -310,7 +307,7 @@ function page() {
             </p>
           </section>
         </div>
-        <FooterLinks head="Coronary Artery Bypass Surgery" />
+        <FooterLinks head={title} />
         <BookButton />
       </div>
     </div>

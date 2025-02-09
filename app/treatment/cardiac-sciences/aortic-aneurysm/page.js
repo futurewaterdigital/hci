@@ -6,7 +6,10 @@ import DataSurgery from '@/components/cardiacComponents/Button'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
+import KnowMore from '@/components/cardiacComponents/KnowMore'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
 
+const title = 'Aortic Aneurysm'
 const vascularConditions = [
   {
     category: 'Atherosclerosis',
@@ -85,7 +88,6 @@ const symptomsData = [
     ],
   },
 ]
-
 const symptomsRData = [
   {
     heading: 'Symptoms of a Ruptured Aortic Aneurysm (Medical Emergency)',
@@ -109,7 +111,6 @@ const symptomsRData = [
     ],
   },
 ]
-
 const diagnosticTests = [
   {
     category: 'Ultrasound',
@@ -174,7 +175,6 @@ const surgicalTreatment = [
     bgColor: 'bg-hciSecondary text-white',
   },
 ]
-
 const complications = [
   {
     heading: 'Potential Complications',
@@ -231,14 +231,28 @@ const prevention = [
     ],
   },
 ]
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+      Aortic aneurysms are serious conditions that may develop silently
+            but pose life-threatening risks if they rupture. Early detection
+            through regular screening and monitoring is essential for
+            individuals with risk factors. With medical management, lifestyle
+            changes, and timely surgical interventions, patients can effectively
+            manage an aneurysm and reduce the risk of complications. Seeking
+            immediate care for any signs of rupture is critical for survival and
+            improved outcomes.`,
+  },
+]
 
 export default function page() {
   return (
     <div>
       <Banner image={bannerImage} />
-      <main className="container mx-auto py-8 px-6">
+      <main className="lg:container mx-auto py-8 px-6">
         <h1 className="text-3xl font-bold text-center text-pink-600 mt-8">
-          Aortic Aneurysm
+          {title}
         </h1>
         <div className="py-8">
           <p className="mt-4 text-start">
@@ -266,7 +280,7 @@ export default function page() {
           title="Causes"
           text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
           data={vascularConditions}
-          myclass="grid grid-cols-2"
+          myclass="grid lg:grid-cols-2"
         />
         <p className="mt-4 text-start text-hciPrimary underline">
           <a href="#">
@@ -300,19 +314,14 @@ export default function page() {
             text="Since many aneurysms are asymptomatic, they are often discovered during routine check-ups or imaging tests conducted for other conditions."
             header="Common diagnostic tests include:"
             data={diagnosticTests}
-            myclass="grid grid-cols-2"
+            myclass="grid lg:grid-cols-2"
           />
           <p className="">
             Regular screening is recommended for individuals with high-risk
             factors, such as smokers or those with a family history of
             aneurysms.
           </p>
-          <p className="mt-4 text-start text-hciPrimary underline">
-            <a href="#">
-              To Get The Best Diagnosis Of Aortic Aneurysms And Related Issues,
-              Click Here.
-            </a>
-          </p>
+          <KnowMore title={title} />
         </div>
 
         <div className="py-2">
@@ -325,7 +334,7 @@ export default function page() {
             The treatment approach depends on the aneurysm&apos;s size,
             location, and risk of rupture.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <DataBoxes
               title=""
               text=""
@@ -342,7 +351,7 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4">
           <div>
             <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
               Recovery and Complications after Surgery
@@ -367,24 +376,11 @@ export default function page() {
           </div>
         </div>
 
-        <div className="py-0">
-          <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
-            Conclusion
-          </h2>
-          <p className="mt-4 text-start">
-            Aortic aneurysms are serious conditions that may develop silently
-            but pose life-threatening risks if they rupture. Early detection
-            through regular screening and monitoring is essential for
-            individuals with risk factors. With medical management, lifestyle
-            changes, and timely surgical interventions, patients can effectively
-            manage an aneurysm and reduce the risk of complications. Seeking
-            immediate care for any signs of rupture is critical for survival and
-            improved outcomes.
-          </p>
+        <div className="py-0 space-y-4">
+          <Conclusion data={footerData} />
+          <FooterLinks head="Aortic Aneurysm" />
+          <BookButton />
         </div>
-
-        <FooterLinks head="Aortic Aneurysm" />
-        <BookButton />
       </main>
     </div>
   )

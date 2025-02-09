@@ -7,6 +7,7 @@ import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 
+const title = 'Heart and Lung Transplants'
 const surgeryData = [
   {
     title: 'Heart transplant',
@@ -24,7 +25,6 @@ const surgeryData = [
       'For some severe cases, both organs are transplanted together to address combined cardiac and respiratory failure.',
   },
 ]
-
 const heartTransplantData = [
   {
     category: '',
@@ -91,7 +91,6 @@ const heartLungTransplantData = [
     bgColor: 'bg-hciLightBlue',
   },
 ]
-
 const transplantSymptoms = [
   {
     id: 1,
@@ -169,7 +168,6 @@ const SurgeryEvaluation = [
     ],
   },
 ]
-
 const risksComplications = [
   {
     id: 1,
@@ -198,7 +196,6 @@ const risksComplications = [
     bgColor: 'bg-hciSecondary text-white',
   },
 ]
-
 const recoveryOutlook = [
   {
     heading: '',
@@ -258,119 +255,114 @@ function page() {
       <div className="relative">
         <Banner image={bannerImage} />
       </div>
-      <div className="container mx-auto p-6">
-        <section className="relative py-8">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-pink-500">
-              Heart and Lung Transplants
-            </h1>
-          </div>
-        </section>
-      </div>
-      <main>
-        <section className="container mx-auto px-6">
-          <p className="mb-8">
+      <div className="lg:container mx-auto p-6">
+        <div className="space-y-4">
+          <h1 className="text-3xl font-bold text-center text-hciSecondary">
+            {title}
+          </h1>
+          <p className="text-start">
             Heart and lung transplants are complex surgical procedures that
             replace diseased or failing organs with healthy ones from a donor.
             These life-saving surgeries are often the last resort for
             individuals with severe heart or lung diseases that do not respond
             to other treatments.
           </p>
+        </div>
+      </div>
 
-          <div>
-            <h3 className="text-2xl font-bold text-center mb-6">
-              What are Heart and Lung Transplants?
-            </h3>
-            <DataSurgery data={surgeryData} />
-          </div>
-          <div className="space-y-4 py-12">
-            <h3 className="text-2xl font-bold text-center mb-6">
-              When are these Procedures Needed?
-            </h3>
+      <div>
+        <h3 className="text-2xl font-bold text-center mb-6">
+          What are Heart and Lung Transplants?
+        </h3>
+        <DataSurgery data={surgeryData} />
+      </div>
+      <div className="space-y-4 container mx-auto py-8">
+        <h3 className="text-2xl font-bold text-center mb-6">
+          When are these Procedures Needed?
+        </h3>
+        <p>
+          Transplants are considered for patients whose conditions cannot be
+          managed with medications or other interventions. Common reasons
+          include:
+        </p>
+        <div className="grid lg:grid-cols-3 gap-4">
+          <DataBoxes
+            title="Heart Transplant"
+            text=""
+            data={heartTransplantData}
+            myclass="grid grid-cols-1"
+          />
+          <DataBoxes
+            title="Lung Transplant"
+            text=""
+            data={lungTransplantData}
+            myclass="grid grid-cols-1"
+          />
+          <DataBoxes
+            title="Heart-Lung Transplant"
+            text=""
+            data={heartLungTransplantData}
+            myclass="grid grid-cols-1"
+          />
+        </div>
+      </div>
+      <div className="container mx-auto">
+        <h3 className="text-2xl font-bold text-center">
+          Symptoms Indicating the Need for a Transplant
+        </h3>
+        <div>
+          <DataBoxes
+            title=""
+            text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
+            data={transplantSymptoms}
+            myclass="grid lg:grid-cols-2"
+          />
+        </div>
+      </div>
+      <div className="container mx-auto py-8">
+        <h3 className="text-2xl font-bold text-center mb-6">
+          The Transplant Process
+        </h3>
+        <div className="grid lg:grid-cols-2 gap-4">
+          <DataLists data={transplantEvaluation} />
+          <DataLists data={SurgeryEvaluation} />
+        </div>
+      </div>
+
+      <div className="py-8 container mx-auto">
+        <h3 className="text-2xl font-bold text-center">
+          Risks and Complications
+        </h3>
+        <div>
+          <DataBoxes
+            title=""
+            text="Transplant procedures are complex and come with potential risks, including:"
+            data={risksComplications}
+            myclass="grid lg:grid-cols-2"
+          />
+        </div>
+      </div>
+
+      <div className="container mx-auto">
+        <h3 className="text-2xl font-bold text-center mb-6">
+          Recovery and Long-Term Outlook
+        </h3>
+        <div className="grid lg:grid-cols-2 gap-4">
+          <DataLists data={recoveryOutlook} />
+          <div className="space-y-8">
+            <DataLists data={longTermOutlooks} />
             <p>
-              Transplants are considered for patients whose conditions cannot be
-              managed with medications or other interventions. Common reasons
-              include:
+              Heart and lung transplants offer a second chance at life for
+              patients with critical heart or lung diseases, making them among
+              the most remarkable advancements in modern medicine.
             </p>
-            <div className="grid grid-cols-3 gap-4">
-              <DataBoxes
-                title="Heart Transplant"
-                text=""
-                data={heartTransplantData}
-                myclass="grid grid-cols-1"
-              />
-              <DataBoxes
-                title="Lung Transplant"
-                text=""
-                data={lungTransplantData}
-                myclass="grid grid-cols-1"
-              />
-              <DataBoxes
-                title="Heart-Lung Transplant"
-                text=""
-                data={heartLungTransplantData}
-                myclass="grid grid-cols-1"
-              />
-            </div>
           </div>
-          <div>
-            <h3 className="text-2xl font-bold text-center">
-              Symptoms Indicating the Need for a Transplant
-            </h3>
-            <div>
-              <DataBoxes
-                title=""
-                text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
-                data={transplantSymptoms}
-                myclass="grid grid-cols-2"
-              />
-            </div>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-center mb-6">
-              The Transplant Process
-            </h3>
-            <div className="grid grid-cols-2 gap-4">
-              <DataLists data={transplantEvaluation} />
-              <DataLists data={SurgeryEvaluation} />
-            </div>
-          </div>
-
-          <div className="py-8">
-            <h3 className="text-2xl font-bold text-center">
-              Risks and Complications
-            </h3>
-            <div>
-              <DataBoxes
-                title=""
-                text="Transplant procedures are complex and come with potential risks, including:"
-                data={risksComplications}
-                myclass="grid grid-cols-2"
-              />
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-center mb-6">
-              Recovery and Long-Term Outlook
-            </h3>
-            <div className="grid grid-cols-2 gap-4">
-              <DataLists data={recoveryOutlook} />
-              <div className="space-y-8">
-                <DataLists data={longTermOutlooks} />
-                <p>
-                  Heart and lung transplants offer a second chance at life for
-                  patients with critical heart or lung diseases, making them
-                  among the most remarkable advancements in modern medicine.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <FooterLinks head="Aortic Aneurysm" />
-          <BookButton />
-        </section>
-      </main>
+        </div>
+      </div>
+      <div className="container mx-auto">
+        <FooterLinks head={title} />
+        <BookButton />
+      </div>
     </div>
   )
 }

@@ -1,11 +1,13 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-const bannerImage = '/cardio/aortic.png'
+const bannerImage = '/cardio/HearFailure.png'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
+import KnowMore from '@/components/cardiacComponents/KnowMore'
 
+const title = 'Heart Valve Disease'
 const valveMalfunction = [
   {
     category: 'Stenosis',
@@ -32,7 +34,6 @@ const valveMalfunction = [
     bgColor: 'bg-hciSecondary text-white',
   },
 ]
-
 const commonCauses = [
   {
     category: 'Congenital defects',
@@ -60,7 +61,6 @@ const commonCauses = [
     bgColor: 'bg-hciSecondary text-white',
   },
 ]
-
 const symptomsData = [
   {
     heading: `Symptoms`,
@@ -86,7 +86,6 @@ const symptomsData = [
     ],
   },
 ]
-
 const diagnosticTests = [
   {
     category: 'Ultrasound',
@@ -213,12 +212,12 @@ export default function page() {
   return (
     <div>
       <Banner image={bannerImage} />
-      <main className="container mx-auto py-8 px-6">
-        <h1 className="text-3xl font-bold text-center text-pink-600 mt-8">
-          Heart Valve Disease
-        </h1>
-        <div className="py-8">
-          <p className="mt-4 text-start">
+      <main className="lg:container mx-auto py-8 px-6">
+        <div className="space-y-4">
+          <h1 className="text-3xl font-bold text-center text-hciSecondary">
+            {title}
+          </h1>
+          <p className="text-start">
             Heart Valve Disease occurs when one or more valves in the heart fail
             to function properly, disrupting the flow of blood through the heart
             and to the rest of the body. The heart contains four valves—aortic,
@@ -231,8 +230,8 @@ export default function page() {
             replacement.
           </p>
         </div>
-        <div>
-          <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
+        <div className="space-y-4">
+          <h2 className="text-2xl font-bold text-center text-hciSecondary mt-8">
             Causes
           </h2>
           <p className="mt-4 text-start">
@@ -242,7 +241,7 @@ export default function page() {
             Each valve has leaflets (or cusps) that open and close with every
             heartbeat to maintain proper blood flow.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <DataBoxes
               title=""
               text=""
@@ -259,12 +258,7 @@ export default function page() {
             />
           </div>
         </div>
-        <p className="mt-4 text-start text-hciPrimary underline">
-          <a href="#">
-            To know more about Heart valve disease and its treatment, click
-            here.
-          </a>
-        </p>
+        <KnowMore title={title} />
 
         <div className="grid grid-cols-1 gap-4 mt-4">
           <DataLists
@@ -283,21 +277,15 @@ export default function page() {
             text="Since many aneurysms are asymptomatic, they are often discovered during routine check-ups or imaging tests conducted for other conditions."
             header="Common diagnostic tests include:"
             data={diagnosticTests}
-            myclass="grid grid-cols-2"
+            myclass="grid lg:grid-cols-2"
           />
           <p className="">
             Regular screening is recommended for individuals with high-risk
             factors, such as smokers or those with a family history of
             aneurysms.
           </p>
-          <p className="mt-4 text-start text-hciPrimary underline">
-            <a href="#">
-              To Get The Best Diagnosis Of Aortic Aneurysms And Related Issues,
-              Click Here.
-            </a>
-          </p>
+          <KnowMore title={title} />
         </div>
-
         <div className="py-2">
           <h2
             className={`text-2xl font-bold text-center text-hciSecondary py-1`}
@@ -308,7 +296,7 @@ export default function page() {
             The treatment approach depends on the aneurysm&apos;s size,
             location, and risk of rupture.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <DataBoxes
               title=""
               text=""
@@ -325,9 +313,9 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
+            <h2 className="text-2xl font-bold text-start text-hciSecondary mt-8">
               Recovery and Complications after Surgery
             </h2>
             <p>
@@ -339,7 +327,7 @@ export default function page() {
             <DataLists data={complications} />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
+            <h2 className="text-2xl font-bold text-start text-hciSecondary mt-8">
               Prevention
             </h2>
             <p>
@@ -351,7 +339,7 @@ export default function page() {
         </div>
 
         <div className="py-0">
-          <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
+          <h2 className="text-2xl font-bold text-center text-hciSecondary mt-8">
             Conclusion
           </h2>
           <p className="mt-4 text-start">
@@ -366,7 +354,7 @@ export default function page() {
           </p>
         </div>
 
-        <FooterLinks head="Aortic Aneurysm" />
+        <FooterLinks head={title} />
         <BookButton />
       </main>
     </div>

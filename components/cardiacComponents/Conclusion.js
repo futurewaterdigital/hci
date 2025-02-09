@@ -9,7 +9,7 @@ function Conclusion({ data }) {
             {items.header}
           </h2>
           <p
-            className="text-gray-700 mb-4"
+            className="text-gray-700 mb-4 font-light"
             dangerouslySetInnerHTML={{ __html: items.paragraph }}
           />
         </div>
