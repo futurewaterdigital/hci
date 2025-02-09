@@ -3,8 +3,6 @@ import Banner from '@/components/Common/Banner'
 const bannerImage = '/cardio/main-banner.png'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 
 function page() {

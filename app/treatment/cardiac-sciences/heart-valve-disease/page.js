@@ -277,7 +277,10 @@ export default function page() {
           </div>
           <div className="">
             {adviceData.map((items, index) => (
-              <div className="border border-[#D84498] rounded-lg shadow-lg flex flex-col p-4">
+              <div
+                className="border border-[#D84498] rounded-lg shadow-lg flex flex-col p-4"
+                key={index}
+              >
                 <h2 className="font-semibold">{items.title}</h2>
                 <p className="font-light">{items.paragraph}</p>
               </div>

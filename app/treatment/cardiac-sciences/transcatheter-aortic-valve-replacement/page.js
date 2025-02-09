@@ -5,7 +5,6 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
 
 const title = 'Transcatheter Aortic Valve Replacement (TAVR)'
 const WhyDone = [

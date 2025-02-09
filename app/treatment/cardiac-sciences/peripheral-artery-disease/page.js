@@ -50,30 +50,6 @@ const padConditionsList = [
   },
 ]
 
-const procedureDetails = [
-  {
-    heading: `Pacemaker Implantation Procedures`,
-    aneurysmSymptoms: [
-      {
-        title: 'Catheter-based approach (for leadless pacemakers)',
-        description: 'Inserted via a catheter through a vein.',
-        bgColor: 'bg-purple-100 p-4 rounded-md',
-      },
-      {
-        title: 'Transvenous approach',
-        description:
-          'Leads are threaded through a vein to the heart, with the device placed under the chest skin.',
-        bgColor: 'bg-purple-100 p-4 rounded-md',
-      },
-      {
-        title: 'Surgical approach',
-        description:
-          'Leads are attached directly to the heart during open surgery, with the device implanted in the abdomen or chest.',
-        bgColor: 'bg-purple-100 p-4 rounded-md',
-      },
-    ],
-  },
-]
 const padSymptoms = [
   {
     heading: 'Symptoms',
@@ -145,90 +121,6 @@ const padDiagnosis = [
     ],
   },
 ]
-
-const adviceData = [
-  {
-    title: `Pacemakers vs. Implantable Cardioverter Defibrillators (ICDs)`,
-    paragraph: `While pacemakers regulate heart rhythms, ICDs are designed to detect and correct life-threatening arrhythmias by delivering a shock to reset the heart's rhythm. Some ICDs also function as pacemakers.`,
-  },
-]
-const riskDetails = [
-  {
-    heading: `Risks and Complications`,
-    aneurysmSymptoms: [
-      {
-        title: 'Allergic reactions',
-        description: 'Allergic reactions to materials or medications.',
-        bgColor: 'bg-red-100 p-4 rounded-md',
-      },
-      {
-        title: 'Lead displacement',
-        description: 'Lead displacement or malfunction.',
-        bgColor: 'bg-red-100 p-4 rounded-md',
-      },
-      {
-        title: 'Blood clots or infections',
-        description: 'Blood clots or infections.',
-        bgColor: 'bg-red-100 p-4 rounded-md',
-      },
-      {
-        title: 'New arrhythmias',
-        description: 'Rarely, new arrhythmias.',
-        bgColor: 'bg-red-100 p-4 rounded-md',
-      },
-    ],
-  },
-]
-const benfitsDetails = [
-  {
-    heading: `Benefits of Pacemakers`,
-    aneurysmSymptoms: [
-      {
-        title: 'Improved heart rhythm',
-        description: 'Improved heart rhythm and functionality.',
-        bgColor: 'bg-green-100 p-4 rounded-md',
-      },
-      {
-        title: 'Symptom relief',
-        description:
-          'Alleviation of symptoms like chest pain, fainting, and fatigue.',
-        bgColor: 'bg-green-100 p-4 rounded-md',
-      },
-      {
-        title: 'Reduced heart-related risks',
-        description:
-          'Reduced risk of heart-related complications and sudden cardiac arrest.',
-        bgColor: 'bg-green-100 p-4 rounded-md',
-      },
-    ],
-  },
-]
-const recoveryDetails = [
-  {
-    heading: `Recovery and Maintenance`,
-    aneurysmSymptoms: [
-      {
-        title: 'Battery life',
-        description:
-          'Pacemakers typically last 10–15 years. Replacement involves a less-invasive procedure.',
-        bgColor: 'bg-gray-100 p-4 rounded-md',
-      },
-      {
-        title: 'Life expectancy',
-        description:
-          'Many patients with pacemakers enjoy normal or near-normal life spans, depending on their overall health.',
-        bgColor: 'bg-gray-100 p-4 rounded-md',
-      },
-      {
-        title: 'Follow-up care',
-        description:
-          'Regular check-ups are essential to monitor device function and battery levels.',
-        bgColor: 'bg-gray-100 p-4 rounded-md',
-      },
-    ],
-  },
-]
-
 const lifestyleChanges = [
   {
     heading: 'Lifestyle Changes',

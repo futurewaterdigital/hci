@@ -3,7 +3,6 @@ import React, { useEffect, useState, useRef } from 'react'
 import dynamic from 'next/dynamic' // Lazy load Footer
 import Header from '../../../components/Header/page'
 import Banner from '../../../components/Treatment/Banner/page'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import CardioMenu from '../../../components/cardiacComponents/Menu'
 import BookNow from '@/components/cardiacComponents/BookButton'
