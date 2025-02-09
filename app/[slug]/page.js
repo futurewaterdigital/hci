@@ -14,7 +14,6 @@ export default function Page({ params }) {
 
   useEffect(() => {
     const selectedCategory = params.slug
-
     // Check if data is already cached to prevent redundant API calls
     if (cache.current.has(selectedCategory)) {
       setNetworks(cache.current.get(selectedCategory))
