@@ -54,7 +54,7 @@ const services = [
   {
     title: 'Gastroenterology and complicated surgeries',
     description: 'Gastroenterology and complicated surgeries',
-    icon: '/images/Gastro.svg',
+    icon: '/images/GastroImage.svg',
   },
   {
     title: 'Orthopaedics and Joint Replacement',
