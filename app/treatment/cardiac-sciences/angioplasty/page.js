@@ -4,6 +4,8 @@ const bannerImage = '/cardio/main-banner.png'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import DataBoxes from '@/components/cardiacComponents/Box'
+import Title from '@/components/cardiacComponents/Title'
+import H2title from '@/components/cardiacComponents/H2'
 
 function page() {
   const title = 'Angioplasty'
@@ -87,29 +89,23 @@ function page() {
   ]
 
   return (
-    <div>
-      <div className="relative">
-        <Banner image={bannerImage} />
-      </div>
+    <>
+      <Banner image={bannerImage} />
       {/* <!-- Content --> */}
-      <div className="lg:container mx-auto p-6">
+      <div className="lg:container mx-auto mt-6 space-y-12">
+        <Title title={title} />
+        <p className="text-start font-light">
+          Angioplasty, also known as{' '}
+          <strong>percutaneous coronary intervention (PCI)</strong>, is a
+          minimally invasive procedure designed to open blocked or narrowed
+          coronary arteries caused by coronary artery disease (CAD). By
+          restoring blood flow to the heart, it alleviates symptoms such as
+          chest pain and reduces the risk of a heart attack. Angioplasty can be
+          performed in emergency cases like heart attacks or scheduled as
+          elective surgery for diagnosed heart conditions.
+        </p>
+        <H2title text="How is Angioplasty Performed?" />
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold text-pink-500 text-center">
-            {title}
-          </h1>
-          <p className="text-start font-light">
-            Angioplasty, also known as{' '}
-            <strong>percutaneous coronary intervention (PCI)</strong>, is a
-            minimally invasive procedure designed to open blocked or narrowed
-            coronary arteries caused by coronary artery disease (CAD). By
-            restoring blood flow to the heart, it alleviates symptoms such as
-            chest pain and reduces the risk of a heart attack. Angioplasty can
-            be performed in emergency cases like heart attacks or scheduled as
-            elective surgery for diagnosed heart conditions.
-          </p>
-          <h2 className="text-xl font-bold text-center">
-            How is Angioplasty Performed?
-          </h2>
           <p className="font-light">
             During angioplasty, a thin tube (catheter) with a small balloon at
             its tip is inserted into a blood vessel, usually in the groin or
@@ -126,24 +122,26 @@ function page() {
             formation or may be bare metal stents without medication.
           </p>
         </div>
-        <div className="py-4">
+        <div className="">
           <DataBoxes
             title="Additional Techniques"
-            titleCss="font-semibold text-xl"
+            titleCss="font-semibold text-xl text-center"
             data={conditionsData}
             text=""
             header=""
             myclass="grid lg:grid-cols-2 font-light"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {angioplastyData.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-300 p-4 rounded"
+              className="bg-white border border-hciSecondary p-4 rounded shadow-lg"
             >
               <h3 className="font-bold text-hciPrimary mb-2">{item.title}</h3>
-              <p className="text-hciSecondary py-1">{item.description}</p>
+              <p className="text-hciSecondary py-1 font-semibold">
+                {item.description}
+              </p>
               <ul className="list-disc list-inside space-y-2">
                 {item.list.map((point, idx) => (
                   <li key={idx}>{point}</li>
@@ -153,12 +151,10 @@ function page() {
             </div>
           ))}
         </div>
-        <section className="lg:container mx-auto py-8">
-          <FooterLinks head={title} />
-          <BookButton />
-        </section>
+        <FooterLinks head={title} />
+        <BookButton />
       </div>
-    </div>
+    </>
   )
 }
 

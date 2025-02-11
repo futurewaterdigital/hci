@@ -77,8 +77,8 @@ export default function Header() {
       }`
     }
     // If not home and not scrolled, no shadow
-    return `fixed z-40 w-full bg-white transition-all duration-300 ${
-      isScrolled ? 'shadow' : ''
+    return `z-40 w-full bg-white transition-all duration-300 ${
+      isScrolled ? 'shadow fixed transition-all duration-300 ease-in-out' : ''
     }`
   }, [pathname, isScrolled])
 

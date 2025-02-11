@@ -251,7 +251,7 @@ function page() {
         </section>
 
         <section className="container mx-auto px-6">
-          <p class=" mb-8 font-light">
+          <p className="mb-8 font-light">
             The heavily subsidized treatment costs are a big reason why people
             are considering travelling abroad to avail the best medical
             facilities at only a fraction of what they have to pay in their home
@@ -259,7 +259,7 @@ function page() {
             medical care at hugely discounted rates, thanks to the low cost of
             infrastructure and the ever lower doctor-patient ratio.
           </p>
-          <p class=" mb-8 font-light">
+          <p className="mb-8 font-light">
             As per a cost comparison study by the American Medical Association,
             a knee replacement surgery will cost $40,000 in the US; $10,000 in
             Thailand and $13,000 in Singapore, but $6,500 in India. Similarly,
@@ -269,11 +269,11 @@ function page() {
             around 70-75% of the total cost including health or medical
             services, wellness travel, accommodation and food services.
           </p>
-          <p class=" mb-8 font-light">
+          <p className="mb-8 font-light">
             For easy reference, below is a chart for the cost comparison:
           </p>
 
-          <div class="overflow-x-auto">
+          <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-hciPrimary">
               <thead>
                 <tr className="bg-pink-600 text-white">
@@ -312,8 +312,8 @@ function page() {
             </table>
           </div>
 
-          <div class="max-w-6xl mx-auto text-center mt-12">
-            <p class="font-light mb-8">
+          <div className="max-w-6xl mx-auto text-center mt-12">
+            <p className="font-light mb-8">
               The cost of treatment in India is much lower, almost three times
               less expensive in comparison to a number of western countries such
               as the United States and the United Kingdom. Just opt for
@@ -326,7 +326,7 @@ function page() {
               in the world at reasonable costs so that you can fulfill your
               dream of leading a healthy life.
             </p>
-            <p class="font-light mb-8">
+            <p className="font-light mb-8">
               Irrespective of excessively lower costs, the quality of health
               care that you get here includes top-class medicines, state-of-art
               technology, internationally accredited doctors, experienced staff,
@@ -340,10 +340,10 @@ function page() {
             </p>
           </div>
 
-          <h2 class="text-3xl text-pink-600 font-bold mb-4">
+          <h2 className="text-3xl text-pink-600 font-bold mb-4">
             Hotel Expenses in India
           </h2>
-          <div class="overflow-x-auto">
+          <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200">
               <thead>
                 <tr className="bg-pink-600 text-white">

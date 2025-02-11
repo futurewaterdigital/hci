@@ -296,7 +296,7 @@ export default function page() {
           />
         </div>
 
-        <p class="mb-0">
+        <p className="mb-0">
           Pacemakers represent a transformative technology for those with heart
           rhythm disorders, enabling them to lead healthier, more active lives.
         </p>

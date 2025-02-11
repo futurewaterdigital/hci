@@ -33,11 +33,11 @@ export default function FooterLink({ head }) {
   ]
 
   return (
-    <div className="text-start py-12 space-y-4">
+    <div className="text-start space-y-4">
       {linkshead.map((link, index) => (
         <a
           key={index}
-          className="text-hciPrimary underline block mb-2 "
+          className="text-hciPrimary underline block mb-2 font-semibold"
           href={link.href}
         >
           {link.text}

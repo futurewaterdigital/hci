@@ -68,8 +68,8 @@ export default function City({ params }) {
     <>
       <Header />
 
-      {error && <p className="text-red-500">{error}</p>}
-      {noData && <p className="text-gray-500">{noData}</p>}
+      {/* {error && <p className="text-red-500">{error}</p>} */}
+      {/* {noData && <p className="text-gray-500">{noData}</p>} */}
 
       {loading ? (
         // Skeleton Loader
@@ -110,19 +110,12 @@ export default function City({ params }) {
               </div>
             </React.Fragment>
           ))}
-          <div className="w-full mx-auto text-center pt-4 space-y-8">
+          <div className="container mx-auto text-center pt-4 space-y-8">
             {pathname === '/treatment/cardiac-sciences' && <CardioMenu />}
-            {/* <Link
-              href="/"
-              className="bg-[#D84598] px-8 py-4 text-white rounded-lg"
-            >
-              Back
-            </Link> */}
-
-            <OurNetwork />
-            <Testimonials />
-            <BookNow />
           </div>
+          <OurNetwork />
+          <Testimonials />
+          <BookNow />
         </>
       )}
 

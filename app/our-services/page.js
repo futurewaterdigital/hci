@@ -2,6 +2,8 @@ import React from 'react'
 import Banner from '@/components/Common/Banner'
 const bannerImage = '/images/Neurology.png'
 import BookButton from '@/components/cardiacComponents/BookButton'
+import Title from '@/components/cardiacComponents/Title'
+import H2title from '@/components/cardiacComponents/H2'
 
 const helpData = [
   {
@@ -88,107 +90,114 @@ const services = [
   },
 ]
 
+const faqData = [
+  'Who is the most qualified doctor for my condition?',
+  'Which hospital best suits my needs?',
+  'How much will treatment cost?',
+  'What are the success rates?',
+  'What can I expect during recovery?',
+  'How do I manage travel and logistics?',
+  'Who will handle post-treatment follow-up?',
+]
+
+const servicesData = [
+  'Visa assistance and invitation letters',
+  'Airport pickup and drop-off',
+  'Accommodation bookings near your hospital',
+  'City orientation and recommended Apps for your stay',
+  'Currency exchange and money transfer guidance',
+  'Translation services (French, Bangla, Arabic)',
+  'Appointment scheduling and hospital coordination',
+]
+
 function Page() {
   return (
     <>
-      <div className="relative">
-        <Banner image={bannerImage} />
-      </div>
-      <div className="container mx-auto p-6">
-        <section className="relative">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-hciSecondary">
-              Our Services
-            </h1>
-          </div>
-        </section>
+      <Banner image={bannerImage} />
+      <div className="lg:container mx-auto mt-6 space-y-12">
+        {/* banner end here */}
 
-        <main class="px-4 py-8">
-          <div>
-            <p class="mt-4 text-center font-light">
-              Healthcare International (HCI) is your trusted partner, supporting
-              you at every stage of your medical journey. Navigating medical
-              decisions, selecting the right healthcare providers, and managing
-              logistics can be overwhelming. That&apos;s why HCI streamlines the
-              process, providing clear guidance, connecting you with world-class
-              healthcare providers, and addressing your concerns - allowing you
-              to focus on what truly matters: your health and recovery.
-            </p>
-          </div>
+        <div className="space-y-6">
+          <Title title="Our Services" />
 
-          <div class="py-8">
-            <h3 class="text-2xl font-roboto font-semibold">
-              Helping You Find The Right Answers
-            </h3>
-            <p className="py-4 font-roboto font-light">
-              Healthcare can be complex, and seeking treatment abroad adds an
-              extra layer of uncertainty. HCI is here to address your key
-              questions:
-            </p>
-            <ul class="list-disc list-inside space-y-2 font-roboto font-light">
-              <li>Who is the most qualified doctor for my condition?</li>
-              <li>Which hospital best suits my needs?</li>
-              <li>How much will treatment cost?</li>
-              <li>What are the success rates?</li>
-              <li>What can I expect during recovery?</li>
-              <li>How do I manage travel and logistics?</li>
-              <li>Who will handle post-treatment follow-up?</li>
-            </ul>
+          <p className="text-center font-light">
+            Healthcare International (HCI) is your trusted partner, supporting
+            you at every stage of your medical journey. Navigating medical
+            decisions, selecting the right healthcare providers, and managing
+            logistics can be overwhelming. That&apos;s why HCI streamlines the
+            process, providing clear guidance, connecting you with world-class
+            healthcare providers, and addressing your concerns - allowing you to
+            focus on what truly matters: your health and recovery.
+          </p>
+          <H2title
+            text="Helping You Find The Right Answers"
+            textclassName="text-xl font-roboto "
+          />
+          <p className="font-roboto font-light">
+            Healthcare can be complex, and seeking treatment abroad adds an
+            extra layer of uncertainty. HCI is here to address your key
+            questions:
+          </p>
+          <ul className="list-disc list-inside space-y-2 font-roboto font-light text-pink-500 text-xl">
+            {faqData.map((question, index) => (
+              <li key={index}>
+                <span className="text-black text-[16px]">{question}</span>
+              </li>
+            ))}
+          </ul>
+          <H2title
+            text="How We Help"
+            textclassName="text-3xl font-regular mb-4 text-center font-roboto"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {helpData.map((section, index) => (
+              <div
+                key={index}
+                className="p-4 bg-hciYellow rounded-lg hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
+              >
+                <h4 className="text-xl font-regular mb-2 text-center font-roboto">
+                  {section.title}
+                </h4>
+                <p className="text-center font-light">{section.content}</p>
+              </div>
+            ))}
           </div>
-          <section class="mb-8">
-            <h3 class="text-2xl font-bold mb-4 text-center font-roboto">
-              How We Help
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {helpData.map((section, index) => (
-                <div key={index} className="p-4 bg-hciYellow rounded-lg">
-                  <h4 className="text-xl font-bold mb-2 text-center font-roboto">
-                    {section.title}
-                  </h4>
-                  <p className="text-center font-light">{section.content}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-          <section class="">
-            <h3 class="text-2xl font-bold text-hciPrimary font-roboto">
-              Handling Logistics
-            </h3>
-            <p className="py-4 font-light">
-              We manage all logistics to make your experience as smooth as
-              possible, including
-            </p>
-            <ul class="list-disc list-inside space-y-2 font-light">
-              <li>Visa assistance and invitation letters</li>
-              <li>Airport pickup and drop-off</li>
-              <li>Accommodation bookings near your hospital</li>
-              <li>City orientation and recommended Apps for your stay</li>
-              <li>Currency exchange and money transfer guidance</li>
-              <li>Translation services (French, Bangla, Arabic)</li>
-              <li>Appointment scheduling and hospital coordination</li>
-            </ul>
-          </section>
-        </main>
+          <h3 className="text-3xl font-regular text-hciPrimary font-roboto">
+            Handling Logistics
+          </h3>
+
+          <p className="font-light">
+            We manage all logistics to make your experience as smooth as
+            possible, including
+          </p>
+          <ul className="list-disc list-inside space-y-2 font-roboto font-light text-pink-500 text-xl">
+            {servicesData.map((question, index) => (
+              <li key={index}>
+                <span className="text-black text-[16px]">{question}</span>
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="text-3xl font-regular font-roboto text-center text-hciPrimary">
+            What treatments do we specialize in?
+          </h3>
+          <p className="text-center font-light">
+            With experience in over 50 specialties, HCI has supported patients
+            from 125+ countries. Our specialties include:
+          </p>
+        </div>
       </div>
-      <section class="text-center">
-        <h3 class="text-2xl font-bold mb-4 font-roboto">
-          What treatments do we specialize in?
-        </h3>
-        <p class=" mb-4 font-light">
-          With experience in over 50 specialties, HCI has supported patients
-          from 125+ countries. Our specialties include:
-        </p>
-      </section>
-      <div className="bg-hciPrimary ">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 container mx-auto p-6">
+      <div className="bg-hciPrimary my-6">
+        <div className="grid grid-cols-5 gap-4 p-6 w-9/12 mx-auto">
           {services.map((service, index) => (
             <div
-              class="p-4 bg-white border rounded-lg flex flex-col items-center justify-center"
+              className="p-4 bg-white border rounded-lg flex flex-col items-center justify-center hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
               key={index}
             >
               <img
                 alt={service.title}
-                class="mx-auto mb-2 h-12"
+                className="mx-auto mb-2 h-12"
                 src={service.icon}
               />
               <p className="text-center font-light">{service.title}</p>
@@ -196,23 +205,22 @@ function Page() {
           ))}
         </div>
       </div>
-      <div className="container mx-auto p-6">
-        <section class="text-center py-8">
-          <p class="mb-4 font-light">
-            Whether you&apos;re a Kenyan seeking orthopaedic care in the UAE or
-            India, a family from Nigeria seeking neurological care for a child
-            in India, or a Bangladeshi couple pursuing transplant surgery, HCI
-            is here to guide and support you every step of the way.
-          </p>
-          <p class="mb-4 font-light">
-            HCI bridges the gap between you and the world&apos;s best healthcare
-            providers, empowering you with peace of mind and confidence on your
-            journey to recovery. We strive to be the #1 choice for patients
-            worldwide seeking medical treatment abroad.
-          </p>
-          <BookButton />
-        </section>
+      <div className="container mx-auto space-y-6">
+        <p className="font-light">
+          Whether you&apos;re a Kenyan seeking orthopaedic care in the UAE or
+          India, a family from Nigeria seeking neurological care for a child in
+          India, or a Bangladeshi couple pursuing transplant surgery, HCI is
+          here to guide and support you every step of the way.
+        </p>
+        <p className="font-light">
+          HCI bridges the gap between you and the world&apos;s best healthcare
+          providers, empowering you with peace of mind and confidence on your
+          journey to recovery. We strive to be the #1 choice for patients
+          worldwide seeking medical treatment abroad.
+        </p>
+        <BookButton />
       </div>
+      {/* section end here */}
     </>
   )
 }

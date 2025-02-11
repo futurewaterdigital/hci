@@ -2,6 +2,10 @@ import React from 'react'
 import Banner from '@/components/Common/Banner'
 const bannerImage = '/hospitals/APCC.png'
 import BookButton from '@/components/cardiacComponents/BookButton'
+import Title from '@/components/cardiacComponents/Title'
+import NetworkFacilities from '@/components/cardiacComponents/NetworkFacilities'
+import HospitalPara from '@/components/cardiacComponents/HospitalPara'
+import BlueHeader from '@/components/cardiacComponents/BlueHeader'
 
 const dataFile = [
   {
@@ -38,13 +42,13 @@ const dataFile = [
       {
         title: 'Apollo Hospitals at a Glance',
         stats: {
-          hospitals: 72,
-          beds: '10,000+',
-          pharmacies: '5,000+',
-          primaryCareClinics: '378+',
-          diagnosticCenters: '1,500+',
-          telemedicineCenters: 200,
-          medicalEducationCenters: '15+',
+          Hospitals: 72,
+          Beds: '10,000+',
+          Pharmacies: '5,000+',
+          PrimaryCareClinics: '378+',
+          DiagnosticCenters: '1,500+',
+          TelemedicineCenters: 200,
+          MedicalEducationCenters: '15+',
         },
       },
       {
@@ -113,70 +117,16 @@ const dataFile = [
 function Page() {
   return (
     <>
-      <div className="relative">
-        <Banner image={bannerImage} />
+      <Banner image={bannerImage} />
+      <div className="lg:container mx-auto mt-6 space-y-12">
+        <Title title={dataFile[0].header.title} />
       </div>
-      <div className="py-8 text-center">
-        <h1 className={dataFile[0].header.className}>
-          {dataFile[0].header.title}
-        </h1>
+      <BlueHeader dataFile={dataFile} />
+      <div className="lg:container mx-auto mt-6 space-y-12">
+        <HospitalPara dataFile={dataFile} />
+        <NetworkFacilities dataFile={dataFile} />
+        <BookButton />
       </div>
-      <div className="bg-[#F1F8FF] min-h-80 flex items-center justify-center">
-        <div className="container">
-          <p className={dataFile[0].headers.className}>
-            {dataFile[0].headers.title}
-          </p>
-          <p className="font-light">{dataFile[0].headers.content}</p>
-        </div>
-      </div>
-      <main className="container mx-auto px-6 py-12">
-        {dataFile[0].sections.map((section, index) => (
-          <section key={index} className="mb-12">
-            <h2 className="text-2xl text-gray-800 font-bold mb-4 font-roboto">
-              {section.title}
-            </h2>
-            {section.content && (
-              <p className="text-gray-700 mb-4">{section.content}</p>
-            )}
-            {section.desc && (
-              <p className="text-gray-700 mb-4">{section.desc}</p>
-            )}
-            {section.stats && (
-              <ul className="list-disc list-inside text-gray-700">
-                {Object.entries(section.stats).map(([key, value]) => (
-                  <li key={key}>
-                    <strong>{key.replace(/([A-Z])/g, ' $1')}:</strong> {value}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-        ))}
-        <section>
-          <h2 className={dataFile[0].networkFacilities.className}>
-            {dataFile[0].networkFacilities.title}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dataFile[0].networkFacilities.facilities.map((facility, i) => (
-              <div key={i} className="bg-white shadow-md rounded-lg p-6">
-                <h3 className="text-hciSecondary font-bold mb-2">
-                  {facility.name}
-                </h3>
-                <p className="text-gray-700 mb-1">City: {facility.city}</p>
-                <p className="text-gray-700 mb-1">
-                  No. of Beds: {facility.beds}
-                </p>
-                <p className="text-gray-700">
-                  Speciality: {facility.speciality}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-        <div className="text-center mt-6">
-          <BookButton />
-        </div>
-      </main>
     </>
   )
 }

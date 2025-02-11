@@ -464,15 +464,17 @@ function ConsultantForm() {
                 )} */}
               </div>
             </div>
-            <div>
-              <input
-                type="text"
-                name="additionalMessage"
-                value={additionalMessage}
-                onChange={handleTextChange}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                placeholder="Additional information"
-              />
+            <div className="grid gap-6 mb-6 md:grid-cols-1">
+              <div>
+                <input
+                  type="text"
+                  name="additionalMessage"
+                  value={additionalMessage}
+                  onChange={handleTextChange}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                  placeholder="Additional information"
+                />
+              </div>
             </div>
             <div className="py-6 gap-2">
               <p>
