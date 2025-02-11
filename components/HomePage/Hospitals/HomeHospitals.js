@@ -37,6 +37,7 @@ function HomeHospitals() {
               width={400}
               height={500}
               className="rounded-lg w-full h-full"
+              alt={items.name}
             />
             {/* <h2>{items.name}</h2> */}
           </div>

@@ -68,8 +68,8 @@ export default function City({ params }) {
     <>
       <Header />
 
-      {/* {error && <p className="text-red-500">{error}</p>} */}
-      {/* {noData && <p className="text-gray-500">{noData}</p>} */}
+      {error && <p className="text-red-500">{error}</p>}
+      {noData && <p className="text-gray-500">{noData}</p>}
 
       {loading ? (
         // Skeleton Loader
