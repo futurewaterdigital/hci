@@ -7,7 +7,7 @@ function BlueHeader({ dataFile }) {
         <p className={dataFile[0].headers.className}>
           {dataFile[0].headers.title}
         </p>
-        <p className="font-light">{dataFile[0].headers.content}</p>
+        <p className="font-light text-center">{dataFile[0].headers.content}</p>
       </div>
     </div>
   )

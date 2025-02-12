@@ -114,7 +114,7 @@ function Page() {
   return (
     <>
       <Banner image={bannerImage} />
-      <div className="lg:container mx-auto mt-6 space-y-12">
+      <div className="lg:container mx-auto mt-6 space-y-12 px-4 lg:px-0">
         {/* banner end here */}
 
         <div className="space-y-6">
@@ -187,7 +187,7 @@ function Page() {
         </div>
       </div>
       <div className="bg-hciPrimary my-6">
-        <div className="grid grid-cols-5 gap-4 p-6 w-9/12 mx-auto">
+        <div className="grid lg:grid-cols-5 gap-4 p-6 lg:w-9/12 mx-auto grid-cols-2">
           {services.map((service, index) => (
             <div
               className="p-4 bg-white border rounded-lg flex flex-col items-center justify-center hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
@@ -203,7 +203,7 @@ function Page() {
           ))}
         </div>
       </div>
-      <div className="container mx-auto space-y-6">
+      <div className="lg:container mx-auto space-y-6 px-4 lg:px-0">
         <p className="font-light">
           Whether you&apos;re a Kenyan seeking orthopaedic care in the UAE or
           India, a family from Nigeria seeking neurological care for a child in

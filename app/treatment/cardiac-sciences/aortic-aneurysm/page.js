@@ -254,15 +254,15 @@ export default function page() {
         <h1 className="text-3xl font-bold text-center text-pink-600 mt-8">
           {title}
         </h1>
-        <div className="py-8">
-          <p className="mt-4 text-start">
+        <div className="py-8 space-y-6">
+          <p className="text-start">
             An aortic aneurysm occurs when a section of the aorta, the
             body&apos;s largest artery, becomes weak and bulges out, forming a
             balloon-like structure. The aorta carries oxygen-rich blood from the
             heart to the rest of the body. Depending on the location, the
             aneurysm can form in:
           </p>
-          <ul className="list-disc list-inside mt-4 text-start">
+          <ul className="list-disc list-inside text-start">
             <li>
               <strong>Abdominal aorta (Abdominal Aortic Aneurysm, AAA)</strong>
             </li>
@@ -270,45 +270,42 @@ export default function page() {
               <strong>Thoracic aorta (Thoracic Aortic Aneurysm, TAA)</strong>
             </li>
           </ul>
-          <p className="mt-4 text-start">
+          <p className="text-start">
             Aortic aneurysms can develop silently, without noticeable symptoms,
             but if they rupture, they can cause life-threatening complications,
             including internal bleeding.
           </p>
-        </div>
-        <DataBoxes
-          title="Causes"
-          text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
-          data={vascularConditions}
-          myclass="grid lg:grid-cols-2"
-        />
-        <p className="mt-4 text-start text-hciPrimary underline">
-          <a href="#">
-            To Know More About Aortic Aneurysm And Its Causes And Treatment,
-            Click Here.
-          </a>
-        </p>
-        <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
-          Risk Factors Include
-        </h2>
-        <DataSurgery data={riskFactor} />
-        <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
-          Symptoms
-        </h2>
-        <p className="mt-4 text-start">
-          Aortic aneurysms often remain asymptomatic until they enlarge or
-          rupture. Symptoms vary based on the aneurysm&apos;s location and size.
-        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-          <DataLists data={symptomsData} />
-          <DataLists data={symptomsRData} />
+          <DataBoxes
+            title="Causes"
+            text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
+            data={vascularConditions}
+            myclass="grid lg:grid-cols-2"
+          />
+          <KnowMore title={title} />
+          <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
+            Risk Factors Include
+          </h2>
+          <DataSurgery data={riskFactor} />
+          <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
+            Symptoms
+          </h2>
+          <p className="mt-4 text-start">
+            Aortic aneurysms often remain asymptomatic until they enlarge or
+            rupture. Symptoms vary based on the aneurysm&apos;s location and
+            size.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+            <DataLists data={symptomsData} />
+            <DataLists data={symptomsRData} />
+          </div>
+          <p className="mt-4 text-start">
+            If an aneurysm ruptures, it requires immediate medical attention, as
+            internal bleeding can be fatal without prompt intervention.
+          </p>
         </div>
-        <p className="mt-4 text-start">
-          If an aneurysm ruptures, it requires immediate medical attention, as
-          internal bleeding can be fatal without prompt intervention.
-        </p>
-        <div className="py-12">
+        <div className="space-y-6">
           <DataBoxes
             title="Diagnosis"
             text="Since many aneurysms are asymptomatic, they are often discovered during routine check-ups or imaging tests conducted for other conditions."
@@ -322,9 +319,7 @@ export default function page() {
             aneurysms.
           </p>
           <KnowMore title={title} />
-        </div>
 
-        <div className="py-2">
           <h2
             className={`text-2xl font-bold text-center text-hciSecondary py-1`}
           >
@@ -350,29 +345,30 @@ export default function page() {
               myclass="grid grid-cols-1"
             />
           </div>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div>
-            <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
-              Recovery and Complications after Surgery
-            </h2>
-            <p>
-              Recovery from aneurysm surgery can take several weeks to months,
-              depending on the procedure type. Patients receive close follow-up
-              to monitor for complications and ensure the aneurysm does not
-              recur or grow.
-            </p>
-            <DataLists data={complications} />
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
-              Prevention
-            </h2>
-            <p>
-              While not all aortic aneurysms can be prevented, adopting healthy
-              habits can reduce the risk of developing them:
-            </p>
-            <DataLists data={prevention} />
+
+          <div className="grid lg:grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
+                Recovery and Complications after Surgery
+              </h2>
+              <p>
+                Recovery from aneurysm surgery can take several weeks to months,
+                depending on the procedure type. Patients receive close
+                follow-up to monitor for complications and ensure the aneurysm
+                does not recur or grow.
+              </p>
+              <DataLists data={complications} />
+            </div>
+            <div className="space-y-4">
+              <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
+                Prevention
+              </h2>
+              <p>
+                While not all aortic aneurysms can be prevented, adopting
+                healthy habits can reduce the risk of developing them:
+              </p>
+              <DataLists data={prevention} />
+            </div>
           </div>
         </div>
 

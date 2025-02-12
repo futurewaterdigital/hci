@@ -19,11 +19,11 @@ function Bullets({ data, desc, footerdata, head, footerTitle }) {
               dangerouslySetInnerHTML={{ __html: head }}
             />
           )}
-          <ul className="space-y-4">
+          <ul className="space-y-4 list-disc list-outside text-hciSecondary">
             {data.aneurysmSymptoms.map((symptom, index) => (
-              <li key={index} className="flex item-center gap-2 ">
-                <GoDotFill color="#D84498" size={10} />
-                <p>
+              <li key={index} className="ml-6">
+                {/* <GoDotFill color="#D84498" size={10} /> */}
+                <p className="text-black">
                   <strong className="text-hciSecondary">{symptom.title}</strong>
                   {symptom.title && ':'} {symptom.description}
                 </p>
