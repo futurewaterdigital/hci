@@ -55,7 +55,7 @@ const dataFile = [
     ],
     networkFacilities: {
       title: 'Our Network Facilities',
-      className: 'text-center text-2xl font-bold text-gray-800 py-8',
+      className: 'text-center text-2xl font-bold text-gray-800',
       facilities: [
         {
           name: 'Aster Hospital, Whitefield',

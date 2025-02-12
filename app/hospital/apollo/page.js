@@ -11,7 +11,7 @@ const dataFile = [
   {
     header: {
       title: 'Apollo',
-      className: 'text-4xl font-bold text-pink-600 text-center py-8',
+      className: 'text-4xl font-bold text-pink-600 text-center',
     },
     headers: {
       title:
@@ -60,7 +60,7 @@ const dataFile = [
 
     networkFacilities: {
       title: 'Our Network Facilities',
-      className: 'text-center text-2xl font-bold text-gray-800 py-8',
+      className: 'text-center text-2xl font-bold text-gray-800',
       facilities: [
         {
           name: 'Indraprastha Apollo Hospital',
@@ -106,10 +106,6 @@ const dataFile = [
           speciality: 'Multi-speciality, with best Rehab centre',
         },
       ],
-      button: {
-        text: 'Book an Appointment',
-        className: 'mt-6 bg-pink-600 text-white px-6 py-3 rounded-full',
-      },
     },
   },
 ]
@@ -118,7 +114,7 @@ function Page() {
   return (
     <>
       <Banner image={bannerImage} />
-      <div className="lg:container mx-auto mt-6 space-y-12">
+      <div className="lg:container mx-auto my-6 space-y-12">
         <Title title={dataFile[0].header.title} />
       </div>
       <BlueHeader dataFile={dataFile} />
