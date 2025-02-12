@@ -19,7 +19,7 @@ export default function City({ params }) {
   const [selectedCategory] = useState(params.slug) // Default to the slug from params
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
-  // const [error, setError] = useState(null)
+  const [error, setError] = useState(null)
   const [noData, setNoData] = useState(null)
 
   const cache = useRef(new Map()) // Cache to store API responses
@@ -49,7 +49,7 @@ export default function City({ params }) {
             a.title.rendered.localeCompare(b.title.rendered)
           )
           setNetworks(sortedData)
-          console.log(object)
+          //console.log(object)
           cache.current.set(selectedCategory, sortedData) // Cache the response
           setNoData(null)
         } else {
@@ -58,13 +58,17 @@ export default function City({ params }) {
         }
         setLoading(false)
       })
+      .catch((error) => {
+        setError(error.message)
+        setLoading(false)
+      })
   }, [selectedCategory])
 
   return (
     <>
       <Header />
 
-      {/* {error && <p className="text-red-500">{error}</p>} */}
+      {error && <p className="text-red-500">{error}</p>}
       {noData && <p className="text-gray-500">{noData}</p>}
 
       {loading ? (
