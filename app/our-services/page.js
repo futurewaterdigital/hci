@@ -119,7 +119,6 @@ function Page() {
 
         <div className="space-y-6">
           <Title title="Our Services" />
-
           <p className="text-center font-light">
             Healthcare International (HCI) is your trusted partner, supporting
             you at every stage of your medical journey. Navigating medical
@@ -131,7 +130,7 @@ function Page() {
           </p>
           <H2title
             text="Helping You Find The Right Answers"
-            textclassName="text-xl font-roboto "
+            textClass="text-xl font-roboto text-start"
           />
           <p className="font-roboto font-light">
             Healthcare can be complex, and seeking treatment abroad adds an
@@ -149,7 +148,6 @@ function Page() {
             text="How We Help"
             textclassName="text-3xl font-regular mb-4 text-center font-roboto"
           />
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {helpData.map((section, index) => (
               <div
