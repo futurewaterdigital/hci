@@ -58,10 +58,6 @@ export default function City({ params }) {
         }
         setLoading(false)
       })
-      .catch((error) => {
-        // setError(error.message)
-        setLoading(false)
-      })
   }, [selectedCategory])
 
   return (
