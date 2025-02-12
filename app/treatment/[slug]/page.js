@@ -19,7 +19,7 @@ export default function City({ params }) {
   const [selectedCategory] = useState(params.slug) // Default to the slug from params
   const [network, setNetworks] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  // const [error, setError] = useState(null)
   const [noData, setNoData] = useState(null)
 
   const cache = useRef(new Map()) // Cache to store API responses
@@ -59,7 +59,7 @@ export default function City({ params }) {
         setLoading(false)
       })
       .catch((error) => {
-        setError(error.message)
+        // setError(error.message)
         setLoading(false)
       })
   }, [selectedCategory])
