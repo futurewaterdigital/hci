@@ -116,7 +116,7 @@ export default function Header() {
 
         <div
           className={`lg:relative flex lg:justify-center items-center z-10 cursor-pointer ${
-            pathname === '/' ? 'lg:h-20 ' : 'lg:h-10 lg:p-12 top-0 '
+            pathname === '/' ? 'lg:h-20' : 'lg:h-10 lg:p-12 top-0'
           }`}
         >
           <Link href="/">

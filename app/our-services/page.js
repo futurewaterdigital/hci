@@ -187,7 +187,7 @@ function Page() {
         </div>
       </div>
       <div className="bg-hciPrimary my-6">
-        <div className="grid lg:grid-cols-5 gap-4 p-6 lg:w-9/12 mx-auto grid-cols-2">
+        <div className="grid lg:grid-cols-5 gap-4 p-6 lg:w-9/12 mx-auto">
           {services.map((service, index) => (
             <div
               className="p-4 bg-white border rounded-lg flex flex-col items-center justify-center hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
