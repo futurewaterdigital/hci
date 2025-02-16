@@ -8,9 +8,14 @@ function Bullets({ data, desc, footerdata, head, footerTitle }) {
           className="border border-[#D84498] rounded-lg shadow-lg flex flex-col p-4"
           key={index}
         >
-          {data && <h2 className="text-lg font-bold mb-4">{data.heading}</h2>}
+          {data && (
+            <h2 className="text-lg font-semibold mb-4">{data.heading}</h2>
+          )}
           {desc && (
-            <p className=" mb-4" dangerouslySetInnerHTML={{ __html: desc }} />
+            <p
+              className="font-light mb-4"
+              dangerouslySetInnerHTML={{ __html: desc }}
+            />
           )}
           {head && (
             <p
@@ -20,7 +25,7 @@ function Bullets({ data, desc, footerdata, head, footerTitle }) {
           )}
           <ul className="space-y-4 list-disc list-outside text-hciSecondary">
             {data.aneurysmSymptoms.map((symptom, index) => (
-              <li key={index} className="ml-6">
+              <li key={index} className="ml-6 font-light">
                 <p className="text-black">
                   <strong className="text-hciSecondary">{symptom.title}</strong>
                   {symptom.title && ':'} {symptom.description}

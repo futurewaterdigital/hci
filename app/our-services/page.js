@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Banner from '@/components/Common/Banner'
 const bannerImage = '/images/Neurology.png'
 import BookButton from '@/components/cardiacComponents/BookButton'
@@ -193,7 +194,9 @@ function Page() {
               className="p-4 bg-white border rounded-lg flex flex-col items-center justify-center hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
               key={index}
             >
-              <img
+              <Image
+                width={300}
+                height={300}
                 alt={service.title}
                 className="mx-auto mb-2 h-12"
                 src={service.icon}

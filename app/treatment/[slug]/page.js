@@ -5,6 +5,7 @@ import Header from '../../../components/Header/page'
 import Banner from '../../../components/Treatment/Banner/page'
 import { usePathname } from 'next/navigation'
 import CardioMenu from '../../../components/cardiacComponents/Menu'
+import OthersMenu from '../../../components/OthersComppnents/Menu'
 import BookNow from '@/components/cardiacComponents/BookButton'
 import OurNetwork from '@/components/HomePage/Partners/page'
 import Testimonials from '@/components/HomePage/Testimonials/page'
@@ -112,6 +113,7 @@ export default function City({ params }) {
           ))}
           <div className="container mx-auto text-center pt-4 space-y-8">
             {pathname === '/treatment/cardiac-sciences' && <CardioMenu />}
+            {pathname === '/treatment/others' && <OthersMenu />}
           </div>
           <OurNetwork />
           <Testimonials />
