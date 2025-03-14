@@ -280,9 +280,9 @@ function GeneralSurgery() {
           />
 
           <p className="font-light">
-            The choice of treatment depends on the condition's severity, the
-            child’s age, and overall health. Both non-surgical and surgical
-            interventions are considered.
+            The choice of treatment depends on the condition&apos;s severity,
+            the child&apos;s age, and overall health. Both non-surgical and
+            surgical interventions are considered.
           </p>
           <DataLists
             desc="If the fracture is unstable or involves displaced bone fragments, surgery is typically required:"

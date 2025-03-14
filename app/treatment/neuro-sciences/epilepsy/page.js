@@ -271,9 +271,9 @@ function GeneralSurgery() {
 
           <p className="font-light">
             Treatment for epilepsy aims to control seizures and improve the
-            patient’s quality of life. The choice of treatment depends on the
-            type of epilepsy, the frequency of seizures, and the patient's
-            overall health. Common treatment options include:
+            patient&apos;s quality of life. The choice of treatment depends on
+            the type of epilepsy, the frequency of seizures, and the
+            patient&apos;s overall health. Common treatment options include:
           </p>
           <DataLists
             desc={data.complications[0].description}

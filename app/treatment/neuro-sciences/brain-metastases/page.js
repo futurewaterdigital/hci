@@ -6,7 +6,7 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/cardiacComponents/H2'
 import KnowMore from '@/components/cardiacComponents/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
+// import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
 
@@ -20,7 +20,7 @@ const data = {
     {
       title: 'Neurological Examination:',
       description: `
-A doctor will conduct a thorough examination of the patient’s nervous system, testing vision, hearing, reflexes, balance, coordination, strength, and memory. This helps identify the areas of the brain that may be affected by metastases.`,
+A doctor will conduct a thorough examination of the patient&apos;s nervous system, testing vision, hearing, reflexes, balance, coordination, strength, and memory. This helps identify the areas of the brain that may be affected by metastases.`,
     },
     {
       title: 'Imaging Studies:',
@@ -89,7 +89,7 @@ In some cases, a spinal tap may be performed to collect cerebrospinal fluid (CSF
       aneurysmSymptoms: [
         {
           description:
-            'Immunotherapy drugs boost the body’s immune system to help fight cancer. These treatments are especially useful for cancers like melanoma and lung cancer that have metastasised to the brain. Immune checkpoint inhibitors and CAR T-cell therapies are examples of immunotherapy used in brain metastases treatment.',
+            'Immunotherapy drugs boost the body&apos;s immune system to help fight cancer. These treatments are especially useful for cancers like melanoma and lung cancer that have metastasised to the brain. Immune checkpoint inhibitors and CAR T-cell therapies are examples of immunotherapy used in brain metastases treatment.',
         },
       ],
     },
@@ -235,10 +235,10 @@ function GeneralSurgery() {
           textClass="text-2xl font-semibold mb-4 text-center"
         />
         <p className="font-light" text="">
-          If you experience persistent symptoms that concern you, it's essential
-          to see a doctor. This is especially important if you've previously
-          been treated for cancer, as your medical history may help with
-          diagnosis and treatment.
+          If you experience persistent symptoms that concern you, it&apos;s
+          essential to see a doctor. This is especially important if you&apos;ve
+          previously been treated for cancer, as your medical history may help
+          with diagnosis and treatment.
         </p>
         <KnowMore title={data.title} />
         <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />

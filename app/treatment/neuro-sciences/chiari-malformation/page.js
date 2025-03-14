@@ -233,7 +233,7 @@ function GeneralSurgery() {
 
           <p className="font-light">
             Treatment for Chiari malformation depends on the severity of
-            symptoms and their impact on the individual's quality of life.
+            symptoms and their impact on the individual&apos;s quality of life.
             Options may include:
           </p>
           <DataLists

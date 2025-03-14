@@ -6,7 +6,7 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/cardiacComponents/H2'
 import KnowMore from '@/components/cardiacComponents/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
+// import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
 

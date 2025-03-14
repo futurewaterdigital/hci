@@ -238,7 +238,7 @@ function GeneralSurgery() {
 
           <p className="font-light">
             Management of seizure disorders typically includes a combination of
-            treatments tailored to the individual's needs:
+            treatments tailored to the individual&apos;s needs:
           </p>
           <DataLists
             desc={data.complications[0].description}

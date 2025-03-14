@@ -479,8 +479,8 @@ function GeneralSurgery() {
           </div>
           <p className="font-light">
             These diagnostic and treatment strategies are tailored according to
-            the patient's health, the tumor's location, and whether the cancer
-            has spread, ensuring the most effective care.
+            the patient&apos;s health, the tumor&apos;s location, and whether
+            the cancer has spread, ensuring the most effective care.
           </p>
           {/* <DataLists
             desc="If the fracture is unstable or involves displaced bone fragments, surgery is typically required:"
