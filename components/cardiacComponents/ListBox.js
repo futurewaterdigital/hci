@@ -2,10 +2,21 @@ import React from 'react'
 
 export default function ListBox({ data }) {
   const countLength = data.benefits.length
+  // console.log(countLength)
   return (
     <div
-      className={`grid grid-cols-1 gap-6 mt-6 ${
-        countLength === 3 ? 'md:grid-cols-3' : 'md:grid-cols-4'
+      className={`grid  gap-6 mt-6 ${
+        countLength === 3
+          ? 'md:grid-cols-3'
+          : countLength === 4
+          ? 'md:grid-cols-4'
+          : countLength === 5
+          ? 'md:grid-cols-5'
+          : countLength === 6
+          ? 'md:grid-cols-3'
+          : countLength === 8
+          ? 'md:grid-cols-4'
+          : 'grid-cols-1' // You can add a fallback class here if needed
       }`}
     >
       {data.benefits.map((benefit, index) => (
