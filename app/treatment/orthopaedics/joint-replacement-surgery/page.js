@@ -202,7 +202,7 @@ function JointReplacementSurgery() {
           Treatment
         </h2> */}
           {/* <p>Symptoms</p> */}
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
@@ -210,7 +210,7 @@ function JointReplacementSurgery() {
                 titleCss="text-black font-semibold text-center"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={title} />
             </div>
@@ -221,7 +221,7 @@ function JointReplacementSurgery() {
                 header=""
                 titleCss="text-black font-semibold text-center"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               {/* <KnowMore title={title} /> */}
             </div>
@@ -239,20 +239,12 @@ function JointReplacementSurgery() {
           </p>
           <DataLists data={data.complications} />
         </div>
-        {/* <H2
-          text={data.DataSurgery.headingTitle}
-          textClass="text-2xl font-semibold mb-4 text-center"
-        /> */}
-        {/* <p
-          className="font-light"
-          dangerouslySetInnerHTML={{ __html: data.DataSurgery.description }}
-        /> */}
-        {/* <DataSurgery data={data.DataSurgery.DataLists} /> */}
-        {/* <FlexBoxSection data={data.sec_para_3} /> */}
-        {/* <CTaButton data={data} /> */}
-        <Conclusion data={data.footerData} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+
+        <div className="space-y-4 mt-8">
+          <Conclusion data={data.footerData} />
+          <FooterLinks head={title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

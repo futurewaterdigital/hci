@@ -294,20 +294,20 @@ function page() {
       </section>
 
       <section className="container mx-auto py-8">
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-1 gap-4">
           <DataBoxes
             title="Symptoms"
             data={symptomsDVT}
             text="Many people with DVT do not experience symptoms. However, when present, symptoms may include:"
             header=""
-            myclass="grid grid-cols-1"
+            myclass="grid grid-cols-2"
           />
           <DataBoxes
             title="Diagnosis"
             data={diagnosisDVT}
             text="A healthcare provider will conduct a physical exam, review medical history, and use imaging tests to diagnose DVT. The primary diagnostic tests include:"
             header=""
-            myclass="grid grid-cols-1"
+            myclass="grid grid-cols-2"
           />
         </div>
       </section>
@@ -328,7 +328,7 @@ function page() {
             risk of future clots. Treatments include:"
         />
       </section>
-      <section className="container mx-auto py-8">
+      <section className="container mx-auto py-8 space-y-6">
         <Conclusion data={footerData} />
         <FooterLinks head={title} />
         <BookButton />

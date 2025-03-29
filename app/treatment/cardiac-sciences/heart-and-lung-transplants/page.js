@@ -270,7 +270,7 @@ function page() {
         </div>
       </div>
 
-      <div>
+      <div className="container mx-auto">
         <h3 className="text-2xl font-bold text-center mb-6">
           What are Heart and Lung Transplants?
         </h3>
@@ -285,7 +285,7 @@ function page() {
           managed with medications or other interventions. Common reasons
           include:
         </p>
-        <div className="grid lg:grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 gap-4 ">
           <DataBoxes
             title="Heart Transplant"
             text=""
@@ -359,7 +359,7 @@ function page() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto space-y-6">
         <FooterLinks head={title} />
         <BookButton />
       </div>

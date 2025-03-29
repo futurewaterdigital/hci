@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-const bannerImage = '/cardio/aortic.png'
+const bannerImage = '/cardio/Heart-valve.png'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -348,9 +348,10 @@ export default function page() {
             improved outcomes.
           </p>
         </div>
-
-        <FooterLinks head="Heart Valve Disease" />
-        <BookButton />
+        <div className="space-y-4 mt-8">
+          <FooterLinks head="Heart Valve Disease" />
+          <BookButton />
+        </div>
       </main>
     </div>
   )

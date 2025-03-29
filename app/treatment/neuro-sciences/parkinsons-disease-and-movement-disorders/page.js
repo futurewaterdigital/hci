@@ -270,15 +270,15 @@ function GeneralSurgery() {
         </p> */}
         <KnowMore title={data.title} />
         <div>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms of Parkinson’s Disease and other movement disorders vary but generally include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -287,9 +287,9 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing Parkinson’s Disease and movement disorders involves a detailed examination of the patient’s symptoms, medical history, and neurological testing. Common diagnostic methods include:         "
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               {/* <KnowMore title={title} /> */}
             </div>

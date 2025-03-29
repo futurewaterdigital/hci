@@ -189,7 +189,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[150px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[120px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
             />
           ))}
         </div>
@@ -200,15 +200,15 @@ function GeneralSurgery() {
         </p> */}
         <KnowMore title={data.title} />
         <div>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms of Chiari malformation can vary widely, depending on the severity of the condition and whether it causes obstruction of cerebrospinal fluid (CSF) flow. Common symptoms include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -217,9 +217,9 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 // text="Diagnosing spinal cord disorders involves a thorough clinical evaluation and advanced imaging techniques:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               {/* <KnowMore title={title} /> */}
             </div>

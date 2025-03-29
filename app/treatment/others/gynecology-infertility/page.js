@@ -122,10 +122,10 @@ function GeneralSurgery() {
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
 
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4 pt-8">
           <div>
             <H2 text="Conditions Treated by Gynecologists" />
-            <p className="font-light">
+            <p className="font-light min-h-16">
               Gynecologists in HCI’s network address a variety of health
               concerns, including:
             </p>
@@ -133,7 +133,7 @@ function GeneralSurgery() {
           </div>
           <div>
             <H2 text="Infertility Services" />
-            <p className="font-light">
+            <p className="font-light min-h-16">
               For couples facing challenges in starting a family, HCI offers
               access to cutting-edge fertility care, including:
             </p>
@@ -151,20 +151,24 @@ function GeneralSurgery() {
           support. Here’s why women trust HCI:
         </p>
         <ListBox data={data} />
-        <H2
-          text="Comprehensive Care for Women’s Health"
-          textClass="text-2xl font-bold mb-4 text-center"
-        />
-        <p className="font-light">
-          At HCI, we recognize that women’s health requires a delicate balance
-          of physical, emotional, and reproductive well-being. Whether you’re
-          seeking routine gynaecological care, guidance on family planning, or
-          advanced infertility treatments, HCI’s network of experts are here to
-          guide you every step of the way.
-        </p>
-        <CTaButton data={data} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+        <div className="pt-8">
+          <H2
+            text="Comprehensive Care for Women’s Health"
+            textClass="text-2xl font-bold mb-4 text-center"
+          />
+          <p className="font-light">
+            At HCI, we recognize that women’s health requires a delicate balance
+            of physical, emotional, and reproductive well-being. Whether you’re
+            seeking routine gynaecological care, guidance on family planning, or
+            advanced infertility treatments, HCI’s network of experts are here
+            to guide you every step of the way.
+          </p>
+        </div>
+        <div className="space-y-6 mt-8">
+          <CTaButton data={data} />
+          <FooterLinks head={data.title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

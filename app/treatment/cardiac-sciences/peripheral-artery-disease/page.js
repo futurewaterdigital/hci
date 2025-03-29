@@ -218,7 +218,7 @@ export default function page() {
         <h1 className="lg:text-4xl font-bold text-center text-hciSecondary">
           Peripheral Artery Disease (PAD)
         </h1>
-        <div className="lg:py-8">
+        <div className="lg:py-4">
           <p className="mt-4 text-start">
             Peripheral Artery Disease (PAD) is a circulatory condition
             characterized by the narrowing or blockage of arteries, primarily in
@@ -232,7 +232,7 @@ export default function page() {
         </div>
 
         <div>
-          <div className="grid grid-cols-1 gap-4 pt-12">
+          <div className="grid grid-cols-1 gap-4 pt-8 mb-4">
             <DataBoxes
               titleCss=""
               title="Causes"
@@ -303,9 +303,10 @@ export default function page() {
             cardiovascular events associated with PAD.
           </p>
         </div>
-
-        <FooterLinks head=" Peripheral Artery Disease (PAD)" />
-        <BookButton />
+        <div className="space-y-4 mt-8">
+          <FooterLinks head=" Peripheral Artery Disease (PAD)" />
+          <BookButton />
+        </div>
       </main>
     </div>
   )

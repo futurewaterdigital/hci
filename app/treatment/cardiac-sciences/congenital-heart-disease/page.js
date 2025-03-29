@@ -229,7 +229,7 @@ function page() {
             myclass="grid lg:grid-cols-2"
           />
         </div>
-        <div className="container mx-auto py-8">
+        <div className="container mx-auto py-8 space-y-6">
           <Conclusion data={footerData} />
           <FooterLinks head={title} />
           <BookButton />

@@ -234,7 +234,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[150px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
             />
           ))}
         </div>

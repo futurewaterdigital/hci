@@ -198,7 +198,7 @@ export default function page() {
       <Banner image={bannerImage} />
       <main className="lg:container mx-auto py-0 px-6">
         <div className="space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-4 mt-6">
             <h1 className="text-3xl font-bold text-center text-hciSecondary">
               Pacemakers
             </h1>
@@ -300,9 +300,10 @@ export default function page() {
           Pacemakers represent a transformative technology for those with heart
           rhythm disorders, enabling them to lead healthier, more active lives.
         </p>
-
-        <FooterLinks head="Pacemakers" />
-        <BookButton />
+        <div className="space-y-4 mt-8">
+          <FooterLinks head="Pacemakers" />
+          <BookButton />
+        </div>
       </main>
     </div>
   )

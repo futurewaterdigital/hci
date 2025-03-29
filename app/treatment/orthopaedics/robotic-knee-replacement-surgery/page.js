@@ -347,7 +347,6 @@ function GeneralSurgery() {
           className="font-light"
           dangerouslySetInnerHTML={{ __html: data.DataSurgery.description }}
         />
-
         <div>
           {/* First two items */}
           <div className="grid grid-cols-2 gap-4 mb-4">
@@ -356,7 +355,7 @@ function GeneralSurgery() {
                 key={index}
                 title={item.title}
                 description={item.description}
-                boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
               />
             ))}
           </div>
@@ -368,7 +367,7 @@ function GeneralSurgery() {
                 key={`remaining-${index}`}
                 title={item.title}
                 description={item.description}
-                boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
               />
             ))}
           </div>
@@ -385,7 +384,7 @@ function GeneralSurgery() {
                     key={`remaining-${index}`}
                     title={item.title}
                     description={item.description}
-                    boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                    boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
                   />
                 ))}
               </div>
@@ -395,7 +394,7 @@ function GeneralSurgery() {
                     key={`remaining-${index}`}
                     title={item.title}
                     description={item.description}
-                    boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                    boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
                   />
                 ))}
               </div>
@@ -403,7 +402,6 @@ function GeneralSurgery() {
             <img src="/orthopaedics/joint_1.svg" alt="" />
           </div>
         </div>
-
         <div className="space-y-4">
           <H2 text="When to Consider Robotic Knee Replacement?" />
           <p className="font-light text-center">
@@ -416,7 +414,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>
@@ -426,7 +424,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>

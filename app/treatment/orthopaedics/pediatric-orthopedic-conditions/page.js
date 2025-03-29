@@ -248,7 +248,7 @@ function GeneralSurgery() {
         </p>
         <KnowMore title={data.title} />
         <div>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
@@ -256,7 +256,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-semibold text-center"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -267,7 +267,7 @@ function GeneralSurgery() {
                 header=""
                 titleCss="text-black font-semibold text-center"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               {/* <KnowMore title={title} /> */}
             </div>
@@ -302,7 +302,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>
@@ -312,7 +312,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>
@@ -331,7 +331,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>

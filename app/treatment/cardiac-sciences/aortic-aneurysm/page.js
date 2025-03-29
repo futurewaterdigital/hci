@@ -329,20 +329,20 @@ export default function page() {
             The treatment approach depends on the aneurysm&apos;s size,
             location, and risk of rupture.
           </p>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <DataBoxes
               title=""
               text=""
               header="Medical Management (for small, unruptured aneurysms):"
               data={medicalManagement}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
             <DataBoxes
               title=""
               text=""
               header="Surgical Treatment (for large or at-risk aneurysms):"
               data={surgicalTreatment}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
           </div>
 
@@ -351,7 +351,7 @@ export default function page() {
               <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
                 Recovery and Complications after Surgery
               </h2>
-              <p>
+              <p className="h-20">
                 Recovery from aneurysm surgery can take several weeks to months,
                 depending on the procedure type. Patients receive close
                 follow-up to monitor for complications and ensure the aneurysm
@@ -363,7 +363,7 @@ export default function page() {
               <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
                 Prevention
               </h2>
-              <p>
+              <p className="h-20">
                 While not all aortic aneurysms can be prevented, adopting
                 healthy habits can reduce the risk of developing them:
               </p>
@@ -372,7 +372,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="py-0 space-y-4">
+        <div className="py-0 space-y-6">
           <Conclusion data={footerData} />
           <FooterLinks head="Aortic Aneurysm" />
           <BookButton />

@@ -313,9 +313,11 @@ function GeneralSurgery() {
         <DataSurgery data={data.DataSurgery.DataLists} />
         {/* <FlexBoxSection data={data.sec_para_3} /> */}
         {/* <CTaButton data={data} /> */}
-        <Conclusion data={data.footerData} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+        <div className="space-y-4 mt-8">
+          <Conclusion data={data.footerData} />
+          <FooterLinks head={title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

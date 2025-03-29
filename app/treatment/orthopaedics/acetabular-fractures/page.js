@@ -193,7 +193,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[150px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white"
+              boxCss="min-h-[50px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white"
             />
           ))}
         </div>
@@ -256,7 +256,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>
@@ -266,7 +266,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>

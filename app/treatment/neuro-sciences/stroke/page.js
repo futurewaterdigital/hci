@@ -158,59 +158,70 @@ function GeneralSurgery() {
           ))}
         </div>
         <H2
-          text=" Risk Factors"
+          text="Risk Factors"
           textClass="text-2xl font-semibold mb-4 text-center"
         />
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <p>
+            <p className="font-light h-12">
               Certain risk factors can increase your chances of having a stroke,
               including:
             </p>
-            <ul className="list-disc list-inside">
-              <li>High blood pressure</li>
-              <li>Heart disease</li>
-              <li>Diabetes</li>
-              <li>Smoking</li>
-              <li>High cholesterol</li>
-              <li>Obesity</li>
-              <li>Lack of physical activity</li>
-              <li>Excessive alcohol consumption</li>
-              <li>Family history of stroke</li>
+            <ul className="list-disc list-inside space-y-2">
+              <li className="font-light">High blood pressure</li>
+              <li className="font-light">Heart disease</li>
+              <li className="font-light">Diabetes</li>
+              <li className="font-light">Smoking</li>
+              <li className="font-light">High cholesterol</li>
+              <li className="font-light">Obesity</li>
+              <li className="font-light">Lack of physical activity</li>
+              <li className="font-light">Excessive alcohol consumption</li>
+              <li className="font-light">Family history of stroke</li>
             </ul>
           </div>
           <div>
             <img src="/neuro-sciences/ischemic-stroke.png" alt="stroke" />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 pt-4">
           <div>
             <h3 className="font-semibold mb-4 ">Symptoms of a Stroke</h3>
-            <p>
+            <p className="font-light h-12">
               Recognizing stroke symptoms early is critical to ensuring prompt
               treatment. Common symptoms include:
             </p>
-            <div className="bg-[#B8DEFF80] p-4 rounded-lg">
-              <ul className="list-disc list-inside">
-                <li>
+            <div className="bg-[#B8DEFF80] p-4 rounded-lg min-h-48">
+              <ul className="list-disc list-inside space-y-2">
+                <li className="font-light">
                   Weakness or numbness in the face, arm, or leg, usually on one
                   side of the body
                 </li>
-                <li>Difficulty speaking or understanding speech</li>
-                <li>Sudden vision problems in one or both eyes</li>
-                <li>Sudden dizziness or loss of balance</li>
-                <li>Severe headache with no known cause</li>
+                <li className="font-light">
+                  Difficulty speaking or understanding speech
+                </li>
+                <li className="font-light">
+                  Sudden vision problems in one or both eyes
+                </li>
+                <li className="font-light">
+                  Sudden dizziness or loss of balance
+                </li>
+                <li className="font-light">
+                  Severe headache with no known cause
+                </li>
               </ul>
             </div>
           </div>
           <div>
             <h3 className="font-semibold mb-4">Remember FAST:</h3>
-            <div className="bg-[#FFE7B6] p-4 rounded-lg">
-              <ul className="flex flex-col gap-2">
-                <li>F: Face drooping</li>
-                <li>A: Arm weakness</li>
-                <li>S: Speech difficulty</li>
-                <li>T: Time to call for emergency help</li>
+            <p className="font-light h-12"></p>
+            <div className="bg-[#FFE7B6] p-4 rounded-lg min-h-48">
+              <ul className="flex flex-col gap-2 ">
+                <li className="font-light">F: Face drooping</li>
+                <li className="font-light">A: Arm weakness</li>
+                <li className="font-light">S: Speech difficulty</li>
+                <li className="font-light">
+                  T: Time to call for emergency help
+                </li>
               </ul>
             </div>
           </div>

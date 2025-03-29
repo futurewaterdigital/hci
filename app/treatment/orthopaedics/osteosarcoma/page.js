@@ -356,7 +356,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full border border-hciSecondary"
+              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary"
             />
           ))}
         </div>
@@ -377,7 +377,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full border border-hciSecondary"
+              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary"
             />
           ))}
         </div>
@@ -395,7 +395,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full border border-hciSecondary"
+              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary"
             />
           ))}
         </div>
@@ -411,18 +411,18 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[150px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white"
             />
           ))}
         </div>
         <p>
           In older adults, fractures can also occur from low-energy trauma, such
           as a simple fall, especially if the patient has underlying conditions
-          like osteoporosis that weaken bones.
+          like osteoporosis that weaken bones.
         </p>
         <KnowMore title={data.title} />
         <div>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
@@ -430,7 +430,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-semibold text-center"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -441,7 +441,7 @@ function GeneralSurgery() {
                 header=""
                 titleCss="text-black font-semibold text-center"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               {/* <KnowMore title={title} /> */}
             </div>
@@ -500,7 +500,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full border border-hciSecondary"
+              boxCss="min-h-[50px] w-full rounded-lg border border-hciSecondary"
             />
           ))}
         </div>

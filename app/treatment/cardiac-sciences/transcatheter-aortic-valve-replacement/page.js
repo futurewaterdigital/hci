@@ -267,9 +267,10 @@ export default function page() {
             footerdata="TAVR provides a promising solution for those with severe aortic stenosis, enabling them to regain an active and fulfilling life."
           />
         </div>
-
-        <FooterLinks head={title} />
-        <BookButton />
+        <div className="space-y-4 mt-8">
+          <FooterLinks head={title} />
+          <BookButton />
+        </div>
       </main>
     </div>
   )

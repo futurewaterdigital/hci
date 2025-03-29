@@ -252,15 +252,15 @@ function GeneralSurgery() {
         </p> */}
         <KnowMore title={data.title} />
         <div>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms of neurodegenerative disorders vary widely depending on the specific disease but often include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -269,9 +269,9 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing neurodegenerative disorders typically involves a combination of clinical evaluations, imaging tests, and laboratory work. Some common diagnostic methods include:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               {/* <KnowMore title={title} /> */}
             </div>

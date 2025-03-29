@@ -276,13 +276,13 @@ function GeneralSurgery() {
           imaging studies to confirm the presence and extent of cancer spread.
           Common diagnostic approaches include
         </p>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciSecondary text-white hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[130px] w-full bg-hciSecondary text-white hover:bg-hciPrimary hover:text-white items-start justify-center"
             />
           ))}
         </div>

@@ -150,8 +150,10 @@ function page() {
   return (
     <>
       <Banner image={bannerImage} />
-      <div className="container mx-auto space-y-8">
-        <h1 className="text-4xl font-bold text-pink-500">Angiography</h1>
+      <div className="container mx-auto space-y-8 mt-8">
+        <h1 className="text-4xl font-bold text-pink-500 text-center">
+          Angiography
+        </h1>
         <p className="text-center">
           An angiogram is a minimally invasive diagnostic procedure used to
           assess the condition of blood vessels and identify blockages or
@@ -181,24 +183,26 @@ function page() {
               header=""
               myclass="grid grid-cols-2"
             />
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 mt-8">
               <DataBoxes
                 title="Symptoms"
                 text="Healthcare providers may recommend angiography if you experience symptoms that suggest blood vessel problems, including:"
                 header=""
                 data={symptomsData}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <DataBoxes
                 title="Diagnosis"
                 text="Angiography is a definitive diagnostic tool used to identify blockages, abnormalities, or damages in blood vessels. The procedure includes:"
                 header=""
                 data={diagnosisData}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
             </div>
 
-            <h2 className="text-2xl font-bold mb-4 text-center">Treatment</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center mt-8">
+              Treatment
+            </h2>
             <p className="mb-8">
               Angiography not only diagnoses conditions but also facilitates
               treatment:
@@ -218,9 +222,10 @@ function page() {
               safer and more precise, making it an indispensable tool in modern
               cardiovascular and vascular care.
             </p>
-
-            <FooterLinks head="Angiography" />
-            <BookButton />
+            <div className="space-y-6">
+              <FooterLinks head="Angiography" />
+              <BookButton />
+            </div>
           </section>
         </div>
       </div>

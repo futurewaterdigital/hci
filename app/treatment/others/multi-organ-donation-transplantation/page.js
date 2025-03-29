@@ -169,12 +169,13 @@ function GeneralSurgery() {
           these challenges, organ donation offers unparalleled opportunities to
           save lives and restore health.
         </p>
+        <div className="space-y-4 mt-8">
+          <Conclusion data={data.footerData} />
+          <CTaButton data={data} />
 
-        <Conclusion data={data.footerData} />
-        <CTaButton data={data} />
-
-        <FooterLinks head={data.title} />
-        <BookButton />
+          <FooterLinks head={data.title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

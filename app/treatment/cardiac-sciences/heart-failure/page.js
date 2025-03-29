@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-const bannerImage = '/cardio/HearFailure.png'
+const bannerImage = '/cardio/Heart-valve.png'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
