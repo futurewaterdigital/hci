@@ -11,36 +11,41 @@ import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
 
 const data = {
-  title: 'Neurovascular Conditions',
-  bannerImage: '/neuro-sciences/neurovascular-conditions.png',
-  description: `Neurovascular conditions encompass a range of disorders that affect the blood vessels in the brain, leading to serious health implications. These conditions include strokes, aneurysms, and arteriovenous malformations (AVMs). In India, the prevalence of neurovascular disorders is increasing, making awareness and timely intervention crucial for effective management and recovery.`,
+  title: 'Parkinson’s Disease and Movement Disorders',
+  bannerImage: '/neuro-sciences/parkinson-disease-movement-disorders.png',
+  description: `Parkinson’s Disease (PD) and other movement disorders are neurological conditions that affect the brain’s ability to control movement. Parkinson’s Disease is a progressive disorder that leads to tremors, stiffness, and difficulty with balance and coordination. Movement disorders also include conditions such as dystonia, tremor, and ataxia, which can severely impact an individual’s quality of life. India is increasingly recognized as a destination for world-class treatment of Parkinson’s and movement disorders, offering access to expert neurologists and advanced therapeutic options.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Hypertension',
-      description:
-        'High blood pressure is a major risk factor for both strokes and aneurysms, contributing to the weakening of blood vessel walls.',
-    },
-    {
-      title: 'Cardiac Conditions',
-      description:
-        'Heart problems, such as atrial fibrillation, can lead to the formation of blood clots that may travel to the brain, resulting in a stroke.',
-    },
-    {
       title: 'Genetic Factors',
       description:
-        'Some neurovascular conditions, such as AVMs and certain types of aneurysms, can have a hereditary component.',
+        'A small percentage of Parkinson’s cases are linked to genetic mutations, particularly in families with a history of the disease.',
     },
     {
-      title: 'Hypertension',
+      title: 'Brain Damage',
       description:
-        'High blood pressure is a major risk factor for both strokes and aneurysms, contributing to the weakening of blood vessel walls.',
+        'Movement disorders can arise from brain injuries, strokes, or neurodegenerative diseases.',
     },
     {
-      title: 'Lifestyle Factors',
+      title: 'Environmental Triggers',
       description:
-        'Poor diet, sedentary lifestyle, smoking, and excessive alcohol consumption can contribute to the development of neurovascular diseases.',
+        'Exposure to toxins like pesticides or heavy metals may increase the risk of developing Parkinson’s Disease.',
+    },
+    {
+      title: 'Medications',
+      description:
+        'Some drugs, particularly those used for psychiatric conditions, can cause drug-induced movement disorders.',
+    },
+    {
+      title: 'Age',
+      description:
+        'Parkinson’s is more common in individuals over the age of 60, though early-onset cases can occur.',
+    },
+    {
+      title: 'Autoimmune Conditions',
+      description:
+        'Certain autoimmune diseases may trigger abnormal movement patterns.',
     },
   ],
 
@@ -51,26 +56,68 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            'Antiplatelet agents and anticoagulants may be prescribed to prevent blood clots. In some cases, medications to lower blood pressure and cholesterol are also necessary.',
+            'The most common treatment for Parkinson’s involves drugs that increase dopamine levels or mimic its effects in the brain. Levodopa, combined with carbidopa, is the gold standard medication for Parkinson’s. Other medications help manage symptoms like tremors, stiffness, and slow movement.',
         },
       ],
     },
 
     {
-      heading: 'Surgery:',
-      description: 'Surgical options may include:',
+      heading: 'Deep Brain Stimulation (DBS)',
+      description: '',
       aneurysmSymptoms: [
         {
           description:
-            'Clipping: For aneurysms, a surgical procedure to place a clip on the neck of the aneurysm to prevent rupture.',
+            'For patients with advanced Parkinson’s or movement disorders that do not respond to medication, DBS involves implanting electrodes in the brain that send electrical impulses to help regulate abnormal movements.',
         },
+      ],
+    },
+    {
+      heading: 'Physical Therapy',
+      description: '',
+      aneurysmSymptoms: [
         {
-          description:
-            'Endovascular Coiling: A minimally invasive procedure where coils are inserted into an aneurysm to promote clotting and prevent blood flow.',
+          description: `Exercises to improve mobility, flexibility, and balance are essential in managing movement disorders. Speech therapy may also be needed for those with speech impairments.
+            `,
         },
+      ],
+    },
+    {
+      heading: 'Botox Injections',
+      description: '',
+      aneurysmSymptoms: [
         {
-          description:
-            'AVM Resection: Surgical removal of arteriovenous malformations to prevent bleeding and restore normal blood flow.',
+          description: `Botulinum toxin (Botox) is used to treat conditions like dystonia by temporarily relaxing overactive muscles.
+            `,
+        },
+      ],
+    },
+    {
+      heading: 'Occupational Therapy',
+      description: '',
+      aneurysmSymptoms: [
+        {
+          description: `Helps patients adapt to daily tasks and maintain independence as symptoms progress.
+            `,
+        },
+      ],
+    },
+    {
+      heading: 'Surgical Options',
+      description: '',
+      aneurysmSymptoms: [
+        {
+          description: `In some cases of severe movement disorders, surgery to remove parts of the brain or to implant devices may be recommended.
+            `,
+        },
+      ],
+    },
+    {
+      heading: 'Lifestyle Changes',
+      description: '',
+      aneurysmSymptoms: [
+        {
+          description: `Regular exercise, a healthy diet, and reducing stress can help manage symptoms and slow the progression of Parkinson’s and other movement disorders.
+            `,
         },
       ],
     },
@@ -96,36 +143,49 @@ const data = {
     {
       category: '',
       description:
-        'Sudden Weakness or Numbness: Often affecting one side of the body, particularly the face, arm, or leg.',
+        'Tremors: Uncontrollable shaking, often starting in the hands or fingers.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
       description:
-        'Speech Difficulties: Trouble speaking or understanding speech, which may manifest as slurred speech.',
+        'Muscle Rigidity: Stiff muscles that can limit movement and cause discomfort.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
       description:
-        'Vision Changes: Sudden vision loss or blurriness in one or both eyes.',
+        'Bradykinesia: Slowness of movement, making simple tasks difficult and time-consuming.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
       description:
-        'Severe Headaches: A sudden and severe headache, often described as a "thunderclap" headache, may indicate an aneurysm or stroke.',
+        'Postural Instability: Impaired balance and coordination, leading to falls.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
       description:
-        'Loss of Coordination: Difficulty with balance and coordination, which may lead to falls.',
+        'Gait Changes: A shuffling walk or difficulty starting and stopping movement.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: 'Confusion: Sudden confusion or difficulty concentrating.',
+      description:
+        'Dystonia: Involuntary muscle contractions causing twisting and repetitive movements.',
+      bgColor: 'bg-hciPrimary text-white',
+    },
+    {
+      category: '',
+      description:
+        'Involuntary Movements: Such as tremors, jerks, or tics, often associated with other disorders like dystonia or essential tremor.',
+      bgColor: 'bg-hciPrimary text-white',
+    },
+    {
+      category: '',
+      description:
+        'Speech and Writing Difficulties: Soft speech, slurred words, and small, cramped handwriting (micrographia).',
       bgColor: 'bg-hciPrimary text-white',
     },
   ],
@@ -134,18 +194,36 @@ const data = {
     {
       category: '',
       description:
-        'Neurological Examination: A thorough assessment of neurological function and symptoms.',
+        'Neurological Examination: Assessment of motor function, coordination, and reflexes.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `CT and MRI Scans: Imaging techniques to visualize the brain and blood vessels, helping to identify strokes, aneurysms, or other abnormalities.`,
+      description: `MRI/CT Scan: Imaging tests help rule out other conditions that may be causing symptoms, such as strokes or tumors.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
       description:
-        'Angiography: A specialized imaging test that uses a contrast dye to visualize blood vessels in the brain, particularly useful for diagnosing aneurysms and AVMs.',
+        'DaTscan: A specialized imaging test used to assess dopamine levels in the brain, aiding in the diagnosis of Parkinson’s Disease.',
+      bgColor: 'bg-hciSecondary text-white',
+    },
+    {
+      category: '',
+      description:
+        'Genetic Testing: May be recommended if a family history of Parkinson’s or another movement disorder is present.',
+      bgColor: 'bg-hciSecondary text-white',
+    },
+    {
+      category: '',
+      description:
+        'Blood Tests: These are used to rule out other conditions that may cause similar symptoms, such as thyroid problems or vitamin deficiencies.',
+      bgColor: 'bg-hciSecondary text-white',
+    },
+    {
+      category: '',
+      description:
+        'Electromyography (EMG): This test measures muscle activity and may help diagnose other movement disorders like dystonia.',
       bgColor: 'bg-hciSecondary text-white',
     },
   ],
@@ -163,8 +241,9 @@ function GeneralSurgery() {
         <p className="font-light">{data.overview}</p>
         <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">
-          The causes of neurovascular conditions can vary widely depending on
-          the specific disorder, but common contributing factors include:
+          The exact cause of Parkinson’s Disease is still unknown, but various
+          factors may contribute to its development. Other movement disorders
+          may also have different origins. Common causes include:
         </p>
         {/* <H2 text="Types" textClass="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">

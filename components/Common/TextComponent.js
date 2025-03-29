@@ -3,7 +3,7 @@ import React from 'react'
 function Button({ title, description, boxCss }) {
   return (
     <div
-      className={`border rounded-xl flex  flex-col p-2 ${
+      className={`rounded-sm flex  flex-col p-2 ${
         boxCss ? boxCss : ' items-center justify-center'
       }`}
     >

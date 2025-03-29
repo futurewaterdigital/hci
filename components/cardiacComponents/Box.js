@@ -15,7 +15,10 @@ function Box({ title, data, text, myclass, header, titleCss, footerData }) {
         </h2>
       )}
       {text && (
-        <div className="min-h-12" dangerouslySetInnerHTML={{ __html: text }} />
+        <div
+          className="min-h-12 font-light"
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
       )}
       {header && <h3 className="text-lg font-semibold">{header}</h3>}
       <div className={`gap-4 ${myclass}`}>

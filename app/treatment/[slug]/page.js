@@ -10,7 +10,9 @@ import OrthopaedicsMenu from '../../../components/OrthopaedicsMenu/page'
 import BookNow from '@/components/cardiacComponents/BookButton'
 import OurNetwork from '@/components/HomePage/Partners/page'
 import Testimonials from '@/components/HomePage/Testimonials/page'
-
+import NeuroMenu from '../../../components/NeuroMenu/page'
+import GastroenterologyMenu from '../../../components/GastroenterologyMenu/page'
+import OncologyMenu from '../../../components/OncologyMenu/page'
 // Dynamically import Footer to lazy-load
 const Footer = dynamic(() => import('../../../components/Footer/page'), {
   loading: () => <div className="bg-gray-300 h-24 w-full"></div>, // Placeholder while Footer is loading
@@ -115,7 +117,12 @@ export default function City({ params }) {
           <div className="container mx-auto text-center pt-4 space-y-8">
             {pathname === '/treatment/cardiac-sciences' && <CardioMenu />}
             {pathname === '/treatment/orthopaedics' && <OrthopaedicsMenu />}
+            {pathname === '/treatment/neuro-sciences' && <NeuroMenu />}
             {pathname === '/treatment/others' && <OthersMenu />}
+            {pathname === '/treatment/oncology' && <OncologyMenu />}
+            {pathname === '/treatment/gastroenterology' && (
+              <GastroenterologyMenu />
+            )}
           </div>
           <OurNetwork />
           <Testimonials />
