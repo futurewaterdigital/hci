@@ -207,7 +207,7 @@ function JointReplacementSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of ACL, PCL, or MCL injuries can include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -219,7 +219,7 @@ function JointReplacementSurgery() {
                 title="Diagnosis"
                 text="Accurate diagnosis is essential to determine the extent of ligament damage and the appropriate treatment approach. Common diagnostic methods include:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />

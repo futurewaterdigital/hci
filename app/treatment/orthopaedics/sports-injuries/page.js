@@ -288,7 +288,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms of sports injuries can vary widely depending on the type and severity of the injury but may include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -300,7 +300,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing sports injuries typically involves a comprehensive evaluation, which may include:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />

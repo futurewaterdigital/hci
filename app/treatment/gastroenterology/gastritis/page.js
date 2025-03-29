@@ -331,7 +331,7 @@ function GeneralSurgery() {
             <DataBoxes
               title="Symptoms"
               // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center"
+              titleCss="text-black font-semibold text-center text-2xl"
               header=""
               data={data.symptoms}
               myclass="grid grid-cols-1"
@@ -343,7 +343,7 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="Diagnosing gastritis typically involves a combination of methods to determine the cause and extent of inflammation:"
               header=""
-              titleCss="text-black font-semibold text-center"
+              titleCss="text-black font-semibold text-center text-2xl"
               data={data.diagnosis}
               myclass="grid grid-cols-1"
             />

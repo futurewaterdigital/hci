@@ -205,7 +205,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms of TBI can vary widely depending on the severity of the injury and can manifest immediately or may develop over time. Common symptoms include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -217,7 +217,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing TBI typically involves a comprehensive assessment that includes:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2 h-full"
               />

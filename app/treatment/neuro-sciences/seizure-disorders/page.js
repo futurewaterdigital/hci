@@ -210,7 +210,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of seizure disorders can vary widely, depending on the type of seizure experienced. Common manifestations include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -222,7 +222,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing seizure disorders involves a thorough assessment, including:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />

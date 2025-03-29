@@ -101,7 +101,7 @@ function GeneralSurgery() {
         <Title title={data.title} />
         <H2
           text={data.description}
-          textClass="text-start font-semibold text-xl"
+          textClass="text-start font-semibold text-2xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />

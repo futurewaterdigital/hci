@@ -209,7 +209,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Common symptoms of an acetabular fracture include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -221,7 +221,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Proper diagnosis is essential to determine the severity and pattern of the fracture. Healthcare providers typically perform the following:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />

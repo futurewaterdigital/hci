@@ -205,7 +205,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms associated with spinal disorders can vary widely but may include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -217,7 +217,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosis for robotic knee replacement surgery involves a comprehensive evaluation, including:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />

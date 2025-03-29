@@ -245,7 +245,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of MS vary widely depending on the extent and location of nerve damage. Common symptoms include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -257,7 +257,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing MS requires a combination of tests and assessments, as there is no single definitive test for the disease. The process typically includes:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />

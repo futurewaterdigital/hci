@@ -227,7 +227,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 // text="Symptoms depend on the tumor's size, location, and growth rate but can include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -239,7 +239,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 // text="Early detection is essential for effective treatment. Diagnostic methods include:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />

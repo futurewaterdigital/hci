@@ -214,7 +214,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="A benign peripheral nerve tumour can lead to symptoms if it presses on the affected nerve or nearby tissues. Tumour growth may increase the likelihood of symptoms, though even small tumours can cause discomfort. Symptoms depend on the tumour's size, location, and the structures it affects and may include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -226,7 +226,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosis of benign peripheral nerve tumours involves a comprehensive evaluation, including a physical examination, medical history, and imaging tests. Common diagnostic procedures include:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />

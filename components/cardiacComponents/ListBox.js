@@ -29,7 +29,7 @@ export default function ListBox({ data }) {
               {benefit && benefit.title}
             </h4>
           )}
-          <p className="text-center">{benefit.desc}</p>
+          <p className="text-center font-light">{benefit.desc}</p>
         </div>
       ))}
     </div>

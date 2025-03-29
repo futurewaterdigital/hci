@@ -284,7 +284,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Rheumatoid arthritis symptoms can vary widely among individuals and may include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -296,7 +296,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing rheumatoid arthritis typically involves a combination of medical history, physical examination, and specific tests:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />

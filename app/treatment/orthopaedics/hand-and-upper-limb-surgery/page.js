@@ -288,7 +288,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms that may indicate a need for hand or upper limb surgery include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -300,7 +300,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="The diagnosis of hand and upper limb conditions involves a thorough evaluation, including:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />

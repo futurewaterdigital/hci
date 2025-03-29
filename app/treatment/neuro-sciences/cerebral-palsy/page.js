@@ -223,7 +223,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of spinal cord disorders vary depending on the location and severity of the condition. Common symptoms include:"
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -235,7 +235,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing spinal cord disorders involves a thorough clinical evaluation and advanced imaging techniques:"
                 header=""
-                titleCss="text-black font-semibold text-center"
+                titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />

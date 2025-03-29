@@ -297,7 +297,7 @@ function GeneralSurgery() {
             <DataBoxes
               title="Symptoms"
               text="Colon polyps often do not cause noticeable symptoms, making regular screening crucial. However, when symptoms do occur, they may include:"
-              titleCss="text-black font-semibold text-center"
+              titleCss="text-black font-semibold text-center text-2xl"
               header=""
               data={data.symptoms}
               myclass="grid grid-cols-1"
@@ -309,7 +309,7 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="The primary method for diagnosing colon polyps is through a colonoscopy, a procedure that allows a healthcare provider to examine the colon with a lighted camera. If polyps are found, they can often be removed during the same procedure. Other diagnostic tools include:"
               header=""
-              titleCss="text-black font-semibold text-center"
+              titleCss="text-black font-semibold text-center text-2xl"
               data={data.diagnosis}
               myclass="grid grid-cols-1"
             />
