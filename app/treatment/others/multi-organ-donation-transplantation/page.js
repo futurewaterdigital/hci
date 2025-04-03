@@ -122,14 +122,16 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
+        <div className="py-4">
         <Title title={data.title} />
         <H2
           title={data.description}
           className="text-start font-semibold text-xl"
         />
         <p className="font-light">{data.overview}</p>
+        </div>
         <FlexBox data={data} />
-
+<div className="py-4">
         <H2
           title="Types of Living Donor Transplants"
           className="text-2xl font-bold mb-4 text-center"
@@ -137,7 +139,8 @@ function GeneralSurgery() {
         <p className="font-light">
           Living donor transplants can take several forms:
         </p>
-        <ListBox data={data} />
+          <ListBox data={data} />
+          </div>
         <H2
           title="Benefits of Organ Donation"
           className="text-2xl font-bold mb-4 text-center"

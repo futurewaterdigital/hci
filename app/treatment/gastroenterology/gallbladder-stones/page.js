@@ -205,14 +205,20 @@ const data = {
     },
   ],
 }
-
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+     Brain tumours and brain cancers are challenging to treat, but advances in neurosurgery, radiation, and targeted therapies provide hope for better outcomes. Early diagnosis and comprehensive care tailored to the tumour type are key to improving quality of life for patients.`,
+  },
+]
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         {/* <H2
           text="Types of Cancers of the Digestive System "
@@ -287,12 +293,13 @@ function GeneralSurgery() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-1 gap-4">
+        <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div>
             <DataBoxes
               title="Symptoms"
               text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center text-2xl"
+              titleCss="text-black font-semibold text-center text-xl"
+              textCss="font-light py-4"
               header=""
               data={data.symptoms}
               myclass="grid grid-cols-2"
@@ -304,7 +311,8 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="Proper diagnosis is crucial to determine the right treatment plan. Healthcare providers may use the following methods:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              titleCss="text-black font-semibold text-center text-xl"
+              textCss="font-light py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
@@ -386,14 +394,7 @@ function GeneralSurgery() {
           </div>
         </div>
 
-        <Conclusion
-          data={[
-            {
-              header: 'Conclusion',
-              paragraph: data.conclusion[0].paragraph,
-            },
-          ]}
-        />
+        <Conclusion data={footerData} />
         <FooterLinks head={data.title} />
         <BookButton />
       </div>

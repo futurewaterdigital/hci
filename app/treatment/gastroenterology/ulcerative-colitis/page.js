@@ -239,7 +239,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
         {/* <div className="grid lg:grid-cols-2 gap-4">
@@ -311,7 +311,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <H2 title="Symptoms" className="font-semibold mb-4 text-center" />
+        <H2 title="Symptoms" className="font-semibold mb-4 text-center text-xl" />
         <div className="mb-8">
           <DataLists
             divClass="grid grid-cols-3 gap-4"
@@ -340,7 +340,8 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="Diagnosis involves a combination of physical exams, medical history reviews, and tests to confirm UC and rule out other conditions:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
@@ -348,8 +349,8 @@ function GeneralSurgery() {
         </div>
 
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
-          <p className="font-light">
+          <H2 title="Treatment" className="font-semibold mb-4 text-center text-xl" />
+          <p className="font-light py-4">
             The goal of treatment is to reduce inflammation, relieve symptoms,
             and maintain remission. Treatment options include:
           </p>

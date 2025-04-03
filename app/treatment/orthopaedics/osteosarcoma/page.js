@@ -343,7 +343,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         {/* <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" /> */}
         {/* <p className="font-light" text="">
@@ -356,7 +356,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary"
+              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary flex items-center justify-center text-center"
             />
           ))}
         </div>
@@ -377,7 +377,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary"
+              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary flex items-center justify-center text-center"
             />
           ))}
         </div>
@@ -395,7 +395,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary"
+              boxCss="min-h-[50px] w-full border rounded-lg border-hciSecondary flex items-center justify-center text-center"
             />
           ))}
         </div>
@@ -415,7 +415,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <p>
+        <p className="font-light" text="">
           In older adults, fractures can also occur from low-energy trauma, such
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
@@ -423,11 +423,12 @@ function GeneralSurgery() {
         <KnowMore title={data.title} />
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of osteosarcoma can vary but often include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -439,7 +440,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Accurate diagnosis is essential to determine the extent and progression of osteosarcoma. Healthcare providers use several diagnostic tests, as detailed below:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />

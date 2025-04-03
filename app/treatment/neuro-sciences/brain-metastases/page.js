@@ -213,7 +213,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
           title="Symptoms"
@@ -259,12 +259,12 @@ function GeneralSurgery() {
           Any form of cancer has the potential to metastasise to the brain, but
           the following cancers are more likely to cause brain metastases:
         </p>
-        <ul className="list-disc list-inside">
-          <li>Lung cancer</li>
-          <li>Kidney cancer</li>
-          <li>Melanoma</li>
-          <li>Breast cancer</li>
-          <li>Colon cancer</li>
+        <ul className="list-disc list-inside ml-2 text-hciSecondary">
+          <li><span className=" text-black">Lung cancer</span></li>
+          <li><span className=" text-black">Kidney cancer</span></li>
+          <li><span className=" text-black">Melanoma</span></li>
+          <li><span className=" text-black">Breast cancer</span></li>
+          <li><span className=" text-black">Colon cancer</span></li>
         </ul>
         {/* <DataSurgery data={data.section_1} /> */}
         <H2

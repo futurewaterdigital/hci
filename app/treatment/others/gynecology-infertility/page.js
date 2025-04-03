@@ -130,7 +130,7 @@ function GeneralSurgery() {
               Gynecologists in HCI’s network address a variety of health
               concerns, including:
             </p>
-            <DataLists data={data.complications} />
+            <DataLists data={data.complications} boxClass="h-[380px]"/>
           </div>
           <div>
             <H2 title="Infertility Services" />
@@ -138,7 +138,7 @@ function GeneralSurgery() {
               For couples facing challenges in starting a family, HCI offers
               access to cutting-edge fertility care, including:
             </p>
-            <DataLists data={data.services} />
+            <DataLists data={data.services} boxClass="h-[380px]"/>
           </div>
         </div>
 
@@ -152,7 +152,7 @@ function GeneralSurgery() {
           support. Here’s why women trust HCI:
         </p>
         <ListBox data={data} />
-        <div className="pt-8">
+        <div className="pt-2">
           <H2
             title="Comprehensive Care for Women’s Health"
             className="text-2xl font-bold mb-4 text-center"

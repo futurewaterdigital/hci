@@ -176,15 +176,6 @@ const data = {
       'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
   },
 
-  conclusion: [
-    {
-      header: 'Conclusion',
-      paragraph: `
-      Brain tumours and brain cancers are challenging to treat, but advances in neurosurgery, radiation, and targeted therapies provide hope for better outcomes. Early diagnosis and comprehensive care tailored to the tumour type are key to improving quality of life for patients.
-          `,
-    },
-  ],
-
   symptoms: [
     {
       category: '',
@@ -255,9 +246,16 @@ const data = {
       bgColor: 'bg-hciSecondary text-white',
     },
   ],
-}
 
-console.log('hello')
+}
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+     Brain tumours and brain cancers are challenging to treat, but advances in neurosurgery, radiation, and targeted therapies provide hope for better outcomes. Early diagnosis and comprehensive care tailored to the tumour type are key to improving quality of life for patients.`,
+  },
+]
+
 
 function GeneralSurgery() {
   return (
@@ -265,7 +263,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} className="text-start" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
 
         <p className="font-light">{data.overview}</p>
         <H2
@@ -343,11 +341,12 @@ function GeneralSurgery() {
         </div>
 
         <div className="grid lg:grid-cols-1 gap-4">
-          <div>
+          <div className="space-y-4">
             <DataBoxes
               title="Symptoms"
               text="Digestive system cancers can present with various symptoms, which may include:"
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl"
               header=""
               data={data.symptoms}
               myclass="grid grid-cols-2"
@@ -359,7 +358,8 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="Proper diagnosis is crucial to determine the right treatment plan. Healthcare providers may use the following methods:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
@@ -382,17 +382,11 @@ function GeneralSurgery() {
             data={data.complications}
           />
         </div>
-
-        <Conclusion
-          data={[
-            {
-              header: 'Conclusion',
-              paragraph: `Digestive system cancers are complex conditions that require comprehensive care and early detection. With advances in surgical techniques, targeted therapies, and personalized treatment approaches, outcomes continue to improve. Regular screening, lifestyle modifications, and prompt attention to symptoms are crucial for better prognosis and quality of life.`,
-            },
-          ]}
-        />
-        <FooterLinks head={data.title} />
-        <BookButton />
+        <Conclusion data={footerData} />
+        <div className="space-y-6 mt-8">
+          <FooterLinks head={data.title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

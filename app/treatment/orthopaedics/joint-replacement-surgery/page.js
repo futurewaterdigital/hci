@@ -190,7 +190,7 @@ function JointReplacementSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light">
@@ -203,11 +203,12 @@ function JointReplacementSurgery() {
           Treatment
         </h2> */}
           {/* <p>Symptoms</p> */}
-          <div className="grid lg:grid-cols-1 gap-4">
-            <div>
+          <div className="grid lg:grid-cols-1 gap-4 space-y-4">
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of ACL, PCL, or MCL injuries can include:"
+                textCss="font-light py-4"
                 titleCss="text-black font-semibold text-center text-2xl"
                 header=""
                 data={data.symptoms}
@@ -219,6 +220,7 @@ function JointReplacementSurgery() {
               <DataBoxes
                 title="Diagnosis"
                 text="Accurate diagnosis is essential to determine the extent of ligament damage and the appropriate treatment approach. Common diagnostic methods include:"
+                textCss="font-light py-4"
                 header=""
                 titleCss="text-black font-semibold text-center text-2xl"
                 data={data.diagnosis}

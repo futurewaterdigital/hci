@@ -179,7 +179,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
           title="Causes of Acetabular Fractures"
@@ -194,7 +194,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white"
+              boxCss="min-h-[50px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
             />
           ))}
         </div>
@@ -204,13 +204,14 @@ function GeneralSurgery() {
           like osteoporosis that weaken bones.
         </p>
         <KnowMore title={data.title} />
-        <div>
+        <div className="space-y-8 pt-8">
           <div className="grid lg:grid-cols-2 gap-4">
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="Common symptoms of an acetabular fracture include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4 min-h-[80px]"
+                titleCss="text-black font-semibold text-center text-xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -222,7 +223,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Proper diagnosis is essential to determine the severity and pattern of the fracture. Healthcare providers typically perform the following:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-semibold text-center text-xl"
+                textCss="font-light py-4 min-h-[80px]"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />
@@ -245,11 +247,13 @@ function GeneralSurgery() {
             data={data.complications}
           />
         </div>
-        <div className="space-y-4">
-          <H2 title="When to Consider Robotic Knee Replacement?" />
+        <div className="space-y-8">
+          <div>
+          <H2 title="When to Consider Robotic Knee Replacement?" className="text-center"/>
           <p className="font-light text-center">
             Consult a doctor if you experience:
-          </p>
+            </p>
+            </div>
           <div className="space-y-4">
             <div className="grid grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (
@@ -257,7 +261,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[120px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
                 />
               ))}
             </div>
@@ -267,7 +271,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[120px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
                 />
               ))}
             </div>

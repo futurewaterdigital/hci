@@ -12,7 +12,7 @@ function Treatment({ data, heading, headingCss }) {
               {data.heading}
             </h2>
           )}
-          <ul className="space-y-4">
+          <ul className="space-y-4 ml-2">
             {data.aneurysmSymptoms.map((symptom, index) => (
               <li key={index} className="flex item-center gap-2 ">
                 <GoDotFill color="#D84498" size={10} />

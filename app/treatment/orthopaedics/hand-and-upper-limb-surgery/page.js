@@ -243,7 +243,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light">
@@ -256,7 +256,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white"
+              boxCss="min-h-[90px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
             />
           ))}
         </div>
@@ -266,7 +266,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white"
+              boxCss="min-h-[90px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
             />
           ))}
         </div>
@@ -276,7 +276,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white"
+              boxCss="min-h-[90px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
             />
           ))}
         </div>
@@ -288,7 +288,8 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms that may indicate a need for hand or upper limb surgery include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-semibold text-center text-xl"
+                textCss="font-light py-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -300,7 +301,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="The diagnosis of hand and upper limb conditions involves a thorough evaluation, including:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-semibold text-center text-xl"
+                textCss="font-light py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
@@ -325,7 +327,7 @@ function GeneralSurgery() {
           />
         </div>
         <div className="space-y-4">
-          <H2 title="Recovery and Rehabilitation" />
+          <H2 title="Recovery and Rehabilitation" className="text-center"/>
           <p className="font-light text-center">
             Post-surgery recovery focuses on restoring function, strength, and
             mobility. Key aspects include:
@@ -337,7 +339,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center  "
                 />
               ))}
             </div>
@@ -347,16 +349,17 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center  "
                 />
               ))}
             </div>
           </div>
         </div>
-
-        <Conclusion data={data.conclusion} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+        <div className="space-y-6 mt-8">
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

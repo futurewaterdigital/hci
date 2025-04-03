@@ -175,7 +175,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -210,11 +210,12 @@ function GeneralSurgery() {
         <KnowMore title={data.title} /> */}
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="A benign peripheral nerve tumour can lead to symptoms if it presses on the affected nerve or nearby tissues. Tumour growth may increase the likelihood of symptoms, though even small tumours can cause discomfort. Symptoms depend on the tumour's size, location, and the structures it affects and may include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl py-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -226,7 +227,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosis of benign peripheral nerve tumours involves a comprehensive evaluation, including a physical examination, medical history, and imaging tests. Common diagnostic procedures include:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />

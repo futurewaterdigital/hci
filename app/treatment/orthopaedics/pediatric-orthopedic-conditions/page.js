@@ -224,7 +224,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -249,11 +249,12 @@ function GeneralSurgery() {
         <KnowMore title={data.title} />
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="Common symptoms of an acetabular fracture include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -265,7 +266,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Proper diagnosis is essential to determine the severity and pattern of the fracture. Healthcare providers typically perform the following:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
@@ -290,7 +292,7 @@ function GeneralSurgery() {
           />
         </div>
         <div className="space-y-4">
-          <H2 title="Prevention and Support" />
+          <H2 title="Prevention and Support" className="text-center"/>
           <p className="font-light text-center">
             Prevention strategies can reduce the risk of pediatric orthopedic
             issues and improve outcomes. Some key recommendations include:
@@ -320,7 +322,7 @@ function GeneralSurgery() {
         </div>
 
         <div className="space-y-4">
-          <H2 title="When to See a Doctor?" />
+          <H2 title="When to See a Doctor?" className="text-center"/>
           <p className="font-light text-center">
             Consult a doctor if your child experiences any of the following:
           </p>
@@ -347,10 +349,11 @@ function GeneralSurgery() {
             </div> */}
           </div>
         </div>
-
-        <Conclusion data={data.conclusion} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+        <div className="space-y-6 mt-8">
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

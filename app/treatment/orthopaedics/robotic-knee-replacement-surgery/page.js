@@ -276,7 +276,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -299,12 +299,13 @@ function GeneralSurgery() {
           Treatment
         </h2> */}
           {/* <p>Symptoms</p> */}
-          <div className="grid lg:grid-cols-2 gap-4">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-4 mt-12">
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="Patients suffering from knee conditions requiring robotic surgery often experience:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4 min-h-[70px]"
+                titleCss="text-black font-semibold text-center text-xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -315,8 +316,9 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosis for robotic knee replacement surgery involves a comprehensive evaluation, including:"
+                textCss="font-light py-4 min-h-[70px]"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-semibold text-center text-xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />
@@ -355,7 +357,7 @@ function GeneralSurgery() {
                 key={index}
                 title={item.title}
                 description={item.description}
-                boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
               />
             ))}
           </div>
@@ -367,15 +369,13 @@ function GeneralSurgery() {
                 key={`remaining-${index}`}
                 title={item.title}
                 description={item.description}
-                boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
               />
             ))}
           </div>
         </div>
-        <div className="py-12 space-y-4">
-          <h2 className="text-2xl font-semibold text-center text-hciPrimary">
-            Benefits of Robotic Knee Replacement
-          </h2>
+        <div className="py-12 space-y-8">
+          <H2 title="Benefits of Robotic Knee Replacement" className="text-center"/>
           <div className="flex justify-center items-center gap-6">
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -384,7 +384,7 @@ function GeneralSurgery() {
                     key={`remaining-${index}`}
                     title={item.title}
                     description={item.description}
-                    boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                    boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
                   />
                 ))}
               </div>
@@ -394,7 +394,7 @@ function GeneralSurgery() {
                     key={`remaining-${index}`}
                     title={item.title}
                     description={item.description}
-                    boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                    boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center"
                   />
                 ))}
               </div>
@@ -403,7 +403,7 @@ function GeneralSurgery() {
           </div>
         </div>
         <div className="space-y-4">
-          <H2 title="When to Consider Robotic Knee Replacement?" />
+          <H2 title="When to Consider Robotic Knee Replacement?" className="text-center"/>
           <p className="font-light text-center">
             Consult a doctor if you experience:
           </p>
@@ -414,7 +414,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white text-center flex items-center justify-center"
                 />
               ))}
             </div>
@@ -424,7 +424,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[150px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white text-center flex items-center justify-center"
                 />
               ))}
             </div>
@@ -432,9 +432,11 @@ function GeneralSurgery() {
         </div>
         {/* <FlexBoxSection data={data.sec_para_3} /> */}
         {/* <CTaButton data={data} /> */}
-        <Conclusion data={data.conclusion} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+        <div className="space-y-8">
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

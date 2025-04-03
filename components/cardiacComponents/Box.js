@@ -32,6 +32,7 @@ function Box({ title, data, text, myclass, header, titleCss, footerData, headerC
               className="font-light"
               dangerouslySetInnerHTML={{ __html: items.description }}
             />
+            
           </div>
         ))}
       </div>

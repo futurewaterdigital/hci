@@ -106,13 +106,15 @@ function GeneralSurgery() {
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
+        <div>
         <H2
           title="Procedures We Offer"
-          className="text-2xl font-semibold text-pink-600 mt-8 text-center"
+          className="text-2xl font-semibold text-hciSecondary mt-8 text-center"
         />
         <p className="text-center font-light">
           Our aesthetic, cosmetic, and plastic surgery services include:
-        </p>
+          </p>
+          </div>
         <div className="grid lg:grid-cols-2 gap-4">
           <DataLists data={data.complications} />
           <div>

@@ -77,16 +77,18 @@ function GeneralSurgery() {
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
+        <div>
         <H2
           title="Conditions We Treat"
-          className="text-2xl font-bold text-pink-600 mt-8 text-center"
+          className="text-2xl font-bold text-hciSecondary mt-8 text-center"
         />
 
         <p className="text-center font-light">
           Our general surgery services encompass a broad range of conditions,
           including:
         </p>
-        <DataLists data={data.complications} />
+          <DataLists data={data.complications} />
+          </div>
         <H2
           title="Why Choose General Surgery Through HCI?"
           className="text-2xl font-bold mb-4"

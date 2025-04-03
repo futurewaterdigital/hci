@@ -188,7 +188,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
 
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
@@ -224,11 +224,12 @@ function GeneralSurgery() {
         <KnowMore title={data.title} />
         <div>
           <div className="grid lg:grid-cols-2 gap-4">
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 // text="Symptoms depend on the tumor's size, location, and growth rate but can include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl py-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -240,7 +241,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 // text="Early detection is essential for effective treatment. Diagnostic methods include:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />

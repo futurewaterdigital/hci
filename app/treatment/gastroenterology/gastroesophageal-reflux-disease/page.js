@@ -237,15 +237,6 @@ const data = {
       'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
   },
 
-  conclusion: [
-    {
-      header: 'Conclusion',
-      paragraph: `
-     GERD is a manageable condition for most individuals through a combination of lifestyle changes and medication. However, severe cases may require surgery to prevent complications. Early diagnosis and intervention are essential to avoid long-term esophageal damage. Consulting a healthcare professional for persistent or severe symptoms is crucial for appropriate management and improving the quality of life.
-          `,
-    },
-  ],
-
   symptoms: [
     {
       category: 'Abdominal Pain:',
@@ -304,13 +295,21 @@ const data = {
   ],
 }
 
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+     GERD is a manageable condition for most individuals through a combination of lifestyle changes and medication. However, severe cases may require surgery to prevent complications. Early diagnosis and intervention are essential to avoid long-term esophageal damage. Consulting a healthcare professional for persistent or severe symptoms is crucial for appropriate management and improving the quality of life.`,
+  },
+]
+
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
         <H2
@@ -433,7 +432,7 @@ function GeneralSurgery() {
           />
         </div> */}
 
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-4 pt-8">
           {/* <div>
             <DataBoxes
               title="Symptoms"
@@ -450,7 +449,8 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="Several diagnostic tests help confirm GERD, including:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              titleCss="text-black font-semibold text-center text-xl"
+              textCss="font-light py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-1"
             />
@@ -548,14 +548,8 @@ function GeneralSurgery() {
           </div> */}
         </div>
 
-        <Conclusion
-          data={[
-            {
-              header: 'Conclusion',
-              paragraph: data.conclusion[0].paragraph,
-            },
-          ]}
-        />
+        <Conclusion data={footerData} />
+        
         <FooterLinks head={data.title} />
         <BookButton />
       </div>

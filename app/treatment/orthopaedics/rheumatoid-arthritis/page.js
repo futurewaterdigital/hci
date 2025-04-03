@@ -256,7 +256,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -280,11 +280,12 @@ function GeneralSurgery() {
         </h2> */}
           {/* <p>Symptoms</p> */}
           <div className="grid lg:grid-cols-1 gap-4">
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="Rheumatoid arthritis symptoms can vary widely among individuals and may include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -296,7 +297,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing rheumatoid arthritis typically involves a combination of medical history, physical examination, and specific tests:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-4"
+                titleCss="text-black font-semibold text-center text-xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
@@ -318,9 +320,11 @@ function GeneralSurgery() {
 
         {/* <FlexBoxSection data={data.sec_para_3} /> */}
         {/* <CTaButton data={data} /> */}
-        <Conclusion data={data.conclusion} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+        <div className="space-y-6 mt-8">
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

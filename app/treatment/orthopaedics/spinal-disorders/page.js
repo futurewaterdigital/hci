@@ -179,7 +179,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
           title="Causes of Spinal Disorders"
@@ -199,13 +199,14 @@ function GeneralSurgery() {
           ))}
         </div>
         <KnowMore title={data.title} />
-        <div>
+        <div className="space-y-8 pt-8">
           <div className="grid lg:grid-cols-2 gap-4">
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms associated with spinal disorders can vary widely but may include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-semibold text-center text-xl"
+                textCss="font-light py-4 min-h-[80px]"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -217,7 +218,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosis for robotic knee replacement surgery involves a comprehensive evaluation, including:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-semibold text-center text-xl"
+                textCss="font-light py-4 min-h-[80px]"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />
@@ -238,10 +240,11 @@ function GeneralSurgery() {
           </p>
           <DataLists data={data.complications} />
         </div>
-
-        <Conclusion data={data.conclusion} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+        <div className="space-y-8">
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
+        </div>
       </div>
     </>
   )

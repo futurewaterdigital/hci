@@ -144,25 +144,30 @@ While minor injuries may respond to conservative management, severe tears often 
         title: 'Immobilization',
         description:
           'Use of braces to stabilise the knee during the early healing phase.',
+        minHeight: 'min-h-[150px] text-center',
       },
       {
         title: 'Physical Therapy',
         description:
           'Strengthening exercises to rebuild muscle support and regain range of motion.',
+          minHeight: 'min-h-[150px] text-center',
       },
       {
         title: 'Gradual Return to Activities',
         description:
           'With guidance from a physiotherapist, patients progress from non-weight-bearing activities to light exercises and eventually to high-impact sports.',
+          minHeight: 'min-h-[150px] text-center',
       },
       {
         title: 'Pain Management',
         description: 'Medications to manage post-operative pain and swelling.',
+        minHeight: 'min-h-[150px] text-center',
       },
       {
         title: 'Regular Follow-Ups:',
         description:
           'Monitoring the healing process and ensuring the grafts are integrating properly.',
+          minHeight: 'min-h-[150px] text-center',
       },
     ],
   },
@@ -266,11 +271,12 @@ function GeneralSurgery() {
         </h2> */}
           {/* <p>Symptoms</p> */}
           <div className="grid lg:grid-cols-2 gap-4">
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of ACL, PCL, or MCL injuries can include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-2 min-h-[80px]"
+                titleCss="text-black font-semibold text-center text-2xl mt-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-1"
@@ -282,7 +288,8 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Accurate diagnosis is essential to determine the extent of ligament damage and the appropriate treatment approach. Common diagnostic methods include:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                textCss="font-light py-2 min-h-[80px]"
+                titleCss="text-black font-semibold text-center text-2xl mt-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />
@@ -314,7 +321,7 @@ function GeneralSurgery() {
         <DataSurgery data={data.DataSurgery.DataLists} />
         {/* <FlexBoxSection data={data.sec_para_3} /> */}
         {/* <CTaButton data={data} /> */}
-        <div className="space-y-4 mt-8">
+        <div className="space-y-6 pt-10">
           <Conclusion data={data.footerData} />
           <FooterLinks head={title} />
           <BookButton />

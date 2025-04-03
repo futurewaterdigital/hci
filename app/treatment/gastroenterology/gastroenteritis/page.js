@@ -289,6 +289,15 @@ const data = {
     },
   ],
 }
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+     Gastroenteritis is a common condition that can affect people of all ages, with most cases resolving on their own within a few days. While it is usually not severe, it can be dangerous for individuals with weaker immune systems, such as children, the elderly, or those with chronic conditions. Managing hydration and rest are essential for recovery. If symptoms persist or worsen, it is important to consult a healthcare provider to avoid complications like dehydration or electrolyte imbalances.
+     With good hygiene practices, such as regular hand washing and safe food handling, the risk of contracting gastroenteritis can be significantly reduced.
+          `,
+  },
+]
 
 function GeneralSurgery() {
   return (
@@ -296,7 +305,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
         {/* <H2
@@ -386,7 +395,7 @@ function GeneralSurgery() {
             <img src="/gastroenterology/digestive-system.png" alt="" />
           </div>
         </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-semibold mb-4 text-center text-xl" />
 
         <p className="font-light">
           Gastroenteritis can be caused by infections or exposure to toxins.
@@ -399,7 +408,7 @@ function GeneralSurgery() {
             // desc={data.complications[0].description}
             data={data.data_2}
             ulClass="list-disc list-outside"
-            boxClass="bg-hciYellow h-[230px]"
+            boxClass="bg-hciYellow h-[220px]"
           />
           {/* {data.section_1.map((item, index) => (
             <TextComponent
@@ -412,7 +421,7 @@ function GeneralSurgery() {
         </div>
         <H2
           title="Symptoms"
-          className="font-semibold mb-4 text-center"
+          className="font-semibold mb-4 text-center text-xl"
         />
         <p className="font-light">
           The hallmark symptoms of gastroenteritis are a combination of
@@ -420,7 +429,7 @@ function GeneralSurgery() {
         </p>
         <div className="mb-8">
           <DataLists
-            divClass="grid grid-cols-3 gap-4"
+            divClass="grid grid-cols-2 gap-4"
             // key={index}
             // desc={data.complications[0].description}
             data={data.data_1}
@@ -465,7 +474,8 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="In most cases, healthcare providers diagnose gastroenteritis based on symptoms and medical history. However, additional tests may be required to confirm the cause or rule out other conditions, including:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl"
               data={data.diagnosis}
               myclass="grid grid-cols-1"
             />
@@ -564,14 +574,7 @@ function GeneralSurgery() {
           </div> */}
         </div>
 
-        <Conclusion
-          data={[
-            {
-              header: 'Conclusion',
-              paragraph: data.conclusion[0].paragraph,
-            },
-          ]}
-        />
+       <Conclusion data={footerData} />
         <FooterLinks head={data.title} />
         <BookButton />
       </div>

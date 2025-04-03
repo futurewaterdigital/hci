@@ -106,8 +106,8 @@ const symptomsDVT = [
   },
   {
     category: '',
-    description: `<p><strong>When a clot moves to the lungs, signs of pulmonary embolism (PE) can develop, including:</strong></p>
-    <ul class="list-disc list-inside">
+    description: `<p ><strong class="font-light">When a clot moves to the lungs, signs of pulmonary embolism (PE) can develop, including:</strong></p>
+    <ul class="list-disc list-inside ml-2">
     <li>Chest pain and shortness of breath</li>
     <li>Lightheadedness or fainting</li>
     <li>Coughing up blood</li>
@@ -343,7 +343,6 @@ function page() {
       </section>
       <section className="container mx-auto py-8 px-6">
         <H2 title="Treatment and Management" className="text-center mb-4"/>
-        
         <TreatmentBox
           data={treatmentData}
           heading="The primary goals of DVT treatment are to prevent the clot from

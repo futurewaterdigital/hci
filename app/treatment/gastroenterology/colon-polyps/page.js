@@ -162,15 +162,6 @@ const data = {
       'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
   },
 
-  conclusion: [
-    {
-      header: 'Conclusion',
-      paragraph: `
-      Colon polyps are common, especially in older adults, and while many are benign, their potential to develop into cancer makes early detection and removal vital. Regular screenings, lifestyle modifications, and awareness of family history can help reduce the risk of developing colon polyps and subsequent colorectal cancer. If polyps are detected, prompt treatment is essential to prevent complications and ensure a positive outlook.
-          `,
-    },
-  ],
-
   symptoms: [
     {
       category: '',
@@ -206,7 +197,13 @@ const data = {
   ],
 }
 
-console.log('hello')
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+     Colon polyps are common, especially in older adults, and while many are benign, their potential to develop into cancer makes early detection and removal vital. Regular screenings, lifestyle modifications, and awareness of family history can help reduce the risk of developing colon polyps and subsequent colorectal cancer. If polyps are detected, prompt treatment is essential to prevent complications and ensure a positive outlook.`,
+  },
+]
 
 function GeneralSurgery() {
   return (
@@ -214,7 +211,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         {/* <H2
           text="Types of Cancers of the Digestive System "
@@ -292,15 +289,16 @@ function GeneralSurgery() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div>
+        <div className="grid lg:grid-cols-1 gap-4 pt-8">
+          <div className="space-y-4">
             <DataBoxes
               title="Symptoms"
               text="Colon polyps often do not cause noticeable symptoms, making regular screening crucial. However, when symptoms do occur, they may include:"
-              titleCss="text-black font-semibold text-center text-2xl"
+              titleCss="text-black font-semibold text-center text-xl"
+              textCss="font-light py-4"
               header=""
               data={data.symptoms}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
             <KnowMore title={data.title} />
           </div>
@@ -309,9 +307,10 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="The primary method for diagnosing colon polyps is through a colonoscopy, a procedure that allows a healthcare provider to examine the colon with a lighted camera. If polyps are found, they can often be removed during the same procedure. Other diagnostic tools include:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl"
               data={data.diagnosis}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
           </div>
         </div>
@@ -336,14 +335,7 @@ function GeneralSurgery() {
           /> */}
         </div>
 
-        <Conclusion
-          data={[
-            {
-              header: 'Conclusion',
-              paragraph: data.conclusion[0].paragraph,
-            },
-          ]}
-        />
+        <Conclusion data={footerData} />
         <FooterLinks head={data.title} />
         <BookButton />
       </div>

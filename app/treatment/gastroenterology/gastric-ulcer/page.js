@@ -253,13 +253,22 @@ const data = {
   ],
 }
 
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+     Gastric ulcers can significantly impact quality of life, but early diagnosis and treatment can prevent complications. Managing lifestyle factors and adhering to prescribed medications are essential for effective treatment. If you experience persistent abdominal pain or symptoms of gastric ulcer, consulting a healthcare professional is vital for appropriate care and recovery.
+     `,
+  },
+]
+
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
           text="Types of Gastric Ulcers"
@@ -344,12 +353,13 @@ function GeneralSurgery() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-1 gap-4">
-          <div>
+        <div className="grid lg:grid-cols-1 gap-4 pt-8">
+          <div className="space-y-4">
             <DataBoxes
               title="Symptoms"
               // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl py-4"
               header=""
               data={data.symptoms}
               myclass="grid grid-cols-2"
@@ -361,7 +371,8 @@ function GeneralSurgery() {
               title="Diagnosis"
               // text="Proper diagnosis is crucial to determine the right treatment plan. Healthcare providers may use the following methods:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
@@ -373,7 +384,7 @@ function GeneralSurgery() {
             text="Treatment"
             className="font-semibold mb-4 text-center"
           />
-          <p className="font-light">
+          <p className="font-light py-4">
             The treatment approach depends on the severity of the symptoms and
             the size or location of the stones. Options include:
           </p>
@@ -444,14 +455,8 @@ function GeneralSurgery() {
           </div> */}
         </div>
 
-        <Conclusion
-          data={[
-            {
-              header: 'Conclusion',
-              paragraph: data.conclusion[0].paragraph,
-            },
-          ]}
-        />
+        <Conclusion data={footerData} />
+        
         <FooterLinks head={data.title} />
         <BookButton />
       </div>

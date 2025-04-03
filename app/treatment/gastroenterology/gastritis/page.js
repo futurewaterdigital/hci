@@ -241,7 +241,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
           text="Types of Gastric Ulcers"
@@ -310,7 +310,7 @@ function GeneralSurgery() {
             <img src="/gastroenterology/digestive-system.png" alt="" />
           </div>
         </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-semibold mb-4 text-center text-xl" />
         {/* <p className="font-light">
           While the exact cause of gallstones isn’t fully understood, several
           factors may increase the risk:
@@ -326,13 +326,14 @@ function GeneralSurgery() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-1 gap-4">
-          <div>
+        <div className="grid lg:grid-cols-1 gap-4 pt-8">
+          <div className="space-y-4">
             <DataBoxes
               title="Symptoms"
-              // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl py-4"
               header=""
+            
               data={data.symptoms}
               myclass="grid grid-cols-2"
             />
@@ -343,7 +344,8 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="Diagnosing gastritis typically involves a combination of methods to determine the cause and extent of inflammation:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />

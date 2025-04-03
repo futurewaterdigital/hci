@@ -285,7 +285,7 @@ export default function page() {
           <KnowMore title={title} />
         </div>
         <div className="py-2">
-          <H2 title="Treatment" className={`font-bold text-center text-hciSecondary py-1`}/>
+          <H2 title="Treatment" className="font-bold text-center text-hciSecondary mb-2"/>
           <p className='font-light'>
             The treatment approach depends on the aneurysm&apos;s size,
             location, and risk of rupture.

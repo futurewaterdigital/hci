@@ -116,7 +116,7 @@ export default function City({ params }) {
           ))}
           <div className="container mx-auto text-center pt-4 space-y-8">
             {pathname === '/treatment/cardiac-sciences' && <CardioMenu />}
-            {pathname === '/treatment/orthopaedics' && <OrthopaedicsMenu />}
+            {pathname === '/treatment/orthopedics' && <OrthopaedicsMenu />}
             {pathname === '/treatment/neuro-sciences' && <NeuroMenu />}
             {pathname === '/treatment/others' && <OthersMenu />}
             {pathname === '/treatment/oncology' && <OncologyMenu />}

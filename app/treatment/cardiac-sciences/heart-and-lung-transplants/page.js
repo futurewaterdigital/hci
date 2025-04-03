@@ -274,12 +274,12 @@ function page() {
       </div>
 
       <div className="container mx-auto">
-        <H3 title="What are Heart and Lung Transplants?" className="font-regular font-roboto text-center text-hciPrimary"/>
+        <H3 title="What are Heart and Lung Transplants?" className="font-regular font-roboto text-center "/>
         
         <DataSurgery data={surgeryData} />
       </div>
       <div className="space-y-4 container mx-auto py-8">
-        <H3 title="When are these Procedures Needed?" className="font-regular font-roboto text-center text-hciPrimary"/>
+        <H3 title="When are these Procedures Needed?" className="font-regular font-roboto text-center "/>
         <p className="font-light">
           Transplants are considered for patients whose conditions cannot be
           managed with medications or other interventions. Common reasons
@@ -310,7 +310,7 @@ function page() {
         </div>
       </div>
       <div className="container mx-auto">
-        <H3 title="Symptoms Indicating the Need for a Transplant" className="font-regular font-roboto text-center text-hciPrimary"/>
+        <H3 title="Symptoms Indicating the Need for a Transplant" className="font-regular font-roboto text-center text-black"/>
         <div className="mt-2">
           <div className="mt-2">
           <DataBoxes
@@ -323,16 +323,17 @@ function page() {
         </div>
       </div>
       <div className="container mx-auto py-8">
-        <H3 title="The Transplant Process" className="text-3xl font-regular font-roboto text-center text-hciPrimary"/>
+          <H3 title="The Transplant Process" className="text-3xl font-regular font-roboto text-center 
+        "/>
           
         <div className="grid lg:grid-cols-2 gap-4">
           <DataLists data={transplantEvaluation} boxClass="h-[300px]" />
-          <DataLists data={SurgeryEvaluation} boxClass="h-[300px]" />
+          <DataLists data={SurgeryEvaluation} boxClass="h-[300px] " />
         </div>
       </div>
 
       <div className="py-2 container mx-auto">
-        <H3 title="Risks and Complications" className="font-regular font-roboto text-center text-hciPrimary"/>
+        <H3 title="Risks and Complications" className="font-regular font-roboto text-center "/>
         <div>
           <DataBoxes
             title=""
@@ -345,7 +346,7 @@ function page() {
       </div>
 
       <div className="container mx-auto">
-        <H3 title="Recovery and Long-Term Outlook" className="font-regular font-roboto text-center text-hciPrimary"/>
+        <H3 title="Recovery and Long-Term Outlook" className="font-regular font-roboto text-center "/>
         <div className="grid lg:grid-cols-2 gap-4">
           <DataLists data={recoveryOutlook} boxClass="h-[300px]" />
           <div className="space-y-1">

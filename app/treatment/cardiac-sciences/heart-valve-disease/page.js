@@ -312,8 +312,7 @@ export default function page() {
           </div>
 
           <div className="py-2">
-            <H2 title="Treatment" className={`font-semibold text-xl`}/>
-
+            <H2 title="Treatment" className={`font-semibold text-xl pb-[22px]`}/>
             <p className='font-light'>
               Treatment depends on the severity, the affected valve, and the
               patient’s overall health. Options include:

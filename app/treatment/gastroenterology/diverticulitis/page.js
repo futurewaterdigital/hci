@@ -215,6 +215,15 @@ const data = {
     },
   ],
 }
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+     Diverticulitis is a common condition that can affect people of all ages, with most cases resolving on their own within a few days. While it is usually not severe, it can be dangerous for individuals with weaker immune systems, such as children, the elderly, or those with chronic conditions. Managing hydration and rest are essential for recovery. If symptoms persist or worsen, it is important to consult a healthcare provider to avoid complications like dehydration or electrolyte imbalances.
+     With good hygiene practices, such as regular hand washing and safe food handling, the risk of contracting diverticulitis can be significantly reduced.
+          `,
+  },
+]
 
 function GeneralSurgery() {
   return (
@@ -222,7 +231,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start" />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         {/* <H2
           text="Types of Cancers of the Digestive System "
@@ -297,12 +306,13 @@ function GeneralSurgery() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-1 gap-4">
-          <div>
+        <div className="grid lg:grid-cols-1 gap-4 pt-8">
+          <div className="space-y-4">
             <DataBoxes
               title="Symptoms"
               // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl py-4"
               header=""
               data={data.symptoms}
               myclass="grid grid-cols-2"
@@ -314,7 +324,8 @@ function GeneralSurgery() {
               title="Diagnosis"
               // text="Proper diagnosis is crucial to determine the right treatment plan. Healthcare providers may use the following methods:"
               header=""
-              titleCss="text-black font-semibold text-center text-2xl"
+              textCss="font-light py-4"
+              titleCss="text-black font-semibold text-center text-xl py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
@@ -326,7 +337,7 @@ function GeneralSurgery() {
             title="Treatment"
             className="font-semibold mb-4 text-center"
           />
-          <p className="font-light">
+          <p className="font-light py-4">
             The treatment approach depends on the severity of the symptoms and
             the size or location of the stones. Options include:
           </p>
@@ -396,14 +407,7 @@ function GeneralSurgery() {
           </div> */}
         </div>
 
-        <Conclusion
-          data={[
-            {
-              header: 'Conclusion',
-              paragraph: data.conclusion[0].paragraph,
-            },
-          ]}
-        />
+        <Conclusion data={footerData} />
         <FooterLinks head={data.title} />
         <BookButton />
       </div>
