@@ -21,7 +21,9 @@ function FlexBox({ data }) {
             count === 3 && index === 2 && index === 1 ? 'md:col-span-2' : ''
           }`}
         >
-          <H3 title={section.title} className="text-xl font-semibold mb-4"/>
+          <h3 className="text-xl font-semibold mb-4">
+            {section.title}
+          </h3>
           <p className="font-light">{section.content}</p>
           {section.bullets && (
             <ul className="list-disc list-inside font-light">
