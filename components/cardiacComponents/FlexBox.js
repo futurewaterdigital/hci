@@ -1,5 +1,5 @@
 import React from 'react'
-import H3 from '@/components/ui/h3'
+
 
 function FlexBox({ data }) {
   const count = data.sections.length
