@@ -4,8 +4,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
@@ -237,9 +237,9 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
           The exact cause of Parkinson’s Disease is still unknown, but various
           factors may contribute to its development. Other movement disorders
@@ -296,10 +296,7 @@ function GeneralSurgery() {
           </div>
         </div>
         <div>
-          <H2
-            text="Treatment"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
+          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
 
           <p className="font-light">
             While there is no cure for Parkinson’s Disease or most movement

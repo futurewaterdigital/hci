@@ -2,6 +2,8 @@ import React from 'react'
 import Banner from '@/components/Common/Banner'
 const bannerImage = '/images/price-comparison.png'
 import BookButton from '@/components/cardiacComponents/BookButton'
+import H2 from '@/components/ui/h2'
+import H1 from '@/components/ui/h1'
 
 const medicalProcedures = [
   {
@@ -466,9 +468,7 @@ function page() {
       <div className="container mx-auto p-6">
         <section className="relative py-8">
           <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-pink-500 font-roboto">
-              Cost Comparison
-            </h1>
+            <H1 title="Cost Comparison" />
           </div>
         </section>
 
@@ -562,9 +562,7 @@ function page() {
             </p>
           </div>
 
-          <h2 className="text-3xl text-pink-600 font-bold mb-4">
-            Hotel Expenses in India
-          </h2>
+          <H2 title="Hotel Expenses in India" className=" text-pink-600 font-bold mb-4"/>
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200">
               <thead>

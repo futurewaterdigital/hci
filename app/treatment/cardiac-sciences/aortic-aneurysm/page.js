@@ -6,8 +6,12 @@ import DataSurgery from '@/components/cardiacComponents/Button'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
+import IssuesLinks from '@/components/ui/IssuesLinks'
+import CausesLink from '@/components/ui/CausesLink'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
+import H1 from '@/components/ui/h1'
+import H2 from '@/components/ui/h2'
+import H3 from '@/components/ui/h3'
 
 const title = 'Aortic Aneurysm'
 const vascularConditions = [
@@ -45,22 +49,27 @@ const riskFactor = [
   {
     title: 'Smoking',
     description: '',
+    minHeight: 'h-[80px]',
   },
   {
     title: 'Age over 65 years',
     description: '',
+    minHeight: 'h-[80px]',
   },
   {
     title: 'Male sex (men are more prone to abdominal aneurysms)',
     description: '',
+    minHeight: 'h-[80px] text-center',
   },
   {
     title: 'Family history of aneurysms',
     description: '',
+    minHeight: 'h-[80px]',
   },
   {
     title: 'High cholesterol and hypertension',
     description: '',
+    minHeight: 'h-[80px] text-center',
   },
 ]
 const symptomsData = [
@@ -196,6 +205,11 @@ const complications = [
         title: 'Graft migration',
         description: 'The graft may shift from its original position.',
       },
+      {
+        title: 'Control blood pressure and cholesterol',
+        description:
+          'Medications and lifestyle adjustments can reduce arterial damage and lower the risk of aneurysms.',
+      },
     ],
   },
 ]
@@ -203,11 +217,7 @@ const prevention = [
   {
     heading: '',
     aneurysmSymptoms: [
-      {
-        title: 'Control blood pressure and cholesterol',
-        description:
-          'Medications and lifestyle adjustments can reduce arterial damage and lower the risk of aneurysms.',
-      },
+     
       {
         title: 'Quit smoking',
         description:
@@ -251,11 +261,9 @@ export default function page() {
     <div>
       <Banner image={bannerImage} />
       <main className="lg:container mx-auto py-8 px-6">
-        <h1 className="text-3xl font-bold text-center text-pink-600 mt-8">
-          {title}
-        </h1>
+        <H1 title={title}  />
         <div className="py-8 space-y-6">
-          <p className="text-start">
+          <p className="text-start font-light">
             An aortic aneurysm occurs when a section of the aorta, the
             body&apos;s largest artery, becomes weak and bulges out, forming a
             balloon-like structure. The aorta carries oxygen-rich blood from the
@@ -270,7 +278,7 @@ export default function page() {
               <strong>Thoracic aorta (Thoracic Aortic Aneurysm, TAA)</strong>
             </li>
           </ul>
-          <p className="text-start">
+          <p className="text-start font-light">
             Aortic aneurysms can develop silently, without noticeable symptoms,
             but if they rupture, they can cause life-threatening complications,
             including internal bleeding.
@@ -279,61 +287,63 @@ export default function page() {
           <DataBoxes
             title="Causes"
             text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
+            textCss="font-light py-2"
             data={vascularConditions}
             myclass="grid lg:grid-cols-2"
           />
-          <KnowMore title={title} />
-          <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
-            Risk Factors Include
-          </h2>
+          
+          <CausesLink head={title} />
+          <H2 title="Risk Factors Include" className="text-center"/>
           <DataSurgery data={riskFactor} />
-          <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
-            Symptoms
-          </h2>
-          <p className="mt-4 text-start">
+          <div>
+          <H2 title="Symptoms" className="text-center"/>
+          <p className="mt-4 text-start font-light">
             Aortic aneurysms often remain asymptomatic until they enlarge or
             rupture. Symptoms vary based on the aneurysm&apos;s location and
             size.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-            <DataLists data={symptomsData} />
-            <DataLists data={symptomsRData} />
-          </div>
-          <p className="mt-4 text-start">
+            <DataLists data={symptomsData} boxClass="h-[250px]" />
+            <DataLists data={symptomsRData} boxClass="h-[250px]" />
+            </div>
+            
+          <p className="mt-4 text-start font-light">
             If an aneurysm ruptures, it requires immediate medical attention, as
             internal bleeding can be fatal without prompt intervention.
-          </p>
+            </p>
+            </div>
         </div>
         <div className="space-y-6">
           <DataBoxes
             title="Diagnosis"
+            titleCss="text-2xl text-center mb-4 font-semibold"
             text="Since many aneurysms are asymptomatic, they are often discovered during routine check-ups or imaging tests conducted for other conditions."
             header="Common diagnostic tests include:"
+            headerCss="text-xl -mt-6"
+            textCss="min-h-12"
             data={diagnosticTests}
             myclass="grid lg:grid-cols-2"
           />
-          <p className="">
+          <p className="text-start font-light">
             Regular screening is recommended for individuals with high-risk
             factors, such as smokers or those with a family history of
             aneurysms.
           </p>
-          <KnowMore title={title} />
-
-          <h2
-            className={`text-2xl font-bold text-center text-hciSecondary py-1`}
-          >
-            Treatment
-          </h2>
-          <p>
+          <IssuesLinks head={title} />
+          <H2 title="Treatment" className="text-center" />
+          <div>
+          <p className="text-start font-light">
             The treatment approach depends on the aneurysm&apos;s size,
             location, and risk of rupture.
-          </p>
+            </p>
+            
           <div className="grid lg:grid-cols-1 gap-4">
             <DataBoxes
               title=""
               text=""
               header="Medical Management (for small, unruptured aneurysms):"
+              headerCss="text-xl"
               data={medicalManagement}
               myclass="grid grid-cols-2"
             />
@@ -341,38 +351,36 @@ export default function page() {
               title=""
               text=""
               header="Surgical Treatment (for large or at-risk aneurysms):"
+              headerCss="text-xl"
               data={surgicalTreatment}
               myclass="grid grid-cols-2"
             />
-          </div>
+            </div>
+            </div>
 
           <div className="grid lg:grid-cols-2 gap-4">
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
-                Recovery and Complications after Surgery
-              </h2>
-              <p className="h-20">
+              <H3 title="Recovery and Complications after Surgery" className="text-start"/>
+              <p className="h-20 font-light">
                 Recovery from aneurysm surgery can take several weeks to months,
                 depending on the procedure type. Patients receive close
                 follow-up to monitor for complications and ensure the aneurysm
                 does not recur or grow.
               </p>
-              <DataLists data={complications} />
+              <DataLists data={complications} boxClass="h-[310px]" />
             </div>
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-start text-pink-600 mt-8">
-                Prevention
-              </h2>
-              <p className="h-20">
+              <H3 title="Prevention" />
+              <p className="h-20 font-light">
                 While not all aortic aneurysms can be prevented, adopting
                 healthy habits can reduce the risk of developing them:
               </p>
-              <DataLists data={prevention} />
+              <DataLists data={prevention} boxClass="h-[310px]" />
             </div>
           </div>
         </div>
 
-        <div className="py-0 space-y-6">
+        <div className="py-0 space-y-6 mt-8">
           <Conclusion data={footerData} />
           <FooterLinks head="Aortic Aneurysm" />
           <BookButton />

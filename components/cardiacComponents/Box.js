@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Box({ title, data, text, myclass, header, titleCss, footerData }) {
+function Box({ title, data, text, myclass, header, titleCss, footerData, headerCss, textCss }) {
   return (
     <div className="space-y-0">
       {title && (
@@ -8,7 +8,7 @@ function Box({ title, data, text, myclass, header, titleCss, footerData }) {
           className={`${
             titleCss
               ? titleCss
-              : 'text-2xl font-bold text-center text-hciSecondary'
+              : 'text-2xl font-bold text-center text-black'
           }`}
         >
           {title}
@@ -16,15 +16,18 @@ function Box({ title, data, text, myclass, header, titleCss, footerData }) {
       )}
       {text && (
         <div
-          className="min-h-12 font-light"
+          className={`font-light ${textCss}`}
           dangerouslySetInnerHTML={{ __html: text }}
         />
       )}
-      {header && <h3 className="text-lg font-semibold py-4">{header}</h3>}
-      <div className={`py-6 gap-4 ${myclass}`}>
+      
+      {header && <h3 className={`font-semibold py-4 ${headerCss}`}>{header}</h3>}
+      
+      <div className={` gap-4 ${myclass}`}>
         {data.map((items, index) => (
           <div className={`${items.bgColor} p-4 rounded`} key={index}>
             <h3 className="font-bold">{items.category}</h3>
+            
             <div
               className="font-light"
               dangerouslySetInnerHTML={{ __html: items.description }}
@@ -32,7 +35,7 @@ function Box({ title, data, text, myclass, header, titleCss, footerData }) {
           </div>
         ))}
       </div>
-      {footerData && <p>{footerData}</p>}
+      {footerData && <p className='font-light py-2'>{footerData}</p>}
     </div>
   )
 }

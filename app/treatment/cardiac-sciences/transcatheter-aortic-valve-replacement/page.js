@@ -5,6 +5,7 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
+import H1 from '@/components/ui/h1'
 
 const title = 'Transcatheter Aortic Valve Replacement (TAVR)'
 const WhyDone = [
@@ -178,11 +179,9 @@ export default function page() {
     <div className="pt-12">
       <Banner image={bannerImage} />
       <main className="lg:container mx-auto py-0 px-6">
-        <h1 className="lg:text-4xl font-bold text-center text-hciSecondary">
-          {title}
-        </h1>
+        <H1 title={title} />
         <div className="lg:py-8">
-          <p className="mt-4 text-start">
+          <p className="mt-4 text-start font-light">
             Transcatheter Aortic Valve Replacement (TAVR) is a minimally
             invasive procedure to replace a narrowed aortic valve that restricts
             blood flow, a condition known as aortic stenosis. This life-saving
@@ -190,7 +189,7 @@ export default function page() {
             using a catheter-based technique to implant a new valve without the
             need for large surgical incisions.
           </p>
-          <p className="mt-4 text-start">
+          <p className="mt-4 text-start font-light">
             TAVR is especially beneficial for patients who are at high risk or
             unsuitable for open-heart surgery. The procedure alleviates symptoms
             like chest pain, shortness of breath, and fatigue, improving both
@@ -205,12 +204,14 @@ export default function page() {
               head="You may be a candidate for TAVR if you experience:"
               data={WhyDone}
               footerdata="TAVR offers a shorter hospital stay and quicker recovery compared to open-heart surgery."
+              boxClass="min-h-[500px]"
             />
             <DataLists
               desc="As with any medical procedure, TAVR has potential risks, which include:"
               head=""
               data={RiskDone}
               footerdata="However, studies show comparable risks of severe complications between TAVR and traditional surgery."
+              boxClass="min-h-[500px]"
             />
           </div>
         </div>
@@ -218,8 +219,9 @@ export default function page() {
           <div>
             <DataBoxes
               title="How to Prepare"
-              titleCss="font-semibold"
+              titleCss="font-semibold text-2xl"
               text="Medications and Fasting"
+              textCss="font-light py-2"
               header=""
               data={medicationsAndFasting}
               myclass="grid grid-cols-1"
@@ -228,6 +230,8 @@ export default function page() {
               title=""
               text=""
               header="Personal Preparations"
+              headerCss="font-semibold text-2xl"
+              textCss="font-light py-2"
               data={personalPreparations}
               myclass="grid grid-cols-1"
             />
@@ -235,17 +239,21 @@ export default function page() {
           <div>
             <DataBoxes
               title="Procedure Overview"
-              titleCss="font-semibold"
+              titleCss="font-semibold text-2xl"
               text="During the Procedure"
+              textCss="font-light py-2"
               header=""
               data={duringProcedure}
               myclass="grid grid-cols-1"
               footerData="The entire process involves smaller incisions compared to open-heart surgery, reducing recovery time and risks."
+              
             />
             <DataBoxes
               title=""
               text=""
               header="After the Procedure"
+              headerCss="font-semibold text-2xl"
+              textCss="font-light py-2"
               data={afterProcedure}
               myclass="grid grid-cols-1"
             />
@@ -258,6 +266,7 @@ export default function page() {
             data={postTAVRCare}
             footerTitle="Follow-Up"
             footerdata="Regular check-ups and imaging tests ensure the new valve is functioning correctly. Notify your doctor of symptoms like swelling, dizziness, or sudden weight gain."
+            boxClass="min-h-[400px]"
           />
           <DataLists
             desc="TAVR effectively reduces symptoms of aortic stenosis and enhances quality of life. Adopting a heart-healthy lifestyle after the procedure further supports recovery and long-term heart health:"
@@ -265,6 +274,7 @@ export default function page() {
             data={resultsData}
             footerTitle=""
             footerdata="TAVR provides a promising solution for those with severe aortic stenosis, enabling them to regain an active and fulfilling life."
+            boxClass="min-h-[400px]"
           />
         </div>
         <div className="space-y-4 mt-8">

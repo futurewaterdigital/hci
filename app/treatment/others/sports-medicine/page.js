@@ -6,7 +6,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+
 import FlexBox from '@/components/cardiacComponents/FlexBox'
 import ListBox from '@/components/cardiacComponents/ListBox'
 import CTaButton from '@/components/cardiacComponents/CtaButton'
@@ -126,8 +127,8 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
         <H2
-          text={data.description}
-          textClass="text-start font-semibold text-xl"
+          title={data.description}
+          className="text-start font-semibold text-xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
@@ -149,8 +150,8 @@ function GeneralSurgery() {
         </p>
 
         <H2
-          text="When to Seek Care"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="When to Seek Care"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="font-light">
           If you or your child experience a sports-related injury, it’s
@@ -162,8 +163,8 @@ function GeneralSurgery() {
         <ListBox data={data} />
         <div>
           <H2
-            text="Empowering Recovery Through Expert Care"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            title="Empowering Recovery Through Expert Care"
+            className="text-2xl font-semibold mb-4 text-center"
           />
           <p className="font-light">
             If you or your child experience a sports-related injury, it’s

@@ -5,6 +5,9 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
+import H2 from '@/components/ui/h2'
+import H1 from '@/components/ui/h1'
+
 
 const heartConditionsList = [
   {
@@ -199,10 +202,8 @@ export default function page() {
       <main className="lg:container mx-auto py-0 px-6">
         <div className="space-y-8">
           <div className="space-y-4 mt-6">
-            <h1 className="text-3xl font-bold text-center text-hciSecondary">
-              Pacemakers
-            </h1>
-            <p className="text-start">
+            <H1 title="Pacemakers" />
+            <p className="text-start font-light">
               Pacemakers are medical devices implanted in the body to regulate
               heart rhythms, ensuring that the heart beats at a normal pace.
               These devices are designed to manage and treat various heart
@@ -211,10 +212,8 @@ export default function page() {
             </p>
           </div>
           <div className="space-y-4">
-            <h1 className="text-xl font-bold text-center">
-              What are Pacemakers?
-            </h1>
-            <p className="text-start">
+            <H2 title="What are Pacemakers?" />
+            <p className="text-start font-light">
               Pacemakers are small devices placed under the skin, often in the
               chest, to help control abnormal heart rhythms. They emit
               electrical pulses to stimulate the heart when it beats too slowly
@@ -224,10 +223,8 @@ export default function page() {
             </p>
           </div>
           <div className="space-y-4">
-            <h2 className="lg:text-2xl text-xl font-bold text-center text-hciSecondary">
-              How do Pacemakers Work?
-            </h2>
-            <p className="mt-4 text-start">
+            <H2 title="How do Pacemakers Work?" className="text-center text-hciSecondary"/>
+            <p className="mt-4 text-start font-light">
               The heart’s natural electrical system signals the heart chambers
               to pump blood in a coordinated rhythm. When this system
               malfunctions, a pacemaker steps in to send electrical impulses
@@ -243,6 +240,7 @@ export default function page() {
               title="What Conditions do Pacemakers Treat?"
               text="Pacemakers are used to address several conditions, including:"
               header=""
+              textCss="font-light py-2"
               data={heartConditionsList}
               myclass="grid grid-cols-1"
             />
@@ -251,6 +249,7 @@ export default function page() {
               title="Signs you might need a Pacemaker"
               text="Some symptoms that may indicate the need for a pacemaker include:"
               header=""
+              textCss="font-light py-2"
               data={heartsConditionsList}
               myclass="grid grid-cols-1"
             />
@@ -269,7 +268,7 @@ export default function page() {
               className="border border-[#D84498] rounded-lg shadow-lg flex flex-col p-4"
               key={index}
             >
-              <h2 className="font-semibold">{items.title}</h2>
+              <H2 title={items.title} className="font-semibold"/>
               <p className="font-light">{items.paragraph}</p>
             </div>
           ))}
@@ -286,8 +285,9 @@ export default function page() {
           <DataLists
             desc="While pacemaker implantation is generally safe, potential risks include:"
             data={riskDetails}
+            boxClass="h-[300px]"
           />
-          <DataLists desc="" data={benfitsDetails} />
+          <DataLists desc="" data={benfitsDetails} boxClass="h-[300px]" />
         </div>
         <div>
           <DataLists
@@ -296,7 +296,7 @@ export default function page() {
           />
         </div>
 
-        <p className="mb-0">
+        <p className="mb-0 font-light">
           Pacemakers represent a transformative technology for those with heart
           rhythm disorders, enabling them to lead healthier, more active lives.
         </p>

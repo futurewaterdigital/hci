@@ -1,13 +1,13 @@
 import React from 'react'
-
+import H3 from '@/components/ui/h3'
 function CtaButton({ data }) {
   return (
     <>
-      <h3 className="text-2xl font-bold mb-4 text-center ">
+      <H3 className="font-bold mb-4 text-center ">
         {data.contact.title}
-      </h3>
-      <div className="text-center bg-gradient-to-l from-hciSecondary to-hciPrimary rounded-lg py-6 text-white min-h-40 flex justify-center flex-col">
-        <h4 className="font-semibold uppercase">{data.contact.head}</h4>
+      </H3>
+      <div className="text-center bg-gradient-to-l from-hciSecondary to-hciPrimary rounded-lg py-1 pb-8 text-white flex justify-center flex-col">
+        <H3 title={data.contact.head} className="font-semibold uppercase text-white"/>
         <p className="mt-4 font-light">{data.contact.content}</p>
       </div>
     </>

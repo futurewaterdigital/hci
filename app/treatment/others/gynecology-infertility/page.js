@@ -5,7 +5,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+
 import FlexBox from '@/components/cardiacComponents/FlexBox'
 import ListBox from '@/components/cardiacComponents/ListBox'
 import CTaButton from '@/components/cardiacComponents/CtaButton'
@@ -116,15 +117,15 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
         <H2
-          text={data.description}
-          textClass="text-start font-semibold text-xl"
+          title={data.description}
+          className="text-start font-semibold text-xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
 
         <div className="grid lg:grid-cols-2 gap-4 pt-8">
           <div>
-            <H2 text="Conditions Treated by Gynecologists" />
+            <H2 title="Conditions Treated by Gynecologists" />
             <p className="font-light min-h-16">
               Gynecologists in HCI’s network address a variety of health
               concerns, including:
@@ -132,7 +133,7 @@ function GeneralSurgery() {
             <DataLists data={data.complications} />
           </div>
           <div>
-            <H2 text="Infertility Services" />
+            <H2 title="Infertility Services" />
             <p className="font-light min-h-16">
               For couples facing challenges in starting a family, HCI offers
               access to cutting-edge fertility care, including:
@@ -142,8 +143,8 @@ function GeneralSurgery() {
         </div>
 
         <H2
-          text="Why Choose HCI for Gynecology and Infertility Care?"
-          textClass="text-2xl font-bold mb-4 text-center"
+          title="Why Choose HCI for Gynecology and Infertility Care?"
+          className="text-2xl font-bold mb-4 text-center"
         />
         <p className="font-light">
           HCI’s holistic approach ensures that women receive the highest
@@ -153,8 +154,8 @@ function GeneralSurgery() {
         <ListBox data={data} />
         <div className="pt-8">
           <H2
-            text="Comprehensive Care for Women’s Health"
-            textClass="text-2xl font-bold mb-4 text-center"
+            title="Comprehensive Care for Women’s Health"
+            className="text-2xl font-bold mb-4 text-center"
           />
           <p className="font-light">
             At HCI, we recognize that women’s health requires a delicate balance

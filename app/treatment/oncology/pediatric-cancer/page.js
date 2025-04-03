@@ -4,12 +4,12 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-// import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 // import TextComponent from '@/components/Common/TextComponent'
 import Link from 'next/link'
+import H3 from '@/components/ui/h3'
 
 const data = {
   title: 'Pediatric Cancer',
@@ -265,7 +265,7 @@ function PediatricCancer() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
 
         <div className="space-y-2 mb-6">
           <DataBoxes
@@ -286,8 +286,8 @@ function PediatricCancer() {
           </div>
           <div>
             <H2
-              text="Diagnosis of Pediatric Cancer"
-              textClass="text-xl font-semibold mb-4"
+              title="Diagnosis of Pediatric Cancer"
+              className="text-xl font-semibold mb-4"
             />
             <p className="mb-4 font-light">
               Childhood cancers are often discovered through persistent symptoms
@@ -299,9 +299,8 @@ function PediatricCancer() {
                   key={index}
                   className="border-b border-yellow-200 pb-2 last:border-0"
                 >
-                  <h3 className="font-semibold text-yellow-800">
-                    {method.heading}
-                  </h3>
+
+                  <H3 title={method.heading} className="font-semibold text-yellow-800"/>
                   <p className="text-sm">{method.description}</p>
                 </div>
               ))}
@@ -310,8 +309,8 @@ function PediatricCancer() {
         </div>
 
         <H2
-          text="Causes of Pediatric Cancer"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Causes of Pediatric Cancer"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <div className="mb-8">
           {data.causes.map((cause, index) => (
@@ -331,8 +330,8 @@ function PediatricCancer() {
         </div>
 
         <H2
-          text="Treatment Options for Pediatric Cancer"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Treatment Options for Pediatric Cancer"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="font-light mb-4">
           Childhood cancer treatment varies based on the type and stage of
@@ -365,8 +364,8 @@ function PediatricCancer() {
         <Conclusion data={data.conclusion} />
 
         <H2
-          text="To Consult The Best Doctor For The Treatment Of Pediatric Cancer, Click Here"
-          textClass="text-xl font-semibold mb-4 text-center text-pink-600"
+          title="To Consult The Best Doctor For The Treatment Of Pediatric Cancer, Click Here"
+          className="text-xl font-semibold mb-4 text-center text-pink-600"
         />
 
         <div className="space-y-2 mb-8">

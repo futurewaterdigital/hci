@@ -4,8 +4,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
 // import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
@@ -213,11 +213,11 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
-          text="Symptoms"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Symptoms"
+          className="font-semibold mb-4 text-center"
         />
         <p className="font-light" text="">
           The signs and symptoms of brain metastases are largely dependent on
@@ -231,8 +231,8 @@ function GeneralSurgery() {
           <li>Weakness or numbness on one side of the body</li>
         </ul>
         <H2
-          text="When to Seek Medical Attention"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="When to Seek Medical Attention"
+          className="font-semibold mb-4 text-center"
         />
         <p className="font-light" text="">
           If you experience persistent symptoms that concern you, it&apos;s
@@ -241,7 +241,7 @@ function GeneralSurgery() {
           with diagnosis and treatment.
         </p>
         <KnowMore title={data.title} />
-        <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
           Brain metastases occurs when cancer cells detach from their original
           site and spread through the bloodstream or lymphatic system to the
@@ -252,8 +252,8 @@ function GeneralSurgery() {
         </p>
         <KnowMore title={data.title} />
         <H2
-          text="Risk Factors"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Risk Factors"
+          className="font-semibold mb-4 text-center"
         />
         <p className="font-light" text="">
           Any form of cancer has the potential to metastasise to the brain, but
@@ -268,8 +268,8 @@ function GeneralSurgery() {
         </ul>
         {/* <DataSurgery data={data.section_1} /> */}
         <H2
-          text="Diagnosis of Brain Metastases"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Diagnosis of Brain Metastases"
+          className="font-semibold mb-4 text-center"
         />
         <p className="font-light" text="">
           Diagnosing brain metastases typically involves a series of tests and
@@ -320,8 +320,8 @@ function GeneralSurgery() {
         </div> */}
         <div>
           <H2
-            text="Treatment"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            title="Treatment"
+            className="font-semibold mb-4 text-center"
           />
           <p className="font-light">
             In addition to the primary treatment methods previously mentioned,

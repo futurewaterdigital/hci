@@ -1,15 +1,13 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
 import Title from '@/components/cardiacComponents/Title'
-// import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-// import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
-//  import TextComponent from '@/components/Common/TextComponent'
 import Link from 'next/link'
+import H3 from '@/components/ui/h3'
 
 const data = {
   title: 'Hematology',
@@ -240,11 +238,11 @@ function Hematology() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
 
         <H2
-          text="Types of Hematological Disorders"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Types of Hematological Disorders"
+          className="text-2xl font-semibold mb-4 text-center"
         />
 
         <div className="mb-8 relative">
@@ -258,9 +256,7 @@ function Hematology() {
 
           <div className="md:w-2/3 space-y-6">
             <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="text-xl font-semibold text-blue-600 mb-3">
-                Anemias
-              </h3>
+              <H3 title="Anemias" className="text-xl font-semibold text-blue-600 mb-3"/>
               <div className="space-y-2">
                 {data.types.anemias.map((anemia, index) => (
                   <div
@@ -277,9 +273,7 @@ function Hematology() {
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="text-xl font-semibold text-red-600 mb-3">
-                Bleeding Disorders
-              </h3>
+              <H3 title="Bleeding Disorders" className="text-xl font-semibold text-red-600 mb-3"/>
               <div className="space-y-2">
                 {data.types.bleeding.map((disorder, index) => (
                   <div
@@ -296,9 +290,7 @@ function Hematology() {
             </div>
 
             <div className="border border-gray-200 rounded-lg p-4">
-              <h3 className="text-xl font-semibold text-purple-600 mb-3">
-                Hematological Cancers
-              </h3>
+              <H3 title="Hematological Cancers" className="text-xl font-semibold text-purple-600 mb-3"/>
               <div className="space-y-2">
                 {data.types.cancers.map((cancer, index) => (
                   <div
@@ -329,8 +321,8 @@ function Hematology() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
             <H2
-              text="Causes"
-              textClass="text-xl font-semibold mb-4 text-center"
+              title="Causes"
+              className="text-xl font-semibold mb-4 text-center"
             />
             <div className="space-y-2">
               <DataBoxes
@@ -353,8 +345,8 @@ function Hematology() {
 
           <div>
             <H2
-              text="Diagnosis"
-              textClass="text-xl font-semibold mb-4 text-center"
+              title="Diagnosis"
+              className="text-xl font-semibold mb-4 text-center"
             />
             <div className="space-y-2">
               <DataBoxes
@@ -377,8 +369,8 @@ function Hematology() {
         </div>
 
         <H2
-          text="Treatment"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Treatment"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="font-light mb-4">
           Treatment for blood cancer depends on its origin, type, and individual
@@ -387,10 +379,8 @@ function Hematology() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           <div className="border border-gray-200 rounded-lg p-4 shadow-sm">
-            <h3 className="text-lg font-semibold text-blue-600 mb-2">
-              Medications
-            </h3>
-            <p className="text-gray-700 mb-2">
+            <H3 title="Medications" className="text-lg font-semibold text-blue-600 mb-2"/>
+            <p className="text-gray-700 mb-2 font-light">
               Iron supplements for iron deficiency anemia
             </p>
             <ul className="text-sm text-gray-600 list-disc pl-5">
@@ -400,10 +390,8 @@ function Hematology() {
           </div>
 
           <div className="border border-gray-200 rounded-lg p-4 shadow-sm">
-            <h3 className="text-lg font-semibold text-blue-600 mb-2">
-              Chemotherapy and Radiation
-            </h3>
-            <p className="text-gray-700 mb-2">
+            <H3 title="Chemotherapy and Radiation" className="text-lg font-semibold text-blue-600 mb-2"/>   
+            <p className="text-gray-700 mb-2 font-light">
               Used for leukemia, lymphoma, and multiple myeloma
             </p>
             <ul className="text-sm text-gray-600 list-disc pl-5">
@@ -413,10 +401,8 @@ function Hematology() {
           </div>
 
           <div className="border border-gray-200 rounded-lg p-4 shadow-sm">
-            <h3 className="text-lg font-semibold text-blue-600 mb-2">
-              Blood Transfusions
-            </h3>
-            <p className="text-gray-700 mb-2">
+            <H3 title="Blood Transfusions" className="text-lg font-semibold text-blue-600 mb-2"/>
+            <p className="text-gray-700 mb-2 font-light">
               For severe anemia or blood loss
             </p>
             <ul className="text-sm text-gray-600 list-disc pl-5">
@@ -426,10 +412,8 @@ function Hematology() {
           </div>
 
           <div className="border border-gray-200 rounded-lg p-4 shadow-sm">
-            <h3 className="text-lg font-semibold text-blue-600 mb-2">
-              Targeted Therapy & Immunotherapy
-            </h3>
-            <p className="text-gray-700 mb-2">
+            <H3 title="Targeted Therapy & Immunotherapy" className="text-lg font-semibold text-blue-600 mb-2"/>
+            <p className="text-gray-700 mb-2 font-light">
               Advanced treatments targeting specific cancer characteristics
               (e.g., CLL)
             </p>
@@ -440,10 +424,8 @@ function Hematology() {
           </div>
 
           <div className="border border-gray-200 rounded-lg p-4 shadow-sm">
-            <h3 className="text-lg font-semibold text-blue-600 mb-2">
-              Bone Marrow Transplants
-            </h3>
-            <p className="text-gray-700 mb-2">
+            <H3 title="Bone Marrow Transplants" className="text-lg font-semibold text-blue-600 mb-2"/>
+            <p className="text-gray-700 mb-2 font-light">
               A curative option for leukemia and aplastic anemia
             </p>
             <ul className="text-sm text-gray-600 list-disc pl-5">
@@ -455,10 +437,8 @@ function Hematology() {
           </div>
 
           <div className="border border-gray-200 rounded-lg p-4 shadow-sm">
-            <h3 className="text-lg font-semibold text-blue-600 mb-2">
-              CAR-T Cell Therapy
-            </h3>
-            <p className="text-gray-700 mb-2">
+            <H3 title="CAR-T Cell Therapy" className="text-lg font-semibold text-blue-600 mb-2"/>
+            <p className="text-gray-700 mb-2 font-light">
               Chimeric antigen receptor (CAR) T-cell therapy is a cancer
               treatment that uses genetically modified T cells
             </p>
@@ -476,8 +456,8 @@ function Hematology() {
         <Conclusion data={data.conclusion} />
 
         <H2
-          text="To Consult With The Best Doctor For Treatment Of Hematological Disorders, Click Here"
-          textClass="text-xl font-semibold mb-4 text-center text-blue-600"
+          title="To Consult With The Best Doctor For Treatment Of Hematological Disorders, Click Here"
+          className="text-xl font-semibold mb-4 text-center text-blue-600"
         />
 
         <div className="space-y-2 mb-8">

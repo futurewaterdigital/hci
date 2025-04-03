@@ -1,7 +1,8 @@
 import React from 'react'
 import Title from '@/components/cardiacComponents/Title'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
 import Link from 'next/link'
+import H3 from '@/components/ui/h3'
 
 const data = {
   title: 'Gallbladder Cancer',
@@ -235,20 +236,16 @@ function GallbladderCancer() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Title title={data.title} />
       <div className="mt-6">
-        <p className="text-gray-600 text-lg">{data.description}</p>
+        <p className="text-gray-600 text-lg font-light">{data.description}</p>
       </div>
-
       {/* Causes Section */}
       <div className="mt-12">
-        <H2
-          text={data.causes[0].heading}
-          textClass="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6">{data.causes[0].subheading}</p>
+        <H2 title={data.causes[0].heading} className="font-semibold mb-4" />
+        <p className="text-gray-600 mb-6 font-light">{data.causes[0].subheading}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.causes[0].items.map((cause, idx) => (
             <div key={idx} className={cause.className}>
-              <h3 className="font-semibold mb-2">{cause.title}</h3>
+              <H3 title={cause.title} className="font-semibold mb-2"/>
               <p className="text-sm">{cause.description}</p>
             </div>
           ))}
@@ -265,11 +262,8 @@ function GallbladderCancer() {
 
       {/* Symptoms Section */}
       <div className="mt-12">
-        <H2
-          text={data.symptoms[0].heading}
-          textClass="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6">{data.symptoms[0].description}</p>
+        <H2 title={data.symptoms[0].heading} className="font-semibold mb-4" />
+        <p className="text-gray-600 mb-6 font-light">{data.symptoms[0].description}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {data.symptoms[0].items.map((symptom, idx) => (
             <div key={idx} className={symptom.className}>
@@ -278,14 +272,10 @@ function GallbladderCancer() {
           ))}
         </div>
       </div>
-
       {/* Diagnosis Section */}
       <div className="mt-12">
-        <H2
-          text={data.diagnosis[0].heading}
-          textClass="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6">{data.diagnosis[0].description}</p>
+        <H2 title={data.diagnosis[0].heading} className="font-semibold mb-4" />
+        <p className="text-gray-600 mb-6 font-light">{data.diagnosis[0].description}</p>
         <div className="space-y-4">
           {data.diagnosis[0].items.map((test, idx) => (
             <div key={idx} className={test.className}>
@@ -297,7 +287,7 @@ function GallbladderCancer() {
                   ))}
                 </ul>
               ) : (
-                <p>{test.description}</p>
+                <p className="font-light">{test.description}</p>
               )}
             </div>
           ))}
@@ -312,14 +302,10 @@ function GallbladderCancer() {
           </Link>
         </div>
       </div>
-
       {/* Treatments Section */}
       <div className="mt-12">
-        <H2
-          text="Treatment for Gallbladder Cancer"
-          textClass="text-2xl font-semibold mb-6 text-center"
-        />
-        <p className="text-gray-600 mb-6">
+        <H2 title="Treatment for Gallbladder Cancer" className="font-semibold mb-6 text-center" />
+        <p className="text-gray-600 mb-6 font-light">
           The treatment approach for gallbladder cancer depends on the stage of
           the disease, the patient&apos;s overall health, and their preferences.
           Treatment options may include:
@@ -330,11 +316,9 @@ function GallbladderCancer() {
               key={index}
               className="border border-pink-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
             >
-              <h3 className="text-lg font-semibold mb-3 text-pink-600">
-                {treatment.heading}
-              </h3>
+              <H3 title={treatment.heading} className="text-lg font-semibold mb-3 text-pink-600"/>
               {treatment.description && (
-                <p className="text-gray-600 mb-4">{treatment.description}</p>
+                <p className="text-gray-600 mb-4 font-light">{treatment.description}</p>
               )}
               {treatment.items && treatment.items.length > 0 && (
                 <div className="space-y-4">
@@ -350,15 +334,13 @@ function GallbladderCancer() {
           ))}
         </div>
       </div>
-
       {/* Conclusion */}
       <div className="mt-12">
         <div className="bg-gray-50 p-6 rounded-lg">
-          <H2 text="Conclusion" textClass="text-xl font-semibold mb-4" />
-          <p className="text-gray-600">{data.conclusion[0].paragraph}</p>
+          <H2 title="Conclusion" className="font-semibold mb-4" />
+          <p className="text-gray-600 font-light">{data.conclusion[0].paragraph}</p>
         </div>
       </div>
-
       {/* Links */}
       <div className="mt-8 space-y-4">
         {data.links.map((link, index) => (

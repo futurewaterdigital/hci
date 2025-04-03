@@ -5,9 +5,14 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
+import KnowMore from '@/components/ui/KnowMore'    
 import DataSurgery from '@/components/cardiacComponents/Button'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
+import H1 from '@/components/ui/h1'
+import H2 from '@/components/ui/h2'
+
+
+
 
 const title = 'Congenital Heart Disease (CHD)'
 const symptomsData = [
@@ -126,25 +131,30 @@ const surgeryData = [
     title: 'Genetic factors',
     description:
       'Inherited mutations or chromosomal abnormalities, such as Down Syndrome.',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: 'Maternal health',
     description:
       'Conditions like diabetes, viral infections (e.g., rubella), or phenylketonuria.',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: 'Medications',
     description:
       'Exposure to certain drugs for high blood pressure, cholesterol, or acne during pregnancy.',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: 'Lifestyle factors',
     description:
       'Smoking, alcohol consumption, or exposure to secondhand smoke.',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: 'Environmental influences',
     description: 'Exposure to toxins during pregnancy.',
+    minHeight: 'min-h-[100px] text-center',
   },
 ]
 const footerData = [
@@ -170,10 +180,8 @@ function page() {
       </div>
       <main className="lg:container mx-auto py-8 px-6">
         <section className="space-y-4">
-          <h1 className="text-3xl font-bold text-pink-600 mb-4 text-center">
-            {title}
-          </h1>
-          <p className="text-gray-700 mb-6">
+          <H1 title={title} />
+          <p className="text-gray-700 mb-6 font-light">
             Congenital Heart Disease (CHD) refers to structural abnormalities in
             the heart that are present at birth. These defects disrupt the
             normal flow of blood through the heart, ranging from minor
@@ -182,7 +190,7 @@ function page() {
             allow many individuals with CHD to live healthy lives into
             adulthood, with some requiring treatment later in life.
           </p>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 mb-6 font-light">
             CHD can affect various parts of the heart, including walls, valves,
             and arteries. The two primary categories of CHD are cyanotic CHD
             (low oxygen levels in the blood) and acyanotic CHD (where oxygen
@@ -201,12 +209,14 @@ function page() {
             text="Symptoms of CHD vary depending on the type and severity of the condition. Some defects present symptoms at birth, while others may become evident later in childhood or adulthood. Common symptoms include:"
             header=""
             myclass="grid lg:grid-cols-2"
+            textCss="font-light py-4"
+            titleCss="text-2xl font-bold text-center mt-8"
           />
           <KnowMore title={title} />
         </div>
         <div className="py-8">
-          <h2 className="text-2xl font-bold mb-4 text-center">Diagnosis</h2>
-          <p className="mb-8">
+          <H2 title="Diagnosis" className="text-center mb-4"/>
+          <p className="mb-2 font-light">
             Healthcare providers diagnose CHD using various methods during
             pregnancy, infancy, or later in life:
           </p>
@@ -219,15 +229,19 @@ function page() {
               <DataLists data={heartEvaluation} />
             </div>
           </div>
+          <KnowMore title={title} />
         </div>
         <div>
           <DataBoxes
             title="Treatment"
+            textCss="font-light py-4"
+            titleCss="text-2xl font-bold text-center mt-8"
             data={heartTreatmentOptions}
             text="Treatment depends on the type and severity of CHD. Options include:"
             header=""
             myclass="grid lg:grid-cols-2"
           />
+          <p className="font-light py-4">Complications from treatment may include bleeding, infection, arrhythmias, or scar tissue formation. Recovery time varies based on the procedure, with some patients needing several days to months for full recovery.</p>
         </div>
         <div className="container mx-auto py-8 space-y-6">
           <Conclusion data={footerData} />

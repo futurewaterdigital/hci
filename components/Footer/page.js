@@ -32,7 +32,7 @@ export default function Footer() {
             width={250}
             height={250}
           />
-          <p className="py-4 text-[12px]">
+          <p className="py-4 text-[12px] font-light">
             Healthcare International is a medical value travel undertaking that
             connects patients with world-class healthcare services across India
             and other medical destinations. It is a top-tier hospital network

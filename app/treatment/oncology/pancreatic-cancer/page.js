@@ -1,7 +1,8 @@
 import React from 'react'
 import Title from '@/components/cardiacComponents/Title'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
 import Link from 'next/link'
+import H3 from '@/components/ui/h3'
 
 const data = {
   title: 'Pancreatic Cancer',
@@ -147,20 +148,20 @@ function PancreaticCancer() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Title title={data.title} className="text-pink-500" />
       <div className="mt-6">
-        <p className="text-gray-600 text-lg">{data.description}</p>
+        <p className="text-gray-600 text-lg font-light">{data.description}</p>
       </div>
 
       {/* Types Section */}
       <div className="mt-12">
         <H2
-          text={data.types[0].heading}
-          textClass="text-2xl font-semibold mb-6 text-center"
+          title={data.types[0].heading}
+          className="text-2xl font-semibold mb-6 text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {data.types[0].items.map((type, idx) => (
             <div key={idx} className={type.className}>
-              <h3 className="font-semibold mb-2 text-lg">{type.title}</h3>
-              <p className="text-gray-600">{type.description}</p>
+              <H3 title={type.title} className="font-semibold mb-2 text-lg"/>
+              <p className="text-gray-600 font-light">{type.description}</p>
             </div>
           ))}
         </div>
@@ -178,10 +179,10 @@ function PancreaticCancer() {
       {/* Symptoms Section */}
       <div className="mt-12">
         <H2
-          text={data.symptoms[0].heading}
-          textClass="text-2xl font-semibold mb-4"
+          title={data.symptoms[0].heading}
+          className="text-2xl font-semibold mb-4"
         />
-        <p className="text-gray-600 mb-6">{data.symptoms[0].description}</p>
+        <p className="text-gray-600 mb-6 font-light">{data.symptoms[0].description}</p>
         <div className="space-y-2">
           {data.symptoms[0].items.map((symptom, idx) => (
             <div key={idx} className={symptom.className}>
@@ -204,16 +205,14 @@ function PancreaticCancer() {
       {/* Treatment Section */}
       <div className="mt-12">
         <H2
-          text={data.treatments[0].heading}
-          textClass="text-2xl font-semibold mb-6"
+          title={data.treatments[0].heading}
+          className="text-2xl font-semibold mb-6"
         />
         <div className="border border-pink-200 rounded-lg p-6">
           <div className="space-y-6">
             {data.treatments[0].items.map((treatment, idx) => (
               <div key={idx} className="space-y-2">
-                <h3 className="text-lg font-semibold text-pink-600">
-                  {treatment.title}
-                </h3>
+                <H3 title={treatment.title} className="text-lg font-semibold text-pink-600"/>
                 {treatment.items ? (
                   <div className="space-y-2 pl-4">
                     {treatment.items.map((item, i) => (
@@ -224,7 +223,7 @@ function PancreaticCancer() {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-gray-600">{treatment.description}</p>
+                  <p className="text-gray-600 font-light">{treatment.description}</p>
                 )}
               </div>
             ))}
@@ -244,7 +243,7 @@ function PancreaticCancer() {
 
       {/* Diagnosis Note */}
       <div className="mt-12">
-        <p className="text-gray-600 italic">{data.diagnosis}</p>
+        <p className="text-gray-600 italic font-light">{data.diagnosis}</p>
       </div>
 
       {/* Links */}

@@ -4,8 +4,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
@@ -259,11 +259,11 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start" />
         <p className="font-light">{data.overview}</p>
         <H2
           text="Types of Gastric Ulcers"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          className="font-semibold mb-4 text-center"
         />
         <div className="mb-8">
           <DataLists
@@ -328,7 +328,7 @@ function GeneralSurgery() {
             <img src="/gastroenterology/digestive-system.png" alt="" />
           </div>
         </div> */}
-        <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-semibold mb-4 text-center" />
         {/* <p className="font-light">
           While the exact cause of gallstones isn’t fully understood, several
           factors may increase the risk:
@@ -344,7 +344,7 @@ function GeneralSurgery() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-1 gap-4">
           <div>
             <DataBoxes
               title="Symptoms"
@@ -352,7 +352,7 @@ function GeneralSurgery() {
               titleCss="text-black font-semibold text-center text-2xl"
               header=""
               data={data.symptoms}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
             <KnowMore title={data.title} />
           </div>
@@ -363,7 +363,7 @@ function GeneralSurgery() {
               header=""
               titleCss="text-black font-semibold text-center text-2xl"
               data={data.diagnosis}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
           </div>
         </div>
@@ -371,7 +371,7 @@ function GeneralSurgery() {
         <div>
           <H2
             text="Treatment"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            className="font-semibold mb-4 text-center"
           />
           <p className="font-light">
             The treatment approach depends on the severity of the symptoms and
@@ -384,12 +384,13 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.complications}
               ulClass="list-disc list-outside"
+
               // boxClass="grid grid-cols-2"
             />
           </div>
           {/* <H2
             text="Lifestyle Tips to Prevent Gallbladder Stones"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            className="font-semibold mb-4 text-center"
           /> */}
           {/* <p className="font-light">
             While surgery can effectively address existing stones, adopting

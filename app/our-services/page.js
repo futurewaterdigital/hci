@@ -4,7 +4,10 @@ import Banner from '@/components/Common/Banner'
 const bannerImage = '/images/Neurology.png'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import Title from '@/components/cardiacComponents/Title'
-import H2title from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+import H3 from '@/components/ui/h3'
+
+
 
 const helpData = [
   {
@@ -129,9 +132,9 @@ function Page() {
             healthcare providers, and addressing your concerns - allowing you to
             focus on what truly matters: your health and recovery.
           </p>
-          <H2title
-            text="Helping You Find The Right Answers"
-            textClass="text-xl font-roboto text-start"
+          <H2
+            title="Helping You Find The Right Answers"
+            textClass="text-start"
           />
           <p className="font-roboto font-light">
             Healthcare can be complex, and seeking treatment abroad adds an
@@ -145,9 +148,9 @@ function Page() {
               </li>
             ))}
           </ul>
-          <H2title
-            text="How We Help"
-            textclassName="text-3xl font-regular mb-4 text-center font-roboto"
+          <H2
+            title="How We Help"
+            textclassName="font-regular mb-4 text-center font-roboto"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {helpData.map((section, index) => (
@@ -162,9 +165,7 @@ function Page() {
               </div>
             ))}
           </div>
-          <h3 className="text-3xl font-regular text-hciPrimary font-roboto">
-            Handling Logistics
-          </h3>
+          <H3 title="Handling Logistics" className="text-3xl font-regular font-roboto text-center text-hciPrimary"/>
 
           <p className="font-light">
             We manage all logistics to make your experience as smooth as
@@ -178,9 +179,7 @@ function Page() {
             ))}
           </ul>
 
-          <h3 className="text-3xl font-regular font-roboto text-center text-hciPrimary">
-            What treatments do we specialize in?
-          </h3>
+          <H3 title="What treatments do we specialize in?" className="text-3xl font-regular font-roboto text-center text-hciPrimary"/>
           <p className="text-center font-light">
             With experience in over 50 specialties, HCI has supported patients
             from 125+ countries. Our specialties include:

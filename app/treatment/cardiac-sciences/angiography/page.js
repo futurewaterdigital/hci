@@ -1,7 +1,9 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
 const bannerImage = '/cardio/angiography.png'
+import H1 from '@/components/ui/h1'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import DataSurgery from '@/components/cardiacComponents/Button'
@@ -131,18 +133,22 @@ const surgeryData = [
   {
     title: 'Coronary Artery Disease',
     description: '(Narrowing or blockages in heart arteries.)',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: 'Peripheral Artery Disease',
     description: '(Blockages in leg arteries.)',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: 'Blood Clots',
     description: '',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: 'Aneurysms',
     description: '(Weakened arterial walls that can bulge and rupture.)',
+    minHeight: 'min-h-[100px] text-center',
   },
 ]
 
@@ -151,25 +157,23 @@ function page() {
     <>
       <Banner image={bannerImage} />
       <div className="container mx-auto space-y-8 mt-8">
-        <h1 className="text-4xl font-bold text-pink-500 text-center">
-          Angiography
-        </h1>
-        <p className="text-center">
+      <div className="container mx-auto space-y-2 px-6">
+      <H1 title="Angiography" />
+        <p className="text-start font-light">
           An angiogram is a minimally invasive diagnostic procedure used to
           assess the condition of blood vessels and identify blockages or
           abnormalities. By injecting a contrast material into the bloodstream,
           healthcare providers can observe blood flow through an X-ray or by
           using advanced imaging techniques.
         </p>
-
+        </div>
         {/* <!-- Content --> */}
-        <div className="container mx-auto p-6">
-          <section className="relative py-8">
-            <div className="absolute inset-0 flex items-center justify-center"></div>
-          </section>
+        <div className="container mx-auto">
+        
+        
           {/* <!-- Content Section --> */}
           <section className="container mx-auto px-6">
-            <p className="mb-8">
+            <p className="mb-8 font-light">
               Angiograms are instrumental in diagnosing and planning treatment
               for conditions such as:
             </p>
@@ -181,7 +185,9 @@ function page() {
               data={conditionsData}
               text="Angiography is typically performed to investigate and address issues caused by:"
               header=""
+              textCss="font-light py-4"
               myclass="grid grid-cols-2"
+              titleCss="text-2xl font-bold text-center mt-8"
             />
             <div className="grid grid-cols-1 gap-4 mt-8">
               <DataBoxes
@@ -190,6 +196,8 @@ function page() {
                 header=""
                 data={symptomsData}
                 myclass="grid grid-cols-2"
+                textCss="font-light py-4"
+                titleCss="text-2xl font-bold text-center mt-8"
               />
               <DataBoxes
                 title="Diagnosis"
@@ -197,19 +205,19 @@ function page() {
                 header=""
                 data={diagnosisData}
                 myclass="grid grid-cols-2"
+                textCss="font-light py-4"
+                titleCss="text-2xl font-bold text-center mt-8"
               />
             </div>
 
-            <h2 className="text-2xl font-bold mb-4 text-center mt-8">
-              Treatment
-            </h2>
-            <p className="mb-8">
+            <H2 title="Treatment" className="text-center mt-8"/>
+            <p className="mb-2 font-light">
               Angiography not only diagnoses conditions but also facilitates
               treatment:
             </p>
             <DataLists data={treatmentOptions} />
 
-            <p className="mb-8">
+            <p className="my-8 font-light">
               Angiography is a vital diagnostic and interventional procedure
               that plays a critical role in identifying and treating blood
               vessel abnormalities. By providing detailed imaging of blood flow,
@@ -222,7 +230,7 @@ function page() {
               safer and more precise, making it an indispensable tool in modern
               cardiovascular and vascular care.
             </p>
-            <div className="space-y-6">
+            <div className="space-y-6 mt-4">
               <FooterLinks head="Angiography" />
               <BookButton />
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import H1 from '@/components/ui/h1'
 
 import { bannerContent } from '../../../utils/data'
 
@@ -12,9 +13,7 @@ function Banner() {
         <p className="text-4xl text-center">
           The Best Doctors and Hospitals for your
         </p>
-        <h1 className="text-5xl text-center font-medium">
-          Medical Condition Guided by Us
-        </h1>
+        <H1 title="Medical Condition Guided by Us" />
       </div>
 
       <div className="absolute inset-0 grid grid-cols-5 ">

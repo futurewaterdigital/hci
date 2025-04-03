@@ -13,6 +13,8 @@ import Testimonials from '@/components/HomePage/Testimonials/page'
 import NeuroMenu from '../../../components/NeuroMenu/page'
 import GastroenterologyMenu from '../../../components/GastroenterologyMenu/page'
 import OncologyMenu from '../../../components/OncologyMenu/page'
+import H1 from '@/components/ui/h1'
+
 // Dynamically import Footer to lazy-load
 const Footer = dynamic(() => import('../../../components/Footer/page'), {
   loading: () => <div className="bg-gray-300 h-24 w-full"></div>, // Placeholder while Footer is loading
@@ -103,9 +105,7 @@ export default function City({ params }) {
 
               <div className="w-9/12 mx-auto py-4">
                 <div className="">
-                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[30px] py-4">
-                    {items.title.rendered}
-                  </h1>
+                  <H1 title={items.title.rendered} />
                 </div>
                 <div
                   dangerouslySetInnerHTML={{ __html: items.content.rendered }}

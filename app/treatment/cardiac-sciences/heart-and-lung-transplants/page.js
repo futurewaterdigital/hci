@@ -6,6 +6,8 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
+import H3 from '@/components/ui/h3'
+import H1 from '@/components/ui/h1'
 
 const title = 'Heart and Lung Transplants'
 const surgeryData = [
@@ -13,16 +15,19 @@ const surgeryData = [
     title: 'Heart transplant',
     description:
       'A procedure that replaces a diseased heart with a healthy donor heart to restore normal cardiac function.',
+    minHeight: 'text-center min-h-[100px]',
   },
   {
     title: 'Lung transplant',
     description:
       'A surgical intervention to replace one or both diseased lungs with donor lungs, enabling better oxygenation and respiratory function.',
+    minHeight: 'text-center min-h-[100px]',
   },
   {
     title: 'Heart-lung transplant',
     description:
       'For some severe cases, both organs are transplanted together to address combined cardiac and respiratory failure.',
+    minHeight: 'text-center min-h-[100px]',
   },
 ]
 const heartTransplantData = [
@@ -251,16 +256,14 @@ const longTermOutlooks = [
 
 function page() {
   return (
-    <div>
+    <>
       <div className="relative">
         <Banner image={bannerImage} />
       </div>
       <div className="lg:container mx-auto p-6">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold text-center text-hciSecondary">
-            {title}
-          </h1>
-          <p className="text-start">
+          <H1 title={title} />
+          <p className="text-start font-light">
             Heart and lung transplants are complex surgical procedures that
             replace diseased or failing organs with healthy ones from a donor.
             These life-saving surgeries are often the last resort for
@@ -271,16 +274,13 @@ function page() {
       </div>
 
       <div className="container mx-auto">
-        <h3 className="text-2xl font-bold text-center mb-6">
-          What are Heart and Lung Transplants?
-        </h3>
+        <H3 title="What are Heart and Lung Transplants?" className="font-regular font-roboto text-center text-hciPrimary"/>
+        
         <DataSurgery data={surgeryData} />
       </div>
       <div className="space-y-4 container mx-auto py-8">
-        <h3 className="text-2xl font-bold text-center mb-6">
-          When are these Procedures Needed?
-        </h3>
-        <p>
+        <H3 title="When are these Procedures Needed?" className="font-regular font-roboto text-center text-hciPrimary"/>
+        <p className="font-light">
           Transplants are considered for patients whose conditions cannot be
           managed with medications or other interventions. Common reasons
           include:
@@ -288,18 +288,21 @@ function page() {
         <div className="grid lg:grid-cols-3 gap-4 ">
           <DataBoxes
             title="Heart Transplant"
+            titleCss="text-xl font-medium text-center mb-2"
             text=""
             data={heartTransplantData}
             myclass="grid grid-cols-1"
           />
           <DataBoxes
             title="Lung Transplant"
+            titleCss="text-xl font-medium text-center mb-2"
             text=""
             data={lungTransplantData}
             myclass="grid grid-cols-1"
           />
           <DataBoxes
             title="Heart-Lung Transplant"
+            titleCss="text-xl font-medium text-center mb-2"
             text=""
             data={heartLungTransplantData}
             myclass="grid grid-cols-1"
@@ -307,36 +310,34 @@ function page() {
         </div>
       </div>
       <div className="container mx-auto">
-        <h3 className="text-2xl font-bold text-center">
-          Symptoms Indicating the Need for a Transplant
-        </h3>
-        <div>
+        <H3 title="Symptoms Indicating the Need for a Transplant" className="font-regular font-roboto text-center text-hciPrimary"/>
+        <div className="mt-2">
+          <div className="mt-2">
           <DataBoxes
             title=""
             text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
+            textCss="font-light py-4"
             data={transplantSymptoms}
             myclass="grid lg:grid-cols-2"
           />
         </div>
       </div>
       <div className="container mx-auto py-8">
-        <h3 className="text-2xl font-bold text-center mb-6">
-          The Transplant Process
-        </h3>
+        <H3 title="The Transplant Process" className="text-3xl font-regular font-roboto text-center text-hciPrimary"/>
+          
         <div className="grid lg:grid-cols-2 gap-4">
-          <DataLists data={transplantEvaluation} />
-          <DataLists data={SurgeryEvaluation} />
+          <DataLists data={transplantEvaluation} boxClass="h-[300px]" />
+          <DataLists data={SurgeryEvaluation} boxClass="h-[300px]" />
         </div>
       </div>
 
-      <div className="py-8 container mx-auto">
-        <h3 className="text-2xl font-bold text-center">
-          Risks and Complications
-        </h3>
+      <div className="py-2 container mx-auto">
+        <H3 title="Risks and Complications" className="font-regular font-roboto text-center text-hciPrimary"/>
         <div>
           <DataBoxes
             title=""
             text="Transplant procedures are complex and come with potential risks, including:"
+            textCss="font-light py-4"
             data={risksComplications}
             myclass="grid lg:grid-cols-2"
           />
@@ -344,14 +345,12 @@ function page() {
       </div>
 
       <div className="container mx-auto">
-        <h3 className="text-2xl font-bold text-center mb-6">
-          Recovery and Long-Term Outlook
-        </h3>
+        <H3 title="Recovery and Long-Term Outlook" className="font-regular font-roboto text-center text-hciPrimary"/>
         <div className="grid lg:grid-cols-2 gap-4">
-          <DataLists data={recoveryOutlook} />
-          <div className="space-y-8">
-            <DataLists data={longTermOutlooks} />
-            <p>
+          <DataLists data={recoveryOutlook} boxClass="h-[300px]" />
+          <div className="space-y-1">
+            <DataLists data={longTermOutlooks} boxClass="h-[300px]" />
+            <p className="font-light">
               Heart and lung transplants offer a second chance at life for
               patients with critical heart or lung diseases, making them among
               the most remarkable advancements in modern medicine.
@@ -363,7 +362,8 @@ function page() {
         <FooterLinks head={title} />
         <BookButton />
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

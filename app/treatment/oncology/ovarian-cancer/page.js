@@ -1,7 +1,8 @@
 import React from 'react'
 import Title from '@/components/cardiacComponents/Title'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
 import Link from 'next/link'
+import H3 from '@/components/ui/h3'
 
 const data = {
   title: 'Ovarian Cancer',
@@ -184,13 +185,13 @@ function OvarianCancer() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Title title={data.title} />
       <div className="mt-6">
-        <p className="text-gray-600 text-lg">{data.description}</p>
+        <p className="text-gray-600 text-lg font-light">{data.description}</p>
       </div>
 
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Causes Section */}
         <div>
-          <H2 text="Causes" textClass="text-xl font-semibold mb-4" />
+          <H2 title="Causes" className="text-xl font-semibold mb-4" />
           <div className="space-y-2">
             {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
               <div key={idx} className={cause.className}>
@@ -210,7 +211,7 @@ function OvarianCancer() {
 
         {/* Diagnosis Section */}
         <div>
-          <H2 text="Diagnosis" textClass="text-xl font-semibold mb-4" />
+          <H2 title="Diagnosis" className="text-xl font-semibold mb-4" />
           <div className="space-y-2">
             {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
               <div key={idx} className={diagnosis.className}>
@@ -233,8 +234,8 @@ function OvarianCancer() {
       {/* Treatments Section */}
       <div className="mt-12">
         <H2
-          text="Treatments"
-          textClass="text-2xl font-semibold mb-6 text-center"
+          title="Treatments"
+          className="text-2xl font-semibold mb-6 text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.treatments.map((treatment, index) => (
@@ -242,9 +243,7 @@ function OvarianCancer() {
               key={index}
               className="border border-pink-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
             >
-              <h3 className="text-lg font-semibold mb-3 text-pink-600">
-                {treatment.heading}
-              </h3>
+              <H3 title={treatment.heading} className="text-lg font-semibold mb-3 text-pink-600"/>
               {treatment.aneurysmSymptoms.map((item, idx) => (
                 <div key={idx} className="text-gray-600">
                   {item.title && <strong>{item.title}: </strong>}
@@ -259,8 +258,8 @@ function OvarianCancer() {
       {/* Conclusion */}
       <div className="mt-12">
         <div className="bg-gray-50 p-6 rounded-lg">
-          <H2 text="Conclusion" textClass="text-xl font-semibold mb-4" />
-          <p className="text-gray-600">{data.conclusion[0].paragraph}</p>
+          <H2 title="Conclusion" className="text-xl font-semibold mb-4" />
+          <p className="text-gray-600 font-light">{data.conclusion[0].paragraph}</p>
         </div>
       </div>
 

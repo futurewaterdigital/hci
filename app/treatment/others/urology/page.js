@@ -6,7 +6,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+
 import FlexBox from '@/components/cardiacComponents/FlexBox'
 import FlexBoxSection from '@/components/cardiacComponents/FlexBoxSection'
 import ListBox from '@/components/cardiacComponents/ListBox'
@@ -217,14 +218,14 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
         <H2
-          text={data.description}
-          textClass="text-start font-semibold text-xl"
+          title={data.description}
+          className="text-start font-semibold text-xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
         <H2
-          text="Conditions Treated by Urologists"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Conditions Treated by Urologists"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="font-light text-center">
           HCI’s network of urology specialists offers expertise in diagnosing
@@ -238,8 +239,8 @@ function GeneralSurgery() {
           />
         </div>
         <H2
-          text="Advanced Diagnostic and Treatment Services"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Advanced Diagnostic and Treatment Services"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="font-light">
           HCI provides access to state-of-the-art diagnostics and treatments for
@@ -268,8 +269,8 @@ function GeneralSurgery() {
           <FlexBoxSection data={data.sec_para_5} />
         </div>
         <H2
-          text="Why Choose HCI for Urological Care?"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Why Choose HCI for Urological Care?"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="font-light">
           HCI is dedicated to providing the highest standard of urological care,
@@ -279,8 +280,8 @@ function GeneralSurgery() {
         <ListBox data={data} />
         <div>
           <H2
-            text="When to See a Urologist"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            title="When to See a Urologist"
+            className="text-2xl font-semibold mb-4 text-center"
           />
           <p className="font-light">
             If you experience any of the following, it may be time to consult a
@@ -291,8 +292,8 @@ function GeneralSurgery() {
 
         <div>
           <H2
-            text="Take Charge of Your Urological Health"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            title="Take Charge of Your Urological Health"
+            className="text-2xl font-semibold mb-4 text-center"
           />
           <p className="font-light">
             At HCI, we believe that early diagnosis and expert care are crucial

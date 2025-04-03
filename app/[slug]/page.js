@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Header from '../../components/Header/page'
 import Footer from '../../components/Footer/page'
+import H1 from '@/components/ui/h1'
 
 export default function Page({ params }) {
   const [network, setNetworks] = useState([])
@@ -82,9 +83,7 @@ export default function Page({ params }) {
               )} */}
 
               <div className="w-9/12 mx-auto pt-40">
-                <h1 className="w-full text-[#D84598] lg:text-[60px] font-normal text-[40px] text-start">
-                  {items.title.rendered}
-                </h1>
+                <H1 title={items.title.rendered} />
                 <div
                   dangerouslySetInnerHTML={{ __html: items.content.rendered }}
                   className="font-light"

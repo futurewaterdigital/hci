@@ -1,15 +1,13 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
 import Title from '@/components/cardiacComponents/Title'
-// import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-// import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
-// import TextComponent from '@/components/Common/TextComponent'
 import Link from 'next/link'
+import H3 from '@/components/ui/h3'
 
 const data = {
   title: 'Lung Cancer',
@@ -282,12 +280,12 @@ function LungCancer() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
         <H2
-          text="Causes of Lung Cancer"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Causes of Lung Cancer"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           {data.causes.map((cause, index) => (
@@ -295,10 +293,8 @@ function LungCancer() {
               key={index}
               className="border border-gray-200 rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">
-                {cause.title}
-              </h3>
-              <p className="text-gray-700 text-sm">{cause.description}</p>
+              <H3 title={cause.title} className="text-lg font-semibold text-blue-600 mb-2"/>      
+              <p className="text-gray-700 text-sm font-light">{cause.description}</p>
             </div>
           ))}
         </div>
@@ -315,8 +311,8 @@ function LungCancer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
             <H2
-              text="Symptoms of Lung Cancer"
-              textClass="text-xl font-semibold mb-4 text-center"
+              title="Symptoms of Lung Cancer"
+              className="text-xl font-semibold mb-4 text-center"
             />
             <p className="mb-4 font-light">
               In its early stages, lung cancer may not cause symptoms. As the
@@ -342,8 +338,8 @@ function LungCancer() {
           </div>
           <div>
             <H2
-              text="Diagnosis of Lung Cancer"
-              textClass="text-xl font-semibold mb-4 text-center"
+              title="Diagnosis of Lung Cancer"
+              className="text-xl font-semibold mb-4 text-center"
             />
             <div className="space-y-2">
               <DataBoxes
@@ -366,8 +362,8 @@ function LungCancer() {
         </div>
 
         <H2
-          text="Treatment for Lung Cancer"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Treatment for Lung Cancer"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="font-light mb-4">
           Lung cancer treatment is varialized based on the cancer type, stage,
@@ -381,9 +377,7 @@ function LungCancer() {
               key={index}
               className="border border-gray-200 rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">
-                {treatment.heading}
-              </h3>
+              <H3 title={treatment.heading} className="text-lg font-semibold text-blue-600 mb-2"/>
               <p className="text-gray-700 mb-2 text-sm">
                 {treatment.description}
               </p>
@@ -402,9 +396,7 @@ function LungCancer() {
               key={index}
               className="border border-gray-200 rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">
-                {treatment.heading}
-              </h3>
+              <H3 title={treatment.heading} className="text-lg font-semibold text-blue-600 mb-2"/>
               <p className="text-gray-700 mb-2 text-sm">
                 {treatment.description}
               </p>
@@ -423,9 +415,7 @@ function LungCancer() {
               key={index}
               className="border border-gray-200 rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">
-                {treatment.heading}
-              </h3>
+              <H3 title={treatment.heading} className="text-lg font-semibold text-blue-600 mb-2"/>
               <p className="text-gray-700 mb-2 text-sm">
                 {treatment.description}
               </p>
@@ -441,8 +431,8 @@ function LungCancer() {
         <Conclusion data={data.conclusion} />
 
         <H2
-          text="To Consult With The Best Doctor For Treatment Of Lung Cancer, Click Here"
-          textClass="text-xl font-semibold mb-4 text-center text-blue-600"
+          title="To Consult With The Best Doctor For Treatment Of Lung Cancer, Click Here"
+          className="text-xl font-semibold mb-4 text-center text-blue-600"
         />
 
         <div className="space-y-2 mb-8">

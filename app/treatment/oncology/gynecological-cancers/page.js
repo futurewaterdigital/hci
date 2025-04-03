@@ -4,11 +4,13 @@ import Title from '@/components/cardiacComponents/Title'
 // import DataLists from '@/components/cardiacComponents/Bullets'
 // import BookButton from '@/components/cardiacComponents/BookButton'
 // import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+
 // import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 // import Link from 'next/link'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H3 from '@/components/ui/h3'
 
 const data = {
   title: 'Gynecological Cancers',
@@ -183,13 +185,13 @@ function EndometrialCancer() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
         <Banner image={data.bannerImage_1} />
         <Title title={data.title_1} />
         <p className="text-start font-light">{data.description_1}</p>
         <H2
-          text={data.causes[0].heading}
-          textClass="text-xl font-semibold mb-4 text-center"
+          title={data.causes[0].heading}
+          className="text-xl font-semibold mb-4 text-center"
         />
         <p className="text-start font-light mb-20">
           {data.causes[0].description}
@@ -202,8 +204,8 @@ function EndometrialCancer() {
           Here
         </Link> */}
         <H2
-          text={data.causes_1[0].heading}
-          textClass="text-xl font-semibold mb-4 text-center"
+          title={data.causes_1[0].heading}
+          className="text-xl font-semibold mb-4 text-center"
         />
         <p className="text-start font-light">{data.causes_1[0].description}</p>
 
@@ -211,8 +213,8 @@ function EndometrialCancer() {
           {data.diagnosis.map((diagnosis, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6">
               <H2
-                text={diagnosis.heading}
-                textClass="text-xl font-semibold mb-4 text-hciPrimary"
+                title={diagnosis.heading}
+                className="text-xl font-semibold mb-4 text-hciPrimary"
               />
               <p className="text-start font-light">{diagnosis.description}</p>
             </div>
@@ -238,8 +240,8 @@ function EndometrialCancer() {
         </div>
 
         <H2
-          text="Treatments"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Treatments"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="text-start font-light mb-20">
           Treatment options for endometrial cancer depend on the stage and grade
@@ -251,10 +253,8 @@ function EndometrialCancer() {
               key={index}
               className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
             >
-              <h3 className="text-lg font-semibold mb-3">
-                {treatment.heading}
-              </h3>
-              <p className="text-gray-600 mb-4">{treatment.description}</p>
+              <H3 title={treatment.heading} className="text-lg font-semibold mb-3"/>
+              <p className="text-gray-600 mb-4 font-light">{treatment.description}</p>
               <ul className="list-disc pl-5 space-y-2">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
                   <li key={idx} className="text-gray-700">

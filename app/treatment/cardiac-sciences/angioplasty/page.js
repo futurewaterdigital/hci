@@ -5,7 +5,8 @@ import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Title from '@/components/cardiacComponents/Title'
-import H2title from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+import H3 from '@/components/ui/h3'
 
 function page() {
   const title = 'Angioplasty'
@@ -57,13 +58,15 @@ function page() {
     {
       title: 'What happens during Angioplasty?',
       description:
-        'The procedure typically takes 1-2 hours, and most patients spend one night in the hospital for observation.',
+        '',
       list: [
-        "Sedation: You'll receive medication to help you relax but remain awake.",
-        'Insertion: A catheter is inserted through a sheath into the blood vessel.',
-        'Imaging and Inflation: Contrast dye is used to locate the blockage, and the balloon is inflated to open the artery.',
-        'Stent Placement: A stent is deployed, if necessary, to maintain blood flow.',
+        "<span class='text-hciSecondary font-semibold'>Sedation:</span> You'll receive medication to help you relax but remain awake.",
+        "<span class='text-hciSecondary font-semibold'>Insertion:</span> A catheter is inserted through a sheath into the blood vessel.",
+        "<span class='text-hciSecondary font-semibold'>Imaging and Inflation:</span> Contrast dye is used to locate the blockage, and the balloon is inflated to open the artery.",
+        "<span class='text-hciSecondary font-semibold'>Stent Placement:</span> A stent is deployed, if necessary, to maintain blood flow.",
       ],
+      extra:
+        'The procedure typically takes 1-2 hours, and most patients spend one night in the hospital for observation.',
     },
     {
       title: 'Recovery after Angioplasty',
@@ -92,7 +95,8 @@ function page() {
     <>
       <Banner image={bannerImage} />
       {/* <!-- Content --> */}
-      <div className="lg:container mx-auto mt-6 space-y-12">
+      <div className="lg:container mx-auto mt-8 space-y-12">
+        <div className="space-y-4">
         <Title title={title} />
         <p className="text-start font-light">
           Angioplasty, also known as{' '}
@@ -103,8 +107,10 @@ function page() {
           chest pain and reduces the risk of a heart attack. Angioplasty can be
           performed in emergency cases like heart attacks or scheduled as
           elective surgery for diagnosed heart conditions.
-        </p>
-        <H2title text="How is Angioplasty Performed?" />
+          </p>
+        </div>
+        <div className="space-y-4">
+        <H2 title="How is Angioplasty Performed?" className="text-center"/>
         <div className="space-y-4">
           <p className="font-light">
             During angioplasty, a thin tube (catheter) with a small balloon at
@@ -122,35 +128,37 @@ function page() {
             formation or may be bare metal stents without medication.
           </p>
         </div>
-        <div className="">
-          <DataBoxes
+        </div>
+        <div className="space-y-4">
+        <DataBoxes
             title="Additional Techniques"
-            titleCss="font-semibold text-xl text-center"
+            titleCss="font-semibold text-2xl text-center mb-4"
             data={conditionsData}
             text=""
             header=""
             myclass="grid lg:grid-cols-2 font-light"
           />
-        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {angioplastyData.map((item, index) => (
             <div
               key={index}
               className="bg-white border border-hciSecondary p-4 rounded shadow-lg"
             >
-              <h3 className="font-bold text-hciPrimary mb-2">{item.title}</h3>
-              <p className="text-hciSecondary py-1 font-semibold">
+              <H3 title={item.title} className="font-bold text-hciPrimary mb-2 text-xl"/>
+              <p className="text-hciSecondary py-1 font-semibold text-lg">
                 {item.description}
               </p>
-              <ul className="list-disc list-inside space-y-2">
+              <ul className="list-disc list-inside ml-2 text-hciSecondary text-2xl">
                 {item.list.map((point, idx) => (
-                  <li key={idx}>{point}</li>
+                  <li key={idx}><span className='text-black text-[16px] font-light -ml-2' dangerouslySetInnerHTML={{ __html: point }} /></li>
                 ))}
               </ul>
-              {item.extra && <p className="pt-2">{item.extra}</p>}
+              {item.extra && <p className="pt-2 font-light">{item.extra}</p>}
             </div>
           ))}
-        </div>
+          </div>
+          </div>
         <FooterLinks head={title} />
         <BookButton />
       </div>

@@ -13,7 +13,7 @@ function Menu() {
     },
     {
       menu: 'Gallbladder Stone',
-      url: '/treatment/gastroenterology/gallbladder-stone',
+      url: '/treatment/gastroenterology/gallbladder-stones',
     },
   ]
 
@@ -24,7 +24,7 @@ function Menu() {
     },
     {
       menu: 'Gastroesophageal Reflux Disease (GERD)',
-      url: '/treatment/gastroenterology/gastroesophageal-reflux-disease-gerd',
+      url: '/treatment/gastroenterology/gastroesophageal-reflux-disease',
     },
     {
       menu: 'Gastritis',
@@ -44,7 +44,7 @@ function Menu() {
     },
     {
       menu: 'Ulcerative colitis (UC)',
-      url: '/treatment/gastroenterology/ulcerative-colitis-uc',
+      url: '/treatment/gastroenterology/ulcerative-colitis',
     },
   ]
 

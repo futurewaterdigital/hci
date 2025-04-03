@@ -4,8 +4,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
@@ -275,10 +275,10 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />
-        <p className="font-light" text="">
+        <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
+        <p className="font-light">
           Foot and ankle conditions requiring surgical intervention can arise
           from a variety of causes, including:
         </p>
@@ -342,8 +342,8 @@ function GeneralSurgery() {
         </div>
         <div>
           <H2
-            text="Treatment"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            title="Treatment"
+            className="text-2xl font-semibold mb-4 text-center"
           />
 
           <p className="font-light">
@@ -367,7 +367,7 @@ function GeneralSurgery() {
           </div>
         </div>
         <div className="space-y-4">
-          <H2 text="Recovery and Rehabilitation" />
+          <H2 title="Recovery and Rehabilitation" />
           <p className="font-light text-center">
             Recovery after foot and ankle surgery depends on the type of
             procedure performed and the patient’s overall health. Key aspects of

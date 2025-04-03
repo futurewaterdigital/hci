@@ -4,10 +4,12 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import H3 from '@/components/ui/h3'
+
 
 const data = {
   title: 'Advanced and Recurrent Cancers',
@@ -338,53 +340,38 @@ function AdvancedRecurrentCancers() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
-        <H2
-          text="Factors Contributing to Advanced Cancer"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Factors Contributing to Advanced Cancer" className="font-semibold mb-4 text-center" />
         <DataLists
           divClass="grid grid-cols-1 md:grid-cols-2 gap-6"
           data={data.symptoms_factors}
           ulClass="list-disc pl-5 space-y-1"
         />
 
-        <H2
-          text="Treatment Approaches"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Treatment Approaches" className="font-semibold mb-4 text-center" />
         <DataLists
           divClass="grid grid-cols-1 md:grid-cols-3 gap-6"
           data={data.treatment_options}
           ulClass="list-disc pl-5 space-y-1"
         />
 
-        <H2
-          text="Surgical Options"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Surgical Options" className="font-semibold mb-4 text-center" />
         <DataLists
           divClass="grid grid-cols-1 md:grid-cols-3 gap-6"
           data={data.surgical_approaches}
           ulClass="list-disc pl-5 space-y-1"
         />
 
-        <H2
-          text="Treatment Barriers"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Treatment Barriers" className="font-semibold mb-4 text-center" />
         <DataLists
           divClass="grid grid-cols-1 md:grid-cols-2 gap-6"
           data={data.barriers}
           ulClass="list-disc pl-5 space-y-1"
         />
 
-        <H2
-          text="Best Diagnostics for Advanced and Recurrent Cancer And Related Issues, Click Here"
-          textClass="text-xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Best Diagnostics for Advanced and Recurrent Cancer And Related Issues, Click Here" className="font-semibold mb-4 text-center" />
         <div className="mb-8">
           <DataLists
             divClass="grid grid-cols-1 gap-4"
@@ -393,10 +380,7 @@ function AdvancedRecurrentCancers() {
           />
         </div>
 
-        <H2
-          text="Recurrent Cancers in India"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Recurrent Cancers in India" className="font-semibold mb-4 text-center" />
         <p className="font-light mb-6">
           A recurrent cancer occurs when cancer returns after a period of
           treatment and remission. This is often more challenging to treat and
@@ -409,18 +393,13 @@ function AdvancedRecurrentCancers() {
               key={index}
               className="border border-gray-200 rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-hciPrimary mb-2">
-                {stat.title}
-              </h3>
+                <H3 title={stat.title} className="text-lg font-semibold text-hciPrimary mb-2"/>
               <p className="text-gray-700">{stat.description}</p>
             </div>
           ))}
         </div>
 
-        <H2
-          text="Common Risk Factors for Recurrence"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Common Risk Factors for Recurrence" className="font-semibold mb-4 text-center" />
         <div className="mb-8">
           <DataBoxes
             title=""
@@ -430,10 +409,7 @@ function AdvancedRecurrentCancers() {
           />
         </div>
 
-        <H2
-          text="Treatment of Recurrent Cancers in India includes all the modalities of the Treatment such as:"
-          textClass="text-xl font-semibold mb-4 text-start"
-        />
+        <H2 title="Treatment of Recurrent Cancers in India includes all the modalities of the Treatment such as:" className="font-semibold mb-4 text-start" />
 
         <div className="space-y-4 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

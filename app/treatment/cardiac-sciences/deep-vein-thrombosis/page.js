@@ -7,7 +7,9 @@ import TreatmentBox from '@/components/cardiacComponents/TreatmentBox'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
+import KnowMore from '@/components/ui/KnowMore'
+import H1 from '@/components/ui/h1'
+import H2 from '@/components/ui/h2'   
 
 const title = 'Deep Vein Thrombosis (DVT)'
 
@@ -70,31 +72,37 @@ const symptomsDVT = [
     category: '',
     description: `Swelling in the affected leg or arm`,
     bgColor: 'bg-hciSecondary text-white',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     category: '',
     description: `Pain or tenderness when standing or walking`,
     bgColor: 'bg-hciSecondary text-white',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     category: '',
     description: `Warmth in the affected area`,
     bgColor: 'bg-hciSecondary text-white',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     category: '',
     description: `Redness or discoloration of the skin`,
     bgColor: 'bg-hciSecondary text-white',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     category: '',
     description: `Enlarged surface veins`,
     bgColor: 'bg-hciSecondary text-white',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     category: '',
     description: `If the clot affects other areas, such as the abdomen or brain, it can cause abdominal pain, severe headaches, or seizures.`,
     bgColor: 'bg-hciSecondary text-white',
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     category: '',
@@ -106,6 +114,7 @@ const symptomsDVT = [
     </ul>
     `,
     bgColor: 'bg-hciSecondary text-white',
+    minHeight: 'min-h-[100px] text-center',
   },
 ]
 const diagnosisDVT = [
@@ -138,23 +147,28 @@ const diagnosisDVT = [
 const surgeryData = [
   {
     title: '',
-    description: `<strong>Stay active:</strong> Avoid sitting or lying down for long periods.`,
+    description: `<strong>Stay active:</strong><span class="text-black"> Avoid sitting or lying down for long periods.</span>`,
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: '',
-    description: `<strong>Use compression stockings</strong> after surgery if recommended.`,
+    description: `<strong>Use compression stockings</strong><span class="text-black"> after surgery if recommended.</span>`,
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: '',
-    description: `<strong>Quit smoking</strong> and manage conditions like obesity and hypertension.`,
+    description: `<strong>Quit smoking</strong><span class="text-black"> and manage conditions like obesity and hypertension.</span>`,
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: '',
-    description: `<strong>Hydrate</strong> during long flights or car rides.`,
+    description: `<strong>Hydrate</strong><span class="text-black"> during long flights or car rides.</span>`,
+    minHeight: 'min-h-[100px] text-center',
   },
   {
     title: '',
-    description: `<strong>Take medications as prescribed</strong> to prevent clotting.`,
+    description: `<strong>Take medications as prescribed</strong><span class="text-black"> to prevent clotting.</span>`,
+    minHeight: 'min-h-[100px] text-center',
   },
 ]
 const treatmentData = [
@@ -249,10 +263,8 @@ function page() {
       </div>
       <div className="lg:container mx-auto p-6">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold text-center text-hciSecondary">
-            {title}
-          </h1>
-          <p className="text-start">
+         <H1 title={title} />
+          <p className="text-start font-light">
             Deep Vein Thrombosis (DVT) is a medical condition where a blood clot
             (thrombus) forms in a vein located deep inside the body, typically
             in the legs, thighs, or pelvis. However, it can also occur in other
@@ -265,19 +277,19 @@ function page() {
         </div>
       </div>
       <section className="lg:container mx-auto px-6">
-        <p>
-          <strong>Post-thrombotic syndrome</strong> may develop in some
+        <p className="font-light">
+          <strong className='font-medium'>Post-thrombotic syndrome</strong> may develop in some
           individuals, causing chronic pain and swelling and leading to skin
           ulcers or other skin damage to veins.
         </p>
         <div className="py-4">
-          <h2 className="text-lg font-semibold">
-            Key characteristics of DVT include:
-          </h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Chronic Swelling and Pain</li>
-            <li>Skin Discoloration or Pigmentation Changes</li>
-            <li>Development of Venous Ulcers</li>
+          <H2 title="Key characteristics of DVT include:" className="font-semibold"/>
+          <ul className="list-disc list-inside text-hciSecondary space-y-2 font-medium ml-2 mt-4">
+            
+            <li><span className='font-medium text-hciPrimary'>Blood Pooling in Venis</span></li>
+            <li><span className='font-medium text-hciPrimary'>Chronic Swelling and Pain</span></li>
+            <li><span className='font-medium text-hciPrimary'>Skin Discoloration or Pigmentation Changes</span></li>
+            <li><span className='font-medium text-hciPrimary'>Development of Venous Ulcers</span></li>
           </ul>
         </div>
 
@@ -288,47 +300,59 @@ function page() {
             text="Several factors increase the risk of developing DVT, including:"
             header=""
             myclass="grid lg:grid-cols-2"
+            titleCss="text-2xl font-bold text-center mt-8"
+            textCss="font-medium py-4"
           />
           <KnowMore title={title} />
         </div>
       </section>
 
-      <section className="container mx-auto py-8">
+      <section className="container mx-auto py-8 px-6">
         <div className="grid lg:grid-cols-1 gap-4">
+          <div className='space-y-4'>
           <DataBoxes
             title="Symptoms"
             data={symptomsDVT}
             text="Many people with DVT do not experience symptoms. However, when present, symptoms may include:"
+            textCss="font-light py-4"
             header=""
             myclass="grid grid-cols-2"
-          />
+            titleCss="text-2xl font-bold text-center mt-8"
+            />
+            <KnowMore title={title} />
+          </div>
+          <div className='space-y-4'>
           <DataBoxes
             title="Diagnosis"
+            titleCss="text-2xl font-bold text-center mt-8"
+            textCss="font-light py-4"
             data={diagnosisDVT}
             text="A healthcare provider will conduct a physical exam, review medical history, and use imaging tests to diagnose DVT. The primary diagnostic tests include:"
             header=""
             myclass="grid grid-cols-2"
-          />
+            />
+            <KnowMore title={title} />
+          </div>
         </div>
       </section>
-      <section className="container mx-auto">
-        <h2 className="text-2xl font-bold text-center space-y-4">Prevention</h2>
-        <p className="text-center">To reduce the risk of DVT:</p>
+      <section className="container mx-auto px-6">
+        <H2 title="Prevention" className="text-center space-y-4"/>
+        <p className="text-center font-light">To reduce the risk of DVT:</p>
         <DataSurgery data={surgeryData} />
+        
       </section>
-      <section className="container mx-auto py-8">
-        <h2 className="text-2xl font-bold text-center mb-4">
-          Treatment And Management
-        </h2>
-        {/* <DataLists data={heartEvaluationTests} /> */}
+      <section className="container mx-auto py-8 px-6">
+        <H2 title="Treatment and Management" className="text-center mb-4"/>
+        
         <TreatmentBox
           data={treatmentData}
           heading="The primary goals of DVT treatment are to prevent the clot from
             getting bigger, avoid clot migration to the lungs, and reduce the
             risk of future clots. Treatments include:"
+          headingCss="font-light"
         />
       </section>
-      <section className="container mx-auto py-8 space-y-6">
+      <section className="container mx-auto py-2 px-6 space-y-6">
         <Conclusion data={footerData} />
         <FooterLinks head={title} />
         <BookButton />

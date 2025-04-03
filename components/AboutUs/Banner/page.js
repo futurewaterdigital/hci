@@ -8,7 +8,7 @@ function Banner() {
       <div className="absolute h-[170px] w-full bottom-0">
         <div className="absolute inset-0 bg-gradient-to-t from-[#0e57a0] via-[#0e57a0cf] to-transparent opacity-80"></div>
         <div className="relative flex flex-col items-center h-full text-white">
-          <p className="lg:text-4xl text-3xl text-center">
+          <p className="lg:text-4xl text-3xl text-center font-light">
             A Comprehensive Solution
           </p>
           <h1 className="lg:text-5xl text-3xl text-center font-medium lg:pt-2">

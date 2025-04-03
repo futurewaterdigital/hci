@@ -1,8 +1,8 @@
 import React from 'react'
 import Title from '@/components/cardiacComponents/Title'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
 import Link from 'next/link'
-
+import H3 from '@/components/ui/h3'
 const data = {
   title: 'Brain Tumor',
   bannerImage: '/oncology/brain-tumor-banner.png',
@@ -482,19 +482,19 @@ function BrainTumor() {
       {/* Title and Description */}
       <div className="text-center mb-12">
         <Title title={data.title} className="text-4xl text-pink-500" />
-        <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
+        <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto font-light">
           {data.description}
         </p>
       </div>
 
       {/* Types Section */}
       <div className="mb-12">
-        <H2 text={data.types.heading} textClass="text-2xl font-semibold mb-6" />
+        <H2 title={data.types.heading} className="font-semibold mb-6" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {data.types.items.map((type, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold mb-3">{type.title}</h3>
-              <p className="text-gray-600 mb-4">{type.description}</p>
+              <H3 title={type.title} className="text-xl font-semibold mb-3"/>
+              <p className="text-gray-600 mb-4 font-light">{type.description}</p>
               {type.subtypes && (
                 <ul className="list-disc list-inside text-gray-600">
                   {type.subtypes.map((subtype, idx) => (
@@ -509,15 +509,12 @@ function BrainTumor() {
 
       {/* Symptoms Section */}
       <div className="mb-12 bg-blue-50 rounded-lg p-8">
-        <H2
-          text={data.symptoms.heading}
-          textClass="text-2xl font-semibold mb-6"
-        />
-        <p className="text-gray-600 mb-6">{data.symptoms.description}</p>
+        <H2 title={data.symptoms.heading} className="font-semibold mb-6" />
+        <p className="text-gray-600 mb-6 font-light">{data.symptoms.description}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {data.symptoms.items.map((symptom, index) => (
             <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
-              <p className="text-gray-700">{symptom}</p>
+              <p className="text-gray-700 font-light">{symptom}</p>
             </div>
           ))}
         </div>
@@ -525,17 +522,14 @@ function BrainTumor() {
 
       {/* Diagnosis Section */}
       <div className="mb-12">
-        <H2
-          text={data.diagnosis.heading}
-          textClass="text-2xl font-semibold mb-6"
-        />
-        <p className="text-gray-600 mb-6">{data.diagnosis.description}</p>
+        <H2 title={data.diagnosis.heading} className="font-semibold mb-6" />
+        <p className="text-gray-600 mb-6 font-light">{data.diagnosis.description}</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {data.diagnosis.methods.map((method, index) => (
             <div key={index} className="bg-pink-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3">{method.name}</h3>
+              <H3 title={method.name} className="text-lg font-semibold mb-3"/>
               {method.description && (
-                <p className="text-gray-600">{method.description}</p>
+                <p className="text-gray-600 font-light">{method.description}</p>
               )}
               {method.items && (
                 <ul className="list-disc list-inside text-gray-600">
@@ -551,17 +545,14 @@ function BrainTumor() {
 
       {/* Treatment Section */}
       <div className="mb-12">
-        <H2
-          text={data.treatments.heading}
-          textClass="text-2xl font-semibold mb-6"
-        />
-        <p className="text-gray-600 mb-6">{data.treatments.description}</p>
+        <H2 title={data.treatments.heading} className="font-semibold mb-6" />
+        <p className="text-gray-600 mb-6 font-light">{data.treatments.description}</p>
         <div className="space-y-6">
           {data.treatments.options.map((option, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold mb-3">{option.name}</h3>
+              <H3 title={option.name} className="text-xl font-semibold mb-3"/>
               {option.description && (
-                <p className="text-gray-600 mb-4">{option.description}</p>
+                <p className="text-gray-600 mb-4 font-light">{option.description}</p>
               )}
               {option.details && (
                 <ul className="list-disc list-inside text-gray-600">
@@ -584,14 +575,11 @@ function BrainTumor() {
 
       {/* Rehabilitation Section */}
       <div className="mb-12 bg-gray-50 rounded-lg p-8">
-        <H2
-          text={data.rehabilitation.heading}
-          textClass="text-2xl font-semibold mb-6"
-        />
+        <H2 title={data.rehabilitation.heading} className="font-semibold mb-6" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {data.rehabilitation.services.map((service, index) => (
             <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
-              <p className="text-gray-700 text-center">{service}</p>
+              <p className="text-gray-700 text-center font-light">{service}</p>
             </div>
           ))}
         </div>
@@ -599,10 +587,7 @@ function BrainTumor() {
 
       {/* Hospital Links */}
       <div className="mb-12">
-        <H2
-          text="Find Treatment Centers"
-          textClass="text-2xl font-semibold mb-6 text-center"
-        />
+        <H2 title="Find Treatment Centers" className="font-semibold mb-6 text-center" />
         <div className="space-y-4">
           {data.hospitals.map((hospital, index) => (
             <div key={index} className="text-center">

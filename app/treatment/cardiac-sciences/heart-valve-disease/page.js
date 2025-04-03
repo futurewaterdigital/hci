@@ -5,8 +5,9 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
-
+import KnowMore from '@/components/ui/KnowMore'
+import H2 from '@/components/ui/h2'
+import H1 from '@/components/ui/h1'
 const title = 'Heart Valve Disease'
 const valveMalfunction = [
   {
@@ -224,10 +225,8 @@ export default function page() {
       <Banner image={bannerImage} />
       <main className="lg:container mx-auto py-8 px-6">
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold text-center text-hciSecondary">
-            {title}
-          </h1>
-          <p className="text-start">
+          <H1 title={title} />
+          <p className="text-start font-light">
             Heart Valve Disease occurs when one or more valves in the heart fail
             to function properly, disrupting the flow of blood through the heart
             and to the rest of the body. The heart contains four valves—aortic,
@@ -244,7 +243,7 @@ export default function page() {
           <h2 className="text-2xl font-bold text-center text-hciSecondary">
             Causes
           </h2>
-          <p className="text-start">
+          <p className="text-start font-light">
             Heart valve disease can occur due to congenital defects, infections,
             or age-related changes. Understanding the anatomy and function of
             the heart&apos;s valves helps clarify how these conditions develop.
@@ -289,12 +288,13 @@ export default function page() {
           <KnowMore title={title} />
         </div>
         <div className="grid lg:grid-cols-2 gap-4">
-          <div className="py-12">
+          <div className="py-12 space-y-4">
             <DataBoxes
               title="Diagnosis"
               titleCss="font-semibold text-xl"
               text="The diagnostic process involves a combination of physical examinations, imaging, and other tests to determine the extent and nature of the valve disease. Common diagnostic tools include:"
               header=""
+              textCss="font-light py-4"
               data={cardiacTests}
               myclass="grid grid-cols-1"
             />
@@ -305,14 +305,16 @@ export default function page() {
               titleCss="font-semibold text-xl"
               text="If untreated, heart valve disease may lead to severe complications, such as:"
               header=""
+              textCss="font-light py-4"
               data={heartConditions}
               myclass="grid grid-cols-1"
             />
           </div>
 
           <div className="py-2">
-            <h2 className={`font-semibold text-xl`}>Treatment</h2>
-            <p>
+            <H2 title="Treatment" className={`font-semibold text-xl`}/>
+
+            <p className='font-light'>
               Treatment depends on the severity, the affected valve, and the
               patient’s overall health. Options include:
             </p>
@@ -334,10 +336,8 @@ export default function page() {
         </div>
 
         <div className="py-0">
-          <h2 className="text-2xl font-bold text-center text-hciSecondary mt-8">
-            Conclusion
-          </h2>
-          <p className="mt-4 text-start">
+          <H2 title="Conclusion" className="text-center text-hciSecondary mt-8"/>
+          <p className="mt-4 text-start font-light">
             Aortic aneurysms are serious conditions that may develop silently
             but pose life-threatening risks if they rupture. Early detection
             through regular screening and monitoring is essential for
@@ -348,7 +348,7 @@ export default function page() {
             improved outcomes.
           </p>
         </div>
-        <div className="space-y-4 mt-8">
+        <div className="space-y-4 mt-4">
           <FooterLinks head="Heart Valve Disease" />
           <BookButton />
         </div>

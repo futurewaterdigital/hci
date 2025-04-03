@@ -4,7 +4,7 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
@@ -239,7 +239,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
         {/* <div className="grid lg:grid-cols-2 gap-4">
@@ -295,7 +295,7 @@ function GeneralSurgery() {
             <img src="/gastroenterology/digestive-system.png" alt="" />
           </div>
         </div> */}
-        <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light">
           The exact cause of UC remains unknown, but it is believed to result
           from a combination of genetic, environmental, and immune system
@@ -311,10 +311,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <H2
-          text="Symptoms"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Symptoms" className="font-semibold mb-4 text-center" />
         <div className="mb-8">
           <DataLists
             divClass="grid grid-cols-3 gap-4"
@@ -343,18 +340,15 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="Diagnosis involves a combination of physical exams, medical history reviews, and tests to confirm UC and rule out other conditions:"
               header=""
-              titleCss="text-black font-semibold text-center"
+              titleCss="text-black font-semibold text-center text-2xl"
               data={data.diagnosis}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
           </div>
         </div>
 
         <div>
-          <H2
-            text="Treatment"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
+          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
           <p className="font-light">
             The goal of treatment is to reduce inflammation, relieve symptoms,
             and maintain remission. Treatment options include:

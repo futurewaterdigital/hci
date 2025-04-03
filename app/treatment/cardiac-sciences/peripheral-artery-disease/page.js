@@ -5,8 +5,9 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
-
+import KnowMore from '@/components/ui/KnowMore'
+import H2 from '@/components/ui/h2'
+import H1 from '@/components/ui/h1'
 const padConditionsList = [
   {
     category: '',
@@ -215,11 +216,9 @@ export default function page() {
     <div className="pt-12">
       <Banner image={bannerImage} />
       <main className="lg:container mx-auto py-0 px-6">
-        <h1 className="lg:text-4xl font-bold text-center text-hciSecondary">
-          Peripheral Artery Disease (PAD)
-        </h1>
+        <H1 title="Peripheral Artery Disease (PAD)" />
         <div className="lg:py-4">
-          <p className="mt-4 text-start">
+          <p className="mt-4 text-start font-light">
             Peripheral Artery Disease (PAD) is a circulatory condition
             characterized by the narrowing or blockage of arteries, primarily in
             the legs and arms, due to plaque buildup. This plaque consists of
@@ -254,6 +253,7 @@ export default function page() {
               desc="Many individuals with PAD experience no symptoms initially. However, as the disease progresses, the following symptoms may appear:"
               data={padSymptoms}
               footerdata="Complications can arise if PAD is untreated, such as non-healing wounds or even the need for amputation in advanced stages."
+              boxClass="min-h-[550px]"
             />
             <KnowMore title="Peripheral Artery Disease (PAD)" />
           </div>
@@ -262,6 +262,7 @@ export default function page() {
               desc="Diagnosing PAD involves a combination of medical history, physical examination, and diagnostic tests, such as:"
               data={padDiagnosis}
               footerdata=""
+              boxClass="min-h-[550px]"
             />
             <KnowMore title="Peripheral Artery Disease (PAD)" />
           </div>
@@ -272,25 +273,26 @@ export default function page() {
               desc="Diagnosing PAD involves a combination of medical history, physical examination, and diagnostic tests, such as:"
               data={lifestyleChanges}
               footerdata=""
+              boxClass="min-h-[500px]"
             />
             <DataLists
               desc="Diagnosing PAD involves a combination of medical history, physical examination, and diagnostic tests, such as:"
               data={medicationsData}
               footerdata=""
+              boxClass="min-h-[500px]"
             />
             <DataLists
               desc="Diagnosing PAD involves a combination of medical history, physical examination, and diagnostic tests, such as:"
               data={minimallyInvasiveSurgery}
               footerdata=""
+              boxClass="min-h-[500px]"
             />
           </div>
         </div>
 
         <div className="py-0">
-          <h2 className="text-2xl font-bold text-center text-pink-600 mt-8">
-            Conclusion
-          </h2>
-          <p className="mt-4 text-start">
+          <H2 title="Conclusion" className="text-center text-pink-600 mt-8"/>
+          <p className="mt-4 text-start font-light">
             Peripheral Artery Disease (PAD) is a lifelong condition, but with
             early detection and proper management, patients can significantly
             improve their quality of life and reduce the risk of complications.

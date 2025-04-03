@@ -1,7 +1,10 @@
 import React from 'react'
 import Title from '@/components/cardiacComponents/Title'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
 import Link from 'next/link'
+import H3 from '@/components/ui/h3'
+import H1 from '@/components/ui/h1'
+
 
 const data = {
   title: 'GI Cancer',
@@ -47,11 +50,9 @@ function GICancer() {
 
       {/* Title Section */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-pink-500 mb-2">
-          {data.subtitle}
-        </h1>
+        <H1 title={data.subtitle} />
         <Title title={data.title} className="text-3xl text-gray-800" />
-        <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto">
+        <p className="mt-4 text-gray-600 text-lg max-w-3xl mx-auto font-light">
           {data.description}
         </p>
       </div>
@@ -74,11 +75,8 @@ function GICancer() {
         {/* Left Column - Information */}
         <div className="space-y-6">
           <div className="bg-white rounded-lg shadow-md p-6">
-            <H2
-              text="Understanding GI Cancer"
-              textClass="text-2xl font-semibold mb-4"
-            />
-            <p className="text-gray-600">
+            <H2 title="Understanding GI Cancer" className="font-semibold mb-4" />
+            <p className="text-gray-600 font-light">
               GI cancer encompasses various types of cancers affecting the
               digestive system. Early detection and proper treatment are crucial
               for better outcomes. Each type of GI cancer may present different
@@ -90,7 +88,7 @@ function GICancer() {
         {/* Right Column - Quick Links */}
         <div className="space-y-6">
           <div className="bg-white rounded-lg shadow-md p-6">
-            <H2 text="Quick Access" textClass="text-2xl font-semibold mb-4" />
+            <H2 title="Quick Access" className="font-semibold mb-4" />
             <div className="space-y-3">
               {data.cancerTypes.map((cancer, index) => (
                 <div key={index} className="border-b border-gray-200 pb-2">
@@ -109,28 +107,25 @@ function GICancer() {
 
       {/* Additional Resources */}
       <div className="bg-gray-50 rounded-lg p-8 mb-12">
-        <H2
-          text="Additional Resources"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Additional Resources" className="font-semibold mb-4 text-center" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="font-semibold text-lg mb-2">Diagnosis</h3>
-            <p className="text-gray-600">
+            <H3 title="Diagnosis" className="font-semibold text-lg mb-2"/>
+            <p className="text-gray-600 font-light">
               Learn about various diagnostic methods for GI cancers including
               endoscopy, imaging, and laboratory tests.
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="font-semibold text-lg mb-2">Treatment Options</h3>
-            <p className="text-gray-600">
+            <H3 title="Treatment Options" className="font-semibold text-lg mb-2"/>
+            <p className="text-gray-600 font-light">
               Explore different treatment approaches including surgery,
               chemotherapy, radiation therapy, and targeted treatments.
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="font-semibold text-lg mb-2">Support Services</h3>
-            <p className="text-gray-600">
+            <H3 title="Support Services" className="font-semibold text-lg mb-2"/>
+            <p className="text-gray-600 font-light">
               Access support services including counseling, nutrition advice,
               and support groups for patients and families.
             </p>
@@ -140,8 +135,8 @@ function GICancer() {
 
       {/* Contact Section */}
       <div className="text-center mb-12">
-        <H2 text="Get Expert Care" textClass="text-2xl font-semibold mb-4" />
-        <p className="text-gray-600 mb-6">
+        <H2 title="Get Expert Care" className="font-semibold mb-4" />
+        <p className="text-gray-600 mb-6 font-light">
           Connect with our specialists to get comprehensive care for GI cancer.
         </p>
         <Link

@@ -5,7 +5,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+
 // import FlexBox from '@/components/cardiacComponents/FlexBox'
 // import ListBox from '@/components/cardiacComponents/ListBox'
 // import CTaButton from '@/components/cardiacComponents/CtaButton'
@@ -141,8 +142,8 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
         <H2
-          text={data.description}
-          textClass="text-start font-semibold text-xl"
+          title={data.description}
+          className="text-start font-semibold text-xl"
         />
         <div
           dangerouslySetInnerHTML={{ __html: data.overview }}

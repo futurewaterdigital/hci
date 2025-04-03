@@ -6,7 +6,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+
 import FlexBox from '@/components/cardiacComponents/FlexBox'
 import ListBox from '@/components/cardiacComponents/ListBox'
 import CTaButton from '@/components/cardiacComponents/CtaButton'
@@ -100,14 +101,14 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
         <H2
-          text={data.description}
-          textClass="text-start font-semibold text-2xl"
+          title={data.description}
+          className="text-start font-semibold text-2xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
         <H2
-          text="Procedures We Offer"
-          textClass="text-2xl font-semibold text-pink-600 mt-8 text-center"
+          title="Procedures We Offer"
+          className="text-2xl font-semibold text-pink-600 mt-8 text-center"
         />
         <p className="text-center font-light">
           Our aesthetic, cosmetic, and plastic surgery services include:
@@ -129,10 +130,10 @@ function GeneralSurgery() {
         </div>
 
         <H2
-          text="Why Choose Aesthetic and Plastic Surgery through HCI?"
-          textClass="text-2xl font-semibold mb-4"
+          title="Why Choose Aesthetic and Plastic Surgery through HCI?"
+          className="text-2xl font-semibold mb-4"
         />
-        <p className="font-light font-light">
+        <p className="font-light">
           HCI’s partner hospitals and surgeons use cutting-edge technology and
           advanced techniques to deliver precise, safe, and effective outcomes.
           Here’s why patients trust us:
@@ -140,8 +141,8 @@ function GeneralSurgery() {
         <ListBox data={data} />
         <div>
           <H2
-            text="Comprehensive Care for Women’s Health"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            title="Comprehensive Care for Women’s Health"
+            className="text-2xl font-semibold mb-4 text-center"
           />
           <p className="font-light">
             If you’re looking to enhance your appearance, correct physical
@@ -153,8 +154,8 @@ function GeneralSurgery() {
         </div>
         <div>
           <H2
-            text="Committed to Your Transformation"
-            textClass="text-2xl font-semibold mb-4 text-center"
+            title="Committed to Your Transformation"
+            className="text-2xl font-semibold mb-4 text-center"
           />
           <p className="font-light">
             At HCI, we prioritize patient satisfaction and safety. Our network

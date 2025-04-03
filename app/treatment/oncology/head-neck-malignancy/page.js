@@ -4,12 +4,13 @@ import Title from '@/components/cardiacComponents/Title'
 // import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-// import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 // import TextComponent from '@/components/Common/TextComponent'
 import Link from 'next/link'
+import H3 from '@/components/ui/h3'
+
 
 const data = {
   title: 'Head and Neck Malignancy',
@@ -262,11 +263,11 @@ function HeadNeckMalignancy() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
 
         <H2
-          text="Types of Head and Neck Malignancies"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Types of Head and Neck Malignancies"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           {data.cancer_types.map((cancer, index) => (
@@ -274,12 +275,10 @@ function HeadNeckMalignancy() {
               key={index}
               className="border border-gray-200 rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-pink-600 mb-2">
-                {cancer.heading}
-              </h3>
-              <p className="text-gray-700 mb-2">{cancer.description}</p>
+              <H3 title={cancer.heading} className="text-lg font-semibold mb-2"/>
+              <p className="text-gray-700 mb-2 font-light">{cancer.description}</p>
               {cancer.aneurysmSymptoms.map((symptom, idx) => (
-                <p key={idx} className="text-sm text-gray-600">
+                <p key={idx} className="text-sm text-gray-600 font-light">
                   {symptom.description}
                 </p>
               ))}
@@ -289,7 +288,7 @@ function HeadNeckMalignancy() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
-            <H2 text="Causes" textClass="text-xl font-semibold mb-4" />
+            <H2 title="Causes" className="text-xl font-semibold mb-4" />
             <div className="space-y-2">
               <DataBoxes
                 title=""
@@ -309,7 +308,7 @@ function HeadNeckMalignancy() {
             </div>
           </div>
           <div>
-            <H2 text="Diagnosis" textClass="text-xl font-semibold mb-4" />
+            <H2 title="Diagnosis" className="text-xl font-semibold mb-4" />
             <div className="space-y-2">
               <DataBoxes
                 title=""
@@ -339,8 +338,8 @@ function HeadNeckMalignancy() {
         </div>
 
         <H2
-          text="Treatment"
-          textClass="text-2xl font-semibold mb-4 text-center"
+          title="Treatment"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {data.treatments.slice(0, 4).map((treatment, index) => (
@@ -348,10 +347,8 @@ function HeadNeckMalignancy() {
               key={index}
               className="border border-gray-200 rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">
-                {treatment.heading}
-              </h3>
-              <p className="text-gray-700 mb-2">{treatment.description}</p>
+              <H3 title={treatment.heading} className="text-lg font-semibold text-blue-600 mb-2"/>
+              <p className="text-gray-700 mb-2 font-light">{treatment.description}</p>
               <ul className="text-sm text-gray-600 list-disc pl-5">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
                   <li key={idx}>{symptom.description}</li>
@@ -367,10 +364,8 @@ function HeadNeckMalignancy() {
               key={index}
               className="border border-gray-200 rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">
-                {treatment.heading}
-              </h3>
-              <p className="text-gray-700 mb-2">{treatment.description}</p>
+              <H3 title={treatment.heading} className="text-lg font-semibold text-blue-600 mb-2"/>
+              <p className="text-gray-700 mb-2 font-light">{treatment.description}</p>
               <ul className="text-sm text-gray-600 list-disc pl-5">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
                   <li key={idx}>{symptom.description}</li>
@@ -393,8 +388,8 @@ function HeadNeckMalignancy() {
         <Conclusion data={data.conclusion} />
 
         <H2
-          text="To Consult With The Best Doctor For Treatment Of A Head And Neck Malignancy, Click Here"
-          textClass="text-xl font-semibold mb-4 text-center text-pink-600"
+          title="To Consult With The Best Doctor For Treatment Of A Head And Neck Malignancy, Click Here"
+          className="text-xl font-semibold mb-4 text-center text-pink-600"
         />
 
         <div className="space-y-2 mb-8">

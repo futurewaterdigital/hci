@@ -4,12 +4,12 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
-import KnowMore from '@/components/cardiacComponents/KnowMore'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
 // import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
-
+import H3 from '@/components/ui/h3'
 const data = {
   title: 'Stroke',
   bannerImage: '/neuro-sciences/stroke.png',
@@ -133,9 +133,9 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-start font-light" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
           A stroke occurs due to a disruption in the blood flow to the brain and
           is classified into two main types:
@@ -157,10 +157,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <H2
-          text="Risk Factors"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Risk Factors" className="font-semibold mb-4 text-center" />
         <div className="grid grid-cols-2 gap-4">
           <div>
             <p className="font-light h-12">
@@ -185,7 +182,8 @@ function GeneralSurgery() {
         </div>
         <div className="grid grid-cols-2 gap-4 pt-4">
           <div>
-            <h3 className="font-semibold mb-4 ">Symptoms of a Stroke</h3>
+            <H3 title="Symptoms of a Stroke" className="font-semibold mb-4 "/>
+
             <p className="font-light h-12">
               Recognizing stroke symptoms early is critical to ensuring prompt
               treatment. Common symptoms include:
@@ -212,7 +210,8 @@ function GeneralSurgery() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Remember FAST:</h3>
+            <H3 title="Remember FAST:" className="font-semibold mb-4"/>
+
             <p className="font-light h-12"></p>
             <div className="bg-[#FFE7B6] p-4 rounded-lg min-h-48">
               <ul className="flex flex-col gap-2 ">
@@ -232,10 +231,7 @@ function GeneralSurgery() {
           like osteoporosis that weaken bones.
         </p> */}
         <KnowMore title={data.title} />
-        <H2
-          text="Diagnosis"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Diagnosis" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
           Diagnosing a stroke involves CT scans, MRI, and ultrasound imaging of
           the brain and blood vessels. Heart tests like an ECG and
@@ -270,10 +266,7 @@ function GeneralSurgery() {
           </div>
         </div> */}
         <div>
-          <H2
-            text="Treatment"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
+          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
 
           <p className="font-light">
             Treatment varies depending on the type of stroke:

@@ -49,16 +49,16 @@ function Bullets({
           >
             {data.aneurysmSymptoms?.map((symptom, index) => (
               <li key={index} className="ml-6 font-light">
-                <p className="text-black">
+                <p className="text-black font-light">
                   <strong className="text-hciSecondary">{symptom.title}</strong>
-                  {symptom.title && ':'} {symptom.description}
+                  {symptom.title && ':'} <span dangerouslySetInnerHTML={{__html: symptom.description}}></span>
                 </p>
               </li>
             ))}
           </ul>
           <div className="py-4">
             {footerTitle && <p className="font-semibold">{footerTitle}</p>}
-            <p className="">{footerdata}</p>
+            <p className="font-light">{footerdata}</p>
             {data.footer && (
               <p
                 className="font-light mb-4"

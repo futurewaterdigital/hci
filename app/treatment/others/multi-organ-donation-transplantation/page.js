@@ -5,7 +5,8 @@ import Title from '@/components/cardiacComponents/Title'
 // import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+
 import FlexBox from '@/components/cardiacComponents/FlexBox'
 import ListBox from '@/components/cardiacComponents/ListBox'
 import CTaButton from '@/components/cardiacComponents/CtaButton'
@@ -123,23 +124,23 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
         <H2
-          text={data.description}
-          textClass="text-start font-semibold text-xl"
+          title={data.description}
+          className="text-start font-semibold text-xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
 
         <H2
-          text="Types of Living Donor Transplants"
-          textClass="text-2xl font-bold mb-4 text-center"
+          title="Types of Living Donor Transplants"
+          className="text-2xl font-bold mb-4 text-center"
         />
         <p className="font-light">
           Living donor transplants can take several forms:
         </p>
         <ListBox data={data} />
         <H2
-          text="Benefits of Organ Donation"
-          textClass="text-2xl font-bold mb-4 text-center"
+          title="Benefits of Organ Donation"
+          className="text-2xl font-bold mb-4 text-center"
         />
         <p className="font-light">
           Organ donation can save up to eight lives and enhance the quality of
@@ -147,8 +148,8 @@ function GeneralSurgery() {
           waiting times, and ensure better outcomes for recipients.
         </p>
         <H2
-          text="Risks of Organ Donation"
-          textClass="text-2xl font-bold mb-4 text-center"
+          title="Risks of Organ Donation"
+          className="text-2xl font-bold mb-4 text-center"
         />
         <p className="font-light">
           While the benefits of organ transplantation are profound, risks exist
@@ -159,8 +160,8 @@ function GeneralSurgery() {
           work or insurance issues.
         </p>
         <H2
-          text="Recovery and Outlook"
-          textClass="text-2xl font-bold mb-4 text-center"
+          title="Recovery and Outlook"
+          className="text-2xl font-bold mb-4 text-center"
         />
         <p className="font-light">
           Recovery from organ transplant surgery, whether as a donor or

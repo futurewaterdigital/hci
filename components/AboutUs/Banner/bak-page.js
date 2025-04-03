@@ -9,7 +9,7 @@ function Banner() {
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/banner.png')]"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#0E56A0] via-[#0E56A0] to-transparent opacity-80"></div>
       <div className="relative flex flex-col items-center h-full text-white top-52">
-        <p className="text-4xl text-center">
+        <p className="text-4xl text-center font-light">
           The Best Doctors and Hospitals for your
         </p>
         <h1 className="text-5xl text-center font-medium">
@@ -28,7 +28,7 @@ function Banner() {
               {item.treatment} {/* Use dynamic content */}
             </h2>
             <div className="group-hover:visible invisible pt-5 flex flex-col items-center gap-5">
-              <p className="text-xl text-white text-center">
+              <p className="text-xl text-white text-center font-light">
                 {item.treatmentDesc} {/* Use dynamic content */}
               </p>
               <Link

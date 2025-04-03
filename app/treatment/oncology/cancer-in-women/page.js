@@ -3,10 +3,12 @@ import Banner from '@/components/Common/Banner'
 import Title from '@/components/cardiacComponents/Title'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import Link from 'next/link'
 import DataBoxes from '@/components/cardiacComponents/Box'
+import H3 from '@/components/ui/h3'
+
 const data = {
   title: 'Cancer in Women',
   bannerImage: '/oncology/cancer-in-women-banner.png',
@@ -284,7 +286,7 @@ function CancerInWomen() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 text={data.description} textClass="text-center font-light" />
+        <H2 title={data.description} className="text-center font-light" />
 
         <div className="flex justify-center gap-4 mb-8">
           <Link
@@ -302,19 +304,15 @@ function CancerInWomen() {
         </div>
 
         <div className="mb-8">
-          <H2
-            text="Breast Cancer"
-            textClass="text-2xl font-semibold mb-4 text-center text-pink-600"
-          />
-          <p className="text-gray-700 mb-6">{data.breastCancerIntro}</p>
+          <H2 title="Breast Cancer" className="text-2xl font-semibold mb-4 text-center text-pink-600" />
+          <p className="text-gray-700 mb-6 font-light">{data.breastCancerIntro}</p>
         </div>
         <div>
           {data.causes.map((cause, index) => (
             <div key={index}>
-              <h3 className="text-lg font-semibold text-pink-600 mb-2">
-                {cause.heading}
-              </h3>
-              <p className="text-gray-600 text-sm mb-4">{cause.description}</p>
+              
+              <H3 title={cause.heading} className="text-lg font-semibold text-pink-600 mb-2"/>
+              <p className="text-gray-600 text-sm mb-4 font-light">{cause.description}</p>
               <div className="grid grid-cols-5 gap-6">
                 {cause.aneurysmSymptoms.map((symptom, index) => (
                   <div
@@ -324,7 +322,7 @@ function CancerInWomen() {
                     <h4 className="text-lg font-semibold text-pink-600 mb-2">
                       {symptom.title}
                     </h4>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-600 text-sm mb-4 font-light">
                       {symptom.description}
                     </p>
                   </div>
@@ -384,10 +382,8 @@ function CancerInWomen() {
           <div className="">
             {data.treatments.map((treatment, index) => (
               <div key={index} className="">
-                <h3 className="text-lg font-semibold text-pink-600 mb-2">
-                  {treatment.heading}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
+                <H3 title={treatment.heading} className="text-lg font-semibold text-pink-600 mb-2"/>
+                <p className="text-gray-600 text-sm mb-4 font-light">
                   {treatment.description}
                 </p>
                 <div
@@ -403,7 +399,7 @@ function CancerInWomen() {
                           {item.title}:{' '}
                         </span>
                       )}
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 text-sm font-light">
                         {item.description}
                       </p>
                     </div>

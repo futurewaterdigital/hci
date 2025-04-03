@@ -5,7 +5,8 @@ import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/cardiacComponents/H2'
+import H2 from '@/components/ui/h2'
+
 import FlexBox from '@/components/cardiacComponents/FlexBox'
 import ListBox from '@/components/cardiacComponents/ListBox'
 import CTaButton from '@/components/cardiacComponents/CtaButton'
@@ -71,14 +72,14 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
         <H2
-          text={data.description}
-          textClass="text-start font-semibold text-xl"
+          title={data.description}
+          className="text-start font-semibold text-xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
         <H2
-          text="Conditions We Treat"
-          textClass="text-2xl font-bold text-pink-600 mt-8 text-center"
+          title="Conditions We Treat"
+          className="text-2xl font-bold text-pink-600 mt-8 text-center"
         />
 
         <p className="text-center font-light">
@@ -87,8 +88,8 @@ function GeneralSurgery() {
         </p>
         <DataLists data={data.complications} />
         <H2
-          text="Why Choose General Surgery Through HCI?"
-          textClass="text-2xl font-bold mb-4"
+          title="Why Choose General Surgery Through HCI?"
+          className="text-2xl font-bold mb-4"
         />
         <p className="font-light">
           HCI&apos;s expert surgeons and specialists utilize advanced surgical

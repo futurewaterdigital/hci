@@ -1,5 +1,7 @@
 'use client'
 import { useEffect } from 'react'
+import H3 from '@/components/ui/h3'
+import H1 from '@/components/ui/h1'
 
 export default function RareCancers() {
   useEffect(() => {
@@ -17,9 +19,7 @@ export default function RareCancers() {
       </section>
       {/* <!-- Main Content --> */}
       <main class="container mx-auto py-12 px-6">
-        <h1 class="text-4xl font-bold text-center text-pink-500 mb-8">
-          Rare Cancers
-        </h1>
+        <H1 title="Rare Cancers" />
         <p class="text-lg mb-6">
           Rare cancers are those cancers that occur in a small percentage of the
           population, often with unique characteristics, and are not as commonly
@@ -49,7 +49,7 @@ export default function RareCancers() {
           include:
         </h2>
         <div class="bg-yellow-100 p-4 mb-6">
-          <h3 class="text-xl font-bold mb-2">Sarcomas</h3>
+          <H3 title="Sarcomas" className="text-xl font-bold mb-2"/>
           <p class="mb-2">
             Sarcomas are cancers that arise from connective tissues like
             muscles, fat, bones, and cartilage. They can occur in various forms,
@@ -64,7 +64,7 @@ export default function RareCancers() {
           </p>
         </div>
         <div class="bg-yellow-100 p-4 mb-6">
-          <h3 class="text-xl font-bold mb-2">Neuroendocrine Tumors (NETs)</h3>
+          <H3 title="Neuroendocrine Tumors (NETs)" className="text-xl font-bold mb-2"/>
           <p class="mb-2">
             NETs are a group of cancers that arise in the neuroendocrine system,
             which can produce hormones. They can occur in various parts of the
@@ -80,7 +80,7 @@ export default function RareCancers() {
           </p>
         </div>
         <div class="bg-yellow-100 p-4 mb-6">
-          <h3 class="text-xl font-bold mb-2">Gastric Lymphoma</h3>
+          <H3 title="Gastric Lymphoma" className="text-xl font-bold mb-2"/>
           <p class="mb-2">
             Gastric lymphoma is a cancer of the lymphatic tissue in the stomach.
             It is a rare type of non-Hodgkin lymphoma and accounts for a very
@@ -95,7 +95,7 @@ export default function RareCancers() {
           </p>
         </div>
         <div class="bg-yellow-100 p-4 mb-6">
-          <h3 class="text-xl font-bold mb-2">Mesothelioma</h3>
+          <H3 title="Mesothelioma" className="text-xl font-bold mb-2"/>
           <p class="mb-2">
             Mesothelioma is a rare and aggressive cancer linked to exposure to
             asbestos. It typically affects the lining of the lungs (pleura) but
@@ -121,7 +121,7 @@ export default function RareCancers() {
           </p>
         </div>
         <div class="bg-yellow-100 p-4 mb-6">
-          <h3 class="text-xl font-bold mb-2">Retinoblastoma</h3>
+          <H3 title="Retinoblastoma" className="text-xl font-bold mb-2"/>
           <p class="mb-2">
             Retinoblastoma is a rare cancer of the eye that is the most common
             eye cancer among children. It originates in the retina and can lead
