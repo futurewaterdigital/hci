@@ -73,7 +73,7 @@ export default function Header() {
       return `z-40 transition-all duration-300  ${
         isScrolled
           ? 'fixed w-full bg-white shadow-lg top-0'
-          : 'absolute lg:top-6 w-full'
+          : 'absolute lg:top-6 w-full bg-red-500'
       }`
     }
     // If not home and not scrolled, no shadow
