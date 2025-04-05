@@ -37,6 +37,10 @@ export default function EditDoctorPage({ params }) {
     fetchDoctor();
   }, [params.id]);
 
+  const handleFormChange = (newFormData) => {
+    setDoctor(newFormData);
+  };
+
   const handleSubmit = async (formData) => {
     try {
       const token = localStorage.getItem('adminToken');
@@ -99,15 +103,13 @@ export default function EditDoctorPage({ params }) {
         )}
         <DoctorForm 
           onSubmit={handleSubmit} 
+          onChange={handleFormChange}
           initialData={doctor}
           isEditing={true}
         />
       </div>
       
-      <div className=" overflow-hidden sm:rounded-lg p-6">
-        {/* <h3 className="text-lg leading-6 font-medium text-gray-900 mb-6">
-          Preview
-        </h3> */}
+      <div className="overflow-hidden sm:rounded-lg p-6">
         <DoctorPreview doctor={doctor} />
       </div>
     </div>

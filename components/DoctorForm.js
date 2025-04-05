@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
-export default function DoctorForm({ onSubmit, initialData, isEditing = false }) {
+export default function DoctorForm({ onSubmit, onChange, initialData, isEditing = false }) {
   const [formData, setFormData] = useState({
     image: '',
     name: '',
@@ -35,63 +35,70 @@ export default function DoctorForm({ onSubmit, initialData, isEditing = false })
     }
   }, [initialData]);
 
+  const updateFormData = (newData) => {
+    setFormData(newData);
+    if (onChange) {
+      onChange(newData);
+    }
+  };
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    updateFormData({
+      ...formData,
       [name]: type === 'checkbox' ? checked : value
-    }));
+    });
   };
 
   const handleArrayChange = (field, index, value) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: prev[field].map((item, i) => i === index ? value : item)
-    }));
+    updateFormData({
+      ...formData,
+      [field]: formData[field].map((item, i) => i === index ? value : item)
+    });
   };
 
   const handleNestedArrayChange = (parentField, field, index, value) => {
-    setFormData(prev => ({
-      ...prev,
+    updateFormData({
+      ...formData,
       [parentField]: {
-        ...prev[parentField],
-        [field]: prev[parentField][field].map((item, i) => i === index ? value : item)
+        ...formData[parentField],
+        [field]: formData[parentField][field].map((item, i) => i === index ? value : item)
       }
-    }));
+    });
   };
 
   const addArrayItem = (field) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: [...prev[field], '']
-    }));
+    updateFormData({
+      ...formData,
+      [field]: [...formData[field], '']
+    });
   };
 
   const addNestedArrayItem = (parentField, field) => {
-    setFormData(prev => ({
-      ...prev,
+    updateFormData({
+      ...formData,
       [parentField]: {
-        ...prev[parentField],
-        [field]: [...prev[parentField][field], '']
+        ...formData[parentField],
+        [field]: [...formData[parentField][field], '']
       }
-    }));
+    });
   };
 
   const removeArrayItem = (field, index) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: prev[field].filter((_, i) => i !== index)
-    }));
+    updateFormData({
+      ...formData,
+      [field]: formData[field].filter((_, i) => i !== index)
+    });
   };
 
   const removeNestedArrayItem = (parentField, field, index) => {
-    setFormData(prev => ({
-      ...prev,
+    updateFormData({
+      ...formData,
       [parentField]: {
-        ...prev[parentField],
-        [field]: prev[parentField][field].filter((_, i) => i !== index)
+        ...formData[parentField],
+        [field]: formData[parentField][field].filter((_, i) => i !== index)
       }
-    }));
+    });
   };
 
   const handleSubmit = (e) => {
