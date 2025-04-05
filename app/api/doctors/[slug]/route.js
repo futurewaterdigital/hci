@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import dbConnect from '@/lib/mongodb';
-import Doctor from '@/app/models/Doctor';
+import { connectToDatabase } from '@/lib/mongodb';
 
 const createNameFromSlug = (slug) => {
   // First, clean up the slug
@@ -24,14 +23,17 @@ const createNameFromSlug = (slug) => {
 
 export async function GET(request, { params }) {
   try {
-    await dbConnect();
+    const { db } = await connectToDatabase();
     const { slug } = params;
     console.log('Received slug:', slug);  // Debug log
 
     const namePattern = createNameFromSlug(slug);
     console.log('Searching with pattern:', namePattern);  // Debug log
 
-    const doctor = await Doctor.findOne({ name: { $regex: namePattern } });
+    const doctor = await db.collection('doctors').findOne({ 
+      name: { $regex: namePattern } 
+    });
+    
     console.log('Found doctor:', doctor);  // Debug log
 
     if (!doctor) {
@@ -55,25 +57,32 @@ export async function GET(request, { params }) {
 // PUT route for updating doctor details
 export async function PUT(request, { params }) {
   try {
-    await dbConnect();
+    const { db } = await connectToDatabase();
     const { slug } = params;
     const body = await request.json();
 
     const namePattern = createNameFromSlug(slug);
-    const doctor = await Doctor.findOneAndUpdate(
+    
+    // Add updated timestamp
+    const updateData = {
+      ...body,
+      updatedAt: new Date()
+    };
+
+    const result = await db.collection('doctors').findOneAndUpdate(
       { name: { $regex: namePattern } },
-      body,
-      { new: true, runValidators: true }
+      { $set: updateData },
+      { returnDocument: 'after' }
     );
 
-    if (!doctor) {
+    if (!result.value) {
       return NextResponse.json(
         { error: 'Doctor not found' },
         { status: 404 }
       );
     }
 
-    return NextResponse.json(doctor);
+    return NextResponse.json(result.value);
   } catch (error) {
     return NextResponse.json(
       { error: error.message },
@@ -85,13 +94,15 @@ export async function PUT(request, { params }) {
 // DELETE route for removing a doctor
 export async function DELETE(request, { params }) {
   try {
-    await dbConnect();
+    const { db } = await connectToDatabase();
     const { slug } = params;
 
     const namePattern = createNameFromSlug(slug);
-    const doctor = await Doctor.findOneAndDelete({ name: { $regex: namePattern } });
+    const result = await db.collection('doctors').findOneAndDelete({ 
+      name: { $regex: namePattern } 
+    });
 
-    if (!doctor) {
+    if (!result.value) {
       return NextResponse.json(
         { error: 'Doctor not found' },
         { status: 404 }
