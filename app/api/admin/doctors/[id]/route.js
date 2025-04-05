@@ -1,85 +1,115 @@
-import { NextResponse } from 'next/server';
-import dbConnect from '@/lib/mongodb';
-import Doctor from '@/app/models/Doctor';
+import { connectToDatabase } from '@/lib/mongodb';
+import { ObjectId } from 'mongodb';
 
 export async function GET(request, { params }) {
   try {
-    await dbConnect();
+    const { db } = await connectToDatabase();
     const { id } = params;
-    console.log('Received id:', id);  // Debug log
 
-    const doctor = await Doctor.findOne({ _id: id });
-    console.log('Found doctor:', doctor);  // Debug log
-
-    if (!doctor) {
-      console.log('No doctor found for id:', id);  // Debug log
-      return NextResponse.json(
-        { error: 'Doctor not found' },
-        { status: 404 }
-      );
+    if (!id) {
+      return new Response(JSON.stringify({ error: 'Doctor ID is required' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
-    return NextResponse.json(doctor);
+    const doctor = await db.collection('doctors').findOne({ _id: new ObjectId(id) });
+
+    if (!doctor) {
+      return new Response(JSON.stringify({ error: 'Doctor not found' }), {
+        status: 404,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    return new Response(JSON.stringify(doctor), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
-    console.error('Error in GET route:', error);  // Debug log
-    return NextResponse.json(
-      { error: error.message },
-      { status: 500 }
-    );
+    console.error('Error fetching doctor:', error);
+    return new Response(JSON.stringify({ error: 'Failed to fetch doctor' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }
 
-// PUT route for updating doctor details
 export async function PUT(request, { params }) {
   try {
-    await dbConnect();
+    const { db } = await connectToDatabase();
     const { id } = params;
     const body = await request.json();
 
-    const doctor = await Doctor.findOneAndUpdate(
-      { _id: id },
-      body,
-      { new: true, runValidators: true }
-    );
-
-    if (!doctor) {
-      return NextResponse.json(
-        { error: 'Doctor not found' },
-        { status: 404 }
-      );
+    if (!id) {
+      return new Response(JSON.stringify({ error: 'Doctor ID is required' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
-    return NextResponse.json(doctor);
-  } catch (error) {
-    return NextResponse.json(
-      { error: error.message },
-      { status: 500 }
+    // Remove _id from the update data if it exists
+    const { _id, ...updateData } = body;
+    
+    // Add updatedAt timestamp
+    updateData.updatedAt = new Date();
+
+    const result = await db.collection('doctors').findOneAndUpdate(
+      { _id: new ObjectId(id) },
+      { $set: updateData },
+      { returnDocument: 'after' }
     );
+
+    if (!result) {
+      return new Response(JSON.stringify({ error: 'Doctor not found' }), {
+        status: 404,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    return new Response(JSON.stringify(result), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    console.error('Error updating doctor:', error);
+    return new Response(JSON.stringify({ error: 'Failed to update doctor' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }
 
-// DELETE route for removing a doctor
 export async function DELETE(request, { params }) {
   try {
-    await dbConnect();
+    const { db } = await connectToDatabase();
     const { id } = params;
-    console.log('Received id:', id);  // Debug log
 
-    const doctor = await Doctor.findOneAndDelete({ _id: id });
-    console.log('Doctor deleted:', doctor);  // Debug log
-
-    if (!doctor) {
-      return NextResponse.json(
-        { error: 'Doctor not found' },
-        { status: 404 }
-      );
+    if (!id) {
+      return new Response(JSON.stringify({ error: 'Doctor ID is required' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
     }
 
-    return NextResponse.json({ message: 'Doctor deleted successfully' });
+    const result = await db.collection('doctors').findOneAndDelete({ _id: new ObjectId(id) });
+
+    if (!result) {
+      return new Response(JSON.stringify({ error: 'Doctor not found' }), {
+        status: 404,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    return new Response(JSON.stringify({ message: 'Doctor deleted successfully' }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   } catch (error) {
-    return NextResponse.json(
-      { error: error.message },
-      { status: 500 }
-    );
+    console.error('Error deleting doctor:', error);
+    return new Response(JSON.stringify({ error: 'Failed to delete doctor' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 } 
