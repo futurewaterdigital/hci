@@ -163,7 +163,7 @@ export default function DoctorsPage() {
 
           </div>
 
-          <div className="card mt-4 md:mt-0 md:ml-6 flex flex-col items-center h-[360px] justify-between">
+          <div className="card mt-8 md:mt-0 md:ml-6 flex flex-col items-center h-[360px] justify-between">
             {doctors.isVerified && (
               <div className={`card ${flipped ? 'flipped' : ''}`}>
                 <h2 className='text-hciPrimary text-2xl font-bold mb-4'>Accredited by HCI</h2>

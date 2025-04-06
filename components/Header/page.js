@@ -3,8 +3,9 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import NewSearch from '../../components/Header/searchModal'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Drawer from '../../components/Header/Drawer'
+import { logout } from '@/lib/auth'
 
 // Debounce utility function
 const debounce = (fn, delay) => {
@@ -17,11 +18,30 @@ const debounce = (fn, delay) => {
 
 export default function Header() {
   const pathname = usePathname()
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   const placeholders = ['Hospital', 'Doctor', 'Treatment']
   const [currentPlaceholder, setCurrentPlaceholder] = useState(placeholders[0])
   const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    // Check authentication status on component mount
+    const checkAuth = () => {
+      const isAuth = localStorage.getItem('isAuthenticated') === 'true'
+      setIsAuthenticated(isAuth)
+    }
+    checkAuth()
+  }, [])
+
+  const handleLogout = async () => {
+    const success = await logout()
+    if (success) {
+      setIsAuthenticated(false)
+      router.push('/admin/login')
+    }
+  }
 
   // Memoized handler to open the drawer
   const handleOpen = useCallback(() => {
@@ -143,22 +163,12 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center lg:hidden">
-          <Link
-            href="/contact-us"
-            className="lg:w-full py-2 px-2 text-[12px]
-                font-medium text-[#D84498] rounded-lg border border-[#D84498] 
-                hover:bg-[#D84498] hover:text-white opacity-100 z-30 tracking-[2px] mr-2"
-          >
-            CONTACT US
-          </Link>
-        </div>
-        <div className="lg:flex items-center justify-end gap-0 w-1/2 hidden">
-          <div className="z-20 flex flex-row justify-between">
+        <div className="lg:flex items-center justify-end gap-4 w-1/2 hidden">
+          <div className="z-20 flex flex-row justify-between items-center">
             <div className="relative flex items-center justify-center right-[40px]">
               <NewSearch currentPlaceholder={currentPlaceholder} />
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center gap-4">
               <Link
                 href="/contact-us"
                 className="lg:w-full xs:py-2 xs:px-4 lg:px-2 lg:py-2 xl:text-lg lg:text-[12px]
@@ -167,8 +177,38 @@ export default function Header() {
               >
                 CONTACT US
               </Link>
+              {isAuthenticated && (
+                <button
+                  onClick={handleLogout}
+                  className="lg:w-full xs:py-2 xs:px-4 lg:px-2 lg:py-2 xl:text-lg lg:text-[12px]
+                  font-medium text-red-600 rounded-lg border border-red-600
+                  hover:bg-red-600 hover:text-white opacity-100 z-50 tracking-[2px]"
+                >
+                  LOGOUT
+                </button>
+              )}
             </div>
           </div>
+        </div>
+
+        {/* Mobile view buttons */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <Link
+            href="/contact-us"
+            className="py-2 px-2 text-[12px] font-medium text-[#D84498] rounded-lg border border-[#D84498] 
+            hover:bg-[#D84498] hover:text-white opacity-100 z-30 tracking-[2px]"
+          >
+            CONTACT US
+          </Link>
+          {isAuthenticated && (
+            <button
+              onClick={handleLogout}
+              className="py-2 px-2 text-[12px] font-medium text-red-600 rounded-lg border border-red-600
+              hover:bg-red-600 hover:text-white opacity-100 z-30 tracking-[2px]"
+            >
+              LOGOUT
+            </button>
+          )}
         </div>
       </div>
     </div>

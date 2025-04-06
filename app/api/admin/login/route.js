@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import dbConnect from '@/lib/mongodb';
+import dbConnect from '@/lib/mongoose';
 import Admin from '@/app/models/Admin';
 import { SignJWT } from 'jose';
 
