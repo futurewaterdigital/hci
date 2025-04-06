@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/lib/mongodb';
+import { ObjectId } from 'mongodb';
 
 const createNameFromSlug = (slug) => {
   // First, clean up the slug
@@ -97,10 +98,22 @@ export async function DELETE(request, { params }) {
     const { db } = await connectToDatabase();
     const { slug } = params;
 
-    const namePattern = createNameFromSlug(slug);
-    const result = await db.collection('doctors').findOneAndDelete({ 
-      name: { $regex: namePattern } 
-    });
+    // Check if the slug is a valid ObjectId
+    const isObjectId = /^[0-9a-fA-F]{24}$/.test(slug);
+    
+    let result;
+    if (isObjectId) {
+      // If it's an ObjectId, delete by ID
+      result = await db.collection('doctors').findOneAndDelete({ 
+        _id: new ObjectId(slug)
+      });
+    } else {
+      // If it's a name, use the name pattern
+      const namePattern = createNameFromSlug(slug);
+      result = await db.collection('doctors').findOneAndDelete({ 
+        name: { $regex: namePattern } 
+      });
+    }
 
     if (!result.value) {
       return NextResponse.json(
@@ -111,6 +124,7 @@ export async function DELETE(request, { params }) {
 
     return NextResponse.json({ message: 'Doctor deleted successfully' });
   } catch (error) {
+    console.error('Delete error:', error);
     return NextResponse.json(
       { error: error.message },
       { status: 500 }
