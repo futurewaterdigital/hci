@@ -1,160 +1,160 @@
-import React from 'react'
-import Title from '@/components/cardiacComponents/Title'
-import H2 from '@/components/ui/h2'
-import Link from 'next/link'
-import H3 from '@/components/ui/h3'
+import React from "react";
+import Title from "@/components/cardiacComponents/Title";
+import H2 from "@/components/ui/h2";
+import Link from "next/link";
+import H3 from "@/components/ui/h3";
 const data = {
-  title: 'Brain Tumor',
-  bannerImage: '/oncology/brain-tumor-banner.png',
+  title: "Brain Tumor",
+  bannerImage: "/oncology/brain-tumor-banner.png",
   description:
-    'A brain tumor occurs when abnormal cells form within the brain. There are two main types of tumors: malignant (cancerous) tumors and benign tumors. Brain tumors can be primary (starting in the brain) or metastatic (cancer spreading from other parts of the body).',
-  overview: '',
+    "A brain tumor occurs when abnormal cells form within the brain. There are two main types of tumors: malignant (cancerous) tumors and benign tumors. Brain tumors can be primary (starting in the brain) or metastatic (cancer spreading from other parts of the body).",
+  overview: "",
 
   main_menu: [
     {
-      menu: 'What is brain tumor?',
-      url: '/treatment/oncology/brain-tumor/what-is-brain-tumor',
+      menu: "What is brain tumor?",
+      url: "/treatment/oncology/brain-tumor/what-is-brain-tumor",
     },
     {
-      menu: 'What is brain cancer?',
-      url: '/treatment/oncology/brain-tumor/what-is-brain-cancer',
+      menu: "What is brain cancer?",
+      url: "/treatment/oncology/brain-tumor/what-is-brain-cancer",
     },
-    { menu: 'Symptoms', url: '/treatment/oncology/brain-tumor/symptoms' },
-    { menu: 'Causes', url: '/treatment/oncology/brain-tumor/causes' },
+    { menu: "Symptoms", url: "/treatment/oncology/brain-tumor/symptoms" },
+    { menu: "Causes", url: "/treatment/oncology/brain-tumor/causes" },
     {
-      menu: 'Locations and Types',
-      url: '/treatment/oncology/brain-tumor/locations-and-types',
+      menu: "Locations and Types",
+      url: "/treatment/oncology/brain-tumor/locations-and-types",
     },
     {
-      menu: 'Brain Tumors in Children',
-      url: '/treatment/oncology/brain-tumor/brain-tumors-in-children',
+      menu: "Brain Tumors in Children",
+      url: "/treatment/oncology/brain-tumor/brain-tumors-in-children",
     },
-    { menu: 'Diagnosis', url: '/treatment/oncology/brain-tumor/diagnosis' },
-    { menu: 'Treatment', url: '/treatment/oncology/brain-tumor/treatment' },
-    { menu: 'Prognosis', url: '/treatment/oncology/brain-tumor/prognosis' },
+    { menu: "Diagnosis", url: "/treatment/oncology/brain-tumor/diagnosis" },
+    { menu: "Treatment", url: "/treatment/oncology/brain-tumor/treatment" },
+    { menu: "Prognosis", url: "/treatment/oncology/brain-tumor/prognosis" },
   ],
 
   common_cancers: [
     {
-      title: 'Breast Cancer',
+      title: "Breast Cancer",
       description:
-        'The most common cancer among women, locally advanced or metastatic breast cancer (MBC) requires a multi-disciplinary approach. HER2-positive, ER/PR-negative breast cancer (TNBC), hormone-positive and other subtypes each demand specialized approaches.',
+        "The most common cancer among women, locally advanced or metastatic breast cancer (MBC) requires a multi-disciplinary approach. HER2-positive, ER/PR-negative breast cancer (TNBC), hormone-positive and other subtypes each demand specialized approaches.",
     },
     {
-      title: 'Advanced and Recurrent Colorectal',
+      title: "Advanced and Recurrent Colorectal",
       description:
-        'Advanced colorectal cancer often spreads to the liver or lungs requiring approach to target specific mutations including KRAS, NRAS and BRAF. We utilize innovative surgical and radiation techniques for optimal outcomes.',
+        "Advanced colorectal cancer often spreads to the liver or lungs requiring approach to target specific mutations including KRAS, NRAS and BRAF. We utilize innovative surgical and radiation techniques for optimal outcomes.",
     },
     {
-      title: 'Ovarian Cancer',
+      title: "Ovarian Cancer",
       description:
-        'Commonly discovered through screening and considered one of the most challenging to treat due to recurrence and chemotherapy resistance. Our approach combines cytoreductive surgery with targeted therapy for platinum-resistant cases.',
+        "Commonly discovered through screening and considered one of the most challenging to treat due to recurrence and chemotherapy resistance. Our approach combines cytoreductive surgery with targeted therapy for platinum-resistant cases.",
     },
     {
-      title: 'Lung and Head Cancers',
+      title: "Lung and Head Cancers",
       description:
-        'Often detected in later stages with poor prognosis, we conduct extensive molecular testing for EGFR, ALK, ROS1 and PD-L1 to determine targeted and immunotherapy approaches for personalized treatment.',
+        "Often detected in later stages with poor prognosis, we conduct extensive molecular testing for EGFR, ALK, ROS1 and PD-L1 to determine targeted and immunotherapy approaches for personalized treatment.",
     },
   ],
 
   india_cancer_stats: [
     {
-      title: 'Breast Cancer',
+      title: "Breast Cancer",
       description:
-        'The most common cancer in India with highest incidence rate among women. Triple-negative breast cancer (TNBC) has higher prevalence in Indian population than global averages.',
+        "The most common cancer in India with highest incidence rate among women. Triple-negative breast cancer (TNBC) has higher prevalence in Indian population than global averages.",
     },
     {
-      title: 'Oral Cancer',
+      title: "Oral Cancer",
       description:
-        'India has highest oral cancer rates due to tobacco use (smoking and chewing), with 60% detected in advanced stages with poor prognosis.',
+        "India has highest oral cancer rates due to tobacco use (smoking and chewing), with 60% detected in advanced stages with poor prognosis.",
     },
     {
-      title: 'Recurrent Colorectal Cancer',
+      title: "Recurrent Colorectal Cancer",
       description:
-        'Rising incidence in urban populations with up to 30-40% recurrence rates despite successful initial treatment, often requiring multimodal approaches.',
+        "Rising incidence in urban populations with up to 30-40% recurrence rates despite successful initial treatment, often requiring multimodal approaches.",
     },
   ],
 
   symptoms_factors: [
     {
-      title: 'Tumor Characteristics',
-      description: 'Aggressive tumor biology with rapid cellular division',
+      title: "Tumor Characteristics",
+      description: "Aggressive tumor biology with rapid cellular division",
     },
     {
-      title: 'Treatment Resistance',
+      title: "Treatment Resistance",
       description:
-        'Cancer cells that develop mechanisms to evade standard treatments',
+        "Cancer cells that develop mechanisms to evade standard treatments",
     },
     {
-      title: 'Late Stage Diagnosis',
+      title: "Late Stage Diagnosis",
       description:
-        'Detection after cancer has already metastasized to other organs',
+        "Detection after cancer has already metastasized to other organs",
     },
     {
-      title: 'Genetic Factors',
+      title: "Genetic Factors",
       description:
-        'Inherited gene mutations that predispose to aggressive cancer forms',
+        "Inherited gene mutations that predispose to aggressive cancer forms",
     },
   ],
 
   treatment_options: [
     {
-      heading: 'Chemotherapy and Radiation',
+      heading: "Chemotherapy and Radiation",
       description:
-        'Strategic use of cytotoxic drugs to destroy cancer cells or shrink tumors before surgery',
+        "Strategic use of cytotoxic drugs to destroy cancer cells or shrink tumors before surgery",
       aneurysmSymptoms: [
         {
           description:
-            'Combination chemotherapy protocols targeting specific cancer pathways',
+            "Combination chemotherapy protocols targeting specific cancer pathways",
         },
-        { description: 'Dose-dense regimens for aggressive recurrent cases' },
+        { description: "Dose-dense regimens for aggressive recurrent cases" },
         {
           description:
-            'Integration with radiation therapy for localized tumors',
+            "Integration with radiation therapy for localized tumors",
         },
-        { description: 'Hypofractionated protocols for patient convenience' },
+        { description: "Hypofractionated protocols for patient convenience" },
       ],
     },
     {
-      heading: 'Targeted Therapy and Immunotherapy',
+      heading: "Targeted Therapy and Immunotherapy",
       description:
-        'Precisely targets specific molecules involved in cancer growth or stimulates immune system to fight cancer',
+        "Precisely targets specific molecules involved in cancer growth or stimulates immune system to fight cancer",
       aneurysmSymptoms: [
         {
           description:
-            'Monoclonal antibodies that target specific cellular receptors',
+            "Monoclonal antibodies that target specific cellular receptors",
         },
         {
           description:
-            'Checkpoint inhibitors that unleash immune response against cancer cells',
+            "Checkpoint inhibitors that unleash immune response against cancer cells",
         },
         {
           description:
-            'Small molecule inhibitors that block specific growth pathways',
+            "Small molecule inhibitors that block specific growth pathways",
         },
         {
           description:
-            'CAR-T cell therapies for eligible hematological malignancies',
+            "CAR-T cell therapies for eligible hematological malignancies",
         },
       ],
     },
     {
-      heading: 'Palliative Care',
+      heading: "Palliative Care",
       description:
-        'Focuses on providing relief from symptoms and improving quality of life',
+        "Focuses on providing relief from symptoms and improving quality of life",
       aneurysmSymptoms: [
         {
           description:
-            'Advanced pain management protocols tailored to individual needs',
+            "Advanced pain management protocols tailored to individual needs",
         },
         {
           description:
-            'Nutritional support to counter cachexia and maintain strength',
+            "Nutritional support to counter cachexia and maintain strength",
         },
-        { description: 'Psychological support for patients and caregivers' },
+        { description: "Psychological support for patients and caregivers" },
         {
           description:
-            'Integration with curative approaches for better outcomes',
+            "Integration with curative approaches for better outcomes",
         },
       ],
     },
@@ -162,310 +162,310 @@ const data = {
 
   surgical_approaches: [
     {
-      heading: 'Salvage Surgery',
-      description: 'Surgical intervention after failure of primary therapy',
+      heading: "Salvage Surgery",
+      description: "Surgical intervention after failure of primary therapy",
       aneurysmSymptoms: [
         {
           description:
-            'Used for isolated recurrences that can be surgically addressed',
+            "Used for isolated recurrences that can be surgically addressed",
         },
-        { description: 'Often combined with intraoperative radiation therapy' },
+        { description: "Often combined with intraoperative radiation therapy" },
       ],
     },
     {
-      heading: 'Cytoreductive Surgery',
-      description: 'Removal of as much tumor burden as possible',
+      heading: "Cytoreductive Surgery",
+      description: "Removal of as much tumor burden as possible",
       aneurysmSymptoms: [
-        { description: 'Particularly beneficial in peritoneal carcinomatosis' },
+        { description: "Particularly beneficial in peritoneal carcinomatosis" },
         {
           description:
-            'May be combined with HIPEC (Hyperthermic Intraperitoneal Chemotherapy)',
+            "May be combined with HIPEC (Hyperthermic Intraperitoneal Chemotherapy)",
         },
       ],
     },
     {
-      heading: 'Minimally Invasive Techniques',
-      description: 'Laparoscopic and robotic approaches for suitable cases',
+      heading: "Minimally Invasive Techniques",
+      description: "Laparoscopic and robotic approaches for suitable cases",
       aneurysmSymptoms: [
         {
           description:
-            'Faster recovery and reduced postoperative complications',
+            "Faster recovery and reduced postoperative complications",
         },
-        { description: 'Enhanced precision in difficult anatomical locations' },
+        { description: "Enhanced precision in difficult anatomical locations" },
       ],
     },
   ],
 
   barriers: [
     {
-      heading: 'Awareness',
-      description: 'Low awareness about cancer symptoms and treatment options',
+      heading: "Awareness",
+      description: "Low awareness about cancer symptoms and treatment options",
       aneurysmSymptoms: [
         {
           description:
-            'Delays in seeking medical attention leading to advanced presentations',
+            "Delays in seeking medical attention leading to advanced presentations",
         },
         {
           description:
-            'Limited understanding of long-term follow-up importance',
+            "Limited understanding of long-term follow-up importance",
         },
       ],
     },
     {
-      heading: 'Access to Healthcare',
-      description: 'Uneven distribution of cancer centers across India',
+      heading: "Access to Healthcare",
+      description: "Uneven distribution of cancer centers across India",
       aneurysmSymptoms: [
-        { description: 'Concentration of specialized centers in major cities' },
+        { description: "Concentration of specialized centers in major cities" },
         {
           description:
-            'Transportation and accommodation challenges for rural patients',
+            "Transportation and accommodation challenges for rural patients",
         },
       ],
     },
     {
-      heading: 'Financial Considerations',
-      description: 'High cost of advanced cancer treatments',
+      heading: "Financial Considerations",
+      description: "High cost of advanced cancer treatments",
       aneurysmSymptoms: [
-        { description: 'Limited insurance coverage for novel therapies' },
+        { description: "Limited insurance coverage for novel therapies" },
         {
           description:
-            'Catastrophic health expenditure affecting treatment completion',
+            "Catastrophic health expenditure affecting treatment completion",
         },
       ],
     },
     {
-      heading: 'Cultural and Social Factors',
-      description: 'Stigma and cultural beliefs affecting treatment decisions',
+      heading: "Cultural and Social Factors",
+      description: "Stigma and cultural beliefs affecting treatment decisions",
       aneurysmSymptoms: [
         {
           description:
-            'Preference for alternative medicines delaying conventional treatment',
+            "Preference for alternative medicines delaying conventional treatment",
         },
-        { description: 'Fatalistic attitudes toward cancer diagnosis' },
+        { description: "Fatalistic attitudes toward cancer diagnosis" },
       ],
     },
   ],
 
   risk_factors: [
     {
-      category: '',
+      category: "",
       description:
-        'Inadequate treatment of the primary cancer leading to residual cancer cells',
-      bgColor: 'bg-hciPrimary text-white',
+        "Inadequate treatment of the primary cancer leading to residual cancer cells",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Genetic mutations causing resistance to standard treatment protocols',
-      bgColor: 'bg-hciPrimary text-white',
+        "Genetic mutations causing resistance to standard treatment protocols",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Advanced stage at initial diagnosis increasing likelihood of microscopic spread',
-      bgColor: 'bg-hciPrimary text-white',
+        "Advanced stage at initial diagnosis increasing likelihood of microscopic spread",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnostics: [
     {
-      heading: 'Advanced Imaging',
-      description: 'High-resolution scanning technologies',
+      heading: "Advanced Imaging",
+      description: "High-resolution scanning technologies",
       aneurysmSymptoms: [
-        { description: 'PET-CT for metabolic activity assessment' },
+        { description: "PET-CT for metabolic activity assessment" },
         {
           description:
-            'MRI with contrast enhancement for soft tissue evaluation',
+            "MRI with contrast enhancement for soft tissue evaluation",
         },
-        { description: 'Whole-body imaging for metastasis detection' },
+        { description: "Whole-body imaging for metastasis detection" },
       ],
     },
     {
-      heading: 'Molecular Diagnostics',
-      description: 'Genetic and biomarker analysis',
+      heading: "Molecular Diagnostics",
+      description: "Genetic and biomarker analysis",
       aneurysmSymptoms: [
         {
           description:
-            'Next-generation sequencing for comprehensive genomic profiling',
+            "Next-generation sequencing for comprehensive genomic profiling",
         },
-        { description: 'Liquid biopsies to detect circulating tumor DNA' },
+        { description: "Liquid biopsies to detect circulating tumor DNA" },
         {
           description:
-            'Expression profiling for personalized treatment selection',
+            "Expression profiling for personalized treatment selection",
         },
       ],
     },
     {
-      heading: 'Tissue Sampling',
-      description: 'Obtaining specimens for analysis',
+      heading: "Tissue Sampling",
+      description: "Obtaining specimens for analysis",
       aneurysmSymptoms: [
-        { description: 'Image-guided biopsies for difficult-to-access tumors' },
-        { description: 'Endoscopic ultrasound-guided fine needle aspiration' },
-        { description: 'Sentinel node evaluation for recurrent disease' },
+        { description: "Image-guided biopsies for difficult-to-access tumors" },
+        { description: "Endoscopic ultrasound-guided fine needle aspiration" },
+        { description: "Sentinel node evaluation for recurrent disease" },
       ],
     },
   ],
 
   best_hospitals: [
-    { city: 'Delhi', url: '/best-cancer-hospital-delhi' },
-    { city: 'Mumbai', url: '/best-cancer-hospital-mumbai' },
-    { city: 'Bangalore', url: '/best-cancer-hospital-bangalore' },
-    { city: 'Chennai', url: '/best-cancer-hospital-chennai' },
-    { city: 'Hyderabad', url: '/best-cancer-hospital-hyderabad' },
-    { city: 'Pune', url: '/best-cancer-hospital-pune' },
+    { city: "Delhi", url: "/best-cancer-hospital-delhi" },
+    { city: "Mumbai", url: "/best-cancer-hospital-mumbai" },
+    { city: "Bangalore", url: "/best-cancer-hospital-bangalore" },
+    { city: "Chennai", url: "/best-cancer-hospital-chennai" },
+    { city: "Hyderabad", url: "/best-cancer-hospital-hyderabad" },
+    { city: "Pune", url: "/best-cancer-hospital-pune" },
   ],
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `The management of advanced and recurrent cancers is highly complex and requires a multidisciplinary approach. With significant advancements in molecular diagnostics, targeted therapies, and immunotherapy, many patients now have improved outcomes and quality of life. At HCI, our comprehensive approach combines cutting-edge treatments with personalized care to address each patient's unique needs. We remain committed to advancing cancer care through research, innovation, and dedicated clinical excellence to give our patients the best possible chance for recovery.`,
     },
   ],
 
   types: {
-    heading: 'Types of Brain Tumors',
+    heading: "Types of Brain Tumors",
     items: [
       {
-        title: 'Primary Brain Tumors',
+        title: "Primary Brain Tumors",
         description:
-          'These tumors start in the brain tissue and can be either malignant or benign.',
+          "These tumors start in the brain tissue and can be either malignant or benign.",
         subtypes: [
-          'Gliomas',
-          'Meningiomas',
-          'Pituitary Adenomas',
-          'Schwannomas',
-          'Medulloblastomas',
+          "Gliomas",
+          "Meningiomas",
+          "Pituitary Adenomas",
+          "Schwannomas",
+          "Medulloblastomas",
         ],
       },
       {
-        title: 'Secondary Brain Tumors',
+        title: "Secondary Brain Tumors",
         description:
-          'These tumors start elsewhere in the body and spread to the brain, commonly from lung cancer, breast cancer, kidney cancer, and melanoma.',
+          "These tumors start elsewhere in the body and spread to the brain, commonly from lung cancer, breast cancer, kidney cancer, and melanoma.",
       },
     ],
   },
 
   symptoms: {
-    heading: 'Common Symptoms',
+    heading: "Common Symptoms",
     description:
       "Symptoms vary depending on the tumor's size, location, and growth rate. Common signs include:",
     items: [
-      'Headaches that become more frequent and severe',
-      'Unexplained nausea or vomiting',
-      'Vision problems, such as blurred vision, double vision, or loss of peripheral vision',
-      'Gradual loss of sensation or movement in arms or legs',
-      'Difficulty with balance',
-      'Speech difficulties',
-      'Confusion in everyday matters',
-      'Personality or behavior changes',
+      "Headaches that become more frequent and severe",
+      "Unexplained nausea or vomiting",
+      "Vision problems, such as blurred vision, double vision, or loss of peripheral vision",
+      "Gradual loss of sensation or movement in arms or legs",
+      "Difficulty with balance",
+      "Speech difficulties",
+      "Confusion in everyday matters",
+      "Personality or behavior changes",
       "Seizures, especially in someone who doesn't have a history of seizures",
-      'Hearing problems',
+      "Hearing problems",
     ],
   },
 
   diagnosis: {
-    heading: 'Diagnosis Methods',
+    heading: "Diagnosis Methods",
     description:
-      'Several tests and procedures are used to diagnose brain tumors:',
+      "Several tests and procedures are used to diagnose brain tumors:",
     methods: [
       {
-        name: 'Neurological Exam',
+        name: "Neurological Exam",
         description:
-          'Checking vision, hearing, balance, coordination, and reflexes',
+          "Checking vision, hearing, balance, coordination, and reflexes",
       },
       {
-        name: 'Imaging Tests',
+        name: "Imaging Tests",
         items: [
-          'MRI (Magnetic Resonance Imaging)',
-          'CT Scan',
-          'PET Scan',
-          'Angiogram',
+          "MRI (Magnetic Resonance Imaging)",
+          "CT Scan",
+          "PET Scan",
+          "Angiogram",
         ],
       },
       {
-        name: 'Biopsy',
-        description: 'Surgical removal of a small sample of tissue for testing',
+        name: "Biopsy",
+        description: "Surgical removal of a small sample of tissue for testing",
       },
     ],
   },
 
   treatments: {
-    heading: 'Treatment Options',
-    description: 'Treatment depends on type, size, and location of the tumor:',
+    heading: "Treatment Options",
+    description: "Treatment depends on type, size, and location of the tumor:",
     options: [
       {
-        name: 'Surgery',
+        name: "Surgery",
         description:
-          'When possible, surgical removal of the brain tumor is the first treatment option.',
+          "When possible, surgical removal of the brain tumor is the first treatment option.",
         details: [
-          'Craniotomy - Opening the skull to remove tumor',
-          'Minimally invasive surgery',
-          'Awake brain surgery',
-          'Laser interstitial thermal therapy',
+          "Craniotomy - Opening the skull to remove tumor",
+          "Minimally invasive surgery",
+          "Awake brain surgery",
+          "Laser interstitial thermal therapy",
         ],
       },
       {
-        name: 'Radiation Therapy',
+        name: "Radiation Therapy",
         types: [
-          'External beam radiation',
-          'Proton therapy',
-          'Stereotactic radiosurgery',
-          'Brachytherapy',
+          "External beam radiation",
+          "Proton therapy",
+          "Stereotactic radiosurgery",
+          "Brachytherapy",
         ],
       },
       {
-        name: 'Chemotherapy',
+        name: "Chemotherapy",
         description:
-          'Using drugs to kill cancer cells, can be oral or intravenous',
+          "Using drugs to kill cancer cells, can be oral or intravenous",
       },
       {
-        name: 'Targeted Drug Therapy',
-        description: 'Focuses on specific abnormalities within cancer cells',
+        name: "Targeted Drug Therapy",
+        description: "Focuses on specific abnormalities within cancer cells",
       },
       {
-        name: 'Immunotherapy',
-        description: 'Helps your immune system fight cancer cells',
+        name: "Immunotherapy",
+        description: "Helps your immune system fight cancer cells",
       },
     ],
   },
 
   rehabilitation: {
-    heading: 'Rehabilitation Services',
+    heading: "Rehabilitation Services",
     services: [
-      'Physical therapy',
-      'Occupational therapy',
-      'Speech therapy',
-      'Cognitive rehabilitation',
+      "Physical therapy",
+      "Occupational therapy",
+      "Speech therapy",
+      "Cognitive rehabilitation",
     ],
   },
 
   hospitals: [
     {
-      text: 'For The Best Hospital For The Treatment Of Brain Tumor In India, Click Here',
-      url: '/best-brain-tumor-hospital-india',
+      text: "For The Best Hospital For The Treatment Of Brain Tumor In India, Click Here",
+      url: "/best-brain-tumor-hospital-india",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Brain Tumor In Bangalore, Click Here',
-      url: '/best-brain-tumor-hospital-bangalore',
+      text: "For The Best Hospital For The Treatment Of Brain Tumor In Bangalore, Click Here",
+      url: "/best-brain-tumor-hospital-bangalore",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Brain Tumor In Chennai, Click Here',
-      url: '/best-brain-tumor-hospital-chennai',
+      text: "For The Best Hospital For The Treatment Of Brain Tumor In Chennai, Click Here",
+      url: "/best-brain-tumor-hospital-chennai",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Brain Tumor In Delhi, Click Here',
-      url: '/best-brain-tumor-hospital-delhi',
+      text: "For The Best Hospital For The Treatment Of Brain Tumor In Delhi, Click Here",
+      url: "/best-brain-tumor-hospital-delhi",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Brain Tumor In Hyderabad, Click Here',
-      url: '/best-brain-tumor-hospital-hyderabad',
+      text: "For The Best Hospital For The Treatment Of Brain Tumor In Hyderabad, Click Here",
+      url: "/best-brain-tumor-hospital-hyderabad",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Brain Tumor In Mumbai, Click Here',
-      url: '/best-brain-tumor-hospital-mumbai',
+      text: "For The Best Hospital For The Treatment Of Brain Tumor In Mumbai, Click Here",
+      url: "/best-brain-tumor-hospital-mumbai",
     },
   ],
-}
+};
 
 function BrainTumor() {
   return (
@@ -493,8 +493,10 @@ function BrainTumor() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {data.types.items.map((type, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6">
-              <H3 title={type.title} className="text-xl font-semibold mb-3"/>
-              <p className="text-gray-600 mb-4 font-light">{type.description}</p>
+              <H3 title={type.title} className="text-xl font-semibold mb-3" />
+              <p className="text-gray-600 mb-4 font-light">
+                {type.description}
+              </p>
               {type.subtypes && (
                 <ul className="list-disc list-inside text-gray-600">
                   {type.subtypes.map((subtype, idx) => (
@@ -510,7 +512,9 @@ function BrainTumor() {
       {/* Symptoms Section */}
       <div className="mb-12 bg-blue-50 rounded-lg p-8">
         <H2 title={data.symptoms.heading} className="font-semibold mb-6" />
-        <p className="text-gray-600 mb-6 font-light">{data.symptoms.description}</p>
+        <p className="text-gray-600 mb-6 font-light">
+          {data.symptoms.description}
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {data.symptoms.items.map((symptom, index) => (
             <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
@@ -523,11 +527,13 @@ function BrainTumor() {
       {/* Diagnosis Section */}
       <div className="mb-12">
         <H2 title={data.diagnosis.heading} className="font-semibold mb-6" />
-        <p className="text-gray-600 mb-6 font-light">{data.diagnosis.description}</p>
+        <p className="text-gray-600 mb-6 font-light">
+          {data.diagnosis.description}
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {data.diagnosis.methods.map((method, index) => (
             <div key={index} className="bg-pink-50 rounded-lg p-6">
-              <H3 title={method.name} className="text-lg font-semibold mb-3"/>
+              <H3 title={method.name} className="text-lg font-semibold mb-3" />
               {method.description && (
                 <p className="text-gray-600 font-light">{method.description}</p>
               )}
@@ -546,13 +552,17 @@ function BrainTumor() {
       {/* Treatment Section */}
       <div className="mb-12">
         <H2 title={data.treatments.heading} className="font-semibold mb-6" />
-        <p className="text-gray-600 mb-6 font-light">{data.treatments.description}</p>
+        <p className="text-gray-600 mb-6 font-light">
+          {data.treatments.description}
+        </p>
         <div className="space-y-6">
           {data.treatments.options.map((option, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6">
-              <H3 title={option.name} className="text-xl font-semibold mb-3"/>
+              <H3 title={option.name} className="text-xl font-semibold mb-3" />
               {option.description && (
-                <p className="text-gray-600 mb-4 font-light">{option.description}</p>
+                <p className="text-gray-600 mb-4 font-light">
+                  {option.description}
+                </p>
               )}
               {option.details && (
                 <ul className="list-disc list-inside text-gray-600">
@@ -575,7 +585,10 @@ function BrainTumor() {
 
       {/* Rehabilitation Section */}
       <div className="mb-12 bg-gray-50 rounded-lg p-8">
-        <H2 title={data.rehabilitation.heading} className="font-semibold mb-6" />
+        <H2
+          title={data.rehabilitation.heading}
+          className="font-semibold mb-6"
+        />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {data.rehabilitation.services.map((service, index) => (
             <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
@@ -587,7 +600,10 @@ function BrainTumor() {
 
       {/* Hospital Links */}
       <div className="mb-12">
-        <H2 title="Find Treatment Centers" className="font-semibold mb-6 text-center" />
+        <H2
+          title="Find Treatment Centers"
+          className="font-semibold mb-6 text-center"
+        />
         <div className="space-y-4">
           {data.hospitals.map((hospital, index) => (
             <div key={index} className="text-center">
@@ -612,7 +628,7 @@ function BrainTumor() {
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
-export default BrainTumor
+export default BrainTumor;
