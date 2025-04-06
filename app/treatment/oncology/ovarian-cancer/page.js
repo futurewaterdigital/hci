@@ -2,7 +2,6 @@ import React from "react";
 import Title from "@/components/cardiacComponents/Title";
 import H2 from "@/components/ui/h2";
 import Link from "next/link";
-import H3 from "@/components/ui/h3";
 import Banner from "@/components/Common/Banner";
 
 const data = {

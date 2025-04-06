@@ -859,21 +859,21 @@ function BrainTumor() {
               Can you have a Brain Tumor with no symptoms?
             </h2>
             <p className="text-gray-700 mb-4">
-              Brain tumors don't always cause symptoms. In fact, the most common
-              brain tumor in adults, meningioma, often grows so slowly that it
-              goes unnoticed. Tumors may not start causing symptoms until they
-              become large enough to interfere with healthy tissues inside the
-              brain.
+              Brain tumors don&apos;t always cause symptoms. In fact, the most
+              common brain tumor in adults, meningioma, often grows so slowly
+              that it goes unnoticed. Tumors may not start causing symptoms
+              until they become large enough to interfere with healthy tissues
+              inside the brain.
             </p>
 
             <h3 className="text-pink-500 font-bold mb-2">
               Brain Tumor Causes and Risk Factors
             </h3>
             <p className="text-gray-700 mb-4">
-              Doctors don't know why some cells begin to form into tumor cells.
-              It may have something to do with a person's genes or his or her
-              environment, or both. Some potential brain tumor causes and risk
-              factors may include:
+              Doctors don&apos;t know why some cells begin to form into tumor
+              cells. It may have something to do with a person&apos;s genes or
+              his or her environment, or both. Some potential brain tumor causes
+              and risk factors may include:
             </p>
 
             <div className="bg-blue-100 p-3 mb-2 rounded">
