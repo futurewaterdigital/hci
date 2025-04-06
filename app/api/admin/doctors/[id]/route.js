@@ -49,7 +49,8 @@ export async function PUT(request, { params }) {
     }
 
     // Remove _id from the update data if it exists
-    const { ...updateData } = body;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { _id, ...updateData } = body;
     
     // Add updatedAt timestamp
     updateData.updatedAt = new Date();
