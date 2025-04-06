@@ -26,6 +26,7 @@ export default function EditDoctorPage({ params }) {
 
         const data = await response.json();
         setDoctor(data);
+        
       } catch (error) {
         setError('Failed to load doctor');
         console.error('Error fetching doctor:', error);

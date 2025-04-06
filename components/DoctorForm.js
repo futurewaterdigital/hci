@@ -9,6 +9,7 @@ export default function DoctorForm({ onSubmit, onChange, initialData, isEditing 
     qualification: [''],
     experience: '',
     rating: '',
+    category: '',
     reviews: '',
     expertise: [''],
     publicationData: {
@@ -128,6 +129,23 @@ export default function DoctorForm({ onSubmit, onChange, initialData, isEditing 
           onChange={handleChange}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
         />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Category</label>
+        <select
+        name="category"
+        value={formData.category}
+          onChange={handleChange}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+        >
+          <option value="cardiac-sciences">Cardiac Sciences</option>
+          <option value="oncology">Oncology</option>
+          <option value="neuro-sciences">Neuro Sciences</option>
+          <option value="gastroenterology">Gastroenterology</option>
+          <option value="orthopedics">Orthopedics</option>
+          
+          
+        </select>
       </div>
 
       <div>

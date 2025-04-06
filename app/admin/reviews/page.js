@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaCheck, FaTimes, FaTrash } from 'react-icons/fa';
 
 export default function ReviewsPage() {
@@ -8,9 +8,9 @@ export default function ReviewsPage() {
   const [error, setError] = useState('');
   const [filter, setFilter] = useState('pending');
 
-  useEffect(() => {
-    fetchReviews();
-  }, [filter]);
+  // useEffect(() => {
+  //   fetchReviews();
+  // }, [filter]);
 
   const fetchReviews = async () => {
     try {

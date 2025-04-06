@@ -49,7 +49,7 @@ export async function PUT(request, { params }) {
     }
 
     // Remove _id from the update data if it exists
-    const { _id, ...updateData } = body;
+    const { ...updateData } = body;
     
     // Add updatedAt timestamp
     updateData.updatedAt = new Date();

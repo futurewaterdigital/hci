@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import Admin from '@/app/models/Admin';
 
-export async function POST(request) {
+export async function POST() {
   try {
     await dbConnect();
 

@@ -1,9 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { FaStar, FaCheck, FaAward } from 'react-icons/fa';
+
 import { useParams } from 'next/navigation';
 import React from 'react'
 import { IoStarOutline, IoStarHalfSharp, IoStarSharp } from "react-icons/io5";

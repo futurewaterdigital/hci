@@ -1,5 +1,5 @@
 'use client';
-import { IoStarOutline, IoStarHalfSharp, IoStarSharp } from "react-icons/io5";
+
 import { FaStar, FaCheck, FaAward } from 'react-icons/fa';
 import { useState } from 'react';
 

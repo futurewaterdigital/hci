@@ -15,8 +15,6 @@ export default function AdminLogin() {
     setError('');
 
     try {
-      console.log('Attempting login with:', { email, password });
-      
       const response = await fetch('/api/admin/login', {
         method: 'POST',
         headers: {
@@ -26,12 +24,9 @@ export default function AdminLogin() {
       });
 
       const data = await response.json();
-      console.log('Login response:', data);
 
       if (response.ok) {
-        // Store the token in localStorage
         localStorage.setItem('adminToken', data.token);
-        // Redirect to admin dashboard
         router.push('/admin/doctors');
       } else {
         setError(data.message || 'Login failed');
@@ -45,7 +40,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -53,11 +48,6 @@ export default function AdminLogin() {
           </h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          {error && (
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-              <span className="block sm:inline">{error}</span>
-            </div>
-          )}
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
               <label htmlFor="email" className="sr-only">
@@ -93,13 +83,15 @@ export default function AdminLogin() {
             </div>
           </div>
 
+          {error && (
+            <div className="text-red-500 text-sm text-center">{error}</div>
+          )}
+
           <div>
             <button
               type="submit"
               disabled={loading}
-              className={`group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white ${
-                loading ? 'bg-indigo-400' : 'bg-indigo-600 hover:bg-indigo-700'
-              } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               {loading ? 'Signing in...' : 'Sign in'}
             </button>

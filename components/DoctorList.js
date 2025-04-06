@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { FaEdit, FaTrash, FaPlus, FaMinus } from 'react-icons/fa';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 export default function DoctorList({ doctors, onDelete }) {
   const router = useRouter();
