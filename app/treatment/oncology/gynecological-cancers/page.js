@@ -1,143 +1,143 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
 // import DataLists from '@/components/cardiacComponents/Bullets'
 // import BookButton from '@/components/cardiacComponents/BookButton'
 // import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
+import H2 from "@/components/ui/h2";
 
 // import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
+import Conclusion from "@/components/cardiacComponents/Conclusion";
 // import Link from 'next/link'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H3 from '@/components/ui/h3'
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H3 from "@/components/ui/h3";
 
 const data = {
-  title: 'Gynecological Cancers',
-  title_1: 'Endometrial Cancer',
-  bannerImage: '/oncology/gynecological-cancers-banner.png',
-  bannerImage_1: '/oncology/gynecological-cancers.png',
+  title: "Gynecological Cancers",
+  title_1: "Endometrial Cancer",
+  bannerImage: "/oncology/gynecological-cancers-banner.png",
+  bannerImage_1: "/oncology/gynecological-cancers.png",
   description:
-    'Gynecological cancers encompass a group of malignancies affecting a woman’s reproductive organs, including cervical, ovarian, uterine, vaginal, and vulvar cancers. Each type has unique symptoms, risk factors, and treatment options, but early detection is key to improving outcomes across all forms. Common risk factors include age, family history, genetic mutations like BRCA1/BRCA2, and lifestyle factors such as smoking and obesity. Advances in screening, such as Pap smears for cervical cancer, along with diagnostic tools like ultrasound and genetic testing, have greatly aided in early diagnosis. Treatment approaches, which may include surgery, chemotherapy, and radiation therapy, are tailored to the specific type and stage of the cancer.',
+    "Gynecological cancers encompass a group of malignancies affecting a woman’s reproductive organs, including cervical, ovarian, uterine, vaginal, and vulvar cancers. Each type has unique symptoms, risk factors, and treatment options, but early detection is key to improving outcomes across all forms. Common risk factors include age, family history, genetic mutations like BRCA1/BRCA2, and lifestyle factors such as smoking and obesity. Advances in screening, such as Pap smears for cervical cancer, along with diagnostic tools like ultrasound and genetic testing, have greatly aided in early diagnosis. Treatment approaches, which may include surgery, chemotherapy, and radiation therapy, are tailored to the specific type and stage of the cancer.",
   description_1: `Endometrial cancer, or uterine cancer, arises from the endometrium, the lining of the uterus. It is the most common type of uterine cancer and typically occurs in postmenopausal women. Early detection often leads to a good prognosis, making awareness of symptoms crucial.`,
   causes: [
     {
-      heading: 'Causes',
+      heading: "Causes",
       description:
-        'While the exact cause remains unclear, certain risk factors increase the likelihood of developing endometrial cancer, including obesity, hormone replacement therapy, early menstruation or late menopause, and certain genetic conditions like Lynch syndrome.',
+        "While the exact cause remains unclear, certain risk factors increase the likelihood of developing endometrial cancer, including obesity, hormone replacement therapy, early menstruation or late menopause, and certain genetic conditions like Lynch syndrome.",
     },
   ],
 
   causes_1: [
     {
-      heading: 'Diagnosis',
+      heading: "Diagnosis",
       description:
-        'Diagnosis often begins with a review of medical history and physical examination, followed by diagnostic tests such as:',
+        "Diagnosis often begins with a review of medical history and physical examination, followed by diagnostic tests such as:",
     },
   ],
 
   diagnosis: [
     {
-      heading: 'Transvaginal Ultrasound',
-      description: 'Uses sound waves to create images of the uterus',
+      heading: "Transvaginal Ultrasound",
+      description: "Uses sound waves to create images of the uterus",
       aneurysmSymptoms: [
-        { description: 'Non-invasive imaging technique' },
-        { description: 'Creates detailed images of the uterine cavity' },
-        { description: 'Helps measure endometrial thickness' },
+        { description: "Non-invasive imaging technique" },
+        { description: "Creates detailed images of the uterine cavity" },
+        { description: "Helps measure endometrial thickness" },
       ],
     },
     {
-      heading: 'Endometrial Biopsy',
+      heading: "Endometrial Biopsy",
       description:
-        'A sample of the uterine lining is taken for laboratory analysis',
+        "A sample of the uterine lining is taken for laboratory analysis",
       aneurysmSymptoms: [
-        { description: 'Confirms presence of cancer cells' },
-        { description: 'Determines cancer type and grade' },
-        { description: 'Usually performed in office' },
+        { description: "Confirms presence of cancer cells" },
+        { description: "Determines cancer type and grade" },
+        { description: "Usually performed in office" },
       ],
     },
     {
-      heading: 'Hysteroscopy',
+      heading: "Hysteroscopy",
       description:
-        'A thin tube with a camera is inserted into the uterus to examine the lining',
+        "A thin tube with a camera is inserted into the uterus to examine the lining",
       aneurysmSymptoms: [
-        { description: 'Direct visualization of the uterine cavity' },
-        { description: 'Can identify abnormal growths' },
-        { description: 'Allows for targeted biopsies' },
+        { description: "Direct visualization of the uterine cavity" },
+        { description: "Can identify abnormal growths" },
+        { description: "Allows for targeted biopsies" },
       ],
     },
   ],
 
   treatments: [
     {
-      heading: 'Surgery',
-      description: 'Primary treatment option',
+      heading: "Surgery",
+      description: "Primary treatment option",
       aneurysmSymptoms: [
         {
-          title: 'Hysterectomy',
+          title: "Hysterectomy",
           description:
-            'Removal of the uterus and surrounding tissues (may include ovaries and lymph nodes)',
+            "Removal of the uterus and surrounding tissues (may include ovaries and lymph nodes)",
         },
         {
-          title: 'Lymph Node Removal',
+          title: "Lymph Node Removal",
           description:
-            'Nearby lymph nodes may be removed to check for cancer spread',
-        },
-      ],
-    },
-    {
-      heading: 'Radiation Therapy',
-      description: 'External and internal radiation options',
-      aneurysmSymptoms: [
-        {
-          title: 'External Beam Radiation Therapy (EBRT)',
-          description:
-            'High-energy beams target cancer cells from outside the body',
-        },
-        {
-          title: 'Brachytherapy',
-          description:
-            'A radiation source is placed directly near the cancer site',
+            "Nearby lymph nodes may be removed to check for cancer spread",
         },
       ],
     },
     {
-      heading: 'Hormone Therapy',
-      description: 'Hormonal treatment approach',
-      aneurysmSymptoms: [
-        { description: 'Used for advanced or recurrent cases' },
-        { description: 'May include progesterone therapy' },
-        { description: 'Can help slow cancer growth' },
-      ],
-    },
-    {
-      heading: 'Chemotherapy',
-      description: 'Systemic treatment with drugs',
-      aneurysmSymptoms: [
-        { description: 'Commonly uses carboplatin and paclitaxel' },
-        { description: 'Used for advanced stage or high-grade cancer' },
-        { description: 'May be combined with radiation for better outcomes' },
-      ],
-    },
-    {
-      heading: 'Targeted Therapy',
-      description: 'Precision medicine approach',
+      heading: "Radiation Therapy",
+      description: "External and internal radiation options",
       aneurysmSymptoms: [
         {
-          title: 'Lenvatinib',
+          title: "External Beam Radiation Therapy (EBRT)",
           description:
-            'Used to target specific molecular pathways involved in cancer growth',
+            "High-energy beams target cancer cells from outside the body",
+        },
+        {
+          title: "Brachytherapy",
+          description:
+            "A radiation source is placed directly near the cancer site",
         },
       ],
     },
     {
-      heading: 'Immunotherapy',
-      description: 'Immune system enhancement',
+      heading: "Hormone Therapy",
+      description: "Hormonal treatment approach",
+      aneurysmSymptoms: [
+        { description: "Used for advanced or recurrent cases" },
+        { description: "May include progesterone therapy" },
+        { description: "Can help slow cancer growth" },
+      ],
+    },
+    {
+      heading: "Chemotherapy",
+      description: "Systemic treatment with drugs",
+      aneurysmSymptoms: [
+        { description: "Commonly uses carboplatin and paclitaxel" },
+        { description: "Used for advanced stage or high-grade cancer" },
+        { description: "May be combined with radiation for better outcomes" },
+      ],
+    },
+    {
+      heading: "Targeted Therapy",
+      description: "Precision medicine approach",
       aneurysmSymptoms: [
         {
-          title: 'Immune Checkpoint Inhibitors',
+          title: "Lenvatinib",
           description:
-            'Like pembrolizumab, help the immune system fight cancer by blocking proteins that prevent immune attacks',
+            "Used to target specific molecular pathways involved in cancer growth",
+        },
+      ],
+    },
+    {
+      heading: "Immunotherapy",
+      description: "Immune system enhancement",
+      aneurysmSymptoms: [
+        {
+          title: "Immune Checkpoint Inhibitors",
+          description:
+            "Like pembrolizumab, help the immune system fight cancer by blocking proteins that prevent immune attacks",
         },
       ],
     },
@@ -145,49 +145,52 @@ const data = {
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph:
-        'Endometrial cancer presents a significant health concern, particularly for women at risk. Early detection and a multidisciplinary approach to treatment can significantly improve outcomes. Regular check-ups and awareness of symptoms are essential for effective management and treatment of the disease.',
+        "Endometrial cancer presents a significant health concern, particularly for women at risk. Early detection and a multidisciplinary approach to treatment can significantly improve outcomes. Regular check-ups and awareness of symptoms are essential for effective management and treatment of the disease.",
     },
   ],
 
   hospital_links: [
     {
-      text: 'For The Best Hospital For The Treatment Of Endometrial Cancer In India',
-      url: '/best-endometrial-cancer-hospital-india',
+      text: "For The Best Hospital For The Treatment Of Endometrial Cancer In India",
+      url: "/best-endometrial-cancer-hospital-india",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Endometrial Cancer In Bangalore',
-      url: '/best-endometrial-cancer-hospital-bangalore',
+      text: "For The Best Hospital For The Treatment Of Endometrial Cancer In Bangalore",
+      url: "/best-endometrial-cancer-hospital-bangalore",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Endometrial Cancer In Chennai',
-      url: '/best-endometrial-cancer-hospital-chennai',
+      text: "For The Best Hospital For The Treatment Of Endometrial Cancer In Chennai",
+      url: "/best-endometrial-cancer-hospital-chennai",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Endometrial Cancer In Delhi',
-      url: '/best-endometrial-cancer-hospital-delhi',
+      text: "For The Best Hospital For The Treatment Of Endometrial Cancer In Delhi",
+      url: "/best-endometrial-cancer-hospital-delhi",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Endometrial Cancer In Hyderabad',
-      url: '/best-endometrial-cancer-hospital-hyderabad',
+      text: "For The Best Hospital For The Treatment Of Endometrial Cancer In Hyderabad",
+      url: "/best-endometrial-cancer-hospital-hyderabad",
     },
     {
-      text: 'For The Best Hospital For The Treatment Of Endometrial Cancer In Mumbai',
-      url: '/best-endometrial-cancer-hospital-mumbai',
+      text: "For The Best Hospital For The Treatment Of Endometrial Cancer In Mumbai",
+      url: "/best-endometrial-cancer-hospital-mumbai",
     },
   ],
-}
+};
 
 function EndometrialCancer() {
   return (
-    <>
+    <div className="container mx-auto">
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <div className="my-10">
+          <Title title={data.title} />
+          <H2 title={data.description} className="text-start text-lg" />
+        </div>
+
         <Banner image={data.bannerImage_1} />
-        <Title title={data.title_1} />
+        <Title title={data.title_1} titleCss="text-black" />
         <p className="text-start font-light">{data.description_1}</p>
         <H2
           title={data.causes[0].heading}
@@ -205,7 +208,7 @@ function EndometrialCancer() {
         </Link> */}
         <H2
           title={data.causes_1[0].heading}
-          className="text-xl font-semibold mb-4 text-center"
+          className="text-lg font-semibold mb-4 text-center"
         />
         <p className="text-start font-light">{data.causes_1[0].description}</p>
 
@@ -253,9 +256,14 @@ function EndometrialCancer() {
               key={index}
               className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
             >
-              <H3 title={treatment.heading} className="text-lg font-semibold mb-3"/>
-              <p className="text-gray-600 mb-4 font-light">{treatment.description}</p>
-              <ul className="list-disc pl-5 space-y-2">
+              <H3
+                title={treatment.heading}
+                className="text-lg font-semibold mb-3 text-hciPrimary"
+              />
+              {/* <p className="text-gray-600 mb-4 font-light">
+                {treatment.description}
+              </p> */}
+              <ul className="space-y-2">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
                   <li key={idx} className="text-gray-700">
                     {symptom.title && <strong>{symptom.title}: </strong>}
@@ -271,8 +279,8 @@ function EndometrialCancer() {
 
         <FooterLinks head={data.title} />
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default EndometrialCancer
+export default EndometrialCancer;
