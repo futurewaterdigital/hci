@@ -30,6 +30,10 @@ export default function DoctorForm({ onSubmit, onChange, initialData, isEditing 
     reviewEnabled: false
   });
 
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadError, setUploadError] = useState('');
+  const [selectedFile, setSelectedFile] = useState(null);
+
   useEffect(() => {
     if (initialData) {
       setFormData(initialData);
@@ -45,6 +49,7 @@ export default function DoctorForm({ onSubmit, onChange, initialData, isEditing 
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    console.log(name, value, type, checked);
     updateFormData({
       ...formData,
       [name]: type === 'checkbox' ? checked : value
@@ -102,22 +107,117 @@ export default function DoctorForm({ onSubmit, onChange, initialData, isEditing 
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    // Validate file type
+    if (!file.type.startsWith('image/')) {
+      setUploadError('Please upload an image file');
+      return;
+    }
+
+    // Validate file size (5MB limit)
+    if (file.size > 5 * 1024 * 1024) {
+      setUploadError('File size should be less than 5MB');
+      return;
+    }
+
+    setSelectedFile(file);
+    setUploadError('');
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    setIsUploading(true);
+    setUploadError('');
+
+    try {
+      let imageUrl = formData.image;
+
+      // If a new file is selected, upload it
+      if (selectedFile) {
+        // If there's an existing image, delete it first
+        if (formData.image) {
+          try {
+            const deleteResponse = await fetch('/api/delete-image', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ imageUrl: formData.image }),
+            });
+
+            if (!deleteResponse.ok) {
+              console.error('Failed to delete old image');
+            }
+          } catch (error) {
+            console.error('Error deleting old image:', error);
+          }
+        }
+
+        const uploadFormData = new FormData();
+        uploadFormData.append('file', selectedFile);
+        uploadFormData.append('doctorName', formData.name);
+
+        const response = await fetch('/api/upload', {
+          method: 'POST',
+          body: uploadFormData,
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || 'Failed to upload image');
+        }
+
+        imageUrl = data.url;
+      }
+
+      // Submit the form with the image URL
+      await onSubmit({
+        ...formData,
+        image: imageUrl,
+      });
+    } catch (error) {
+      console.error('Error:', error);
+      setUploadError(error.message || 'Failed to upload image. Please try again.');
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-700">Image URL</label>
-        <input
-          type="text"
-          name="image"
-          value={formData.image}
-          onChange={handleChange}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-        />
+        <label className="block text-sm font-medium text-gray-700">Image</label>
+        <div className="mt-1 flex items-center">
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+            className="hidden"
+            id="image-upload"
+          />
+          <label
+            htmlFor="image-upload"
+            className="cursor-pointer inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            {selectedFile ? 'Change Image' : 'Choose Image'}
+          </label>
+          {(formData.image || selectedFile) && (
+            <div className="ml-4">
+              <img
+                src={selectedFile ? URL.createObjectURL(selectedFile) : formData.image}
+                alt="Preview"
+                className="h-20 w-20 object-cover rounded"
+              />
+            </div>
+          )}
+        </div>
+        {uploadError && (
+          <p className="mt-2 text-sm text-red-600">{uploadError}</p>
+        )}
       </div>
 
       <div>
@@ -351,12 +451,15 @@ export default function DoctorForm({ onSubmit, onChange, initialData, isEditing 
         </label>
       </div>
 
-      <button
-        type="submit"
-        className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-      >
-        {isEditing ? 'Update Doctor' : 'Add Doctor'}
-      </button>
+      <div>
+        <button
+          type="submit"
+          disabled={isUploading}
+          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          {isUploading ? 'Saving...' : (isEditing ? 'Update Doctor' : 'Add Doctor')}
+        </button>
+      </div>
     </form>
   );
 } 
