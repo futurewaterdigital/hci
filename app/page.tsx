@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from '../components/Header/page'
 import Banner from '../components/HomePage/Banner/page'
-import Partners from '../components/HomePage/Partners/page'
-import ConsultantForm from '../components/HomePage/ContactPage/page'
+import Partners from '@/components/HomePage/Partners/Partners'
 import WhoWeAre from '../components/HomePage/WhoWeAre/page'
 import Network from '../components/HomePage/HCInetwork/pageScroll'
 import Patients from '../components/HomePage/Patients/page'
@@ -12,6 +11,7 @@ import Blogs from '../components/HomePage/MedicalUpdates/page'
 import Faqs from '../components/HomePage/Faqs/page'
 // import Appointment from '../components/HomePage/Appointment/page'
 import Footer from '../components/Footer/page'
+import ConsultantForm from '../components/HomePage/ContactPage/ConsultantForm'
 
 export default function Page() {
   return (
@@ -26,7 +26,7 @@ export default function Page() {
       <Testimonials />
       <Subscribe />
       <Blogs />
-      <Faqs />
+      <Faqs /> 
       {/* <Appointment /> */}
       <Footer />
     </>
