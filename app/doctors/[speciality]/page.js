@@ -2,34 +2,62 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-
-export default function DoctorsPage() {
+import Link from 'next/link';
+export default function DoctorsPage({ params }) {
   const [doctors, setDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [visibleCount, setVisibleCount] = useState(10);
   const [expandedDoctors, setExpandedDoctors] = useState({});
+  const [title, setTitle] = useState('Our Doctors');
+  const [noData, setNoData] = useState(false);
+
+  const slug = params.speciality;
 
   useEffect(() => {
-    const fetchDoctors = async () => {
+    // Set title based on slug
+    if (slug === 'cardiac-sciences') {
+      setTitle('Our Cardiologists');
+    } else if (slug === 'orthopedics') {
+      setTitle('Our Orthopedic Surgeons');
+    } else if (slug === 'neuro-sciences') {
+      setTitle('Our Neurologists');
+    } else if (slug === 'others') {
+      setTitle('Other Specialists');
+    } else if (slug === 'oncology') {
+      setTitle('Our Oncologists');
+    } else if (slug === 'gastroenterology') {
+      setTitle('Our Gastroenterologists');
+    }
+
+    const fetchDoctor = async () => {
       try {
-        const response = await fetch('/api/doctors');
+        const response = await fetch(`/api/speciality/${slug}`);
         if (!response.ok) {
-          throw new Error('Failed to fetch doctors');
+          throw new Error('Failed to fetch doctor');
         }
+
         const data = await response.json();
-        console.log('Fetched doctors:', data); // Debug log
-        setDoctors(data);
-      } catch (err) {
-        console.error('Error fetching doctors:', err); // Debug log
-        setError(err.message);
+
+        // Filter out doctors who are both featured and verified
+        const filteredDoctors = data.filter(
+          (doc) => !(doc.isFeatured && doc.isVerified)
+        );
+
+        if(filteredDoctors.length === 0){
+          setNoData(true)
+        }
+
+        setDoctors(filteredDoctors);
+      } catch (error) {
+        setError(error.message);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchDoctors();
-  }, []);
+    fetchDoctor();
+  }, [slug]);
 
   const toggleReadMore = (id) => {
     setExpandedDoctors((prev) => ({
@@ -59,26 +87,56 @@ export default function DoctorsPage() {
       </div>
     );
   }
+ 
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-hciPrimary mb-8 text-center">Our Doctors</h1>
       
+      <div className="flex justify-center items-center relative">
+        <h1 className="text-3xl font-bold text-hciPrimary mb-8 text-center">{title}</h1>
+        {!noData &&
+          <div className="absolute left-0">
+            <Link href={`/treatment/${slug}`} className="text-hciSecondary font-semibold">Back to <span className='text-hciSecondary capitalize'>{slug} page</span></Link>
+          </div>}
+      </div>
+    
+     {/* No profiles available message */}
+      {!loading && doctors.length === 0 && (
+        <>
+        <div className="text-center text-gray-500 text-lg mt-10">
+            <h2 className='text-2xl font-light'>No profiles available at the moment.</h2>
+            
+            <div className="mt-12">
+          <Link href={`/treatment/${slug}`} className="text-hciSecondary font-semibold border border-hciSecondary px-4 py-2 rounded-lg">Back to <span className='text-hciSecondary capitalize'>{slug} page</span></Link>
+        </div>
+          </div>
+         
+        </>
+      )}
+
       <div className="grid grid-cols-1 gap-6">
         {doctors.slice(0, visibleCount).map((doctor) => {
           const isExpanded = expandedDoctors[doctor._id];
           const aboutText = doctor.aboutData.about;
           const shouldTruncate = aboutText.length > 300;
-          const displayText = isExpanded || !shouldTruncate ? aboutText : `${aboutText.slice(0, 300)}...`;
+          const displayText =
+            isExpanded || !shouldTruncate
+              ? aboutText
+              : `${aboutText.slice(0, 300)}...`;
 
           return (
-            <div key={doctor._id} className={`relative ${isExpanded ? 'h-full' : 'min-h-[300px]'} w-full flex flex-row border border-hciSecondary rounded-lg shadow-lg overflow-hidden ${isExpanded ? 'h-[400px]' : ''}`}>
+            <div
+              key={doctor._id}
+              className={`relative w-full flex flex-row border border-hciSecondary rounded-lg shadow-lg overflow-hidden ${
+                isExpanded ? 'h-full' : 'min-h-[300px]'
+              }`}
+            >
               <div className="relative w-[300px]">
                 <Image
                   src={doctor.image || '/default-doctor.jpg'}
                   alt={doctor.name}
                   fill
-                  className="w-full h-[200px]"
+                  className="w-full h-[200px] object-cover"
                 />
               </div>
               <div className="p-4 w-[800px]">
