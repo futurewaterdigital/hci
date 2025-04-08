@@ -12,13 +12,14 @@ import Faqs from '../components/HomePage/Faqs/page'
 // import Appointment from '../components/HomePage/Appointment/page'
 import Footer from '../components/Footer/page'
 import ConsultantForm from '../components/HomePage/ContactPage/ConsultantForm'
-
+import PriceComparison from '../components/HomePage/PriceComparison/page'
 export default function Page() {
   return (
     <>
       <Header />
       <Banner />
       <Partners />
+      <PriceComparison />
       <ConsultantForm />
       <WhoWeAre />
       <Network />

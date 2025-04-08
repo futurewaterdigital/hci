@@ -429,13 +429,13 @@ export const locations = [
 export const medicalPartners = [
   { imageUrl: '/hospPartner/1.png' },
   { imageUrl: '/hospPartner/2.png' },
-  { imageUrl: '/hospPartner/3.png' },
+  // { imageUrl: '/hospPartner/3.png' },
   { imageUrl: '/hospPartner/4.png' },
   { imageUrl: '/hospPartner/5.png' },
-  { imageUrl: '/hospPartner/6.png' },
-  { imageUrl: '/hospPartner/7.png' },
+  // { imageUrl: '/hospPartner/6.png' },
+  // { imageUrl: '/hospPartner/7.png' },
   { imageUrl: '/hospPartner/8.png' },
-  { imageUrl: '/hospPartner/9.png' },
+  // { imageUrl: '/hospPartner/9.png' },
   { imageUrl: '/hospPartner/10.png' },
   { imageUrl: '/hospPartner/11.png' },
 ]
