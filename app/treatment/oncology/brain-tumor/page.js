@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "@/components/cardiacComponents/Title";
 import Link from "next/link";
+import Banner from "@/components/Common/Banner";
 const data = {
   title: "Brain Tumor",
   bannerImage: "/oncology/brain-tumor-banner.png",
@@ -650,13 +651,8 @@ function BrainTumor() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Banner Image */}
-      <div className="relative w-full mb-8">
-        <img
-          src="/oncology/brain-tumor-banner.png"
-          alt="Brain Tumor Visualization"
-          className="w-full h-full object-contain"
-        />
-      </div>
+      <Banner image="/oncology/brain-tumor-banner.png" />
+
       {/* Title and Description */}
       <div className="text-center mb-12">
         <Title title={data.title} className="text-4xl text-pink-500" />

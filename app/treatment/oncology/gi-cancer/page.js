@@ -358,7 +358,7 @@ function GICancer() {
             {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
               <div
                 key={idx}
-                className="bg-blue-700 text-white font-light p-4 rounded text-sm"
+                className="bg-[#0E56A0] text-white font-light p-4 rounded text-sm"
               >
                 <span className="font-semibold pr-1">{cause.title}</span>
                 {cause.description}
@@ -458,7 +458,10 @@ function GICancer() {
       <div className="mt-8 space-y-4">
         {data.links.map((link, index) => (
           <div key={index} className="text-start">
-            <Link href={link.url} className="text-hciPrimary hover:underline">
+            <Link
+              href={link.url}
+              className="text-hciPrimary font-semibold hover:underline"
+            >
               {link.text}
             </Link>
           </div>
