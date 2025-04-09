@@ -1,106 +1,108 @@
-'use client'
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import NewSearch from '../../components/Header/searchModal'
-import { usePathname, useRouter } from 'next/navigation'
-import Drawer from '../../components/Header/Drawer'
-import { logout } from '@/lib/auth'
+"use client";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import NewSearch from "../../components/Header/searchModal";
+import { usePathname, useRouter } from "next/navigation";
+import Drawer from "../../components/Header/Drawer";
+import { logout } from "@/lib/auth";
 
 // Debounce utility function
 const debounce = (fn, delay) => {
-  let timeout
+  let timeout;
   return (...args) => {
-    clearTimeout(timeout)
-    timeout = setTimeout(() => fn(...args), delay)
-  }
-}
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn(...args), delay);
+  };
+};
 
 export default function Header() {
-  const pathname = usePathname()
-  const router = useRouter()
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const placeholders = ['Hospital', 'Doctor', 'Treatment']
-  const [currentPlaceholder, setCurrentPlaceholder] = useState(placeholders[0])
-  const [index, setIndex] = useState(0)
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const placeholders = ["Hospital", "Doctor", "Treatment"];
+  const [currentPlaceholder, setCurrentPlaceholder] = useState(placeholders[0]);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     // Check authentication status on component mount
     const checkAuth = () => {
-      const isAuth = localStorage.getItem('isAuthenticated') === 'true'
-      setIsAuthenticated(isAuth)
-    }
-    checkAuth()
-  }, [])
+      const isAuth = localStorage.getItem("isAuthenticated") === "true";
+      setIsAuthenticated(isAuth);
+    };
+    checkAuth();
+  }, []);
 
   const handleLogout = async () => {
-    const success = await logout()
+    const success = await logout();
     if (success) {
-      setIsAuthenticated(false)
-      router.push('/admin/login')
+      setIsAuthenticated(false);
+      router.push("/admin/login");
     }
-  }
+  };
 
   // Memoized handler to open the drawer
   const handleOpen = useCallback(() => {
     if (!isOpen) {
-      setIsOpen(true)
+      setIsOpen(true);
     }
-  }, [isOpen])
+  }, [isOpen]);
 
   // Memoized handler to close the drawer
-  const handleClose = useCallback(() => setIsOpen(false), [])
+  const handleClose = useCallback(() => setIsOpen(false), []);
 
   // Update the placeholder every 2 seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % placeholders.length)
-    }, 2000) // Change text every 2 seconds
+      setIndex((prevIndex) => (prevIndex + 1) % placeholders.length);
+    }, 2000); // Change text every 2 seconds
 
-    return () => clearInterval(intervalId)
-  }, [placeholders.length])
+    return () => clearInterval(intervalId);
+  }, [placeholders.length]);
 
   useEffect(() => {
-    setCurrentPlaceholder(placeholders[index])
-  }, [index, placeholders])
+    setCurrentPlaceholder(placeholders[index]);
+  }, [index, placeholders]);
 
   // Debounced scroll handler
   useEffect(() => {
     const handleScroll = debounce(() => {
       if (window.scrollY > 70) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }, 50) // 50ms debounce delay
+    }, 50); // 50ms debounce delay
 
     const scrollListener = () => {
-      requestAnimationFrame(handleScroll)
-    }
+      requestAnimationFrame(handleScroll);
+    };
 
-    window.addEventListener('scroll', scrollListener)
+    window.addEventListener("scroll", scrollListener);
 
     return () => {
-      window.removeEventListener('scroll', scrollListener)
-    }
-  }, [])
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
 
   // Memoize the class based on scroll and pathname
   const classnew = useMemo(() => {
-    if (pathname === '/') {
+    if (pathname === "/") {
       return `z-40 transition-all duration-300  ${
         isScrolled
-          ? 'fixed w-full bg-white shadow-lg top-0'
-          : 'absolute lg:top-6 w-full'
-      }`
+          ? "fixed w-full bg-white shadow-lg top-0"
+          : "absolute lg:top-6 w-full"
+      }`;
     }
     // If not home and not scrolled, no shadow
     return `z-40 w-full bg-white transition-all duration-300 ${
-      isScrolled ? 'shadow fixed transition-all duration-300 ease-in-out' : ''
-    }`
-  }, [pathname, isScrolled])
+      isScrolled
+        ? "shadow fixed top-0 transition-all duration-300 ease-in-out"
+        : ""
+    }`;
+  }, [pathname, isScrolled]);
 
   return (
     <div className={`${classnew}`}>
@@ -136,15 +138,15 @@ export default function Header() {
 
         <div
           className={`lg:relative flex lg:justify-center items-center z-10 cursor-pointer ${
-            pathname === '/' ? 'lg:h-20' : 'lg:h-10 lg:p-12 top-0'
+            pathname === "/" ? "lg:h-20" : "lg:h-10 lg:p-12 top-0"
           }`}
         >
           <Link href="/">
             <div
               className={`bg-white lg:rounded-lg lg:w-64 flex justify-center items-center p-4 mx-auto cursor-pointer ${
-                pathname === '/'
-                  ? 'lg:h-28 xs:h-14 sxs:h-14 sm:h-14'
-                  : 'lg:h-10 xs:h-14 sxs:h-14 sm:h-14'
+                pathname === "/"
+                  ? "lg:h-28 xs:h-14 sxs:h-14 sm:h-14"
+                  : "lg:h-10 xs:h-14 sxs:h-14 sm:h-14"
               }`}
             >
               <Image
@@ -153,8 +155,8 @@ export default function Header() {
                 height={100}
                 className={`rounded-lg cursor-pointer ${
                   isScrolled
-                    ? 'xl:w-9/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300'
-                    : 'xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300'
+                    ? "xl:w-9/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300"
+                    : "xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300"
                 }`}
                 loading="lazy"
                 alt="healthcare international in bangalore"
@@ -212,5 +214,5 @@ export default function Header() {
         </div>
       </div>
     </div>
-  )
+  );
 }

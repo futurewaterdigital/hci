@@ -293,7 +293,7 @@ const womenCancerTypes = [
 
 function CancerInWomen() {
   return (
-    <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <Title title={data.title} />
@@ -459,7 +459,7 @@ function CancerInWomen() {
 
         <BookButton />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -16,23 +16,23 @@ const data = {
       aneurysmSymptoms: [
         {
           description: "Family history of ovarian/breast cancer",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
         {
           description: "BRCA1/BRCA2 gene mutations",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
         {
           description: "Hormone therapy and reproductive history",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
         {
           description: "Age (more common in postmenopausal women)",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
         {
           description: "Obesity and lifestyle factors",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
       ],
     },
