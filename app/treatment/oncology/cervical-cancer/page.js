@@ -218,7 +218,7 @@ const data = {
 function CervicalCancer() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Title title={data.title} />
+      <Title title={data.title} className="text-4xl text-pink-500" />
       <div className="mt-6">
         <p className="text-gray-600 text-lg font-light">{data.description}</p>
       </div>
@@ -235,7 +235,7 @@ function CervicalCancer() {
             {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
               <div
                 key={idx}
-                className="bg-blue-700 text-white p-3 rounded whitespace-nowrap text-sm"
+                className="bg-[#0E56A0] text-white p-4 rounded whitespace-nowrap text-sm"
               >
                 {cause.description}
               </div>
@@ -244,7 +244,7 @@ function CervicalCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/cervical-cancer-info"
-              className="text-blue-600 hover:underline"
+              className="text-[#0E56A0] underline font-semibold hover:underline"
             >
               For More About Cervical Cancer, Its Causes And Treatment, Click
               Here
@@ -259,7 +259,7 @@ function CervicalCancer() {
             {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
               <div
                 key={idx}
-                className="bg-[#D84498] text-white p-3 rounded whitespace-nowrap text-sm"
+                className="bg-[#D84498] text-white p-4 rounded whitespace-nowrap text-sm"
               >
                 <span className="font-semibold">{diagnosis.title}</span>
                 {diagnosis.description}
@@ -269,7 +269,7 @@ function CervicalCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-blue-600 hover:underline"
+              className="text-[#0E56A0] underline font-semibold hover:underline"
             >
               For The Best Diagnosis And Treatment For Cervical Cancer, Click
               Here

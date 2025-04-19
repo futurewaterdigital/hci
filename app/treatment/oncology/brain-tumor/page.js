@@ -2,11 +2,13 @@ import React from "react";
 import Title from "@/components/cardiacComponents/Title";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
+import H2 from "@/components/ui/h2";
+
 const data = {
   title: "Brain Tumor",
   bannerImage: "/oncology/brain-tumor-banner.png",
   description:
-    "A brain tumor occurs when abnormal cells form within the brain. There are two main types of tumors: malignant (cancerous) tumors and benign tumors. Brain tumors can be primary (starting in the brain) or metastatic (cancer spreading from other parts of the body).",
+    "There are over 120 brain tumor types, based on the brain tissues they affect. Not all brain tumors are brain cancers, but even benign (or noncancerous) tumors can be dangerous because of their size or location.",
   overview: "",
 
   main_menu: [
@@ -509,7 +511,7 @@ const tumorInfo = [
   {
     title: "What is brain tumor?",
     description:
-      "  A brain tumor is a growth of abnormal cells in the brain. Theanatomy of the brain is very complex, with different parts responsible for different nervous system functions. Brain tumors can develop in any part of the brain or skull, including its protective lining, the underside of the brain (skull base), the brainstem, the sinuses and the nasal cavity, and many other areas. There are more than 120 different types of tumors that can develop in the brain, depending on what tissue they arise from. How commonare brain tumors, and are they dangerous?",
+      "A brain tumor is a growth of abnormal cells in the brain. The anatomy of the brain is very complex, with different parts responsible for different nervous system functions. Brain tumors can develop in any part of the brain or skull, including its protective lining, the underside of the brain (skull base), the brainstem, the sinuses and the nasal cavity, and many other areas. There are more than 120 different types of tumors that can develop in the brain, depending on what tissue they arise from.",
   },
   {
     title: "How common are brain tumors, and are they dangerous?",
@@ -656,7 +658,7 @@ function BrainTumor() {
       {/* Title and Description */}
       <div className="text-center mb-12">
         <Title title={data.title} className="text-4xl text-pink-500" />
-        <p className="mt-4 text-gray-600 text-lg max-w-7xl mx-auto font-light">
+        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
           {data.description}
         </p>
       </div>
@@ -1148,9 +1150,9 @@ function BrainTumor() {
         Brain Tumor Surgery
       </div>
       <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        Surgery is the most common treatment for brain tumors, and in a lot of
-        cases it’s the only treatment needed. There are numerous surgical
-        approaches to remove brain tumors depending on their size and location.
+        The most popular therapy for brain tumors is surgery, which is
+        frequently the only option. Depending on their location and size, brain
+        tumors can be removed surgically using a variety of techniques.
       </p>
       <div className="grid grid-cols-1 my-10 gap-4">
         {tumorTumorOptions?.map((item, index) => (
@@ -1265,7 +1267,7 @@ function BrainTumor() {
 
       {/* Clinical Trials */}
       <div className="my-10 bg-[#B8DEFF] py-2 px-16">
-        <div className="text-xl text-center mt-10 font-bold">
+        <div className="text-xl text-center mt-10 py-8 font-bold">
           Clinical Trials
         </div>
         <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
@@ -1282,12 +1284,8 @@ function BrainTumor() {
           patients whose tumor came back and/or if it’s a tumor known to be
           aggressive and generally incurable with current therapies.
         </p>
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-          Some patients wish to start their therapy with experimental agents
-          since there are currently no proven treatments for tumors such as
-          glioblastoma multiforme.
-        </p>
-        <div className="text-xl text-center mt-10 font-bold">
+
+        <div className="text-xl text-center mt-10 font-bold py-8">
           Follow-up Care and Rehabilitation after Brain Tumor Treatment
         </div>
 
@@ -1303,7 +1301,7 @@ function BrainTumor() {
           problems caused by the tumor and/or the treatment, which may include:
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 my-4">
+        <div className="flex flex-wrap justify-center gap-4 py-8 my-8">
           <span className="bg-[#0E56A0] text-white py-2 px-6 rounded w-[calc(25%-1rem)] text-center">
             Weakness
           </span>
@@ -1326,10 +1324,6 @@ function BrainTumor() {
             Difficulty making decisions
           </span>
         </div>
-
-        <p className="mt-4 text-gray-600 text-start whitespace-nowrap w-full text-lg mx-auto font-light leading-relaxed">
-          The brain can sometimes heal itself, but this requires time.
-        </p>
       </div>
 
       {/* Clinical Trails */}
@@ -1359,6 +1353,20 @@ function BrainTumor() {
         prescription before leaving the hospital that will detail the type of
         therapy necessary.
       </p>
+
+      <div className="grid my-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        {therapistInfo.map((item, index) => (
+          <div
+            key={index}
+            className="shadow-md border border-gray-200 rounded-lg p-4 bg-white"
+          >
+            <h3 className="text-[#0E56A0] font-semibold text-lg mb-2">
+              {item.title}
+            </h3>
+            <p className="text-gray-700 text-sm">{item.description}</p>
+          </div>
+        ))}
+      </div>
 
       <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
         There are different types of rehabilitation specialists who can help you
@@ -1398,6 +1406,8 @@ function BrainTumor() {
         </ul>
       </div>
 
+      <H2 title="Conclusion" className="text-center text-black mt-8" />
+
       <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
         There is no projected survival rate for those diagnosed with a brain
         tumor, as individual circumstances play a big role. For example, some
@@ -1407,6 +1417,7 @@ function BrainTumor() {
         characteristics to see a trend in how certain tumors progress and how
         different treatments affect them.
       </p>
+
       <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
         Your overall outlook and prognosis is likely to change as you undergo
         various treatments. If you have surgery, how much of the tumor the
@@ -1414,22 +1425,8 @@ function BrainTumor() {
         tumor treatments will determine future steps as well.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-        {therapistInfo.map((item, index) => (
-          <div
-            key={index}
-            className="shadow-md border border-gray-200 rounded-lg p-4 bg-white"
-          >
-            <h3 className="text-[#0E56A0] font-semibold text-lg mb-2">
-              {item.title}
-            </h3>
-            <p className="text-gray-700 text-sm">{item.description}</p>
-          </div>
-        ))}
-      </div>
-
       {/* CTA Section */}
-      <div className="text-center mb-12">
+      <div className="text-center mt-6 mb-12">
         <Link
           href="/contact"
           className="inline-block bg-pink-500 text-white px-8 py-3 rounded-lg hover:bg-pink-600 transition-colors"
