@@ -160,7 +160,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <Title title={data.title} />
-        <H2 title={data.description} className="text-start font-light" />
+        <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">

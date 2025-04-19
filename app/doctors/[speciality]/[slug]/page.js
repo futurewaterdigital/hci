@@ -1,16 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
-import { useParams } from 'next/navigation';
-import React from 'react'
+import { useParams, useRouter } from 'next/navigation';
 import { IoStarOutline, IoStarHalfSharp, IoStarSharp } from "react-icons/io5";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import ReviewForm from '@/components/ReviewForm';
 import ReviewList from '@/components/ReviewList';
-import { IoIosCloseCircleOutline } from "react-icons/io";
 
 export default function DoctorsPage() {
   const { slug } = useParams();
+  const router = useRouter();
+
   const [doctors, setDoctors] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,10 +22,16 @@ export default function DoctorsPage() {
     const fetchDoctor = async () => {
       try {
         const response = await fetch(`/api/doctors/${slug}`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch doctor');
-        }
+        if (!response.ok) throw new Error('Failed to fetch doctor');
+
         const data = await response.json();
+
+        // Redirect if not featured or not verified
+        if (!data.isFeatured || !data.isVerified) {
+          router.push('/doctors');
+          return;
+        }
+
         setDoctors(data);
       } catch (error) {
         setError(error.message);
@@ -35,17 +41,15 @@ export default function DoctorsPage() {
     };
 
     fetchDoctor();
-  }, [slug]);
+  }, [slug, router]);
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const response = await fetch(`/api/reviews/${slug}`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch reviews');
-        }
+        if (!response.ok) throw new Error('Failed to fetch reviews');
+
         const data = await response.json();
-        console.log('data', data);
         setReviews(data);
       } catch (error) {
         console.error('Error fetching reviews:', error);
@@ -57,7 +61,7 @@ export default function DoctorsPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFlipped(prevState => !prevState);
+      setFlipped((prev) => !prev);
     }, 8000);
 
     return () => clearInterval(interval);
@@ -66,15 +70,9 @@ export default function DoctorsPage() {
   const handleReviewSubmit = async (newReview) => {
     setReviews((prevReviews) => [newReview, ...prevReviews]);
   };
-  
-  const openModal = () => {
-    setIsModalOpen(true); // Open the modal
-  };
 
-  const closeModal = () => {
-    setIsModalOpen(false); // Close the modal
-  };
-
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   if (loading) {
     return (
@@ -94,9 +92,7 @@ export default function DoctorsPage() {
     );
   }
 
-  if (!doctors) {
-    return <div>Doctor not found</div>;
-  }
+  if (!doctors) return <div>Doctor not found</div>;
 
   return (
     <>
@@ -109,56 +105,34 @@ export default function DoctorsPage() {
             </button>
           </div>
           <div className="flex-1">
-            <h1 className="text-pink-500 text-3xl font-bold">
-              {doctors.name}
-            </h1>
+            <h1 className="text-pink-500 text-3xl font-bold">{doctors.name}</h1>
             <p className="text-gray-600 mt-2">
-              <strong className='text-hciSecondary font-semibold'>
-                Qualification
-              </strong>
-              <br />
+              <strong className='text-hciSecondary font-semibold'>Qualification</strong><br />
               {doctors.qualification.map((qualification, index) => (
-                <div key={index} className='font-light'>
-                  {qualification}
-                </div>
+                <div key={index} className='font-light'>{qualification}</div>
               ))}
-              <br />
             </p>
             <p className="text-gray-600 mt-2">
-              <strong className='text-hciSecondary'>
-                Years of Experience
-              </strong>
-              <br />
+              <strong className='text-hciSecondary'>Years of Experience</strong><br />
               <span className='font-light text-lg'>{doctors.experience}</span>
             </p>
+
             {reviews.total > 0 && (
               <div className="flex items-center mt-2">
-                {/* <span className="text-2xl font-bold">
-    {reviews.total}
-  </span> */}
                 <div className="flex ml-2">
-                  {reviews.total > 0 ? (
-                    // Display stars if the total review count is greater than 2
-                    Array.from({ length: 5 }).map((_, index) => {
-                      if (index < Math.floor(reviews.total)) {
-                        return <IoStarSharp key={index} className='text-hciSecondary text-2xl' />;
-                      }
-                      if (index < Math.floor(reviews.total) + 0.5 && reviews.total % 1 >= 0.5) {
-                        return <IoStarHalfSharp key={index} className='text-hciSecondary text-2xl' />;
-                      }
-                      return <IoStarOutline key={index} className='text-hciSecondary text-2xl' />;
-                    })
-                  ) : (
-                    // Display a "No reviews yet" message if total reviews are 2 or fewer
-                    <span className="text-gray-600 text-sm">No reviews yet</span>
-                  )}
+                  {Array.from({ length: 5 }).map((_, index) => {
+                    if (index < Math.floor(reviews.total)) {
+                      return <IoStarSharp key={index} className='text-hciSecondary text-2xl' />;
+                    }
+                    if (index < Math.floor(reviews.total) + 0.5 && reviews.total % 1 >= 0.5) {
+                      return <IoStarHalfSharp key={index} className='text-hciSecondary text-2xl' />;
+                    }
+                    return <IoStarOutline key={index} className='text-hciSecondary text-2xl' />;
+                  })}
                 </div>
-                <span className="text-gray-600 ml-2 font-light">
-                  ({reviews.total} reviews)
-                </span>
+                <span className="text-gray-600 ml-2 font-light">({reviews.total} reviews)</span>
               </div>
             )}
-
           </div>
 
           <div className="card mt-8 md:mt-0 md:ml-6 flex flex-col items-center h-[360px] justify-between">
@@ -175,46 +149,31 @@ export default function DoctorsPage() {
                 </div>
               </div>
             )}
-           
+
             {doctors.reviewEnabled && (
-               <button onClick={openModal} className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4 uppercase">
-               Write a Review
-             </button>
-              // <div>
-              //   <ReviewForm 
-              //     doctorId={doctors._id} 
-              //     doctorName={doctors.name}
-              //     onSubmit={handleReviewSubmit} 
-              //   />
-              // </div>
+              <button onClick={openModal} className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4 uppercase">
+                Write a Review
+              </button>
             )}
           </div>
-          
         </div>
       </div>
 
-       {/* Modal Popup */}
-       {isModalOpen && (
+      {/* Modal Popup */}
+      {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className=" relative rounded-lg ">
+          <div className="relative rounded-lg">
             <button onClick={closeModal} className="absolute -top-4 -right-4 text-lg font-bold text-hciSecondary">
-              <IoIosCloseCircleOutline size={34}/>
+              <IoIosCloseCircleOutline size={34} />
             </button>
-            
-            <ReviewForm
-              doctorId={doctors._id}
-              doctorName={doctors.name}
-              onSubmit={handleReviewSubmit}
-            />
+            <ReviewForm doctorId={doctors._id} doctorName={doctors.name} onSubmit={handleReviewSubmit} />
           </div>
         </div>
       )}
 
       <main className="container mx-auto mt-8 px-6">
         <section className="mt-8">
-          <h2 className="text-pink-500 text-2xl font-bold text-center">
-            Area of Expertise
-          </h2>
+          <h2 className="text-pink-500 text-2xl font-bold text-center">Area of Expertise</h2>
           <div className="flex flex-wrap justify-center mt-4">
             {doctors.expertise.map((expertise, index) => (
               <span key={index} className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-full m-2">
@@ -226,9 +185,7 @@ export default function DoctorsPage() {
 
         <section className="mt-8">
           <div className="bg-white shadow-md rounded-lg p-6 mt-4 border border-hciSecondary">
-            <h2 className="text-pink-500 text-2xl font-bold mb-4">
-              {doctors.publicationData.heading}
-            </h2>
+            <h2 className="text-pink-500 text-2xl font-bold mb-4">{doctors.publicationData.heading}</h2>
             <ul className="list-disc list-inside text-hciSecondary space-y-2">
               {doctors.publicationData.publications.map((publication, index) => (
                 <li key={index} className='text-xl font-light'>
@@ -241,9 +198,7 @@ export default function DoctorsPage() {
 
         <section className="mt-8">
           <div className="bg-white shadow-md rounded-lg p-6 mt-4 border border-hciSecondary">
-            <h2 className="text-pink-500 text-2xl font-bold mb-4">
-              {doctors.researchData.heading}
-            </h2>
+            <h2 className="text-pink-500 text-2xl font-bold mb-4">{doctors.researchData.heading}</h2>
             <ul className="list-disc list-inside text-hciSecondary space-y-2">
               {doctors.researchData.research.map((research, index) => (
                 <li key={index} className='text-xl font-light'>
@@ -260,23 +215,12 @@ export default function DoctorsPage() {
 
         {/* Reviews Section */}
         {reviews.total > 0 && (
-        <section className="mt-12">
-          <h2 className="text-pink-500 text-2xl font-bold mb-6">Patient Reviews</h2>
-          <div className="grid grid-cols-1 ">
-            <div>
+          <section className="mt-12">
+            <h2 className="text-pink-500 text-2xl font-bold mb-6">Patient Reviews</h2>
+            <div className="grid grid-cols-1">
               <ReviewList reviewsDb={reviews} />
             </div>
-            {/* {doctors.reviewEnabled && (
-              <div>
-                <ReviewForm 
-                  doctorId={doctors._id} 
-                  doctorName={doctors.name}
-                  onSubmit={handleReviewSubmit} 
-                />
-              </div>
-            )} */}
-          </div>
-        </section>
+          </section>
         )}
       </main>
     </>
