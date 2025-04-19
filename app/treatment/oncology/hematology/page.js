@@ -59,6 +59,7 @@ is given below.`,
 
     cancers: [
       {
+        mainTitle: "Leukemia",
         title: "Acute Myeloid Leukemia (AML)",
         description:
           "A rapidly progressing cancer of the bone marrow and blood.",
@@ -72,12 +73,20 @@ is given below.`,
         description:
           "A type of cancer affecting white blood cells, with gradual onset symptoms.",
       },
+
       {
+        title: "  Acute Lymphoblastic Leukemia (ALL)",
+        description:
+          "A fast-growing cancer of lymphocytes, a type of white blood cell.",
+      },
+      {
+        mainTitle: "Lymphomas",
         title: "Burkitt Lymphoma",
         description:
           "A fast-growing non-Hodgkin lymphoma, often associated with viral infections.",
       },
       {
+        mainTitle: "Multiple Myeloma",
         title: "Multiple Myeloma",
         description: `A cancer of plasma cells, impairing the bone marrow's ability to produce healthy blood cells.`,
       },
@@ -220,39 +229,26 @@ is given below.`,
         "Anticoagulants or clotting factors for bleeding disorders",
       ],
     },
-
     {
       title: "Chemotherapy and Radiation",
-      description: "Used for leukemia, lymphoma, and multiple myeloma",
-      items: [
-        "Various protocols based on cancer type and stage",
-        "May be used before bone marrow transplant",
-      ],
+      description: "Used for leukemia, lymphoma, and multiple myeloma.",
+    },
+    {
+      title: "Radiation Therapy",
+      description: "TBI, TMI, TMCI",
     },
     {
       title: "Blood Transfusions",
       description: "For severe anemia or blood loss",
-      items: [
-        "Red blood cell transfusions for severe anemia",
-        "Platelet transfusions for bleeding disorders",
-      ],
     },
     {
       title: "Targeted Therapy & Immunotherapy",
       description:
-        " Advanced treatments targeting specific cancer characteristics (e.g., CLL)",
-      items: [
-        "Monoclonal antibodies to target specific cancer cells",
-        "Immune checkpoint inhibitors",
-      ],
+        "Advanced treatments targeting specific cancer characteristics (e.g., CLL)",
     },
     {
       title: "Bone Marrow Transplants",
-      description: "  A curative option for leukemia and aplastic anemia",
-      items: [
-        "Allogeneic (from donor) or autologous (patient&apos;s own cells)",
-        "Requires conditioning therapy before transplant",
-      ],
+      description: "A curative option for leukemia and aplastic anemia",
     },
     {
       title: "CAR-T Cell Therapy",
@@ -268,7 +264,7 @@ is given below.`,
   conclusion: [
     {
       header: "Conclusion",
-      paragraph: `Hematological disorders require precise diagnosis and individualized treatment plans to manage symptoms and improve quality of life. From nutritional management to advanced therapies, treatment options have expanded significantly in recent years, providing patients with complex conditions effectively. Early detection is critical in the success of treatment, especially for hematological cancers.`,
+      paragraph: `Hematological disorders require precise diagnosis and individualized treatment plans to manage symptoms and improve quality of life. From nutritional management to advanced therapies like bone marrow transplants, modern medicine offers numerous solutions to address these complex conditions effectively. Early detection plays a critical role in the success of treatments, especially for Hematological cancers.`,
     },
   ],
 
@@ -360,6 +356,11 @@ function Hematology() {
                     key={index}
                     className="border-b border-gray-100 pb-2 last:border-0"
                   >
+                    {cancer?.mainTitle && (
+                      <div className="text-pink-500 font-semibold text-lg">
+                        {cancer?.mainTitle}
+                      </div>
+                    )}
                     <span className="font-medium text-black">
                       {cancer.title}
                     </span>
@@ -374,7 +375,7 @@ function Hematology() {
         <div className="text-start mb-8">
           <Link
             href="/treatment/oncology/head-neck-treatment"
-            className="text-[#0E56A0] font-semibold hover:underline"
+            className="text-[#0E56A0] underline font-semibold hover:underline"
           >
             To Know More About Hematological Disorders And Their Causes And
             Treatment, Click Here
@@ -398,7 +399,7 @@ function Hematology() {
             <div className="mt-4 text-start">
               <Link
                 href="/treatment/hematology/treatment"
-                className="text-hciPrimary font-semibold hover:underline"
+                className="text-hciPrimary underline font-semibold hover:underline"
               >
                 To Know More About Hematological Disorders And Treatment, Click
                 Here
@@ -422,7 +423,7 @@ function Hematology() {
             <div className="mt-4 text-start">
               <Link
                 href="/treatment/hematology/diagnosis"
-                className="text-hciPrimary font-semibold hover:underline"
+                className="text-hciPrimary underline font-semibold hover:underline"
               >
                 To Get The Best Diagnosis For Hematological Disorders And
                 Related Issues, Click Here
@@ -441,19 +442,19 @@ function Hematology() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {data?.medicationCards.map((item, index) => (
+          {data?.medicationCards?.map((item, index) => (
             <div
               className="border border-pink-400 rounded-lg p-4 shadow-sm"
               key={index}
             >
               <h2 className="text-lg font-semibold text-[#0E56A0] mb-2">
-                {item.title}
+                {item?.title}
               </h2>
               <p className="text-gray-700 mb-2 font-light">
-                {item.description}
+                {item?.description}
               </p>
               <ul className="text-sm text-gray-600 list-disc pl-5">
-                {item.items.map((item, idx) => (
+                {item?.items?.map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
@@ -472,7 +473,7 @@ function Hematology() {
             >
               <Link
                 href={hospital.url}
-                className="text-hciPrimary font-semibold hover:underline"
+                className="text-hciPrimary underline font-semibold hover:underline"
               >
                 For The Best Hospital For The Treatment Of Hematological
                 Disorders In {hospital.city}, Click Here
