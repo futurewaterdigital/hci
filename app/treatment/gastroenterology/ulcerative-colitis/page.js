@@ -1,107 +1,107 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Ulcerative Colitis (UC)',
-  bannerImage: '/gastroenterology/ulcerative-colitis.png',
+  title: "Ulcerative Colitis (UC)",
+  bannerImage: "/gastroenterology/ulcerative-colitis.png",
   description: `Ulcerative colitis (UC) is a chronic inflammatory bowel disease (IBD) that primarily affects the inner lining of the large intestine (colon) and rectum, causing inflammation and the formation of ulcers. UC can range from mild to severe, with symptoms that come and go, alternating between flare-ups and periods of remission. Unlike Crohn’s disease, which affects the entire digestive tract, UC is limited to the colon. If left untreated, it can lead to serious complications and impair quality of life.`,
-  overview: '',
+  overview: "",
 
   section_1: [
     {
-      title: 'Autoimmune response:',
+      title: "Autoimmune response:",
       description:
-        'The immune system mistakenly attacks healthy cells in the colon, causing inflammation.',
+        "The immune system mistakenly attacks healthy cells in the colon, causing inflammation.",
     },
     {
-      title: 'Genetic predisposition:',
+      title: "Genetic predisposition:",
       description:
-        'People with a family history of UC or other IBDs are at higher risk.',
+        "People with a family history of UC or other IBDs are at higher risk.",
     },
     {
-      title: 'Gut microbiome imbalance:',
-      description: 'Alterations in gut bacteria may trigger inflammation.',
+      title: "Gut microbiome imbalance:",
+      description: "Alterations in gut bacteria may trigger inflammation.",
     },
     {
-      title: 'Environmental triggers:',
+      title: "Environmental triggers:",
       description:
-        'Factors like stress, infections, and diet may not cause UC directly but can provoke flare-ups.',
+        "Factors like stress, infections, and diet may not cause UC directly but can provoke flare-ups.",
     },
     {
-      title: 'Risk factors:',
+      title: "Risk factors:",
       description:
-        'UC is more prevalent in younger individuals (15–30 years) and those over 60. It is also more common among people of Ashkenazi Jewish descent.',
+        "UC is more prevalent in younger individuals (15–30 years) and those over 60. It is also more common among people of Ashkenazi Jewish descent.",
     },
   ],
 
   data_1: [
     {
-      heading: 'Mild to Moderate Symptoms:',
-      description: '',
+      heading: "Mild to Moderate Symptoms:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Diarrhoea (may contain blood or mucus)',
+          description: "Diarrhoea (may contain blood or mucus)",
         },
         {
-          description: 'Abdominal pain and cramping',
+          description: "Abdominal pain and cramping",
         },
         {
-          description: 'Fatigue and weight loss',
+          description: "Fatigue and weight loss",
         },
         {
-          description: 'Frequent and urgent bowel movements',
+          description: "Frequent and urgent bowel movements",
         },
         {
           description:
-            'Tenesmus (feeling the need to defecate but being unable to)',
+            "Tenesmus (feeling the need to defecate but being unable to)",
         },
       ],
     },
     {
-      heading: 'Severe Symptoms:',
-      description: '',
+      heading: "Severe Symptoms:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Bloody stools with pus',
+          description: "Bloody stools with pus",
         },
         {
-          description: 'Fever and nausea',
+          description: "Fever and nausea",
         },
         {
-          description: 'Severe abdominal cramps',
+          description: "Severe abdominal cramps",
         },
         {
-          description: 'Significant weight loss',
+          description: "Significant weight loss",
         },
         {
-          description: 'Dehydration',
+          description: "Dehydration",
         },
       ],
     },
     {
-      heading: 'Extraintestinal Symptoms:',
+      heading: "Extraintestinal Symptoms:",
       description:
-        'In some cases, UC can affect other parts of the body, leading to:',
+        "In some cases, UC can affect other parts of the body, leading to:",
       aneurysmSymptoms: [
         {
-          description: 'Joint pain and swelling',
+          description: "Joint pain and swelling",
         },
         {
-          description: 'Eye inflammation (redness, pain)',
+          description: "Eye inflammation (redness, pain)",
         },
         {
-          description: 'Skin rashes or ulcers',
+          description: "Skin rashes or ulcers",
         },
         {
-          description: 'Liver issues, such as primary sclerosing cholangitis',
+          description: "Liver issues, such as primary sclerosing cholangitis",
         },
       ],
     },
@@ -109,62 +109,62 @@ const data = {
 
   complications: [
     {
-      heading: 'Medications:',
-      description: '',
+      heading: "Medications:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Aminosalicylates (5-ASA): Sulfasalazine and mesalamine are used to manage mild to moderate inflammation.',
+            "Aminosalicylates (5-ASA): Sulfasalazine and mesalamine are used to manage mild to moderate inflammation.",
         },
         {
           description:
-            'Corticosteroids: Used for short-term relief during severe flare-ups but not recommended for long-term use due to side effects.',
+            "Corticosteroids: Used for short-term relief during severe flare-ups but not recommended for long-term use due to side effects.",
         },
         {
           description:
-            'Immunosuppressants: Medications like azathioprine or methotrexate reduce immune system activity.',
+            "Immunosuppressants: Medications like azathioprine or methotrexate reduce immune system activity.",
         },
         {
           description:
-            'Biologics: Drugs such as infliximab and adalimumab target specific immune responses.',
+            "Biologics: Drugs such as infliximab and adalimumab target specific immune responses.",
         },
         {
           description:
-            'Janus kinase (JAK) inhibitors: Medications like tofacitinib help control inflammation.',
+            "Janus kinase (JAK) inhibitors: Medications like tofacitinib help control inflammation.",
         },
       ],
     },
 
     {
-      heading: 'Surgery:',
-      description: '',
+      heading: "Surgery:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Surgery may be required if medications fail or if complications develop. Common procedures include:',
+            "Surgery may be required if medications fail or if complications develop. Common procedures include:",
         },
         {
           description:
-            'Proctocolectomy with ileal pouch-anal anastomosis (IPAA): Removes the colon and rectum while preserving normal defecation.',
+            "Proctocolectomy with ileal pouch-anal anastomosis (IPAA): Removes the colon and rectum while preserving normal defecation.",
         },
         {
           description:
-            'Ileostomy: In cases where pouch surgery is not feasible, an external pouch is used to collect waste.',
+            "Ileostomy: In cases where pouch surgery is not feasible, an external pouch is used to collect waste.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Although Ulcerative Colitis is a chronic condition with no known cure (except through surgery), most individuals can manage it effectively with medications and lifestyle adjustments. Regular monitoring and early treatment of flare-ups help reduce complications and improve quality of life. Working closely with healthcare providers, avoiding known triggers, and following prescribed treatments are essential to maintaining remission and preventing long-term damage to the colon.
           `,
@@ -173,73 +173,76 @@ const data = {
 
   symptoms: [
     {
-      category: 'Abdominal Pain:',
+      category: "Abdominal Pain:",
       description:
-        'A common symptom, often described as a burning sensation or discomfort in the upper abdomen.',
-      bgColor: 'bg-hciPrimary text-white',
+        "A common symptom, often described as a burning sensation or discomfort in the upper abdomen.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Nausea or Vomiting:',
-      description: 'Can occur, sometimes accompanied by a loss of appetite.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Nausea or Vomiting:",
+      description: "Can occur, sometimes accompanied by a loss of appetite.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Bloating and Indigestion:',
+      category: "Bloating and Indigestion:",
       description:
-        'Feelings of fullness and discomfort after eating are common.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Feelings of fullness and discomfort after eating are common.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Loss of Appetite:',
-      description: 'May lead to unintended weight loss in some individuals.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Loss of Appetite:",
+      description: "May lead to unintended weight loss in some individuals.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Black or Tarry Stools:',
+      category: "Black or Tarry Stools:",
       description:
-        'Can indicate bleeding in the stomach and should prompt immediate medical attention.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Can indicate bleeding in the stomach and should prompt immediate medical attention.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Blood tests:',
-      description: 'To check for anaemia and signs of inflammation.',
-      bgColor: 'bg-hciSecondary text-white',
+      category: "Blood tests:",
+      description: "To check for anaemia and signs of inflammation.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Stool sample:',
+      category: "Stool sample:",
       description: `To rule out infections and confirm intestinal inflammation.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Endoscopy (colonoscopy or sigmoidoscopy):',
+      category: "Endoscopy (colonoscopy or sigmoidoscopy):",
       description:
-        'Allows direct visualization of the colon and rectum. Biopsies may be taken to confirm UC.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Allows direct visualization of the colon and rectum. Biopsies may be taken to confirm UC.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Imaging tests:',
+      category: "Imaging tests:",
       description:
-        'CT or MRI scans can detect complications like perforation or toxic megacolon.',
-      bgColor: 'bg-hciSecondary text-white',
+        "CT or MRI scans can detect complications like perforation or toxic megacolon.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Barium enema X-ray:',
-      description: 'Helps identify the extent of inflammation.',
-      bgColor: 'bg-hciSecondary text-white',
+      category: "Barium enema X-ray:",
+      description: "Helps identify the extent of inflammation.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <p
+          dangerouslySetInnerHTML={{ __html: data.description }}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
 
         {/* <div className="grid lg:grid-cols-2 gap-4">
@@ -311,7 +314,10 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <H2 title="Symptoms" className="font-semibold mb-4 text-center text-xl" />
+        <H2
+          title="Symptoms"
+          className="font-semibold mb-4 text-center text-xl"
+        />
         <div className="mb-8">
           <DataLists
             divClass="grid grid-cols-3 gap-4"
@@ -349,7 +355,10 @@ function GeneralSurgery() {
         </div>
 
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center text-xl" />
+          <H2
+            title="Treatment"
+            className="font-semibold mb-4 text-center text-xl"
+          />
           <p className="font-light py-4">
             The goal of treatment is to reduce inflammation, relieve symptoms,
             and maintain remission. Treatment options include:
@@ -423,7 +432,7 @@ function GeneralSurgery() {
         <Conclusion
           data={[
             {
-              header: 'Conclusion',
+              header: "Conclusion",
               paragraph: data.conclusion[0].paragraph,
             },
           ]}
@@ -432,7 +441,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

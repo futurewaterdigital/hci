@@ -375,7 +375,7 @@ function LiverCancer() {
         <div className="mt-6 text-start">
           <Link
             href="/treatment/oncology/liver-cancer-info"
-            className="text-[#0E56A0] hover:underline"
+            className="text-[#0E56A0]"
           >
             To Know More About Liver Cancer And Its Treatment, Click Here
           </Link>
@@ -401,7 +401,7 @@ function LiverCancer() {
         <div className="mt-6 text-center">
           <Link
             href="/treatment/oncology/liver-cancer-causes"
-            className="text-blue-600 hover:underline"
+            className="text-hciPrimary font-semibold underline"
           >
             To Know More About Liver Cancer And Its Causes And Treatment, Click
             Here
@@ -437,7 +437,7 @@ function LiverCancer() {
         <div className="mt-6 text-center">
           <Link
             href="/treatment/oncology/liver-cancer-diagnosis"
-            className="text-blue-600 hover:underline"
+            className="text-hciPrimary font-semibold underline"
           >
             To Get The Best Diagnosis For Liver Cancer And Related Issues, Click
             Here
@@ -500,7 +500,7 @@ function LiverCancer() {
           <div key={index} className="text-start">
             <Link
               href={link.url}
-              className="text-hciPrimary font-semibold hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               {link.text}
             </Link>

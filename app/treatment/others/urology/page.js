@@ -1,132 +1,132 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Image from 'next/image'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Image from "next/image";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
 
-import FlexBox from '@/components/cardiacComponents/FlexBox'
-import FlexBoxSection from '@/components/cardiacComponents/FlexBoxSection'
-import ListBox from '@/components/cardiacComponents/ListBox'
-import CTaButton from '@/components/cardiacComponents/CtaButton'
+import FlexBox from "@/components/cardiacComponents/FlexBox";
+import FlexBoxSection from "@/components/cardiacComponents/FlexBoxSection";
+import ListBox from "@/components/cardiacComponents/ListBox";
+import CTaButton from "@/components/cardiacComponents/CtaButton";
 
 const data = {
-  bannerImage: '/others/urology.png',
-  title: 'Urology',
+  bannerImage: "/others/urology.png",
+  title: "Urology",
   description: `Comprehensive Care for Urinary and Reproductive Health`,
   overview: `At Healthcare International (HCI), we offer expert urological care, providing advanced treatments for a range of urinary and reproductive health conditions. Our network of highly skilled urologists ensures personalized care that prioritises your well-being and restores optimal function.`,
   sections: [
     {
-      title: 'What Is Urology?',
+      title: "What Is Urology?",
       content: `Urology is a medical field that focuses on the diagnosis, treatment, and management of disorders related to the urinary system (kidneys, bladder, ureters, and urethra) and the male reproductive system (including the prostate, testes, and penis). Urologists are trained to address a wide range of conditions, from infections to cancers, and offer both medical and surgical interventions.`,
-      bgColor: 'bg-hciSecondary',
+      bgColor: "bg-hciSecondary",
     },
   ],
   sec_para: [
     {
-      title: 'Advanced Imaging',
-      titleCss: 'text-hciPrimary',
+      title: "Advanced Imaging",
+      titleCss: "text-hciPrimary",
       content: `Ultrasound, CT scans, and MRI for accurate diagnosis and treatment planning.`,
-      bgColor: 'border-hciSecondary border text-black shadow-lg text-center',
+      bgColor: "border-hciSecondary border text-black shadow-lg text-center",
     },
   ],
   sec_para_1: [
     {
-      title: 'Cystoscopy',
-      titleCss: 'text-hciPrimary',
+      title: "Cystoscopy",
+      titleCss: "text-hciPrimary",
       content: `A minimally invasive procedure that allows direct visualization of the urinary tract to diagnose bladder and urethra conditions.`,
-      bgColor: 'border-hciSecondary border text-black shadow-lg text-center',
+      bgColor: "border-hciSecondary border text-black shadow-lg text-center",
     },
   ],
   sec_para_2: [
     {
-      title: 'Urodynamics',
-      titleCss: 'text-hciPrimary',
+      title: "Urodynamics",
+      titleCss: "text-hciPrimary",
       content: `A series of tests that assess how the bladder and urethra are functioning.`,
-      bgColor: 'border-hciSecondary border text-black shadow-lg text-center',
+      bgColor: "border-hciSecondary border text-black shadow-lg text-center",
     },
   ],
   sec_para_3: [
     {
-      title: 'Robotic Surgery',
-      titleCss: 'text-hciPrimary',
+      title: "Robotic Surgery",
+      titleCss: "text-hciPrimary",
       content: `Cutting-edge technology for minimally invasive procedures, reducing recovery time and enhancing precision.`,
-      bgColor: 'border-hciSecondary border text-black shadow-lg text-center',
+      bgColor: "border-hciSecondary border text-black shadow-lg text-center",
     },
   ],
   sec_para_4: [
     {
-      title: 'Laser Treatments',
-      titleCss: 'text-hciPrimary',
+      title: "Laser Treatments",
+      titleCss: "text-hciPrimary",
       content: `Used for treating kidney stones, enlarged prostate, and other urological conditions.`,
-      bgColor: 'border-hciSecondary border text-black shadow-lg text-center',
+      bgColor: "border-hciSecondary border text-black shadow-lg text-center",
     },
   ],
   sec_para_5: [
     {
-      title: 'Medications and Lifestyle Management',
-      titleCss: 'text-hciPrimary',
+      title: "Medications and Lifestyle Management",
+      titleCss: "text-hciPrimary",
       content: `A combination of drug therapies and lifestyle modifications to manage chronic urological conditions like incontinence or overactive bladder.`,
-      bgColor: 'border-hciSecondary border text-black shadow-lg text-center',
+      bgColor: "border-hciSecondary border text-black shadow-lg text-center",
     },
   ],
   complications: [
     {
-      heading: 'Expert Care',
+      heading: "Expert Care",
 
       aneurysmSymptoms: [
         {
-          title: 'Urinary Tract Infections (UTIs)',
+          title: "Urinary Tract Infections (UTIs)",
           description:
-            'Infections affecting any part of the urinary system, causing pain and discomfort.',
+            "Infections affecting any part of the urinary system, causing pain and discomfort.",
         },
         {
-          title: 'Kidney Stones',
+          title: "Kidney Stones",
           description:
-            'Hard deposits of minerals and salts that form in the kidneys and cause pain when passing through the urinary tract.',
+            "Hard deposits of minerals and salts that form in the kidneys and cause pain when passing through the urinary tract.",
         },
         {
-          title: 'Prostate Disorders',
+          title: "Prostate Disorders",
           description:
-            'Conditions like benign prostatic hyperplasia (BPH) and prostate cancer affecting male reproductive health.',
+            "Conditions like benign prostatic hyperplasia (BPH) and prostate cancer affecting male reproductive health.",
         },
         {
-          title: 'Bladder Disorders',
+          title: "Bladder Disorders",
           description:
-            'Conditions like overactive bladder, incontinence, and interstitial cystitis.',
+            "Conditions like overactive bladder, incontinence, and interstitial cystitis.",
         },
         {
-          title: 'Male Infertility',
+          title: "Male Infertility",
           description:
-            'Issues that affect sperm production or delivery, impacting a man’s ability to father a child.',
+            "Issues that affect sperm production or delivery, impacting a man’s ability to father a child.",
         },
         {
-          title: 'Erectile Dysfunction (ED)',
+          title: "Erectile Dysfunction (ED)",
           description:
-            'Inability to maintain or achieve an erection for sexual activity.',
+            "Inability to maintain or achieve an erection for sexual activity.",
         },
         {
-          title: 'Testicular Cancer',
+          title: "Testicular Cancer",
           description:
-            'Cancer affecting the testes, commonly diagnosed in younger men.',
+            "Cancer affecting the testes, commonly diagnosed in younger men.",
         },
         {
-          title: 'Hematuria',
+          title: "Hematuria",
           description:
-            'Presence of blood in the urine, which may indicate underlying issues.',
+            "Presence of blood in the urine, which may indicate underlying issues.",
         },
         {
-          title: 'Hydronephrosis',
+          title: "Hydronephrosis",
           description:
-            'Swelling of a kidney due to urine buildup, often caused by obstruction.',
+            "Swelling of a kidney due to urine buildup, often caused by obstruction.",
         },
         {
-          title: 'Urinary Incontinence',
+          title: "Urinary Incontinence",
           description:
-            'Loss of bladder control, leading to involuntary urine leakage.',
+            "Loss of bladder control, leading to involuntary urine leakage.",
         },
       ],
     },
@@ -151,23 +151,23 @@ const data = {
   // ],
   urologist: [
     {
-      heading: '',
+      heading: "",
       aneurysmSymptoms: [
         {
           description:
-            'Painful urination, blood in the urine, or difficulty passing urine.',
+            "Painful urination, blood in the urine, or difficulty passing urine.",
         },
         {
           description:
-            'Frequent urges to urinate, especially during the night.',
+            "Frequent urges to urinate, especially during the night.",
         },
         {
-          description: 'Erectile dysfunction or other sexual health concerns.',
+          description: "Erectile dysfunction or other sexual health concerns.",
         },
-        { description: 'Persistent pelvic or lower abdominal pain.' },
-        { description: 'Swelling or lumps in the genital area or testicles.' },
-        { description: 'Urinary incontinence or leakage.' },
-        { description: 'Difficulty achieving or maintaining an erection.' },
+        { description: "Persistent pelvic or lower abdominal pain." },
+        { description: "Swelling or lumps in the genital area or testicles." },
+        { description: "Urinary incontinence or leakage." },
+        { description: "Difficulty achieving or maintaining an erection." },
       ],
     },
   ],
@@ -187,43 +187,43 @@ const data = {
 
   benefits: [
     {
-      title: 'Expert Urologists:',
-      desc: 'Access to leading specialists in urology who stay up to date with the latest treatments and advancements.',
+      title: "Expert Urologists:",
+      desc: "Access to leading specialists in urology who stay up to date with the latest treatments and advancements.",
     },
     {
-      title: 'Personalized Care Plans',
-      desc: 'Each patient receives a tailored treatment plan based on their condition, medical history, and preferences.',
+      title: "Personalized Care Plans",
+      desc: "Each patient receives a tailored treatment plan based on their condition, medical history, and preferences.",
     },
     {
-      title: 'Minimally Invasive Techniques',
-      desc: 'We offer the latest minimally invasive procedures to reduce recovery time and improve outcomes.',
+      title: "Minimally Invasive Techniques",
+      desc: "We offer the latest minimally invasive procedures to reduce recovery time and improve outcomes.",
     },
     {
-      title: 'Comprehensive Support',
-      desc: 'From diagnosis to post-treatment care, HCI supports patients every step of the way.',
+      title: "Comprehensive Support",
+      desc: "From diagnosis to post-treatment care, HCI supports patients every step of the way.",
     },
   ],
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
-}
+};
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <Title title={data.title} className="text-4xl text-pink-500" />
         <H2
           title={data.description}
           className="text-start font-semibold text-xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
-        
+
         <H2
           title="Conditions Treated by Urologists"
           className="text-2xl font-semibold mb-4 text-center"
@@ -309,7 +309,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

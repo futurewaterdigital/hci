@@ -329,7 +329,7 @@ function HeadNeckMalignancy() {
             <div className="mt-6 text-start">
               <Link
                 href="/treatment/oncology/head-neck-cancer-info"
-                className="text-[#0E56A0] font-semibold hover:underline"
+                className="text-[#0E56A0] font-semibold underline"
               >
                 To Know More About A Head And Neck Malignancy And Its Treatment,
                 Click Here
@@ -349,7 +349,7 @@ function HeadNeckMalignancy() {
             <div className="mt-6 text-start">
               <Link
                 href="/treatment/oncology/head-neck-diagnosis"
-                className="text-[#0E56A0] font-semibold hover:underline"
+                className="text-[#0E56A0] font-semibold underline"
               >
                 To Get The Best Diagnosis Of Head And Neck Malignancy And
                 Related Issues, Click Here
@@ -407,7 +407,7 @@ function HeadNeckMalignancy() {
         <div className="mt-6 text-start">
           <Link
             href="/treatment/oncology/head-neck-treatment"
-            className="text-[#0E56A0] font-semibold hover:underline"
+            className="text-[#0E56A0] font-semibold underline"
           >
             To Know More About A Head And Neck Malignancy And Its Causes And
             Treatment, Click Here
@@ -426,7 +426,7 @@ function HeadNeckMalignancy() {
             <div key={index} className="text-start">
               <Link
                 href={link.url}
-                className="text-hciPrimary font-semibold hover:underline"
+                className="text-hciPrimary font-semibold underline"
               >
                 {link.title}
               </Link>

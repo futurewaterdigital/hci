@@ -1,67 +1,67 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Seizure Disorders',
-  bannerImage: '/neuro-sciences/seizure-disorders.png',
+  title: "Seizure Disorders",
+  bannerImage: "/neuro-sciences/seizure-disorders.png",
   description: `Seizure disorders, commonly referred to as epilepsy, encompass a range of neurological conditions characterized by recurrent seizures. These seizures result from abnormal electrical activity in the brain and can vary significantly in severity and type. In India, seizure disorders are a pressing health issue, affecting millions and often leading to social stigma and misconceptions. Understanding seizure disorders is essential for effective management and support for those affected.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Genetic Factors',
+      title: "Genetic Factors",
       description: `Certain types of epilepsy have a genetic basis, where inherited mutations can make individuals more susceptible to seizures.`,
     },
     {
-      title: 'Metabolic Disorders',
+      title: "Metabolic Disorders",
       description: `Imbalances in electrolytes or other metabolic conditions can trigger seizures.`,
     },
     {
-      title: 'Brain Injury',
+      title: "Brain Injury",
       description:
-        'Trauma to the head, stroke, or infections can damage brain tissue and lead to seizure activity.',
+        "Trauma to the head, stroke, or infections can damage brain tissue and lead to seizure activity.",
     },
     {
-      title: 'Substance Abuse',
+      title: "Substance Abuse",
       description:
-        'Withdrawal from alcohol or drugs can provoke seizures in susceptible individuals.',
+        "Withdrawal from alcohol or drugs can provoke seizures in susceptible individuals.",
     },
     {
-      title: 'Developmental Disorders',
+      title: "Developmental Disorders",
       description:
-        'Conditions like autism and neurofibromatosis are associated with an increased risk of seizures.',
+        "Conditions like autism and neurofibromatosis are associated with an increased risk of seizures.",
     },
     {
-      title: 'Infections',
+      title: "Infections",
       description:
-        'Meningitis, encephalitis, and other infections affecting the brain can lead to seizure disorders.',
+        "Meningitis, encephalitis, and other infections affecting the brain can lead to seizure disorders.",
     },
   ],
 
   complications: [
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Antiepileptic drugs (AEDs) are the primary treatment for controlling seizures. The choice of medication depends on the type of seizures and individual response.',
+            "Antiepileptic drugs (AEDs) are the primary treatment for controlling seizures. The choice of medication depends on the type of seizures and individual response.",
         },
       ],
     },
 
     {
-      heading: 'Lifestyle Modifications',
-      description: '',
+      heading: "Lifestyle Modifications",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Patients are often advised to maintain a healthy lifestyle, including regular sleep patterns, stress management, and avoiding known triggers.`,
@@ -69,8 +69,8 @@ const data = {
       ],
     },
     {
-      heading: 'Surgery',
-      description: '',
+      heading: "Surgery",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `In cases where seizures are resistant to medication, surgical options may be considered to remove the seizure focus in the brain.
@@ -79,8 +79,8 @@ const data = {
       ],
     },
     {
-      heading: 'Vagus Nerve Stimulation (VNS)',
-      description: '',
+      heading: "Vagus Nerve Stimulation (VNS)",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `A device implanted under the skin sends electrical signals to the brain, helping to reduce seizure frequency.`,
@@ -88,27 +88,27 @@ const data = {
       ],
     },
     {
-      heading: 'Ketogenic Diet',
-      description: '',
+      heading: "Ketogenic Diet",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'A high-fat, low-carbohydrate diet has been shown to be effective for some individuals, particularly children with refractory epilepsy.',
+            "A high-fat, low-carbohydrate diet has been shown to be effective for some individuals, particularly children with refractory epilepsy.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
      In India, raising awareness about seizure disorders is critical to dispelling myths and reducing stigma. Access to comprehensive medical care and support services is essential for improving outcomes for those affected. With advancements in diagnosis and treatment, many individuals with seizure disorders can lead fulfilling lives and effectively manage their condition. Regular follow-ups and education on seizure management play vital roles in ensuring that patients receive the best possible care and support.
           `,
@@ -117,63 +117,63 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description:
-        'Generalized Seizures: These affect both sides of the brain and may result in loss of consciousness, muscle rigidity, and jerking movements.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Generalized Seizures: These affect both sides of the brain and may result in loss of consciousness, muscle rigidity, and jerking movements.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Focal Seizures: These occur in a specific area of the brain and can cause unusual sensations, changes in emotions, or involuntary movements in one part of the body.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Focal Seizures: These occur in a specific area of the brain and can cause unusual sensations, changes in emotions, or involuntary movements in one part of the body.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Absence Seizures: Characterized by brief lapses in consciousness, often appearing as if the person is staring blankly.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Absence Seizures: Characterized by brief lapses in consciousness, often appearing as if the person is staring blankly.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Postictal State: Following a seizure, individuals may experience confusion, fatigue, and headache as their brain recovers.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Postictal State: Following a seizure, individuals may experience confusion, fatigue, and headache as their brain recovers.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description: `Medical History: A detailed account of the patient's seizure activity, triggers, and any family history of seizure disorders is essential.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Neurological Examination: An evaluation of cognitive and motor functions helps identify any neurological deficits.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Electroencephalogram (EEG): This test measures electrical activity in the brain and can help detect abnormal patterns associated with seizures.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Imaging Studies: MRI or CT scans may be performed to identify structural abnormalities or injuries in the brain that could be contributing to seizures.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <Title title={data.title} className="text-4xl text-pink-500" />
         <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
@@ -276,7 +276,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

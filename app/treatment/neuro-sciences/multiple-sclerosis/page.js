@@ -1,74 +1,74 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Multiple Sclerosis (MS)',
-  bannerImage: '/neuro-sciences/multiple-sclerosis.png',
+  title: "Multiple Sclerosis (MS)",
+  bannerImage: "/neuro-sciences/multiple-sclerosis.png",
   description: `Multiple Sclerosis (MS) is a chronic neurological disorder that affects the central nervous system, which includes the brain and spinal cord. It disrupts the flow of information within the brain and between the brain and the body. MS is considered an autoimmune disease, where the body's immune system mistakenly attacks the protective covering of nerve fibers (myelin), leading to communication problems between the brain and the rest of the body. Over time, this can cause permanent damage to the nerves themselves. India is emerging as a hub for advanced treatment options for MS, offering expertise in neurology, cutting-edge therapies, and comprehensive patient care.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Genetic Predisposition',
+      title: "Genetic Predisposition",
       description:
-        'A family history of MS may increase the risk of developing the disease, though it is not directly inherited.',
+        "A family history of MS may increase the risk of developing the disease, though it is not directly inherited.",
     },
     {
-      title: 'Autoimmune Reaction',
+      title: "Autoimmune Reaction",
       description:
-        'Heart problems, such as atrial fibrillation, can lead to the formation of blood clots that may travel to the brain, resulting in a stroke.',
+        "Heart problems, such as atrial fibrillation, can lead to the formation of blood clots that may travel to the brain, resulting in a stroke.",
     },
     {
-      title: 'Environmental Factors',
+      title: "Environmental Factors",
       description:
-        'Low levels of Vitamin D, particularly in individuals living in areas with less sunlight, may increase the risk.',
+        "Low levels of Vitamin D, particularly in individuals living in areas with less sunlight, may increase the risk.",
     },
     {
-      title: 'Infections',
+      title: "Infections",
       description:
-        'Some viral infections, such as Epstein-Barr virus (EBV), have been associated with a higher risk of MS.',
+        "Some viral infections, such as Epstein-Barr virus (EBV), have been associated with a higher risk of MS.",
     },
     {
-      title: 'Smoking',
+      title: "Smoking",
       description:
-        'Smoking increases the risk of MS and can accelerate the progression of the disease in individuals already diagnosed.',
+        "Smoking increases the risk of MS and can accelerate the progression of the disease in individuals already diagnosed.",
     },
   ],
 
   complications: [
     {
-      heading: 'Disease-modifying Therapies (DMTs)',
-      description: '',
+      heading: "Disease-modifying Therapies (DMTs)",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'These medications help reduce the frequency and severity of relapses and may slow the progression of MS. They work by modulating or suppressing the immune system to prevent further damage to the myelin sheath. Common DMTs include interferon-beta, glatiramer acetate, and newer oral medications like fingolimod and dimethyl fumarate.',
+            "These medications help reduce the frequency and severity of relapses and may slow the progression of MS. They work by modulating or suppressing the immune system to prevent further damage to the myelin sheath. Common DMTs include interferon-beta, glatiramer acetate, and newer oral medications like fingolimod and dimethyl fumarate.",
         },
       ],
     },
 
     {
-      heading: 'Corticosteroids',
-      description: '',
+      heading: "Corticosteroids",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Used to reduce inflammation during acute MS attacks, helping to speed up recovery from relapses.',
+            "Used to reduce inflammation during acute MS attacks, helping to speed up recovery from relapses.",
         },
       ],
     },
     {
-      heading: 'Plasma Exchange (Plasmapheresis)',
-      description: '',
+      heading: "Plasma Exchange (Plasmapheresis)",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `This treatment is used for severe relapses that do not respond to corticosteroids. It involves removing and treating the blood plasma before returning it to the patient.
@@ -78,8 +78,8 @@ const data = {
       ],
     },
     {
-      heading: 'Physical Therapy',
-      description: '',
+      heading: "Physical Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Rehabilitation focuses on strengthening muscles, improving balance, and maintaining mobility. Physical therapy is crucial in managing symptoms like spasticity and fatigue.
@@ -88,8 +88,8 @@ const data = {
       ],
     },
     {
-      heading: 'Occupational Therapy',
-      description: '',
+      heading: "Occupational Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Helps individuals with MS adapt to daily activities and maintain independence.`,
@@ -97,8 +97,8 @@ const data = {
       ],
     },
     {
-      heading: 'Medications for Symptom Management:',
-      description: '',
+      heading: "Medications for Symptom Management:",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Specific medications can be prescribed to manage symptoms such as muscle spasticity, pain, bladder problems, and fatigue.`,
@@ -106,8 +106,8 @@ const data = {
       ],
     },
     {
-      heading: 'Stem Cell Therapy',
-      description: '',
+      heading: "Stem Cell Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Experimental treatment where a patient's own stem cells are used to rebuild the immune system in severe cases of MS.`,
@@ -117,15 +117,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
      Multiple Sclerosis is a complex and unpredictable disease that significantly impacts the lives of those affected. While the disease presents unique challenges, advances in treatments and therapies offer hope for better disease management and improved quality of life. India’s healthcare infrastructure, with its access to cutting-edge neurology care and personalized treatment plans, has become a destination for patients seeking high-quality MS treatment. Early diagnosis and an individualized approach to therapy are key to managing MS effectively and slowing its progression.
           `,
@@ -134,71 +134,71 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description: `Numbness or Tingling: Typically in the face, arms, legs, or trunk.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Muscle Weakness: Especially in the limbs, making walking and coordination difficult.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Vision Problems: Blurred or double vision, optic neuritis (inflammation of the optic nerve), or even partial or total vision loss.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Spasticity: Some seizures are accompanied by unusual sensations such as tingling, visual disturbances, or strange smells and sounds.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Cognitive Dysfunction: Problems with memory, attention, and information processing.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Difficulty Walking: Gait problems due to muscle weakness, spasticity, or coordination issues.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Bladder and Bowel Issues: Urgency, frequency, or difficulty controlling urination, as well as constipation.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Dizziness or Vertigo: Feeling off balance or lightheaded.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description: `MRI: Magnetic resonance imaging (MRI) is the most commonly used test to detect areas of demyelination (plaques) in the brain and spinal cord.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Spinal Tap (Lumbar Puncture): Analysis of cerebrospinal fluid can reveal abnormalities in antibodies that are associated with MS.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Evoked Potentials Test: Measures the electrical activity in the brain in response to stimuli and can help detect nerve damage in individuals suspected of having MS.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Blood Tests: Although there is no blood test for MS, these tests help rule out other conditions that may cause similar symptoms, such as infections or inflammatory diseases.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
 // console.log(data.complications[0].heading)
 
@@ -207,7 +207,7 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <Title title={data.title} className="text-4xl text-pink-500" />
         <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
@@ -312,7 +312,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

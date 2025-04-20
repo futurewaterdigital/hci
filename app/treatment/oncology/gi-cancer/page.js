@@ -339,10 +339,7 @@ function GICancer() {
         ))}
       </div>
       <div className="my-3">
-        <Link
-          href={""}
-          className="hover:text-blue-500 text-hciPrimary cursor-pointer"
-        >
+        <Link href={""} className="text-hciPrimary font-semibold underline">
           To know more about bowel cancer and its treatment, click here
         </Link>
       </div>
@@ -472,7 +469,7 @@ function GICancer() {
           <div key={index} className="text-start">
             <Link
               href={link.url}
-              className="text-hciPrimary font-semibold hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               {link.text}
             </Link>

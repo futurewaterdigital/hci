@@ -1,269 +1,275 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Sports Injuries',
-  bannerImage: '/orthopaedics/sports-injuries.png',
+  title: "Sports Injuries",
+  bannerImage: "/orthopaedics/sports-injuries.png",
   description: `Sports injuries refer to a wide range of injuries that occur during physical activity, whether in organized sports, exercise, or recreational activities. These injuries can affect athletes of all ages and skill levels, leading to pain, reduced mobility, and sometimes long-term complications. In India and globally, sports injuries are a significant concern, prompting the need for effective prevention, diagnosis, and treatment strategies.`,
   overview: ``,
 
   causes: [
     {
-      title: 'Overuse',
+      title: "Overuse",
       description:
-        'Repetitive strain on muscles, tendons, and joints from excessive training or inadequate recovery can lead to injuries such as tendonitis or stress fractures.',
+        "Repetitive strain on muscles, tendons, and joints from excessive training or inadequate recovery can lead to injuries such as tendonitis or stress fractures.",
     },
     {
-      title: 'Trauma',
+      title: "Trauma",
       description:
-        'Sudden impact or falls can result in acute injuries like fractures, sprains, and concussions.',
+        "Sudden impact or falls can result in acute injuries like fractures, sprains, and concussions.",
     },
     {
-      title: 'Poor Technique',
+      title: "Poor Technique",
       description:
-        'Improper form or technique during physical activities can increase the risk of injury.',
+        "Improper form or technique during physical activities can increase the risk of injury.",
     },
     {
-      title: 'Inadequate Conditioning',
+      title: "Inadequate Conditioning",
       description:
-        'Lack of proper strength and flexibility training can make athletes more susceptible to injuries.',
+        "Lack of proper strength and flexibility training can make athletes more susceptible to injuries.",
     },
     {
-      title: 'Environmental Factors',
+      title: "Environmental Factors",
       description:
-        'Playing surfaces, weather conditions, and equipment can also contribute to injury risk.',
+        "Playing surfaces, weather conditions, and equipment can also contribute to injury risk.",
     },
   ],
 
   complications: [
     {
-      heading: '',
+      heading: "",
       aneurysmSymptoms: [
         {
           description:
-            'Rest and Ice:Immediate rest and application of ice to reduce swelling and alleviate pain.',
+            "Rest and Ice:Immediate rest and application of ice to reduce swelling and alleviate pain.",
         },
         {
           description:
-            'Compression and Elevation:Using compression bandages and elevating the injured area to minimize swelling.',
+            "Compression and Elevation:Using compression bandages and elevating the injured area to minimize swelling.",
         },
         {
           description:
-            'Physical Therapy:Tailored rehabilitation programmes to strengthen muscles, improve flexibility, and facilitate recovery.',
+            "Physical Therapy:Tailored rehabilitation programmes to strengthen muscles, improve flexibility, and facilitate recovery.",
         },
         {
           description:
-            'Medications:Over-the-counter pain relievers and anti-inflammatory drugs to manage pain and swelling.',
+            "Medications:Over-the-counter pain relievers and anti-inflammatory drugs to manage pain and swelling.",
         },
       ],
     },
 
     {
-      heading: 'Surgical Interventions:',
+      heading: "Surgical Interventions:",
       aneurysmSymptoms: [
         {
           description:
-            'Arthroscopy: Minimally invasive surgery used to diagnose and treat joint injuries, such as cartilage tears.',
+            "Arthroscopy: Minimally invasive surgery used to diagnose and treat joint injuries, such as cartilage tears.",
         },
         {
           description:
-            'Reconstructive Surgery: Procedures to repair torn ligaments or tendons, ensuring stability and function in the joint.',
+            "Reconstructive Surgery: Procedures to repair torn ligaments or tendons, ensuring stability and function in the joint.",
         },
         {
           description:
-            'Fracture Repair: Surgical intervention to realign and stabilise fractured bones.',
+            "Fracture Repair: Surgical intervention to realign and stabilise fractured bones.",
         },
       ],
     },
     {
-      heading: 'Preventive Measures:',
+      heading: "Preventive Measures:",
       aneurysmSymptoms: [
         {
           description:
-            'Education: Instruction on proper techniques and training methods to reduce injury risk.',
+            "Education: Instruction on proper techniques and training methods to reduce injury risk.",
         },
         {
           description:
-            'Strength and Conditioning: Tailored training programmes to improve overall fitness, flexibility, and strength.',
+            "Strength and Conditioning: Tailored training programmes to improve overall fitness, flexibility, and strength.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
  Sports injuries can significantly impact an athlete's performance and quality of life. Early diagnosis and appropriate treatment are crucial for effective management and a successful return to physical activity. With advancements in medical technology, rehabilitation strategies, and injury prevention programmes, many athletes can recover from sports injuries and continue to participate in their chosen activities. Ongoing education about injury prevention and proper training techniques is essential for minimizing risks and promoting long-term athletic health.
           `,
     },
   ],
   DataSurgery: {
-    headingTitle: 'Recovery and Rehabilitation',
+    headingTitle: "Recovery and Rehabilitation",
     description:
-      'Post-surgery recovery from robotic knee replacement tends to be quicker and smoother compared to traditional surgery. Key aspects include:',
+      "Post-surgery recovery from robotic knee replacement tends to be quicker and smoother compared to traditional surgery. Key aspects include:",
     DataLists: [
       {
-        title: 'Early Mobilization',
+        title: "Early Mobilization",
         description:
-          'Walking with assistance within a day or two post-surgery.',
+          "Walking with assistance within a day or two post-surgery.",
       },
       {
-        title: 'Physical Therapy',
-        description: 'Targeted exercises to restore strength and flexibility.',
+        title: "Physical Therapy",
+        description: "Targeted exercises to restore strength and flexibility.",
       },
       {
-        title: 'Pain Management',
-        description: ' Use of medications to manage post-operative pain.',
+        title: "Pain Management",
+        description: " Use of medications to manage post-operative pain.",
       },
       {
-        title: 'Follow-Up Visits',
+        title: "Follow-Up Visits",
         description:
-          'Regular check-ups to monitor recovery and implant performance.',
+          "Regular check-ups to monitor recovery and implant performance.",
       },
       {
-        title: 'Lifestyle Adjustments',
+        title: "Lifestyle Adjustments",
         description:
-          'Advice on resuming activities gradually and avoiding high-impact sports initially.',
+          "Advice on resuming activities gradually and avoiding high-impact sports initially.",
       },
     ],
   },
 
   symptoms: [
     {
-      category: 'Pain',
+      category: "Pain",
       description:
-        'Localized pain at the injury site, which may be sharp or aching.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Localized pain at the injury site, which may be sharp or aching.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Swelling and Bruising',
-      description: 'Inflammation and discolouration around the affected area.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Swelling and Bruising",
+      description: "Inflammation and discolouration around the affected area.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Limited Range of Motion',
+      category: "Limited Range of Motion",
       description:
-        'Difficulty moving the injured joint or muscle, often accompanied by stiffness.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Difficulty moving the injured joint or muscle, often accompanied by stiffness.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Weakness',
+      category: "Weakness",
       description:
-        'Reduced strength in the affected area, making it difficult to perform normal activities.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Reduced strength in the affected area, making it difficult to perform normal activities.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Instability',
+      category: "Instability",
       description:
-        'A feeling of looseness or instability in a joint, often seen in ligament injuries.',
-      bgColor: 'bg-hciPrimary text-white',
+        "A feeling of looseness or instability in a joint, often seen in ligament injuries.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Medical History and Physical Examination',
+      category: "Medical History and Physical Examination",
       description: `A detailed assessment of the injury's onset, mechanism, and symptoms, followed by a physical examination to evaluate function and pain levels.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'X-rays',
-      description: 'Commonly used to detect fractures or dislocations.',
-      bgColor: 'bg-hciSecondary text-white',
+      category: "X-rays",
+      description: "Commonly used to detect fractures or dislocations.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'MRI',
+      category: "MRI",
       description:
-        'Provides detailed images of soft tissues, helping to identify ligament tears, tendon injuries, or other complex issues.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Provides detailed images of soft tissues, helping to identify ligament tears, tendon injuries, or other complex issues.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'CT Scans',
+      category: "CT Scans",
       description:
-        'Useful for obtaining cross-sectional images of bones and soft tissues, particularly in complicated cases.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Useful for obtaining cross-sectional images of bones and soft tissues, particularly in complicated cases.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
   benefits: [
     {
-      title: 'Higher Accuracy',
+      title: "Higher Accuracy",
       description:
-        'Precise implant placement reduces the risk of misalignment and complications.',
+        "Precise implant placement reduces the risk of misalignment and complications.",
     },
     {
-      title: 'Less Pain and Blood Loss',
+      title: "Less Pain and Blood Loss",
       description:
-        'Minimally invasive techniques cause less trauma to the surrounding tissues.',
+        "Minimally invasive techniques cause less trauma to the surrounding tissues.",
     },
     {
-      title: 'Faster Recovery',
+      title: "Faster Recovery",
       description:
-        'Patients often experience reduced hospital stays and quicker return to daily activities.',
+        "Patients often experience reduced hospital stays and quicker return to daily activities.",
     },
     {
-      title: 'Longer Implant Lifespan:',
+      title: "Longer Implant Lifespan:",
       description:
-        'Enhanced precision contributes to improved joint function and durability.',
+        "Enhanced precision contributes to improved joint function and durability.",
     },
     {
-      title: 'Improved Quality of Life:',
+      title: "Improved Quality of Life:",
       description:
-        'Patients regain mobility, allowing them to resume activities they love.',
+        "Patients regain mobility, allowing them to resume activities they love.",
     },
   ],
   consideration: [
     {
-      title: '',
-      description: 'Severe and persistent knee pain limiting daily activities.',
+      title: "",
+      description: "Severe and persistent knee pain limiting daily activities.",
     },
     {
-      title: '',
+      title: "",
       description:
-        'Ineffectiveness of non-surgical treatments such as physiotherapy or medications.',
+        "Ineffectiveness of non-surgical treatments such as physiotherapy or medications.",
     },
     {
-      title: '',
-      description: 'Knee joint deformity or instability affecting mobility.',
+      title: "",
+      description: "Knee joint deformity or instability affecting mobility.",
     },
     {
-      title: '',
-      description: 'Chronic inflammation and swelling that does not subside.',
+      title: "",
+      description: "Chronic inflammation and swelling that does not subside.",
     },
     {
-      title: '',
+      title: "",
       description:
-        'Difficulty walking, climbing stairs, or standing for extended periods.',
+        "Difficulty walking, climbing stairs, or standing for extended periods.",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <p
+          dangerouslySetInnerHTML={{ __html: data.description }}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
+        <H2
+          title="Causes"
+          className="text-2xl font-semibold mb-4 text-center"
+        />
         <p className="font-light" text="">
           Sports injuries can arise from various factors, including:
         </p>
@@ -331,7 +337,7 @@ function GeneralSurgery() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

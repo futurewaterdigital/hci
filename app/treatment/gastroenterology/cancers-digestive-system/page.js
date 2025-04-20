@@ -1,269 +1,270 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H2 from '@/components/ui/h2'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H2 from "@/components/ui/h2";
 
 const data = {
-  title: 'Cancers of the Digestive System',
-  bannerImage: '/gastroenterology/cancers-digestive-system.png',
+  title: "Cancers of the Digestive System",
+  bannerImage: "/gastroenterology/cancers-digestive-system.png",
   description: `Cancers of the digestive system affect key organs involved in digestion and nutrient absorption. These cancers originate in the gastrointestinal (GI) tract or nearby organs like the gallbladder and pancreas. Early detection can significantly improve survival outcomes, but in many cases, symptoms develop only in advanced stages.`,
-  overview: '',
+  overview: "",
 
   section_1: [
     {
-      title: 'Genetic mutations',
-      description: 'leading to abnormal cell growth',
+      title: "Genetic mutations",
+      description: "leading to abnormal cell growth",
     },
     {
-      title: 'Chronic conditions',
-      description: 'GERD, inflammatory bowel disease, pancreatitis',
+      title: "Chronic conditions",
+      description: "GERD, inflammatory bowel disease, pancreatitis",
     },
     {
-      title: 'Dietary factors',
-      description: 'High-fat, low-fibre, and processed foods',
+      title: "Dietary factors",
+      description: "High-fat, low-fibre, and processed foods",
     },
     {
-      title: 'Family history',
-      description: 'Family history of GI cancers',
+      title: "Family history",
+      description: "Family history of GI cancers",
     },
     {
-      title: '',
-      description: 'Smoking and alcohol consumption',
+      title: "",
+      description: "Smoking and alcohol consumption",
     },
     {
-      title: 'Infections',
-      description: 'Helicobacter pylori or Hepatitis viruses',
+      title: "Infections",
+      description: "Helicobacter pylori or Hepatitis viruses",
     },
     {
-      title: '',
-      description: 'Obesity and sedentary lifestyle',
+      title: "",
+      description: "Obesity and sedentary lifestyle",
     },
   ],
 
   complications: [
     {
-      heading: 'Surgery:',
+      heading: "Surgery:",
       description:
-        'Surgery aims to remove the tumour and any affected surrounding tissues, often the first line of treatment if the cancer is localized.',
+        "Surgery aims to remove the tumour and any affected surrounding tissues, often the first line of treatment if the cancer is localized.",
       aneurysmSymptoms: [
         {
           description:
-            'Gastrectomy: Partial or complete removal of the stomach (used for stomach cancer).',
+            "Gastrectomy: Partial or complete removal of the stomach (used for stomach cancer).",
         },
         {
           description:
-            'Colectomy: Removal of a section or the entire colon (for colon cancer).',
+            "Colectomy: Removal of a section or the entire colon (for colon cancer).",
         },
         {
           description:
-            'Pancreatectomy: Removal of the pancreas or part of it (used for pancreatic cancer).',
+            "Pancreatectomy: Removal of the pancreas or part of it (used for pancreatic cancer).",
         },
         {
           description: `Whipple Procedure: A complex surgery that removes parts of the pancreas, bile duct, and stomach (for advanced pancreatic or bile duct cancer).`,
         },
         {
           description:
-            'Esophagectomy: Removal of a portion of the oesophagus (used in oesophageal cancer).',
+            "Esophagectomy: Removal of a portion of the oesophagus (used in oesophageal cancer).",
         },
       ],
       footer:
-        'Surgeries may also include lymph node removal to check for cancer spread. Laparoscopic or robotic surgeries are often used to minimize recovery time.',
+        "Surgeries may also include lymph node removal to check for cancer spread. Laparoscopic or robotic surgeries are often used to minimize recovery time.",
     },
 
     {
-      heading: 'Chemotherapy',
+      heading: "Chemotherapy",
       description:
-        'Chemotherapy uses drugs to destroy or inhibit cancer cells. It can be administered before surgery (neoadjuvant therapy) to shrink tumours or after surgery (adjuvant therapy) to prevent recurrence.',
+        "Chemotherapy uses drugs to destroy or inhibit cancer cells. It can be administered before surgery (neoadjuvant therapy) to shrink tumours or after surgery (adjuvant therapy) to prevent recurrence.",
       aneurysmSymptoms: [
         {
           description:
-            'Systemic Chemotherapy: Drugs travel through the bloodstream to attack cancer cells throughout the body.',
+            "Systemic Chemotherapy: Drugs travel through the bloodstream to attack cancer cells throughout the body.",
         },
         {
           description:
-            'Regional Chemotherapy: Targets cancer cells in specific areas of the body.',
+            "Regional Chemotherapy: Targets cancer cells in specific areas of the body.",
         },
       ],
       footer:
-        'Common chemotherapy agents for digestive cancers include 5-FU (fluorouracil), capecitabine, and gemcitabine. Side effects can include fatigue, nausea, hair loss, and low immunity.',
+        "Common chemotherapy agents for digestive cancers include 5-FU (fluorouracil), capecitabine, and gemcitabine. Side effects can include fatigue, nausea, hair loss, and low immunity.",
     },
     {
-      heading: 'Radiation Therapy:',
+      heading: "Radiation Therapy:",
       description:
-        'Radiation therapy involves using high-energy rays to destroy cancer cells or shrink tumours. It is often used in combination with surgery and chemotherapy.',
+        "Radiation therapy involves using high-energy rays to destroy cancer cells or shrink tumours. It is often used in combination with surgery and chemotherapy.",
       aneurysmSymptoms: [
         {
           description:
-            'External Beam Radiation: A machine directs radiation at the tumour from outside the body.',
+            "External Beam Radiation: A machine directs radiation at the tumour from outside the body.",
         },
         {
           description:
-            'Brachytherapy: Radioactive material is placed inside or near the tumour.',
+            "Brachytherapy: Radioactive material is placed inside or near the tumour.",
         },
       ],
       footer:
-        'Radiation therapy is particularly useful for oesophageal, rectal, and pancreatic cancers to shrink tumours and relieve symptoms.',
+        "Radiation therapy is particularly useful for oesophageal, rectal, and pancreatic cancers to shrink tumours and relieve symptoms.",
     },
     {
-      heading: 'Targeted Therapy:',
+      heading: "Targeted Therapy:",
       description:
-        'Targeted therapy uses drugs or substances that specifically target proteins or genes that promote cancer growth.',
+        "Targeted therapy uses drugs or substances that specifically target proteins or genes that promote cancer growth.",
       aneurysmSymptoms: [
         {
           description:
-            'Monoclonal Antibodies: Target specific proteins on cancer cells, such as HER2 (used in stomach cancer).',
+            "Monoclonal Antibodies: Target specific proteins on cancer cells, such as HER2 (used in stomach cancer).",
         },
         {
           description:
-            'Tyrosine Kinase Inhibitors: Block enzymes responsible for cancer cell growth and spread.',
+            "Tyrosine Kinase Inhibitors: Block enzymes responsible for cancer cell growth and spread.",
         },
       ],
       footer:
-        'Targeted therapy is less likely to affect normal cells, leading to fewer side effects compared to chemotherapy.',
+        "Targeted therapy is less likely to affect normal cells, leading to fewer side effects compared to chemotherapy.",
     },
     {
-      heading: 'Immunotherapy:',
+      heading: "Immunotherapy:",
       description:
         "Immunotherapy enhances the body's natural immune response to fight cancer.",
       aneurysmSymptoms: [
         {
           description:
-            'Checkpoint Inhibitors: Drugs that block proteins used by cancer cells to evade the immune system.',
+            "Checkpoint Inhibitors: Drugs that block proteins used by cancer cells to evade the immune system.",
         },
         {
           description:
-            'Cancer Vaccines: Help the immune system recognize cancer cells.',
+            "Cancer Vaccines: Help the immune system recognize cancer cells.",
         },
       ],
       footer:
-        'This treatment is mainly used in advanced cases where traditional therapies are ineffective.',
+        "This treatment is mainly used in advanced cases where traditional therapies are ineffective.",
     },
     {
-      heading: 'Palliative Care and Supportive Treatment',
+      heading: "Palliative Care and Supportive Treatment",
       description:
-        'For advanced or metastatic cancers, palliative care focuses on relieving symptoms and improving quality of life. This can include:',
+        "For advanced or metastatic cancers, palliative care focuses on relieving symptoms and improving quality of life. This can include:",
       aneurysmSymptoms: [
         {
-          description: 'Pain management through medications or nerve blocks',
+          description: "Pain management through medications or nerve blocks",
         },
         {
           description:
-            'Nutritional support for patients with difficulty eating or swallowing',
+            "Nutritional support for patients with difficulty eating or swallowing",
         },
         {
           description:
-            ' Counselling and emotional support for patients and families',
+            " Counselling and emotional support for patients and families",
         },
         {
           description:
-            'Management of side effects such as fatigue, nausea, or bowel issues',
+            "Management of side effects such as fatigue, nausea, or bowel issues",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   symptoms: [
     {
-      category: '',
-      description: 'Unexplained weight loss',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Unexplained weight loss",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Persistent abdominal pain or discomfort',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Persistent abdominal pain or discomfort",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Difficulty swallowing: (especially with oesophageal cancer)',
-      bgColor: 'bg-hciPrimary text-white',
+        "Difficulty swallowing: (especially with oesophageal cancer)",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Changes in bowel habits: Constipation, diarrhoea, or blood in the stool',
-      bgColor: 'bg-hciPrimary text-white',
+        "Changes in bowel habits: Constipation, diarrhoea, or blood in the stool",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Bloating, nausea, or vomiting',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Bloating, nausea, or vomiting",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Jaundice (common in gallbladder and pancreatic cancers)',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Jaundice (common in gallbladder and pancreatic cancers)",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Loss of appetite and general fatigue',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Loss of appetite and general fatigue",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
-      description: 'Endoscopy/Colonoscopy: Visual examination of the GI tract.',
-      bgColor: 'bg-hciSecondary text-white',
+      category: "",
+      description: "Endoscopy/Colonoscopy: Visual examination of the GI tract.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Biopsy: Tissue samples examined under a microscope.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: ':',
+      category: ":",
       description:
-        'Imaging Tests: CT scans, MRIs, and PET scans to evaluate tumour size and spread.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Imaging Tests: CT scans, MRIs, and PET scans to evaluate tumour size and spread.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Blood Tests: Check for tumour markers (e.g., CEA, CA 19-9).',
-      bgColor: 'bg-hciSecondary text-white',
+        "Blood Tests: Check for tumour markers (e.g., CEA, CA 19-9).",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Barium Studies: X-ray with contrast to detect abnormalities.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Barium Studies: X-ray with contrast to detect abnormalities.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-
-}
+};
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
      Brain tumours and brain cancers are challenging to treat, but advances in neurosurgery, radiation, and targeted therapies provide hope for better outcomes. Early diagnosis and comprehensive care tailored to the tumour type are key to improving quality of life for patients.`,
   },
-]
-
+];
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <p
+          dangerouslySetInnerHTML={{ __html: data.description }}
+          className="text-start font-light"
+        />
 
         <p className="font-light">{data.overview}</p>
         <H2
@@ -367,10 +368,7 @@ function GeneralSurgery() {
         </div>
 
         <div>
-          <H2
-            text="Treatment"
-            className="font-semibold mb-4 text-center"
-          />
+          <H2 text="Treatment" className="font-semibold mb-4 text-center" />
           <p className="font-light">
             Digestive cancers require a customized approach depending on the
             cancer type, stage, and patient&apos;s condition. Treatment may
@@ -389,7 +387,7 @@ function GeneralSurgery() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

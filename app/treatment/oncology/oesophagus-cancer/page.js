@@ -237,10 +237,7 @@ function OesophagusCancer() {
         </div>
       </div>
       <div className="my-3">
-        <Link
-          href={""}
-          className="hover:text-blue-500 text-hciPrimary cursor-pointer"
-        >
+        <Link href={""} className="text-hciPrimary font-semibold underline">
           To Know More About Oesophagus Cancer And Its Treatment, Click Here
         </Link>
       </div>
@@ -264,7 +261,7 @@ function OesophagusCancer() {
       <div className="mt-6 text-start">
         <Link
           href="/treatment/oncology/oesophagus-cancer-causes"
-          className="text-[#0E56A0] font-semibold hover:underline"
+          className="text-[#0E56A0] font-semibold underline"
         >
           To know more about oesophagus cancer and its causes and treatment,
           click here
@@ -290,7 +287,7 @@ function OesophagusCancer() {
       <div className="mt-6 text-start">
         <Link
           href="/treatment/oncology/oesophagus-cancer-causes"
-          className="text-[#0E56A0] font-semibold hover:underline"
+          className="text-[#0E56A0] font-semibold underline"
         >
           To Know More About Oesophagus Cancer And Its Causes And Treatment,
           Click Here
@@ -351,7 +348,7 @@ function OesophagusCancer() {
           <div key={index} className="text-start">
             <Link
               href={link.url}
-              className="text-hciPrimary text-semibold hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               {link.text}
             </Link>

@@ -1,74 +1,74 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Hydrocephalus',
-  bannerImage: '/neuro-sciences/hydrocephalus.png',
+  title: "Hydrocephalus",
+  bannerImage: "/neuro-sciences/hydrocephalus.png",
   description: `Hydrocephalus is a neurological condition characterized by an abnormal accumulation of cerebrospinal fluid (CSF) in the ventricles of the brain. This buildup can lead to increased pressure within the skull, resulting in various symptoms that can affect individuals of all ages. In India, hydrocephalus is a significant health concern, particularly among infants and the elderly, and can arise from congenital conditions, infections, or injuries.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Tumours',
+      title: "Tumours",
       description:
-        'Brain tumours may obstruct the pathways of CSF, causing fluid accumulation.',
+        "Brain tumours may obstruct the pathways of CSF, causing fluid accumulation.",
     },
     {
-      title: 'Normal Pressure Hydrocephalus',
+      title: "Normal Pressure Hydrocephalus",
       description:
-        'This form can occur in older adults and may develop gradually, often mistaken for other conditions like dementia.',
+        "This form can occur in older adults and may develop gradually, often mistaken for other conditions like dementia.",
     },
     {
-      title: 'Trauma',
+      title: "Trauma",
       description:
-        'Head injuries can result in bleeding or scarring that interferes with CSF circulation.',
+        "Head injuries can result in bleeding or scarring that interferes with CSF circulation.",
     },
     {
-      title: 'Infections',
+      title: "Infections",
       description:
-        'Infections such as meningitis can disrupt the normal flow of cerebrospinal fluid, leading to hydrocephalus.',
+        "Infections such as meningitis can disrupt the normal flow of cerebrospinal fluid, leading to hydrocephalus.",
     },
     {
-      title: 'Congenital Conditions',
+      title: "Congenital Conditions",
       description:
-        'Hydrocephalus can be present at birth due to genetic factors or developmental abnormalities in the brain.',
+        "Hydrocephalus can be present at birth due to genetic factors or developmental abnormalities in the brain.",
     },
   ],
 
   complications: [
     {
-      heading: 'Shunt Surgery',
-      description: '',
+      heading: "Shunt Surgery",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'The most common treatment involves surgically placing a shunt system to drain excess CSF from the brain to another part of the body, where it can be absorbed.',
+            "The most common treatment involves surgically placing a shunt system to drain excess CSF from the brain to another part of the body, where it can be absorbed.",
         },
       ],
     },
 
     {
-      heading: 'Endoscopic Third Ventriculostomy (ETV)',
-      description: '',
+      heading: "Endoscopic Third Ventriculostomy (ETV)",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'A minimally invasive procedure that creates a new pathway for CSF flow, often used when shunt placement is not ideal.',
+            "A minimally invasive procedure that creates a new pathway for CSF flow, often used when shunt placement is not ideal.",
         },
       ],
     },
     {
-      heading: 'Vagus Nerve Stimulation (VNS):',
-      description: '',
+      heading: "Vagus Nerve Stimulation (VNS):",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `A device implanted under the skin sends electrical impulses to the vagus nerve, helping reduce seizure frequency in some patients.
@@ -78,8 +78,8 @@ const data = {
       ],
     },
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `While no medications can cure hydrocephalus, diuretics may be prescribed to reduce fluid production in some cases.
@@ -88,8 +88,8 @@ const data = {
       ],
     },
     {
-      heading: 'Monitoring',
-      description: '',
+      heading: "Monitoring",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Regular follow-ups are essential to assess the effectiveness of the treatment and detect any complications.`,
@@ -97,8 +97,8 @@ const data = {
       ],
     },
     {
-      heading: 'Responsive Neurostimulation (RNS)',
-      description: '',
+      heading: "Responsive Neurostimulation (RNS)",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `This treatment involves implanting a device that monitors brain activity and delivers electrical pulses to prevent seizures before they start.`,
@@ -108,15 +108,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       In India, healthcare facilities are increasingly equipped to manage hydrocephalus, offering a range of treatment options tailored to individual needs. Early diagnosis and intervention are crucial for optimising outcomes, helping individuals lead healthier lives and preventing long-term complications associated with the condition.
           `,
@@ -125,51 +125,51 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description: `Increased Head Size: In infants, a rapid increase in head circumference may be noticeable.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Nausea and Vomiting: These symptoms can arise due to increased intracranial pressure.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Headaches: Persistent headaches, particularly in older children and adults, may be a common complaint.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Vision Problems: Blurred or double vision may occur due to pressure on the optic nerve.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Cognitive Impairments: Difficulty in concentrating, memory issues, or behavioural changes can be observed.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description: `Physical Examination: A thorough assessment of symptoms and medical history, including neurological evaluation.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Imaging Studies: MRI and CT scans are critical for visualising the brain's structure and identifying fluid accumulation.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Ultrasound: In infants, cranial ultrasound can be used to detect hydrocephalus and monitor the size of the ventricles.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
 // console.log(data.complications[0].heading)
 
@@ -178,7 +178,7 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <Title title={data.title} className="text-4xl text-pink-500" />
         <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
@@ -284,7 +284,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

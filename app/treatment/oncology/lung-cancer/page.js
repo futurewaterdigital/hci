@@ -312,7 +312,7 @@ function LungCancer() {
         <div className="text-start mb-8">
           <Link
             href="/treatment/oncology/lung-cancer-info"
-            className="text-[#0E56A0] font-semibold hover:underline"
+            className="text-hciPrimary font-semibold underline"
           >
             To Know More About Lung Cancer And Its Treatment, Click Here
           </Link>
@@ -339,7 +339,7 @@ function LungCancer() {
             <div className="text-start mt-4 mb-8">
               <Link
                 href="/treatment/oncology/lung-cancer-causes"
-                className="text-[#0E56A0] font-semibold hover:underline"
+                className="text-[#0E56A0] font-semibold underline"
               >
                 To Know More About Lung Cancer And Its Causes And Treatment,
                 Click Here
@@ -366,7 +366,7 @@ function LungCancer() {
             <div className="text-start mt-4 mb-8">
               <Link
                 href="/treatment/oncology/lung-cancer-diagnosis"
-                className="text-[#0E56A0] font-semibold hover:underline"
+                className="text-[#0E56A0] font-semibold underline"
               >
                 To Get The Best Diagnosis For Lung Cancer And Related Issues,
                 Click Here
@@ -461,7 +461,7 @@ function LungCancer() {
             >
               <Link
                 href={hospital.url}
-                className="text-hciPrimary font-semibold hover:underline"
+                className="text-hciPrimary font-semibold underline"
               >
                 For The Best Hospital For The Treatment Of Lung Cancer In{" "}
                 {hospital.city}, Click Here

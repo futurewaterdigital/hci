@@ -1,51 +1,51 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
 // import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H3 from '@/components/ui/h3'
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H3 from "@/components/ui/h3";
 const data = {
-  title: 'Stroke',
-  bannerImage: '/neuro-sciences/stroke.png',
+  title: "Stroke",
+  bannerImage: "/neuro-sciences/stroke.png",
   description: `A stroke, often referred to as a brain attack, occurs when the blood flow to the brain is interrupted, causing an emergency situation. The brain requires a constant supply of oxygen and nutrients to function properly. Even a brief loss of blood supply can cause brain cells to die, leading to loss of brain function. This can affect your ability to move, speak, think, remember, and perform other vital functions. A stroke can happen to anyone, at any time.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Ischemic Stroke:',
+      title: "Ischemic Stroke:",
       description: `The most common type, caused by a blockage in a brain artery due to a blood clot or plaque buildup.`,
     },
     {
-      title: 'Hemorrhagic Stroke:',
+      title: "Hemorrhagic Stroke:",
       description: `Caused by a ruptured blood vessel in the brain, leading to bleeding in the surrounding tissues.`,
     },
   ],
 
   complications: [
     {
-      heading: 'Ischemic Stroke:',
-      description: '',
+      heading: "Ischemic Stroke:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'TPA (Tissue Plasminogen Activator): A clot-busting drug given within 3-4.5 hours of stroke onset.',
+            "TPA (Tissue Plasminogen Activator): A clot-busting drug given within 3-4.5 hours of stroke onset.",
         },
         {
           description:
-            'Endovascular thrombectomy: A catheter-based procedure to remove clots.',
+            "Endovascular thrombectomy: A catheter-based procedure to remove clots.",
         },
       ],
     },
 
     {
-      heading: 'Hemorrhagic Stroke:',
-      description: '',
+      heading: "Hemorrhagic Stroke:",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Surgical interventions  like aneurysm clipping or craniotomy to stop bleeding and reduce brain pressure.`,
@@ -58,15 +58,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
      Post-stroke rehabilitation involving physical therapy, occupational therapy, and speech therapy is vital for recovery.
           `,
@@ -75,64 +75,64 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description: `Cognitive Impairment: Difficulties with memory, attention, or concentration.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Physical Symptoms: Headaches, dizziness, nausea, and vomiting may occur.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Emotional Changes: Mood swings, anxiety, and depression can be prevalent in individuals with TBI.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Loss of Consciousness: Varying from brief moments to prolonged periods, depending on the severity of the injury.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Balance Issues: Difficulty with coordination and balance can be indicative of brain injury.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Sensitivity to Light and Noise: Increased sensitivity can occur, causing discomfort.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description: `Neurological Examination: An evaluation of cognitive function, coordination, and reflexes to assess the extent of brain injury.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Imaging Studies: CT scans or MRI scans are crucial for visualising brain structures and identifying bleeding, swelling, or other abnormalities.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Glasgow Coma Scale (GCS): This scale assesses a patient's level of consciousness and can help determine the severity of the injury.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <Title title={data.title} className="text-4xl text-pink-500" />
         <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
@@ -182,7 +182,7 @@ function GeneralSurgery() {
         </div>
         <div className="grid grid-cols-2 gap-4 pt-4">
           <div>
-            <H3 title="Symptoms of a Stroke" className="font-semibold mb-4 "/>
+            <H3 title="Symptoms of a Stroke" className="font-semibold mb-4 " />
 
             <p className="font-light h-12">
               Recognizing stroke symptoms early is critical to ensuring prompt
@@ -210,7 +210,7 @@ function GeneralSurgery() {
             </div>
           </div>
           <div>
-            <H3 title="Remember FAST:" className="font-semibold mb-4"/>
+            <H3 title="Remember FAST:" className="font-semibold mb-4" />
 
             <p className="font-light h-12"></p>
             <div className="bg-[#FFE7B6] p-4 rounded-lg min-h-48">
@@ -310,7 +310,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

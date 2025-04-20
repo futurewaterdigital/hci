@@ -375,7 +375,7 @@ function Hematology() {
         <div className="text-start mb-8">
           <Link
             href="/treatment/oncology/head-neck-treatment"
-            className="text-[#0E56A0] underline font-semibold hover:underline"
+            className="text-[#0E56A0] underline font-semibold"
           >
             To Know More About Hematological Disorders And Their Causes And
             Treatment, Click Here
@@ -399,7 +399,7 @@ function Hematology() {
             <div className="mt-4 text-start">
               <Link
                 href="/treatment/hematology/treatment"
-                className="text-hciPrimary underline font-semibold hover:underline"
+                className="text-hciPrimary underline font-semibold"
               >
                 To Know More About Hematological Disorders And Treatment, Click
                 Here
@@ -423,7 +423,7 @@ function Hematology() {
             <div className="mt-4 text-start">
               <Link
                 href="/treatment/hematology/diagnosis"
-                className="text-hciPrimary underline font-semibold hover:underline"
+                className="text-hciPrimary underline font-semibold"
               >
                 To Get The Best Diagnosis For Hematological Disorders And
                 Related Issues, Click Here
@@ -473,7 +473,7 @@ function Hematology() {
             >
               <Link
                 href={hospital.url}
-                className="text-hciPrimary underline font-semibold hover:underline"
+                className="text-hciPrimary underline font-semibold"
               >
                 For The Best Hospital For The Treatment Of Hematological
                 Disorders In {hospital.city}, Click Here
