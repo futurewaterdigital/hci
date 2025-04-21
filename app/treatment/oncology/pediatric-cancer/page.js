@@ -238,53 +238,7 @@ function PediatricCancer() {
           />
         </div>
 
-        <div className="bg-gray-50 p-4 rounded-lg mb-8">
-          <p className="font-light">{data.side_effects.description}</p>
-        </div>
-
-        <div className="text-center mb-8">
-          <Link
-            href="/treatment/oncology/pediatric-cancer-causes"
-            className="inline-block px-6 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors"
-          >
-            To Know More About Pediatric Cancer And Its Causes And Treatment,
-            Click Here
-          </Link>
-        </div>
-
         <Conclusion data={data.conclusion} />
-
-        <H2
-          title="To Consult The Best Doctor For The Treatment Of Pediatric Cancer, Click Here"
-          className="text-xl font-semibold mb-4 text-center text-pink-600"
-        />
-
-        <div className="space-y-2 mb-8">
-          {data.best_hospitals.map((hospital, index) => (
-            <div
-              key={index}
-              className="text-center py-2 border-b border-pink-100 last:border-0"
-            >
-              <Link
-                href={hospital.url}
-                className="text-pink-500 hover:text-pink-700"
-              >
-                For The Best Hospital For The Treatment Of Pediatric Cancer In{" "}
-                {hospital.city}, Click Here
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mb-8">
-          <Link
-            href="/book-appointment"
-            className="inline-block px-8 py-3 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors font-semibold"
-          >
-            BOOK AN APPOINTMENT
-          </Link>
-        </div>
-
         <FooterLinks head={data.title} />
         <BookButton />
       </div>
