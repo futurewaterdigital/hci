@@ -441,7 +441,10 @@ function AdvancedRecurrentCancers() {
         </div>
 
         <div className="text-start mb-8">
-          <Link href="" className="text-hciPrimary font-semibold underline">
+          <Link
+            href=""
+            className="text-hciPrimary text-lg font-semibold underline"
+          >
             To Know More About Lung Cancer And Its Treatment, Click Here
           </Link>
         </div>
@@ -515,115 +518,6 @@ function AdvancedRecurrentCancers() {
             </>
           ))}
         </div>
-
-        {/* <H2
-          title="Factors Contributing to Advanced Cancer"
-          className="font-semibold mb-4 text-center"
-        />
-        <DataLists
-          divClass="grid grid-cols-1 md:grid-cols-2 gap-6"
-          data={data.symptoms_factors}
-          ulClass="list-disc pl-5 space-y-1"
-        />
-
-        <H2
-          title="Treatment Approaches"
-          className="font-semibold mb-4 text-center"
-        />
-        <DataLists
-          divClass="grid grid-cols-1 md:grid-cols-3 gap-6"
-          data={data.treatment_options}
-          ulClass="list-disc pl-5 space-y-1"
-        />
-
-        <H2
-          title="Surgical Options"
-          className="font-semibold mb-4 text-center"
-        />
-        <DataLists
-          divClass="grid grid-cols-1 md:grid-cols-3 gap-6"
-          data={data.surgical_approaches}
-          ulClass="list-disc pl-5 space-y-1"
-        />
-
-        <H2
-          title="Treatment Barriers"
-          className="font-semibold mb-4 text-center"
-        />
-        <DataLists
-          divClass="grid grid-cols-1 md:grid-cols-2 gap-6"
-          data={data.barriers}
-          ulClass="list-disc pl-5 space-y-1"
-        />
-
-        <H2
-          title="Best Diagnostics for Advanced and Recurrent Cancer And Related Issues, Click Here"
-          className="font-semibold mb-4 text-center"
-        />
-        <div className="mb-8">
-          <DataLists
-            divClass="grid grid-cols-1 gap-4"
-            data={data.diagnostics}
-            ulClass="list-none"
-          />
-        </div> */}
-
-        {/* <H2
-          title="Recurrent Cancers in India"
-          className="font-semibold mb-4 text-center"
-        />
-        <p className="font-light mb-6">
-          A recurrent cancer occurs when cancer returns after a period of
-          treatment and remission. This is often more challenging to treat and
-          may require different approaches than the initial treatment.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {data.india_cancer_stats.map((stat, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 rounded-lg p-4 shadow-sm"
-            >
-              <H3
-                title={stat.title}
-                className="text-lg font-semibold text-hciPrimary mb-2"
-              />
-              <p className="text-gray-700">{stat.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <H2
-          title="Common Risk Factors for Recurrence"
-          className="font-semibold mb-4 text-center"
-        />
-        <div className="mb-8">
-          <DataBoxes
-            title=""
-            header=""
-            data={data.risk_factors}
-            myclass="grid grid-cols-1"
-          />
-        </div>
-
-        <H2
-          title="Treatment of Recurrent Cancers in India includes all the modalities of the Treatment such as:"
-          className="font-semibold mb-4 text-start"
-        />
-
-        <div className="space-y-4 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {data.symptoms_factors.map((item, index) => (
-              <TextComponent
-                key={index}
-                title={item.title}
-                description={item.description}
-                boxCss="w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center min-h-[120px]"
-              />
-            ))}
-          </div>
-        </div> */}
-
         <Conclusion data={data.conclusion} />
         <FooterLinks head={data.title} />
         <BookButton />
