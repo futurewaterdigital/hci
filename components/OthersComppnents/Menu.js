@@ -43,10 +43,10 @@ function Menu() {
           </Link>
         ))}
       </div>
-      {/* <div>
-        <h2 className="font-semibold text-2xl">Other Cardiac Conditions</h2>
-      </div> */}
-      <div className="grid grid-cols-3 gap-2 items-center justify-center uppercase font-semibold w-5/12 mx-auto">
+      <div>
+        <h2 className="font-semibold text-2xl">Other Conditions</h2>
+      </div>
+      <div className="flex flex-wrap gap-6 items-center justify-center uppercase font-semibold w-5/12 mx-auto">
         {othersCardio.map((item, index) => (
           <Link
             key={index}

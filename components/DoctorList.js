@@ -22,10 +22,16 @@ export default function DoctorList({ doctors, onDelete }) {
                 Name
               </th>
               <th scope="col" className="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Experience
+                Specialization
               </th>
               <th scope="col" className="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Rating
+                Verified
+              </th>
+              <th scope="col" className="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Featured
+              </th>
+              <th scope="col" className="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Reviews
               </th>
               <th scope="col" className="w-1/6 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Status
@@ -56,7 +62,16 @@ export default function DoctorList({ doctors, onDelete }) {
                   </div>
                 </td>
                 <td className="px-4 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-900">{doctor.experience} years</div>
+                  <div className="text-sm text-gray-900 capitalize">{doctor.category}</div>
+                </td>
+                <td className="px-4 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900 capitalize">{doctor.isVerified ? 'Yes' : 'No'}</div>
+                </td>
+                <td className="px-4 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900 capitalize">{doctor.isFeatured ? 'Yes' : 'No'}</div>
+                </td>
+                <td className="px-4 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-900 capitalize">{doctor.reviewEnabled ? 'Yes' : 'No'}</div>
                 </td>
                 <td className="px-4 py-4 whitespace-nowrap">
                   <div className="text-sm text-gray-900">{doctor.rating}</div>

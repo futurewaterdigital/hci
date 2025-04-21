@@ -14,7 +14,7 @@ import NeuroMenu from '../../../components/NeuroMenu/page'
 import GastroenterologyMenu from '../../../components/GastroenterologyMenu/page'
 import OncologyMenu from '../../../components/OncologyMenu/page'
 import H1 from '@/components/ui/h1'
-
+import TreatmentDoctors from '@/components/TreatmentDoctors'
 // Dynamically import Footer to lazy-load
 const Footer = dynamic(() => import('../../../components/Footer/page'), {
   loading: () => <div className="bg-gray-300 h-24 w-full"></div>, // Placeholder while Footer is loading
@@ -123,7 +123,8 @@ export default function City({ params }) {
             {pathname === '/treatment/gastroenterology' && (
               <GastroenterologyMenu />
             )}
-          </div>
+            </div>
+            <TreatmentDoctors pathname={pathname} paramSlug={params.slug} />
           <OurNetwork />
           <Testimonials />
           <BookNow />

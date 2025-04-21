@@ -63,10 +63,10 @@ function Menu() {
       </div>
       <div>
         <h2 className="font-semibold text-2xl">
-          Other Gastroenterological Conditions
+          Other Gastro Conditions
         </h2>
       </div>
-      <div className="grid grid-cols-4 gap-2 items-center justify-center uppercase font-semibold ">
+      <div className="flex flex-wrap gap-6 items-center justify-center uppercase font-semibold ">
         {otherGastro.map((item, index) => (
           <Link
             key={index}

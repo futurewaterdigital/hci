@@ -43,6 +43,9 @@ export default function EditDoctorPage({ params }) {
   };
 
   const handleSubmit = async (formData) => {
+    console.log('formData',formData);
+    
+
     try {
       const token = localStorage.getItem('adminToken');
       const response = await fetch(`/api/admin/doctors/${params.id}`, {

@@ -51,7 +51,7 @@ export default function DoctorsPage() {
   const handleDeleteConfirm = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`/api/doctors/${deleteModal.doctorId}`, {
+      const response = await fetch(`/api/admin/doctors/${deleteModal.doctorId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
