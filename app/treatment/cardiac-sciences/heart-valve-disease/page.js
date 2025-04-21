@@ -8,7 +8,11 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 import KnowMore from '@/components/ui/KnowMore'
 import H2 from '@/components/ui/h2'
 import H1 from '@/components/ui/h1'
+import H3 from '@/components/ui/h3'
 const title = 'Heart Valve Disease'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import IssuesLinks from '@/components/ui/IssuesLinks'
+
 const valveMalfunction = [
   {
     category: 'Stenosis',
@@ -39,27 +43,27 @@ const commonCauses = [
   {
     category: 'Congenital defects',
     description: 'Present at birth',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciPrimary text-white',
   },
   {
     category: 'Infections',
     description: 'Rheumatic fever, infective endocarditis',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciPrimary text-white',
   },
   {
     category: 'Age-related degeneration',
     description: 'Calcification or stiffening of valves',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciPrimary text-white',
   },
   {
     category: 'Heart conditions',
     description: 'Heart attack, coronary artery disease',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciPrimary text-white',
   },
   {
     category: 'Chronic diseases',
     description: 'Hypertension, diabetes, or high cholesterol',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciPrimary text-white',
   },
 ]
 const valveConditionsData = [
@@ -102,7 +106,7 @@ const adviceData = [
 ]
 const medicationsData = [
   {
-    heading: `Treatment Options`,
+    heading: `Medications`,
     aneurysmSymptoms: [
       {
         title: '',
@@ -167,28 +171,28 @@ const cardiacTests = [
   {
     category: 'Echocardiogram',
     description: 'An ultrasound of the heart to assess valve function',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciYellow text-black',
   },
   {
     category: 'Electrocardiogram (ECG)',
     description: 'Detects irregular heart rhythms',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciYellow text-black',
   },
   {
     category: 'Chest X-ray',
     description: "Shows the heart's size and condition of the lungs",
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciYellow text-black',
   },
   {
     category: 'Cardiac MRI or CT scan',
     description: 'Provides detailed images of the heart',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciYellow text-black',
   },
   {
     category: 'Cardiac catheterization',
     description:
       'Measures pressures within the heart chambers and evaluates blood flow',
-    bgColor: 'bg-hciSecondary text-white',
+    bgColor: 'bg-hciYellow text-black',
   },
 ]
 const heartConditions = [
@@ -218,6 +222,16 @@ const heartConditions = [
     bgColor: 'bg-hciLightBlue ',
   },
 ]
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+     Heart valve disease is a serious condition, but with early detection and appropriate treatment, many individuals can manage symptoms effectively and improve their quality of life. Regular check-ups and following the treatment plan are essential for preventing complications. If you experience symptoms such as breathlessness, chest pain, or irregular heartbeat, consult a cardiologist promptly. Early intervention can help prevent the disease from progressing and improve long-term outcomes.
+      `,
+  },
+]
+
+
 
 export default function page() {
   return (
@@ -240,9 +254,10 @@ export default function page() {
           </p>
         </div>
         <div className="space-y-4 mt-8">
-          <h2 className="text-2xl font-bold text-center text-hciSecondary">
+          {/* <h2 className="text-2xl font-medium text-center text-hciSecondary">
             Causes
-          </h2>
+          </h2> */}
+          <H3 title="Causes" className="text-2xl font-regular font-roboto text-center font-medium"/>
           <p className="text-start font-light">
             Heart valve disease can occur due to congenital defects, infections,
             or age-related changes. Understanding the anatomy and function of
@@ -250,22 +265,25 @@ export default function page() {
             Each valve has leaflets (or cusps) that open and close with every
             heartbeat to maintain proper blood flow.
           </p>
-          <div className="grid lg:grid-cols-2 lg:gap-4">
+          <div className="grid lg:grid-cols-1 lg:gap-4">
             <DataBoxes
               title=""
               text=""
               header="Key types and causes of valve malfunction include:"
+              headerCss="font-medium text-xl"
               data={valveMalfunction}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
             <DataBoxes
               title=""
               text=""
               header="Common causes:"
+              headerCss="font-medium text-xl"
               data={commonCauses}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
           </div>
+          <KnowMore title={title} />
         </div>
         <div className="space-y-4">
           <div className="grid grid-cols-1 gap-4">
@@ -280,74 +298,69 @@ export default function page() {
                 className="border border-[#D84498] rounded-lg shadow-lg flex flex-col p-4"
                 key={index}
               >
-                <h2 className="font-semibold">{items.title}</h2>
+                <h2 className="font-medium text-lg pb-2">{items.title}</h2>
                 <p className="font-light">{items.paragraph}</p>
               </div>
             ))}
           </div>
           <KnowMore title={title} />
         </div>
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div className="py-12 space-y-4">
+        <div className="grid lg:grid-cols-1 gap-4">
+          <div className="pt-12 space-y-4">
             <DataBoxes
               title="Diagnosis"
-              titleCss="font-semibold text-xl"
+              titleCss="font-medium text-xl"
               text="The diagnostic process involves a combination of physical examinations, imaging, and other tests to determine the extent and nature of the valve disease. Common diagnostic tools include:"
               header=""
               textCss="font-light py-4"
               data={cardiacTests}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
 
-            <KnowMore title={title} />
-            <DataBoxes
-              title="Complications"
-              titleCss="font-semibold text-xl"
-              text="If untreated, heart valve disease may lead to severe complications, such as:"
-              header=""
-              textCss="font-light py-4"
-              data={heartConditions}
-              myclass="grid grid-cols-1"
-            />
+  <IssuesLinks head={title} />
+            
           </div>
 
           <div className="py-2">
-            <H2 title="Treatment" className={`font-semibold text-xl pb-[22px]`}/>
+            <H2 title="Treatment Options" className={`font-medium text-xl pb-[22px]`}/>
             <p className='font-light'>
               Treatment depends on the severity, the affected valve, and the
               patient’s overall health. Options include:
             </p>
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <DataLists
-                desc="Heart valve disease may remain asymptomatic for many years, but as the condition progresses, symptoms can emerge, including:"
+                boxClass="h-[250px]"
                 data={medicationsData}
               />
               <DataLists
-                desc="Heart valve disease may remain asymptomatic for many years, but as the condition progresses, symptoms can emerge, including:"
+                boxClass="h-[250px]"
                 data={lifestyleChangesData}
               />
+</div>
+<div className="grid grid-cols-1">
+
               <DataLists
-                desc="Heart valve disease may remain asymptomatic for many years, but as the condition progresses, symptoms can emerge, including:"
+                
                 data={surgicalProceduresData}
               />
             </div>
           </div>
+          <div>
+          <DataBoxes
+              title="Complications"
+              titleCss="font-medium text-xl"
+              text="If untreated, heart valve disease may lead to severe complications, such as:"
+              header=""
+              textCss="font-light py-4"
+              data={heartConditions}
+              myclass="grid grid-cols-2"
+            />
+          </div>
         </div>
 
-        <div className="py-0">
-          <H2 title="Conclusion" className="text-center text-hciSecondary mt-8"/>
-          <p className="mt-4 text-start font-light">
-            Aortic aneurysms are serious conditions that may develop silently
-            but pose life-threatening risks if they rupture. Early detection
-            through regular screening and monitoring is essential for
-            individuals with risk factors. With medical management, lifestyle
-            changes, and timely surgical interventions, patients can effectively
-            manage an aneurysm and reduce the risk of complications. Seeking
-            immediate care for any signs of rupture is critical for survival and
-            improved outcomes.
-          </p>
-        </div>
+      
         <div className="space-y-4 mt-4">
+          <Conclusion data={footerData} />
           <FooterLinks head="Heart Valve Disease" />
           <BookButton />
         </div>

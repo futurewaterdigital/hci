@@ -1,16 +1,16 @@
 // jointReplacementSurgery.js
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
-
+import H1 from '@/components/ui/h1'
 import ListBox from '@/components/cardiacComponents/ListBox'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import KnowMore from '@/components/ui/KnowMore'
+import IssuesLink from '@/components/ui/IssuesLinks'
 
 const title = 'Joint Replacement Surgery'
 
@@ -162,23 +162,23 @@ function JointReplacementSurgery() {
     //     <p className="font-light">{data.description}</p>
     //     <H2
     //       text="Causes Leading to Joint Replacement Surgery"
-    //       textClass="text-2xl font-semibold mb-4 text-center"
+    //       textClass="text-2xl font-medium mb-4 text-center"
     //     />
     //     <ListBox data={data} />
     //     <KnowMore title={title} />
     //     <H2
     //       text="Symptoms"
-    //       textClass="text-2xl font-semibold mb-4 text-center"
+    //       textClass="text-2xl font-medium mb-4 text-center"
     //     />
     //     <DataBoxes data={data.symptoms} />
     //     <H2
     //       text="Diagnosis"
-    //       textClass="text-2xl font-semibold mb-4 text-center"
+    //       textClass="text-2xl font-medium mb-4 text-center"
     //     />
     //     <DataBoxes data={data.diagnosis} />
     //     <H2
     //       text="Treatment"
-    //       textClass="text-2xl font-semibold mb-4 text-center"
+    //       textClass="text-2xl font-medium mb-4 text-center"
     //     />
     //     {/* <DataLists data={data.treatment} /> */}
     //     <Conclusion data={data.footerData} />
@@ -189,10 +189,10 @@ function JointReplacementSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={title} />
+        <H1 title={title}/>
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="text-2xl font-medium mb-4 text-center" />
         <p className="font-light">
           Injuries to the ACL, PCL, or MCL are often caused by:
         </p>
@@ -209,31 +209,31 @@ function JointReplacementSurgery() {
                 title="Symptoms"
                 text="The symptoms of ACL, PCL, or MCL injuries can include:"
                 textCss="font-light py-4"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
               />
               <KnowMore title={title} />
             </div>
-            <div>
+            <div className='space-y-4'>
               <DataBoxes
                 title="Diagnosis"
                 text="Accurate diagnosis is essential to determine the extent of ligament damage and the appropriate treatment approach. Common diagnostic methods include:"
                 textCss="font-light py-4"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLink title={title} />
             </div>
           </div>
         </div>
         <div>
           <H2
             title="Treatment"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
           <p className="font-light">
             Joint replacement surgery involves several steps, depending on the

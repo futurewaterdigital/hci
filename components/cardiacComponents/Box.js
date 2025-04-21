@@ -30,13 +30,14 @@ function Box({
       )}
 
       {header && (
-        <h3 className={`font-semibold py-4 ${headerCss}`}>{header}</h3>
+        <h3 className={`font-medium py-4 ${headerCss}`}>{header}</h3>
       )}
 
       <div className={`gap-4 ${myclass}`}>
         {data.map((items, index) => (
           <div className={`${items.bgColor} p-4 rounded`} key={index}>
-            <h3 className="font-bold">{items.category}</h3>
+            
+            <h3 className="font-medium">{items.category}</h3>
 
             <div
               className="font-light"

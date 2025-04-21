@@ -8,6 +8,7 @@ import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import H3 from '@/components/ui/h3'
 import H1 from '@/components/ui/h1'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
 
 const title = 'Heart and Lung Transplants'
 const surgeryData = [
@@ -48,7 +49,7 @@ const heartTransplantData = [
   },
   {
     category: '',
-    description: 'Congenital heart defects unresponsive to other surgeries.',
+    description: 'Congenital defects unresponsive to other surgeries.',
     bgColor: 'bg-hciLightBlue',
   },
   {
@@ -203,7 +204,7 @@ const risksComplications = [
 ]
 const recoveryOutlook = [
   {
-    heading: '',
+    heading: 'Recovery and Long-Term Outlook',
     aneurysmSymptoms: [
       {
         title: 'Hospital stay',
@@ -230,7 +231,7 @@ const recoveryOutlook = [
 ]
 const longTermOutlooks = [
   {
-    heading: '',
+    heading: 'Benefits of Heart and Lung Transplants',
     aneurysmSymptoms: [
       {
         title: '',
@@ -253,6 +254,16 @@ const longTermOutlooks = [
     ],
   },
 ]
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+      Heart and lung transplants offer a second chance at life for  
+      patients with critical heart or lung diseases, making them among
+      the most remarkable advancements in modern medicine.`,
+  },
+]
+
 
 function page() {
   return (
@@ -274,12 +285,12 @@ function page() {
       </div>
 
       <div className="container mx-auto">
-        <H3 title="What are Heart and Lung Transplants?" className="font-regular font-roboto text-center "/>
+        <H3 title="What are Heart and Lung Transplants?" className="font-regular font-roboto text-center font-medium"/>
         
         <DataSurgery data={surgeryData} />
       </div>
       <div className="space-y-4 container mx-auto py-8">
-        <H3 title="When are these Procedures Needed?" className="font-regular font-roboto text-center "/>
+        <H3 title="When are these Procedures Needed?" className="font-regular font-roboto text-center font-medium"/>
         <p className="font-light">
           Transplants are considered for patients whose conditions cannot be
           managed with medications or other interventions. Common reasons
@@ -310,12 +321,12 @@ function page() {
         </div>
       </div>
       <div className="container mx-auto">
-        <H3 title="Symptoms Indicating the Need for a Transplant" className="font-regular font-roboto text-center text-black"/>
+        <H3 title="Symptoms Indicating the Need for a Transplant" className="font-regular font-roboto text-center text-black font-medium"/>
         <div className="mt-2">
           <div className="mt-2">
           <DataBoxes
             title=""
-            text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
+            // text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
             textCss="font-light py-4"
             data={transplantSymptoms}
             myclass="grid lg:grid-cols-2"
@@ -323,17 +334,17 @@ function page() {
         </div>
       </div>
       <div className="container mx-auto py-8">
-          <H3 title="The Transplant Process" className="text-3xl font-regular font-roboto text-center 
-        "/>
+          <H3 title="The Transplant Process" className="text-3xl font-regular font-roboto text-center font-medium"/>
+        
           
         <div className="grid lg:grid-cols-2 gap-4">
-          <DataLists data={transplantEvaluation} boxClass="h-[300px]" />
-          <DataLists data={SurgeryEvaluation} boxClass="h-[300px] " />
+          <DataLists data={transplantEvaluation} boxClass="h-[300px] font-medium" />
+          <DataLists data={SurgeryEvaluation} boxClass="h-[300px] font-medium" />
         </div>
       </div>
 
       <div className="py-2 container mx-auto">
-        <H3 title="Risks and Complications" className="font-regular font-roboto text-center "/>
+        <H3 title="Risks and Complications" className="font-regular font-roboto text-center font-medium"/>
         <div>
           <DataBoxes
             title=""
@@ -345,24 +356,24 @@ function page() {
         </div>
       </div>
 
-      <div className="container mx-auto">
-        <H3 title="Recovery and Long-Term Outlook" className="font-regular font-roboto text-center "/>
+      <div className="container mx-auto mt-4">
+        {/* <H3 title="Recovery and Long-Term Outlook" className="font-regular font-roboto text-center font-medium"/> */}
         <div className="grid lg:grid-cols-2 gap-4">
-          <DataLists data={recoveryOutlook} boxClass="h-[300px]" />
+            <DataLists
+              
+              data={recoveryOutlook} boxClass="h-[340px]" />
           <div className="space-y-1">
-            <DataLists data={longTermOutlooks} boxClass="h-[300px]" />
-            <p className="font-light">
-              Heart and lung transplants offer a second chance at life for
-              patients with critical heart or lung diseases, making them among
-              the most remarkable advancements in modern medicine.
-            </p>
+            <DataLists data={longTermOutlooks} boxClass="h-[340px]" />
+           
           </div>
         </div>
       </div>
-      <div className="container mx-auto space-y-6">
+        <div className="container mx-auto space-y-6 mt-6">
+        <Conclusion data={footerData} />
         <FooterLinks head={title} />
         <BookButton />
       </div>
+   
       </div>
     </>
   )

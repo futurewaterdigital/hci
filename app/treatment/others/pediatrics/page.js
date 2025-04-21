@@ -1,7 +1,7 @@
 // generalSurgery.js
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
+import H1 from '@/components/ui/h1'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -16,10 +16,10 @@ const data = {
   bannerImage: '/others/pediatrics_banner.png',
   title: 'Pediatrics',
   description: ``,
-  overview: ` <p class="text-lg text-center mb-6 font-light">
+  overview: ` <p class="text-lg mb-6 font-light">
      At HCI, our pediatrics department is dedicated to providing compassionate, comprehensive healthcare for children from infancy through adolescence. We offer a wide range of services, from routine check-ups and vaccinations to the diagnosis and treatment of more complex pediatric conditions. Our team of experienced pediatricians, specialists, and nursing staff are committed to ensuring that every child receives personalized, expert care in a safe and nurturing environment.
     </p>
-    <p class="text-lg text-center mb-6">
+    <p class="text-lg mb-6">
      We understand that children's healthcare requires a unique approach that is sensitive to their physical, emotional, and developmental needs. Whether managing chronic conditions, addressing acute illnesses, or supporting child development, we strive to create positive healthcare experiences for both the child and their family.
     </p>`,
   sections: [
@@ -140,20 +140,22 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
         <H2
           title={data.description}
-          className="text-start font-semibold text-xl"
+          className="text-start font-medium text-2xl"
         />
+        
         <div
           dangerouslySetInnerHTML={{ __html: data.overview }}
-          className="font-light "
+          className="font-light text-start"
         />
         <div>
           <DataLists data={data.complications} />
         </div>
 
-        <p className="font-light">
+        <p className="font-light text-start">
           Our goal is to promote the overall well-being of children, ensuring
           they grow into healthy adults with the best possible start in life.
         </p>

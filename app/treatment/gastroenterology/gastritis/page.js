@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,6 +8,8 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: 'Gastritis',
@@ -240,12 +241,12 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
-          text="Types of Gastric Ulcers"
-          className="font-semibold mb-4 text-center"
+          title="Types of Gastric Ulcers"
+          className="font-medium mb-4 text-center text-2xl"
         />
         <div className="mb-8">
           <DataLists
@@ -257,60 +258,8 @@ function GeneralSurgery() {
             // boxClass="grid grid-cols-2"
           />
         </div>
-        {/* <div className="grid lg:grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Oesophageal Cancer (Ca Oesophagus)
-              </span>
-              <br />
-              Affects the oesophagus, the tube connecting the throat to the
-              stomach
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Stomach Cancer (Ca Stomach)
-              </span>
-              <br />
-              Also known as gastric cancer, originating from the stomach lining.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Colon Cancer (Ca Colon)
-              </span>
-              <br />
-              Develops in the colon, the initial part of the large intestine.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Rectal Cancer (Ca Rectum)
-              </span>
-              <br />
-              Forms in the rectum, the lower part of the large intestine before
-              the anus.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Gallbladder Cancer (Ca Gallbladder)
-              </span>
-              <br />
-              Begins in the gallbladder, a small organ beneath the liver that
-              stores bile.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Pancreatic Cancer (Ca Pancreas)
-              </span>
-              <br />
-              Originates in the pancreas, an organ involved in digestion and
-              hormone production.
-            </p>
-          </div>
-          <div>
-            <img src="/gastroenterology/digestive-system.png" alt="" />
-          </div>
-        </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center text-xl" />
+       
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl pt-12" />
         {/* <p className="font-light">
           While the exact cause of gallstones isn’t fully understood, several
           factors may increase the risk:
@@ -325,13 +274,14 @@ function GeneralSurgery() {
             />
           ))}
         </div>
+        <IssuesLinks head={data.title} />
 
         <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div className="space-y-4">
             <DataBoxes
               title="Symptoms"
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl py-4"
+              titleCss="text-black font-medium text-center text-2xl py-4"
               header=""
             
               data={data.symptoms}
@@ -345,19 +295,20 @@ function GeneralSurgery() {
               text="Diagnosing gastritis typically involves a combination of methods to determine the cause and extent of inflammation:"
               header=""
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl"
+              titleCss="text-black font-medium text-center text-2xl"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
           </div>
+          <IssuesLinks head={data.title} />
         </div>
 
         <div>
           <H2
-            text="Treatment"
-            className="font-semibold mb-4 text-center"
+            title="Treatment"
+            className="font-medium mb-4 text-center text-2xl"
           />
-          <p className="font-light">
+          <p className="font-light pb-4">
             The treatment approach for gastritis depends on the underlying cause
             and severity of symptoms
           </p>

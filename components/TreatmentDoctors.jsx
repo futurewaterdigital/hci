@@ -20,7 +20,7 @@ const Partners = ({ pathname, paramSlug }) => {
   } else if (paramSlug === 'orthopedics') {
     setTitle('Our Orthopedic Surgeons');
   } else if (paramSlug === 'neuro-sciences') {
-    setTitle('Our Neurologists');
+    setTitle('Our Neurosurgeons');
   } else if (paramSlug === 'others') {
     setTitle('Other Specialists');
   } else if (paramSlug === 'oncology') {

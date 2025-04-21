@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,6 +8,8 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from "@/components/ui/IssuesLinks"
 
 const data = {
   title: 'Hand and Upper Limb Surgery',
@@ -242,10 +243,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="text-2xl font-medium mb-4 text-center" />
         <p className="font-light">
           Several conditions and injuries may require hand and upper limb
           surgery. These include:
@@ -288,7 +289,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms that may indicate a need for hand or upper limb surgery include:"
-                titleCss="text-black font-semibold text-center text-xl"
+                titleCss="text-black font-medium text-center text-xl"
                 textCss="font-light py-4"
                 header=""
                 data={data.symptoms}
@@ -301,19 +302,19 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="The diagnosis of hand and upper limb conditions involves a thorough evaluation, including:"
                 header=""
-                titleCss="text-black font-semibold text-center text-xl"
+                titleCss="text-black font-medium text-center text-xl"
                 textCss="font-light py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
           <H2
             title="Treatment"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
 
           <p className="font-light">
@@ -327,7 +328,7 @@ function GeneralSurgery() {
           />
         </div>
         <div className="space-y-4">
-          <H2 title="Recovery and Rehabilitation" className="text-center"/>
+          <H2 title="Recovery and Rehabilitation" className="text-2xl font-medium mb-4 text-center"/>
           <p className="font-light text-center">
             Post-surgery recovery focuses on restoring function, strength, and
             mobility. Key aspects include:

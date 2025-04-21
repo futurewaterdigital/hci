@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
+import H1 from '@/components/ui/h1'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,7 +9,7 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
-
+import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: 'Trigeminal Neuralgia',
   bannerImage: '/neuro-sciences/trigeminal-neuralgia.png',
@@ -98,7 +98,7 @@ const data = {
     {
       header: 'Conclusion',
       paragraph: `
-     In India, access to advanced diagnostic tools and a variety of treatment options has improved the management of trigeminal neuralgia. Early intervention and a personalized treatment approach are vital for alleviating pain and enhancing the quality of life for those affected by this challenging condition.
+     Access to advanced diagnostic tools and a wide range of treatment options has greatly improved the management of trigeminal neuralgia. Early intervention and a personalized treatment approach are essential for relieving pain and improving the quality of life for those affected by this challenging condition.
           `,
     },
   ],
@@ -152,13 +152,13 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <H1 title={data.title} />
         <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
-        <p className="font-light" text="">
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
+        {/* <p className="font-light" text="">
           The primary causes of TBIs can be diverse and include:
-        </p>
+        </p> */}
         {/* <H2 text="Types" textClass="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">
           Peripheral nerve tumours can grow within the nerves (intra-neural
@@ -172,7 +172,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
@@ -182,7 +182,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
@@ -198,7 +198,7 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 // text="Symptoms of TBI can vary widely depending on the severity of the injury and can manifest immediately or may develop over time. Common symptoms include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
@@ -210,7 +210,7 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 // text="Diagnosing TBI typically involves a comprehensive assessment that includes:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2 "
               />
@@ -219,12 +219,12 @@ function GeneralSurgery() {
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
-          <p className="font-light">
+          {/* <p className="font-light">
             The treatment of TBI depends on the severity and specific symptoms
             presented, encompassing a range of approaches:
-          </p>
+          </p> */}
           <DataLists
             desc={data.complications[0].description}
             data={data.complications}

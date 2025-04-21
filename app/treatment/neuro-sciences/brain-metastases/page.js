@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
+import H1 from '@/components/ui/h1'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,6 +9,7 @@ import KnowMore from '@/components/ui/KnowMore'
 // import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: 'Brain Metastases',
@@ -212,27 +213,29 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
+        <h2 className='text-center text-2xl font-medium'>Overview</h2>
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
           title="Symptoms"
-          className="font-semibold mb-4 text-center"
+          className="font-medium mb-4 text-center text-2xl"
         />
         <p className="font-light" text="">
           The signs and symptoms of brain metastases are largely dependent on
           the location, size, and growth rate of the tumours. Common symptoms
           include:
         </p>
-        <ul className="list-disc list-inside">
-          <li>Persistent headaches, often accompanied by nausea or vomiting</li>
-          <li>Cognitive changes, such as memory issues or confusion</li>
-          <li>Seizures</li>
-          <li>Weakness or numbness on one side of the body</li>
+        <ul className="list-disc list-inside space-y-2 text-hciSecondary text-lg">
+          <li><span className=" text-black font-medium">Persistent headaches, often accompanied by nausea or vomiting</span></li>
+          <li><span className=" text-black font-medium">Cognitive changes, such as memory issues or confusion</span></li>
+          <li><span className=" text-black font-medium">Seizures</span></li>
+          <li><span className=" text-black font-medium">Weakness or numbness on one side of the body</span></li>
         </ul>
         <H2
           title="When to Seek Medical Attention"
-          className="font-semibold mb-4 text-center"
+          className="font-medium mb-4 text-center text-2xl"
         />
         <p className="font-light" text="">
           If you experience persistent symptoms that concern you, it&apos;s
@@ -241,7 +244,7 @@ function GeneralSurgery() {
           with diagnosis and treatment.
         </p>
         <KnowMore title={data.title} />
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           Brain metastases occurs when cancer cells detach from their original
           site and spread through the bloodstream or lymphatic system to the
@@ -253,29 +256,30 @@ function GeneralSurgery() {
         <KnowMore title={data.title} />
         <H2
           title="Risk Factors"
-          className="font-semibold mb-4 text-center"
+          className="font-medium mb-4 text-center text-2xl"
         />
         <p className="font-light" text="">
           Any form of cancer has the potential to metastasise to the brain, but
           the following cancers are more likely to cause brain metastases:
         </p>
-        <ul className="list-disc list-inside ml-2 text-hciSecondary">
-          <li><span className=" text-black">Lung cancer</span></li>
-          <li><span className=" text-black">Kidney cancer</span></li>
-          <li><span className=" text-black">Melanoma</span></li>
-          <li><span className=" text-black">Breast cancer</span></li>
-          <li><span className=" text-black">Colon cancer</span></li>
+        <ul className="list-disc list-inside ml-2 text-hciSecondary text-lg space-y-2" >
+          <li><span className=" text-black font-medium">Lung cancer</span></li>
+          <li><span className=" text-black font-medium">Kidney cancer</span></li>
+          <li><span className=" text-black font-medium">Melanoma</span></li>
+          <li><span className=" text-black font-medium">Breast cancer</span></li>
+          <li><span className=" text-black font-medium">Colon cancer</span></li>
         </ul>
         {/* <DataSurgery data={data.section_1} /> */}
         <H2
           title="Diagnosis of Brain Metastases"
-          className="font-semibold mb-4 text-center"
+          className="font-medium mb-4 text-center text-2xl"
         />
         <p className="font-light" text="">
           Diagnosing brain metastases typically involves a series of tests and
           imaging studies to confirm the presence and extent of cancer spread.
           Common diagnostic approaches include
         </p>
+        
         <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
@@ -286,6 +290,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
+        <IssuesLinks head={data.title} />
         {/* <p>
           In older adults, fractures can also occur from low-energy trauma, such
           as a simple fall, especially if the patient has underlying conditions
@@ -321,7 +326,7 @@ function GeneralSurgery() {
         <div>
           <H2
             title="Treatment"
-            className="font-semibold mb-4 text-center"
+            className="font-medium mb-4 text-center text-2xl"
           />
           <p className="font-light">
             In addition to the primary treatment methods previously mentioned,

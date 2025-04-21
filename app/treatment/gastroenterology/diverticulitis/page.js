@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,6 +8,8 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: 'Diverticulitis',
@@ -20,27 +21,27 @@ const data = {
     {
       title: '',
       description:
-        'Tear or injury to the diverticula: This can trigger inflammation or infection.',
+        '<span class="font-semibold ">Tear or injury to the diverticula:</span> This can trigger inflammation or infection.',
     },
     {
       title: '',
       description:
-        'Straining during bowel movements: Hard stools may stretch and injure the diverticula.',
+        '<span class="font-semibold ">Straining during bowel movements:</span> Hard stools may stretch and injure the diverticula.',
     },
     {
       title: '',
       description:
-        'Colitis or viral infections: Chronic colon inflammation may predispose diverticula to rupture.',
+        '<span class="font-semibold ">Colitis or viral infections:</span> Chronic colon inflammation may predispose diverticula to rupture.',
     },
     {
       title: '',
       description:
-        'Bacterial infection: Fecal matter trapped in the diverticula can provide a breeding ground for bacteria.',
+        '<span class="font-semibold ">Bacterial infection:</span> Fecal matter trapped in the diverticula can provide a breeding ground for bacteria.',
     },
     {
       title: '',
       description:
-        'Low-fibre diet: A lack of dietary fibre can lead to constipation, increasing pressure on the colon.',
+        '<span class="font-semibold ">Low-fibre diet:</span> A lack of dietary fibre can lead to constipation, increasing pressure on the colon.',
     },
   ],
 
@@ -94,18 +95,18 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            'Rest and liquid diet: Allows the digestive tract to heal.',
+            '<span class="font-semibold text-hciSecondary">Rest and liquid diet:</span> Allows the digestive tract to heal.',
         },
         {
-          description: 'Antibiotics: Prescribed if there is an infection.',
-        },
-        {
-          description:
-            'Over-the-counter pain relief: Extends survival in ALS patients by slowing the progression of the disease.',
+          description: '<span class="font-semibold text-hciSecondary">Antibiotics:</span> Prescribed if there is an infection.',
         },
         {
           description:
-            'Antidepressants/Anxiolytics: Paracetamol/acetaminophen is recommended over NSAIDs to reduce the risk of GI bleeding.',
+            '<span class="font-semibold text-hciSecondary">Over-the-counter pain relief:</span> Extends survival in ALS patients by slowing the progression of the disease.',
+        },
+        {
+          description:
+            '<span class="font-semibold text-hciSecondary">Antidepressants/Anxiolytics:</span> Paracetamol/acetaminophen is recommended over NSAIDs to reduce the risk of GI bleeding.',
         },
       ],
     },
@@ -116,19 +117,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            'Intravenous antibiotics or antivirals: For infections that need immediate care.',
+            '<span class="font-semibold text-hciSecondary">Intravenous antibiotics or antivirals:</span> For infections that need immediate care.',
         },
         {
           description:
-            'Fluid and electrolyte management: Through IV drips to maintain hydration.',
+            '<span class="font-semibold text-hciSecondary">Fluid and electrolyte management:</span> Through IV drips to maintain hydration.',
         },
         {
           description:
-            'Endoscopic procedures: To manage complications like bleeding or abscess drainage.',
+            '<span class="font-semibold text-hciSecondary">Endoscopic procedures:</span> To manage complications like bleeding or abscess drainage.',
         },
         {
           description:
-            'Surgery: In chronic or recurrent cases, a bowel resection may be necessary to remove the affected part of the colon.',
+            '<span class="font-semibold text-hciSecondary">Surgery:</span> In chronic or recurrent cases, a bowel resection may be necessary to remove the affected part of the colon.',
         },
       ],
     },
@@ -153,64 +154,73 @@ const data = {
   symptoms: [
     {
       category: '',
-      description:
-        'Severe Abdominal Pain: Often occurs suddenly in the upper right abdomen or between the shoulder blades.',
+      description:   
+        `<span class="font-semibold ">Severe abdominal pain:</span> Typically felt on the lower left side, though it can vary based on ethnicity (e.g., upper right pain in some populations).`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
       description:
-        'Nausea and Vomiting: Especially after eating heavy or fatty meals.',
+        'Bloating and tenderness in the abdomen.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
       description:
-        'Fever and Chills: May indicate an infection due to bile duct blockage.',
+        '<span class="font-semibold ">Fever:</span> Indicating possible infection.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
       description:
-        'Jaundice: Yellowing of the skin and eyes can occur if bile flow is obstructed.',
+        'Nausea and vomiting.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
       description:
-        'Dark Urine and Pale Stools: Signs of bile not flowing properly.',
+        'Constipation or, occasionally, diarrhoea.',
       bgColor: 'bg-hciPrimary text-white',
     },
+    {
+      category: '',
+      description:
+        'Rectal bleeding or blood in stool.',
+      bgColor: 'bg-hciPrimary text-white',
+    },
+
   ],
 
   diagnosis: [
     {
       category: '',
       description:
-        'Medical history and physical exam: A healthcare provider may suspect diverticulitis based on symptoms and abdominal tenderness.',
+        '<span class="font-semibold ">Medical history and physical exam:</span> A healthcare provider may suspect diverticulitis based on symptoms and abdominal tenderness.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `CT Scan: This imaging test helps identify inflammation, infections, or complications.`,
-      bgColor: 'bg-hciSecondary text-white',
-    },
-    {
-      category: '',
-      description:
-        'Blood tests: To check for signs of infection or inflammation.',
-      bgColor: 'bg-hciSecondary text-white',
-    },
-    {
-      category: '',
-      description:
-        'Colonoscopy: Sometimes used to assess the colon directly, though it is avoided during acute flare-ups to reduce the risk of perforation.',
+      description: `
+      <span class="font-semibold ">CT Scan:</span> This imaging test helps identify inflammation, infections, or complications.
+      `,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
       description:
-        'Stool and urine tests: Used to rule out other conditions like infections or gastrointestinal bleeding.',
+        '<span class="font-semibold ">Blood tests:</span> To check for signs of infection or inflammation.',
+      bgColor: 'bg-hciSecondary text-white',
+    },
+    {
+      category: '',
+      description:
+        '<span class="font-semibold ">Colonoscopy:</span> Sometimes used to assess the colon directly, though it is avoided during acute flare-ups to reduce the risk of perforation.',
+      bgColor: 'bg-hciSecondary text-white',
+    },
+    {
+      category: '',
+      description:
+        '<span class="font-semibold ">Stool and urine tests:</span> Used to rule out other conditions like infections or gastrointestinal bleeding.',
       bgColor: 'bg-hciSecondary text-white',
     },
   ],
@@ -219,8 +229,8 @@ const footerData = [
   {
     header: 'Conclusion',
     paragraph: `
-     Diverticulitis is a common condition that can affect people of all ages, with most cases resolving on their own within a few days. While it is usually not severe, it can be dangerous for individuals with weaker immune systems, such as children, the elderly, or those with chronic conditions. Managing hydration and rest are essential for recovery. If symptoms persist or worsen, it is important to consult a healthcare provider to avoid complications like dehydration or electrolyte imbalances.
-     With good hygiene practices, such as regular hand washing and safe food handling, the risk of contracting diverticulitis can be significantly reduced.
+     Most cases of diverticulitis resolve with early medical intervention, particularly if the condition is mild and uncomplicated. Lifestyle changes such as a high-fibre diet, regular hydration, and exercise can help prevent flare-ups. However, untreated or severe cases can lead to complications such as perforations, abscesses, or fistulas. Early detection and treatment ensure a favourable prognosis, allowing most people to recover fully without long-term consequences.
+
           `,
   },
 ]
@@ -230,71 +240,13 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        {/* <H2
-          text="Types of Cancers of the Digestive System "
-          textClass="text-2xl font-semibold mb-4 text-start"
-        /> */}
-        {/* <div className="grid lg:grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Oesophageal Cancer (Ca Oesophagus)
-              </span>
-              <br />
-              Affects the oesophagus, the tube connecting the throat to the
-              stomach
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Stomach Cancer (Ca Stomach)
-              </span>
-              <br />
-              Also known as gastric cancer, originating from the stomach lining.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Colon Cancer (Ca Colon)
-              </span>
-              <br />
-              Develops in the colon, the initial part of the large intestine.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Rectal Cancer (Ca Rectum)
-              </span>
-              <br />
-              Forms in the rectum, the lower part of the large intestine before
-              the anus.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Gallbladder Cancer (Ca Gallbladder)
-              </span>
-              <br />
-              Begins in the gallbladder, a small organ beneath the liver that
-              stores bile.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Pancreatic Cancer (Ca Pancreas)
-              </span>
-              <br />
-              Originates in the pancreas, an organ involved in digestion and
-              hormone production.
-            </p>
-          </div>
-          <div>
-            <img src="/gastroenterology/digestive-system.png" alt="" />
-          </div>
-        </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
-        {/* <p className="font-light">
-          While the exact cause of gallstones isn’t fully understood, several
-          factors may increase the risk:
-        </p> */}
+       
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
+        
         <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
@@ -305,6 +257,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
+        <KnowMore title={data.title} />
 
         <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div className="space-y-4">
@@ -312,30 +265,31 @@ function GeneralSurgery() {
               title="Symptoms"
               // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl py-4"
+              titleCss="text-black font-medium text-center text-2xl py-4"
               header=""
               data={data.symptoms}
               myclass="grid grid-cols-2"
             />
             <KnowMore title={data.title} />
           </div>
-          <div>
+          <div className="space-y-4">
             <DataBoxes
               title="Diagnosis"
               // text="Proper diagnosis is crucial to determine the right treatment plan. Healthcare providers may use the following methods:"
               header=""
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl py-4"
+              titleCss="text-black font-medium text-center text-2xl py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
+            <IssuesLinks head={data.title} />
           </div>
         </div>
 
-        <div>
+        <div className="pt-12">
           <H2
             title="Treatment"
-            className="font-semibold mb-4 text-center"
+            className="font-medium mb-4 text-center text-2xl"
           />
           <p className="font-light py-4">
             The treatment approach depends on the severity of the symptoms and
@@ -351,60 +305,7 @@ function GeneralSurgery() {
               // boxClass="grid grid-cols-2"
             />
           </div>
-          {/* <H2
-            text="Lifestyle Tips to Prevent Gallbladder Stones"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          /> */}
-          {/* <p className="font-light">
-            While surgery can effectively address existing stones, adopting
-            healthy habits can reduce the risk of developing them:
-          </p> */}
-          {/* <ul className="list-disc list-inside py-4 space-y-2 font-light">
-            <li>
-              Maintain a Healthy Weight: Gradual weight management helps prevent
-              changes in bile composition.
-            </li>
-            <li>
-              Eat a Balanced Diet: Opt for fibre-rich foods like fruits,
-              vegetables, and whole grains. Avoid excessive intake of fatty and
-              fried foods.
-            </li>
-            <li>
-              Stay Hydrated: Drinking plenty of water helps keep bile flowing
-              smoothly.
-            </li>
-            <li>
-              Exercise Regularly: Physical activity promotes healthy digestion
-              and overall well-being.
-            </li>
-            <li>
-              Avoid Crash Diets: Losing weight too quickly can increase the risk
-              of gallstones.
-            </li>
-          </ul> */}
-          {/* <DataLists
-            // desc={data.complications[0].heading}
-            data={data.complications}
-          /> */}
-
-          {/* <H2
-            text="Recovery and Post-Treatment Care"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
-          <p className="font-light">
-            After treatment, proper care is essential to ensure a smooth
-            recovery and prevent future problems:
-          </p> */}
-          {/* <div className="mb-8">
-            <DataLists
-              divClass="grid grid-cols-1 gap-4"
-              // key={index}
-              // desc={data.complications[0].description}
-              data={data.data_1}
-              ulClass="list-none list-outside"
-              // boxClass="grid grid-cols-2"
-            />
-          </div> */}
+        
         </div>
 
         <Conclusion data={footerData} />

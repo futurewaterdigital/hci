@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,7 +8,8 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
-
+import IssuesLinks from '@/components/ui/IssuesLinks'
+import H1 from '@/components/ui/h1'
 const data = {
   title: 'Traumatic Brain Injuries (TBI)',
   bannerImage: '/neuro-sciences/traumatic-brain-injuries.png',
@@ -95,7 +95,7 @@ const data = {
     {
       header: 'Conclusion',
       paragraph: `
-     In India, the growing awareness of TBI and its impact on individuals and families has led to improved support systems and treatment options. Access to specialised care and rehabilitation facilities is essential for enhancing recovery outcomes. Timely diagnosis and appropriate management of TBIs can significantly improve patients’ quality of life, allowing them to reintegrate into society and resume daily activities. Education on prevention strategies, particularly in high-risk environments, is crucial to reducing the incidence of traumatic brain injuries.
+     Growing awareness of traumatic brain injury (TBI) and its impact on individuals and families has led to better support systems and expanded treatment options. Access to specialized care and rehabilitation facilities plays a key role in enhancing recovery outcomes. Timely diagnosis and proper management of TBIs can significantly improve quality of life, helping patients reintegrate into society and return to daily routines. Educating the public on prevention strategies, especially in high-risk settings, is essential for reducing the incidence of TBIs.
           `,
     },
   ],
@@ -159,10 +159,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <H1 title={data.title} />
         <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           The primary causes of TBIs can be diverse and include:
         </p>
@@ -205,28 +205,30 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms of TBI can vary widely depending on the severity of the injury and can manifest immediately or may develop over time. Common symptoms include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className="space-y-4">
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosing TBI typically involves a comprehensive assessment that includes:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2 h-full"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
             The treatment of TBI depends on the severity and specific symptoms

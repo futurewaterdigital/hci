@@ -2,7 +2,7 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
 // import Image from 'next/image'
-import Title from '@/components/cardiacComponents/Title'
+
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -16,6 +16,8 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import DataSurgery from '@/components/cardiacComponents/Button'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from "@/components/ui/IssuesLinks"
 
 const title = 'ACL, PCL, and MCL Surgeries'
 
@@ -253,13 +255,13 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={title} />
+        <H1 title={title}/>
         <H2
           title={data.description}
           className="text-start font-semibold text-xl"
         />
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="text-2xl font-medium mb-4 text-center" />
         <p className="font-light">
           Injuries to the ACL, PCL, or MCL are often caused by:
         </p>
@@ -270,37 +272,37 @@ function GeneralSurgery() {
           Treatment
         </h2> */}
           {/* <p>Symptoms</p> */}
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of ACL, PCL, or MCL injuries can include:"
                 textCss="font-light py-2 min-h-[80px]"
-                titleCss="text-black font-semibold text-center text-2xl mt-4"
+                titleCss="text-black font-medium text-center text-2xl mt-4"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={title} />
             </div>
-            <div>
+            <div className='space-y-4'>
               <DataBoxes
                 title="Diagnosis"
                 text="Accurate diagnosis is essential to determine the extent of ligament damage and the appropriate treatment approach. Common diagnostic methods include:"
                 header=""
                 textCss="font-light py-2 min-h-[80px]"
-                titleCss="text-black font-semibold text-center text-2xl mt-4"
+                titleCss="text-black font-medium text-center text-2xl mt-4"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={title} />
             </div>
           </div>
         </div>
         <div>
           <H2
             title="Treatment"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
           <p className="font-light">
             Treatment for ACL, PCL, and MCL injuries depends on the severity of
@@ -312,7 +314,7 @@ function GeneralSurgery() {
         </div>
         <H2
           title={data.DataSurgery.headingTitle}
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p
           className="font-light"

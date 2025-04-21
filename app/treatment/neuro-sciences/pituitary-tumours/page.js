@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
+import H1 from '@/components/ui/h1'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -11,91 +11,68 @@ import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
 
 const data = {
-  title: 'Peripheral Nerve Disorders',
-  bannerImage: '/neuro-sciences/peripheral-nerve-disorders.png',
-  description: `Peripheral nerve disorders refer to a range of conditions that affect the peripheral nervous system, which comprises the nerves outside the brain and spinal cord. These disorders can significantly impact an individual’s quality of life, leading to symptoms such as weakness, numbness, and pain. In India, the prevalence of peripheral nerve disorders is rising due to factors like diabetes, trauma, and exposure to toxins.`,
+  title: 'Pituitary Tumours',
+  bannerImage: '/neuro-sciences/pituitary-tumours.png',
+  description: `Pituitary tumours are abnormal growths that develop in the pituitary gland, a small gland located at the base of the brain. The pituitary gland plays a crucial role in regulating various hormonal functions in the body, affecting growth, metabolism, and reproductive processes. Although many pituitary tumours are benign (non-cancerous), they can still have significant effects on health, leading to various symptoms and complications. In India, awareness and understanding of pituitary tumours are essential for timely diagnosis and effective management.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Diabetes',
-      description:
-        'Diabetic neuropathy is one of the most common causes of peripheral nerve disorders, resulting from prolonged high blood sugar levels.',
-    },
-    {
-      title: 'Injuries',
-      description:
-        'Physical trauma or compression of nerves can lead to peripheral nerve damage.',
-    },
-    {
-      title: 'Infections',
-      description:
-        'Certain infections, such as Lyme disease or HIV, can affect nerve function.',
-    },
-    {
-      title: 'Toxins',
-      description:
-        'Exposure to heavy metals, chemicals, or alcohol can result in nerve damage.',
-    },
-    {
       title: 'Genetic Factors',
       description:
-        'Some hereditary conditions can predispose individuals to peripheral nerve disorders.',
+        'Certain genetic conditions, such as Multiple Endocrine Neoplasia (MEN) syndromes, increase the risk of developing pituitary tumours.',
     },
+    {
+      title: 'Family History',
+      description:
+        'A family history of pituitary or endocrine tumours may predispose individuals to similar conditions.',
+    },
+    {
+      title: 'Hormonal Imbalances',
+      description:
+        'Disruptions in hormone regulation may play a role in tumour formation.',
+    },
+    {
+      title: 'Autoimmune Conditions',
+      description:
+        'Autoimmune Conditions:Multiple sclerosis and transverse myelitis involve the immune system attacking the spinal cord.',
+    },
+   
   ],
 
   complications: [
-    {
-      heading: 'Medications',
-      description: '',
-      aneurysmSymptoms: [
-        {
-          description:
-            'Pain relievers, anti-seizure medications, and antidepressants may help manage symptoms.',
-        },
-      ],
-    },
-
-    {
-      heading: 'Physical Therapy',
-      description: '',
-      aneurysmSymptoms: [
-        {
-          description:
-            'Rehabilitation exercises can improve strength and coordination, aiding recovery.',
-        },
-      ],
-    },
     {
       heading: 'Surgery',
       description: '',
       aneurysmSymptoms: [
         {
-          description: `In cases of nerve compression or injury, surgical intervention may be necessary to relieve pressure.
+          description:
+            'Transsphenoidal surgery is often the preferred method to remove the tumour through the nose or the back of the throat. This approach is less invasive and can lead to quicker recovery.',
+        },
+      ],
+    },
+
+    {
+      heading: 'Radiation Therapy',
+      description: '',
+      aneurysmSymptoms: [
+        {
+          description:
+            'Used when surgery is not possible or to target residual tumour cells after surgery. Techniques like stereotactic radiosurgery can deliver precise radiation to the tumour while sparing surrounding healthy tissue.',
+        },
+      ],
+    },
+    {
+      heading: 'Medications',
+      description: '',
+      aneurysmSymptoms: [
+        {
+          description: `Depending on the type of tumour, medications may be prescribed to help control hormone production or shrink the tumour. For example, dopamine agonists are effective for prolactin-secreting tumours.
             `,
         },
       ],
     },
-    {
-      heading: 'Lifestyle Changes',
-      description: '',
-      aneurysmSymptoms: [
-        {
-          description:
-            'Managing underlying conditions like diabetes and making dietary adjustments can help prevent further nerve damage.',
-        },
-      ],
-    },
-    {
-      heading: 'Alternative Therapies:',
-      description: '',
-      aneurysmSymptoms: [
-        {
-          description:
-            'Techniques such as acupuncture or massage therapy may provide additional relief.',
-        },
-      ],
-    },
+    
   ],
 
   contact: {
@@ -109,96 +86,81 @@ const data = {
     {
       header: 'Conclusion',
       paragraph: `
-      In India, specialized medical centres offer comprehensive care for peripheral nerve disorders, employing advanced diagnostic techniques and treatment options. Early intervention is crucial for optimizing outcomes, enabling individuals to lead healthier, more active lives despite their conditions.
+      In India, the management of pituitary tumours involves a multidisciplinary approach, including neurologists, endocrinologists, and neurosurgeons. Early detection and treatment are vital to prevent complications and improve patient outcomes. Regular monitoring and follow-ups are essential to manage any hormonal changes and assess for potential recurrence of the tumour. With advancements in diagnostic and therapeutic techniques, patients with pituitary tumours can expect improved quality of life and effective management of their condition.
           `,
     },
   ],
 
   symptoms: [
     {
-      category: '',
+      category: 'Headaches',
       description:
-        'Numbness or Tingling: A common early symptom often described as a “pins and needles” sensation.',
-      bgColor: 'bg-hciPrimary text-white',
+        'Persistent headaches that may be associated with increased pressure in the skull.',
+      bgColor: 'text-black',
     },
     {
-      category: '',
+      category: 'Vision Problems',
       description:
-        'Weakness: Difficulty in muscle control or weakness, particularly in the hands or feet.',
-      bgColor: 'bg-hciPrimary text-white',
+        'Blurred or double vision, or peripheral vision loss, often due to pressure on the optic nerves.',
+      bgColor: 'text-black',
     },
     {
-      category: '',
+      category: 'Hormonal Changes',
       description:
-        'Pain: Sharp, stabbing, or burning pain that may worsen at night.',
-      bgColor: 'bg-hciPrimary text-white',
+        `
+      <p>Tumours may lead to an overproduction or underproduction of hormones, causing a range of symptoms, such as:</p>
+        <li class="text-hciSecondary"><span class="font-medium">Cushing&apos;s Disease:</span> <span class='text-black'>Caused by excessive production of cortisol, leading to weight gain, high blood pressure, and diabetes.</span></li>
+        <li class="text-hciSecondary"><span class="font-medium">Acromegaly:</span> <span class='text-black'>Caused by excess growth hormone, resulting in enlarged hands, feet, and facial features.</span></li>
+        <li class="text-hciSecondary"><span class="font-medium">Prolactinoma:</span> <span class='text-black'>A type of tumour that produces excess prolactin, causing menstrual irregularities in women and erectile dysfunction in men.</span></li>
+`,
+      bgColor: 'text-black',
     },
     {
-      category: '',
+      category: 'Fatigue',
       description:
-        'Sensitivity: Heightened sensitivity to touch, making normal sensations feel uncomfortable.',
-      bgColor: 'bg-hciPrimary text-white',
+        'Unexplained fatigue or weakness due to hormonal imbalances.',
+      bgColor: 'text-black',
     },
-    {
-      category: '',
-      description:
-        'Loss of Coordination: Difficulty with balance and coordination due to impaired nerve function.',
-      bgColor: 'bg-hciPrimary text-white',
-    },
+   
   ],
 
   diagnosis: [
     {
       category: '',
       description:
-        'Physical Examination: A thorough assessment of symptoms and medical history.',
+        'Medical History and Physical Examination: A thorough evaluation of symptoms and a physical exam to assess for signs of hormonal imbalance.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `Nerve Conduction Studies: Tests that measure the speed and strength of signals travelling along nerves.`,
-      bgColor: 'bg-hciSecondary text-white',
-    },
-    {
-      category: '',
-      description:
-        'Electromyography (EMG): Evaluates the electrical activity of muscles to identify nerve or muscle disorders.',
+      description: `Imaging Studies: MRI or CT scans are crucial for visualising the pituitary gland and identifying the presence of tumours.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
       description:
-        'Blood Tests: To detect underlying conditions such as diabetes or vitamin deficiencies.',
+        'Hormonal Testing: Blood tests are conducted to measure hormone levels and assess any imbalances.',
       bgColor: 'bg-hciSecondary text-white',
     },
-    {
-      category: '',
-      description:
-        'Imaging Studies: MRI or ultrasound may be used to identify structural issues affecting the nerves.',
-      bgColor: 'bg-hciSecondary text-white',
-    },
+   
   ],
 }
-
-console.log(data.complications[0].heading)
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
 
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
-        {/* <p className="font-light" text="">
-          The exact cause of benign peripheral nerve tumours is often unclear,
-          but some cases are associated with genetic conditions, such as
-          neurofibromatosis type 1 (NF1) and neurofibromatosis type 2 (NF2).
-          These inherited conditions increase the likelihood of developing nerve
-          tumours.
-        </p> */}
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
+        <p className="font-light" text="">
+        The exact cause of pituitary tumours is often unknown, but several factors may contribute to their development:
+
+        </p>
         {/* <H2 text="Types" textClass="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">
           Peripheral nerve tumours can grow within the nerves (intra-neural
@@ -206,13 +168,13 @@ function GeneralSurgery() {
           following are common types of benign peripheral nerve tumours:
         </p> */}
         {/* <DataSurgery data={data.section_1} /> */}
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[150px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
@@ -223,11 +185,11 @@ function GeneralSurgery() {
         </p> */}
         <KnowMore title={data.title} />
         <div>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
-                // text="Symptoms depend on the tumor's size, location, and growth rate but can include:"
+                text="The symptoms of pituitary tumours can vary widely depending on the type of tumour and its size. Common symptoms include:"
                 textCss="font-light py-4"
                 titleCss="text-black font-semibold text-center text-xl py-4"
                 header=""
@@ -239,25 +201,24 @@ function GeneralSurgery() {
             <div>
               <DataBoxes
                 title="Diagnosis"
-                // text="Early detection is essential for effective treatment. Diagnostic methods include:"
+                text="Diagnosing pituitary tumours typically involves several steps:"
+                titleCss="text-black font-medium text-center text-2xl py-4"
                 header=""
                 textCss="font-light py-4"
-                titleCss="text-black font-semibold text-center text-xl py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />
-              {/* <KnowMore title={title} /> */}
+              <KnowMore title={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
-          {/* <p className="font-light">
-            Treatment for benign peripheral nerve tumours depends on factors
-            such as the type, size, location, and whether the tumour causes
-            symptoms. Options include:
-          </p> */}
+          <p className="font-light">
+          The treatment of pituitary tumours depends on the type, size, and whether the tumour is causing hormonal imbalances or other complications. Common treatment options include:
+
+          </p>
           <DataLists
             desc={data.complications[0].description}
             data={data.complications}

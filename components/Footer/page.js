@@ -8,6 +8,7 @@ import { FaSquareFacebook } from 'react-icons/fa6'
 import { FaInstagram } from 'react-icons/fa6'
 import { FaLinkedin } from 'react-icons/fa6'
 import { FaSquareXTwitter } from 'react-icons/fa6'
+import Subscribe from '@/components/Subscribe/page'
 
 export default function Footer() {
   // const scrollToSection = (id) => {
@@ -48,27 +49,10 @@ export default function Footer() {
               </Link>
             </b>
           </p> */}
-        </div>
-        {footerMenu.map((section, index) => (
-          <div key={index} className="flex flex-col p-6">
-            <h6 className="text-black font-semibold text-xl pb-4">
-              {section.category}
-            </h6>
-            {section.links.map((link, linkIndex) => (
-              <Link
-                key={linkIndex}
-                className={`py-2 list-decimal  ${
-                  link.url ? 'link link-hover cursor-pointer' : 'cursor-pointer'
-                }`}
-                href={link.url}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        ))}
-        <div className="flex flex-col p-6">
-          <h6 className="text-black font-semibold text-xl pb-4">Contact Us</h6>
+          <Subscribe/>
+
+<div className="flex flex-col p-0">
+          <h6 className="text-black font-medium text-xl pb-4">Contact Us</h6>
           <ul className="">
             <li className="py-2">
               <Link href="tel:+919008764954">+91 9008 764 954</Link>
@@ -106,13 +90,62 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        </div>
+        {footerMenu.map((section, index) => (
+  <div key={index} className="flex flex-col p-6">
+    {/* Case 1: Direct category */}
+    {section.category && (
+      <>
+        <h6 className="text-black font-medium text-xl pb-4">
+          {section.category}
+        </h6>
+        {section.links.map((link, linkIndex) => (
+          <Link
+            key={linkIndex}
+            className={`py-2 ${
+              link.url ? 'link link-hover cursor-pointer' : 'cursor-pointer'
+            }`}
+            href={link.url}
+          >
+            {link.name}
+          </Link>
+        ))}
+      </>
+    )}
+
+            {/* Case 2: Nested sections */}
+     <div className="">
+    {section.section &&
+      section.section.map((subSection, subIndex) => (
+        <div key={subIndex} className="flex flex-col">
+          <h6 className="text-black font-medium text-xl pb-2">
+            {subSection.category}
+          </h6>
+          {subSection.links.map((link, linkIndex) => (
+            <Link
+              key={linkIndex}
+              className={`py-2 ${
+                link.url ? 'link link-hover cursor-pointer' : 'cursor-pointer'
+              }`}
+              href={link.url}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      ))}
+            </div>
+  </div>
+))}
+
+       
       </div>
       <div className="bg-[#0E56A0] p-4 grid lg:grid-cols-2 lg:px-16 text-white font-light text-1xl">
         <div>
           {bottomSection.links.map((link, index) => (
             <React.Fragment key={index}>
               {index > 0 && ' | '}
-              <Link href="#" className="link link-hover">
+              <Link href={link.url} className="link link-hover">
                 {link.name}
               </Link>
             </React.Fragment>

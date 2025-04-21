@@ -21,7 +21,7 @@ export default function DoctorsPage({ params }) {
     } else if (slug === 'orthopedics') {
       setTitle('Our Orthopedic Surgeons');
     } else if (slug === 'neuro-sciences') {
-      setTitle('Our Neurologists');
+      setTitle('Our Neurosurgeons');
     } else if (slug === 'others') {
       setTitle('Other Specialists');
     } else if (slug === 'oncology') {

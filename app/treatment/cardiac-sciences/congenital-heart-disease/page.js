@@ -131,7 +131,7 @@ const surgeryData = [
     title: 'Genetic factors',
     description:
       'Inherited mutations or chromosomal abnormalities, such as Down Syndrome.',
-    minHeight: 'min-h-[100px] text-center',
+    minHeight: 'min-h-[100px] text-center text-black',
   },
   {
     title: 'Maternal health',
@@ -192,12 +192,14 @@ function page() {
           </p>
           <p className="text-gray-700 mb-6 font-light">
             CHD can affect various parts of the heart, including walls, valves,
-            and arteries. The two primary categories of CHD are cyanotic CHD
-            (low oxygen levels in the blood) and acyanotic CHD (where oxygen
+            and arteries. The two primary categories of CHD are <strong className='text-black font-medium'>cyanotic CHD </strong>
+             (low oxygen levels in the blood) and <strong className='text-black font-medium'>acyanotic CHD</strong> (where oxygen
             levels remain normal, but the heart&apos;s function is impaired).
           </p>
         </section>
         <div className="space-y-4 py-4">
+          <h2 className='font-medium text-2xl text-center'>Causes</h2>
+          <p className='font-light'>CHD occurs due to improper development of the fetal heart during pregnancy. While the exact causes are often unknown, several factors can increase the risk:</p>
           <DataSurgery data={surgeryData} />
           <KnowMore title={title} />
         </div>
@@ -210,12 +212,12 @@ function page() {
             header=""
             myclass="grid lg:grid-cols-2"
             textCss="font-light py-4"
-            titleCss="text-2xl font-bold text-center mt-8"
+            titleCss="text-2xl font-medium text-center mt-8"
           />
           <KnowMore title={title} />
         </div>
         <div className="py-8">
-          <H2 title="Diagnosis" className="text-center mb-4"/>
+          <H2 title="Diagnosis" className="text-center mb-4 text-2xl font-medium"/>
           <p className="mb-2 font-light">
             Healthcare providers diagnose CHD using various methods during
             pregnancy, infancy, or later in life:
@@ -235,7 +237,7 @@ function page() {
           <DataBoxes
             title="Treatment"
             textCss="font-light py-4"
-            titleCss="text-2xl font-bold text-center mt-8"
+            titleCss="text-2xl font-medium text-center mt-8"
             data={heartTreatmentOptions}
             text="Treatment depends on the type and severity of CHD. Options include:"
             header=""

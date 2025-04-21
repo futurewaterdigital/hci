@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
+import H1 from '@/components/ui/h1'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,6 +9,7 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: 'Peripheral Nerve Disorders',
@@ -187,10 +188,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         {/* <p className="font-light" text="">
           The exact cause of benign peripheral nerve tumours is often unclear,
           but some cases are associated with genetic conditions, such as
@@ -211,7 +212,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[150px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[150px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
@@ -235,7 +236,7 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-6'>
               <DataBoxes
                 title="Diagnosis"
                 // text="Early detection is essential for effective treatment. Diagnostic methods include:"
@@ -245,14 +246,15 @@ function GeneralSurgery() {
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />
-              {/* <KnowMore title={title} /> */}
+                <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
-        <div>
-          <H2
-            text="Treatment"
-            textClass="text-2xl font-semibold mb-4 text-center"
+        
+        <div className=''>
+        <H2
+            title="Treatment"
+            className="text-2xl font-medium mb-4 text-center "
           />
 
           {/* <p className="font-light">

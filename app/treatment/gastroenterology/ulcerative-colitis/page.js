@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -8,7 +7,9 @@ import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
-
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
+import KnowMore from '@/components/ui/KnowMore'
 const data = {
   title: 'Ulcerative Colitis (UC)',
   bannerImage: '/gastroenterology/ulcerative-colitis.png',
@@ -114,23 +115,23 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            'Aminosalicylates (5-ASA): Sulfasalazine and mesalamine are used to manage mild to moderate inflammation.',
+            '<span class="font-semibold text-hciSecondary">Aminosalicylates (5-ASA):</span> Sulfasalazine and mesalamine are used to manage mild to moderate inflammation.',
         },
         {
           description:
-            'Corticosteroids: Used for short-term relief during severe flare-ups but not recommended for long-term use due to side effects.',
+            '<span class="font-semibold text-hciSecondary">Corticosteroids:</span> Used for short-term relief during severe flare-ups but not recommended for long-term use due to side effects.',
         },
         {
           description:
-            'Immunosuppressants: Medications like azathioprine or methotrexate reduce immune system activity.',
+            '<span class="font-semibold text-hciSecondary">Immunosuppressants:</span> Medications like azathioprine or methotrexate reduce immune system activity.',
         },
         {
           description:
-            'Biologics: Drugs such as infliximab and adalimumab target specific immune responses.',
+            '<span class="font-semibold text-hciSecondary">Biologics:</span> Drugs such as infliximab and adalimumab target specific immune responses.',
         },
         {
           description:
-            'Janus kinase (JAK) inhibitors: Medications like tofacitinib help control inflammation.',
+            '<span class="font-semibold text-hciSecondary">Janus kinase (JAK) inhibitors:</span> Medications like tofacitinib help control inflammation.',
         },
       ],
     },
@@ -145,11 +146,11 @@ const data = {
         },
         {
           description:
-            'Proctocolectomy with ileal pouch-anal anastomosis (IPAA): Removes the colon and rectum while preserving normal defecation.',
+            '<span class="font-semibold text-hciSecondary">Proctocolectomy with ileal pouch-anal anastomosis (IPAA):</span> Removes the colon and rectum while preserving normal defecation.',
         },
         {
           description:
-            'Ileostomy: In cases where pouch surgery is not feasible, an external pouch is used to collect waste.',
+            '<span class="font-semibold text-hciSecondary">Ileostomy:</span> In cases where pouch surgery is not feasible, an external pouch is used to collect waste.',
         },
       ],
     },
@@ -238,64 +239,13 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
-        {/* <div className="grid lg:grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Oesophageal Cancer (Ca Oesophagus)
-              </span>
-              <br />
-              Affects the oesophagus, the tube connecting the throat to the
-              stomach
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Stomach Cancer (Ca Stomach)
-              </span>
-              <br />
-              Also known as gastric cancer, originating from the stomach lining.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Colon Cancer (Ca Colon)
-              </span>
-              <br />
-              Develops in the colon, the initial part of the large intestine.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Rectal Cancer (Ca Rectum)
-              </span>
-              <br />
-              Forms in the rectum, the lower part of the large intestine before
-              the anus.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Gallbladder Cancer (Ca Gallbladder)
-              </span>
-              <br />
-              Begins in the gallbladder, a small organ beneath the liver that
-              stores bile.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Pancreatic Cancer (Ca Pancreas)
-              </span>
-              <br />
-              Originates in the pancreas, an organ involved in digestion and
-              hormone production.
-            </p>
-          </div>
-          <div>
-            <img src="/gastroenterology/digestive-system.png" alt="" />
-          </div>
-        </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+       
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light">
           The exact cause of UC remains unknown, but it is believed to result
           from a combination of genetic, environmental, and immune system
@@ -311,7 +261,8 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <H2 title="Symptoms" className="font-semibold mb-4 text-center text-xl" />
+        <KnowMore title={data.title} />
+        <H2 title="Symptoms" className="font-medium mb-4 text-center text-2xl pt-12" />
         <div className="mb-8">
           <DataLists
             divClass="grid grid-cols-3 gap-4"
@@ -321,35 +272,28 @@ function GeneralSurgery() {
             ulClass="list-disc list-outside"
             // boxClass="grid grid-cols-2"
           />
+          <KnowMore title={data.title} />
+      
         </div>
 
         <div className="grid grid-cols-1 gap-4">
-          {/* <div>
-            <DataBoxes
-              title="Symptoms"
-              // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center"
-              header=""
-              data={data.symptoms}
-              myclass="grid grid-cols-3"
-            />
-            <KnowMore title={data.title} />
-          </div> */}
+         
           <div>
             <DataBoxes
               title="Diagnosis"
               text="Diagnosis involves a combination of physical exams, medical history reviews, and tests to confirm UC and rule out other conditions:"
               header=""
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl py-4"
+              titleCss="text-black font-medium text-center text-2xl py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
           </div>
+          <IssuesLinks head={data.title} />
         </div>
 
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center text-xl" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
           <p className="font-light py-4">
             The goal of treatment is to reduce inflammation, relieve symptoms,
             and maintain remission. Treatment options include:

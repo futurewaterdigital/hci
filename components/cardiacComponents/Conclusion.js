@@ -5,7 +5,7 @@ function Conclusion({ data }) {
     <>
       {data.map((items, index) => (
         <div key={index} className="">
-          <h2 className="text-xl text-center font-bold mb-4">{items.header}</h2>
+          <h2 className="text-2xl text-center font-medium mb-4">{items.header}</h2>
           <div
             className="text-gray-700 mb-4 font-light space-y-2"
             dangerouslySetInnerHTML={{ __html: items.paragraph }}

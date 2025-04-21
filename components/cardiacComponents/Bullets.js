@@ -20,7 +20,7 @@ function Bullets({
           key={index}
         >
           {data && (
-            <h2 className="text-lg font-semibold mb-4">{data.heading}</h2>
+            <h2 className="text-lg font-medium mb-4">{data.heading}</h2>
           )}
           {desc && (
             <p
@@ -38,7 +38,7 @@ function Bullets({
           )}
           {head && (
             <p
-              className="font-semibold pb-2"
+              className="font-medium pb-2"
               dangerouslySetInnerHTML={{ __html: head }}
             />
           )}
@@ -51,7 +51,7 @@ function Bullets({
               <li key={index} className="ml-6 font-light">
                 <p className="text-black font-light">
                   <strong className="text-hciSecondary">{symptom.title}</strong>
-                  {symptom.title && ':'} <span dangerouslySetInnerHTML={{__html: symptom.description}}></span>
+                  {symptom.title && ''} <span dangerouslySetInnerHTML={{__html: symptom.description}}></span>
                 </p>
               </li>
             ))}

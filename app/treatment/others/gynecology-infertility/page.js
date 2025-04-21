@@ -1,12 +1,12 @@
 // generalSurgery.js
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
+
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
-
+import H1 from '@/components/ui/h1'
 import FlexBox from '@/components/cardiacComponents/FlexBox'
 import ListBox from '@/components/cardiacComponents/ListBox'
 import CTaButton from '@/components/cardiacComponents/CtaButton'
@@ -115,10 +115,11 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
         <H2
           title={data.description}
-          className="text-start font-semibold text-xl"
+          className="text-start font-medium text-2xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
@@ -144,7 +145,7 @@ function GeneralSurgery() {
 
         <H2
           title="Why Choose HCI for Gynecology and Infertility Care?"
-          className="text-2xl font-bold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light">
           HCI’s holistic approach ensures that women receive the highest
@@ -155,7 +156,7 @@ function GeneralSurgery() {
         <div className="pt-2">
           <H2
             title="Comprehensive Care for Women’s Health"
-            className="text-2xl font-bold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
           <p className="font-light">
             At HCI, we recognize that women’s health requires a delicate balance

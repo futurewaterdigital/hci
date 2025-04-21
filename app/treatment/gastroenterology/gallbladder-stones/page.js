@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,6 +8,8 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: 'Gallbladder Stones',
@@ -198,7 +199,7 @@ const data = {
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: ':',
+      category: '',
       description:
         'CT or MRI Scans: Occasionally used for further evaluation of bile ducts.',
       bgColor: 'bg-hciSecondary text-white',
@@ -209,15 +210,16 @@ const footerData = [
   {
     header: 'Conclusion',
     paragraph: `
-     Brain tumours and brain cancers are challenging to treat, but advances in neurosurgery, radiation, and targeted therapies provide hope for better outcomes. Early diagnosis and comprehensive care tailored to the tumour type are key to improving quality of life for patients.`,
-  },
+     Gallstones can significantly impact your health and quality of life, especially if left untreated. Whether through lifestyle modifications, medications, or surgery, timely intervention is essential to avoid complications. If you experience persistent abdominal pain or other symptoms related to gallbladder stones, consulting a healthcare professional can help ensure effective management and long-term wellness.
+  `},
 ]
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         {/* <H2
@@ -277,7 +279,7 @@ function GeneralSurgery() {
             <img src="/gastroenterology/digestive-system.png" alt="" />
           </div>
         </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium text-2xl text-center" />
         <p className="font-light">
           While the exact cause of gallstones isn’t fully understood, several
           factors may increase the risk:
@@ -288,17 +290,18 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
+        <KnowMore title={data.title} />
 
         <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div>
             <DataBoxes
               title="Symptoms"
               text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center text-xl"
+              titleCss="text-black font-medium text-center text-2xl"
               textCss="font-light py-4"
               header=""
               data={data.symptoms}
@@ -311,20 +314,20 @@ function GeneralSurgery() {
               title="Diagnosis"
               text="Proper diagnosis is crucial to determine the right treatment plan. Healthcare providers may use the following methods:"
               header=""
-              titleCss="text-black font-semibold text-center text-xl"
+              titleCss="text-black font-medium text-center text-2xl"
               textCss="font-light py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
           </div>
         </div>
-
-        <div>
+        <IssuesLinks head={data.title} />
+        <div className="pt-8">
           <H2
             title="Treatment"
-            className="font-semibold mb-4 text-center"
+            className="font-medium text-2xl text-center"
           />
-          <p className="font-light">
+          <p className="font-light py-4">
             The treatment approach depends on the severity of the symptoms and
             the size or location of the stones. Options include:
           </p>
@@ -340,33 +343,33 @@ function GeneralSurgery() {
           </div>
           <H2
             title="Lifestyle Tips to Prevent Gallbladder Stones"
-            className="font-semibold mb-4 text-center"
+            className="font-medium text-2xl text-center pt-8"
           />
-          <p className="font-light">
+          <p className="font-light pt-4">
             While surgery can effectively address existing stones, adopting
             healthy habits can reduce the risk of developing them:
           </p>
-          <ul className="list-disc list-inside py-4 space-y-2 font-light">
+          <ul className="list-disc list-inside py-4 space-y-2 font-light text-hciSecondary">
             <li>
-              Maintain a Healthy Weight: Gradual weight management helps prevent
-              changes in bile composition.
+              <span className="font-medium ">Maintain a Healthy Weight:</span> <span className="font-light text-black">Gradual weight management helps prevent
+              changes in bile composition.</span>
             </li>
             <li>
-              Eat a Balanced Diet: Opt for fibre-rich foods like fruits,
+              <span className="font-medium">Eat a Balanced Diet:</span> <span className="font-light text-black">Opt for fibre-rich foods like fruits,
               vegetables, and whole grains. Avoid excessive intake of fatty and
-              fried foods.
+              fried foods.</span>
             </li>
             <li>
-              Stay Hydrated: Drinking plenty of water helps keep bile flowing
-              smoothly.
+              <span className="font-medium">Stay Hydrated:</span> <span className="font-light text-black">Drinking plenty of water helps keep bile flowing
+              smoothly.</span>
             </li>
             <li>
-              Exercise Regularly: Physical activity promotes healthy digestion
-              and overall well-being.
+              <span className="font-medium">Exercise Regularly:</span> <span className="font-light text-black">Physical activity promotes healthy digestion
+              and overall well-being.</span>
             </li>
             <li>
-              Avoid Crash Diets: Losing weight too quickly can increase the risk
-              of gallstones.
+              <span className="font-medium">Avoid Crash Diets:</span> <span className="font-light text-black">Losing weight too quickly can increase the risk
+              of gallstones.</span>
             </li>
           </ul>
           {/* <DataLists
@@ -376,9 +379,9 @@ function GeneralSurgery() {
 
           <H2
             title="Recovery and Post-Treatment Care"
-            className="font-semibold mb-4 text-center"
+            className="font-medium text-2xl text-center pt-8"
           />
-          <p className="font-light">
+          <p className="font-light pt-4 pb-4">
             After treatment, proper care is essential to ensure a smooth
             recovery and prevent future problems:
           </p>

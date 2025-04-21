@@ -22,10 +22,10 @@ export default function ListBox({ data }) {
       {data.benefits.map((benefit, index) => (
         <div
           key={index}
-          className="bg-hciYellow p-6 rounded min-h-36 flex flex-col items-center justify-center"
+          className="bg-hciYellow p-6 rounded-lg min-h-36 flex flex-col shadow-lg"
         >
           {benefit.title && (
-            <h4 className="text-lg font-bold mb-2 text-center">
+            <h4 className="text-lg font-medium mb-2 text-center">
               {benefit && benefit.title}
             </h4>
           )}

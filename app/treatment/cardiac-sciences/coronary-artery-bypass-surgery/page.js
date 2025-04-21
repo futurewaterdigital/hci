@@ -9,6 +9,7 @@ import SimpleLists from '@/components/cardiacComponents/SimpleLists'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import H1 from '@/components/ui/h1'
 import H2 from '@/components/ui/h2'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
 
 
 const title = 'Coronary Artery Bypass Surgery'
@@ -19,50 +20,52 @@ const surgeryInclude = [
     minHeight: 'h-[80px]',
   },
   {
-    title: 'Coronary artery bypass graft surgery',
+    title: 'CABG',
     description: '',
     minHeight: 'h-[80px]',
   },
+  
   {
     title: 'Heart bypass surgery',
     description: '',
     minHeight: 'h-[80px]',
   },
   {
-    title: 'CABG',
+    title: 'Coronary artery bypass graft surgery',
     description: '',
     minHeight: 'h-[80px]',
   },
+  
 ]
 const vascularConditions = [
   {
     category: '',
     description:
-      "There is a <strong>blockage in the left main coronary artery</strong>, which supplies most of the heart's blood.",
+      "There is a <strong class='font-medium'>blockage in the left main coronary artery</strong>, which supplies most of the heart's blood.",
     bgColor: 'bg-hciYellow',
   },
   {
     category: '',
     description:
-      "A blockage can't be managed with less invasive treatments like <strong>angioplasty or stenting</strong>, or if previous procedures have failed.",
+      "A blockage can't be managed with less invasive treatments like <strong class='font-medium'>angioplasty or stenting</strong>, or if previous procedures have failed.",
     bgColor: 'bg-hciYellow',
   },
   {
     category: '',
     description:
-      'You experience <strong>severe chest pain</strong> due to narrowed arteries that limit blood flow even during rest.',
+      "You experience <strong class='font-medium'>severe chest pain</strong> due to narrowed arteries that limit blood flow even during rest.",
     bgColor: 'bg-hciYellow',
   },
   {
     category: '',
     description:
-      'An emergency bypass is needed during a <strong>heart attack</strong> when other treatments are ineffective.',
+      "An emergency bypass is needed during a <strong class='font-medium'>heart attack</strong> when other treatments are ineffective.",
     bgColor: 'bg-hciYellow',
   },
   {
     category: '',
     description:
-      "Multiple heart arteries are diseased, and the heart's main pumping chamber (left ventricle) isn't functioning well.",
+        "Multiple heart arteries are diseased, and the heart's main pumping chamber (left ventricle) isn't functioning well.",
     bgColor: 'bg-hciYellow',
   },
 ]
@@ -143,6 +146,16 @@ const advancedApproaches = [
   },
 ]
 
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+        By adopting these lifestyle changes, you can improve your overall
+              heart health and minimize the risk of needing additional
+              procedures.`,
+  },
+]
+
 function page() {
   return (
     <div>
@@ -165,7 +178,7 @@ function page() {
           pain and improving overall heart function.
         </p>
         <div className="py-4">
-          <H2 title="Alternative Names for the Surgery Include" className="text-center"/>
+          <H2 title="Alternative Names for the Surgery Include" className="text-center font-medium"/>
           <DataSurgery data={surgeryInclude} />
           <p className="py-4 text-start font-light">
             While the surgery doesn&apos;t cure the underlying heart condition
@@ -177,8 +190,8 @@ function page() {
         <div>
           <DataBoxes
             title="Why is it Performed"
-            titleCss="text-2xl font-bold text-center text-black mb-4"
-            text="This surgery is recommended for restoring blood flow when one or more coronary arteries are severely blocked or narrowed.<p class='py-4 font-medium text-lg'><strong>Your healthcare provider may suggest coronary artery bypass surgery if:</strong></p>"
+            titleCss="text-2xl font-medium text-center text-black mb-4"
+            text="This surgery is recommended for restoring blood flow when one or more coronary arteries are severely blocked or narrowed.<p class='py-4 font-medium text-lg'><strong class='font-medium'>Your healthcare provider may suggest coronary artery bypass surgery if:</strong></p>"
             data={vascularConditions}
             myclass="grid lg:grid-cols-2"
             textCss="font-light"
@@ -189,11 +202,13 @@ function page() {
             <SimpleLists
               data={dataLists}
               heading="Risks of Coronary Artery Bypass Surgery"
+              headingCss="font-medium"
               subHeading="As with any major surgery, there are risks involved. These may include:"
             />
             <SimpleLists
               data={dataList}
               heading="Preparation for Surgery"
+              headingCss="font-medium"
               subHeading="Before the surgery:"
             />
           </div>
@@ -205,7 +220,7 @@ function page() {
         </div>
 
         <div>
-          <H2 title="What to Expect During the Procedure" className="text-center mt-8 mb-4"/>
+          <H2 title="What to Expect During the Procedure" className="text-center mt-8 mb-4 font-medium"/>
 
           <div className="grid lg:grid-cols-2 gap-4">
             <div>
@@ -224,7 +239,7 @@ function page() {
 
         <div className="grid lg:grid-cols-2 mt-8">
           <section className="mb-8">
-            <H2 title="After the Surgery" className="mb-4"/>
+            <H2 title="After the Surgery" className="mb-4 font-medium"/>
             <p className="mb-4 font-light">
               Post-surgery care involves close monitoring and gradually resuming
               activities:
@@ -246,7 +261,7 @@ function page() {
                 begins early to improve heart health and prevent future issues.
               </li>
             </ul>
-            <p className="mb-4 font-light">
+            <p className="mb-4 font-light pt-8">
               Contact your healthcare provider if you notice:
             </p>
             <ul className="list-disc list-inside mb-4 font-light space-y-2">
@@ -261,13 +276,13 @@ function page() {
             </p>
           </section>
           <section className="mb-8">
-            <H2 title="Results and Long-Term Care" className="mb-4"/>
+            <H2 title="Results and Long-Term Care" className="mb-4 font-medium"/>
             <p className="mb-4 font-light">
               Most people experience significant relief from symptoms and
               improved quality of life after coronary artery bypass surgery.
               However, grafts or arteries may narrow again over time.
             </p>
-            <p className="mb-4 font-semibold">To maintain your heart health:</p>
+            <p className="mb-4 font-medium pt-8 text-lg">To maintain your heart health:</p>
             <ul className="list-disc list-inside mb-4 font-light space-y-2">
               <li>
                 <strong className="text-hciSecondary">Quit smoking</strong> and
@@ -295,14 +310,11 @@ function page() {
                 .
               </li>
             </ul>
-            <p className="font-light">
-              By adopting these lifestyle changes, you can improve your overall
-              heart health and minimize the risk of needing additional
-              procedures.
-            </p>
+           
           </section>
         </div>
-        <div className="mt-8 space-y-6">
+        <div className="mt-2 space-y-6">
+        <Conclusion data={footerData} />
           <FooterLinks head={title} />
           <BookButton />
         </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
@@ -8,7 +7,8 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
-
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: 'Colon Polyps',
   bannerImage: '/gastroenterology/colon-polyps.png',
@@ -210,7 +210,8 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         {/* <H2
@@ -270,7 +271,7 @@ function GeneralSurgery() {
             <img src="/gastroenterology/digestive-system.png" alt="" />
           </div>
         </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light">
           The exact cause of colon polyps is not entirely understood, but
           genetic mutations play a significant role. Most polyps are sporadic,
@@ -288,13 +289,14 @@ function GeneralSurgery() {
             />
           ))}
         </div>
+        <KnowMore title={data.title} />
 
         <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div className="space-y-4">
             <DataBoxes
               title="Symptoms"
               text="Colon polyps often do not cause noticeable symptoms, making regular screening crucial. However, when symptoms do occur, they may include:"
-              titleCss="text-black font-semibold text-center text-xl"
+              titleCss="text-black font-medium text-center text-2xl"
               textCss="font-light py-4"
               header=""
               data={data.symptoms}
@@ -308,17 +310,17 @@ function GeneralSurgery() {
               text="The primary method for diagnosing colon polyps is through a colonoscopy, a procedure that allows a healthcare provider to examine the colon with a lighted camera. If polyps are found, they can often be removed during the same procedure. Other diagnostic tools include:"
               header=""
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl"
+              titleCss="text-black font-medium text-center text-2xl"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
           </div>
         </div>
-
+        <IssuesLinks head={data.title} />
         <div>
           <H2
             text="Treatment"
-            className="font-semibold mb-4 text-center"
+            className="font-medium mb-4 text-center text-2xl"
           />
           <p className="font-light">
             The main treatment for colon polyps is removal during a colonoscopy,

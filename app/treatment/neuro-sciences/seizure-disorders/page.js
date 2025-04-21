@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,7 +8,8 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
-
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks' 
 const data = {
   title: 'Seizure Disorders',
   bannerImage: '/neuro-sciences/seizure-disorders.png',
@@ -110,7 +110,7 @@ const data = {
     {
       header: 'Conclusion',
       paragraph: `
-     In India, raising awareness about seizure disorders is critical to dispelling myths and reducing stigma. Access to comprehensive medical care and support services is essential for improving outcomes for those affected. With advancements in diagnosis and treatment, many individuals with seizure disorders can lead fulfilling lives and effectively manage their condition. Regular follow-ups and education on seizure management play vital roles in ensuring that patients receive the best possible care and support.
+Increasing knowledge about seizure disorders is essential to busting stereotypes and lowering stigma. Access to comprehensive medical care and support services is essential for improving outcomes for those affected. With advancements in diagnosis and treatment, many individuals with seizure disorders can lead fulfilling lives and effectively manage their condition. Regular follow-ups and education on seizure management play vital roles in ensuring that patients receive the best possible care and support.     
           `,
     },
   ],
@@ -173,10 +173,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <H1 title={data.title} />
         <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           Seizure disorders can arise from various underlying factors,
           including:
@@ -194,7 +194,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
@@ -205,15 +205,16 @@ function GeneralSurgery() {
         </p> */}
         <KnowMore title={data.title} />
         <div>
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of seizure disorders can vary widely, depending on the type of seizure experienced. Common manifestations include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -222,16 +223,17 @@ function GeneralSurgery() {
                 title="Diagnosis"
                 text="Diagnosing seizure disorders involves a thorough assessment, including:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
             Management of seizure disorders typically includes a combination of

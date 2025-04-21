@@ -7,7 +7,7 @@ function Button({ title, description, boxCss }) {
         boxCss ? boxCss : ' items-center justify-center'
       }`}
     >
-      <span className="font-semibold">{title}</span>
+      <span className="font-medium">{title}</span>
       <span
         className="font-light"
         dangerouslySetInnerHTML={{ __html: description }}

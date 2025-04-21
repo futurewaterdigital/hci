@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,6 +8,9 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
+
 
 const data = {
   title: 'Multiple Sclerosis (MS)',
@@ -207,10 +209,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <H1 title={data.title} />
         <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           The exact cause of MS remains unknown, but a combination of genetic,
           environmental, and immune-related factors appears to be involved. Some
@@ -229,7 +231,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
@@ -245,28 +247,30 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of MS vary widely depending on the extent and location of nerve damage. Common symptoms include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-6'>
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosing MS requires a combination of tests and assessments, as there is no single definitive test for the disease. The process typically includes:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
             While there is no cure for MS, a variety of treatments are available

@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -9,6 +8,9 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from "@/components/ui/IssuesLinks"
+
 
 const data = {
   title: 'Spinal Disorders',
@@ -178,12 +180,12 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
           title="Causes of Spinal Disorders"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light" text="">
           Spinal disorders can arise from various factors, including:
@@ -200,37 +202,37 @@ function GeneralSurgery() {
         </div>
         <KnowMore title={data.title} />
         <div className="space-y-8 pt-8">
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms associated with spinal disorders can vary widely but may include:"
-                titleCss="text-black font-semibold text-center text-xl"
+                titleCss="text-black font-medium text-center text-2xl"
                 textCss="font-light py-4 min-h-[80px]"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-4'>
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosis for robotic knee replacement surgery involves a comprehensive evaluation, including:"
                 header=""
-                titleCss="text-black font-semibold text-center text-xl"
+                titleCss="text-black font-medium text-center text-2xl"
                 textCss="font-light py-4 min-h-[80px]"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
           <H2
             title="Treatment"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
 
           <p className="font-light">

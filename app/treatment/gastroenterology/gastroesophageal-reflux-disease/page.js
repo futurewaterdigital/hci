@@ -1,12 +1,14 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
+import KnowMore from '@/components/ui/KnowMore'
 
 const data = {
   title: 'Gastroesophageal Reflux Disease (GERD)',
@@ -153,14 +155,14 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            'Esophagitis: Inflammation that can cause bleeding or ulcers.',
+            '<span class="font-semibold text-hciSecondary">Esophagitis:</span> Inflammation that can cause bleeding or ulcers.',
         },
         {
           description:
-            'Esophageal Stricture: Narrowing of the esophagus due to scar tissue, leading to swallowing difficulties.',
+            '<span class="font-semibold text-hciSecondary">Esophageal Stricture:</span> Narrowing of the esophagus due to scar tissue, leading to swallowing difficulties.',
         },
         {
-          description: `Barrett's Esophagus: Precancerous changes in the esophageal lining, increasing the risk of esophageal cancer.`,
+          description: `<span class="font-semibold text-hciSecondary">Barrett's Esophagus:</span> Precancerous changes in the esophageal lining, increasing the risk of esophageal cancer.`,
         },
       ],
     },
@@ -198,19 +200,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            'Antacids: Provide quick relief by neutralizing stomach acid.',
+            '<span class="font-semibold text-hciSecondary">Antacids:</span> Provide quick relief by neutralizing stomach acid.',
         },
         {
           description:
-            'H2-Receptor Blockers: Reduce acid production (e.g., ranitidine, famotidine).',
+            '<span class="font-semibold text-hciSecondary">H2-Receptor Blockers:</span> Reduce acid production (e.g., ranitidine, famotidine).',
         },
         {
           description:
-            'Proton Pump Inhibitors (PPIs): Stronger medications that block acid production (e.g., omeprazole, esomeprazole).',
+            '<span class="font-semibold text-hciSecondary">Proton Pump Inhibitors (PPIs):</span> Stronger medications that block acid production (e.g., omeprazole, esomeprazole).',
         },
         {
           description:
-            'Prokinetics: Help with stomach emptying and improve LES function (e.g., metoclopramide).',
+            '<span class="font-semibold text-hciSecondary">Prokinetics:</span> Help with stomach emptying and improve LES function (e.g., metoclopramide).',
         },
       ],
     },
@@ -220,11 +222,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            'Fundoplication: The upper part of the stomach is wrapped around the lower esophagus to strengthen the LES.',
+            '<span class="font-semibold text-hciSecondary">Fundoplication:</span> The upper part of the stomach is wrapped around the lower esophagus to strengthen the LES.',
         },
         {
           description:
-            'LINX Device: A magnetic ring placed around the LES to prevent reflux while allowing food to pass normally.',
+            '<span class="font-semibold text-hciSecondary">LINX Device:</span> A magnetic ring placed around the LES to prevent reflux while allowing food to pass normally.',
         },
       ],
     },
@@ -308,13 +310,14 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        
+        <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
         <H2
           title="How GERD Occurs in the Esophagus"
-          className="font-semibold mb-4 text-center"
+          className="font-medium mb-4 text-center text-2xl"
         />
         <p className="font-light">
           In healthy digestion, the lower esophageal sphincter (LES)—a muscular
@@ -327,7 +330,7 @@ function GeneralSurgery() {
         </p>
         <H2
           title="Symptoms"
-          className="font-semibold mb-4 text-center"
+          className="font-medium mb-4 text-center text-2xl"
         />
         <div className="mb-8">
           <DataLists
@@ -340,60 +343,8 @@ function GeneralSurgery() {
           />
         </div>
 
-        {/* <div className="grid lg:grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Oesophageal Cancer (Ca Oesophagus)
-              </span>
-              <br />
-              Affects the oesophagus, the tube connecting the throat to the
-              stomach
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Stomach Cancer (Ca Stomach)
-              </span>
-              <br />
-              Also known as gastric cancer, originating from the stomach lining.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Colon Cancer (Ca Colon)
-              </span>
-              <br />
-              Develops in the colon, the initial part of the large intestine.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Rectal Cancer (Ca Rectum)
-              </span>
-              <br />
-              Forms in the rectum, the lower part of the large intestine before
-              the anus.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Gallbladder Cancer (Ca Gallbladder)
-              </span>
-              <br />
-              Begins in the gallbladder, a small organ beneath the liver that
-              stores bile.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Pancreatic Cancer (Ca Pancreas)
-              </span>
-              <br />
-              Originates in the pancreas, an organ involved in digestion and
-              hormone production.
-            </p>
-          </div>
-          <div>
-            <img src="/gastroenterology/digestive-system.png" alt="" />
-          </div>
-        </div> */}
-        <H2 text="Causes" textClass="text-2xl font-semibold mb-4 text-center" />
+        
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl pt-12" />
         <p className="font-light">
           GERD results from repeated episodes of acid or non-acid reflux. This
           occurs when the lower esophageal sphincter does not close properly,
@@ -408,64 +359,32 @@ function GeneralSurgery() {
             ulClass="list-disc list-outside"
             boxClass="bg-hciYellow"
           />
-          {/* {data.section_1.map((item, index) => (
-            <TextComponent
-              key={index}
-              title={item.title}
-              description={item.description}
-              boxCss="w-full min-h-[60px] bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
-            />
-          ))} */}
+        <KnowMore title={data.title} />
         </div>
-        {/* <H2
-          text="Symptoms"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
-        <div className="mb-8">
-          <DataLists
-            divClass="grid grid-cols-3 gap-4"
-            // key={index}
-            // desc={data.complications[0].description}
-            data={data.data_1}
-            ulClass="list-disc list-outside"
-            // boxClass="grid grid-cols-2"
-          />
-        </div> */}
+        
 
         <div className="grid grid-cols-1 gap-4 pt-8">
-          {/* <div>
-            <DataBoxes
-              title="Symptoms"
-              // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center"
-              header=""
-              data={data.symptoms}
-              myclass="grid grid-cols-3"
-            />
-            <KnowMore title={data.title} />
-          </div> */}
+         
           <div>
             <DataBoxes
               title="Diagnosis"
               text="Several diagnostic tests help confirm GERD, including:"
               header=""
-              titleCss="text-black font-semibold text-center text-xl"
+              titleCss="text-black font-medium text-center text-2xl"
               textCss="font-light py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-1"
             />
           </div>
+          <IssuesLinks head={data.title} />
         </div>
 
-        <div>
+        <div className="pt-12">
           <H2
             title="Treatment"
-            className="font-semibold mb-4 text-center"
+            className="font-medium mb-4 text-center text-2xl"
           />
-          {/* <p className="font-light">
-            The goal of treatment is to reduce inflammation, relieve symptoms,
-            and maintain remission. Treatment options include:
-          </p> */}
+       
           <div className="mb-8">
             <DataLists
               divClass="grid grid-cols-1 gap-4"
@@ -479,7 +398,7 @@ function GeneralSurgery() {
 
           <H2
             title="Complications of GERD"
-            className="font-semibold mb-4 text-center"
+            className="font-medium mb-4 text-center text-2xl"
           />
           <div className="mb-8">
             <DataLists
@@ -492,60 +411,7 @@ function GeneralSurgery() {
             />
           </div>
 
-          {/* <H2
-            text="Lifestyle Tips to Prevent Gallbladder Stones"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          /> */}
-          {/* <p className="font-light">
-            While surgery can effectively address existing stones, adopting
-            healthy habits can reduce the risk of developing them:
-          </p> */}
-          {/* <ul className="list-disc list-inside py-4 space-y-2 font-light">
-            <li>
-              Maintain a Healthy Weight: Gradual weight management helps prevent
-              changes in bile composition.
-            </li>
-            <li>
-              Eat a Balanced Diet: Opt for fibre-rich foods like fruits,
-              vegetables, and whole grains. Avoid excessive intake of fatty and
-              fried foods.
-            </li>
-            <li>
-              Stay Hydrated: Drinking plenty of water helps keep bile flowing
-              smoothly.
-            </li>
-            <li>
-              Exercise Regularly: Physical activity promotes healthy digestion
-              and overall well-being.
-            </li>
-            <li>
-              Avoid Crash Diets: Losing weight too quickly can increase the risk
-              of gallstones.
-            </li>
-          </ul> */}
-          {/* <DataLists
-            // desc={data.complications[0].heading}
-            data={data.complications}
-          /> */}
-
-          {/* <H2
-            text="Recovery and Post-Treatment Care"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
-          <p className="font-light">
-            After treatment, proper care is essential to ensure a smooth
-            recovery and prevent future problems:
-          </p> */}
-          {/* <div className="mb-8">
-            <DataLists
-              divClass="grid grid-cols-1 gap-4"
-              // key={index}
-              // desc={data.complications[0].description}
-              data={data.data_1}
-              ulClass="list-none list-outside"
-              // boxClass="grid grid-cols-2"
-            />
-          </div> */}
+         <KnowMore title={data.title} />
         </div>
 
         <Conclusion data={footerData} />
