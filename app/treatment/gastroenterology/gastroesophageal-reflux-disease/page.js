@@ -11,89 +11,89 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 import KnowMore from '@/components/ui/KnowMore'
 
 const data = {
-  title: 'Gastroesophageal Reflux Disease (GERD)',
-  bannerImage: '/gastroenterology/gastroesophageal-reflux-disease.png',
+  title: "Gastroesophageal Reflux Disease (GERD)",
+  bannerImage: "/gastroenterology/gastroesophageal-reflux-disease.png",
   description: `GERD (Gastroesophageal Reflux Disease) is a chronic digestive condition where stomach acid or, occasionally, bile flows back into the esophagus—the tube that connects the throat and stomach. This backwash, known as acid reflux, irritates the esophageal lining, causing discomfort. While occasional acid reflux is normal, GERD occurs when the reflux becomes frequent and persistent, leading to inflammation and complications.`,
   overview:
-    'Many individuals can manage GERD with lifestyle modifications and medications, but more severe cases may require surgical intervention.',
+    "Many individuals can manage GERD with lifestyle modifications and medications, but more severe cases may require surgical intervention.",
 
   section_1: [
     {
-      title: 'Autoimmune response:',
+      title: "Autoimmune response:",
       description:
-        'The immune system mistakenly attacks healthy cells in the colon, causing inflammation.',
+        "The immune system mistakenly attacks healthy cells in the colon, causing inflammation.",
     },
     {
-      title: 'Genetic predisposition:',
+      title: "Genetic predisposition:",
       description:
-        'People with a family history of UC or other IBDs are at higher risk.',
+        "People with a family history of UC or other IBDs are at higher risk.",
     },
     {
-      title: 'Gut microbiome imbalance:',
-      description: 'Alterations in gut bacteria may trigger inflammation.',
+      title: "Gut microbiome imbalance:",
+      description: "Alterations in gut bacteria may trigger inflammation.",
     },
     {
-      title: 'Environmental triggers:',
+      title: "Environmental triggers:",
       description:
-        'Factors like stress, infections, and diet may not cause UC directly but can provoke flare-ups.',
+        "Factors like stress, infections, and diet may not cause UC directly but can provoke flare-ups.",
     },
     {
-      title: 'Risk factors:',
+      title: "Risk factors:",
       description:
-        'UC is more prevalent in younger individuals (15–30 years) and those over 60. It is also more common among people of Ashkenazi Jewish descent.',
+        "UC is more prevalent in younger individuals (15–30 years) and those over 60. It is also more common among people of Ashkenazi Jewish descent.",
     },
   ],
 
   data_1: [
     {
-      heading: 'The primary symptoms of GERD include:',
-      description: '',
+      heading: "The primary symptoms of GERD include:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Heartburn:A burning sensation in the chest, often occurring after meals and worsening at night or when lying down.',
+            "Heartburn:A burning sensation in the chest, often occurring after meals and worsening at night or when lying down.",
         },
         {
           description:
-            'Regurgitation:A sour or bitter-tasting liquid or food rising into the throat.',
+            "Regurgitation:A sour or bitter-tasting liquid or food rising into the throat.",
         },
         {
-          description: 'Chest or upper abdominal pain.',
+          description: "Chest or upper abdominal pain.",
         },
         {
-          description: 'Difficulty swallowing (dysphagia).',
+          description: "Difficulty swallowing (dysphagia).",
         },
         {
-          description: 'Sensation of a lump in the throat.',
+          description: "Sensation of a lump in the throat.",
         },
       ],
     },
     {
-      heading: 'Nighttime reflux can also lead to:',
-      description: '',
+      heading: "Nighttime reflux can also lead to:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Chronic cough.',
+          description: "Chronic cough.",
         },
         {
-          description: 'Hoarseness or laryngitis.',
+          description: "Hoarseness or laryngitis.",
         },
         {
-          description: 'Worsening asthma symptoms',
+          description: "Worsening asthma symptoms",
         },
       ],
     },
     {
-      heading: 'When to Seek Medical Help:',
-      description: '',
+      heading: "When to Seek Medical Help:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'If you experience chest pain with shortness of breath or radiating pain in the arm or jaw (as these may indicate a heart attack).',
+            "If you experience chest pain with shortness of breath or radiating pain in the arm or jaw (as these may indicate a heart attack).",
         },
         {
           description:
-            'If GERD symptoms are severe, frequent, or do not improve with over-the-counter medications.',
+            "If GERD symptoms are severe, frequent, or do not improve with over-the-counter medications.",
         },
       ],
     },
@@ -101,57 +101,57 @@ const data = {
 
   data_2: [
     {
-      heading: 'Risk Factors:',
-      description: '',
+      heading: "Risk Factors:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Obesity: Excess weight increases pressure on the abdomen, forcing stomach contents upward.',
+            "Obesity: Excess weight increases pressure on the abdomen, forcing stomach contents upward.",
         },
         {
           description:
-            'Hiatal Hernia: A condition where the stomach bulges above the diaphragm, affecting the LES’s function.',
+            "Hiatal Hernia: A condition where the stomach bulges above the diaphragm, affecting the LES’s function.",
         },
         {
           description:
-            'Pregnancy: Hormonal changes and increased abdominal pressure may trigger reflux.',
+            "Pregnancy: Hormonal changes and increased abdominal pressure may trigger reflux.",
         },
         {
           description:
-            'Connective tissue disorders: Conditions like scleroderma that affect muscles and connective tissues.',
+            "Connective tissue disorders: Conditions like scleroderma that affect muscles and connective tissues.",
         },
         {
           description:
-            'Delayed stomach emptying: Impaired digestion can increase the chances of reflux.',
+            "Delayed stomach emptying: Impaired digestion can increase the chances of reflux.",
         },
       ],
     },
     {
-      heading: 'Aggravating Factors:',
-      description: '',
+      heading: "Aggravating Factors:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Smoking.',
+          description: "Smoking.",
         },
         {
-          description: 'Eating large meals or eating close to bedtime.',
+          description: "Eating large meals or eating close to bedtime.",
         },
         {
-          description: 'Fatty or fried foods.',
+          description: "Fatty or fried foods.",
         },
         {
-          description: 'Caffeine or alcohol consumption.',
+          description: "Caffeine or alcohol consumption.",
         },
         {
-          description: 'Certain medications, such as aspirin and NSAIDs',
+          description: "Certain medications, such as aspirin and NSAIDs",
         },
       ],
     },
   ],
   data_3: [
     {
-      heading: 'Untreated GERD can lead to:',
-      description: '',
+      heading: "Untreated GERD can lead to:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -170,33 +170,33 @@ const data = {
 
   complications: [
     {
-      heading: 'Lifestyle Modifications:',
-      description: '',
+      heading: "Lifestyle Modifications:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Maintain a healthy weight.',
+          description: "Maintain a healthy weight.",
         },
         {
           description:
-            'Avoid large meals and refrain from eating late at night.',
+            "Avoid large meals and refrain from eating late at night.",
         },
         {
           description:
-            'Elevate the head of your bed to prevent nighttime reflux.',
+            "Elevate the head of your bed to prevent nighttime reflux.",
         },
         {
-          description: 'Avoid smoking, caffeine, and alcohol.',
+          description: "Avoid smoking, caffeine, and alcohol.",
         },
         {
           description:
-            'Identify and avoid trigger foods, such as spicy or fatty foods.',
+            "Identify and avoid trigger foods, such as spicy or fatty foods.",
         },
       ],
     },
 
     {
-      heading: 'Medications:',
-      description: '',
+      heading: "Medications:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -217,8 +217,8 @@ const data = {
       ],
     },
     {
-      heading: 'Surgical Options (for severe cases):',
-      description: '',
+      heading: "Surgical Options (for severe cases):",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -233,77 +233,77 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   symptoms: [
     {
-      category: 'Abdominal Pain:',
+      category: "Abdominal Pain:",
       description:
-        'A common symptom, often described as a burning sensation or discomfort in the upper abdomen.',
-      bgColor: 'bg-hciPrimary text-white',
+        "A common symptom, often described as a burning sensation or discomfort in the upper abdomen.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Nausea or Vomiting:',
-      description: 'Can occur, sometimes accompanied by a loss of appetite.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Nausea or Vomiting:",
+      description: "Can occur, sometimes accompanied by a loss of appetite.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Bloating and Indigestion:',
+      category: "Bloating and Indigestion:",
       description:
-        'Feelings of fullness and discomfort after eating are common.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Feelings of fullness and discomfort after eating are common.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Loss of Appetite:',
-      description: 'May lead to unintended weight loss in some individuals.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Loss of Appetite:",
+      description: "May lead to unintended weight loss in some individuals.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Black or Tarry Stools:',
+      category: "Black or Tarry Stools:",
       description:
-        'Can indicate bleeding in the stomach and should prompt immediate medical attention.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Can indicate bleeding in the stomach and should prompt immediate medical attention.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Upper Endoscopy:',
+      category: "Upper Endoscopy:",
       description:
-        'A thin, flexible tube with a camera is used to inspect the esophagus and look for signs of inflammation, strictures, or Barrett’s esophagus.',
-      bgColor: 'bg-hciSecondary text-white',
+        "A thin, flexible tube with a camera is used to inspect the esophagus and look for signs of inflammation, strictures, or Barrett’s esophagus.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Esophageal pH Monitoring:',
+      category: "Esophageal pH Monitoring:",
       description: `This test measures the frequency and duration of acid reflux over 24 hours.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Manometry:',
+      category: "Manometry:",
       description:
-        'Assesses the function and strength of the esophageal muscles and the LES.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Assesses the function and strength of the esophageal muscles and the LES.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Barium Swallow X-ray:',
+      category: "Barium Swallow X-ray:",
       description:
-        'A special X-ray test to evaluate the shape and function of the esophagus.',
-      bgColor: 'bg-hciSecondary text-white',
+        "A special X-ray test to evaluate the shape and function of the esophagus.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
      GERD is a manageable condition for most individuals through a combination of lifestyle changes and medication. However, severe cases may require surgery to prevent complications. Early diagnosis and intervention are essential to avoid long-term esophageal damage. Consulting a healthcare professional for persistent or severe symptoms is crucial for appropriate management and improving the quality of life.`,
   },
-]
+];
 
 function GeneralSurgery() {
   return (
@@ -415,12 +415,12 @@ function GeneralSurgery() {
         </div>
 
         <Conclusion data={footerData} />
-        
+
         <FooterLinks head={data.title} />
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

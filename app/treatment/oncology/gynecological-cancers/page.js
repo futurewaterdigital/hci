@@ -11,6 +11,7 @@ import Conclusion from "@/components/cardiacComponents/Conclusion";
 // import Link from 'next/link'
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H3 from "@/components/ui/h3";
+import Link from "next/link";
 
 const data = {
   title: "Gynecological Cancers",
@@ -179,14 +180,44 @@ const data = {
   ],
 };
 
+const womenCancerTypes = [
+  {
+    menu: "Endometrial Cancer",
+    url: "/treatment/oncology/gynecological-cancers",
+  },
+  {
+    menu: "Ovarian Cancer",
+    url: "/treatment/oncology/ovarian-cancer",
+  },
+  {
+    menu: "Cervical Cancer",
+    url: "/treatment/oncology/cervical-cancer",
+  },
+];
+
 function EndometrialCancer() {
   return (
     <div className="container mx-auto">
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <div className="my-10">
-          <Title title={data.title} />
+          <Title title={data.title} className="text-4xl text-pink-500" />
           <H2 title={data.description} className="text-start text-lg" />
+        </div>
+
+        {/* More Link about brain tumor */}
+        <div className="my-4">
+          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-semibold">
+            {womenCancerTypes.map((item, index) => (
+              <Link
+                key={index}
+                href={item.url}
+                className="hover:text-hciSecondary cursor-pointer"
+              >
+                {item.menu}
+              </Link>
+            ))}
+          </div>
         </div>
 
         <Banner image={data.bannerImage_1} />

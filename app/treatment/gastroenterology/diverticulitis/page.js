@@ -12,34 +12,34 @@ import H1 from '@/components/ui/h1'
 import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
-  title: 'Diverticulitis',
-  bannerImage: '/gastroenterology/diverticulitis.png',
+  title: "Diverticulitis",
+  bannerImage: "/gastroenterology/diverticulitis.png",
   description: `Diverticulitis occurs when small pouches called diverticula, formed along the inner lining of the colon, become inflamed or infected. This condition develops from diverticulosis, where these pouches exist without inflammation. Diverticulitis can cause intense abdominal pain and digestive issues and may range from mild to severe. It is more common in older adults and can result in complications if untreated.`,
-  overview: '',
+  overview: "",
 
   section_1: [
     {
-      title: '',
+      title: "",
       description:
         '<span class="font-semibold ">Tear or injury to the diverticula:</span> This can trigger inflammation or infection.',
     },
     {
-      title: '',
+      title: "",
       description:
         '<span class="font-semibold ">Straining during bowel movements:</span> Hard stools may stretch and injure the diverticula.',
     },
     {
-      title: '',
+      title: "",
       description:
         '<span class="font-semibold ">Colitis or viral infections:</span> Chronic colon inflammation may predispose diverticula to rupture.',
     },
     {
-      title: '',
+      title: "",
       description:
         '<span class="font-semibold ">Bacterial infection:</span> Fecal matter trapped in the diverticula can provide a breeding ground for bacteria.',
     },
     {
-      title: '',
+      title: "",
       description:
         '<span class="font-semibold ">Low-fibre diet:</span> A lack of dietary fibre can lead to constipation, increasing pressure on the colon.',
     },
@@ -47,42 +47,42 @@ const data = {
 
   data_1: [
     {
-      heading: 'Pain Management:',
-      description: '',
+      heading: "Pain Management:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Medications may be prescribed to relieve any discomfort after surgery or treatment.',
+            "Medications may be prescribed to relieve any discomfort after surgery or treatment.",
         },
       ],
     },
     {
-      heading: 'Follow-Up Appointments:',
-      description: '',
+      heading: "Follow-Up Appointments:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Regular visits to monitor recovery and address any concerns.',
+            "Regular visits to monitor recovery and address any concerns.",
         },
       ],
     },
     {
-      heading: 'Dietary Adjustments:',
-      description: '',
+      heading: "Dietary Adjustments:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Your healthcare provider may recommend a low-fat diet temporarily to aid digestion.',
+            "Your healthcare provider may recommend a low-fat diet temporarily to aid digestion.",
         },
       ],
     },
     {
-      heading: 'Activity Restrictions:',
-      description: '',
+      heading: "Activity Restrictions:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Light activities can usually be resumed within a few days after minimally invasive procedures. However, heavy lifting or strenuous exercises should be avoided until full recovery.',
+            "Light activities can usually be resumed within a few days after minimally invasive procedures. However, heavy lifting or strenuous exercises should be avoided until full recovery.",
         },
       ],
     },
@@ -90,8 +90,8 @@ const data = {
 
   complications: [
     {
-      heading: 'Home Treatment for Mild Cases:',
-      description: '',
+      heading: "Home Treatment for Mild Cases:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -112,8 +112,8 @@ const data = {
     },
 
     {
-      heading: 'Hospitalization for Severe or Complicated Cases:',
-      description: '',
+      heading: "Hospitalization for Severe or Complicated Cases:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -136,15 +136,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Most cases of diverticulitis resolve with early medical intervention, particularly if the condition is mild and uncomplicated. Lifestyle changes such as a high-fibre diet, regular hydration, and exercise can help prevent flare-ups. However, untreated or severe cases can lead to complications such as perforations, abscesses, or fistulas. Early detection and treatment ensure a favourable prognosis, allowing most people to recover fully without long-term consequences.
           `,
@@ -165,25 +165,25 @@ const data = {
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold ">Fever:</span> Indicating possible infection.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         'Nausea and vomiting.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         'Constipation or, occasionally, diarrhoea.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         'Rectal bleeding or blood in stool.',
       bgColor: 'bg-hciPrimary text-white',
@@ -193,7 +193,7 @@ const data = {
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold ">Medical history and physical exam:</span> A healthcare provider may suspect diverticulitis based on symptoms and abdominal tenderness.',
       bgColor: 'bg-hciSecondary text-white',
@@ -206,34 +206,34 @@ const data = {
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold ">Blood tests:</span> To check for signs of infection or inflammation.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold ">Colonoscopy:</span> Sometimes used to assess the colon directly, though it is avoided during acute flare-ups to reduce the risk of perforation.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold ">Stool and urine tests:</span> Used to rule out other conditions like infections or gastrointestinal bleeding.',
       bgColor: 'bg-hciSecondary text-white',
     },
   ],
-}
+};
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
      Most cases of diverticulitis resolve with early medical intervention, particularly if the condition is mild and uncomplicated. Lifestyle changes such as a high-fibre diet, regular hydration, and exercise can help prevent flare-ups. However, untreated or severe cases can lead to complications such as perforations, abscesses, or fistulas. Early detection and treatment ensure a favourable prognosis, allowing most people to recover fully without long-term consequences.
 
           `,
   },
-]
+];
 
 function GeneralSurgery() {
   return (
@@ -313,7 +313,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

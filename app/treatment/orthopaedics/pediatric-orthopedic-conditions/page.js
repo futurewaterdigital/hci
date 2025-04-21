@@ -13,95 +13,95 @@ import IssuesLinks from "@/components/ui/IssuesLinks"
 
 
 const data = {
-  title: 'Pediatric Orthopedic Conditions',
-  bannerImage: '/orthopaedics/pediatric-orthopedic-conditions.png',
+  title: "Pediatric Orthopedic Conditions",
+  bannerImage: "/orthopaedics/pediatric-orthopedic-conditions.png",
   description: `Pediatric orthopedic conditions refer to disorders affecting the musculoskeletal system of children, including bones, joints, and muscles. These conditions can significantly impact growth, physical development, and a child’s ability to engage in everyday activities. Timely diagnosis and proper care are crucial in ensuring optimal outcomes and preventing long-term complications.`,
   overview: `This section explores common pediatric orthopedic conditions, their causes, symptoms, diagnostic methods, and treatment options to help families navigate these challenges effectively.`,
 
   causes: [
     {
-      title: 'Congenital Issues',
+      title: "Congenital Issues",
       description:
-        'Conditions such as clubfoot and developmental dysplasia of the hip (DDH) are present from birth.',
+        "Conditions such as clubfoot and developmental dysplasia of the hip (DDH) are present from birth.",
     },
     {
-      title: 'Injuries and Trauma',
+      title: "Injuries and Trauma",
       description:
-        'Falls, sports activities, or accidents may lead to fractures or joint dislocations.',
+        "Falls, sports activities, or accidents may lead to fractures or joint dislocations.",
     },
     {
-      title: 'Genetic or Hereditary Factors',
+      title: "Genetic or Hereditary Factors",
       description:
-        'Certain conditions, such as scoliosis, may run in families.',
+        "Certain conditions, such as scoliosis, may run in families.",
     },
     {
-      title: 'Infections and Inflammation',
+      title: "Infections and Inflammation",
       description:
-        'Diseases like Osgood-Schlatter involve inflammation at the growth plates.',
+        "Diseases like Osgood-Schlatter involve inflammation at the growth plates.",
     },
     {
-      title: 'Overuse and Improper Growth Patterns',
+      title: "Overuse and Improper Growth Patterns",
       description:
-        'Repeated strain on joints or muscles during growth spurts can contribute to some orthopedic conditions.',
+        "Repeated strain on joints or muscles during growth spurts can contribute to some orthopedic conditions.",
     },
   ],
 
   complications: [
     {
-      heading: 'Non-Surgical Treatment',
+      heading: "Non-Surgical Treatment",
       aneurysmSymptoms: [
         {
           description:
-            'Physical Therapy: Helps restore strength, flexibility, and range of motion.',
+            "Physical Therapy: Helps restore strength, flexibility, and range of motion.",
         },
         {
           description:
-            'Bracing or Splinting: Corrective devices are used for conditions like scoliosis or clubfoot.',
+            "Bracing or Splinting: Corrective devices are used for conditions like scoliosis or clubfoot.",
         },
         {
           description:
-            'Activity Modification: Reducing activities that exacerbate symptoms.',
+            "Activity Modification: Reducing activities that exacerbate symptoms.",
         },
         {
           description:
-            'Medications: Pain management and anti-inflammatory medications for discomfort.',
+            "Medications: Pain management and anti-inflammatory medications for discomfort.",
         },
       ],
     },
 
     {
-      heading: 'Surgical Treatment',
+      heading: "Surgical Treatment",
       aneurysmSymptoms: [
         {
           description:
-            'Closed Reduction: For conditions like DDH, realigning bones without major incisions.',
+            "Closed Reduction: For conditions like DDH, realigning bones without major incisions.",
         },
         {
           description:
-            'Osteotomy: Cutting and realigning bones to improve joint function.',
+            "Osteotomy: Cutting and realigning bones to improve joint function.",
         },
         {
           description:
-            'Fracture Fixation: Using pins or plates to stabilize broken bones.',
+            "Fracture Fixation: Using pins or plates to stabilize broken bones.",
         },
         {
           description:
-            'Spinal Surgery: For severe scoliosis cases, to correct and stabilize the spine.',
+            "Spinal Surgery: For severe scoliosis cases, to correct and stabilize the spine.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Understanding pediatric orthopedic conditions helps parents, caregivers, and healthcare providers take appropriate steps toward treatment and prevention. Timely medical intervention ensures children experience better physical development and improved quality of life. If you notice any of the above symptoms or have concerns about your child’s musculoskeletal health, consult a pediatric orthopedic specialist promptly.
           `,
@@ -110,115 +110,115 @@ const data = {
 
   symptoms: [
     {
-      category: 'Pain or Swelling',
+      category: "Pain or Swelling",
       description:
-        'Persistent pain in bones, joints, or muscles, especially after an injury.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Persistent pain in bones, joints, or muscles, especially after an injury.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Difficulty in Movement',
+      category: "Difficulty in Movement",
       description:
-        'Stiffness, reduced range of motion, or inability to walk or bear weight properly.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Stiffness, reduced range of motion, or inability to walk or bear weight properly.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Deformities',
+      category: "Deformities",
       description:
-        'Visible misalignment of limbs, curvature of the spine, or uneven leg lengths.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Visible misalignment of limbs, curvature of the spine, or uneven leg lengths.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Growth Issues',
-      description: 'Delays in motor development or abnormal growth patterns.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Growth Issues",
+      description: "Delays in motor development or abnormal growth patterns.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Recurring Injuries',
+      category: "Recurring Injuries",
       description:
-        'Injuries occurring frequently in the same areas can indicate underlying orthopedic problems.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Injuries occurring frequently in the same areas can indicate underlying orthopedic problems.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Clinical Examination',
+      category: "Clinical Examination",
       description:
-        'Doctors assess physical symptoms such as pain, swelling, or deformity.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Doctors assess physical symptoms such as pain, swelling, or deformity.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Imaging Studies',
+      category: "Imaging Studies",
       description:
-        'X-rays, ultrasound, MRI, or CT scans help confirm structural issues.',
-      bgColor: 'bg-hciSecondary text-white',
+        "X-rays, ultrasound, MRI, or CT scans help confirm structural issues.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Genetic Testing',
+      category: "Genetic Testing",
       description:
-        'For hereditary conditions like scoliosis, additional genetic evaluation may be recommended.',
-      bgColor: 'bg-hciSecondary text-white',
+        "For hereditary conditions like scoliosis, additional genetic evaluation may be recommended.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Growth Monitoring',
+      category: "Growth Monitoring",
       description:
-        'Tracking developmental milestones can identify abnormalities early.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Tracking developmental milestones can identify abnormalities early.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
 
   consideration: [
     {
-      title: 'Regular Check-ups',
+      title: "Regular Check-ups",
       description:
-        'Routine pediatric visits help detect developmental issues early.',
+        "Routine pediatric visits help detect developmental issues early.",
     },
     {
-      title: 'Safe Practices in Sports',
+      title: "Safe Practices in Sports",
       description:
-        'Proper warm-up routines and protective gear minimize injuries.',
+        "Proper warm-up routines and protective gear minimize injuries.",
     },
     {
-      title: 'Nutritional Support',
-      description: 'A diet rich in calcium and vitamin D supports bone health.',
+      title: "Nutritional Support",
+      description: "A diet rich in calcium and vitamin D supports bone health.",
     },
     {
-      title: 'Emotional Support',
+      title: "Emotional Support",
       description:
-        'Helping children and families cope with the psychological impact of orthopedic conditions ensures holistic well-being.',
+        "Helping children and families cope with the psychological impact of orthopedic conditions ensures holistic well-being.",
     },
     {
-      title: 'Rehabilitation',
+      title: "Rehabilitation",
       description:
-        'Comprehensive physiotherapy aids recovery and promotes mobility post-treatment.',
+        "Comprehensive physiotherapy aids recovery and promotes mobility post-treatment.",
     },
   ],
   consideration_1: [
     {
-      title: 'Persistent Pain',
+      title: "Persistent Pain",
       description:
-        'Lasting discomfort or swelling, especially after an injury.',
+        "Lasting discomfort or swelling, especially after an injury.",
     },
     {
-      title: 'Visible Deformity',
-      description: 'Abnormal alignment of limbs, joints, or posture.',
+      title: "Visible Deformity",
+      description: "Abnormal alignment of limbs, joints, or posture.",
     },
     {
-      title: 'Difficulty Walking or Moving',
-      description: 'Inability to bear weight or move joints comfortably.',
+      title: "Difficulty Walking or Moving",
+      description: "Inability to bear weight or move joints comfortably.",
     },
     {
-      title: 'Growth Concerns',
+      title: "Growth Concerns",
       description:
-        'Delayed developmental milestones or uneven growth patterns.',
+        "Delayed developmental milestones or uneven growth patterns.",
     },
     {
-      title: 'Recurring Injuries',
+      title: "Recurring Injuries",
       description:
-        'Frequent injuries in the same area requiring further evaluation.',
+        "Frequent injuries in the same area requiring further evaluation.",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
@@ -358,7 +358,7 @@ function GeneralSurgery() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

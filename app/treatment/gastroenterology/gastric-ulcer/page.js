@@ -12,43 +12,43 @@ import H1 from '@/components/ui/h1'
 import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
-  title: 'Gastric Ulcer',
-  bannerImage: '/gastroenterology/gastric-ulcer.png',
+  title: "Gastric Ulcer",
+  bannerImage: "/gastroenterology/gastric-ulcer.png",
   description: `Gastric ulcers are open sores that develop on the inner lining of the stomach, typically due to an imbalance between digestive acids and the stomach’s protective mucus lining. They are a type of peptic ulcer disease (PUD) and can cause significant discomfort, particularly after eating. Gastric ulcers, if untreated, can lead to complications like bleeding or perforation.`,
-  overview: '',
+  overview: "",
 
   section_1: [
     {
-      title: 'Helicobacter pylori Infection',
-      description: 'A bacterial infection that disrupts the stomach lining.',
+      title: "Helicobacter pylori Infection",
+      description: "A bacterial infection that disrupts the stomach lining.",
     },
     {
-      title: 'Smoking',
+      title: "Smoking",
       description:
-        'Increases acid production and delays healing of existing ulcers.',
+        "Increases acid production and delays healing of existing ulcers.",
     },
 
     {
-      title: 'Stress',
+      title: "Stress",
       description:
-        'Physical or emotional stress can exacerbate symptoms or trigger ulcer development.',
+        "Physical or emotional stress can exacerbate symptoms or trigger ulcer development.",
     },
     {
-      title: 'NSAID Use',
+      title: "NSAID Use",
       description:
-        'Long-term use of nonsteroidal anti-inflammatory drugs like ibuprofen or aspirin can irritate the stomach lining.',
+        "Long-term use of nonsteroidal anti-inflammatory drugs like ibuprofen or aspirin can irritate the stomach lining.",
     },
     {
-      title: 'Excessive Alcohol Consumption',
+      title: "Excessive Alcohol Consumption",
       description:
-        'Weakens the protective mucus layer, making the stomach more prone to ulcers.',
+        "Weakens the protective mucus layer, making the stomach more prone to ulcers.",
     },
   ],
 
   data_1: [
     {
-      heading: 'Acute Gastric Ulcer:',
-      description: '',
+      heading: "Acute Gastric Ulcer:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -65,8 +65,8 @@ const data = {
       ],
     },
     {
-      heading: 'Chronic Gastric Ulcer:',
-      description: '',
+      heading: "Chronic Gastric Ulcer:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -83,8 +83,8 @@ const data = {
       ],
     },
     {
-      heading: 'Bleeding Ulcer:',
-      description: '',
+      heading: "Bleeding Ulcer:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -101,8 +101,8 @@ const data = {
       ],
     },
     {
-      heading: 'Perforated Ulcer:',
-      description: '',
+      heading: "Perforated Ulcer:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -121,19 +121,19 @@ const data = {
 
   complications: [
     {
-      heading: 'Home Treatment for Mild Cases:',
-      description: '',
+      heading: "Home Treatment for Mild Cases:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Dietary changes, reducing alcohol and smoking cessation can promote healing.',
+            "Dietary changes, reducing alcohol and smoking cessation can promote healing.",
         },
       ],
     },
 
     {
-      heading: 'Medications:',
-      description: '',
+      heading: "Medications:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -153,37 +153,37 @@ const data = {
       ],
     },
     {
-      heading: 'Endoscopic Treatment:',
-      description: '',
+      heading: "Endoscopic Treatment:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'For bleeding ulcers, endoscopy may be used to stop the bleeding with special techniques.',
+            "For bleeding ulcers, endoscopy may be used to stop the bleeding with special techniques.",
         },
       ],
     },
     {
-      heading: 'Surgery:',
-      description: '',
+      heading: "Surgery:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'In rare cases, surgery may be required to treat complications like perforation or non-healing ulcers.',
+            "In rare cases, surgery may be required to treat complications like perforation or non-healing ulcers.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Gastric ulcers can significantly impact quality of life, but early diagnosis and treatment can prevent complications. Managing lifestyle factors and adhering to prescribed medications are essential for effective treatment. If you experience persistent abdominal pain or symptoms of gastric ulcer, consulting a healthcare professional is vital for appropriate care and recovery.
           `,
@@ -192,31 +192,31 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Abdominal Pain:</span> Burning or dull ache, usually located in the upper abdomen, often worsening after meals.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Nausea or Vomiting:</span> May include vomiting blood in severe cases.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Bloating and Indigestion:</span> Discomfort and a feeling of fullness after eating.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Weight Loss:</span> Due to loss of appetite or fear of eating because of pain.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Black or Tarry Stools:</span> A sign of bleeding in the digestive tract.',
       bgColor: 'bg-hciPrimary text-white',
@@ -225,7 +225,7 @@ const data = {
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Medical History and Symptoms:</span> Healthcare professionals will assess symptoms, medication use, and lifestyle factors.',
       bgColor: 'bg-hciSecondary text-white',
@@ -236,28 +236,28 @@ const data = {
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">H. pylori Testing:</span> Blood, stool, or breath tests can confirm the presence of the H. pylori infection.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Imaging Tests:</span> In some cases, X-rays or CT scans may be used to detect perforation or obstruction.',
       bgColor: 'bg-hciSecondary text-white',
     },
   ],
-}
+};
 
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
      Gastric ulcers can significantly impact quality of life, but early diagnosis and treatment can prevent complications. Managing lifestyle factors and adhering to prescribed medications are essential for effective treatment. If you experience persistent abdominal pain or symptoms of gastric ulcer, consulting a healthcare professional is vital for appropriate care and recovery.
      `,
   },
-]
+];
 
 function GeneralSurgery() {
   return (
@@ -348,12 +348,12 @@ function GeneralSurgery() {
         </div>
 
         <Conclusion data={footerData} />
-        
+
         <FooterLinks head={data.title} />
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

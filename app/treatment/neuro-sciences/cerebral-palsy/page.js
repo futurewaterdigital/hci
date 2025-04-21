@@ -13,59 +13,59 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 
 
 const data = {
-  title: 'Cerebral Palsy',
-  bannerImage: '/neuro-sciences/cerebral-palsy.png',
+  title: "Cerebral Palsy",
+  bannerImage: "/neuro-sciences/cerebral-palsy.png",
   description: `Cerebral palsy (CP) is a group of neurological disorders that affect movement, muscle tone, and posture, primarily caused by abnormal brain development or damage to the developing brain. It is one of the most common causes of motor disability in childhood, significantly impacting a person’s ability to move and maintain balance and posture. In India, cerebral palsy poses considerable challenges to affected individuals and their families, necessitating comprehensive care and support.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Prenatal Factors',
+      title: "Prenatal Factors",
       description:
-        'Many cases of cerebral palsy result from complications during pregnancy, such as infections, exposure to toxins, or insufficient oxygen supply to the brain.',
+        "Many cases of cerebral palsy result from complications during pregnancy, such as infections, exposure to toxins, or insufficient oxygen supply to the brain.",
     },
     {
-      title: 'Postnatal Factors',
+      title: "Postnatal Factors",
       description:
-        'Brain injuries occurring after birth, such as infections, head trauma, or lack of oxygen due to drowning or choking, can also lead to cerebral palsy.',
+        "Brain injuries occurring after birth, such as infections, head trauma, or lack of oxygen due to drowning or choking, can also lead to cerebral palsy.",
     },
     {
-      title: 'Birth Complications',
+      title: "Birth Complications",
       description:
-        'Factors such as premature birth, low birth weight, or complications during delivery can increase the risk of developing CP.',
+        "Factors such as premature birth, low birth weight, or complications during delivery can increase the risk of developing CP.",
     },
     {
-      title: 'Genetic Factors',
+      title: "Genetic Factors",
       description:
-        'While most cases are due to environmental influences, some may have a genetic component, predisposing the child to brain abnormalities.',
+        "While most cases are due to environmental influences, some may have a genetic component, predisposing the child to brain abnormalities.",
     },
   ],
 
   complications: [
     {
-      heading: 'Physical Therapy',
-      description: '',
+      heading: "Physical Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Aimed at improving mobility and coordination through tailored exercises and activities.',
+            "Aimed at improving mobility and coordination through tailored exercises and activities.",
         },
       ],
     },
 
     {
-      heading: 'Occupational Therapy',
-      description: '',
+      heading: "Occupational Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Helps individuals develop skills for daily living and encourages independence in everyday activities. Helps individuals develop skills for daily living and encourages independence in everyday activities.',
+            "Helps individuals develop skills for daily living and encourages independence in everyday activities. Helps individuals develop skills for daily living and encourages independence in everyday activities.",
         },
       ],
     },
     {
-      heading: 'Speech Therapy',
-      description: '',
+      heading: "Speech Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Assists those with communication challenges, focusing on improving speech and language skills.
@@ -75,8 +75,8 @@ const data = {
       ],
     },
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Muscle relaxants, anticonvulsants, or pain management medications may be prescribed to alleviate symptoms.
@@ -85,8 +85,8 @@ const data = {
       ],
     },
     {
-      heading: 'Surgical Options',
-      description: '',
+      heading: "Surgical Options",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `In certain cases, surgical interventions may be considered to improve mobility or correct anatomical issues, such as orthopedic surgeries to enhance limb function or selective dorsal rhizotomy to reduce spasticity.`,
@@ -94,8 +94,8 @@ const data = {
       ],
     },
     {
-      heading: 'Assistive Devices',
-      description: '',
+      heading: "Assistive Devices",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Wheelchairs, braces, or other adaptive technologies can enhance mobility and independence.
@@ -106,15 +106,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       In India, early diagnosis and intervention play a crucial role in managing cerebral palsy. A multidisciplinary approach involving healthcare professionals, therapists, and support services is essential for providing comprehensive care and enhancing the quality of life for individuals living with this condition. Support from families and communities also plays a vital role in empowering individuals with cerebral palsy to achieve their full potential.
           `,
@@ -123,66 +123,66 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description: `Motor Impairments: Individuals with cerebral palsy may experience stiffness or weakness in muscles, leading to difficulties with movement and coordination.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Spasticity: This is the most common type, characterised by tight or stiff muscles, resulting in jerky movements.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Spasticity: This is the most common type, characterised by tight or stiff muscles, resulting in jerky movements.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Ataxia: Involves balance and coordination issues, causing unsteady movements.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Ataxia: Involves balance and coordination issues, causing unsteady movements.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Dyskinetic Movements: Involves involuntary movements, including twisting or repetitive motions.
 
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Associated Conditions: Many individuals may also have cognitive impairments, seizures, visual or hearing impairments, and speech difficulties.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Clinical Evaluation',
+      category: "Clinical Evaluation",
       description: `
 Diagnosis typically begins with a thorough assessment of the child’s development and motor skills.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Medical History',
+      category: "Medical History",
       description: `
 A comprehensive review of the mother’s pregnancy, birth history, and the child’s developmental milestones is essential.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Neurological Examination',
+      category: "Neurological Examination",
       description: `
 A thorough examination to assess muscle tone, reflexes, and coordination.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Imaging Studies',
+      category: "Imaging Studies",
       description: `
 MRI or CT scans may be used to identify any abnormalities in brain structure.
 `,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
@@ -296,7 +296,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

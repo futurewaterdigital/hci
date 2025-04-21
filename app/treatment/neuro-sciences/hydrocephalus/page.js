@@ -18,19 +18,19 @@ const data = {
 
   section_1: [
     {
-      title: 'Tumours',
+      title: "Tumours",
       description:
-        'Brain tumours may obstruct the pathways of CSF, causing fluid accumulation.',
+        "Brain tumours may obstruct the pathways of CSF, causing fluid accumulation.",
     },
     {
-      title: 'Trauma',
+      title: "Trauma",
       description:
-        'Head injuries can result in bleeding or scarring that interferes with CSF circulation.',
+        "Head injuries can result in bleeding or scarring that interferes with CSF circulation.",
     },
     {
-      title: 'Infections',
+      title: "Infections",
       description:
-        'Infections such as meningitis can disrupt the normal flow of cerebrospinal fluid, leading to hydrocephalus.',
+        "Infections such as meningitis can disrupt the normal flow of cerebrospinal fluid, leading to hydrocephalus.",
     },
     {
       title: 'Normal Pressure Hydrocephalus',
@@ -42,36 +42,36 @@ const data = {
     {
       title: 'Congenital Conditions',
       description:
-        'Hydrocephalus can be present at birth due to genetic factors or developmental abnormalities in the brain.',
+        "Hydrocephalus can be present at birth due to genetic factors or developmental abnormalities in the brain.",
     },
   ],
 
   complications: [
     {
-      heading: 'Shunt Surgery',
-      description: '',
+      heading: "Shunt Surgery",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'The most common treatment involves surgically placing a shunt system to drain excess CSF from the brain to another part of the body, where it can be absorbed.',
+            "The most common treatment involves surgically placing a shunt system to drain excess CSF from the brain to another part of the body, where it can be absorbed.",
         },
       ],
     },
 
     {
-      heading: 'Endoscopic Third Ventriculostomy (ETV)',
-      description: '',
+      heading: "Endoscopic Third Ventriculostomy (ETV)",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'A minimally invasive procedure that creates a new pathway for CSF flow, often used when shunt placement is not ideal.',
+            "A minimally invasive procedure that creates a new pathway for CSF flow, often used when shunt placement is not ideal.",
         },
       ],
     },
     
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `While no medications can cure hydrocephalus, diuretics may be prescribed to reduce fluid production in some cases.
@@ -80,8 +80,8 @@ const data = {
       ],
     },
     {
-      heading: 'Monitoring',
-      description: '',
+      heading: "Monitoring",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Regular follow-ups are essential to assess the effectiveness of the treatment and detect any complications.`,
@@ -89,8 +89,8 @@ const data = {
       ],
     },
     {
-      heading: 'Responsive Neurostimulation (RNS)',
-      description: '',
+      heading: "Responsive Neurostimulation (RNS)",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `This treatment involves implanting a device that monitors brain activity and delivers electrical pulses to prevent seizures before they start.`,
@@ -100,15 +100,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       In India, healthcare facilities are increasingly equipped to manage hydrocephalus, offering a range of treatment options tailored to individual needs. Early diagnosis and intervention are crucial for optimising outcomes, helping individuals lead healthier lives and preventing long-term complications associated with the condition.
           `,
@@ -160,7 +160,7 @@ const data = {
       bgColor: 'bg-hciSecondary text-white',
     },
   ],
-}
+};
 
 // console.log(data.complications[0].heading)
 
@@ -276,7 +276,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

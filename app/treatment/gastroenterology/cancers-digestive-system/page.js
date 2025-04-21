@@ -13,47 +13,47 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 import H3 from '@/components/ui/h3'
 
 const data = {
-  title: 'Cancers of the Digestive System',
-  bannerImage: '/gastroenterology/cancers-digestive-system.png',
+  title: "Cancers of the Digestive System",
+  bannerImage: "/gastroenterology/cancers-digestive-system.png",
   description: `Cancers of the digestive system affect key organs involved in digestion and nutrient absorption. These cancers originate in the gastrointestinal (GI) tract or nearby organs like the gallbladder and pancreas. Early detection can significantly improve survival outcomes, but in many cases, symptoms develop only in advanced stages.`,
-  overview: '',
+  overview: "",
 
   section_1: [
     {
-      title: 'Genetic mutations',
-      description: 'leading to abnormal cell growth',
+      title: "Genetic mutations",
+      description: "leading to abnormal cell growth",
     },
     {
-      title: 'Chronic conditions',
-      description: 'GERD, inflammatory bowel disease, pancreatitis',
+      title: "Chronic conditions",
+      description: "GERD, inflammatory bowel disease, pancreatitis",
     },
     {
-      title: 'Dietary factors',
-      description: 'High-fat, low-fibre, and processed foods',
+      title: "Dietary factors",
+      description: "High-fat, low-fibre, and processed foods",
     },
     {
       title:'',
       description: 'Family history of GI cancers',
     },
     {
-      title: '',
-      description: 'Smoking and alcohol consumption',
+      title: "",
+      description: "Smoking and alcohol consumption",
     },
     {
-      title: 'Infections',
-      description: 'Helicobacter pylori or Hepatitis viruses',
+      title: "Infections",
+      description: "Helicobacter pylori or Hepatitis viruses",
     },
     {
-      title: '',
-      description: 'Obesity and sedentary lifestyle',
+      title: "",
+      description: "Obesity and sedentary lifestyle",
     },
   ],
 
   complications: [
     {
-      heading: 'Surgery:',
+      heading: "Surgery:",
       description:
-        'Surgery aims to remove the tumour and any affected surrounding tissues, often the first line of treatment if the cancer is localized.',
+        "Surgery aims to remove the tumour and any affected surrounding tissues, often the first line of treatment if the cancer is localized.",
       aneurysmSymptoms: [
         {
           description:
@@ -76,13 +76,13 @@ const data = {
         },
       ],
       footer:
-        'Surgeries may also include lymph node removal to check for cancer spread. Laparoscopic or robotic surgeries are often used to minimize recovery time.',
+        "Surgeries may also include lymph node removal to check for cancer spread. Laparoscopic or robotic surgeries are often used to minimize recovery time.",
     },
 
     {
-      heading: 'Chemotherapy',
+      heading: "Chemotherapy",
       description:
-        'Chemotherapy uses drugs to destroy or inhibit cancer cells. It can be administered before surgery (neoadjuvant therapy) to shrink tumours or after surgery (adjuvant therapy) to prevent recurrence.',
+        "Chemotherapy uses drugs to destroy or inhibit cancer cells. It can be administered before surgery (neoadjuvant therapy) to shrink tumours or after surgery (adjuvant therapy) to prevent recurrence.",
       aneurysmSymptoms: [
         {
           description:
@@ -94,12 +94,12 @@ const data = {
         },
       ],
       footer:
-        'Common chemotherapy agents for digestive cancers include 5-FU (fluorouracil), capecitabine, and gemcitabine. Side effects can include fatigue, nausea, hair loss, and low immunity.',
+        "Common chemotherapy agents for digestive cancers include 5-FU (fluorouracil), capecitabine, and gemcitabine. Side effects can include fatigue, nausea, hair loss, and low immunity.",
     },
     {
-      heading: 'Radiation Therapy:',
+      heading: "Radiation Therapy:",
       description:
-        'Radiation therapy involves using high-energy rays to destroy cancer cells or shrink tumours. It is often used in combination with surgery and chemotherapy.',
+        "Radiation therapy involves using high-energy rays to destroy cancer cells or shrink tumours. It is often used in combination with surgery and chemotherapy.",
       aneurysmSymptoms: [
         {
           description:
@@ -111,12 +111,12 @@ const data = {
         },
       ],
       footer:
-        'Radiation therapy is particularly useful for oesophageal, rectal, and pancreatic cancers to shrink tumours and relieve symptoms.',
+        "Radiation therapy is particularly useful for oesophageal, rectal, and pancreatic cancers to shrink tumours and relieve symptoms.",
     },
     {
-      heading: 'Targeted Therapy:',
+      heading: "Targeted Therapy:",
       description:
-        'Targeted therapy uses drugs or substances that specifically target proteins or genes that promote cancer growth.',
+        "Targeted therapy uses drugs or substances that specifically target proteins or genes that promote cancer growth.",
       aneurysmSymptoms: [
         {
           description:
@@ -128,10 +128,10 @@ const data = {
         },
       ],
       footer:
-        'Targeted therapy is less likely to affect normal cells, leading to fewer side effects compared to chemotherapy.',
+        "Targeted therapy is less likely to affect normal cells, leading to fewer side effects compared to chemotherapy.",
     },
     {
-      heading: 'Immunotherapy:',
+      heading: "Immunotherapy:",
       description:
         "Immunotherapy enhances the body's natural immune response to fight cancer.",
       aneurysmSymptoms: [
@@ -145,12 +145,12 @@ const data = {
         },
       ],
       footer:
-        'This treatment is mainly used in advanced cases where traditional therapies are ineffective.',
+        "This treatment is mainly used in advanced cases where traditional therapies are ineffective.",
     },
     {
-      heading: 'Palliative Care and Supportive Treatment',
+      heading: "Palliative Care and Supportive Treatment",
       description:
-        'For advanced or metastatic cancers, palliative care focuses on relieving symptoms and improving quality of life. This can include:',
+        "For advanced or metastatic cancers, palliative care focuses on relieving symptoms and improving quality of life. This can include:",
       aneurysmSymptoms: [
         {
           description: `<span class="font-medium text-hciSecondary">Pain management</span> through medications or nerve blocks`,
@@ -174,17 +174,17 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   symptoms: [
     {
-      category: '',
-      description: 'Unexplained weight loss',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Unexplained weight loss",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: '',
@@ -192,13 +192,13 @@ const data = {
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         `<span class="font-medium">Difficulty swallowing:</span> (especially with oesophageal cancer)`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         `<span class="font-medium">Changes in bowel habits:</span> Constipation, diarrhoea, or blood in the stool`,
       bgColor: 'bg-hciPrimary text-white',
@@ -238,28 +238,26 @@ const data = {
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-medium">Blood Tests:</span> Check for tumour markers (e.g., CEA, CA 19-9).',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-medium">Barium Studies:</span> X-ray with contrast to detect abnormalities.',
       bgColor: 'bg-hciSecondary text-white',
     },
   ],
-
-}
+};
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
      Digestive system cancers require a tailored treatment approach, combining surgery, chemotherapy, radiation, and targeted or immunotherapy based on the patient’s condition. Early detection remains essential for better outcomes, and advanced treatment options now offer hope for improved survival rates. Additionally, lifestyle modifications like healthy eating, avoiding smoking and alcohol, and routine screenings can reduce the risk of these cancers. At every stage, personalized care and supportive treatments help ensure patients receive the best quality care and maintain their quality of life.`,
   },
-]
-
+];
 
 function GeneralSurgery() {
   return (
@@ -400,7 +398,7 @@ function GeneralSurgery() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

@@ -1,6 +1,6 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
+import React from "react";
+import Banner from "@/components/Common/Banner";
 // import Image from 'next/image'
 import H1 from '@/components/ui/h1'
 import DataLists from '@/components/cardiacComponents/Bullets'
@@ -8,36 +8,36 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
 
-import FlexBox from '@/components/cardiacComponents/FlexBox'
-import ListBox from '@/components/cardiacComponents/ListBox'
-import CTaButton from '@/components/cardiacComponents/CtaButton'
+import FlexBox from "@/components/cardiacComponents/FlexBox";
+import ListBox from "@/components/cardiacComponents/ListBox";
+import CTaButton from "@/components/cardiacComponents/CtaButton";
 
 const data = {
-  bannerImage: '/others/sports-medicine.png',
-  title: 'Sports Medicine',
+  bannerImage: "/others/sports-medicine.png",
+  title: "Sports Medicine",
   description: `Comprehensive Care for Active Lifestyles`,
   overview: `At Healthcare International (HCI), we are committed to helping individuals recover from sports-related injuries and return to their active lifestyles with confidence. Whether you're a professional athlete, a fitness enthusiast, or someone with a physically demanding job, our sports medicine services offer holistic care to address your unique needs.`,
   sections: [
     {
-      title: 'What is Sports Medicine?',
+      title: "What is Sports Medicine?",
       content: `Sports medicine is a specialized field focused on preventing, diagnosing, and treating injuries related to physical activity. Our expert network includes healthcare providers trained to manage injuries in children, teens, and adults, ensuring the highest level of care for people of all ages and activity levels.`,
-      bgColor: 'bg-hciSecondary',
+      bgColor: "bg-hciSecondary",
     },
     {
-      title: 'Specialists in Sports Medicine',
+      title: "Specialists in Sports Medicine",
       content: `Our sports medicine specialists undergo advanced training in:`,
       bullets: [
-        'Injury prevention',
-        'Physical rehabilitation',
-        'Surgical and non-surgical interventions',
-        'Nutrition and exercise counselling',
+        "Injury prevention",
+        "Physical rehabilitation",
+        "Surgical and non-surgical interventions",
+        "Nutrition and exercise counselling",
       ],
-      bgColor: 'bg-hciPrimary',
+      bgColor: "bg-hciPrimary",
     },
   ],
   complications: [
     {
-      heading: 'Expert Care',
+      heading: "Expert Care",
 
       aneurysmSymptoms: [
         {
@@ -57,26 +57,26 @@ const data = {
   ],
   invasive: [
     {
-      heading: 'Conditions we Treat',
-      desc: 'HCI’s sports medicine network addresses a range of conditions, including:',
+      heading: "Conditions we Treat",
+      desc: "HCI’s sports medicine network addresses a range of conditions, including:",
       aneurysmSymptoms: [
-        { description: 'Botox and dermal fillers' },
-        { description: 'Knee and shoulder injuries' },
-        { description: 'Tendonitis and cartilage injuries' },
-        { description: 'Concussions and heat illnesse' },
-        { description: 'Exercise-induced asthma' },
-        { description: 'Eating disorders related to athletic performance' },
+        { description: "Botox and dermal fillers" },
+        { description: "Knee and shoulder injuries" },
+        { description: "Tendonitis and cartilage injuries" },
+        { description: "Concussions and heat illnesse" },
+        { description: "Exercise-induced asthma" },
+        { description: "Eating disorders related to athletic performance" },
       ],
     },
   ],
   reconstructive: [
     {
-      heading: 'Conditions we Treat',
+      heading: "Conditions we Treat",
       aneurysmSymptoms: [
-        { description: 'Ankle sprains and fractures' },
-        { description: 'Cleft lip and palate repair' },
-        { description: 'Hand and microsurgery' },
-        { description: ' Scar revision surgery' },
+        { description: "Ankle sprains and fractures" },
+        { description: "Cleft lip and palate repair" },
+        { description: "Hand and microsurgery" },
+        { description: " Scar revision surgery" },
       ],
     },
   ],
@@ -96,29 +96,29 @@ const data = {
 
   benefits: [
     {
-      title: '',
-      desc: 'Pain management',
+      title: "",
+      desc: "Pain management",
     },
     {
-      title: '',
-      desc: 'Immobilization with casts or slings',
+      title: "",
+      desc: "Immobilization with casts or slings",
     },
     {
-      title: '',
-      desc: 'Rehabilitation exercises',
+      title: "",
+      desc: "Rehabilitation exercises",
     },
     {
-      title: '',
-      desc: 'Surgical interventions, if necessary',
+      title: "",
+      desc: "Surgical interventions, if necessary",
     },
   ],
   contact: {
-    title: 'Contact Us Today',
-    head: 'Reach Out to Us Today',
+    title: "Contact Us Today",
+    head: "Reach Out to Us Today",
     content:
-      'Contact HCI to explore our comprehensive sports medicine services and discover how we can support your recovery journey.',
+      "Contact HCI to explore our comprehensive sports medicine services and discover how we can support your recovery journey.",
   },
-}
+};
 
 function GeneralSurgery() {
   return (
@@ -182,7 +182,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

@@ -13,29 +13,29 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 
 
 const data = {
-  title: 'Celiac Disease',
-  bannerImage: '/gastroenterology/celiac-disease.png',
+  title: "Celiac Disease",
+  bannerImage: "/gastroenterology/celiac-disease.png",
   description: `Celiac disease is an autoimmune disorder triggered by consuming gluten, a protein found in foods made from wheat, barley, and rye. In individuals with celiac disease, gluten consumption causes the immune system to attack the lining of the small intestine, leading to damage over time. This damage impairs the intestine's ability to absorb nutrients properly, resulting in malabsorption and related health complications.`,
   overview:
-    'Although there is no permanent cure, adopting a strict gluten-free diet can help manage symptoms and promote intestinal healing.',
+    "Although there is no permanent cure, adopting a strict gluten-free diet can help manage symptoms and promote intestinal healing.",
 
   section_1: [
     {
-      title: 'Genetic Factors',
+      title: "Genetic Factors",
       description:
-        'Family history of celiac disease or dermatitis herpetiformis increases the risk.',
+        "Family history of celiac disease or dermatitis herpetiformis increases the risk.",
     },
     {
-      title: 'Gluten Consumption',
-      description: 'Eating gluten-rich foods triggers the immune response.',
+      title: "Gluten Consumption",
+      description: "Eating gluten-rich foods triggers the immune response.",
     },
     {
-      title: 'Environmental Triggers',
+      title: "Environmental Triggers",
       description:
-        'Surgery, pregnancy, childbirth, severe stress, or infections can activate the disease.',
+        "Surgery, pregnancy, childbirth, severe stress, or infections can activate the disease.",
     },
     {
-      title: 'Gastrointestinal Factors',
+      title: "Gastrointestinal Factors",
       description:
         "Altered gut bacteria or infections may contribute, though their role isn't fully established.",
     },
@@ -43,42 +43,42 @@ const data = {
 
   data_1: [
     {
-      heading: 'Pain Management:',
-      description: '',
+      heading: "Pain Management:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Medications may be prescribed to relieve any discomfort after surgery or treatment.',
+            "Medications may be prescribed to relieve any discomfort after surgery or treatment.",
         },
       ],
     },
     {
-      heading: 'Follow-Up Appointments:',
-      description: '',
+      heading: "Follow-Up Appointments:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Regular visits to monitor recovery and address any concerns.',
+            "Regular visits to monitor recovery and address any concerns.",
         },
       ],
     },
     {
-      heading: 'Dietary Adjustments:',
-      description: '',
+      heading: "Dietary Adjustments:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Your healthcare provider may recommend a low-fat diet temporarily to aid digestion.',
+            "Your healthcare provider may recommend a low-fat diet temporarily to aid digestion.",
         },
       ],
     },
     {
-      heading: 'Activity Restrictions:',
-      description: '',
+      heading: "Activity Restrictions:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Light activities can usually be resumed within a few days after minimally invasive procedures. However, heavy lifting or strenuous exercises should be avoided until full recovery.',
+            "Light activities can usually be resumed within a few days after minimally invasive procedures. However, heavy lifting or strenuous exercises should be avoided until full recovery.",
         },
       ],
     },
@@ -86,68 +86,68 @@ const data = {
 
   complications: [
     {
-      heading: 'Gluten-free diet:',
-      description: '',
+      heading: "Gluten-free diet:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Avoiding gluten-containing foods is the only effective treatment. This includes eliminating products with wheat, barley, rye, and derivatives.',
+            "Avoiding gluten-containing foods is the only effective treatment. This includes eliminating products with wheat, barley, rye, and derivatives.",
         },
       ],
     },
 
     {
-      heading: 'Nutritional supplements:',
-      description: '',
+      heading: "Nutritional supplements:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'To address deficiencies (e.g., iron, calcium, vitamin D).',
+            "To address deficiencies (e.g., iron, calcium, vitamin D).",
         },
       ],
     },
     {
-      heading: 'Monitoring and follow-ups:',
-      description: '',
+      heading: "Monitoring and follow-ups:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Regular consultations to assess symptom improvement and monitor nutrient levels.',
+            "Regular consultations to assess symptom improvement and monitor nutrient levels.",
         },
       ],
     },
     {
-      heading: 'Dermatitis herpetiformis management:',
-      description: '',
+      heading: "Dermatitis herpetiformis management:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'A gluten-free diet and medications like dapsone are used to treat the skin condition.',
+            "A gluten-free diet and medications like dapsone are used to treat the skin condition.",
         },
       ],
     },
     {
-      heading: 'Treatment of complications:',
-      description: '',
+      heading: "Treatment of complications:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'For issues like osteoporosis, anaemia, or neurological conditions, additional medical intervention may be required.',
+            "For issues like osteoporosis, anaemia, or neurological conditions, additional medical intervention may be required.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Gastroenterology Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Gastroenterology Care",
     content:
-      'Take the first step towards better digestive health. Reach out to HCI today to schedule a consultation with one of our skilled gastroenterologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better digestive health. Reach out to HCI today to schedule a consultation with one of our skilled gastroenterologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Celiac disease requires lifelong management through a gluten-free diet to alleviate symptoms, prevent complications, and promote intestinal healing. Early diagnosis is essential to avoid long-term issues such as malnutrition and osteoporosis. Regular monitoring by healthcare providers ensures optimal health and well-being for those with the condition.
           `,
@@ -156,84 +156,84 @@ const data = {
 
   symptoms_data: [
     {
-      heading: 'Digestive Symptoms:',
-      description: '',
+      heading: "Digestive Symptoms:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Diarrhoea',
+          description: "Diarrhoea",
         },
         {
-          description: 'Bloating and gas',
+          description: "Bloating and gas",
         },
         {
-          description: 'Abdominal pain',
+          description: "Abdominal pain",
         },
         {
-          description: 'Nausea and vomiting',
+          description: "Nausea and vomiting",
         },
         {
-          description: 'Constipation',
+          description: "Constipation",
         },
         {
-          description: 'Weight loss',
+          description: "Weight loss",
         },
       ],
     },
     {
-      heading: 'Non-Digestive Symptoms:',
-      description: '',
+      heading: "Non-Digestive Symptoms:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Iron-deficiency anaemia',
+          description: "Iron-deficiency anaemia",
         },
         {
-          description: 'Bone disorders (osteoporosis, osteomalacia)',
+          description: "Bone disorders (osteoporosis, osteomalacia)",
         },
         {
-          description: 'Itchy, blistering skin rash (dermatitis herpetiformis)',
+          description: "Itchy, blistering skin rash (dermatitis herpetiformis)",
         },
         {
-          description: 'Mouth ulcers',
+          description: "Mouth ulcers",
         },
         {
-          description: 'Fatigue, headaches, and joint pain',
+          description: "Fatigue, headaches, and joint pain",
         },
         {
           description:
-            'Numbness or tingling in hands and feet (peripheral neuropathy)',
+            "Numbness or tingling in hands and feet (peripheral neuropathy)",
         },
         {
-          description: 'Impaired spleen function (hyposplenism)',
+          description: "Impaired spleen function (hyposplenism)",
         },
       ],
     },
     {
-      heading: 'Symptoms in Children:',
-      description: '',
+      heading: "Symptoms in Children:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Chronic diarrhoea or constipation',
+          description: "Chronic diarrhoea or constipation",
         },
         {
-          description: 'Bloated abdomen',
+          description: "Bloated abdomen",
         },
         {
-          description: 'Pale, foul-smelling stools',
+          description: "Pale, foul-smelling stools",
         },
         {
-          description: 'Growth delays, short stature, or failure to thrive',
+          description: "Growth delays, short stature, or failure to thrive",
         },
         {
-          description: 'Delayed puberty',
+          description: "Delayed puberty",
         },
         {
-          description: 'Tooth enamel damage',
+          description: "Tooth enamel damage",
         },
         {
-          description: 'Behavioural issues or irritability',
+          description: "Behavioural issues or irritability",
         },
         {
-          description: 'Neurological conditions like ADHD or seizures',
+          description: "Neurological conditions like ADHD or seizures",
         },
       ],
     },
@@ -274,37 +274,37 @@ const data = {
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
-        'Blood tests: To detect specific antibodies linked to celiac disease (e.g., tTG-IgA).',
-      bgColor: 'bg-hciSecondary text-white',
+        "Blood tests: To detect specific antibodies linked to celiac disease (e.g., tTG-IgA).",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Endoscopy and biopsy: A small intestine biopsy confirms the diagnosis by identifying intestinal damage.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Genetic testing: Identifies predisposition through HLA-DQ2 and HLA-DQ8 genes.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Genetic testing: Identifies predisposition through HLA-DQ2 and HLA-DQ8 genes.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Gluten challenge: May be used if testing occurs after adopting a gluten-free diet to confirm the diagnosis.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Gluten challenge: May be used if testing occurs after adopting a gluten-free diet to confirm the diagnosis.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
      Brain tumours and brain cancers are challenging to treat, but advances in neurosurgery, radiation, and targeted therapies provide hope for better outcomes. Early diagnosis and comprehensive care tailored to the tumour type are key to improving quality of life for patients.`,
   },
-]
+];
 
 function GeneralSurgery() {
   return (
@@ -375,7 +375,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

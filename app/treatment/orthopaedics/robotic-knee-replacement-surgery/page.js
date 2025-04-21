@@ -13,263 +13,263 @@ import H1 from '@/components/ui/h1'
 import IssuesLinks from "@/components/ui/IssuesLinks"
 
 const data = {
-  title: 'Robotic Knee Replacement Surgery',
-  bannerImage: '/orthopaedics/GICancer_Banner.png',
+  title: "Robotic Knee Replacement Surgery",
+  bannerImage: "/orthopaedics/GICancer_Banner.png",
   description: `Designed for individuals suffering from severe knee pain and mobility issues, robotic knee replacement ensures a personalised surgical plan tailored to each patient’s anatomy, helping them regain their active lifestyle with enhanced comfort and functionality.`,
   overview: `Robotic knee replacement surgery is an advanced, minimally invasive procedure that uses robotic-assisted technology to enhance the precision of knee joint replacement. This approach offers improved alignment, faster recovery, and longer-lasting outcomes compared to conventional methods.`,
 
   causes: [
     {
-      title: 'Osteoarthritis',
+      title: "Osteoarthritis",
       description:
-        'The most common reason, where cartilage wears down, leading to bone-on-bone friction.',
+        "The most common reason, where cartilage wears down, leading to bone-on-bone friction.",
     },
     {
-      title: 'Rheumatoid Arthritis',
+      title: "Rheumatoid Arthritis",
       description:
-        'An autoimmune condition that causes chronic joint inflammation and pain.',
+        "An autoimmune condition that causes chronic joint inflammation and pain.",
     },
     {
-      title: 'Post-Traumatic Arthritis',
-      description: 'Joint degeneration following an injury or fracture.',
+      title: "Post-Traumatic Arthritis",
+      description: "Joint degeneration following an injury or fracture.",
     },
     {
-      title: 'Meniscal Tears and Ligament Injuries',
+      title: "Meniscal Tears and Ligament Injuries",
       description:
-        'Irreparable damage to knee structures requiring surgical intervention.',
+        "Irreparable damage to knee structures requiring surgical intervention.",
     },
     {
-      title: 'Avascular Necrosis',
+      title: "Avascular Necrosis",
       description:
-        'Loss of blood flow to the bone, causing it to collapse and damage the joint.',
+        "Loss of blood flow to the bone, causing it to collapse and damage the joint.",
     },
   ],
 
   complications: [
     {
-      heading: 'Precision',
+      heading: "Precision",
       aneurysmSymptoms: [
         {
           description:
-            'Accurate alignment of implants to improve joint function and longevity.',
+            "Accurate alignment of implants to improve joint function and longevity.",
         },
       ],
     },
     {
-      heading: 'Personalization',
+      heading: "Personalization",
       aneurysmSymptoms: [
         {
           description:
-            'A customised surgical plan based on the patient’s anatomy.',
+            "A customised surgical plan based on the patient’s anatomy.",
         },
       ],
     },
     {
-      heading: 'Minimally Invasive Approach:',
+      heading: "Minimally Invasive Approach:",
       aneurysmSymptoms: [
         {
           description:
-            'Smaller incisions lead to less tissue damage and faster recovery.',
+            "Smaller incisions lead to less tissue damage and faster recovery.",
         },
       ],
     },
     {
-      heading: 'Real-Time Feedback:',
+      heading: "Real-Time Feedback:",
       aneurysmSymptoms: [
         {
           description:
-            'The surgeon receives instant feedback from the robotic system, ensuring optimal placement of implants.',
+            "The surgeon receives instant feedback from the robotic system, ensuring optimal placement of implants.",
         },
       ],
     },
     {
-      heading: 'Surgical Procedure',
+      heading: "Surgical Procedure",
       aneurysmSymptoms: [
         {
           description:
-            'Pre-Surgery Planning: A CT scan or 3D model of the knee joint is created for personalized mapping.',
+            "Pre-Surgery Planning: A CT scan or 3D model of the knee joint is created for personalized mapping.",
         },
         {
           description:
-            'Incision and Joint Preparation: A small incision is made to access the damaged joint.',
+            "Incision and Joint Preparation: A small incision is made to access the damaged joint.",
         },
         {
           description:
-            'Bone Reshaping and Implant Insertion: The robotic arm assists in reshaping the bone and placing the implant accurately.',
+            "Bone Reshaping and Implant Insertion: The robotic arm assists in reshaping the bone and placing the implant accurately.",
         },
         {
           description:
-            'Verification and Adjustment: Real-time data ensures the alignment and placement are correct.',
+            "Verification and Adjustment: Real-time data ensures the alignment and placement are correct.",
         },
         {
           description:
-            'Closure and Recovery: The incision is closed, and rehabilitation starts shortly after.',
+            "Closure and Recovery: The incision is closed, and rehabilitation starts shortly after.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Robotic knee replacement surgery offers a revolutionary approach to treating advanced knee conditions with precision and personalized care. By leveraging cutting-edge technology, patients can enjoy improved mobility, less pain, and long-lasting joint function. If you or a loved one is struggling with chronic knee pain, consider consulting a specialist to explore whether robotic knee replacement surgery is the right choice.
           `,
     },
   ],
   DataSurgery: {
-    headingTitle: 'Recovery and Rehabilitation',
+    headingTitle: "Recovery and Rehabilitation",
     description:
-      'Post-surgery recovery from robotic knee replacement tends to be quicker and smoother compared to traditional surgery. Key aspects include:',
+      "Post-surgery recovery from robotic knee replacement tends to be quicker and smoother compared to traditional surgery. Key aspects include:",
     DataLists: [
       {
-        title: 'Early Mobilization',
+        title: "Early Mobilization",
         description:
-          'Walking with assistance within a day or two post-surgery.',
+          "Walking with assistance within a day or two post-surgery.",
       },
       {
-        title: 'Physical Therapy',
-        description: 'Targeted exercises to restore strength and flexibility.',
+        title: "Physical Therapy",
+        description: "Targeted exercises to restore strength and flexibility.",
       },
       {
-        title: 'Pain Management',
-        description: ' Use of medications to manage post-operative pain.',
+        title: "Pain Management",
+        description: " Use of medications to manage post-operative pain.",
       },
       {
-        title: 'Follow-Up Visits',
+        title: "Follow-Up Visits",
         description:
-          'Regular check-ups to monitor recovery and implant performance.',
+          "Regular check-ups to monitor recovery and implant performance.",
       },
       {
-        title: 'Lifestyle Adjustments',
+        title: "Lifestyle Adjustments",
         description:
-          'Advice on resuming activities gradually and avoiding high-impact sports initially.',
+          "Advice on resuming activities gradually and avoiding high-impact sports initially.",
       },
     ],
   },
 
   symptoms: [
     {
-      category: 'Chronic Pain',
+      category: "Chronic Pain",
       description:
-        'Persistent pain that limits daily activities and does not respond to conservative treatments.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Persistent pain that limits daily activities and does not respond to conservative treatments.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Joint Stiffness',
-      description: 'Difficulty bending or straightening the knee.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Joint Stiffness",
+      description: "Difficulty bending or straightening the knee.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Swelling and Inflammation',
+      category: "Swelling and Inflammation",
       description:
-        'Recurring swelling that leads to discomfort and reduced movement.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Recurring swelling that leads to discomfort and reduced movement.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Mobility Issues',
+      category: "Mobility Issues",
       description:
-        'Inability to walk comfortably or participate in physical activities.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Inability to walk comfortably or participate in physical activities.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Deformity in the Knee Joint',
+      category: "Deformity in the Knee Joint",
       description:
-        'Bow-legged or knock-knee appearance due to structural damage.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Bow-legged or knock-knee appearance due to structural damage.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Physical Examination',
-      description: 'Assessing joint movement, pain, and deformity.',
-      bgColor: 'bg-hciSecondary text-white',
+      category: "Physical Examination",
+      description: "Assessing joint movement, pain, and deformity.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Imaging Tests',
+      category: "Imaging Tests",
       description:
-        'X-rays and MRI scans to determine the extent of cartilage loss and joint damage.',
-      bgColor: 'bg-hciSecondary text-white',
+        "X-rays and MRI scans to determine the extent of cartilage loss and joint damage.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Gait Analysis',
+      category: "Gait Analysis",
       description:
-        'Monitoring walking patterns to evaluate the effect on joint mobility.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Monitoring walking patterns to evaluate the effect on joint mobility.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Assessment of Previous Treatments',
+      category: "Assessment of Previous Treatments",
       description:
-        'Determining whether non-surgical methods like physiotherapy or medications have failed to provide relief.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Determining whether non-surgical methods like physiotherapy or medications have failed to provide relief.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'These evaluations help doctors determine whether robotic knee replacement surgery is the best option.',
-      bgColor: 'bg-hciSecondary text-white',
+        "These evaluations help doctors determine whether robotic knee replacement surgery is the best option.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
   benefits: [
     {
-      title: 'Higher Accuracy',
+      title: "Higher Accuracy",
       description:
-        'Precise implant placement reduces the risk of misalignment and complications.',
+        "Precise implant placement reduces the risk of misalignment and complications.",
     },
     {
-      title: 'Less Pain and Blood Loss',
+      title: "Less Pain and Blood Loss",
       description:
-        'Minimally invasive techniques cause less trauma to the surrounding tissues.',
+        "Minimally invasive techniques cause less trauma to the surrounding tissues.",
     },
     {
-      title: 'Faster Recovery',
+      title: "Faster Recovery",
       description:
-        'Patients often experience reduced hospital stays and quicker return to daily activities.',
+        "Patients often experience reduced hospital stays and quicker return to daily activities.",
     },
     {
-      title: 'Longer Implant Lifespan:',
+      title: "Longer Implant Lifespan:",
       description:
-        'Enhanced precision contributes to improved joint function and durability.',
+        "Enhanced precision contributes to improved joint function and durability.",
     },
     {
-      title: 'Improved Quality of Life:',
+      title: "Improved Quality of Life:",
       description:
-        'Patients regain mobility, allowing them to resume activities they love.',
+        "Patients regain mobility, allowing them to resume activities they love.",
     },
   ],
   consideration: [
     {
-      title: '',
-      description: 'Severe and persistent knee pain limiting daily activities.',
+      title: "",
+      description: "Severe and persistent knee pain limiting daily activities.",
     },
     {
-      title: '',
+      title: "",
       description:
-        'Ineffectiveness of non-surgical treatments such as physiotherapy or medications.',
+        "Ineffectiveness of non-surgical treatments such as physiotherapy or medications.",
     },
     {
-      title: '',
-      description: 'Knee joint deformity or instability affecting mobility.',
+      title: "",
+      description: "Knee joint deformity or instability affecting mobility.",
     },
     {
-      title: '',
-      description: 'Chronic inflammation and swelling that does not subside.',
+      title: "",
+      description: "Chronic inflammation and swelling that does not subside.",
     },
     {
-      title: '',
+      title: "",
       description:
-        'Difficulty walking, climbing stairs, or standing for extended periods.',
+        "Difficulty walking, climbing stairs, or standing for extended periods.",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
@@ -441,7 +441,7 @@ function GeneralSurgery() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

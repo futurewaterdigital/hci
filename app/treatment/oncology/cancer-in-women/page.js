@@ -287,16 +287,16 @@ const womenCancerTypes = [
   },
   {
     menu: "Gynecological Cancers",
-    url: "",
+    url: "/treatment/oncology/gynecological-cancers",
   },
 ];
 
 function CancerInWomen() {
   return (
-    <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <Title title={data.title} />
+        <Title title={data.title} className="text-4xl text-pink-500" />
         <H2 title={data.description} className="text-center font-light" />
 
         {/* More Link about brain tumor */}
@@ -323,7 +323,7 @@ function CancerInWomen() {
             {data.breastCancerIntro}
           </p>
         </div>
-        <div>
+        <div className="pt-2">
           {data.causes.map((cause, index) => (
             <div key={index}>
               <H3
@@ -356,7 +356,7 @@ function CancerInWomen() {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 mb-8">
           <div>
             {/* <DataLists
               divClass="space-y-4"
@@ -382,10 +382,10 @@ function CancerInWomen() {
               myclass="grid grid-cols-1"
             />
 
-            <div className="mt-4 text-center">
+            <div className="mt-4 text-start">
               <Link
                 href="/treatment/oncology/breast-cancer-diagnosis"
-                className="text-hciPrimary text-lg font-semibold"
+                className="text-hciPrimary underline block mb-2 font-semibold capitalize"
               >
                 For The Best Diagnosis Of Breast Cancer And Related Issues,
                 Click Here
@@ -459,7 +459,7 @@ function CancerInWomen() {
 
         <BookButton />
       </div>
-    </>
+    </div>
   );
 }
 

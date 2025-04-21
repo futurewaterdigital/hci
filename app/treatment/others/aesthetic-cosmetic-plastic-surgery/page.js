@@ -8,23 +8,23 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
 
-import FlexBox from '@/components/cardiacComponents/FlexBox'
-import ListBox from '@/components/cardiacComponents/ListBox'
-import CTaButton from '@/components/cardiacComponents/CtaButton'
+import FlexBox from "@/components/cardiacComponents/FlexBox";
+import ListBox from "@/components/cardiacComponents/ListBox";
+import CTaButton from "@/components/cardiacComponents/CtaButton";
 
 const data = {
-  bannerImage: '/others/plastic-surgery-banner.png',
-  title: 'Aesthetic, Cosmetic, and Plastic Surgery',
+  bannerImage: "/others/plastic-surgery-banner.png",
+  title: "Aesthetic, Cosmetic, and Plastic Surgery",
   description: `Redefining Beauty and Confidence`,
   overview: `At Healthcare International (HCI), we recognize the power of aesthetic and reconstructive procedures in enhancing both appearance and quality of life. Our network of skilled surgeons combines expertise with advanced techniques to deliver exceptional results tailored to your unique needs, helping you look and feel your best.`,
   sections: [
     {
-      title: 'What is Aesthetic, Cosmetic, and Plastic Surgery?',
+      title: "What is Aesthetic, Cosmetic, and Plastic Surgery?",
       content: `Aesthetic, cosmetic, and plastic surgery encompass procedures aimed at enhancing physical appearance or restoring functionality and form following trauma, illness, or congenital conditions. These surgeries may focus on improving self-confidence, correcting abnormalities, or addressing specific aesthetic concerns.`,
-      bgColor: 'bg-hciSecondary',
+      bgColor: "bg-hciSecondary",
     },
     {
-      title: 'Specialists in Aesthetic and Plastic Surgery',
+      title: "Specialists in Aesthetic and Plastic Surgery",
       content: `HCI’s network includes leading cosmetic and plastic surgeons who provide personalized treatment plans. These specialists are experts in performing a wide range of procedures, blending artistry with precision to achieve natural and satisfying results.`,
       // bullets: [
       //   'Minimally invasive procedures',
@@ -33,57 +33,57 @@ const data = {
       //   'Hernia repair',
       //   'Gallbladder surgery',
       // ],
-      bgColor: 'bg-hciPrimary',
+      bgColor: "bg-hciPrimary",
     },
   ],
   complications: [
     {
-      heading: 'Cosmetic Surgery',
+      heading: "Cosmetic Surgery",
       aneurysmSymptoms: [
-        { description: 'Rhinoplasty (nose reshaping)' },
-        { description: 'Facelifts and neck lifts' },
-        { description: 'Liposuction' },
-        { description: 'Tummy tuck (abdominoplasty)' },
-        { description: 'Breast augmentation, reduction, or reconstruction' },
-        { description: 'Eyelid surgery (blepharoplasty)' },
+        { description: "Rhinoplasty (nose reshaping)" },
+        { description: "Facelifts and neck lifts" },
+        { description: "Liposuction" },
+        { description: "Tummy tuck (abdominoplasty)" },
+        { description: "Breast augmentation, reduction, or reconstruction" },
+        { description: "Eyelid surgery (blepharoplasty)" },
       ],
     },
   ],
   reconstructive: [
     {
-      heading: 'Reconstructive Surgery',
+      heading: "Reconstructive Surgery",
       aneurysmSymptoms: [
-        { description: 'Post-trauma reconstruction (burns, injuries)' },
-        { description: 'Cleft lip and palate repair' },
-        { description: 'Hand and microsurgery' },
-        { description: ' Scar revision surgery' },
+        { description: "Post-trauma reconstruction (burns, injuries)" },
+        { description: "Cleft lip and palate repair" },
+        { description: "Hand and microsurgery" },
+        { description: " Scar revision surgery" },
       ],
     },
   ],
   invasive: [
     {
-      heading: 'Minimally Invasive and Non-Surgical Procedures',
+      heading: "Minimally Invasive and Non-Surgical Procedures",
       aneurysmSymptoms: [
-        { description: 'Botox and dermal fillers' },
-        { description: 'Chemical peels' },
-        { description: 'Laser treatments for skin rejuvenation' },
-        { description: 'Fat grafting and contouring' },
+        { description: "Botox and dermal fillers" },
+        { description: "Chemical peels" },
+        { description: "Laser treatments for skin rejuvenation" },
+        { description: "Fat grafting and contouring" },
       ],
     },
   ],
 
   benefits: [
     {
-      title: 'Customized Care:',
-      desc: 'Every procedure is tailored to individual needs and expectations.',
+      title: "Customized Care:",
+      desc: "Every procedure is tailored to individual needs and expectations.",
     },
     {
-      title: 'Expertise:',
-      desc: 'Our surgeons have extensive experience in both cosmetic and reconstructive procedures.',
+      title: "Expertise:",
+      desc: "Our surgeons have extensive experience in both cosmetic and reconstructive procedures.",
     },
     {
-      title: 'State-of-the-art Facilities:',
-      desc: 'Partner hospitals are equipped with the latest technology to ensure patient safety and comfort.',
+      title: "State-of-the-art Facilities:",
+      desc: "Partner hospitals are equipped with the latest technology to ensure patient safety and comfort.",
     },
   ],
   contact: {
@@ -92,7 +92,7 @@ const data = {
     content:
       'To explore our aesthetic, cosmetic, and plastic surgery services and find top-notch care in India to meet your needs and aspirations.',
   },
-}
+};
 
 function GeneralSurgery() {
   return (
@@ -114,7 +114,7 @@ function GeneralSurgery() {
         <p className="text-center font-light">
           Our aesthetic, cosmetic, and plastic surgery services include:
           </p>
-          </div>
+        </div>
         <div className="grid lg:grid-cols-2 gap-4">
           <DataLists data={data.complications} />
           <div className='flex justify-center items-center py-2 rounded-lg'>
@@ -172,7 +172,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

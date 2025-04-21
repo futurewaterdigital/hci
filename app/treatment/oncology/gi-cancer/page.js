@@ -12,23 +12,23 @@ const data = {
   cancerTypes: [
     {
       name: "BOWEL CANCER",
-      link: "/treatment/oncology/bowel-cancer",
+      url: "/treatment/oncology/bowel-cancer",
     },
     {
       name: "GALLBLADDER CANCER",
-      link: "/treatment/oncology/gallbladder-cancer",
+      url: "/treatment/oncology/gallbladder-cancer",
     },
     {
       name: "LIVER CANCER",
-      link: "/treatment/oncology/liver-cancer",
+      url: "/treatment/oncology/liver-cancer",
     },
     {
       name: "OESOPHAGUS CANCER",
-      link: "/treatment/oncology/oesophagus-cancer",
+      url: "/treatment/oncology/oesophagus-cancer",
     },
     {
       name: "PANCREATIC CANCER",
-      link: "/treatment/oncology/pancreatic-cancer",
+      url: "/treatment/oncology/pancreatic-cancer",
     },
   ],
 
@@ -198,7 +198,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph:
-        "Cervical cancer is largely preventable with regular screenings, HPV vaccinations, and early interventions. Timely diagnosis and a tailored treatment plan, including surgery, radiation, and other targeted therapies, significantly improve survival rates and quality of life for patients.",
+        "Bowel cancer is becoming more prevalent in India due to changing dietary patterns and increasingly sedentary lifestyles. Fortunately, advancements in early detection through regular screenings like colonoscopy and innovative treatments, including Proton Therapy and CyberKnife, provide better chances for successful outcomes. Comprehensive cancer centers across the country offer multidisciplinary approaches, ensuring patients receive the best possible care from diagnosis to recovery.",
     },
   ],
 
@@ -292,7 +292,7 @@ function GICancer() {
           {data.cancerTypes.map((item, index) => (
             <Link
               key={index}
-              href={""}
+              href={item?.url}
               className="hover:text-hciSecondary cursor-pointer"
             >
               {item.name}
@@ -339,10 +339,7 @@ function GICancer() {
         ))}
       </div>
       <div className="my-3">
-        <Link
-          href={""}
-          className="hover:text-blue-500 text-hciPrimary cursor-pointer"
-        >
+        <Link href={""} className="text-hciPrimary font-semibold underline">
           To know more about bowel cancer and its treatment, click here
         </Link>
       </div>
@@ -354,24 +351,28 @@ function GICancer() {
             title="Symptoms of Bowel Cancer"
             className="text-xl font-semibold mb-4"
           />
+          <p className="text-gray-700 mb-6 font-light">
+            Bowel cancer may not present symptoms in its early stages. However,
+            as the cancer grows, common symptoms include:
+          </p>
           <div className="space-y-2">
             {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
               <div
                 key={idx}
-                className="bg-blue-700 text-white font-light p-4 rounded text-sm"
+                className="bg-[#0E56A0] text-white font-light p-4 rounded text-sm"
               >
                 <span className="font-semibold pr-1">{cause.title}</span>
                 {cause.description}
               </div>
             ))}
           </div>
-          <div className="mt-4">
+          <div className="mt-4 text-start">
             <Link
-              href="/treatment/oncology/cervical-cancer-info"
-              className="text-blue-600 hover:underline"
+              href="/treatment/oncology/cervical-cancer-diagnosis"
+              className="text-hciPrimary underline block mb-2 font-semibold capitalize"
             >
-              For More About Cervical Cancer, Its Causes And Treatment, Click
-              Here
+              To know more about bowel cancer and its causes and treatment,
+              click here
             </Link>
           </div>
         </div>
@@ -382,6 +383,11 @@ function GICancer() {
             title="Diagnosis of Bowel cancer"
             className="text-xl font-semibold mb-4"
           />
+          <p className="text-gray-700 mb-6 font-light">
+            Several diagnostic methods are used to detect and confirm Bowel
+            cancer, helping doctors determine the stage and plan the appropriate
+            treatment.
+          </p>
           <div className="space-y-2">
             {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
               <div
@@ -392,15 +398,6 @@ function GICancer() {
                 {diagnosis.description}
               </div>
             ))}
-          </div>
-          <div className="mt-4">
-            <Link
-              href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-blue-600 hover:underline"
-            >
-              For The Best Diagnosis And Treatment For Cervical Cancer, Click
-              Here
-            </Link>
           </div>
         </div>
       </div>
@@ -440,6 +437,18 @@ function GICancer() {
                   </div>
                 ))}
               </div>
+
+              {index === 0 && (
+                <div className="mt-4 text-start">
+                  <Link
+                    href="/treatment/oncology/cervical-cancer-diagnosis"
+                    className="text-hciPrimary underline block mb-2 font-semibold capitalize"
+                  >
+                    To get the best diagnosis of bowel cancer and related
+                    issues, click here
+                  </Link>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -458,7 +467,10 @@ function GICancer() {
       <div className="mt-8 space-y-4">
         {data.links.map((link, index) => (
           <div key={index} className="text-start">
-            <Link href={link.url} className="text-hciPrimary hover:underline">
+            <Link
+              href={link.url}
+              className="text-hciPrimary font-semibold underline"
+            >
               {link.text}
             </Link>
           </div>

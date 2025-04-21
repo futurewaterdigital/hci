@@ -12,35 +12,35 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 import KnowMore from '@/components/ui/KnowMore'
 
 const data = {
-  title: 'Gastroenteritis',
-  bannerImage: '/gastroenterology/gastroenteritis.png',
+  title: "Gastroenteritis",
+  bannerImage: "/gastroenterology/gastroenteritis.png",
   description: `Gastroenteritis, commonly known as the "stomach flu," refers to the inflammation of the stomach and intestines. It causes discomfort and symptoms like nausea, vomiting, abdominal pain, and diarrhoea. The condition is often caused by infections—viral, bacterial, or parasitic—or exposure to toxic substances. Although it is generally self-limiting, it can become serious in vulnerable populations, such as young children, the elderly, or those with weakened immune systems.`,
-  overview: '',
+  overview: "",
 
   section_1: [
     {
-      title: 'Autoimmune response:',
+      title: "Autoimmune response:",
       description:
-        'The immune system mistakenly attacks healthy cells in the colon, causing inflammation.',
+        "The immune system mistakenly attacks healthy cells in the colon, causing inflammation.",
     },
     {
-      title: 'Genetic predisposition:',
+      title: "Genetic predisposition:",
       description:
-        'People with a family history of UC or other IBDs are at higher risk.',
+        "People with a family history of UC or other IBDs are at higher risk.",
     },
     {
-      title: 'Gut microbiome imbalance:',
-      description: 'Alterations in gut bacteria may trigger inflammation.',
+      title: "Gut microbiome imbalance:",
+      description: "Alterations in gut bacteria may trigger inflammation.",
     },
     {
-      title: 'Environmental triggers:',
+      title: "Environmental triggers:",
       description:
-        'Factors like stress, infections, and diet may not cause UC directly but can provoke flare-ups.',
+        "Factors like stress, infections, and diet may not cause UC directly but can provoke flare-ups.",
     },
     {
-      title: 'Risk factors:',
+      title: "Risk factors:",
       description:
-        'UC is more prevalent in younger individuals (15–30 years) and those over 60. It is also more common among people of Ashkenazi Jewish descent.',
+        "UC is more prevalent in younger individuals (15–30 years) and those over 60. It is also more common among people of Ashkenazi Jewish descent.",
     },
   ],
 
@@ -69,7 +69,7 @@ const data = {
   ],
 
 
-  data_1: [
+  data_9: [
     {
       heading: 'Intestinal symptoms:',
       description: '',
@@ -78,20 +78,20 @@ const data = {
           description: 'Diarrhoea (sometimes watery)',
         },
         {
-          description: 'Nausea and vomiting',
+          description: "Nausea and vomiting",
         },
         {
-          description: 'Abdominal cramps and pain',
+          description: "Abdominal cramps and pain",
         },
         {
-          description: 'Loss of appetite',
+          description: "Loss of appetite",
         },
        
       ],
     },
     {
-      heading: 'Systemic symptoms:',
-      description: '',
+      heading: "Systemic symptoms:",
+      description: "",
       aneurysmSymptoms: [
         {
           description: 'Chills and body aches',
@@ -108,56 +108,56 @@ const data = {
 
   data_2: [
     {
-      heading: 'Viral Infections',
-      description: '',
+      heading: "Viral Infections",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Norovirus (most common cause worldwide)',
+          description: "Norovirus (most common cause worldwide)",
         },
         {
-          description: 'Rotavirus',
+          description: "Rotavirus",
         },
         {
-          description: 'Adenovirus',
+          description: "Adenovirus",
         },
       ],
     },
     {
-      heading: 'Bacterial Infection:',
-      description: '',
+      heading: "Bacterial Infection:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Escherichia coli (E. coli)',
+          description: "Escherichia coli (E. coli)",
         },
         {
-          description: 'Salmonella',
+          description: "Salmonella",
         },
         {
-          description: 'Clostridioides difficile (C. diff)',
+          description: "Clostridioides difficile (C. diff)",
         },
         {
-          description: 'Shigella',
+          description: "Shigella",
         },
       ],
     },
     {
-      heading: 'Parasitic Infections:',
-      description: '',
+      heading: "Parasitic Infections:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Giardia',
+          description: "Giardia",
         },
         {
-          description: 'Cryptosporidium',
+          description: "Cryptosporidium",
         },
       ],
     },
     {
-      heading: 'Fungal Infections:',
-      description: '',
+      heading: "Fungal Infections:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Candida species',
+          description: "Candida species",
         },
       ],
     },
@@ -166,30 +166,30 @@ const data = {
       description: '',
       aneurysmSymptoms: [
         {
-          description: 'Contaminated food and water',
+          description: "Contaminated food and water",
         },
         {
           description:
-            'Overuse of alcohol or nonsteroidal anti-inflammatory drugs (NSAIDs)',
+            "Overuse of alcohol or nonsteroidal anti-inflammatory drugs (NSAIDs)",
         },
         {
-          description: 'Plant toxins (e.g., poisonous mushrooms)',
+          description: "Plant toxins (e.g., poisonous mushrooms)",
         },
       ],
     },
   ],
   data_3: [
     {
-      heading: 'Untreated GERD can lead to:',
-      description: '',
+      heading: "Untreated GERD can lead to:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Esophagitis: Inflammation that can cause bleeding or ulcers.',
+            "Esophagitis: Inflammation that can cause bleeding or ulcers.",
         },
         {
           description:
-            'Esophageal Stricture: Narrowing of the esophagus due to scar tissue, leading to swallowing difficulties.',
+            "Esophageal Stricture: Narrowing of the esophagus due to scar tissue, leading to swallowing difficulties.",
         },
         {
           description: `Barrett's Esophagus: Precancerous changes in the esophageal lining, increasing the risk of esophageal cancer.`,
@@ -200,8 +200,8 @@ const data = {
 
   complications: [
     {
-      heading: 'Home Management:',
-      description: '',
+      heading: "Home Management:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -219,8 +219,8 @@ const data = {
     },
 
     {
-      heading: 'Medical Treatment:',
-      description: '',
+      heading: "Medical Treatment:",
+      description: "",
       aneurysmSymptoms: [
         {
           description: '<span class="font-semibold text-hciSecondary">Intravenous fluids:</span> If dehydration is severe.',
@@ -238,8 +238,8 @@ const data = {
       ],
     },
     {
-      heading: 'For Chemical Gastroenteritis:',
-      description: '',
+      heading: "For Chemical Gastroenteritis:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
@@ -250,15 +250,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
      Gastroenteritis is a common condition that can affect people of all ages, with most cases resolving on their own within a few days. While it is usually not severe, it can be dangerous for individuals with weaker immune systems, such as children, the elderly, or those with chronic conditions. Managing hydration and rest are essential for recovery. If symptoms persist or worsen, it is important to consult a healthcare provider to avoid complications like dehydration or electrolyte imbalances.
      With good hygiene practices, such as regular hand washing and safe food handling, the risk of contracting gastroenteritis can be significantly reduced.
@@ -268,38 +268,38 @@ const data = {
 
   symptoms: [
     {
-      category: 'Abdominal Pain:',
+      category: "Abdominal Pain:",
       description:
-        'A common symptom, often described as a burning sensation or discomfort in the upper abdomen.',
-      bgColor: 'bg-hciPrimary text-white',
+        "A common symptom, often described as a burning sensation or discomfort in the upper abdomen.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Nausea or Vomiting:',
-      description: 'Can occur, sometimes accompanied by a loss of appetite.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Nausea or Vomiting:",
+      description: "Can occur, sometimes accompanied by a loss of appetite.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Bloating and Indigestion:',
+      category: "Bloating and Indigestion:",
       description:
-        'Feelings of fullness and discomfort after eating are common.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Feelings of fullness and discomfort after eating are common.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Loss of Appetite:',
-      description: 'May lead to unintended weight loss in some individuals.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Loss of Appetite:",
+      description: "May lead to unintended weight loss in some individuals.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Black or Tarry Stools:',
+      category: "Black or Tarry Stools:",
       description:
-        'Can indicate bleeding in the stomach and should prompt immediate medical attention.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Can indicate bleeding in the stomach and should prompt immediate medical attention.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Stool tests:</span> To detect viral, bacterial, or parasitic infections.',
       bgColor: 'bg-hciSecondary text-white',
@@ -310,22 +310,22 @@ const data = {
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: '',
+      category: "",
       description:
         '<span class="font-semibold">Electrolyte panel:</span> To monitor for imbalances caused by dehydration.',
       bgColor: 'bg-hciSecondary text-white',
     },
   ],
-}
+};
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
      Gastroenteritis is a common condition that can affect people of all ages, with most cases resolving on their own within a few days. While it is usually not severe, it can be dangerous for individuals with weaker immune systems, such as children, the elderly, or those with chronic conditions. Managing hydration and rest are essential for recovery. If symptoms persist or worsen, it is important to consult a healthcare provider to avoid complications like dehydration or electrolyte imbalances.
      With good hygiene practices, such as regular hand washing and safe food handling, the risk of contracting gastroenteritis can be significantly reduced.
           `,
   },
-]
+];
 
 function GeneralSurgery() {
   return (
@@ -440,12 +440,12 @@ function GeneralSurgery() {
          
         </div>
 
-       <Conclusion data={footerData} />
+        <Conclusion data={footerData} />
         <FooterLinks head={data.title} />
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

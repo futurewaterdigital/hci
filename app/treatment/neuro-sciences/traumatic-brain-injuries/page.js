@@ -11,52 +11,52 @@ import TextComponent from '@/components/Common/TextComponent'
 import IssuesLinks from '@/components/ui/IssuesLinks'
 import H1 from '@/components/ui/h1'
 const data = {
-  title: 'Traumatic Brain Injuries (TBI)',
-  bannerImage: '/neuro-sciences/traumatic-brain-injuries.png',
+  title: "Traumatic Brain Injuries (TBI)",
+  bannerImage: "/neuro-sciences/traumatic-brain-injuries.png",
   description: `A Traumatic Brain Injury (TBI) refers to damage to the brain resulting from an external mechanical force, which can have significant and lasting effects on a person’s cognitive, physical, and emotional well-being. In India, TBIs are a growing health concern, often linked to road accidents, falls, and sports-related injuries. Understanding TBI is vital for timely intervention and rehabilitation, enhancing recovery and quality of life.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Road Accidents',
+      title: "Road Accidents",
       description: `One of the leading causes of TBI, often resulting from high-speed collisions or pedestrian injuries.`,
     },
     {
-      title: 'Sports Injuries',
+      title: "Sports Injuries",
       description: `Contact sports, such as football and rugby, carry a higher risk of TBI due to impacts or collisions.`,
     },
     {
-      title: 'Assaults',
+      title: "Assaults",
       description:
-        'Violence or physical altercations can result in blunt force trauma to the head, leading to TBI.',
+        "Violence or physical altercations can result in blunt force trauma to the head, leading to TBI.",
     },
     {
-      title: 'Workplace Accidents',
+      title: "Workplace Accidents",
       description:
-        'Injuries sustained in construction or industrial settings can result in head injuries if safety precautions are not followed.',
+        "Injuries sustained in construction or industrial settings can result in head injuries if safety precautions are not followed.",
     },
     {
-      title: 'Falls',
+      title: "Falls",
       description:
-        'Common in both older adults and children, falls can lead to severe head injuries, especially in those with weakened bones or balance issues.',
+        "Common in both older adults and children, falls can lead to severe head injuries, especially in those with weakened bones or balance issues.",
     },
   ],
 
   complications: [
     {
-      heading: 'Emergency Care:',
-      description: '',
+      heading: "Emergency Care:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Immediate care may involve stabilising the patient and preventing further injury. This could include airway management and controlling bleeding.',
+            "Immediate care may involve stabilising the patient and preventing further injury. This could include airway management and controlling bleeding.",
         },
       ],
     },
 
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Drugs may be prescribed to manage symptoms such as pain, seizures, or swelling in the brain. Corticosteroids might be used to reduce inflammation.`,
@@ -64,8 +64,8 @@ const data = {
       ],
     },
     {
-      heading: 'Surgery',
-      description: '',
+      heading: "Surgery",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `In cases of severe TBI, surgical interventions may be necessary to relieve pressure on the brain, remove clotted blood, or repair skull fractures.
@@ -74,8 +74,8 @@ const data = {
       ],
     },
     {
-      heading: 'Rehabilitation',
-      description: '',
+      heading: "Rehabilitation",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Comprehensive rehabilitation programmes often include physical therapy, occupational therapy, and speech therapy to aid recovery and help individuals regain lost skills.`,
@@ -85,15 +85,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
      Growing awareness of traumatic brain injury (TBI) and its impact on individuals and families has led to better support systems and expanded treatment options. Access to specialized care and rehabilitation facilities plays a key role in enhancing recovery outcomes. Timely diagnosis and proper management of TBIs can significantly improve quality of life, helping patients reintegrate into society and return to daily routines. Educating the public on prevention strategies, especially in high-risk settings, is essential for reducing the incidence of TBIs.
           `,
@@ -102,57 +102,57 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description: `Cognitive Impairment: Difficulties with memory, attention, or concentration.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Physical Symptoms: Headaches, dizziness, nausea, and vomiting may occur.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Emotional Changes: Mood swings, anxiety, and depression can be prevalent in individuals with TBI.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Loss of Consciousness: Varying from brief moments to prolonged periods, depending on the severity of the injury.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Balance Issues: Difficulty with coordination and balance can be indicative of brain injury.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Sensitivity to Light and Noise: Increased sensitivity can occur, causing discomfort.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description: `Neurological Examination: An evaluation of cognitive function, coordination, and reflexes to assess the extent of brain injury.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Imaging Studies: CT scans or MRI scans are crucial for visualising brain structures and identifying bleeding, swelling, or other abnormalities.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Glasgow Coma Scale (GCS): This scale assesses a patient's level of consciousness and can help determine the severity of the injury.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
@@ -273,7 +273,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

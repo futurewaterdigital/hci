@@ -12,64 +12,64 @@ import TextComponent from '@/components/Common/TextComponent'
 import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
-  title: 'Peripheral Nerve Disorders',
-  bannerImage: '/neuro-sciences/peripheral-nerve-disorders.png',
+  title: "Peripheral Nerve Disorders",
+  bannerImage: "/neuro-sciences/peripheral-nerve-disorders.png",
   description: `Peripheral nerve disorders refer to a range of conditions that affect the peripheral nervous system, which comprises the nerves outside the brain and spinal cord. These disorders can significantly impact an individual’s quality of life, leading to symptoms such as weakness, numbness, and pain. In India, the prevalence of peripheral nerve disorders is rising due to factors like diabetes, trauma, and exposure to toxins.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Diabetes',
+      title: "Diabetes",
       description:
-        'Diabetic neuropathy is one of the most common causes of peripheral nerve disorders, resulting from prolonged high blood sugar levels.',
+        "Diabetic neuropathy is one of the most common causes of peripheral nerve disorders, resulting from prolonged high blood sugar levels.",
     },
     {
-      title: 'Injuries',
+      title: "Injuries",
       description:
-        'Physical trauma or compression of nerves can lead to peripheral nerve damage.',
+        "Physical trauma or compression of nerves can lead to peripheral nerve damage.",
     },
     {
-      title: 'Infections',
+      title: "Infections",
       description:
-        'Certain infections, such as Lyme disease or HIV, can affect nerve function.',
+        "Certain infections, such as Lyme disease or HIV, can affect nerve function.",
     },
     {
-      title: 'Toxins',
+      title: "Toxins",
       description:
-        'Exposure to heavy metals, chemicals, or alcohol can result in nerve damage.',
+        "Exposure to heavy metals, chemicals, or alcohol can result in nerve damage.",
     },
     {
-      title: 'Genetic Factors',
+      title: "Genetic Factors",
       description:
-        'Some hereditary conditions can predispose individuals to peripheral nerve disorders.',
+        "Some hereditary conditions can predispose individuals to peripheral nerve disorders.",
     },
   ],
 
   complications: [
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Pain relievers, anti-seizure medications, and antidepressants may help manage symptoms.',
+            "Pain relievers, anti-seizure medications, and antidepressants may help manage symptoms.",
         },
       ],
     },
 
     {
-      heading: 'Physical Therapy',
-      description: '',
+      heading: "Physical Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Rehabilitation exercises can improve strength and coordination, aiding recovery.',
+            "Rehabilitation exercises can improve strength and coordination, aiding recovery.",
         },
       ],
     },
     {
-      heading: 'Surgery',
-      description: '',
+      heading: "Surgery",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `In cases of nerve compression or injury, surgical intervention may be necessary to relieve pressure.
@@ -78,37 +78,37 @@ const data = {
       ],
     },
     {
-      heading: 'Lifestyle Changes',
-      description: '',
+      heading: "Lifestyle Changes",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Managing underlying conditions like diabetes and making dietary adjustments can help prevent further nerve damage.',
+            "Managing underlying conditions like diabetes and making dietary adjustments can help prevent further nerve damage.",
         },
       ],
     },
     {
-      heading: 'Alternative Therapies:',
-      description: '',
+      heading: "Alternative Therapies:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Techniques such as acupuncture or massage therapy may provide additional relief.',
+            "Techniques such as acupuncture or massage therapy may provide additional relief.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       In India, specialized medical centres offer comprehensive care for peripheral nerve disorders, employing advanced diagnostic techniques and treatment options. Early intervention is crucial for optimizing outcomes, enabling individuals to lead healthier, more active lives despite their conditions.
           `,
@@ -117,71 +117,71 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description:
-        'Numbness or Tingling: A common early symptom often described as a “pins and needles” sensation.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Numbness or Tingling: A common early symptom often described as a “pins and needles” sensation.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Weakness: Difficulty in muscle control or weakness, particularly in the hands or feet.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Weakness: Difficulty in muscle control or weakness, particularly in the hands or feet.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Pain: Sharp, stabbing, or burning pain that may worsen at night.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Pain: Sharp, stabbing, or burning pain that may worsen at night.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Sensitivity: Heightened sensitivity to touch, making normal sensations feel uncomfortable.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Sensitivity: Heightened sensitivity to touch, making normal sensations feel uncomfortable.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Loss of Coordination: Difficulty with balance and coordination due to impaired nerve function.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Loss of Coordination: Difficulty with balance and coordination due to impaired nerve function.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
-        'Physical Examination: A thorough assessment of symptoms and medical history.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Physical Examination: A thorough assessment of symptoms and medical history.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Nerve Conduction Studies: Tests that measure the speed and strength of signals travelling along nerves.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Electromyography (EMG): Evaluates the electrical activity of muscles to identify nerve or muscle disorders.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Electromyography (EMG): Evaluates the electrical activity of muscles to identify nerve or muscle disorders.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Blood Tests: To detect underlying conditions such as diabetes or vitamin deficiencies.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Blood Tests: To detect underlying conditions such as diabetes or vitamin deficiencies.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Imaging Studies: MRI or ultrasound may be used to identify structural issues affecting the nerves.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Imaging Studies: MRI or ultrasound may be used to identify structural issues affecting the nerves.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
@@ -301,7 +301,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

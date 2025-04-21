@@ -12,99 +12,99 @@ import H1 from '@/components/ui/h1'
 import IssuesLinks from "@/components/ui/IssuesLinks"
 
 const data = {
-  title: 'Foot and Ankle Surgery',
-  bannerImage: '/orthopaedics/foot-and-ankle-surgery.png',
+  title: "Foot and Ankle Surgery",
+  bannerImage: "/orthopaedics/foot-and-ankle-surgery.png",
   description: `Foot and ankle surgery is a specialized field aimed at treating various conditions and injuries affecting the lower extremities, such as fractures, tendon tears, arthritis, and deformities like bunions. Surgery is typically recommended when non-surgical treatments have failed to relieve symptoms, though acute conditions like fractures may require immediate intervention.`,
   overview: `Surgical procedures may involve realigning bones, repairing ligaments, fusing joints, or replacing the ankle joint entirely in cases of severe arthritis. The primary goal is to restore mobility, reduce pain, and prevent further complications, helping patients regain their ability to walk comfortably and perform daily activities without restriction.`,
 
   causes: [
     {
-      title: 'Traumatic Injuries:',
+      title: "Traumatic Injuries:",
       description:
-        'Fractures, dislocations, and ligament tears caused by accidents or sports activities.',
+        "Fractures, dislocations, and ligament tears caused by accidents or sports activities.",
     },
     {
-      title: 'Degenerative Conditions:',
+      title: "Degenerative Conditions:",
       description:
-        'Osteoarthritis and rheumatoid arthritis leading to joint damage and chronic pain.',
+        "Osteoarthritis and rheumatoid arthritis leading to joint damage and chronic pain.",
     },
     {
-      title: 'Structural Deformities:',
+      title: "Structural Deformities:",
       description:
-        'Bunions, flat feet, and hammertoes that alter the natural alignment of the foot.',
+        "Bunions, flat feet, and hammertoes that alter the natural alignment of the foot.",
     },
     {
-      title: 'Tendon or Ligament Injuries:',
+      title: "Tendon or Ligament Injuries:",
       description:
-        'Ruptures of the Achilles or posterior tibialis tendons due to overuse or sudden trauma.',
+        "Ruptures of the Achilles or posterior tibialis tendons due to overuse or sudden trauma.",
     },
     {
-      title: 'Nerve Compression Disorders:',
+      title: "Nerve Compression Disorders:",
       description:
-        'Conditions like tarsal tunnel syndrome causing pain and numbness.',
+        "Conditions like tarsal tunnel syndrome causing pain and numbness.",
     },
     {
-      title: 'Inflammatory Conditions:',
+      title: "Inflammatory Conditions:",
       description:
-        'Chronic inflammation such as tendonitis or plantar fasciitis.',
+        "Chronic inflammation such as tendonitis or plantar fasciitis.",
     },
     {
-      title: 'Congenital Issues:',
-      description: 'Birth defects or abnormalities in foot structure.',
+      title: "Congenital Issues:",
+      description: "Birth defects or abnormalities in foot structure.",
     },
   ],
 
   complications: [
     {
-      heading: 'Ankle Replacement Surgery:',
+      heading: "Ankle Replacement Surgery:",
       aneurysmSymptoms: [
         {
           description:
-            'Recommended for severe arthritis to replace the damaged joint with a prosthetic implant.',
+            "Recommended for severe arthritis to replace the damaged joint with a prosthetic implant.",
         },
         {
           description:
-            'Helps restore mobility and reduce chronic pain in the ankle joint.',
+            "Helps restore mobility and reduce chronic pain in the ankle joint.",
         },
       ],
     },
 
     {
-      heading: 'Ankle Fusion (Arthrodesis):',
+      heading: "Ankle Fusion (Arthrodesis):",
       aneurysmSymptoms: [
         {
           description:
-            'Fuses the bones of the ankle joint to eliminate pain caused by arthritis.',
+            "Fuses the bones of the ankle joint to eliminate pain caused by arthritis.",
         },
         {
           description:
-            'Recommended when joint replacement is not suitable due to bone health or age.',
+            "Recommended when joint replacement is not suitable due to bone health or age.",
         },
       ],
     },
     {
-      heading: 'Posterior Tibialis Tendon Surgery:',
+      heading: "Posterior Tibialis Tendon Surgery:",
       aneurysmSymptoms: [
         {
           description:
-            'Corrects tendon damage that causes flatfoot deformity or instability.',
+            "Corrects tendon damage that causes flatfoot deformity or instability.",
         },
         {
           description:
-            'Involves tendon transfer or repair, depending on the severity of the injury.',
+            "Involves tendon transfer or repair, depending on the severity of the injury.",
         },
       ],
     },
     {
-      heading: 'Lateral Ankle Ligament Reconstruction:',
+      heading: "Lateral Ankle Ligament Reconstruction:",
       aneurysmSymptoms: [
         {
           description:
-            'Restores stability to the ankle by reconstructing torn ligaments.',
+            "Restores stability to the ankle by reconstructing torn ligaments.",
         },
         {
           description:
-            'Typically performed on individuals with chronic ankle instability or repeated sprains.',
+            "Typically performed on individuals with chronic ankle instability or repeated sprains.",
         },
       ],
     },
@@ -112,43 +112,43 @@ const data = {
 
   complications_1: [
     {
-      heading: 'Achilles Tendon Repair Surgery:',
+      heading: "Achilles Tendon Repair Surgery:",
       aneurysmSymptoms: [
         {
           description:
-            'Repairs ruptured or torn Achilles tendons caused by trauma or overuse.',
+            "Repairs ruptured or torn Achilles tendons caused by trauma or overuse.",
         },
         {
           description:
-            'Helps restore full strength and function to the lower leg.',
+            "Helps restore full strength and function to the lower leg.",
         },
       ],
     },
     {
-      heading: 'Bunion Surgery:',
+      heading: "Bunion Surgery:",
       aneurysmSymptoms: [
         {
           description:
-            'Realigns the bones and tissues around the big toe to correct bunion deformity.',
+            "Realigns the bones and tissues around the big toe to correct bunion deformity.",
         },
         {
           description:
-            'Reduces pain and restores normal foot shape for improved mobility.',
+            "Reduces pain and restores normal foot shape for improved mobility.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       <p>Foot and ankle surgery offers a pathway to pain relief, improved mobility, and enhanced quality of life for patients suffering from chronic conditions or traumatic injuries. By leveraging advanced surgical techniques, our specialized team aims to provide personalized care for each patient.</p>
       <p>If you are experiencing persistent pain, deformities, or mobility challenges, consulting with a foot and ankle specialist can help determine the most effective treatment plan. Early intervention is essential to prevent further complications and ensure a successful recovery.</p>
@@ -159,116 +159,116 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description:
-        'Persistent Pain: Localized pain in the ankle, foot, or toes that interferes with movement.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Persistent Pain: Localized pain in the ankle, foot, or toes that interferes with movement.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Swelling or Inflammation: Chronic swelling that does not subside with rest or medication.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Swelling or Inflammation: Chronic swelling that does not subside with rest or medication.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Deformity: Visible misalignment or enlargement, such as bunions or collapsed arches.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Deformity: Visible misalignment or enlargement, such as bunions or collapsed arches.",
+      bgColor: "bg-hciPrimary text-white",
     },
 
     {
-      category: '',
+      category: "",
       description:
-        'Instability: A sensation of weakness or instability, particularly in the ankle, affecting balance.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Instability: A sensation of weakness or instability, particularly in the ankle, affecting balance.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Restricted Range of Motion: Difficulty in moving the foot or ankle due to stiffness or joint fusion.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Restricted Range of Motion: Difficulty in moving the foot or ankle due to stiffness or joint fusion.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Numbness or Tingling: Indicative of nerve compression or damage.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Numbness or Tingling: Indicative of nerve compression or damage.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Difficulty Walking or Bearing Weight: Reduced mobility or pain while walking or standing.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Difficulty Walking or Bearing Weight: Reduced mobility or pain while walking or standing.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
-        'Physical Examination: Assessing joint movement, pain, and deformities.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Physical Examination: Assessing joint movement, pain, and deformities.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Imaging Tests: X-rays, MRI, or CT scans to identify fractures, joint issues, or soft tissue damage.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Imaging Tests: X-rays, MRI, or CT scans to identify fractures, joint issues, or soft tissue damage.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Ultrasound: To detect tendon injuries or inflammation in soft tissues.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Ultrasound: To detect tendon injuries or inflammation in soft tissues.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Blood Tests: Used to identify arthritis or inflammatory conditions.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Blood Tests: Used to identify arthritis or inflammatory conditions.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Gait Analysis: Evaluates walking patterns to identify biomechanical issues.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Gait Analysis: Evaluates walking patterns to identify biomechanical issues.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Nerve Conduction Studies: To assess nerve function in cases involving numbness or tingling.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Nerve Conduction Studies: To assess nerve function in cases involving numbness or tingling.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
 
   consideration: [
     {
-      title: 'Physical Therapy:',
-      description: 'Restores strength, flexibility, and range of motion.',
+      title: "Physical Therapy:",
+      description: "Restores strength, flexibility, and range of motion.",
     },
     {
-      title: 'Pain Management:',
+      title: "Pain Management:",
       description:
-        'Use of medications to control pain during the recovery period.',
+        "Use of medications to control pain during the recovery period.",
     },
     {
-      title: 'Immobilization:',
+      title: "Immobilization:",
       description:
-        'Casting, splinting, or bracing to protect the surgical site and promote healing.',
+        "Casting, splinting, or bracing to protect the surgical site and promote healing.",
     },
     {
-      title: 'Gradual Weight-Bearing:',
+      title: "Gradual Weight-Bearing:",
       description:
-        'Patients may use crutches or a walker initially, with a gradual return to full weight-bearing activities.',
+        "Patients may use crutches or a walker initially, with a gradual return to full weight-bearing activities.",
     },
     {
-      title: 'Follow-Up Care:',
+      title: "Follow-Up Care:",
       description:
-        'Regular check-ups to monitor healing and address any complications.',
+        "Regular check-ups to monitor healing and address any complications.",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
@@ -407,7 +407,7 @@ function GeneralSurgery() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

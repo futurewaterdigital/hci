@@ -13,58 +13,58 @@ import CTaButton from '@/components/cardiacComponents/CtaButton'
 
 
 const data = {
-  bannerImage: '/others/general-surgery.png',
-  title: 'General Surgery',
+  bannerImage: "/others/general-surgery.png",
+  title: "General Surgery",
   description: `Expert Care for Comprehensive Surgical Needs`,
   overview: `At Healthcare International (HCI), we understand that surgical interventions require expertise, precision, and compassionate care. Our network of experienced general surgeons provides comprehensive care for a wide range of conditions, ensuring optimal outcomes and a smooth recovery journey for every patient.`,
   sections: [
     {
-      title: 'What is General Surgery?',
+      title: "What is General Surgery?",
       content: `General surgery is a medical discipline that involves performing various surgical procedures to treat a wide range of conditions. Our general surgeons are skilled in diagnosing and treating conditions that require surgical intervention, ensuring the best possible outcomes for our patients.`,
-      bgColor: 'bg-hciSecondary',
+      bgColor: "bg-hciSecondary",
     },
     {
-      title: 'Specialties in General Surgery',
+      title: "Specialties in General Surgery",
       content: `HCI’s network of general surgeons is proficient in managing surgical procedures for a variety of conditions, including:`,
       bullets: [
-        'Minimally invasive procedures',
-        'Emergency surgical care',
-        'Oncological surgery',
-        'Hernia repair',
-        'Gallbladder surgery',
+        "Minimally invasive procedures",
+        "Emergency surgical care",
+        "Oncological surgery",
+        "Hernia repair",
+        "Gallbladder surgery",
       ],
-      bgColor: 'bg-hciPrimary',
+      bgColor: "bg-hciPrimary",
     },
   ],
   complications: [
     {
-      heading: 'Potential Complications',
+      heading: "Potential Complications",
       aneurysmSymptoms: [
-        { description: 'Hernias (inguinal, umbilical, and incisional)' },
-        { description: 'Gallbladder issues, including gallstones' },
-        { description: 'Appendicitis' },
-        { description: 'Gastrointestinal conditions' },
-        { description: 'Thyroid and parathyroid disorders' },
+        { description: "Hernias (inguinal, umbilical, and incisional)" },
+        { description: "Gallbladder issues, including gallstones" },
+        { description: "Appendicitis" },
+        { description: "Gastrointestinal conditions" },
+        { description: "Thyroid and parathyroid disorders" },
         {
           description:
-            'Skin and soft tissue conditions, including cysts and abscesses',
+            "Skin and soft tissue conditions, including cysts and abscesses",
         },
-        { description: 'Benign and malignant tumors' },
+        { description: "Benign and malignant tumors" },
       ],
     },
   ],
   benefits: [
-    { title: 'Reduced pain and scarring' },
-    { title: 'Faster recovery times' },
-    { title: 'Shorter hospital stays' },
+    { title: "Reduced pain and scarring" },
+    { title: "Faster recovery times" },
+    { title: "Shorter hospital stays" },
   ],
   contact: {
-    title: 'Contact Us Today',
-    head: 'Connect with HCI',
+    title: "Contact Us Today",
+    head: "Connect with HCI",
     content:
-      'To learn more about our general surgery services and find the best surgical care in India for your needs.',
+      "To learn more about our general surgery services and find the best surgical care in India for your needs.",
   },
-}
+};
 
 function GeneralSurgery() {
   return (
@@ -85,12 +85,12 @@ function GeneralSurgery() {
           className="text-2xl font-medium mt-8 text-center"
         />
 
-        <p className="text-center font-light">
-          Our general surgery services encompass a broad range of conditions,
-          including:
-        </p>
+          <p className="text-center font-light">
+            Our general surgery services encompass a broad range of conditions,
+            including:
+          </p>
           <DataLists data={data.complications} />
-          </div>
+        </div>
         <H2
           title="Why Choose General Surgery Through HCI?"
           className="text-2xl font-medium mb-4 text-center"
@@ -125,7 +125,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

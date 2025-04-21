@@ -13,181 +13,181 @@ import IssuesLinks from "@/components/ui/IssuesLinks"
 
 
 const data = {
-  title: 'Osteosarcoma',
-  bannerImage: '/orthopaedics/osteosarcoma.png',
+  title: "Osteosarcoma",
+  bannerImage: "/orthopaedics/osteosarcoma.png",
   description: `Osteosarcoma, or osteogenic sarcoma, is a rare but aggressive form of cancer that begins in the bones. Initially, the cancer cells resemble normal bone cells, but over time, they form tumors that produce immature and diseased bone tissue. Osteosarcoma primarily affects adolescents, with the average age of diagnosis around 15 years.`,
   overview: `This type of cancer typically targets long bones, especially those undergoing rapid growth, such as:`,
   data1: [
     {
-      title: 'Femur',
-      description: 'The thigh bone',
+      title: "Femur",
+      description: "The thigh bone",
     },
     {
-      title: 'Tibia',
-      description: '(shin bone) near the knee',
+      title: "Tibia",
+      description: "(shin bone) near the knee",
     },
     {
-      title: 'Humerus',
-      description: '(upper arm bone) near the shoulder',
+      title: "Humerus",
+      description: "(upper arm bone) near the shoulder",
     },
   ],
   data2: [
     {
-      title: 'High-grade:',
+      title: "High-grade:",
       description:
-        'Fast-growing and likely to spread (common in children and teens).',
+        "Fast-growing and likely to spread (common in children and teens).",
     },
     {
-      title: 'Intermediate-grade:',
-      description: 'Moderate growth (e.g., periosteal osteosarcoma).',
+      title: "Intermediate-grade:",
+      description: "Moderate growth (e.g., periosteal osteosarcoma).",
     },
     {
-      title: 'Low-grade:',
-      description: 'Slow-growing and less likely to spread.',
+      title: "Low-grade:",
+      description: "Slow-growing and less likely to spread.",
     },
   ],
   data3: [
     {
-      title: '',
-      description: 'Osteoblastic, Chondroblastic, and Fibroblastic variants.',
+      title: "",
+      description: "Osteoblastic, Chondroblastic, and Fibroblastic variants.",
     },
     {
-      title: '',
-      description: 'Telangiectatic and Small cell osteosarcomas.',
+      title: "",
+      description: "Telangiectatic and Small cell osteosarcomas.",
     },
   ],
   data4: [
     {
-      title: '',
-      description: 'Tumor size and whether it has metastasized.',
+      title: "",
+      description: "Tumor size and whether it has metastasized.",
     },
     {
-      title: '',
-      description: 'Response to treatment.',
+      title: "",
+      description: "Response to treatment.",
     },
     {
-      title: '',
+      title: "",
       description: `Patient's age and general health.`,
     },
   ],
   causes: [
     {
-      title: 'Congenital Anomalies:',
-      description: 'Birth defects like syndactyly, polydactyly, and club hand.',
+      title: "Congenital Anomalies:",
+      description: "Birth defects like syndactyly, polydactyly, and club hand.",
     },
     {
-      title: 'Repetitive Stress Injuries:',
+      title: "Repetitive Stress Injuries:",
       description:
-        'Carpal tunnel syndrome, trigger finger, and de Quervain’s disease.',
+        "Carpal tunnel syndrome, trigger finger, and de Quervain’s disease.",
     },
     {
-      title: 'Bone Infarction:',
-      description: 'Interrupted blood supply to bones.',
+      title: "Bone Infarction:",
+      description: "Interrupted blood supply to bones.",
     },
     {
-      title: 'Growth Spurts:',
-      description: 'Rapid skeletal growth during adolescence.',
+      title: "Growth Spurts:",
+      description: "Rapid skeletal growth during adolescence.",
     },
   ],
 
   treatment_data: [
     {
-      heading: 'Surgery (Limb-Salvage or Amputation):',
+      heading: "Surgery (Limb-Salvage or Amputation):",
       aneurysmSymptoms: [
         {
           description:
-            'In limb-salvage surgery, the tumor and some healthy bone are removed while preserving the limb. Amputation is necessary when the tumor is large or the limb can’t be saved, and the patient will receive a prosthetic limb.',
+            "In limb-salvage surgery, the tumor and some healthy bone are removed while preserving the limb. Amputation is necessary when the tumor is large or the limb can’t be saved, and the patient will receive a prosthetic limb.",
         },
       ],
     },
     {
-      heading: 'Radiation Therapy:',
+      heading: "Radiation Therapy:",
       aneurysmSymptoms: [
         {
           description:
-            'External or internal radiation may be used when surgery isn’t feasible or to target residual cancer cells. Bone-seeking radiopharmaceuticals like samarium or radium may also be used to deliver radiation directly to cancer sites.',
+            "External or internal radiation may be used when surgery isn’t feasible or to target residual cancer cells. Bone-seeking radiopharmaceuticals like samarium or radium may also be used to deliver radiation directly to cancer sites.",
         },
       ],
     },
     {
-      heading: 'Cryosurgery:',
+      heading: "Cryosurgery:",
       aneurysmSymptoms: [
         {
           description:
-            'In this procedure, liquid nitrogen is applied to freeze and destroy cancer cells. It’s sometimes used as an alternative to surgery.',
+            "In this procedure, liquid nitrogen is applied to freeze and destroy cancer cells. It’s sometimes used as an alternative to surgery.",
         },
       ],
     },
     {
-      heading: 'Immunotherapy (Experimental)::',
+      heading: "Immunotherapy (Experimental)::",
       aneurysmSymptoms: [
         {
           description:
-            'Some clinical trials are exploring immunotherapy to enhance the body’s immune response to cancer cells. These therapies are not yet standard but show promise in advanced cases.',
+            "Some clinical trials are exploring immunotherapy to enhance the body’s immune response to cancer cells. These therapies are not yet standard but show promise in advanced cases.",
         },
       ],
     },
   ],
   treatment_data_1: [
     {
-      heading: 'Chemotherapy',
+      heading: "Chemotherapy",
       aneurysmSymptoms: [
         {
           description:
-            'Chemotherapy drugs kill cancer cells and are often administered both before surgery (neoadjuvant therapy) to shrink the tumor and after surgery (adjuvant therapy) to prevent recurrence.',
+            "Chemotherapy drugs kill cancer cells and are often administered both before surgery (neoadjuvant therapy) to shrink the tumor and after surgery (adjuvant therapy) to prevent recurrence.",
         },
       ],
     },
     {
-      heading: 'Targeted Therapy:',
+      heading: "Targeted Therapy:",
       aneurysmSymptoms: [
         {
           description:
-            'These drugs block proteins that are essential for cancer cell survival. Kinase inhibitors, mTOR inhibitors, and monoclonal antibodies are common targeted therapies for osteosarcoma.',
+            "These drugs block proteins that are essential for cancer cell survival. Kinase inhibitors, mTOR inhibitors, and monoclonal antibodies are common targeted therapies for osteosarcoma.",
         },
       ],
     },
     {
-      heading: 'Rotationplasty:',
+      heading: "Rotationplasty:",
       aneurysmSymptoms: [
         {
           description:
-            'In cases where part of a limb must be removed, rotationplasty involves rotating the lower leg 180 degrees and attaching it to the thigh, with the ankle functioning as a new knee. This procedure allows for better prosthetic fitting.',
+            "In cases where part of a limb must be removed, rotationplasty involves rotating the lower leg 180 degrees and attaching it to the thigh, with the ankle functioning as a new knee. This procedure allows for better prosthetic fitting.",
         },
       ],
     },
     {
-      heading: 'Rehabilitation and Physiotherapy:',
+      heading: "Rehabilitation and Physiotherapy:",
       aneurysmSymptoms: [
         {
           description:
-            'Post-surgery, patients undergo rehabilitation to regain strength, mobility, and function. Physiotherapy helps adapt to limb loss or prosthetics.',
+            "Post-surgery, patients undergo rehabilitation to regain strength, mobility, and function. Physiotherapy helps adapt to limb loss or prosthetics.",
         },
       ],
     },
   ],
   treatment_data_2: [
     {
-      heading: 'Psychosocial Support:',
+      heading: "Psychosocial Support:",
       aneurysmSymptoms: [
         {
           description:
-            'Mental health care, including counseling and support groups, is provided to manage emotional challenges during and after treatment.',
+            "Mental health care, including counseling and support groups, is provided to manage emotional challenges during and after treatment.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       While osteosarcoma is a challenging diagnosis, advances in treatment have significantly improved outcomes. With proper management through a multidisciplinary healthcare team, many individuals achieve recovery and can lead fulfilling lives. Regular follow-ups are essential to monitor for recurrence or treatment-related side effects. Early detection and prompt treatment remain critical for improving survival rates.
           `,
@@ -196,148 +196,148 @@ const data = {
 
   symptoms: [
     {
-      category: '',
-      description: 'Persistent bone pain or tenderness.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Persistent bone pain or tenderness.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Swelling or lumps that may feel warm to the touch.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Swelling or lumps that may feel warm to the touch.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Limited joint movement or difficulty using the affected limb.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Limited joint movement or difficulty using the affected limb.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Limping, especially if the cancer affects the leg.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Limping, especially if the cancer affects the leg.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Fractures occurring after minimal trauma.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Fractures occurring after minimal trauma.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Occasionally, fever without other symptoms.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Occasionally, fever without other symptoms.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Pain is often more severe at night or during physical activity.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Pain is often more severe at night or during physical activity.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Blood Tests:',
+      category: "Blood Tests:",
       description:
-        'These check organ function (kidneys, liver) and overall blood counts. While there’s no specific blood test to detect bone tumors, abnormal markers may guide further testing.',
-      bgColor: 'bg-hciSecondary text-white',
+        "These check organ function (kidneys, liver) and overall blood counts. While there’s no specific blood test to detect bone tumors, abnormal markers may guide further testing.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'X-Ray:',
+      category: "X-Ray:",
       description:
-        'X-rays help identify abnormal growths or tumors in bones and are often the first imaging step in diagnosis. They can reveal bone destruction or irregular new bone formation.',
-      bgColor: 'bg-hciSecondary text-white',
+        "X-rays help identify abnormal growths or tumors in bones and are often the first imaging step in diagnosis. They can reveal bone destruction or irregular new bone formation.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Computed Tomography (CT) Scan:',
+      category: "Computed Tomography (CT) Scan:",
       description:
-        'CT scans combine multiple X-ray images to produce detailed cross-sectional views of the body. These are crucial for checking whether the cancer has spread to the lungs or other organs.',
-      bgColor: 'bg-hciSecondary text-white',
+        "CT scans combine multiple X-ray images to produce detailed cross-sectional views of the body. These are crucial for checking whether the cancer has spread to the lungs or other organs.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Magnetic Resonance Imaging (MRI):',
+      category: "Magnetic Resonance Imaging (MRI):",
       description:
-        'MRIs provide a clearer image of soft tissues, helping doctors see the tumor’s boundaries and plan surgeries accurately. It’s commonly used if an X-ray shows abnormal growth.',
-      bgColor: 'bg-hciSecondary text-white',
+        "MRIs provide a clearer image of soft tissues, helping doctors see the tumor’s boundaries and plan surgeries accurately. It’s commonly used if an X-ray shows abnormal growth.",
+      bgColor: "bg-hciSecondary text-white",
     },
 
     {
-      category: 'Bone Scan:',
+      category: "Bone Scan:",
       description:
-        'A small amount of radioactive material is injected into the bloodstream to detect bone disorders. It highlights areas of high bone activity, indicating tumors.',
-      bgColor: 'bg-hciSecondary text-white',
+        "A small amount of radioactive material is injected into the bloodstream to detect bone disorders. It highlights areas of high bone activity, indicating tumors.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'PET-CT Scan:',
+      category: "PET-CT Scan:",
       description:
-        'This scan detects areas of high glucose uptake, often corresponding to cancer cells. It combines PET and CT images to locate tumors with precision.',
-      bgColor: 'bg-hciSecondary text-white',
+        "This scan detects areas of high glucose uptake, often corresponding to cancer cells. It combines PET and CT images to locate tumors with precision.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Biopsy (Core Needle or Surgical):',
+      category: "Biopsy (Core Needle or Surgical):",
       description:
-        ' In a biopsy, a small tissue sample is taken from the tumor and examined under a microscope to confirm the presence and type of cancer cells.',
-      bgColor: 'bg-hciSecondary text-white',
+        " In a biopsy, a small tissue sample is taken from the tumor and examined under a microscope to confirm the presence and type of cancer cells.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Staging Tests:',
+      category: "Staging Tests:",
       description:
-        'These additional scans (MRI, CT, bone scan) help determine if the cancer has spread (metastasized) to other parts of the body, aiding in treatment planning.',
-      bgColor: 'bg-hciSecondary text-white',
+        "These additional scans (MRI, CT, bone scan) help determine if the cancer has spread (metastasized) to other parts of the body, aiding in treatment planning.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
 
   consideration: [
     {
-      title: 'Regular Check-ups',
+      title: "Regular Check-ups",
       description:
-        'Routine pediatric visits help detect developmental issues early.',
+        "Routine pediatric visits help detect developmental issues early.",
     },
     {
-      title: 'Safe Practices in Sports',
+      title: "Safe Practices in Sports",
       description:
-        'Proper warm-up routines and protective gear minimize injuries.',
+        "Proper warm-up routines and protective gear minimize injuries.",
     },
     {
-      title: 'Nutritional Support',
-      description: 'A diet rich in calcium and vitamin D supports bone health.',
+      title: "Nutritional Support",
+      description: "A diet rich in calcium and vitamin D supports bone health.",
     },
     {
-      title: 'Emotional Support',
+      title: "Emotional Support",
       description:
-        'Helping children and families cope with the psychological impact of orthopedic conditions ensures holistic well-being.',
+        "Helping children and families cope with the psychological impact of orthopedic conditions ensures holistic well-being.",
     },
     {
-      title: 'Rehabilitation',
+      title: "Rehabilitation",
       description:
-        'Comprehensive physiotherapy aids recovery and promotes mobility post-treatment.',
+        "Comprehensive physiotherapy aids recovery and promotes mobility post-treatment.",
     },
   ],
   consideration_1: [
     {
-      title: 'Persistent Pain',
+      title: "Persistent Pain",
       description:
-        'Lasting discomfort or swelling, especially after an injury.',
+        "Lasting discomfort or swelling, especially after an injury.",
     },
     {
-      title: 'Visible Deformity',
-      description: 'Abnormal alignment of limbs, joints, or posture.',
+      title: "Visible Deformity",
+      description: "Abnormal alignment of limbs, joints, or posture.",
     },
     {
-      title: 'Difficulty Walking or Moving',
-      description: 'Inability to bear weight or move joints comfortably.',
+      title: "Difficulty Walking or Moving",
+      description: "Inability to bear weight or move joints comfortably.",
     },
     {
-      title: 'Growth Concerns',
+      title: "Growth Concerns",
       description:
-        'Delayed developmental milestones or uneven growth patterns.',
+        "Delayed developmental milestones or uneven growth patterns.",
     },
     {
-      title: 'Recurring Injuries',
+      title: "Recurring Injuries",
       description:
-        'Frequent injuries in the same area requiring further evaluation.',
+        "Frequent injuries in the same area requiring further evaluation.",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
@@ -578,7 +578,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

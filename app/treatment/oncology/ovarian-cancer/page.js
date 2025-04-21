@@ -16,23 +16,23 @@ const data = {
       aneurysmSymptoms: [
         {
           description: "Family history of ovarian/breast cancer",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
         {
           description: "BRCA1/BRCA2 gene mutations",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
         {
           description: "Hormone therapy and reproductive history",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
         {
           description: "Age (more common in postmenopausal women)",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
         {
           description: "Obesity and lifestyle factors",
-          className: "bg-blue-700 text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded",
         },
       ],
     },
@@ -184,7 +184,7 @@ function OvarianCancer() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Banner image={"/oncology/ovarian-cancer-banner.png"} />
-      <Title title={data.title} />
+      <Title title={data.title} className="text-4xl text-pink-500" />
       <div className="mt-6">
         <p className="text-gray-600 text-lg font-light">{data.description}</p>
       </div>
@@ -203,7 +203,7 @@ function OvarianCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/ovarian-cancer-info"
-              className="text-blue-600 hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               To Know More About Ovarian Cancer And Its Treatment, Click Here
             </Link>
@@ -223,7 +223,7 @@ function OvarianCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/ovarian-cancer-diagnosis"
-              className="text-blue-600 hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               For The Best Diagnosis Of Ovarian Cancer And Related Issues, Click
               Here
@@ -288,7 +288,10 @@ function OvarianCancer() {
       <div className="mt-8 space-y-4">
         {data.links.map((link, index) => (
           <div key={index} className="text-start">
-            <Link href={link.url} className="text-blue-600 hover:underline">
+            <Link
+              href={link.url}
+              className="text-hciPrimary font-semibold underline"
+            >
               {link.text}
             </Link>
           </div>
