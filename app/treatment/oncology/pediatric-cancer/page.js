@@ -10,6 +10,7 @@ import Conclusion from "@/components/cardiacComponents/Conclusion";
 // import TextComponent from '@/components/Common/TextComponent'
 import Link from "next/link";
 import H3 from "@/components/ui/h3";
+import H1 from "@/components/ui/h1";
 
 const data = {
   title: "Pediatric Cancer",
@@ -19,22 +20,22 @@ const data = {
 
   cancer_types: [
     {
-      title: "Leukemia",
+      category: "Leukemia",
       description:
-        "Cancer of blood and bone marrow, including acute lymphoblastic leukemia (ALL) and acute myeloid leukemia (AML)",
-      bgColor: "bg-pink-500 text-white",
+        "Affecting blood and bone marrow, including acute lymphoblastic leukemia (ALL) and acute myeloid leukemia (AML).",
+      bgColor: "bg-[#D84498] text-white",
     },
     {
-      title: "Brain Tumors",
+      category: "Brain Tumors",
       description:
-        "Solid tumors within nervous tissue, being the most common childhood cancer",
-      bgColor: "bg-pink-500 text-white",
+        "Both benign and malignant types, being the most common childhood cancer.",
+      bgColor: "bg-[#D84498] text-white",
     },
     {
-      title: "Soft Cancers",
+      category: "Solid Tumours",
       description:
-        "Includes neuroblastoma, Wilms tumor, rhabdomyosarcoma, retinoblastoma, and others",
-      bgColor: "bg-pink-500 text-white",
+        "Such as neuroblastoma, Wilms tumour, retinoblastoma, and bone cancers (e.g., osteosarcoma, Ewing sarcoma).",
+      bgColor: "bg-[#D84498] text-white",
     },
   ],
 
@@ -89,151 +90,31 @@ const data = {
     },
   ],
 
-  causes: [
-    {
-      description:
-        "The exact causes of childhood cancer remain unclear, but genetic mutations during early development are believed to play a factor. Unlike adult cancers linked to environmental exposures or aging, pediatric cancers often arise from errors in cellular processes during rapid growth and development. Certain genetic conditions like Down syndrome and Li-Fraumeni syndrome may increase the likelihood of childhood cancers, making early screening critical for high-risk individuals.",
-    },
-  ],
-
   treatments: [
     {
       heading: "Radiation Therapy",
       description:
-        "Radiation therapy uses high-energy rays or particles to kill cancer cells by damaging their DNA, which prevents them from growing and dividing",
-      aneurysmSymptoms: [
-        {
-          description:
-            "For children, radiation is often used with other treatments to target specific cancers",
-        },
-        {
-          description: "Precise targeting minimizes damage to healthy tissues",
-        },
-        {
-          description:
-            "May be delivered externally (external beam radiation) or internally (brachytherapy)",
-        },
-        {
-          description:
-            "Physicians carefully consider the potential impact on growing bodies and cognitive development",
-        },
-        {
-          description:
-            "Treatment strategies carefully balance plans to achieve efficacy with the preservation of the child's overall health and quality of life",
-        },
-      ],
+        "Radiation therapy uses high-energy rays or particles to kill cancer cells by damaging their DNA, which prevents them from growing and dividing. For children, radiation is often employed to treat brain tumours, bone cancers, and other solid tumours. Techniques like external beam radiation and proton therapy allow for precise targeting of the cancer, minimising harm to surrounding healthy tissues. Side effects can include fatigue, skin irritation, and, in some cases, long-term impacts on growth and cognitive development. Paediatric oncologists carefully tailor radiation plans to balance efficacy with the preservation of the child’s overall health and quality of life.",
     },
     {
       heading: "Chemotherapy",
       description:
-        "Chemotherapy is the cornerstone of childhood cancer treatment, involving the use of potent drugs to target and destroy rapidly dividing cancer cells",
-      aneurysmSymptoms: [
-        {
-          description:
-            "These drugs can be administered in various ways, including intravenous infusion, oral medication, or directly into cerebrospinal fluid for cancers affecting the brain and spinal cord",
-        },
-        {
-          description:
-            "Protocols typically involve combinations of medications, dosages, and administrations",
-        },
-        {
-          description:
-            "Chemotherapy often requires lengthy treatment cycles to ensure complete eradication",
-        },
-        {
-          description:
-            "Medications may vary based on cancer type, stage, and patient characteristics",
-        },
-        {
-          description:
-            "Supportive care measures help manage side effects and ensure the child can maintain adequate nutrition, hydration, and immune function during treatment",
-        },
-      ],
+        "Chemotherapy is the cornerstone of childhood cancer treatment, involving the use of potent drugs to target and destroy rapidly dividing cancer cells. These drugs can be administered through various methods, including intravenous infusion, oral medication, or directly into cerebrospinal fluid for cancers affecting the brain and spinal cord. While effective in combating cancers like leukaemia, lymphoma, and solid tumours, chemotherapy often impacts healthy cells, leading to side effects such as nausea, fatigue, hair loss, and weakened immunity. Advances in chemotherapy protocols are now focused on reducing these side effects through precision medicine and targeted delivery, ensuring better outcomes for children.",
     },
     {
       heading: "Surgery",
       description:
-        "Surgery is often essential to remove cancer entirely or significantly reduce tumor size before additional treatments",
-      aneurysmSymptoms: [
-        {
-          description:
-            "Surgeons with special training in pediatric oncology perform these procedures with extreme care",
-        },
-        {
-          description:
-            "The goal is to remove as much tumor as possible while preserving organ function",
-        },
-        {
-          description:
-            "Surgery may be the primary treatment for solid tumors like Wilms tumor or neuroblastoma",
-        },
-        {
-          description:
-            "Minimally invasive techniques may be utilized when appropriate to reduce recovery time and complications",
-        },
-        {
-          description:
-            "Advanced imaging guides surgeons to precisely locate tumors and plan surgical approaches",
-        },
-        {
-          description:
-            "Tissue samples obtained during surgery provide crucial information for diagnosis and ongoing treatment planning",
-        },
-      ],
+        "Surgery is often used to remove solid tumours or cancerous tissue and plays a vital role in treating certain types of childhood cancers. Surgeons work to extract as much of the tumour as possible while preserving nearby healthy tissue. For cancers like neuroblastoma or Wilms tumour, surgery may be the primary treatment or part of a multimodal approach alongside chemotherapy and radiation. Advances in surgical techniques, including minimally invasive and robotic-assisted procedures, have improved precision and recovery times. Despite its efficacy, surgery carries risks such as infection and complications related to anaesthesia, which are carefully managed in paediatric care settings.",
     },
     {
       heading: "Stem Cell (Bone Marrow) Transplantation",
       description:
-        "This procedure involves infusing healthy blood-forming cells into patients with cancers such as leukemia or lymphomas that have not responded to other therapies",
-      aneurysmSymptoms: [
-        {
-          description:
-            "Stem cells may come from the patient (autologous) or from a donor (allogeneic)",
-        },
-        {
-          description:
-            "Before transplantation, high-dose chemotherapy and/or radiation destroy the existing bone marrow",
-        },
-        {
-          description:
-            "The healthy cells begin to grow and make new blood cells, strengthening the immune system",
-        },
-        {
-          description:
-            "Close monitoring and supportive care manage side effects and potential complications",
-        },
-        {
-          description:
-            "This intensive procedure requires specialized transplant centers with expertise in pediatric cases",
-        },
-      ],
+        "Stem cell transplantation is a lifesaving treatment for children with cancers such as leukaemia or lymphoma that do not respond to other therapies. This procedure involves replacing damaged or destroyed bone marrow with healthy stem cells, either from the child or a donor. The healthy cells rebuild the bone marrow, enabling the production of normal blood cells. While highly effective, the procedure requires intensive preparation, including high-dose chemotherapy or radiation, and poses risks such as infection or graft-versus-host disease. Despite these challenges, stem cell transplants have revolutionised outcomes for many children with complex cancers.",
     },
     {
       heading: "Immunotherapy",
       description:
-        "This innovative approach harnesses the power of the child's immune system to recognize and attack cancer cells",
-      aneurysmSymptoms: [
-        {
-          description:
-            "Monoclonal antibodies target specific proteins on cancer cells, making them more visible to the immune system",
-        },
-        {
-          description:
-            'Checkpoint inhibitors remove the "brakes" that prevent immune cells from attacking cancer',
-        },
-        {
-          description:
-            "CAR T-cell therapy engineers a patient's own immune cells to better fight specific cancer types",
-        },
-        {
-          description:
-            "Shows promising results in certain childhood cancers, including some forms of leukemia",
-        },
-        {
-          description:
-            "Active research continues to expand applications for pediatric patients, with special focus on children with difficult-to-treat cancers",
-        },
-      ],
+        "Immunotherapy harnesses the power of the child’s immune system to recognise and attack cancer cells. This innovative treatment includes approaches like monoclonal antibodies, immune checkpoint inhibitors, and CAR-T cell therapy, which are particularly effective for cancers such as certain leukaemia and lymphomas. Immunotherapy is often used when traditional treatments fail or as part of a combined regimen. Side effects, such as inflammation and flu-like symptoms, are typically less severe than those from chemotherapy or radiation. As a cutting-edge treatment, immunotherapy continues to evolve, offering new hope for children with difficult-to-treat cancers. Proton theraphy offeres a promising future for pediatric cancer.",
     },
   ],
 
@@ -264,16 +145,22 @@ function PediatricCancer() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <H2 title={data.description} className="text-start font-light" />
+        {/* <Title title={data.title} className="text-4xl text-[#D84598]" /> */}
+        <H1 title={data.title} />
+        <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+          {data.description}
+        </p>
 
         <div className="space-y-2 mb-6">
-          <DataBoxes
-            title=""
-            header=""
-            data={data.cancer_types}
-            myclass="grid grid-cols-1"
-          />
+          <p className="font-bold text-black">
+            Pediatric cancers are classified into three major categories:
+          </p>
+          {data?.cancer_types?.map((items, index) => (
+            <div className={`${items.bgColor} flex p-4 rounded`} key={index}>
+              <h3 className="font-medium mr-2">{items.category}:</h3>
+              <p className="font-light"> {items.description} </p>
+            </div>
+          ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -287,26 +174,26 @@ function PediatricCancer() {
           <div>
             <H2
               title="Diagnosis of Pediatric Cancer"
-              className="text-xl font-semibold mb-4"
+              className="text-xl font-semibold mb-2"
             />
-            <p className="mb-4 font-light">
+            <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
               Childhood cancers are often discovered through persistent symptoms
               or routine examinations. Diagnosis methods include:
             </p>
-            <div className="bg-yellow-50 rounded-lg p-4 space-y-4">
+            <div className=" rounded-lg">
               {data.diagnosis.map((method, index) => (
-                <div
-                  key={index}
-                  className="border-b border-yellow-200 pb-2 last:border-0"
-                >
-                  <H3
-                    title={method.heading}
-                    className="font-semibold text-yellow-800"
-                  />
-                  <p className="text-sm">{method.description}</p>
+                <div key={index} className="bg-[#FFE7B6] p-2 mb-2">
+                  <h2 className="font-medium text-black font-semibold text-gray-800">
+                    {method.heading}
+                  </h2>
+                  <p className="text-sm text-gray-800">{method.description}</p>
                 </div>
               ))}
             </div>
+            <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+              Timely and accurate diagnosis is critical to determine the type
+              and stage of cancer, enabling an effective treatment plan.
+            </p>
           </div>
         </div>
 
@@ -314,20 +201,22 @@ function PediatricCancer() {
           title="Causes of Pediatric Cancer"
           className="text-2xl font-semibold mb-4 text-center"
         />
-        <div className="mb-8">
-          {data.causes.map((cause, index) => (
-            <p key={index} className="font-light">
-              {cause.description}
-            </p>
-          ))}
-        </div>
+        <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+          The exact causes of childhood cancer remain unclear, but genetic
+          mutations during early development are a key factor. Unlike adult
+          cancers linked to environmental exposures or aging, pediatric cancers
+          often arise from inherited conditions or DNA replication errors.
+          Genetic disorders such as Li-Fraumeni Syndrome and Fanconi Anemia
+          increase the likelihood of childhood cancers, making early screening
+          crucial for high-risk individuals.",
+        </p>
 
-        <div className="text-center mb-8">
+        <div className="text-start mb-8">
           <Link
             href="/treatment/oncology/pediatric-cancer-info"
-            className="inline-block px-6 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors"
+            className="text-hciPrimary text-lg font-semibold underline"
           >
-            To Know More About Pediatric Cancer And Its Treatment, Click Here
+            To know more about pediatric cancer and its treatment, click here
           </Link>
         </div>
 
@@ -335,9 +224,9 @@ function PediatricCancer() {
           title="Treatment Options for Pediatric Cancer"
           className="text-2xl font-semibold mb-4 text-center"
         />
-        <p className="font-light mb-4">
+        <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
           Childhood cancer treatment varies based on the type and stage of
-          cancer, as well as the child&apos;s age and overall health. Common
+          cancer, as well as the child’s age and overall health. Common
           treatments include:
         </p>
 
@@ -345,7 +234,7 @@ function PediatricCancer() {
           <DataLists
             divClass="grid grid-cols-1 gap-6"
             data={data.treatments}
-            ulClass="list-disc pl-5 space-y-1"
+            ulClass="list-disc pl-5"
           />
         </div>
 
