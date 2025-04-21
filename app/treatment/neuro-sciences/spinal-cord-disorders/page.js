@@ -1,14 +1,14 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import H1 from '@/components/ui/h1'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: "Spinal Cord Disorders",
@@ -214,10 +214,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <H2 title={data.description} className="text-start font-light" />
+        <H1 title={data.title} />
+        <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           Spinal cord disorders can result from various causes, including:
         </p>
@@ -244,34 +244,36 @@ function GeneralSurgery() {
           like osteoporosis that weaken bones.
         </p> */}
         <KnowMore title={data.title} />
-        <div>
-          <div className="grid lg:grid-cols-2 gap-4">
+        <div className='pt-6'>
+          <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of spinal cord disorders vary depending on the location and severity of the condition. Common symptoms include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl"
+                textCss="font-light py-4"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-6'>
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosing spinal cord disorders involves a thorough clinical evaluation and advanced imaging techniques:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl"
+                textCss="font-light py-4"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
             Treatment for spinal cord disorders varies depending on the
@@ -280,10 +282,18 @@ function GeneralSurgery() {
             and prevent further damage to the spinal cord. Common treatment
             options include:
           </p>
-          <DataLists
+          {/* <DataLists
             desc={data.complications[0].description}
             data={data.complications}
-          />
+          /> */}
+           {data.complications.map((item, index) => (
+            <TextComponent
+              key={index}
+              title={item.heading}
+              description={item.aneurysmSymptoms[0].description}
+              boxCss="min-h-[100px] w-full hover:bg-hciPrimary hover:text-white items-start justify-center border border-hciSecondary rounded-lg shadow-lg my-2"
+            />
+          ))}
         </div>
         {/* <div className="space-y-4">
           <H2 text="When to Consider Robotic Knee Replacement?" />

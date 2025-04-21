@@ -37,7 +37,7 @@ export default function FooterLink({ head }) {
       {linkshead.map((link, index) => (
         <Link
           key={index}
-          className="text-hciPrimary underline block mb-2 font-semibold capitalize"
+          className="text-hciPrimary underline block mb-2 font-medium capitalize text-lg"
           href={link.url}
         >
           {link.text}

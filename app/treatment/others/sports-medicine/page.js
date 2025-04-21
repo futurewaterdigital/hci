@@ -2,11 +2,11 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
 // import Image from 'next/image'
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
+import H1 from '@/components/ui/h1'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
 
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import ListBox from "@/components/cardiacComponents/ListBox";
@@ -42,15 +42,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Physical Therapists: To aid in recovery and improve mobility. ",
+            `<span class='font-medium'>Physical Therapists:</span> To aid in recovery and improve mobility. `,
         },
         {
           description:
-            "Certified Athletic Trainers: To design rehabilitation programs and prevent future injuries.",
+            `<span class='font-medium'>Certified Athletic Trainers:</span> To design rehabilitation programs and prevent future injuries.`,
         },
         {
           description:
-            "Nutritionists: To optimize performance and assist with weight management.",
+            `<span class='font-medium'>Nutritionists:</span> To optimize performance and assist with weight management.`,
         },
       ],
     },
@@ -125,10 +125,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
+        <H1 title={data.title} />
         <H2
           title={data.description}
-          className="text-start font-semibold text-xl"
+          className="text-start font-medium text-2xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
@@ -137,10 +137,12 @@ function GeneralSurgery() {
           <DataLists
             data={data.complications}
             desc="We work closely with experts such as:"
+            boxClass="min-h-[375px]"
           />
           <DataLists
             data={data.invasive}
             desc="HCI’s sports medicine network addresses a range of conditions, including:"
+            boxClass="min-h-[370px]"
           />
         </div>
         <p className="font-light">
@@ -151,7 +153,7 @@ function GeneralSurgery() {
 
         <H2
           title="When to Seek Care"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center pt-12"
         />
         <p className="font-light">
           If you or your child experience a sports-related injury, it’s
@@ -161,10 +163,10 @@ function GeneralSurgery() {
           HCI specialists can offer tailored treatment plans, including:
         </p>
         <ListBox data={data} />
-        <div>
+        <div className='pb-12'>
           <H2
             title="Empowering Recovery Through Expert Care"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center pt-12"
           />
           <p className="font-light">
             If you or your child experience a sports-related injury, it’s
@@ -174,19 +176,7 @@ function GeneralSurgery() {
             HCI specialists can offer tailored treatment plans, including:
           </p>
         </div>
-        {/* <div>
-          <H2
-            text="Committed to Your Transformation"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
-          <p className="font-light">
-            At HCI, we prioritize patient satisfaction and safety. Our network
-            of specialists works closely with you to understand your goals,
-            provide clear information about procedures, and ensure a smooth
-            recovery. With a focus on achieving natural results, we help you
-            embrace the best version of yourself.
-          </p>
-        </div> */}
+      
         <CTaButton data={data} />
         <FooterLinks head={data.title} />
         <BookButton />

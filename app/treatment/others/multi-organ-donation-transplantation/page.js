@@ -1,16 +1,16 @@
 // generalSurgery.js
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-// import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
 
-import FlexBox from "@/components/cardiacComponents/FlexBox";
-import ListBox from "@/components/cardiacComponents/ListBox";
-import CTaButton from "@/components/cardiacComponents/CtaButton";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
+// import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import H1 from '@/components/ui/h1'
+import FlexBox from '@/components/cardiacComponents/FlexBox'
+import ListBox from '@/components/cardiacComponents/ListBox'
+import CTaButton from '@/components/cardiacComponents/CtaButton'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
 
 const data = {
   bannerImage: "/others/Multi-OrganDonationandTransplantation.png",
@@ -105,10 +105,10 @@ This life-saving procedure often offers a second chance to individuals in critic
     },
   ],
   contact: {
-    title: "Contact Us Today",
-    head: "Take the First Step Towards Saving Lives",
+    title: 'Contact Us Today',
+    head: 'Reach Out to Us Today',
     content:
-      "Reach out to HCI for expert guidance on organ donation and transplantation. Our specialists are here to support you every step of the way.",
+      'Contact HCI to learn more about our comprehensive multi-organ donation and transplantation services and discover how we can support your journey to a healthier life.',
   },
   footerData: [
     {
@@ -123,27 +123,28 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <div className="py-4">
-          <Title title={data.title} className="text-4xl text-pink-500" />
-          <H2
-            title={data.description}
-            className="text-start font-semibold text-xl"
-          />
-          <p className="font-light">{data.overview}</p>
+          
+          <H1 title={data.title} />
+        <H2
+          title={data.description}
+          className="text-start font-medium text-2xl"
+        />
+        <p className="font-light">{data.overview}</p>
         </div>
         <FlexBox data={data} />
-        <div className="py-4">
-          <H2
-            title="Types of Living Donor Transplants"
-            className="text-2xl font-bold mb-4 text-center"
-          />
-          <p className="font-light">
-            Living donor transplants can take several forms:
-          </p>
+<div className="py-4">
+        <H2
+          title="Types of Living Donor Transplants"
+          className="text-2xl font-medium mb-4 text-center"
+        />
+        <p className="font-light">
+          Living donor transplants can take several forms:
+        </p>
           <ListBox data={data} />
         </div>
         <H2
           title="Benefits of Organ Donation"
-          className="text-2xl font-bold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light">
           Organ donation can save up to eight lives and enhance the quality of
@@ -152,7 +153,7 @@ function GeneralSurgery() {
         </p>
         <H2
           title="Risks of Organ Donation"
-          className="text-2xl font-bold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light">
           While the benefits of organ transplantation are profound, risks exist
@@ -164,7 +165,7 @@ function GeneralSurgery() {
         </p>
         <H2
           title="Recovery and Outlook"
-          className="text-2xl font-bold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light">
           Recovery from organ transplant surgery, whether as a donor or

@@ -1,15 +1,17 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
 // import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
-import H3 from "@/components/ui/h3";
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import H3 from '@/components/ui/h3'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
+
 const data = {
   title: "Stroke",
   bannerImage: "/neuro-sciences/stroke.png",
@@ -132,10 +134,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <H2 title={data.description} className="text-start font-light" />
+        <H1 title={data.title} />
+        <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           A stroke occurs due to a disruption in the blood flow to the brain and
           is classified into two main types:
@@ -147,33 +149,33 @@ function GeneralSurgery() {
           following are common types of benign peripheral nerve tumours:
         </p> */}
         {/* <DataSurgery data={data.section_1} /> */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 pb-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
-        <H2 title="Risk Factors" className="font-semibold mb-4 text-center" />
+        <H2 title="Risk Factors" className="font-medium mb-4 text-center text-2xl" />
         <div className="grid grid-cols-2 gap-4">
           <div>
             <p className="font-light h-12">
               Certain risk factors can increase your chances of having a stroke,
               including:
             </p>
-            <ul className="list-disc list-inside space-y-2">
-              <li className="font-light">High blood pressure</li>
-              <li className="font-light">Heart disease</li>
-              <li className="font-light">Diabetes</li>
-              <li className="font-light">Smoking</li>
-              <li className="font-light">High cholesterol</li>
-              <li className="font-light">Obesity</li>
-              <li className="font-light">Lack of physical activity</li>
-              <li className="font-light">Excessive alcohol consumption</li>
-              <li className="font-light">Family history of stroke</li>
+            <ul className="list-disc list-inside space-y-2 text-hciSecondary">
+              <li className="font-light"><span className="font-medium text-black">High blood pressure</span></li>
+              <li className="font-light"><span className="font-medium text-black">Heart disease</span></li>
+              <li className="font-light"><span className="font-medium text-black">Diabetes</span></li>
+              <li className="font-light"><span className="font-medium text-black">Smoking</span></li>
+              <li className="font-light"><span className="font-medium text-black">High cholesterol</span></li>
+              <li className="font-light"><span className="font-medium text-black">Obesity</span></li>
+              <li className="font-light"><span className="font-medium text-black">Lack of physical activity</span></li>
+              <li className="font-light"><span className="font-medium text-black">Excessive alcohol consumption</span></li>
+              <li className="font-light"><span className="font-medium text-black">Family history of stroke</span></li>
             </ul>
           </div>
           <div>
@@ -182,45 +184,43 @@ function GeneralSurgery() {
         </div>
         <div className="grid grid-cols-2 gap-4 pt-4">
           <div>
-            <H3 title="Symptoms of a Stroke" className="font-semibold mb-4 " />
+            <H3 title="Symptoms of a Stroke" className="font-medium mb-4 text-2xl"/>
 
-            <p className="font-light h-12">
+            <p className="font-light h-16">
               Recognizing stroke symptoms early is critical to ensuring prompt
               treatment. Common symptoms include:
             </p>
             <div className="bg-[#B8DEFF80] p-4 rounded-lg min-h-48">
-              <ul className="list-disc list-inside space-y-2">
+              <ul className="list-disc list-inside space-y-2 text-hciSecondary">
                 <li className="font-light">
-                  Weakness or numbness in the face, arm, or leg, usually on one
-                  side of the body
+                  <span className="font-light text-black">Weakness or numbness in the face, arm, or leg, usually on one
+                  side of the body</span>
                 </li>
                 <li className="font-light">
-                  Difficulty speaking or understanding speech
+                  <span className="font-light text-black">Difficulty speaking or understanding speech</span>
                 </li>
                 <li className="font-light">
-                  Sudden vision problems in one or both eyes
+                  <span className="font-light text-black">Sudden vision problems in one or both eyes</span>
                 </li>
                 <li className="font-light">
-                  Sudden dizziness or loss of balance
+                  <span className="font-light text-black">Sudden dizziness or loss of balance</span>
                 </li>
                 <li className="font-light">
-                  Severe headache with no known cause
+                  <span className="font-light text-black">Severe headache with no known cause</span>
                 </li>
               </ul>
             </div>
           </div>
           <div>
-            <H3 title="Remember FAST:" className="font-semibold mb-4" />
+            <H3 title="Remember FAST:" className="font-medium mb-4 text-2xl"/>
 
-            <p className="font-light h-12"></p>
+            <p className="font-light h-16"></p>
             <div className="bg-[#FFE7B6] p-4 rounded-lg min-h-48">
               <ul className="flex flex-col gap-2 ">
-                <li className="font-light">F: Face drooping</li>
-                <li className="font-light">A: Arm weakness</li>
-                <li className="font-light">S: Speech difficulty</li>
-                <li className="font-light">
-                  T: Time to call for emergency help
-                </li>
+                <li className="font-light"><span className="font-medium text-black">F:</span> Face drooping</li>
+                <li className="font-light"><span className="font-medium text-black">A:</span> Arm weakness</li>
+                <li className="font-light"><span className="font-medium text-black">S:</span> Speech difficulty</li>
+                <li className="font-light"><span className="font-medium text-black">T:</span> Time to call for emergency help</li>
               </ul>
             </div>
           </div>
@@ -231,14 +231,14 @@ function GeneralSurgery() {
           like osteoporosis that weaken bones.
         </p> */}
         <KnowMore title={data.title} />
-        <H2 title="Diagnosis" className="font-semibold mb-4 text-center" />
+        <H2 title="Diagnosis" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           Diagnosing a stroke involves CT scans, MRI, and ultrasound imaging of
           the brain and blood vessels. Heart tests like an ECG and
           echocardiography are also used to detect heart problems contributing
           to the stroke.
         </p>
-        <KnowMore title={data.title} />
+        <IssuesLinks head={data.title} />
         {/* <div>
           <div className="grid lg:grid-cols-2 gap-4">
             <div>
@@ -266,7 +266,7 @@ function GeneralSurgery() {
           </div>
         </div> */}
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
             Treatment varies depending on the type of stroke:

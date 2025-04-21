@@ -52,6 +52,10 @@ function Menu() {
       url: '/treatment/neuro-sciences/neurodegenerative-disorders',
     },
     {
+      menu: 'Neurovascular Conditions',
+      url: '/treatment/neuro-sciences/neurovascular-conditions',
+    },
+    {
       menu: "Parkinson's Disease and Movement Disorders",
       url: '/treatment/neuro-sciences/parkinsons-disease-and-movement-disorders',
     },

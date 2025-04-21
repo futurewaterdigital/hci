@@ -1,15 +1,15 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
-
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import H1 from '@/components/ui/h1'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: "Epilepsy",
   bannerImage: "/neuro-sciences/epilepsy.png",
@@ -205,10 +205,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <H2 title={data.description} className="text-start font-light" />
+        <H1 title={data.title} />
+        <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           Epilepsy can result from various factors, although in many cases, the
           exact cause remains unknown. Common causes include:
@@ -241,30 +241,31 @@ function GeneralSurgery() {
             <div>
               <DataBoxes
                 title="Symptoms"
-                text="Epilepsy is characterized by seizures, which can take various forms depending on the affected brain regions. Common symptoms include:
-"
-                titleCss="text-black font-semibold text-center text-2xl"
+                text="Epilepsy is characterized by seizures, which can take various forms depending on the affected brain regions. Common symptoms include:"
+                titleCss="text-black font-medium text-center text-2xl pb-2 mt-4"
                 header=""
+                textCss="font-light py-4"
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-6'>
               <DataBoxes
                 title="Diagnosis"
                 text="Epilepsy diagnosis involves a comprehensive evaluation of the patient’s medical history, seizure patterns, and diagnostic tests. These include:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
             Treatment for epilepsy aims to control seizures and improve the

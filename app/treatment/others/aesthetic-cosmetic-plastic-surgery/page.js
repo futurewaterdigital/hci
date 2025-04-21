@@ -1,12 +1,12 @@
 // generalSurgery.js
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Image from "next/image";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import Image from 'next/image'
+import H1 from '@/components/ui/h1'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
 
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import ListBox from "@/components/cardiacComponents/ListBox";
@@ -87,10 +87,10 @@ const data = {
     },
   ],
   contact: {
-    title: "Contact Us Today",
-    head: "Connect with HCI",
+    title: 'Contact Us Today',
+    head: 'REACH OUT TO HCI',
     content:
-      "To learn more about our general surgery services and find the best surgical care in India for your needs.",
+      'To explore our aesthetic, cosmetic, and plastic surgery services and find top-notch care in India to meet your needs and aspirations.',
   },
 };
 
@@ -99,30 +99,30 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
+        <H1 title={data.title} />
         <H2
           title={data.description}
-          className="text-start font-semibold text-2xl"
+          className="text-start font-medium text-2xl"
         />
-        <p className="font-light">{data.overview}</p>
+        <p className="font-light text-start">{data.overview}</p>
         <FlexBox data={data} />
         <div>
-          <H2
-            title="Procedures We Offer"
-            className="text-2xl font-semibold text-hciSecondary mt-8 text-center"
-          />
-          <p className="text-center font-light">
-            Our aesthetic, cosmetic, and plastic surgery services include:
+        <H2
+          title="Procedures We Offer"
+          className="text-2xl font-medium text-hciSecondary mt-8 text-center"
+        />
+        <p className="text-center font-light">
+          Our aesthetic, cosmetic, and plastic surgery services include:
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-4">
           <DataLists data={data.complications} />
-          <div>
+          <div className='flex justify-center items-center py-2 rounded-lg'>
             <Image
-              src="/others/plastic-surgery.png"
+              src="/others/plastic-surgeries.png"
               width={300}
               height={300}
-              className="w-full h-full"
+              className="w-full h-[340px] object-cover rounded-lg "
             />
           </div>
         </div>
@@ -133,18 +133,18 @@ function GeneralSurgery() {
 
         <H2
           title="Why Choose Aesthetic and Plastic Surgery through HCI?"
-          className="text-2xl font-semibold mb-4"
+          className="text-2xl font-medium mb-4 text-center"
         />
-        <p className="font-light">
+        <p className="font-light text-center">
           HCI’s partner hospitals and surgeons use cutting-edge technology and
           advanced techniques to deliver precise, safe, and effective outcomes.
           Here’s why patients trust us:
         </p>
         <ListBox data={data} />
-        <div>
+        <div className='pt-12'>
           <H2
-            title="Comprehensive Care for Women’s Health"
-            className="text-2xl font-semibold mb-4 text-center"
+            title="When to Consider Cosmetic or Plastic Surgery"
+            className="text-2xl font-medium mb-4 text-center"
           />
           <p className="font-light">
             If you’re looking to enhance your appearance, correct physical
@@ -154,10 +154,10 @@ function GeneralSurgery() {
             restoration, HCI is here to support your journey.
           </p>
         </div>
-        <div>
+        <div className='pb-12'>
           <H2
             title="Committed to Your Transformation"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
           <p className="font-light">
             At HCI, we prioritize patient satisfaction and safety. Our network

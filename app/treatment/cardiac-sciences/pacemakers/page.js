@@ -7,7 +7,8 @@ import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import H2 from '@/components/ui/h2'
 import H1 from '@/components/ui/h1'
-
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+const title = 'Pacemakers'
 
 const heartConditionsList = [
   {
@@ -194,6 +195,16 @@ const recoveryDetails = [
     ],
   },
 ]
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+    Pacemakers represent a transformative technology for those with heart
+          rhythm disorders, enabling them to lead healthier, more active lives.
+  `,
+  },
+]
+
 
 export default function page() {
   return (
@@ -212,7 +223,7 @@ export default function page() {
             </p>
           </div>
           <div className="space-y-4">
-            <H2 title="What are Pacemakers?" />
+            <H2 title="What are Pacemakers?" className="text-center text-black font-medium text-2xl"/>
             <p className="text-start font-light">
               Pacemakers are small devices placed under the skin, often in the
               chest, to help control abnormal heart rhythms. They emit
@@ -223,7 +234,7 @@ export default function page() {
             </p>
           </div>
           <div className="space-y-4">
-            <H2 title="How do Pacemakers Work?" className="text-center text-hciSecondary"/>
+            <H2 title="How do Pacemakers Work?" className="text-center text-black font-medium text-2xl"/>
             <p className="mt-4 text-start font-light">
               The heart’s natural electrical system signals the heart chambers
               to pump blood in a coordinated rhythm. When this system
@@ -234,24 +245,26 @@ export default function page() {
           </div>
         </div>
         <div>
-          <div className="grid lg:grid-cols-2 gap-4 pt-12">
+          <div className="grid lg:grid-cols-1 gap-4 pt-12">
             <DataBoxes
-              titleCss="text-xl font-semibold"
+              titleCss="text-xl font-medium"
               title="What Conditions do Pacemakers Treat?"
               text="Pacemakers are used to address several conditions, including:"
               header=""
               textCss="font-light py-2"
               data={heartConditionsList}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
+              
             />
             <DataBoxes
-              titleCss="text-xl font-semibold"
+              titleCss="text-xl font-medium"
               title="Signs you might need a Pacemaker"
               text="Some symptoms that may indicate the need for a pacemaker include:"
               header=""
               textCss="font-light py-2"
               data={heartsConditionsList}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
+              
             />
           </div>
         </div>
@@ -265,15 +278,15 @@ export default function page() {
         <div className="py-6">
           {adviceData.map((items, index) => (
             <div
-              className="border border-[#D84498] rounded-lg shadow-lg flex flex-col p-4"
+            className="border border-[#D84498] rounded-lg shadow-lg flex flex-col p-4"
               key={index}
             >
-              <H2 title={items.title} className="font-semibold"/>
+              <H2 title={items.title} className="font-medium"/>
               <p className="font-light">{items.paragraph}</p>
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-1 gap-4 mt-4">
+        <div className="grid grid-cols-1 gap-4">
           <DataLists
             desc="Pacemaker implantation methods vary based on the type of device:"
             data={procedureDetails}
@@ -296,12 +309,10 @@ export default function page() {
           />
         </div>
 
-        <p className="mb-0 font-light">
-          Pacemakers represent a transformative technology for those with heart
-          rhythm disorders, enabling them to lead healthier, more active lives.
-        </p>
+       
         <div className="space-y-4 mt-8">
-          <FooterLinks head="Pacemakers" />
+          <Conclusion data={footerData} />
+          <FooterLinks head={title} />
           <BookButton />
         </div>
       </main>

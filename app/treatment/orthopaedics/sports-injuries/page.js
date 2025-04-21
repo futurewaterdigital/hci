@@ -1,15 +1,17 @@
 // generalSurgery.js
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from "@/components/ui/IssuesLinks"
+
 
 const data = {
   title: "Sports Injuries",
@@ -260,16 +262,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <p
-          dangerouslySetInnerHTML={{ __html: data.description }}
-          className="text-start font-light"
-        />
+        <H1 title={data.title} />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2
-          title="Causes"
-          className="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Causes" className="text-2xl font-medium mb-4 text-center" />
         <p className="font-light" text="">
           Sports injuries can arise from various factors, including:
         </p>
@@ -295,31 +291,31 @@ function GeneralSurgery() {
                 title="Symptoms"
                 text="Symptoms of sports injuries can vary widely depending on the type and severity of the injury but may include:"
                 textCss="font-light py-4"
-                titleCss="text-black font-semibold text-center text-xl"
+                titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-4'>
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosing sports injuries typically involves a comprehensive evaluation, which may include:"
                 header=""
                 textCss="font-light py-4"
-                titleCss="text-black font-semibold text-center text-xl"
+                titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
           <H2
             title="Treatment"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
           <p className="font-light">
             The treatment for sports injuries depends on the specific type and

@@ -1,15 +1,16 @@
 // generalSurgery.js
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from "@/components/ui/IssuesLinks"
 
 const data = {
   title: "Robotic Knee Replacement Surgery",
@@ -275,16 +276,11 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <p
-          dangerouslySetInnerHTML={{ __html: data.description }}
-          className="text-start font-light"
-        />
+        
+        <H1 title={data.title} />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2
-          title="Causes"
-          className="text-2xl font-semibold mb-4 text-center"
-        />
+        <H2 title="Causes" className="text-2xl font-medium mb-4 text-center" />
         <p className="font-light" text="">
           Knee replacement surgery is typically recommended for patients
           experiencing joint damage caused by:
@@ -305,39 +301,39 @@ function GeneralSurgery() {
           Treatment
         </h2> */}
           {/* <p>Symptoms</p> */}
-          <div className="grid lg:grid-cols-2 gap-4 mt-12">
+          <div className="grid lg:grid-cols-1 gap-4 mt-12">
             <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="Patients suffering from knee conditions requiring robotic surgery often experience:"
                 textCss="font-light py-4 min-h-[70px]"
-                titleCss="text-black font-semibold text-center text-xl"
+                titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-4'>
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosis for robotic knee replacement surgery involves a comprehensive evaluation, including:"
                 textCss="font-light py-4 min-h-[70px]"
                 header=""
-                titleCss="text-black font-semibold text-center text-xl"
+                titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-1"
+                myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
           <H2
             title="Treatment"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
-          <p className="text-xl font-semibold mb-4 text-start text-hciPrimary">
+          <p className="text-xl font-medium mb-4 text-start text-hciPrimary">
             Robotic-Assisted Knee Replacement Surgery
           </p>
           <p className="font-light">
@@ -349,7 +345,7 @@ function GeneralSurgery() {
         </div>
         <H2
           title={data.DataSurgery.headingTitle}
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p
           className="font-light"
@@ -381,10 +377,7 @@ function GeneralSurgery() {
           </div>
         </div>
         <div className="py-12 space-y-8">
-          <H2
-            title="Benefits of Robotic Knee Replacement"
-            className="text-center"
-          />
+          <H2 title="Benefits of Robotic Knee Replacement" className="text-2xl font-medium mb-4 text-center"/>
           <div className="flex justify-center items-center gap-6">
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -412,10 +405,7 @@ function GeneralSurgery() {
           </div>
         </div>
         <div className="space-y-4">
-          <H2
-            title="When to Consider Robotic Knee Replacement?"
-            className="text-center"
-          />
+          <H2 title="When to Consider Robotic Knee Replacement?" className="text-2xl font-medium mb-4 text-center"/>
           <p className="font-light text-center">
             Consult a doctor if you experience:
           </p>

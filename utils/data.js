@@ -318,24 +318,122 @@ export const medicalConditions = [
 
 export const footerMenu = [
   {
-    category: 'Useful Links',
-    links: [
-      { name: 'FAQs', url: '/' },
-      { name: 'Medical Updates', url: '/' },
-      // { name: 'Terms & Conditions', url: '/' },
-    ],
+    category: 'Top medical Procedures',
+    links :[
+      { name: 'ACL, PCL, and MCL Surgeries', url: '/' },
+      { name: 'Angiography', url: '/' },
+      { name: 'Angioplasty', url: '/' },
+      { name: 'Aortic Aneurysm', url: '/' },
+      { name: 'Benign Peripheral Nerve Tumour', url: '/' },
+      { name: 'Brain Metastases', url: '/' },
+      { name: 'Brain Tumour', url: '/' },
+      { name: 'Brain Tumour and Brain Cancer', url: '/' },
+      { name: 'By-Pass Surgery (CABG)', url: '/' },
+      { name: 'Cancer in Women', url: '/' },
+      { name: 'Cancers of the Digestive System', url: '/' },
+      { name: 'Colon polyps', url: '/' },
+      { name: 'Gallbladder Stone', url: '/' },
+      { name: 'Genitourinary Cancer', url: '/' },
+      { name: 'GI Cancer', url: '/' },
+      { name: 'Head & Neck Cancer', url: '/' },
+      { name: 'Hematology', url: '/' },
+      { name: 'Joint Replacement Surgery', url: '/' },
+      { name: 'Lung Cancer', url: '/' },
+      { name: 'Peripheral Nerve Disorders', url: '/' },
+      { name: 'Pituitary Tumours', url: '/' },
+      { name: 'Robotic Knee Replacement Surgery', url: '/' },
+      { name: 'Spinal Cord Disorder', url: '/' },
+      { name: 'Spinal Disorder', url: '/' },
+    ]
+    
   },
   {
-    category: 'Departments',
-    links: [
-      { name: 'Cardiac Sciences', url: '/treatment/cardiac-sciences' },
-      { name: 'Oncology', url: '/treatment/oncology' },
-      { name: 'Neuro Science', url: '/treatment/neuro-sciences' },
-      { name: 'Gastroenterology', url: '/treatment/gastroenterology' },
-      { name: 'Orthopaedics', url: '/treatment/orthopaedics' },
-      { name: 'Others', url: '/treatment/others' },
-    ],
+  section :[
+    {
+      category: 'Departments',
+      links: [
+        { name: 'Cardiac Sciences', url: '/treatment/cardiac-sciences' },
+        { name: 'Oncology', url: '/treatment/oncology' },
+        { name: 'Neuro Science', url: '/treatment/neuro-sciences' },
+        { name: 'Gastroenterology', url: '/treatment/gastroenterology' },
+        { name: 'Orthopaedics', url: '/treatment/orthopaedics' },
+        { name: 'Others', url: '/treatment/others' },
+      ],
   },
+  {
+    category: 'Featured Hospitals',
+    links: [
+      { name: 'Apollo', url: '/treatment/cardiac-sciences' },
+      { name: 'Aster', url: '/treatment/oncology' },
+      { name: 'Fortis', url: '/treatment/neuro-sciences' },
+      { name: 'Manipal', url: '/treatment/gastroenterology' },
+      { name: 'Max', url: '/treatment/orthopaedics' },
+      
+    ],
+      },
+      {
+        category: 'Quick Links',
+        links: [
+          { name: 'Home', url: '/treatment/cardiac-sciences' },
+          { name: 'About Us', url: '/treatment/oncology' },
+          { name: 'Our Services', url: '/treatment/neuro-sciences' },
+          { name: 'Cost Comparison', url: '/treatment/gastroenterology' },
+          { name: 'Contact us', url: '/treatment/orthopaedics' },
+          
+        ],
+          },
+    ]
+  },
+  {
+    section :[
+      {
+        category: 'Featured Cities',
+        links: [
+          { name: 'Bangalore', url: '/treatment/cardiac-sciences' },
+          { name: 'Chennai', url: '/treatment/oncology' },
+          { name: 'Delhi', url: '/treatment/neuro-sciences' },
+          { name: 'Hyderabad', url: '/treatment/gastroenterology' },
+          { name: 'Mumbai', url: '/treatment/orthopaedics' },
+          
+        ],
+    },
+    {
+      category: 'Patient Care',
+      links: [
+        { name: 'Cost Comparison', url: '/treatment/cardiac-sciences' },
+        { name: 'Testimonials', url: '/treatment/oncology' },
+        
+        
+      ],
+        },
+        {
+          category: 'Useful Links',
+          links: [
+            { name: 'FAQs', url: '/treatment/cardiac-sciences' },
+            { name: 'Blog', url: '/treatment/oncology' },
+            { name: 'Medical Updates', url: '/treatment/neuro-sciences' },
+            { name: 'Terms & Conditions', url: '/treatment/gastroenterology' },
+            
+            
+          ],
+      },
+      {
+        category: 'International Patients',
+        links: [
+          { name: 'Hospitals', url: '/treatment/cardiac-sciences' },
+          { name: 'Get an Opinion', url: '/treatment/oncology' },
+          { name: 'Request an Appointment', url: '/treatment/neuro-sciences' },
+          
+          
+          
+        ],
+          },
+      ]
+    },
+  
+
+  
+  
   // {
   //   category: 'Contact Us',
   //   links: [
@@ -356,8 +454,9 @@ export const footerMenu = [
 export const bottomSection = {
   links: [
     { name: 'Sitemap', url: '/' },
-    { name: 'Privacy Statement', url: '/' },
-    { name: 'Disclaimer', url: '/' },
+    { name: 'Privacy Policy', url: '/privacy-policy' },
+    { name: 'Disclaimer', url: '/disclaimer' },
+    { name: 'Terms & Conditions', url: '/terms-and-conditions' },
   ],
   copyright: 'Copyright © 2024, Healthcare International',
 }

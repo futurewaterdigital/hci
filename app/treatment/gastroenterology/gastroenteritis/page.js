@@ -1,13 +1,15 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
 // import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
+import KnowMore from '@/components/ui/KnowMore'
 
 const data = {
   title: "Gastroenteritis",
@@ -42,13 +44,38 @@ const data = {
     },
   ],
 
-  data_1: [
+  data_9: [
     {
-      heading: "Intestinal symptoms:",
-      description: "",
+      heading: 'Infectious gastroenteritis:',
+      description: '',
       aneurysmSymptoms: [
         {
-          description: "Diarrhoea (sometimes watery)",
+          description: 'Caused by viruses, bacteria, parasites, or fungi.',
+        },
+       
+       
+      ],
+    },
+    {
+      heading: 'Chemical gastroenteritis:',
+      description: '',
+      aneurysmSymptoms: [
+        {
+          description: 'Triggered by toxic chemicals, contaminated food or water, medications, or excessive alcohol consumption.',
+        },
+       
+      ],
+    },
+  ],
+
+
+  data_9: [
+    {
+      heading: 'Intestinal symptoms:',
+      description: '',
+      aneurysmSymptoms: [
+        {
+          description: 'Diarrhoea (sometimes watery)',
         },
         {
           description: "Nausea and vomiting",
@@ -59,6 +86,7 @@ const data = {
         {
           description: "Loss of appetite",
         },
+       
       ],
     },
     {
@@ -66,13 +94,13 @@ const data = {
       description: "",
       aneurysmSymptoms: [
         {
-          description: "Fever",
+          description: 'Chills and body aches',
         },
         {
-          description: "Chills and body aches",
+          description: 'Fatigue and weakness',
         },
         {
-          description: "Fatigue and weakness",
+          description: 'Fever',
         },
       ],
     },
@@ -134,8 +162,8 @@ const data = {
       ],
     },
     {
-      heading: "Fungal Infections:",
-      description: "",
+      heading: 'Chemical Exposure:',
+      description: '',
       aneurysmSymptoms: [
         {
           description: "Contaminated food and water",
@@ -177,16 +205,16 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "⦁  Hydration: Drink water, oral rehydration solutions, or clear broths.",
+            '<span class="font-semibold text-hciSecondary">Hydration:</span> Drink water, oral rehydration solutions, or clear broths.',
         },
         {
           description:
-            "⦁  Diet: Follow the BRAT diet (Bananas, Rice, Applesauce, Toast) to reduce gastrointestinal stress.",
+            '<span class="font-semibold text-hciSecondary">Diet:</span> Follow the BRAT diet (Bananas, Rice, Applesauce, Toast) to reduce gastrointestinal stress.',
         },
         {
           description:
-            "⦁  Avoid irritants: Limit alcohol, caffeine, and dairy products during recovery.",
-        },
+            '<span class="font-semibold text-hciSecondary">Avoid irritants:</span> Limit alcohol, caffeine, and dairy products during recovery.',
+        },  
       ],
     },
 
@@ -195,18 +223,18 @@ const data = {
       description: "",
       aneurysmSymptoms: [
         {
-          description: "Intravenous fluids: If dehydration is severe.",
+          description: '<span class="font-semibold text-hciSecondary">Intravenous fluids:</span> If dehydration is severe.',
         },
         {
-          description: "Medications: Antiemetics to control vomiting.",
+          description: `<span class="font-semibold text-hciSecondary">Medications:</span> 
+          <ul class="list-disc list-inside">
+          <li>Antiemetics to control vomiting.</li>
+          <li>Antidiarrheal agents (in some cases).</li>
+          <li>Antibiotics or antiparasitic drugs for specific infections.</li>
+          </ul>
+          `,
         },
-        {
-          description: "Medications: Antidiarrheal agents (in some cases).",
-        },
-        {
-          description:
-            "Medications: Antibiotics or antiparasitic drugs for specific infections.",
-        },
+       
       ],
     },
     {
@@ -215,7 +243,7 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Detoxification: If poisoning is involved, medical intervention may be needed to remove the toxins.",
+            '<span class="font-semibold text-hciSecondary">Detoxification:</span> If poisoning is involved, medical intervention may be needed to remove the toxins.',
         },
       ],
     },
@@ -273,19 +301,19 @@ const data = {
     {
       category: "",
       description:
-        "Stool tests: To detect viral, bacterial, or parasitic infections.",
-      bgColor: "bg-hciSecondary text-white",
+        '<span class="font-semibold">Stool tests:</span> To detect viral, bacterial, or parasitic infections.',
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `Blood tests: To assess dehydration or other underlying health issues`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class="font-semibold">Blood tests:</span> To assess dehydration or other underlying health issues`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: "",
       description:
-        "Electrolyte panel: To monitor for imbalances caused by dehydration.",
-      bgColor: "bg-hciSecondary text-white",
+        '<span class="font-semibold">Electrolyte panel:</span> To monitor for imbalances caused by dehydration.',
+      bgColor: 'bg-hciSecondary text-white',
     },
   ],
 };
@@ -304,103 +332,33 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <p
-          dangerouslySetInnerHTML={{ __html: data.description }}
-          className="text-start font-light"
-        />
+        <H1 title={data.title} />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
-        {/* <H2
-          text="How GERD Occurs in the Esophagus"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
-        <p className="font-light">
-          In healthy digestion, the lower esophageal sphincter (LES)—a muscular
-          ring at the junction of the esophagus and stomach—opens to allow food
-          to pass into the stomach and closes to prevent backflow. However, in
-          GERD, the LES either weakens or relaxes abnormally, allowing stomach
-          contents, including acid, to reflux into the esophagus. This exposure
-          to acid can damage the delicate lining of the esophagus, causing
-          irritation and inflammation.
-        </p> */}
-        <div className="grid grid-cols-2 gap-4">
+        
+        <div className="grid grid-cols-2 gap-4 pt-12">
           <div>
-            <H2
-              title="Types of Gastroenteritis"
-              className="font-semibold mb-4 text-center"
-            />
+         
+            <H2 title="There are two main Types of Gastroenteritis" className="font-medium mb-4 text-start text-2xl" />
 
             <div className="mb-8">
               <DataLists
                 divClass="grid grid-cols-1 gap-4"
                 // key={index}
                 // desc={data.complications[0].description}
-                data={data.data_1}
+                data={data.data_9}
                 ulClass="list-disc list-outside"
                 // boxClass="grid grid-cols-2"
               />
             </div>
           </div>
-          <div>
+          <div className="flex justify-center items-center">
             <img src="/gastroenterology/gastroenteritis_1.png" alt="" />
           </div>
         </div>
 
-        {/* <div className="grid lg:grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Oesophageal Cancer (Ca Oesophagus)
-              </span>
-              <br />
-              Affects the oesophagus, the tube connecting the throat to the
-              stomach
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Stomach Cancer (Ca Stomach)
-              </span>
-              <br />
-              Also known as gastric cancer, originating from the stomach lining.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Colon Cancer (Ca Colon)
-              </span>
-              <br />
-              Develops in the colon, the initial part of the large intestine.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Rectal Cancer (Ca Rectum)
-              </span>
-              <br />
-              Forms in the rectum, the lower part of the large intestine before
-              the anus.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Gallbladder Cancer (Ca Gallbladder)
-              </span>
-              <br />
-              Begins in the gallbladder, a small organ beneath the liver that
-              stores bile.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Pancreatic Cancer (Ca Pancreas)
-              </span>
-              <br />
-              Originates in the pancreas, an organ involved in digestion and
-              hormone production.
-            </p>
-          </div>
-          <div>
-            <img src="/gastroenterology/digestive-system.png" alt="" />
-          </div>
-        </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center text-xl" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
 
         <p className="font-light">
           Gastroenteritis can be caused by infections or exposure to toxins.
@@ -415,24 +373,17 @@ function GeneralSurgery() {
             ulClass="list-disc list-outside"
             boxClass="bg-hciYellow h-[220px]"
           />
-          {/* {data.section_1.map((item, index) => (
-            <TextComponent
-              key={index}
-              title={item.title}
-              description={item.description}
-              boxCss="w-full min-h-[60px] bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
-            />
-          ))} */}
+         <KnowMore title={data.title} />
         </div>
         <H2
           title="Symptoms"
-          className="font-semibold mb-4 text-center text-xl"
+          className="font-medium mb-4 text-center text-2xl pt-12"
         />
         <p className="font-light">
           The hallmark symptoms of gastroenteritis are a combination of
           intestinal and systemic effects:
         </p>
-        <div className="mb-8">
+        <div className="mb-8 space-y-4">
           <DataLists
             divClass="grid grid-cols-2 gap-4"
             // key={index}
@@ -441,55 +392,36 @@ function GeneralSurgery() {
             ulClass="list-disc list-outside"
             // boxClass="grid grid-cols-2"
           />
+          <IssuesLinks head={data.title} />
         </div>
         <p className="font-light">
           These symptoms tend to appear suddenly, with diarrhoea or vomiting
           often being the first indicators. While most cases resolve within a
           few days, severe or persistent symptoms may indicate complications.
         </p>
-        {/* <H2
-          text="Symptoms"
-          textClass="text-2xl font-semibold mb-4 text-center"
-        />
-        <div className="mb-8">
-          <DataLists
-            divClass="grid grid-cols-3 gap-4"
-            // key={index}
-            // desc={data.complications[0].description}
-            data={data.data_1}
-            ulClass="list-disc list-outside"
-            // boxClass="grid grid-cols-2"
-          />
-        </div> */}
-
+       
         <div className="grid grid-cols-1 gap-4">
-          {/* <div>
-            <DataBoxes
-              title="Symptoms"
-              // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
-              titleCss="text-black font-semibold text-center"
-              header=""
-              data={data.symptoms}
-              myclass="grid grid-cols-3"
-            />
-            <KnowMore title={data.title} />
-          </div> */}
+         
           <div>
             <DataBoxes
               title="Diagnosis"
               text="In most cases, healthcare providers diagnose gastroenteritis based on symptoms and medical history. However, additional tests may be required to confirm the cause or rule out other conditions, including:"
               header=""
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl"
+              titleCss="text-black font-medium text-center text-2xl"
               data={data.diagnosis}
               myclass="grid grid-cols-1"
             />
           </div>
+          <KnowMore title={data.title} />
         </div>
 
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
-          <p className="font-light">
+          <H2
+            title="Treatment"
+            className="font-medium mb-4 text-center text-2xl"
+          />
+          <p className="font-light mb-6">
             The treatment of gastroenteritis primarily focuses on managing
             symptoms and preventing dehydration. Most cases resolve within 1–3
             days with rest and supportive care.
@@ -505,75 +437,7 @@ function GeneralSurgery() {
             />
           </div>
 
-          {/* <H2
-            text="Complications of GERD"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
-          <div className="mb-8">
-            <DataLists
-              divClass="grid grid-cols-1 gap-4"
-              // key={index}
-              // desc={data.complications[0].description}
-              data={data.data_3}
-              ulClass="list-disc list-outside"
-              // boxClass="grid grid-cols-2"
-            />
-          </div> */}
-
-          {/* <H2
-            text="Lifestyle Tips to Prevent Gallbladder Stones"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          /> */}
-          {/* <p className="font-light">
-            While surgery can effectively address existing stones, adopting
-            healthy habits can reduce the risk of developing them:
-          </p> */}
-          {/* <ul className="list-disc list-inside py-4 space-y-2 font-light">
-            <li>
-              Maintain a Healthy Weight: Gradual weight management helps prevent
-              changes in bile composition.
-            </li>
-            <li>
-              Eat a Balanced Diet: Opt for fibre-rich foods like fruits,
-              vegetables, and whole grains. Avoid excessive intake of fatty and
-              fried foods.
-            </li>
-            <li>
-              Stay Hydrated: Drinking plenty of water helps keep bile flowing
-              smoothly.
-            </li>
-            <li>
-              Exercise Regularly: Physical activity promotes healthy digestion
-              and overall well-being.
-            </li>
-            <li>
-              Avoid Crash Diets: Losing weight too quickly can increase the risk
-              of gallstones.
-            </li>
-          </ul> */}
-          {/* <DataLists
-            // desc={data.complications[0].heading}
-            data={data.complications}
-          /> */}
-
-          {/* <H2
-            text="Recovery and Post-Treatment Care"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
-          <p className="font-light">
-            After treatment, proper care is essential to ensure a smooth
-            recovery and prevent future problems:
-          </p> */}
-          {/* <div className="mb-8">
-            <DataLists
-              divClass="grid grid-cols-1 gap-4"
-              // key={index}
-              // desc={data.complications[0].description}
-              data={data.data_1}
-              ulClass="list-none list-outside"
-              // boxClass="grid grid-cols-2"
-            />
-          </div> */}
+         
         </div>
 
         <Conclusion data={footerData} />

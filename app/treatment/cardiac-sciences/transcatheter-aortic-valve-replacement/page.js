@@ -6,6 +6,8 @@ import DataLists from '@/components/cardiacComponents/Bullets'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import H1 from '@/components/ui/h1'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+
 
 const title = 'Transcatheter Aortic Valve Replacement (TAVR)'
 const WhyDone = [
@@ -71,8 +73,8 @@ const postTAVRCare = [
     heading: 'Post-TAVR Care',
     aneurysmSymptoms: [
       {
-        title: 'Blood',
-        description: 'thinners to prevent clots.',
+        title: 'Blood thinners',
+        description: 'to prevent clots.',
         bgColor: 'bg-blue-100 p-4 rounded-md',
       },
       {
@@ -129,13 +131,13 @@ const personalPreparations = [
   {
     category: '',
     description:
-      'Inform your doctor about all medications, including supplements.',
+      'Bring essential items like eyeglasses, hearing aids, and comfortable clothing.',
     bgColor: 'bg-hciSecondary text-white',
   },
   {
     category: '',
     description:
-      'Follow instructions regarding when to stop eating or drinking before the procedure.',
+      'Avoid wearing contact lenses, jewellery, or nail polish on the day of the procedure.',
     bgColor: 'bg-hciSecondary text-white',
   },
 ]
@@ -173,7 +175,14 @@ const afterProcedure = [
     bgColor: 'bg-hciYellow',
   },
 ]
-
+const footerData = [
+  {
+    header: 'Conclusion',
+    paragraph: `
+    TAVR provides a promising solution for those with severe aortic stenosis, enabling them to regain an active and fulfilling life.
+  `,
+  },
+]
 export default function page() {
   return (
     <div className="pt-12">
@@ -195,6 +204,9 @@ export default function page() {
             like chest pain, shortness of breath, and fatigue, improving both
             heart function and quality of life.
           </p>
+          <p className="mt-4 text-start font-light">
+          It is sometimes referred to as Transcatheter Aortic Valve Implantation (TAVI).
+          </p>
         </div>
 
         <div>
@@ -202,6 +214,7 @@ export default function page() {
             <DataLists
               desc="TAVR is recommended for patients suffering from severe aortic stenosis, a condition where the aortic valve becomes thickened, stiff, or narrowed, limiting blood flow from the heart to the rest of the body."
               head="You may be a candidate for TAVR if you experience:"
+              
               data={WhyDone}
               footerdata="TAVR offers a shorter hospital stay and quicker recovery compared to open-heart surgery."
               boxClass="min-h-[500px]"
@@ -215,48 +228,56 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="grid lg:grid-cols-2 gap-4">
-          <div>
+        <div className="grid lg:grid-cols-1 gap-4">
+          <h2 className="font-medium text-2xl">How to Prepare</h2>
+          <div className="grid lg:grid-cols-2 gap-4">
             <DataBoxes
-              title="How to Prepare"
-              titleCss="font-semibold text-2xl"
+              title=""
+              titleCss="font-medium text-xl"
               text="Medications and Fasting"
-              textCss="font-light py-2"
+              textCss="font-medium py-2 text-lg"
               header=""
               data={medicationsAndFasting}
               myclass="grid grid-cols-1"
             />
             <DataBoxes
               title=""
-              text=""
-              header="Personal Preparations"
-              headerCss="font-semibold text-2xl"
-              textCss="font-light py-2"
+              titleCss="font-medium text-xl"
+              text="Personal Preparations"
+              textCss="font-medium py-2 text-lg"
+              header=""
               data={personalPreparations}
               myclass="grid grid-cols-1"
             />
+           
           </div>
-          <div>
+          <h2 className="font-medium text-2xl">Procedure Overview</h2>
+          <div className="grid lg:grid-cols-2 gap-4">
             <DataBoxes
-              title="Procedure Overview"
-              titleCss="font-semibold text-2xl"
+              title=""
+              titleCss="font-medium text-xl"
               text="During the Procedure"
-              textCss="font-light py-2"
+              
+              textCss="font-medium py-2 text-lg"
               header=""
               data={duringProcedure}
               myclass="grid grid-cols-1"
               footerData="The entire process involves smaller incisions compared to open-heart surgery, reducing recovery time and risks."
               
             />
-            <DataBoxes
+             <DataBoxes
               title=""
-              text=""
-              header="After the Procedure"
-              headerCss="font-semibold text-2xl"
-              textCss="font-light py-2"
+              titleCss="font-medium text-xl"
+              text="After the Procedure"
+              
+              textCss="font-medium py-2 text-lg"
+              header=""
               data={afterProcedure}
               myclass="grid grid-cols-1"
+              footerData="The entire process involves smaller incisions compared to open-heart surgery, reducing recovery time and risks."
+              
             />
+           
           </div>
         </div>
         <div className="grid lg:grid-cols-2 gap-4">
@@ -266,18 +287,19 @@ export default function page() {
             data={postTAVRCare}
             footerTitle="Follow-Up"
             footerdata="Regular check-ups and imaging tests ensure the new valve is functioning correctly. Notify your doctor of symptoms like swelling, dizziness, or sudden weight gain."
-            boxClass="min-h-[400px]"
+            boxClass="min-h-[340px]"
           />
           <DataLists
             desc="TAVR effectively reduces symptoms of aortic stenosis and enhances quality of life. Adopting a heart-healthy lifestyle after the procedure further supports recovery and long-term heart health:"
             head=""
             data={resultsData}
             footerTitle=""
-            footerdata="TAVR provides a promising solution for those with severe aortic stenosis, enabling them to regain an active and fulfilling life."
-            boxClass="min-h-[400px]"
+            footerdata=""
+            boxClass="min-h-[340px]"
           />
         </div>
         <div className="space-y-4 mt-8">
+          <Conclusion data={footerData} />
           <FooterLinks head={title} />
           <BookButton />
         </div>

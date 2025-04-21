@@ -1,14 +1,15 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: "Neurodegenerative Disorders",
@@ -49,16 +50,16 @@ const data = {
       description: "",
       aneurysmSymptoms: [
         {
-          description: `Cholinesterase Inhibitors: Used in Alzheimer's disease to help maintain cognitive function by preventing the breakdown of acetylcholine, a neurotransmitter involved in learning and memory.`,
+          description: `<span className='font-medium'>Cholinesterase Inhibitors:</span> Used in Alzheimer's disease to help maintain cognitive function by preventing the breakdown of acetylcholine, a neurotransmitter involved in learning and memory.`,
         },
         {
-          description: `Levodopa: The most common drug for treating Parkinson's disease, it helps replenish dopamine, the neurotransmitter that is deficient in the disorder.`,
+          description: `<span className='font-medium'>Levodopa:</span> The most common drug for treating Parkinson's disease, it helps replenish dopamine, the neurotransmitter that is deficient in the disorder.`,
         },
         {
-          description: `Riluzole: Extends survival in ALS patients by slowing the progression of the disease.`,
+          description: `<span className='font-medium'>Riluzole:</span> Extends survival in ALS patients by slowing the progression of the disease.`,
         },
         {
-          description: `⦁  Antidepressants/Anxiolytics: These drugs help manage the psychological symptoms associated with many neurodegenerative diseases.`,
+          description: `<span className='font-medium'>Antidepressants/Anxiolytics:</span> These drugs help manage the psychological symptoms associated with many neurodegenerative diseases.`,
         },
       ],
     },
@@ -143,72 +144,72 @@ const data = {
 
   symptoms: [
     {
-      category: "",
-      description: `Memory Loss: Especially in disorders like Alzheimer's disease, where cognitive decline is prominent.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Memory Loss:</span> Especially in disorders like Alzheimer's disease, where cognitive decline is prominent.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Motor Symptoms: Tremors, muscle rigidity, difficulty walking, and coordination issues are common in disorders such as Parkinson's disease.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Motor Symptoms:</span> Tremors, muscle rigidity, difficulty walking, and coordination issues are common in disorders such as Parkinson's disease.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Speech and Swallowing Difficulties: Many neurodegenerative conditions affect the muscles involved in speech and swallowing, leading to slurred speech and difficulty eating.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Speech and Swallowing Difficulties:</span> Many neurodegenerative conditions affect the muscles involved in speech and swallowing, leading to slurred speech and difficulty eating.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Cognitive Impairment: A decline in thinking abilities, reasoning, judgment, and problem-solving is seen in diseases like Alzheimer's and frontotemporal dementia.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Cognitive Impairment:</span> A decline in thinking abilities, reasoning, judgment, and problem-solving is seen in diseases like Alzheimer's and frontotemporal dementia.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Personality Changes: Some conditions, like frontotemporal dementia, result in dramatic shifts in personality and behavior.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Personality Changes:</span> Some conditions, like frontotemporal dementia, result in dramatic shifts in personality and behavior.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Muscle Weakness: Progressive muscle weakness is characteristic of diseases such as ALS.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Muscle Weakness:</span> Progressive muscle weakness is characteristic of diseases such as ALS.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Fatigue: Persistent tiredness and exhaustion are common across many neurodegenerative disorders.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Fatigue:</span> Persistent tiredness and exhaustion are common across many neurodegenerative disorders.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
   ],
 
   diagnosis: [
     {
-      category: "",
-      description: `Neurological Examination: A thorough assessment of motor skills, coordination, reflexes, and cognitive abilities by a neurologist.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>Neurological Examination:</span> A thorough assessment of motor skills, coordination, reflexes, and cognitive abilities by a neurologist.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `MRI and CT Scans: Brain imaging techniques to detect changes in brain structure, such as atrophy, which is common in many neurodegenerative conditions.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>MRI and CT Scans:</span> Brain imaging techniques to detect changes in brain structure, such as atrophy, which is common in many neurodegenerative conditions.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `PET Scans: Used to observe brain activity and detect abnormalities associated with disorders like Alzheimer's disease.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>PET Scans:</span> Used to observe brain activity and detect abnormalities associated with disorders like Alzheimer's disease.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `Genetic Testing: Helpful in diagnosing inherited conditions like Huntington’s disease or familial ALS.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>Genetic Testing:</span> Helpful in diagnosing inherited conditions like Huntington’s disease or familial ALS.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `Electromyography (EMG): Tests nerve and muscle function, particularly useful for diagnosing ALS and related disorders.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>Electromyography (EMG):</span> Tests nerve and muscle function, particularly useful for diagnosing ALS and related disorders.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `Cerebrospinal Fluid (CSF) Analysis: Examines the fluid around the brain and spinal cord for signs of disease markers, like abnormal proteins in Alzheimer's or prion diseases.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>Cerebrospinal Fluid (CSF) Analysis:</span> Examines the fluid around the brain and spinal cord for signs of disease markers, like abnormal proteins in Alzheimer's or prion diseases.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
   ],
 };
@@ -220,10 +221,10 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <H2 title={data.description} className="text-start font-light" />
+        <H1 title={data.title} />
+        <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           The exact cause of many neurodegenerative disorders is often unknown,
           but factors include:
@@ -241,7 +242,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
@@ -257,28 +258,30 @@ function GeneralSurgery() {
               <DataBoxes
                 title="Symptoms"
                 text="Symptoms of neurodegenerative disorders vary widely depending on the specific disease but often include:"
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-6'>
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosing neurodegenerative disorders typically involves a combination of clinical evaluations, imaging tests, and laboratory work. Some common diagnostic methods include:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
+                textCss="font-light py-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+            <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
             While there is currently no cure for neurodegenerative disorders,

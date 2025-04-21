@@ -1,14 +1,16 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import H1 from '@/components/ui/h1'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import IssuesLinks from '@/components/ui/IssuesLinks'
+
 
 const data = {
   title: "Celiac Disease",
@@ -309,87 +311,27 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <p
-          dangerouslySetInnerHTML={{ __html: data.description }}
-          className="text-start font-light"
-        />
+        
+        <H1 title={data.title} />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        {/* <H2
-          text="Types of Cancers of the Digestive System "
-          textClass="text-2xl font-semibold mb-4 text-start"
-        /> */}
-        {/* <div className="grid lg:grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Oesophageal Cancer (Ca Oesophagus)
-              </span>
-              <br />
-              Affects the oesophagus, the tube connecting the throat to the
-              stomach
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Stomach Cancer (Ca Stomach)
-              </span>
-              <br />
-              Also known as gastric cancer, originating from the stomach lining.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Colon Cancer (Ca Colon)
-              </span>
-              <br />
-              Develops in the colon, the initial part of the large intestine.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Rectal Cancer (Ca Rectum)
-              </span>
-              <br />
-              Forms in the rectum, the lower part of the large intestine before
-              the anus.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Gallbladder Cancer (Ca Gallbladder)
-              </span>
-              <br />
-              Begins in the gallbladder, a small organ beneath the liver that
-              stores bile.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Pancreatic Cancer (Ca Pancreas)
-              </span>
-              <br />
-              Originates in the pancreas, an organ involved in digestion and
-              hormone production.
-            </p>
-          </div>
-          <div>
-            <img src="/gastroenterology/digestive-system.png" alt="" />
-          </div>
-        </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+       
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl mt-12" />
         <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="w-full min-h-[80px] bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="w-full min-h-[80px] bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
+        <KnowMore title={data.title} />
 
         <div className="space-y-8">
           <div>
-            <H2
-              title="Symptoms"
-              className="font-semibold mb-4 text-center text-xl"
-            />
+            <H2 title="Symptoms" className="font-medium mb-4 text-center text-2xl mt-12"/>
             <DataLists
               divClass="grid grid-cols-3 gap-4"
               data={data.symptoms_data}
@@ -404,16 +346,20 @@ function GeneralSurgery() {
             <DataBoxes
               title="Diagnosis"
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl py-4"
+              titleCss="text-black font-medium text-center py-4 mt-4 text-2xl"
               header=""
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
           </div>
         </div>
+        <IssuesLinks head={data.title} />
 
-        <div>
-          <H2 text="Treatment" className="font-semibold mb-4 text-center" />
+        <div className="pt-12">
+          <H2
+            title="Treatment"
+            className="font-medium mb-4 text-center text-2xl"
+          />
           <div className="mb-8">
             <DataLists
               divClass="grid grid-cols-1 gap-4"
@@ -422,6 +368,7 @@ function GeneralSurgery() {
             />
           </div>
         </div>
+        <KnowMore title={data.title} />
 
         <Conclusion data={footerData} />
         <FooterLinks head={data.title} />

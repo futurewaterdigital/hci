@@ -1,15 +1,15 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
-
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import H1 from '@/components/ui/h1'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: "Brain Tumours and Brain Cancer",
   bannerImage: "/neuro-sciences/brain-tumours-and-brain-cancer.png",
@@ -94,25 +94,25 @@ const data = {
       description:
         "Surgery is often the first line of treatment to remove as much of the tumour as possible.",
       aneurysmSymptoms: [
+        // {
+        //   description:
+        //     'In cases where the tumour is small and asymptomatic, regular monitoring may be recommended to track its growth and any emerging symptoms.',
+        // },
         {
           description:
-            "In cases where the tumour is small and asymptomatic, regular monitoring may be recommended to track its growth and any emerging symptoms.",
+            '<strong class="text-hciSecondary">Craniotomy:</strong> A portion of the skull is removed to access the tumour.',
         },
         {
           description:
-            "Craniotomy: A portion of the skull is removed to access the tumour.",
+            '<strong class="text-hciSecondary">Minimally Invasive Surgery:</strong> Small incisions with the use of endoscopes or robotic systems for hard-to-reach tumours.',
         },
         {
           description:
-            "Minimally Invasive Surgery: Small incisions with the use of endoscopes or robotic systems for hard-to-reach tumours.",
+            '<strong class="text-hciSecondary">Awake Brain Surgery:</strong> Performed while the patient is conscious to ensure no critical functions (e.g., speech) are impacted during tumour removal.',
         },
         {
           description:
-            "Awake Brain Surgery: Performed while the patient is conscious to ensure no critical functions (e.g., speech) are impacted during tumour removal.",
-        },
-        {
-          description:
-            "Challenges: Tumours near critical brain regions may not be fully removable, requiring additional treatments.",
+            '<strong class="text-hciSecondary">Challenges:</strong> Tumours near critical brain regions may not be fully removable, requiring additional treatments.',
         },
       ],
     },
@@ -124,19 +124,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "External Beam Radiation Therapy (EBRT): Directs radiation from outside the body over multiple sessions.",
+            '<strong class="text-hciSecondary">External Beam Radiation Therapy (EBRT):</strong> Directs radiation from outside the body over multiple sessions.',
         },
         {
           description:
-            "Stereotactic Radiosurgery (SRS): Delivers highly focused radiation in a single or few sessions (e.g., Gamma Knife, Cyber Knife). Ideal for small, inoperable tumours.",
+            '<strong class="text-hciSecondary">Stereotactic Radiosurgery (SRS):</strong> Delivers highly focused radiation in a single or few sessions (e.g., Gamma Knife, Cyber Knife). Ideal for small, inoperable tumours.',
         },
         {
           description:
-            "Proton Therapy: Uses protons as conventional radiation therapy to minimize damage to surrounding healthy tissue.",
+            '<strong class="text-hciSecondary">Proton Therapy:</strong> Uses protons as conventional radiation therapy to minimize damage to surrounding healthy tissue.',
         },
         {
           description:
-            "Side Effects: Fatigue, hair loss, and brain swelling can occur, requiring supportive care.",
+            '<strong class="text-hciSecondary">Side Effects:</strong> Fatigue, hair loss, and brain swelling can occur, requiring supportive care.',
         },
       ],
     },
@@ -146,19 +146,19 @@ const data = {
         "Chemotherapy drugs stop tumour growth or kill cancer cells directly.",
       aneurysmSymptoms: [
         {
-          description: `Administration Methods: Directs radiation from outside the body over multiple sessions.
-            <p>Oral: Pills taken at home</p>
-            <p>Intravenous (IV): Delivered directly into the bloodstream.</p>
-            <p>Intrathecal: Injected into the cerebrospinal fluid for central nervous system cancers.</p>
+          description: `<p><strong class="text-hciSecondary">Administration Methods:</strong> Directs radiation from outside the body over multiple sessions.</p>
+            <p><strong class="text-hciSecondary">1. Oral:</strong> Pills taken at home</p>
+            <p><strong class="text-hciSecondary">2. Intravenous (IV):</strong> Delivered directly into the bloodstream.</p>
+            <p><strong class="text-hciSecondary">3. Intrathecal:</strong> Injected into the cerebrospinal fluid for central nervous system cancers.</p>
             `,
         },
         {
           description:
-            "Common Drugs: Temozolomide (for glioblastoma) and Carmustine.",
+            '<strong class="text-hciSecondary">Common Drugs:</strong> Temozolomide (for glioblastoma) and Carmustine.',
         },
         {
           description:
-            "Challenges: Chemotherapy can lead to side effects like nausea, hair loss, and lowered immunity.",
+            '<strong class="text-hciSecondary">Challenges:</strong> Chemotherapy can lead to side effects like nausea, hair loss, and lowered immunity.',
         },
       ],
     },
@@ -167,9 +167,22 @@ const data = {
       description:
         "This approach blocks specific molecules or mutations that drive tumour growth.",
       aneurysmSymptoms: [
+        
         {
           description:
-            "This is a conventional form of radiation therapy where multiple sessions are administered over a few weeks. EBRT directs radiation at the tumour from outside the body and is generally used for larger or more difficult-to-reach tumours.",
+            '<strong class="text-hciSecondary">EGFR Inhibitors:</strong> Effective for tumours with EGFR mutations (common in glioblastoma).',
+        },
+        {
+          description:
+            '<strong class="text-hciSecondary">VEGF Inhibitors:</strong> Prevent tumour blood vessel formation.',
+        },
+        {
+          description:
+            '<strong class="text-hciSecondary">mTOR Inhibitors:</strong> Blocks proteins involved in cell growth and survival.',
+        },
+        {
+          description:
+            '<strong class="text-hciSecondary">Advantages:</strong> Fewer side effects than chemotherapy since healthy cells are less affected.',
         },
       ],
     },
@@ -180,19 +193,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Checkpoint Inhibitors: Blocks proteins that prevent immune cells from attacking the tumour.",
+            '<strong class="text-hciSecondary">Checkpoint Inhibitors:</strong> Blocks proteins that prevent immune cells from attacking the tumour.',
         },
         {
           description:
-            "Vaccine Therapies: Trains the immune system to target tumour-specific antigens.",
+            '<strong class="text-hciSecondary">Vaccine Therapies:</strong> Trains the immune system to target tumour-specific antigens.',
         },
         {
           description:
-            "CAR-T Cell Therapy: Immune cells are modified to recognize and destroy brain cancer cells.",
+            '<strong class="text-hciSecondary">CAR-T Cell Therapy:</strong> Immune cells are modified to recognize and destroy brain cancer cells.',
         },
         {
           description:
-            "Limitations: Brain tumours can evade immune detection, so immunotherapy may not always be effective alone.",
+            '<strong class="text-hciSecondary">Limitations:</strong> Brain tumours can evade immune detection, so immunotherapy may not always be effective alone.',
         },
       ],
     },
@@ -203,19 +216,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Physical Therapy: Restores strength and mobility affected by surgery or radiation.",
+            '<strong class="text-hciSecondary">Physical Therapy:</strong> Restores strength and mobility affected by surgery or radiation.',
         },
         {
           description:
-            "Occupational Therapy: Helps patients adapt to changes in cognitive or motor functions.",
+            '<strong class="text-hciSecondary">Occupational Therapy:</strong> Helps patients adapt to changes in cognitive or motor functions.',
         },
         {
           description:
-            "Speech Therapy: Addresses communication challenges if speech areas are impacted.",
+            '<strong class="text-hciSecondary">Speech Therapy:</strong> Addresses communication challenges if speech areas are impacted.',
         },
         {
           description:
-            "Counselling and Mental Health Support: Supports patients and families in coping with emotional stress and life adjustments.",
+            '<strong class="text-hciSecondary">Counselling and Mental Health Support:</strong> Supports patients and families in coping with emotional stress and life adjustments.',
         },
       ],
     },
@@ -226,11 +239,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Emerging Therapies: New drug combinations, gene therapies, and advanced surgical techniques are tested.",
+            '<strong class="text-hciSecondary">Emerging Therapies:</strong> New drug combinations, gene therapies, and advanced surgical techniques are tested.',
         },
         {
           description:
-            "Eligibility: Trials may have specific criteria, such as tumour type and previous treatments.",
+            '<strong class="text-hciSecondary">Eligibility:</strong> Trials may have specific criteria, such as tumour type and previous treatments.',
         },
       ],
     },
@@ -321,35 +334,30 @@ const data = {
       bgColor: "bg-hciSecondary text-white",
     },
   ],
-};
-
-console.log(data.complications[0].heading);
+}
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <p
-          dangerouslySetInnerHTML={{ __html: data.description }}
-          className="text-start font-light"
-        />
+        <H1 title={data.title} />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
+        {/* <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           The exact cause of benign peripheral nerve tumours is often unclear,
           but some cases are associated with genetic conditions, such as
           neurofibromatosis type 1 (NF1) and neurofibromatosis type 2 (NF2).
           These inherited conditions increase the likelihood of developing nerve
           tumours.
-        </p>
-        <H2 title="Types" className="font-semibold mb-4 text-center" />
-        <p className="font-light" text="">
+        </p> */}
+        <H2 title="Types" className="font-medium mb-4 text-center text-2xl" />
+        {/* <p className="font-light" text="">
           Peripheral nerve tumours can grow within the nerves (intra-neural
           tumours) or press on them from outside (extra-neural tumours). The
           following are common types of benign peripheral nerve tumours:
-        </p>
+        </p> */}
         {/* <DataSurgery data={data.section_1} /> */}
         <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
@@ -366,7 +374,8 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p>
-        <KnowMore title={data.title} /> */}
+         */}
+        <KnowMore title={data.title} />
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">
@@ -374,28 +383,29 @@ function GeneralSurgery() {
                 title="Symptoms of Brain Tumors and Brain Cancer:"
                 textCss="font-light py-4"
                 text="Symptoms depend on the tumor's size, location, and growth rate but can include:"
-                titleCss="text-black font-semibold text-center text-xl py-4"
+                titleCss="text-black font-medium text-center text-xl py-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-6'>
               <DataBoxes
                 title="Diagnosis of Brain Tumours and Brain Cancer"
                 text="Early detection is essential for effective treatment. Diagnostic methods include:"
                 header=""
-                titleCss="text-black font-semibold text-center text-xl py-4"
+                titleCss="text-black font-medium text-center text-xl py-4"
+                textCss="font-light pb-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           {/* <p className="font-light">
             Treatment for benign peripheral nerve tumours depends on factors
@@ -403,7 +413,7 @@ function GeneralSurgery() {
             symptoms. Options include:
           </p> */}
           <DataLists
-            desc={data.complications[0].description}
+            desc={data.complications.description}
             data={data.complications}
           />
         </div>

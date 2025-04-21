@@ -1,12 +1,12 @@
 // generalSurgery.js
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Image from "next/image";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import Image from 'next/image'
+import H1 from '@/components/ui/h1'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
 
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import FlexBoxSection from "@/components/cardiacComponents/FlexBoxSection";
@@ -75,7 +75,7 @@ const data = {
   ],
   complications: [
     {
-      heading: "Expert Care",
+      heading: '',
 
       aneurysmSymptoms: [
         {
@@ -216,17 +216,17 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
+        <H1 title={data.title} />
         <H2
           title={data.description}
-          className="text-start font-semibold text-xl"
+          className="text-start font-medium text-2xl"
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
 
         <H2
           title="Conditions Treated by Urologists"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light text-center">
           HCI’s network of urology specialists offers expertise in diagnosing
@@ -236,12 +236,12 @@ function GeneralSurgery() {
         <div className="grid grid-cols-1 gap-4">
           <DataLists
             data={data.complications}
-            desc="We work closely with experts such as:"
+            // desc="We work closely with experts such as:"
           />
         </div>
         <H2
           title="Advanced Diagnostic and Treatment Services"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light">
           HCI provides access to state-of-the-art diagnostics and treatments for
@@ -260,7 +260,7 @@ function GeneralSurgery() {
               src="/others/treatment_service.png"
               width={300}
               height={300}
-              className="w-full "
+              className="w-full h-[430px] object-cover"
             />
           </div>
         </div>
@@ -271,7 +271,7 @@ function GeneralSurgery() {
         </div>
         <H2
           title="Why Choose HCI for Urological Care?"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light">
           HCI is dedicated to providing the highest standard of urological care,
@@ -279,10 +279,10 @@ function GeneralSurgery() {
           should trust us with your urological health:
         </p>
         <ListBox data={data} />
-        <div>
+        <div className=' pt-12'>
           <H2
             title="When to See a Urologist"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
           <p className="font-light">
             If you experience any of the following, it may be time to consult a
@@ -291,10 +291,10 @@ function GeneralSurgery() {
           <DataLists data={data.urologist} desc="" />
         </div>
 
-        <div>
+        <div className='pb-12'>
           <H2
             title="Take Charge of Your Urological Health"
-            className="text-2xl font-semibold mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center"
           />
           <p className="font-light">
             At HCI, we believe that early diagnosis and expert care are crucial

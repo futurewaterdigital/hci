@@ -1,19 +1,19 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
-
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import H1 from '@/components/ui/h1'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
-  title: "Hydrocephalus",
-  bannerImage: "/neuro-sciences/hydrocephalus.png",
-  description: `Hydrocephalus is a neurological condition characterized by an abnormal accumulation of cerebrospinal fluid (CSF) in the ventricles of the brain. This buildup can lead to increased pressure within the skull, resulting in various symptoms that can affect individuals of all ages. In India, hydrocephalus is a significant health concern, particularly among infants and the elderly, and can arise from congenital conditions, infections, or injuries.`,
+  title: 'Hydrocephalus',
+  bannerImage: '/neuro-sciences/hydrocephalus.png',
+  description: `Hydrocephalus is a neurological condition characterized by an abnormal accumulation of cerebrospinal fluid (CSF) in the ventricles of the brain. This buildup can lead to increased pressure within the skull, resulting in various symptoms that can affect individuals of all ages. Hydrocephalus, which can result from congenital abnormalities, infections, or traumas, is a serious health concern, especially for young children and the elderly.`,
   overview: ``,
 
   section_1: [
@@ -21,11 +21,6 @@ const data = {
       title: "Tumours",
       description:
         "Brain tumours may obstruct the pathways of CSF, causing fluid accumulation.",
-    },
-    {
-      title: "Normal Pressure Hydrocephalus",
-      description:
-        "This form can occur in older adults and may develop gradually, often mistaken for other conditions like dementia.",
     },
     {
       title: "Trauma",
@@ -38,7 +33,14 @@ const data = {
         "Infections such as meningitis can disrupt the normal flow of cerebrospinal fluid, leading to hydrocephalus.",
     },
     {
-      title: "Congenital Conditions",
+      title: 'Normal Pressure Hydrocephalus',
+      description:
+        'This form can occur in older adults and may develop gradually, often mistaken for other conditions like dementia.',
+    },
+   
+    
+    {
+      title: 'Congenital Conditions',
       description:
         "Hydrocephalus can be present at birth due to genetic factors or developmental abnormalities in the brain.",
     },
@@ -66,17 +68,7 @@ const data = {
         },
       ],
     },
-    {
-      heading: "Vagus Nerve Stimulation (VNS):",
-      description: "",
-      aneurysmSymptoms: [
-        {
-          description: `A device implanted under the skin sends electrical impulses to the vagus nerve, helping reduce seizure frequency in some patients.
-
-            `,
-        },
-      ],
-    },
+    
     {
       heading: "Medications",
       description: "",
@@ -125,48 +117,47 @@ const data = {
 
   symptoms: [
     {
-      category: "",
-      description: `Increased Head Size: In infants, a rapid increase in head circumference may be noticeable.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Increased Head Size:</span> In infants, a rapid increase in head circumference may be noticeable.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Nausea and Vomiting: These symptoms can arise due to increased intracranial pressure.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Nausea and Vomiting:</span> These symptoms can arise due to increased intracranial pressure.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Headaches: Persistent headaches, particularly in older children and adults, may be a common complaint.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Headaches:</span> Persistent headaches, particularly in older children and adults, may be a common complaint.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Vision Problems: Blurred or double vision may occur due to pressure on the optic nerve.
-`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Vision Problems:</span> Blurred or double vision may occur due to pressure on the optic nerve.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: `Cognitive Impairments: Difficulty in concentrating, memory issues, or behavioural changes can be observed.`,
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: `<span class='font-medium'>Cognitive Impairments:</span> Difficulty in concentrating, memory issues, or behavioural changes can be observed.`,
+      bgColor: 'bg-hciPrimary text-white',
     },
   ],
 
   diagnosis: [
     {
-      category: "",
-      description: `Physical Examination: A thorough assessment of symptoms and medical history, including neurological evaluation.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>Physical Examination:</span> A thorough assessment of symptoms and medical history, including neurological evaluation.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `Imaging Studies: MRI and CT scans are critical for visualising the brain's structure and identifying fluid accumulation.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>Imaging Studies:</span> MRI and CT scans are critical for visualising the brain's structure and identifying fluid accumulation.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `Ultrasound: In infants, cranial ultrasound can be used to detect hydrocephalus and monitor the size of the ventricles.`,
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class='font-medium'>Ultrasound:</span> In infants, cranial ultrasound can be used to detect hydrocephalus and monitor the size of the ventricles.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
   ],
 };
@@ -178,14 +169,14 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <H2 title={data.description} className="text-start font-light" />
+        <H1 title={data.title} />
+        <p className="text-start font-light" >{data.description}</p>
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
-        <p className="font-light" text="">
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
+        {/* <p className="font-light" text="">
           Epilepsy can result from various factors, although in many cases, the
           exact cause remains unknown. Common causes include:
-        </p>
+        </p> */}
         {/* <H2 text="Types" textClass="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">
           Peripheral nerve tumours can grow within the nerves (intra-neural
@@ -199,7 +190,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center"
+              boxCss="min-h-[100px] w-full bg-hciYellow hover:bg-hciPrimary hover:text-white items-start justify-center rounded-lg shadow-lg"
             />
           ))}
         </div>
@@ -214,30 +205,31 @@ function GeneralSurgery() {
             <div>
               <DataBoxes
                 title="Symptoms"
-                text="Epilepsy is characterized by seizures, which can take various forms depending on the affected brain regions. Common symptoms include:
-"
-                titleCss="text-black font-semibold text-center text-2xl"
+//                 text="Epilepsy is characterized by seizures, which can take various forms depending on the affected brain regions. Common symptoms include:
+// "
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 header=""
                 data={data.symptoms}
                 myclass="grid grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
-            <div>
+            <div className='space-y-6'>
               <DataBoxes
                 title="Diagnosis"
-                text="Epilepsy diagnosis involves a comprehensive evaluation of the patient’s medical history, seizure patterns, and diagnostic tests. These include:"
+                // text="Epilepsy diagnosis involves a comprehensive evaluation of the patient’s medical history, seizure patterns, and diagnostic tests. These include:"
                 header=""
-                titleCss="text-black font-semibold text-center text-2xl"
+                titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
+                textCss="font-light py-4"
               />
-              {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           {/* <p className="font-light">
             Treatment for epilepsy aims to control seizures and improve the

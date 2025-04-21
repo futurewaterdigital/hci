@@ -4,7 +4,7 @@ export default function FooterLink({ head }) {
   const linkshead = [
     {
       text: `To get the the best diagnosis for ${head} and related issues, click here`,
-      url: 'https://jalal.com/', // Replace "#" with the actual link
+      url: '', // Replace "#" with the actual link
     },
    
   ]
@@ -14,7 +14,7 @@ export default function FooterLink({ head }) {
       {linkshead.map((link, index) => (
         <Link
           key={index}
-          className="text-hciPrimary underline block mb-2 font-semibold capitalize"
+          className="text-hciPrimary underline block mb-2 font-semibold capitalize text-lg"
           href={link.url}
         >
           {link.text}

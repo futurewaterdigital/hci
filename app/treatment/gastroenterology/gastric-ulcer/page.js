@@ -1,14 +1,15 @@
-import React from "react";
-import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import H2 from "@/components/ui/h2";
-import KnowMore from "@/components/ui/KnowMore";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-import TextComponent from "@/components/Common/TextComponent";
+import React from 'react'
+import Banner from '@/components/Common/Banner'
+import DataLists from '@/components/cardiacComponents/Bullets'
+import BookButton from '@/components/cardiacComponents/BookButton'
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import H2 from '@/components/ui/h2'
+import KnowMore from '@/components/ui/KnowMore'
+import DataBoxes from '@/components/cardiacComponents/Box'
+import Conclusion from '@/components/cardiacComponents/Conclusion'
+import TextComponent from '@/components/Common/TextComponent'
+import H1 from '@/components/ui/h1'
+import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: "Gastric Ulcer",
@@ -26,11 +27,7 @@ const data = {
       description:
         "Increases acid production and delays healing of existing ulcers.",
     },
-    {
-      title: "",
-      description:
-        "Colitis or viral infections: Chronic colon inflammation may predispose diverticula to rupture.",
-    },
+
     {
       title: "Stress",
       description:
@@ -55,15 +52,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Description: These ulcers form quickly, usually due to severe stress, trauma, or medication use.",
+            '<span class="font-semibold">Description:</span> These ulcers form quickly, usually due to severe stress, trauma, or medication use.',
         },
         {
           description:
-            "Symptoms: Sudden onset of sharp abdominal pain, often accompanied by nausea.",
+            '<span class="font-semibold">Symptoms:</span> Sudden onset of sharp abdominal pain, often accompanied by nausea.',
         },
         {
           description:
-            "Treatment: Focuses on relieving symptoms and addressing the trigger, such as medications or stress.",
+            '<span class="font-semibold">Treatment:</span> Focuses on relieving symptoms and addressing the trigger, such as medications or stress.',
         },
       ],
     },
@@ -73,15 +70,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Description: Long-standing ulcers that develop gradually, often due to persistent irritation or infections like H. pylori.",
+            '<span class="font-semibold">Description:</span> Long-standing ulcers that develop gradually, often due to persistent irritation or infections like H. pylori.',
         },
         {
           description:
-            "Symptoms: Burning or gnawing stomach pain, typically worse on an empty stomach.",
+            '<span class="font-semibold">Symptoms:</span> Burning or gnawing stomach pain, typically worse on an empty stomach.',
         },
         {
           description:
-            "Treatment: Requires a combination of lifestyle changes, medications, and infection control.",
+            '<span class="font-semibold">Treatment:</span> Requires a combination of lifestyle changes, medications, and infection control.',
         },
       ],
     },
@@ -91,15 +88,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Description:  A severe form of gastric ulcer that erodes a blood vessel, leading to gastrointestinal bleeding.",
+            '<span class="font-semibold">Description:</span>  A severe form of gastric ulcer that erodes a blood vessel, leading to gastrointestinal bleeding.',
         },
         {
           description:
-            "Symptoms: Symptoms include black or tarry stools, vomiting blood, and dizziness.",
+            '<span class="font-semibold">Symptoms:</span> Symptoms include black or tarry stools, vomiting blood, and dizziness.',
         },
         {
           description:
-            "Treatment: Immediate medical intervention is necessary, possibly including endoscopic treatment or surgery.",
+            '<span class="font-semibold">Treatment:</span> Immediate medical intervention is necessary, possibly including endoscopic treatment or surgery.',
         },
       ],
     },
@@ -109,14 +106,14 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Description: A life-threatening condition where the ulcer creates a hole in the stomach wall, allowing contents to leak into the abdominal cavity.",
+            '<span class="font-semibold">Description:</span> A life-threatening condition where the ulcer creates a hole in the stomach wall, allowing contents to leak into the abdominal cavity.',
         },
         {
-          description: "Symptoms: Sudden, severe abdominal pain and fever.",
+          description: '<span class="font-semibold">Symptoms:</span> Sudden, severe abdominal pain and fever.',
         },
         {
           description:
-            "Treatment: Emergency surgery is required to close the perforation and prevent infection.",
+            '<span class="font-semibold">Treatment:</span> Emergency surgery is required to close the perforation and prevent infection.',
         },
       ],
     },
@@ -140,18 +137,18 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Proton Pump Inhibitors (PPIs): Decrease stomach acid production, allowing the ulcer to heal.",
+            '<span class="font-semibold text-hciSecondary">Proton Pump Inhibitors (PPIs):</span> Decrease stomach acid production, allowing the ulcer to heal.',
         },
         {
-          description: "Antibiotics: Used to treat H. pylori infection.",
-        },
-        {
-          description:
-            "Antacids: Provide quick relief from stomach pain by neutralizing acid.",
+          description: '<span class="font-semibold text-hciSecondary">Antibiotics:</span> Used to treat H. pylori infection.',
         },
         {
           description:
-            "H2 Receptor Blockers: Reduce acid production to help manage symptoms.",
+            '<span class="font-semibold text-hciSecondary">Antacids:</span> Provide quick relief from stomach pain by neutralizing acid.',
+        },
+        {
+          description:
+            '<span class="font-semibold text-hciSecondary">H2 Receptor Blockers:</span> Reduce acid production to help manage symptoms.',
         },
       ],
     },
@@ -197,32 +194,32 @@ const data = {
     {
       category: "",
       description:
-        "Abdominal Pain: Burning or dull ache, usually located in the upper abdomen, often worsening after meals.",
-      bgColor: "bg-hciPrimary text-white",
+        '<span class="font-semibold">Abdominal Pain:</span> Burning or dull ache, usually located in the upper abdomen, often worsening after meals.',
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        "Nausea or Vomiting: May include vomiting blood in severe cases.",
-      bgColor: "bg-hciPrimary text-white",
+        '<span class="font-semibold">Nausea or Vomiting:</span> May include vomiting blood in severe cases.',
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        "Bloating and Indigestion: Discomfort and a feeling of fullness after eating.",
-      bgColor: "bg-hciPrimary text-white",
+        '<span class="font-semibold">Bloating and Indigestion:</span> Discomfort and a feeling of fullness after eating.',
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        "Weight Loss: Due to loss of appetite or fear of eating because of pain.",
-      bgColor: "bg-hciPrimary text-white",
+        '<span class="font-semibold">Weight Loss:</span> Due to loss of appetite or fear of eating because of pain.',
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        "Black or Tarry Stools: A sign of bleeding in the digestive tract.",
-      bgColor: "bg-hciPrimary text-white",
+        '<span class="font-semibold">Black or Tarry Stools:</span> A sign of bleeding in the digestive tract.',
+      bgColor: 'bg-hciPrimary text-white',
     },
   ],
 
@@ -230,25 +227,25 @@ const data = {
     {
       category: "",
       description:
-        "Medical History and Symptoms: Healthcare professionals will assess symptoms, medication use, and lifestyle factors.",
-      bgColor: "bg-hciSecondary text-white",
+        '<span class="font-semibold">Medical History and Symptoms:</span> Healthcare professionals will assess symptoms, medication use, and lifestyle factors.',
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
-      description: `Endoscopy: A small camera is inserted through the mouth to visually examine the stomach lining and take tissue samples if necessary.`,
-      bgColor: "bg-hciSecondary text-white",
-    },
-    {
-      category: "",
-      description:
-        "H. pylori Testing: Blood, stool, or breath tests can confirm the presence of the H. pylori infection.",
-      bgColor: "bg-hciSecondary text-white",
+      category: '',
+      description: `<span class="font-semibold">Endoscopy:</span> A small camera is inserted through the mouth to visually examine the stomach lining and take tissue samples if necessary.`,
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: "",
       description:
-        "Imaging Tests: In some cases, X-rays or CT scans may be used to detect perforation or obstruction.",
-      bgColor: "bg-hciSecondary text-white",
+        '<span class="font-semibold">H. pylori Testing:</span> Blood, stool, or breath tests can confirm the presence of the H. pylori infection.',
+      bgColor: 'bg-hciSecondary text-white',
+    },
+    {
+      category: "",
+      description:
+        '<span class="font-semibold">Imaging Tests:</span> In some cases, X-rays or CT scans may be used to detect perforation or obstruction.',
+      bgColor: 'bg-hciSecondary text-white',
     },
   ],
 };
@@ -267,16 +264,14 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <p
-          dangerouslySetInnerHTML={{ __html: data.description }}
-          className="text-start font-light"
-        />
+        <H1 title={data.title} />
+        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2
-          text="Types of Gastric Ulcers"
-          className="font-semibold mb-4 text-center"
+          title="Types of Gastric Ulcers"
+          className="font-medium mb-4 text-center text-2xl"
         />
+
         <div className="mb-8">
           <DataLists
             divClass="grid grid-cols-2 gap-4"
@@ -287,64 +282,9 @@ function GeneralSurgery() {
             // boxClass="grid grid-cols-2"
           />
         </div>
-        {/* <div className="grid lg:grid-cols-2 gap-4">
-          <div className="space-y-4">
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Oesophageal Cancer (Ca Oesophagus)
-              </span>
-              <br />
-              Affects the oesophagus, the tube connecting the throat to the
-              stomach
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Stomach Cancer (Ca Stomach)
-              </span>
-              <br />
-              Also known as gastric cancer, originating from the stomach lining.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Colon Cancer (Ca Colon)
-              </span>
-              <br />
-              Develops in the colon, the initial part of the large intestine.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Rectal Cancer (Ca Rectum)
-              </span>
-              <br />
-              Forms in the rectum, the lower part of the large intestine before
-              the anus.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Gallbladder Cancer (Ca Gallbladder)
-              </span>
-              <br />
-              Begins in the gallbladder, a small organ beneath the liver that
-              stores bile.
-            </p>
-            <p className="font-light">
-              <span className="font-semibold text-xl text-hciPrimary">
-                Pancreatic Cancer (Ca Pancreas)
-              </span>
-              <br />
-              Originates in the pancreas, an organ involved in digestion and
-              hormone production.
-            </p>
-          </div>
-          <div>
-            <img src="/gastroenterology/digestive-system.png" alt="" />
-          </div>
-        </div> */}
-        <H2 title="Causes" className="font-semibold mb-4 text-center" />
-        {/* <p className="font-light">
-          While the exact cause of gallstones isn’t fully understood, several
-          factors may increase the risk:
-        </p> */}
+       
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl pt-12" />
+        
         <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
@@ -355,6 +295,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
+        <KnowMore title={data.title} />
 
         <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div className="space-y-4">
@@ -362,32 +303,36 @@ function GeneralSurgery() {
               title="Symptoms"
               // text="Gallstones may not always cause symptoms, but when they obstruct the bile ducts, they can trigger noticeable discomfort, including:"
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl py-4"
+              titleCss="text-black font-medium text-center text-2xl py-4"
               header=""
               data={data.symptoms}
               myclass="grid grid-cols-2"
             />
             <KnowMore title={data.title} />
           </div>
-          <div>
+          <div className="space-y-4">
             <DataBoxes
               title="Diagnosis"
               // text="Proper diagnosis is crucial to determine the right treatment plan. Healthcare providers may use the following methods:"
               header=""
               textCss="font-light py-4"
-              titleCss="text-black font-semibold text-center text-xl py-4"
+              titleCss="text-black font-medium text-center text-2xl py-4"
               data={data.diagnosis}
               myclass="grid grid-cols-2"
             />
+            <IssuesLinks head={data.title} />
           </div>
         </div>
 
         <div>
-          <H2 text="Treatment" className="font-semibold mb-4 text-center" />
-          <p className="font-light py-4">
+          <H2
+            title="Treatment"
+            className="font-medium mb-4 text-center text-2xl"
+          />
+          {/* <p className="font-light py-4">
             The treatment approach depends on the severity of the symptoms and
             the size or location of the stones. Options include:
-          </p>
+          </p> */}
           <div className="mb-8">
             <DataLists
               divClass="grid grid-cols-1 gap-4"
@@ -399,60 +344,7 @@ function GeneralSurgery() {
               // boxClass="grid grid-cols-2"
             />
           </div>
-          {/* <H2
-            text="Lifestyle Tips to Prevent Gallbladder Stones"
-            className="font-semibold mb-4 text-center"
-          /> */}
-          {/* <p className="font-light">
-            While surgery can effectively address existing stones, adopting
-            healthy habits can reduce the risk of developing them:
-          </p> */}
-          {/* <ul className="list-disc list-inside py-4 space-y-2 font-light">
-            <li>
-              Maintain a Healthy Weight: Gradual weight management helps prevent
-              changes in bile composition.
-            </li>
-            <li>
-              Eat a Balanced Diet: Opt for fibre-rich foods like fruits,
-              vegetables, and whole grains. Avoid excessive intake of fatty and
-              fried foods.
-            </li>
-            <li>
-              Stay Hydrated: Drinking plenty of water helps keep bile flowing
-              smoothly.
-            </li>
-            <li>
-              Exercise Regularly: Physical activity promotes healthy digestion
-              and overall well-being.
-            </li>
-            <li>
-              Avoid Crash Diets: Losing weight too quickly can increase the risk
-              of gallstones.
-            </li>
-          </ul> */}
-          {/* <DataLists
-            // desc={data.complications[0].heading}
-            data={data.complications}
-          /> */}
-
-          {/* <H2
-            text="Recovery and Post-Treatment Care"
-            textClass="text-2xl font-semibold mb-4 text-center"
-          />
-          <p className="font-light">
-            After treatment, proper care is essential to ensure a smooth
-            recovery and prevent future problems:
-          </p> */}
-          {/* <div className="mb-8">
-            <DataLists
-              divClass="grid grid-cols-1 gap-4"
-              // key={index}
-              // desc={data.complications[0].description}
-              data={data.data_1}
-              ulClass="list-none list-outside"
-              // boxClass="grid grid-cols-2"
-            />
-          </div> */}
+          
         </div>
 
         <Conclusion data={footerData} />
