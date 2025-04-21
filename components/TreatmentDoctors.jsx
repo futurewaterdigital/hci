@@ -156,9 +156,10 @@ const Partners = ({ pathname, paramSlug }) => {
                 </p>
                
               </div>
-              <div className="mt-2 flex items-center gap-4">
-                <span className="text-sm text-gray-600 font-semibold">
-                  {doctor.reviews}
+              <div className="mt-2 flex items-center gap-2">
+                <span className="text-sm text-gray-600 font-semibold flex items-center mt-1">
+                  
+                  {doctor.rating}
                 </span> 
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (

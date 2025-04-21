@@ -25,7 +25,7 @@ export default function DoctorsPage() {
         if (!response.ok) throw new Error('Failed to fetch doctor');
 
         const data = await response.json();
-
+        console.log(data);
         // Redirect if not featured or not verified
         if (!data.isFeatured || !data.isVerified) {
           router.push('/doctors');
@@ -116,8 +116,32 @@ export default function DoctorsPage() {
               <strong className='text-hciSecondary'>Years of Experience</strong><br />
               <span className='font-light text-lg'>{doctors.experience}</span>
             </p>
+            
+            
+            {/* temparory rating */}
 
-            {reviews.total > 0 && (
+             {doctors.rating > 0 && (
+              <div className="flex items-center mt-2">
+                <div className="flex ml-0 space-x-2"><strong className='text-xl font-medium '>{doctors.rating}</strong>
+                  <div className='flex'>
+                  {Array.from({ length: 5 }).map((_, index) => {
+                    if (index < Math.floor(doctors.rating)) {
+                      return <IoStarSharp key={index} className='text-hciSecondary text-2xl' />;
+                    }
+                    if (index < Math.floor(doctors.rating) + 0.5 && doctors.rating % 1 >= 0.5) {
+                      return <IoStarHalfSharp key={index} className='text-hciSecondary text-2xl' />;
+                    }
+                    return <IoStarOutline key={index} className='text-hciSecondary text-2xl' />;
+                  })}
+                    </div>
+                </div>
+                <span className="text-gray-600 ml-2 font-light">({doctors.reviews} reviews)</span>
+              </div>
+            )}
+
+            {/* temparory rating end here */}
+
+            {/* {reviews.total > 0 && (
               <div className="flex items-center mt-2">
                 <div className="flex ml-2">
                   {Array.from({ length: 5 }).map((_, index) => {
@@ -132,7 +156,7 @@ export default function DoctorsPage() {
                 </div>
                 <span className="text-gray-600 ml-2 font-light">({reviews.total} reviews)</span>
               </div>
-            )}
+            )} */}
           </div>
 
           <div className="card mt-8 md:mt-0 md:ml-6 flex flex-col items-center h-[360px] justify-between">
