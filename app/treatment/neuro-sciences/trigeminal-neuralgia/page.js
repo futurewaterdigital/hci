@@ -9,7 +9,7 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
-import IssuesLinks from '@/components/ui/IssuesLinks'
+// import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: 'Trigeminal Neuralgia',
   bannerImage: '/neuro-sciences/trigeminal-neuralgia.png',
