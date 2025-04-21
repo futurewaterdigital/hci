@@ -14,7 +14,7 @@ import IssuesLinks from "@/components/ui/IssuesLinks"
 
 const data = {
   title: "Spinal Disorders",
-  bannerImage: "/orthopaedics/spinal.png",
+  bannerImage: "/orthopaedics/spinal.jpeg",
   description: `Spinal disorders encompass a range of conditions that affect the spine, including the vertebrae, intervertebral discs, and surrounding tissues. These disorders can lead to significant pain, discomfort, and functional limitations, impacting individuals' quality of life. In India, spinal disorders are a major health concern, with both conservative and surgical treatment options available to help manage symptoms and improve function.`,
   overview: ``,
 
