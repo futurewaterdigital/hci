@@ -226,7 +226,7 @@ function JointReplacementSurgery() {
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              <IssuesLink title={title} />
+              <IssuesLink head={title} />
             </div>
           </div>
         </div>

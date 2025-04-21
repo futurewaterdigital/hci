@@ -76,15 +76,15 @@ const data = {
   ],
 
   contact: {
-    title: "Contact Us Today",
-    head: "Contact HCI for Expert Urological Care",
+    title: 'Contact Us Today',
+    head: 'Contact HCI for Expert Urological Care',
     content:
-      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
+      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
   },
 
   conclusion: [
     {
-      header: "Conclusion",
+      header: 'Conclusion',
       paragraph: `
       In India, the management of pituitary tumours involves a multidisciplinary approach, including neurologists, endocrinologists, and neurosurgeons. Early detection and treatment are vital to prevent complications and improve patient outcomes. Regular monitoring and follow-ups are essential to manage any hormonal changes and assess for potential recurrence of the tumour. With advancements in diagnostic and therapeutic techniques, patients with pituitary tumours can expect improved quality of life and effective management of their condition.
           `,
@@ -126,7 +126,7 @@ const data = {
 
   diagnosis: [
     {
-      category: "",
+      category: '',
       description:
         'Medical History and Physical Examination: A thorough evaluation of symptoms and a physical exam to assess for signs of hormonal imbalance.',
       bgColor: 'bg-hciSecondary text-white',
@@ -137,7 +137,7 @@ const data = {
       bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "",
+      category: '',
       description:
         'Hormonal Testing: Blood tests are conducted to measure hormone levels and assess any imbalances.',
       bgColor: 'bg-hciSecondary text-white',
@@ -258,7 +258,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  );
+  )
 }
 
-export default GeneralSurgery;
+export default GeneralSurgery

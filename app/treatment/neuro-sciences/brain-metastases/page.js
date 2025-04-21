@@ -12,31 +12,31 @@ import TextComponent from '@/components/Common/TextComponent'
 import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
-  title: "Brain Metastases",
-  bannerImage: "/neuro-sciences/brain-metastases.png",
+  title: 'Brain Metastases',
+  bannerImage: '/neuro-sciences/brain-metastases.png',
   description: `Brain metastases occurs when cancer cells migrate from their primary site to the brain. While any cancer has the potential to spread to the brain, the most common culprits include lung, breast, colon, kidney cancers, and melanoma. These metastatic brain tumours may appear as a single growth or multiple tumours, and as they expand, they place pressure on surrounding brain tissue, potentially impairing its function. This pressure can lead to symptoms such as headaches, personality changes, memory loss, and seizures.`,
   overview: `Treatments for brain metastases often involve a combination of surgery, radiotherapy, chemotherapy, immunotherapy, or other specialized interventions aimed at reducing pain and alleviating symptoms caused by the cancer.`,
 
   section_1: [
     {
-      title: "Neurological Examination:",
+      title: 'Neurological Examination:',
       description: `
 A doctor will conduct a thorough examination of the patient&apos;s nervous system, testing vision, hearing, reflexes, balance, coordination, strength, and memory. This helps identify the areas of the brain that may be affected by metastases.`,
     },
     {
-      title: "Imaging Studies:",
+      title: 'Imaging Studies:',
       description: `
      ⦁   Magnetic Resonance Imaging (MRI): Provides detailed images of the brain to detect abnormalities.
      ⦁   Computed Tomography (CT) Scan: A CT scan may be used if an MRI is not available or as an additional tool. It can detect tumours, bleeding, and swelling in the brain.
      ⦁   Positron Emission Tomography (PET) Scan: A PET scan helps identify areas of increased metabolic activity, which may indicate tumour growth.`,
     },
     {
-      title: "Biopsy:",
+      title: 'Biopsy:',
       description: `
 In cases where the origin of the tumour is unclear, a biopsy may be performed. This involves removing a small tissue sample for microscopic examination. It can be done via a craniotomy or stereotactic needle biopsy.`,
     },
     {
-      title: "Lumbar Puncture (Spinal Tap):",
+      title: 'Lumbar Puncture (Spinal Tap):',
       description: `
 In some cases, a spinal tap may be performed to collect cerebrospinal fluid (CSF) for analysis. This can help determine whether cancer cells have spread to the brain's lining or the spinal cord.`,
     },
@@ -44,32 +44,32 @@ In some cases, a spinal tap may be performed to collect cerebrospinal fluid (CSF
 
   complications: [
     {
-      heading: "Surgery:",
+      heading: 'Surgery:',
       description: `Surgery is often recommended for patients with a limited number of brain metastases, particularly if they are causing significant symptoms or if the primary cancer is well-controlled. Surgery is used to`,
       aneurysmSymptoms: [
         {
-          description: "Remove the tumour",
+          description: 'Remove the tumour',
         },
         {
-          description: "Relieve pressure on the brain",
+          description: 'Relieve pressure on the brain',
         },
         {
-          description: "Obtain tissue for biopsy",
+          description: 'Obtain tissue for biopsy',
         },
         {
           description:
-            "Post-Surgical Care: Surgery may be followed by radiation therapy to prevent recurrence.",
+            'Post-Surgical Care: Surgery may be followed by radiation therapy to prevent recurrence.',
         },
       ],
     },
 
     {
-      heading: "Radiation Therapy:",
+      heading: 'Radiation Therapy:',
       description: `In addition to stereotactic radiation therapy (SRT), other forms of radiation are commonly used`,
       aneurysmSymptoms: [
         {
           description:
-            "Whole-brain Radiation Therapy (WBRT): Used when there are multiple metastases, WBRT treats the entire brain to target tumours that may not be visible on imaging.",
+            'Whole-brain Radiation Therapy (WBRT): Used when there are multiple metastases, WBRT treats the entire brain to target tumours that may not be visible on imaging.',
         },
         {
           description: `Gamma Knife Radiosurgery: A type of precise radiation therapy that delivers high-dose radiation to small, specific areas of the brain, causing minimal damage to surrounding healthy tissue.`,
@@ -77,80 +77,80 @@ In some cases, a spinal tap may be performed to collect cerebrospinal fluid (CSF
       ],
     },
     {
-      heading: "Chemotherapy:",
+      heading: 'Chemotherapy:',
       aneurysmSymptoms: [
         {
           description:
-            "Traditional chemotherapy is less effective for brain metastases compared to other cancers because many chemotherapy drugs have difficulty crossing the blood-brain barrier. However, certain chemotherapy agents may still be used depending on the type of cancer. Newer chemotherapy options may include targeted drugs designed to penetrate the blood-brain barrier.",
+            'Traditional chemotherapy is less effective for brain metastases compared to other cancers because many chemotherapy drugs have difficulty crossing the blood-brain barrier. However, certain chemotherapy agents may still be used depending on the type of cancer. Newer chemotherapy options may include targeted drugs designed to penetrate the blood-brain barrier.',
         },
       ],
     },
     {
-      heading: "Immunotherapy:",
+      heading: 'Immunotherapy:',
       aneurysmSymptoms: [
         {
           description:
-            "Immunotherapy drugs boost the body&apos;s immune system to help fight cancer. These treatments are especially useful for cancers like melanoma and lung cancer that have metastasised to the brain. Immune checkpoint inhibitors and CAR T-cell therapies are examples of immunotherapy used in brain metastases treatment.",
+            'Immunotherapy drugs boost the body&apos;s immune system to help fight cancer. These treatments are especially useful for cancers like melanoma and lung cancer that have metastasised to the brain. Immune checkpoint inhibitors and CAR T-cell therapies are examples of immunotherapy used in brain metastases treatment.',
         },
       ],
     },
     {
-      heading: "Targeted Therapy:",
+      heading: 'Targeted Therapy:',
       aneurysmSymptoms: [
         {
           description:
-            "Targeted therapies use drugs to specifically attack cancer cells based on their genetic makeup. This treatment is more effective for certain types of cancer, such as HER2-positive breast cancer and non-small cell lung cancer, that have metastasised to the brain.",
+            'Targeted therapies use drugs to specifically attack cancer cells based on their genetic makeup. This treatment is more effective for certain types of cancer, such as HER2-positive breast cancer and non-small cell lung cancer, that have metastasised to the brain.',
         },
       ],
     },
     {
-      heading: "Stereotactic Radiation Therapy (SRT):",
+      heading: 'Stereotactic Radiation Therapy (SRT):',
       aneurysmSymptoms: [
         {
           description:
-            "This treatment involves directing numerous beams of radiation at the tumour cells. While each individual beam is relatively weak, the point where they converge receives a powerful dose of radiation, effectively targeting and killing the cancer cells.",
+            'This treatment involves directing numerous beams of radiation at the tumour cells. While each individual beam is relatively weak, the point where they converge receives a powerful dose of radiation, effectively targeting and killing the cancer cells.',
         },
       ],
     },
     {
-      heading: "Steroid Therapy:",
+      heading: 'Steroid Therapy:',
       aneurysmSymptoms: [
         {
           description:
-            "Steroids, such as dexamethasone, may be prescribed to reduce brain swelling and alleviate symptoms like headaches and neurological deficits.",
+            'Steroids, such as dexamethasone, may be prescribed to reduce brain swelling and alleviate symptoms like headaches and neurological deficits.',
         },
       ],
     },
     {
-      heading: "Symptom Management:",
+      heading: 'Symptom Management:',
       aneurysmSymptoms: [
         {
           description:
-            "Alongside cancer treatment, symptom management is a crucial part of caring for patients with brain metastases. Anticonvulsants may be used to prevent seizures, and pain relief medications help control headaches and discomfort.",
+            'Alongside cancer treatment, symptom management is a crucial part of caring for patients with brain metastases. Anticonvulsants may be used to prevent seizures, and pain relief medications help control headaches and discomfort.',
         },
       ],
     },
     {
-      heading: "Palliative Care:",
+      heading: 'Palliative Care:',
       aneurysmSymptoms: [
         {
           description:
-            "Palliative care focuses on improving the quality of life for patients with advanced cancer, managing pain and other symptoms, and providing emotional and psychological support for both patients and their families.",
+            'Palliative care focuses on improving the quality of life for patients with advanced cancer, managing pain and other symptoms, and providing emotional and psychological support for both patients and their families.',
         },
       ],
     },
   ],
 
   contact: {
-    title: "Contact Us Today",
-    head: "Contact HCI for Expert Urological Care",
+    title: 'Contact Us Today',
+    head: 'Contact HCI for Expert Urological Care',
     content:
-      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
+      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
   },
 
   conclusion: [
     {
-      header: "Conclusion",
+      header: 'Conclusion',
       paragraph: `
       Brain metastases pose a significant challenge in cancer management, requiring timely diagnosis and a comprehensive treatment approach. Recognising symptoms early is vital for effective intervention, and management often includes surgery, radiation therapy, chemotherapy, immunotherapy, and targeted treatments. This multidisciplinary strategy not only aims to control metastatic tumours but also to alleviate symptoms and improve patients’ quality of life. With ongoing advancements in medical science, personalized treatment options continue to emerge, offering hope for better outcomes and holistic care for those affected by brain metastases.
           `,
@@ -159,54 +159,54 @@ In some cases, a spinal tap may be performed to collect cerebrospinal fluid (CSF
 
   symptoms: [
     {
-      category: "",
-      description: "Swelling or a noticeable lump beneath the skin",
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: 'Swelling or a noticeable lump beneath the skin',
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: "Pain or discomfort at the site of the tumour",
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: 'Pain or discomfort at the site of the tumour',
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: "Tingling or numbness in the affected area",
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: 'Tingling or numbness in the affected area',
+      bgColor: 'bg-hciPrimary text-white',
     },
     {
-      category: "",
-      description: "Muscle weakness or loss of function",
-      bgColor: "bg-hciPrimary text-white",
+      category: '',
+      description: 'Muscle weakness or loss of function',
+      bgColor: 'bg-hciPrimary text-white',
     },
   ],
 
   diagnosis: [
     {
-      category: "Magnetic Resonance Imaging (MRI):",
+      category: 'Magnetic Resonance Imaging (MRI):',
       description:
-        "This imaging technique provides detailed views of the nerves and surrounding tissues, helping to identify tumours.",
-      bgColor: "bg-hciSecondary text-white",
+        'This imaging technique provides detailed views of the nerves and surrounding tissues, helping to identify tumours.',
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "Computed Tomography (CT) Scan:",
+      category: 'Computed Tomography (CT) Scan:',
       description:
-        "This imaging technique provides detailed views of the nerves and surrounding tissues, helping to identify tumours.",
-      bgColor: "bg-hciSecondary text-white",
+        'This imaging technique provides detailed views of the nerves and surrounding tissues, helping to identify tumours.',
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "Computed Tomography (CT) Scan:",
+      category: 'Computed Tomography (CT) Scan:',
       description:
-        "A CT scan may be used to assess the size and location of a tumour.",
-      bgColor: "bg-hciSecondary text-white",
+        'A CT scan may be used to assess the size and location of a tumour.',
+      bgColor: 'bg-hciSecondary text-white',
     },
     {
-      category: "Biopsy:",
+      category: 'Biopsy:',
       description:
-        "In some cases, a sample of the tumour tissue may be taken for analysis to confirm its benign nature.",
-      bgColor: "bg-hciSecondary text-white",
+        'In some cases, a sample of the tumour tissue may be taken for analysis to confirm its benign nature.',
+      bgColor: 'bg-hciSecondary text-white',
     },
   ],
-};
+}
 
 function GeneralSurgery() {
   return (
@@ -371,7 +371,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  );
+  )
 }
 
-export default GeneralSurgery;
+export default GeneralSurgery
