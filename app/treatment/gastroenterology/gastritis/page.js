@@ -1,119 +1,119 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Gastritis',
-  bannerImage: '/gastroenterology/gastritis.png',
+  title: "Gastritis",
+  bannerImage: "/gastroenterology/gastritis.png",
   description: `Gastritis is an inflammation of the stomach lining that can occur suddenly (acute gastritis) or gradually (chronic gastritis). It may result from various factors, including infection, excessive alcohol consumption, prolonged use of certain medications (such as NSAIDs), or autoimmune disorders. Symptoms can range from mild discomfort to severe abdominal pain and can significantly affect quality of life.`,
-  overview: '',
+  overview: "",
 
   section_1: [
     {
-      title: 'Infections:',
+      title: "Infections:",
       description:
-        'The bacterium Helicobacter pylori is a common cause of chronic gastritis.',
+        "The bacterium Helicobacter pylori is a common cause of chronic gastritis.",
     },
     {
-      title: 'Stress',
+      title: "Stress",
       description:
-        'Physical or emotional stress may increase the risk of developing gastritis.',
+        "Physical or emotional stress may increase the risk of developing gastritis.",
     },
     {
-      title: 'Alcohol Consumption',
+      title: "Alcohol Consumption",
       description:
-        'Excessive alcohol intake can lead to inflammation of the stomach lining.',
+        "Excessive alcohol intake can lead to inflammation of the stomach lining.",
     },
     {
-      title: 'Medications',
+      title: "Medications",
       description:
-        'Long-term use of nonsteroidal anti-inflammatory drugs (NSAIDs) can irritate the stomach lining.',
+        "Long-term use of nonsteroidal anti-inflammatory drugs (NSAIDs) can irritate the stomach lining.",
     },
     {
-      title: 'Autoimmune Conditions',
+      title: "Autoimmune Conditions",
       description:
-        'Conditions where the immune system attacks the stomach lining can lead to atrophic gastritis.',
+        "Conditions where the immune system attacks the stomach lining can lead to atrophic gastritis.",
     },
   ],
 
   data_1: [
     {
-      heading: 'Acute Gastritis:',
-      description: '',
+      heading: "Acute Gastritis:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Description: Sudden inflammation of the stomach lining, often caused by irritants like alcohol, medications, or infections.',
+            "Description: Sudden inflammation of the stomach lining, often caused by irritants like alcohol, medications, or infections.",
         },
         {
           description:
-            'Symptoms: Rapid onset of symptoms such as nausea, vomiting, and upper abdominal pain.',
+            "Symptoms: Rapid onset of symptoms such as nausea, vomiting, and upper abdominal pain.",
         },
         {
           description:
-            'Treatment: Usually involves avoiding irritants and using medications to reduce inflammation and acid production.',
+            "Treatment: Usually involves avoiding irritants and using medications to reduce inflammation and acid production.",
         },
       ],
     },
     {
-      heading: 'Chronic Gastritis:',
-      description: '',
+      heading: "Chronic Gastritis:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Description: Long-term inflammation that can lead to changes in the stomach lining and may result from persistent infections, autoimmune disorders, or chronic irritation.',
+            "Description: Long-term inflammation that can lead to changes in the stomach lining and may result from persistent infections, autoimmune disorders, or chronic irritation.",
         },
         {
           description:
-            'Symptoms: Symptoms can be less pronounced than acute gastritis, but may include abdominal discomfort, bloating, and indigestion.',
+            "Symptoms: Symptoms can be less pronounced than acute gastritis, but may include abdominal discomfort, bloating, and indigestion.",
         },
         {
           description:
-            'Treatment: Focuses on treating the underlying cause, lifestyle changes, and medications to manage symptoms.',
+            "Treatment: Focuses on treating the underlying cause, lifestyle changes, and medications to manage symptoms.",
         },
       ],
     },
     {
-      heading: 'Erosive Gastritis:',
-      description: '',
+      heading: "Erosive Gastritis:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Description: Characterized by the erosion of the stomach lining, often due to prolonged NSAID use or heavy alcohol consumption.',
+            "Description: Characterized by the erosion of the stomach lining, often due to prolonged NSAID use or heavy alcohol consumption.",
         },
         {
           description:
-            'Symptoms: Can cause severe pain and bleeding in some cases.',
+            "Symptoms: Can cause severe pain and bleeding in some cases.",
         },
         {
           description:
-            'Treatment: May require more aggressive management, including avoiding irritants and medications to heal the stomach lining.',
+            "Treatment: May require more aggressive management, including avoiding irritants and medications to heal the stomach lining.",
         },
       ],
     },
     {
-      heading: 'Atrophic Gastritis:',
-      description: '',
+      heading: "Atrophic Gastritis:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Description: A form of chronic gastritis where the stomach lining thins, which may lead to a decrease in stomach acid production and digestive issues.',
+            "Description: A form of chronic gastritis where the stomach lining thins, which may lead to a decrease in stomach acid production and digestive issues.",
         },
         {
           description:
-            'Symptoms: Can lead to symptoms of nutrient deficiencies and is often associated with autoimmune conditions.',
+            "Symptoms: Can lead to symptoms of nutrient deficiencies and is often associated with autoimmune conditions.",
         },
         {
           description:
-            'Treatment: Focuses on managing symptoms and preventing complications, such as deficiencies in vitamin B12.',
+            "Treatment: Focuses on managing symptoms and preventing complications, such as deficiencies in vitamin B12.",
         },
       ],
     },
@@ -121,56 +121,56 @@ const data = {
 
   complications: [
     {
-      heading: 'Lifestyle Modifications:',
-      description: '',
+      heading: "Lifestyle Modifications:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Recommendations often include dietary changes, such as avoiding spicy or acidic foods, reducing alcohol intake, and eating smaller, more frequent meals.',
+            "Recommendations often include dietary changes, such as avoiding spicy or acidic foods, reducing alcohol intake, and eating smaller, more frequent meals.",
         },
       ],
     },
 
     {
-      heading: 'Medications:',
-      description: '',
+      heading: "Medications:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Antacids: Help neutralize stomach acid for relief from pain.',
+            "Antacids: Help neutralize stomach acid for relief from pain.",
         },
         {
           description:
-            'Proton Pump Inhibitors (PPIs): Reduce acid production and promote healing of the stomach lining.',
+            "Proton Pump Inhibitors (PPIs): Reduce acid production and promote healing of the stomach lining.",
         },
         {
           description:
-            'Antibiotics: If H. pylori is present, antibiotics may be prescribed to eradicate the infection.',
+            "Antibiotics: If H. pylori is present, antibiotics may be prescribed to eradicate the infection.",
         },
       ],
     },
     {
-      heading: 'Stress Management:',
-      description: '',
+      heading: "Stress Management:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Techniques such as relaxation exercises, yoga, or therapy may help reduce symptoms associated with stress-related gastritis.',
+            "Techniques such as relaxation exercises, yoga, or therapy may help reduce symptoms associated with stress-related gastritis.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Gastritis is a common condition that can lead to discomfort and digestive issues if not addressed. Understanding the types, causes, and treatment options is crucial for effective management. If you experience symptoms of gastritis, consulting a healthcare professional is essential for appropriate diagnosis and care. Early intervention can lead to better outcomes and improved quality of life.
           `,
@@ -179,69 +179,72 @@ const data = {
 
   symptoms: [
     {
-      category: 'Abdominal Pain:',
+      category: "Abdominal Pain:",
       description:
-        'A common symptom, often described as a burning sensation or discomfort in the upper abdomen.',
-      bgColor: 'bg-hciPrimary text-white',
+        "A common symptom, often described as a burning sensation or discomfort in the upper abdomen.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Nausea or Vomiting:',
-      description: 'Can occur, sometimes accompanied by a loss of appetite.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Nausea or Vomiting:",
+      description: "Can occur, sometimes accompanied by a loss of appetite.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Bloating and Indigestion:',
+      category: "Bloating and Indigestion:",
       description:
-        'Feelings of fullness and discomfort after eating are common.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Feelings of fullness and discomfort after eating are common.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Loss of Appetite:',
-      description: 'May lead to unintended weight loss in some individuals.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "Loss of Appetite:",
+      description: "May lead to unintended weight loss in some individuals.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: 'Black or Tarry Stools:',
+      category: "Black or Tarry Stools:",
       description:
-        'Can indicate bleeding in the stomach and should prompt immediate medical attention.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Can indicate bleeding in the stomach and should prompt immediate medical attention.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Medical History and Symptoms:',
+      category: "Medical History and Symptoms:",
       description:
-        'Understanding symptoms and potential risk factors, such as medication use or alcohol consumption.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Understanding symptoms and potential risk factors, such as medication use or alcohol consumption.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Physical Examination:',
+      category: "Physical Examination:",
       description: `A healthcare professional may conduct a physical examination to assess for abdominal tenderness.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Endoscopy:',
+      category: "Endoscopy:",
       description:
-        'In some cases, an upper endoscopy may be performed to visualize the stomach lining and take biopsies for further analysis.',
-      bgColor: 'bg-hciSecondary text-white',
+        "In some cases, an upper endoscopy may be performed to visualize the stomach lining and take biopsies for further analysis.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'H. pylori Testing:',
+      category: "H. pylori Testing:",
       description:
-        'Breath, blood, or stool tests can help identify an H. pylori infection.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Breath, blood, or stool tests can help identify an H. pylori infection.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <p
+          dangerouslySetInnerHTML={{ __html: data.description }}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         <H2
           text="Types of Gastric Ulcers"
@@ -333,7 +336,6 @@ function GeneralSurgery() {
               textCss="font-light py-4"
               titleCss="text-black font-semibold text-center text-xl py-4"
               header=""
-            
               data={data.symptoms}
               myclass="grid grid-cols-2"
             />
@@ -353,10 +355,7 @@ function GeneralSurgery() {
         </div>
 
         <div>
-          <H2
-            text="Treatment"
-            className="font-semibold mb-4 text-center"
-          />
+          <H2 text="Treatment" className="font-semibold mb-4 text-center" />
           <p className="font-light">
             The treatment approach for gastritis depends on the underlying cause
             and severity of symptoms
@@ -430,7 +429,7 @@ function GeneralSurgery() {
         <Conclusion
           data={[
             {
-              header: 'Conclusion',
+              header: "Conclusion",
               paragraph: data.conclusion[0].paragraph,
             },
           ]}
@@ -439,7 +438,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

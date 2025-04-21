@@ -1,85 +1,85 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
 
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Acetabular Fractures',
-  bannerImage: '/orthopaedics/acetabular-fractures.png',
+  title: "Acetabular Fractures",
+  bannerImage: "/orthopaedics/acetabular-fractures.png",
   description: `Acetabular fractures refer to breaks in the socket of the hip joint, known as the acetabulum. This joint is part of the pelvis and interacts with the femoral head (upper thigh bone) to form the "ball-and-socket" structure that allows smooth movement. These fractures are less common than hip fractures involving the femur but can severely impair mobility and joint function. Due to the structural complexity of the hip, acetabular fractures often require surgical intervention and may lead to complications such as arthritis if not managed correctly.`,
   overview: ``,
 
   causes: [
     {
-      title: '',
-      description: 'Motor vehicle accidents',
+      title: "",
+      description: "Motor vehicle accidents",
     },
     {
-      title: '',
-      description: 'Falls from significant heights',
+      title: "",
+      description: "Falls from significant heights",
     },
     {
-      title: '',
-      description: 'Direct impact to the hip area',
+      title: "",
+      description: "Direct impact to the hip area",
     },
   ],
 
   complications: [
     {
-      heading: 'Non-Surgical Treatment',
+      heading: "Non-Surgical Treatment",
       aneurysmSymptoms: [
         {
           description:
-            'Walking aids (crutches or walkers) to avoid weight-bearing on the affected leg for 8 to 12 weeks.',
+            "Walking aids (crutches or walkers) to avoid weight-bearing on the affected leg for 8 to 12 weeks.",
         },
         {
           description:
-            'Positioning devices like abduction pillows or knee immobilizers to restrict hip movement.',
+            "Positioning devices like abduction pillows or knee immobilizers to restrict hip movement.",
         },
         {
           description:
-            'Pain management through non-steroidal anti-inflammatory drugs (NSAIDs) or prescribed medications.',
+            "Pain management through non-steroidal anti-inflammatory drugs (NSAIDs) or prescribed medications.",
         },
         {
           description:
-            'Blood thinners to reduce the risk of blood clots, especially during the recovery period.',
+            "Blood thinners to reduce the risk of blood clots, especially during the recovery period.",
         },
       ],
     },
 
     {
-      heading: 'Surgical Treatment',
+      heading: "Surgical Treatment",
       aneurysmSymptoms: [
         {
           description:
-            'Open Reduction and Internal Fixation (ORIF): Bone fragments are repositioned and held together with plates and screws to promote healing.',
+            "Open Reduction and Internal Fixation (ORIF): Bone fragments are repositioned and held together with plates and screws to promote healing.",
         },
         {
           description:
-            'Total Hip Replacement: If the acetabulum or cartilage is too damaged to repair, the joint may be replaced with artificial components.',
+            "Total Hip Replacement: If the acetabulum or cartilage is too damaged to repair, the joint may be replaced with artificial components.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Spinal disorders can significantly impact an individual's daily life and overall health. Early diagnosis and a comprehensive treatment plan are crucial for effective management and improving quality of life. With advancements in medical technology and rehabilitation strategies, many individuals with spinal disorders can achieve symptom relief and regain function, allowing them to return to their normal activities. Regular follow-up care and adherence to treatment recommendations are vital for optimizing recovery and preventing future complications.
           `,
@@ -88,98 +88,101 @@ const data = {
 
   symptoms: [
     {
-      category: '',
-      description: 'Severe hip pain that may intensify with movement.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Severe hip pain that may intensify with movement.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Swelling and bruising around the hip or pelvis area.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Swelling and bruising around the hip or pelvis area.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Restricted mobility, making it difficult or impossible to walk or stand.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Restricted mobility, making it difficult or impossible to walk or stand.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Numbness or tingling down the leg, indicating potential nerve involvement.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Numbness or tingling down the leg, indicating potential nerve involvement.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Weakness in the affected leg, especially if the sciatic nerve is compromised.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Weakness in the affected leg, especially if the sciatic nerve is compromised.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
-        'Physical examination to assess hip mobility, nerve function, and surrounding soft tissues.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Physical examination to assess hip mobility, nerve function, and surrounding soft tissues.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'X-ray imaging to identify the location of the fracture and whether bone fragments are displaced.',
-      bgColor: 'bg-hciSecondary text-white',
+        "X-ray imaging to identify the location of the fracture and whether bone fragments are displaced.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'CT scan (Computed Tomography) for detailed, cross-sectional imaging to evaluate the extent of the injury, including cartilage damage and other structural concerns.',
-      bgColor: 'bg-hciSecondary text-white',
+        "CT scan (Computed Tomography) for detailed, cross-sectional imaging to evaluate the extent of the injury, including cartilage damage and other structural concerns.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'MRI scans may be used if soft tissue or ligament damage is suspected.',
-      bgColor: 'bg-hciSecondary text-white',
+        "MRI scans may be used if soft tissue or ligament damage is suspected.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
 
   consideration: [
     {
-      title: 'Post-traumatic arthritis',
+      title: "Post-traumatic arthritis",
       description:
-        'Damage to the cartilage can cause wear and tear in the hip joint over time.',
+        "Damage to the cartilage can cause wear and tear in the hip joint over time.",
     },
     {
-      title: 'Blood clots',
+      title: "Blood clots",
       description:
-        'Limited mobility increases the risk of clot formation in the legs.',
+        "Limited mobility increases the risk of clot formation in the legs.",
     },
     {
-      title: 'Sciatic nerve injury',
+      title: "Sciatic nerve injury",
       description:
-        'Nerve damage can lead to “foot drop,” impairing the ability to lift the foot while walking.',
+        "Nerve damage can lead to “foot drop,” impairing the ability to lift the foot while walking.",
     },
     {
-      title: 'Infections',
+      title: "Infections",
       description:
-        'Infections may occur at the surgical site or deeper within the wound, often requiring further intervention.',
+        "Infections may occur at the surgical site or deeper within the wound, often requiring further intervention.",
     },
     {
-      title: 'Avascular necrosis (osteonecrosis):',
+      title: "Avascular necrosis (osteonecrosis):",
       description:
-        'Interrupted blood supply can cause bone tissue to die, leading to joint collapse.',
+        "Interrupted blood supply can cause bone tissue to die, leading to joint collapse.",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <p
+          dangerouslySetInnerHTML={{ __html: data.description }}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         <H2
           title="Causes of Acetabular Fractures"
@@ -249,11 +252,14 @@ function GeneralSurgery() {
         </div>
         <div className="space-y-8">
           <div>
-          <H2 title="When to Consider Robotic Knee Replacement?" className="text-center"/>
-          <p className="font-light text-center">
-            Consult a doctor if you experience:
+            <H2
+              title="When to Consider Robotic Knee Replacement?"
+              className="text-center"
+            />
+            <p className="font-light text-center">
+              Consult a doctor if you experience:
             </p>
-            </div>
+          </div>
           <div className="space-y-4">
             <div className="grid grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (
@@ -283,7 +289,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

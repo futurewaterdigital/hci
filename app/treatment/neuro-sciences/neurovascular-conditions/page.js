@@ -1,91 +1,91 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Neurovascular Conditions',
-  bannerImage: '/neuro-sciences/neurovascular-conditions.png',
+  title: "Neurovascular Conditions",
+  bannerImage: "/neuro-sciences/neurovascular-conditions.png",
   description: `Neurovascular conditions encompass a range of disorders that affect the blood vessels in the brain, leading to serious health implications. These conditions include strokes, aneurysms, and arteriovenous malformations (AVMs). In India, the prevalence of neurovascular disorders is increasing, making awareness and timely intervention crucial for effective management and recovery.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Hypertension',
+      title: "Hypertension",
       description:
-        'High blood pressure is a major risk factor for both strokes and aneurysms, contributing to the weakening of blood vessel walls.',
+        "High blood pressure is a major risk factor for both strokes and aneurysms, contributing to the weakening of blood vessel walls.",
     },
     {
-      title: 'Cardiac Conditions',
+      title: "Cardiac Conditions",
       description:
-        'Heart problems, such as atrial fibrillation, can lead to the formation of blood clots that may travel to the brain, resulting in a stroke.',
+        "Heart problems, such as atrial fibrillation, can lead to the formation of blood clots that may travel to the brain, resulting in a stroke.",
     },
     {
-      title: 'Genetic Factors',
+      title: "Genetic Factors",
       description:
-        'Some neurovascular conditions, such as AVMs and certain types of aneurysms, can have a hereditary component.',
+        "Some neurovascular conditions, such as AVMs and certain types of aneurysms, can have a hereditary component.",
     },
     {
-      title: 'Hypertension',
+      title: "Hypertension",
       description:
-        'High blood pressure is a major risk factor for both strokes and aneurysms, contributing to the weakening of blood vessel walls.',
+        "High blood pressure is a major risk factor for both strokes and aneurysms, contributing to the weakening of blood vessel walls.",
     },
     {
-      title: 'Lifestyle Factors',
+      title: "Lifestyle Factors",
       description:
-        'Poor diet, sedentary lifestyle, smoking, and excessive alcohol consumption can contribute to the development of neurovascular diseases.',
+        "Poor diet, sedentary lifestyle, smoking, and excessive alcohol consumption can contribute to the development of neurovascular diseases.",
     },
   ],
 
   complications: [
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Antiplatelet agents and anticoagulants may be prescribed to prevent blood clots. In some cases, medications to lower blood pressure and cholesterol are also necessary.',
+            "Antiplatelet agents and anticoagulants may be prescribed to prevent blood clots. In some cases, medications to lower blood pressure and cholesterol are also necessary.",
         },
       ],
     },
 
     {
-      heading: 'Surgery:',
-      description: 'Surgical options may include:',
+      heading: "Surgery:",
+      description: "Surgical options may include:",
       aneurysmSymptoms: [
         {
           description:
-            'Clipping: For aneurysms, a surgical procedure to place a clip on the neck of the aneurysm to prevent rupture.',
+            "Clipping: For aneurysms, a surgical procedure to place a clip on the neck of the aneurysm to prevent rupture.",
         },
         {
           description:
-            'Endovascular Coiling: A minimally invasive procedure where coils are inserted into an aneurysm to promote clotting and prevent blood flow.',
+            "Endovascular Coiling: A minimally invasive procedure where coils are inserted into an aneurysm to promote clotting and prevent blood flow.",
         },
         {
           description:
-            'AVM Resection: Surgical removal of arteriovenous malformations to prevent bleeding and restore normal blood flow.',
+            "AVM Resection: Surgical removal of arteriovenous malformations to prevent bleeding and restore normal blood flow.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Parkinson’s Disease and movement disorders are complex conditions that significantly affect a person’s daily life. India’s specialized treatment centers offer comprehensive care, from diagnosis to advanced treatments like DBS and medication management. Early diagnosis and a multi-disciplinary approach are crucial in effectively managing these disorders, helping patients maintain their independence and quality of life for as long as possible.
           `,
@@ -94,71 +94,71 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description:
-        'Sudden Weakness or Numbness: Often affecting one side of the body, particularly the face, arm, or leg.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Sudden Weakness or Numbness: Often affecting one side of the body, particularly the face, arm, or leg.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Speech Difficulties: Trouble speaking or understanding speech, which may manifest as slurred speech.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Speech Difficulties: Trouble speaking or understanding speech, which may manifest as slurred speech.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Vision Changes: Sudden vision loss or blurriness in one or both eyes.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Vision Changes: Sudden vision loss or blurriness in one or both eyes.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
         'Severe Headaches: A sudden and severe headache, often described as a "thunderclap" headache, may indicate an aneurysm or stroke.',
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Loss of Coordination: Difficulty with balance and coordination, which may lead to falls.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Loss of Coordination: Difficulty with balance and coordination, which may lead to falls.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Confusion: Sudden confusion or difficulty concentrating.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Confusion: Sudden confusion or difficulty concentrating.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
-        'Neurological Examination: A thorough assessment of neurological function and symptoms.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Neurological Examination: A thorough assessment of neurological function and symptoms.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `CT and MRI Scans: Imaging techniques to visualize the brain and blood vessels, helping to identify strokes, aneurysms, or other abnormalities.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Angiography: A specialized imaging test that uses a contrast dye to visualize blood vessels in the brain, particularly useful for diagnosing aneurysms and AVMs.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Angiography: A specialized imaging test that uses a contrast dye to visualize blood vessels in the brain, particularly useful for diagnosing aneurysms and AVMs.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
+        <Title title={data.title} className="text-4xl text-pink-500" />
         <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
@@ -263,7 +263,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

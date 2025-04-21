@@ -244,7 +244,7 @@ function CervicalCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/cervical-cancer-info"
-              className="text-[#0E56A0] underline font-semibold hover:underline"
+              className="text-[#0E56A0] underline font-semibold"
             >
               For More About Cervical Cancer, Its Causes And Treatment, Click
               Here
@@ -269,7 +269,7 @@ function CervicalCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-[#0E56A0] underline font-semibold hover:underline"
+              className="text-[#0E56A0] underline font-semibold"
             >
               For The Best Diagnosis And Treatment For Cervical Cancer, Click
               Here
@@ -328,7 +328,10 @@ function CervicalCancer() {
       <div className="mt-8 space-y-4">
         {data.links.map((link, index) => (
           <div key={index} className="text-start">
-            <Link href={link.url} className="text-hciPrimary hover:underline">
+            <Link
+              href={link.url}
+              className="text-hciPrimary font-semibold underline"
+            >
               {link.text}
             </Link>
           </div>

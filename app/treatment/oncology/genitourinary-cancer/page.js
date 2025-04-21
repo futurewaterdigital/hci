@@ -152,7 +152,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph:
-        "Cervical cancer is largely preventable with regular screenings, HPV vaccinations, and early interventions. Timely diagnosis and a tailored treatment plan, including surgery, radiation, and other targeted therapies, significantly improve survival rates and quality of life for patients.",
+        "Bladder cancer, when diagnosed early, has a high chance of successful treatment. Awareness of the symptoms and risk factors, along with timely medical attention, can significantly improve outcomes. With India’s advancements in cancer care, including access to specialized treatment options like BCG therapy, patients can receive high-quality care at affordable costs.",
     },
   ],
 
@@ -269,7 +269,7 @@ function GenitourinaryCancer() {
       <div className="text-xl text-center font-bold">
         Causes of Bladder Cancer
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 mb-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
         Bladder cancer can develop due to several factors. In India, the
         following are some of the common causes and risk factors:
       </p>
@@ -283,10 +283,7 @@ function GenitourinaryCancer() {
         ))}
       </div>
       <div className="my-3">
-        <Link
-          href={""}
-          className="hover:text-blue-500 text-hciPrimary fotn-semibold cursor-pointer"
-        >
+        <Link href={""} className="text-hciPrimary font-semibold underline">
           To know more about bladder cancer and its treatment, click here
         </Link>
       </div>
@@ -312,7 +309,7 @@ function GenitourinaryCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/cervical-cancer-info"
-              className="text-blue-600 hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               To know more about bladder cancer and its causes and treatment,
               click here
@@ -340,7 +337,7 @@ function GenitourinaryCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-blue-600 hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               To get the best diagnosis of bladder cancer and related issues,
               click here
@@ -409,7 +406,7 @@ function GenitourinaryCancer() {
           <div key={index} className="text-start">
             <Link
               href={link.url}
-              className="text-hciPrimary font-semibold hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               {link.text}
             </Link>

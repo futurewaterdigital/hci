@@ -1,62 +1,62 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Trigeminal Neuralgia',
-  bannerImage: '/neuro-sciences/trigeminal-neuralgia.png',
+  title: "Trigeminal Neuralgia",
+  bannerImage: "/neuro-sciences/trigeminal-neuralgia.png",
   description: `Trigeminal neuralgia, often referred to as "tic douloureux," is a neurological disorder characterised by sudden, severe, and recurrent facial pain. It primarily affects the trigeminal nerve, which is responsible for sensation in the face and motor functions such as biting and chewing. This condition can have a significant impact on an individual's quality of life, leading to debilitating episodes of pain that can be triggered by everyday activities like talking, eating, or even touching the face. In India, trigeminal neuralgia is a recognized health issue, particularly among older adults.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Tumours',
+      title: "Tumours",
       description: `Tumours near the trigeminal nerve can also result in neuralgia.`,
     },
     {
-      title: 'Multiple Sclerosis (MS)',
+      title: "Multiple Sclerosis (MS)",
       description: `In some cases, the demyelination of the trigeminal nerve associated with MS can lead to this condition.`,
     },
     {
-      title: 'Trauma',
+      title: "Trauma",
       description:
-        'Previous facial or head injuries may cause changes that lead to trigeminal neuralgia.',
+        "Previous facial or head injuries may cause changes that lead to trigeminal neuralgia.",
     },
     {
-      title: 'Nerve Compression',
+      title: "Nerve Compression",
       description:
-        'The most common cause of trigeminal neuralgia is the compression of the trigeminal nerve, often due to blood vessels pressing against it.',
+        "The most common cause of trigeminal neuralgia is the compression of the trigeminal nerve, often due to blood vessels pressing against it.",
     },
     {
-      title: 'Idiopathic Factors',
-      description: 'In many instances, the exact cause remains unknown.',
+      title: "Idiopathic Factors",
+      description: "In many instances, the exact cause remains unknown.",
     },
   ],
 
   complications: [
     {
-      heading: 'Medications:',
-      description: '',
+      heading: "Medications:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Anticonvulsants, such as carbamazepine and oxcarbazepine, are commonly prescribed to manage pain. Other medications, such as muscle relaxants and antidepressants, may also be effective.',
+            "Anticonvulsants, such as carbamazepine and oxcarbazepine, are commonly prescribed to manage pain. Other medications, such as muscle relaxants and antidepressants, may also be effective.",
         },
       ],
     },
 
     {
-      heading: 'Surgery:',
+      heading: "Surgery:",
       description:
-        'In cases where medications do not provide relief, surgical options may be considered, including:',
+        "In cases where medications do not provide relief, surgical options may be considered, including:",
       aneurysmSymptoms: [
         {
           description: `Microvascular Decompression: A procedure that relieves pressure on the trigeminal nerve by repositioning blood vessels.`,
@@ -67,8 +67,8 @@ const data = {
       ],
     },
     {
-      heading: 'Radiofrequency Ablation:',
-      description: '',
+      heading: "Radiofrequency Ablation:",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `A minimally invasive technique that uses heat to destroy nerve fibers causing pain.
@@ -77,8 +77,8 @@ const data = {
       ],
     },
     {
-      heading: 'Alternative Therapies:',
-      description: '',
+      heading: "Alternative Therapies:",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Some patients find relief through complementary therapies such as acupuncture, physical therapy, or biofeedback.`,
@@ -88,15 +88,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
      In India, access to advanced diagnostic tools and a variety of treatment options has improved the management of trigeminal neuralgia. Early intervention and a personalized treatment approach are vital for alleviating pain and enhancing the quality of life for those affected by this challenging condition.
           `,
@@ -105,55 +105,55 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description: `Severe Facial Pain: Characterised by intense, stabbing pain on one side of the face, often described as electric shock-like.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Triggers: Pain may be triggered by everyday actions, such as brushing teeth, eating, or even exposure to wind.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Attacks: Episodes can last from a few seconds to several minutes and can occur in quick succession.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Location of Pain: Pain is typically located in the areas supplied by the trigeminal nerve, including the cheeks, jaw, teeth, and forehead.`,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description: `Clinical Evaluation: A thorough examination of the patient's medical history and symptoms is essential for diagnosis.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Neurological Examination: Tests to assess facial sensations and motor functions of the trigeminal nerve.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Imaging Studies: MRI or CT scans may be conducted to rule out underlying conditions such as tumours or structural abnormalities.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p className="text-start font-light" >{data.description}</p>
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -264,7 +264,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

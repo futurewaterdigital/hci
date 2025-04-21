@@ -177,7 +177,7 @@ function PancreaticCancer() {
       <div className="mt-6 text-start">
         <Link
           href="/treatment/oncology/pancreatic-cancer-info"
-          className="text-[#0E56A0] text-semibold hover:underline"
+          className="text-[#0E56A0] text-semibold"
         >
           To Know More About Pancreatic Cancer And Its Treatment, Click Here
         </Link>
@@ -203,7 +203,7 @@ function PancreaticCancer() {
           <div className="mt-6 text-start">
             <Link
               href="/treatment/oncology/pancreatic-cancer-causes"
-              className="text-[#0E56A0] text-semibold hover:underline"
+              className="text-[#0E56A0] text-semibold"
             >
               To Know More About Pancreatic Cancer And Its Causes And Treatment,
               Click Here
@@ -245,7 +245,7 @@ function PancreaticCancer() {
           <div className="mt-6 text-start">
             <Link
               href="/treatment/oncology/pancreatic-cancer-diagnosis"
-              className="text-[#0E56A0] text-semibold hover:underline"
+              className="text-[#0E56A0] text-semibold"
             >
               To Get The Best Diagnosis Of Pancreatic Cancer And Related Issues,
               Click Here
@@ -265,7 +265,7 @@ function PancreaticCancer() {
           <div key={index} className="text-start">
             <Link
               href={link.url}
-              className="text-hciPrimary font-semibold hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               {link.text}
             </Link>

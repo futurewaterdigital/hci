@@ -384,10 +384,7 @@ function GallbladderCancer() {
         ))}
       </div>
       <div className="my-3">
-        <Link
-          href={""}
-          className="hover:text-blue-500 text-hciPrimary cursor-pointer"
-        >
+        <Link href={""} className="text-hciPrimary font-semibold underline">
           To know more about bowel cancer and its treatment, click here
         </Link>
       </div>
@@ -412,7 +409,7 @@ function GallbladderCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/cervical-cancer-info"
-              className="text-[#0E56A0] font-semibold hover:underline"
+              className="text-[#0E56A0] font-semibold underline"
             >
               For More About Cervical Cancer, Its Causes And Treatment, Click
               Here
@@ -440,7 +437,7 @@ function GallbladderCancer() {
           <div className="mt-4">
             <Link
               href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-[#0E56A0] font-semibold hover:underline"
+              className="text-[#0E56A0] font-semibold underline"
             >
               For The Best Diagnosis And Treatment For Cervical Cancer, Click
               Here
@@ -501,7 +498,10 @@ function GallbladderCancer() {
       <div className="mt-8 space-y-4">
         {data.links.map((link, index) => (
           <div key={index} className="text-start">
-            <Link href={link.url} className="text-hciPrimary hover:underline">
+            <Link
+              href={link.url}
+              className="text-hciPrimary font-semibold underline"
+            >
               {link.text}
             </Link>
           </div>

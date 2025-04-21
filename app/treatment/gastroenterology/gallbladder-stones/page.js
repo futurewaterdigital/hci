@@ -1,92 +1,92 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Gallbladder Stones',
-  bannerImage: '/gastroenterology/gallbladder-stones.png',
+  title: "Gallbladder Stones",
+  bannerImage: "/gastroenterology/gallbladder-stones.png",
   description: `Gallbladder Stones or Gallstones are solid deposits that form in the gallbladder, a small organ located beneath the liver. These stones are often made of cholesterol, but they may also consist of bile pigments or calcium salts. Although many gallstones remain asymptomatic, they can sometimes block bile ducts, causing intense pain and discomfort. Timely diagnosis and appropriate treatment can help prevent complications.`,
-  overview: '',
+  overview: "",
 
   section_1: [
     {
-      title: 'High Cholesterol Levels',
+      title: "High Cholesterol Levels",
       description:
-        'Excess cholesterol in bile can crystallize and form stones.',
+        "Excess cholesterol in bile can crystallize and form stones.",
     },
     {
-      title: 'Rapid Weight Loss',
+      title: "Rapid Weight Loss",
       description:
-        'Quick weight loss can alter bile composition, making it prone to forming stones.',
+        "Quick weight loss can alter bile composition, making it prone to forming stones.",
     },
     {
-      title: 'Excess Bilirubin',
+      title: "Excess Bilirubin",
       description:
-        'Conditions that increase bilirubin levels, such as liver disease or blood disorders, can promote gallstone formation.',
+        "Conditions that increase bilirubin levels, such as liver disease or blood disorders, can promote gallstone formation.",
     },
     {
-      title: 'Underlying Medical Conditions',
+      title: "Underlying Medical Conditions",
       description:
-        'Conditions like diabetes, Crohn’s disease, and high blood pressure are known to be associated with gallstone formation.',
+        "Conditions like diabetes, Crohn’s disease, and high blood pressure are known to be associated with gallstone formation.",
     },
     {
-      title: 'Obesity',
+      title: "Obesity",
       description:
-        'Being overweight increases cholesterol production, raising the likelihood of gallstones.',
+        "Being overweight increases cholesterol production, raising the likelihood of gallstones.",
     },
     {
-      title: 'Family History',
+      title: "Family History",
       description:
-        'Genetics can play a role, as gallstones may run in families.',
+        "Genetics can play a role, as gallstones may run in families.",
     },
   ],
 
   data_1: [
     {
-      heading: 'Pain Management:',
-      description: '',
+      heading: "Pain Management:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Medications may be prescribed to relieve any discomfort after surgery or treatment.',
+            "Medications may be prescribed to relieve any discomfort after surgery or treatment.",
         },
       ],
     },
     {
-      heading: 'Follow-Up Appointments:',
-      description: '',
+      heading: "Follow-Up Appointments:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Regular visits to monitor recovery and address any concerns.',
+            "Regular visits to monitor recovery and address any concerns.",
         },
       ],
     },
     {
-      heading: 'Dietary Adjustments:',
-      description: '',
+      heading: "Dietary Adjustments:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Your healthcare provider may recommend a low-fat diet temporarily to aid digestion.',
+            "Your healthcare provider may recommend a low-fat diet temporarily to aid digestion.",
         },
       ],
     },
     {
-      heading: 'Activity Restrictions:',
-      description: '',
+      heading: "Activity Restrictions:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Light activities can usually be resumed within a few days after minimally invasive procedures. However, heavy lifting or strenuous exercises should be avoided until full recovery.',
+            "Light activities can usually be resumed within a few days after minimally invasive procedures. However, heavy lifting or strenuous exercises should be avoided until full recovery.",
         },
       ],
     },
@@ -94,58 +94,58 @@ const data = {
 
   complications: [
     {
-      heading: 'Medications:',
-      description: '',
+      heading: "Medications:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Certain drugs can dissolve cholesterol-based stones, although they may take time to work and are not suitable for all types of stones.',
+            "Certain drugs can dissolve cholesterol-based stones, although they may take time to work and are not suitable for all types of stones.",
         },
       ],
     },
 
     {
-      heading: 'Laparoscopic Gallbladder Surgery:',
-      description: '',
+      heading: "Laparoscopic Gallbladder Surgery:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'A minimally invasive procedure where the gallbladder is removed through small incisions. This method ensures faster recovery with less pain and minimal scarring.',
+            "A minimally invasive procedure where the gallbladder is removed through small incisions. This method ensures faster recovery with less pain and minimal scarring.",
         },
       ],
     },
     {
-      heading: 'Open Surgery:',
-      description: '',
+      heading: "Open Surgery:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'In more complex cases, such as when the gallbladder is severely inflamed or infected, open surgery may be necessary.',
+            "In more complex cases, such as when the gallbladder is severely inflamed or infected, open surgery may be necessary.",
         },
       ],
     },
     {
-      heading: 'Endoscopic Procedures:',
-      description: '',
+      heading: "Endoscopic Procedures:",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Used to remove stones lodged in the bile ducts without removing the gallbladder.',
+            "Used to remove stones lodged in the bile ducts without removing the gallbladder.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Gallstones can significantly impact your health and quality of life, especially if left untreated. Whether through lifestyle modifications, medications, or surgery, timely intervention is essential to avoid complications. If you experience persistent abdominal pain or other symptoms related to gallbladder stones, consulting a healthcare professional can help ensure effective management and long-term wellness.
           `,
@@ -154,71 +154,74 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description:
-        'Severe Abdominal Pain: Often occurs suddenly in the upper right abdomen or between the shoulder blades.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Severe Abdominal Pain: Often occurs suddenly in the upper right abdomen or between the shoulder blades.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Nausea and Vomiting: Especially after eating heavy or fatty meals.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Nausea and Vomiting: Especially after eating heavy or fatty meals.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Fever and Chills: May indicate an infection due to bile duct blockage.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Fever and Chills: May indicate an infection due to bile duct blockage.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Jaundice: Yellowing of the skin and eyes can occur if bile flow is obstructed.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Jaundice: Yellowing of the skin and eyes can occur if bile flow is obstructed.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Dark Urine and Pale Stools: Signs of bile not flowing properly.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Dark Urine and Pale Stools: Signs of bile not flowing properly.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
-        'Ultrasound Imaging: A non-invasive test to detect stones and assess the condition of the gallbladder.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Ultrasound Imaging: A non-invasive test to detect stones and assess the condition of the gallbladder.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Blood Tests: Help identify any signs of infection or complications, such as jaundice.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: ':',
+      category: ":",
       description:
-        'CT or MRI Scans: Occasionally used for further evaluation of bile ducts.',
-      bgColor: 'bg-hciSecondary text-white',
+        "CT or MRI Scans: Occasionally used for further evaluation of bile ducts.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
      Brain tumours and brain cancers are challenging to treat, but advances in neurosurgery, radiation, and targeted therapies provide hope for better outcomes. Early diagnosis and comprehensive care tailored to the tumour type are key to improving quality of life for patients.`,
   },
-]
+];
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <p
+          dangerouslySetInnerHTML={{ __html: data.description }}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         {/* <H2
           text="Types of Cancers of the Digestive System "
@@ -320,10 +323,7 @@ function GeneralSurgery() {
         </div>
 
         <div>
-          <H2
-            title="Treatment"
-            className="font-semibold mb-4 text-center"
-          />
+          <H2 title="Treatment" className="font-semibold mb-4 text-center" />
           <p className="font-light">
             The treatment approach depends on the severity of the symptoms and
             the size or location of the stones. Options include:
@@ -399,7 +399,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

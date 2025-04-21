@@ -1,79 +1,79 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Parkinson’s Disease and Movement Disorders',
-  bannerImage: '/neuro-sciences/parkinson-disease-movement-disorders.png',
+  title: "Parkinson’s Disease and Movement Disorders",
+  bannerImage: "/neuro-sciences/parkinson-disease-movement-disorders.png",
   description: `Parkinson’s Disease (PD) and other movement disorders are neurological conditions that affect the brain’s ability to control movement. Parkinson’s Disease is a progressive disorder that leads to tremors, stiffness, and difficulty with balance and coordination. Movement disorders also include conditions such as dystonia, tremor, and ataxia, which can severely impact an individual’s quality of life. India is increasingly recognized as a destination for world-class treatment of Parkinson’s and movement disorders, offering access to expert neurologists and advanced therapeutic options.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Genetic Factors',
+      title: "Genetic Factors",
       description:
-        'A small percentage of Parkinson’s cases are linked to genetic mutations, particularly in families with a history of the disease.',
+        "A small percentage of Parkinson’s cases are linked to genetic mutations, particularly in families with a history of the disease.",
     },
     {
-      title: 'Brain Damage',
+      title: "Brain Damage",
       description:
-        'Movement disorders can arise from brain injuries, strokes, or neurodegenerative diseases.',
+        "Movement disorders can arise from brain injuries, strokes, or neurodegenerative diseases.",
     },
     {
-      title: 'Environmental Triggers',
+      title: "Environmental Triggers",
       description:
-        'Exposure to toxins like pesticides or heavy metals may increase the risk of developing Parkinson’s Disease.',
+        "Exposure to toxins like pesticides or heavy metals may increase the risk of developing Parkinson’s Disease.",
     },
     {
-      title: 'Medications',
+      title: "Medications",
       description:
-        'Some drugs, particularly those used for psychiatric conditions, can cause drug-induced movement disorders.',
+        "Some drugs, particularly those used for psychiatric conditions, can cause drug-induced movement disorders.",
     },
     {
-      title: 'Age',
+      title: "Age",
       description:
-        'Parkinson’s is more common in individuals over the age of 60, though early-onset cases can occur.',
+        "Parkinson’s is more common in individuals over the age of 60, though early-onset cases can occur.",
     },
     {
-      title: 'Autoimmune Conditions',
+      title: "Autoimmune Conditions",
       description:
-        'Certain autoimmune diseases may trigger abnormal movement patterns.',
+        "Certain autoimmune diseases may trigger abnormal movement patterns.",
     },
   ],
 
   complications: [
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'The most common treatment for Parkinson’s involves drugs that increase dopamine levels or mimic its effects in the brain. Levodopa, combined with carbidopa, is the gold standard medication for Parkinson’s. Other medications help manage symptoms like tremors, stiffness, and slow movement.',
+            "The most common treatment for Parkinson’s involves drugs that increase dopamine levels or mimic its effects in the brain. Levodopa, combined with carbidopa, is the gold standard medication for Parkinson’s. Other medications help manage symptoms like tremors, stiffness, and slow movement.",
         },
       ],
     },
 
     {
-      heading: 'Deep Brain Stimulation (DBS)',
-      description: '',
+      heading: "Deep Brain Stimulation (DBS)",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'For patients with advanced Parkinson’s or movement disorders that do not respond to medication, DBS involves implanting electrodes in the brain that send electrical impulses to help regulate abnormal movements.',
+            "For patients with advanced Parkinson’s or movement disorders that do not respond to medication, DBS involves implanting electrodes in the brain that send electrical impulses to help regulate abnormal movements.",
         },
       ],
     },
     {
-      heading: 'Physical Therapy',
-      description: '',
+      heading: "Physical Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Exercises to improve mobility, flexibility, and balance are essential in managing movement disorders. Speech therapy may also be needed for those with speech impairments.
@@ -82,8 +82,8 @@ const data = {
       ],
     },
     {
-      heading: 'Botox Injections',
-      description: '',
+      heading: "Botox Injections",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Botulinum toxin (Botox) is used to treat conditions like dystonia by temporarily relaxing overactive muscles.
@@ -92,8 +92,8 @@ const data = {
       ],
     },
     {
-      heading: 'Occupational Therapy',
-      description: '',
+      heading: "Occupational Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Helps patients adapt to daily tasks and maintain independence as symptoms progress.
@@ -102,8 +102,8 @@ const data = {
       ],
     },
     {
-      heading: 'Surgical Options',
-      description: '',
+      heading: "Surgical Options",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `In some cases of severe movement disorders, surgery to remove parts of the brain or to implant devices may be recommended.
@@ -112,8 +112,8 @@ const data = {
       ],
     },
     {
-      heading: 'Lifestyle Changes',
-      description: '',
+      heading: "Lifestyle Changes",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Regular exercise, a healthy diet, and reducing stress can help manage symptoms and slow the progression of Parkinson’s and other movement disorders.
@@ -124,15 +124,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Parkinson’s Disease and movement disorders are complex conditions that significantly affect a person’s daily life. India’s specialized treatment centers offer comprehensive care, from diagnosis to advanced treatments like DBS and medication management. Early diagnosis and a multi-disciplinary approach are crucial in effectively managing these disorders, helping patients maintain their independence and quality of life for as long as possible.
           `,
@@ -141,103 +141,103 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description:
-        'Tremors: Uncontrollable shaking, often starting in the hands or fingers.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Tremors: Uncontrollable shaking, often starting in the hands or fingers.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Muscle Rigidity: Stiff muscles that can limit movement and cause discomfort.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Muscle Rigidity: Stiff muscles that can limit movement and cause discomfort.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Bradykinesia: Slowness of movement, making simple tasks difficult and time-consuming.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Bradykinesia: Slowness of movement, making simple tasks difficult and time-consuming.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Postural Instability: Impaired balance and coordination, leading to falls.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Postural Instability: Impaired balance and coordination, leading to falls.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Gait Changes: A shuffling walk or difficulty starting and stopping movement.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Gait Changes: A shuffling walk or difficulty starting and stopping movement.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Dystonia: Involuntary muscle contractions causing twisting and repetitive movements.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Dystonia: Involuntary muscle contractions causing twisting and repetitive movements.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Involuntary Movements: Such as tremors, jerks, or tics, often associated with other disorders like dystonia or essential tremor.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Involuntary Movements: Such as tremors, jerks, or tics, often associated with other disorders like dystonia or essential tremor.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Speech and Writing Difficulties: Soft speech, slurred words, and small, cramped handwriting (micrographia).',
-      bgColor: 'bg-hciPrimary text-white',
+        "Speech and Writing Difficulties: Soft speech, slurred words, and small, cramped handwriting (micrographia).",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
-        'Neurological Examination: Assessment of motor function, coordination, and reflexes.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Neurological Examination: Assessment of motor function, coordination, and reflexes.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `MRI/CT Scan: Imaging tests help rule out other conditions that may be causing symptoms, such as strokes or tumors.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'DaTscan: A specialized imaging test used to assess dopamine levels in the brain, aiding in the diagnosis of Parkinson’s Disease.',
-      bgColor: 'bg-hciSecondary text-white',
+        "DaTscan: A specialized imaging test used to assess dopamine levels in the brain, aiding in the diagnosis of Parkinson’s Disease.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Genetic Testing: May be recommended if a family history of Parkinson’s or another movement disorder is present.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Genetic Testing: May be recommended if a family history of Parkinson’s or another movement disorder is present.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Blood Tests: These are used to rule out other conditions that may cause similar symptoms, such as thyroid problems or vitamin deficiencies.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Blood Tests: These are used to rule out other conditions that may cause similar symptoms, such as thyroid problems or vitamin deficiencies.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Electromyography (EMG): This test measures muscle activity and may help diagnose other movement disorders like dystonia.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Electromyography (EMG): This test measures muscle activity and may help diagnose other movement disorders like dystonia.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p className="text-start font-light" >{data.description}</p>
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -342,7 +342,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

@@ -1,117 +1,117 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Hand and Upper Limb Surgery',
-  bannerImage: '/orthopaedics/hand-and-upper-limb-surgery.png',
+  title: "Hand and Upper Limb Surgery",
+  bannerImage: "/orthopaedics/hand-and-upper-limb-surgery.png",
   description: `Hand and upper limb surgery is a specialized field focused on treating injuries and conditions that affect the hand, wrist, forearm, and elbow. These areas are critical for performing daily tasks, and any impairment can significantly impact a person’s quality of life. Injuries may result from road traffic accidents, workplace incidents, or sports activities, and the prompt restoration of function is essential for a successful recovery.`,
   overview: `Our Department of Hand & Upper Limb Surgery addresses acute injuries, chronic conditions, congenital anomalies, nerve and tendon disorders, as well as post-injury complications such as contractures and deformities. With expertize in microsurgical techniques and reconstructive procedures, our department provides a wide range of treatment options to restore mobility, function, and quality of life.`,
 
   causes: [
     {
-      title: 'Road Traffic and Workplace Accidents:',
-      description: 'Fractures, lacerations, or crush injuries.',
+      title: "Road Traffic and Workplace Accidents:",
+      description: "Fractures, lacerations, or crush injuries.",
     },
     {
-      title: 'Sports Injuries:',
-      description: 'Sprains, dislocations, and tendon ruptures.',
+      title: "Sports Injuries:",
+      description: "Sprains, dislocations, and tendon ruptures.",
     },
     {
-      title: 'Congenital Anomalies:',
-      description: 'Birth defects like syndactyly, polydactyly, and club hand.',
+      title: "Congenital Anomalies:",
+      description: "Birth defects like syndactyly, polydactyly, and club hand.",
     },
     {
-      title: 'Repetitive Stress Injuries:',
+      title: "Repetitive Stress Injuries:",
       description:
-        'Carpal tunnel syndrome, trigger finger, and de Quervain’s disease.',
+        "Carpal tunnel syndrome, trigger finger, and de Quervain’s disease.",
     },
     {
-      title: 'Neurological Conditions:',
+      title: "Neurological Conditions:",
       description: `Brachial plexus injuries, Erb's palsy, and cerebral palsy.`,
     },
     {
-      title: 'Arthritis and Degenerative Conditions:',
+      title: "Arthritis and Degenerative Conditions:",
       description: `Rheumatoid hand deformities and joint replacements.`,
     },
     {
-      title: 'Infectious Conditions:',
+      title: "Infectious Conditions:",
       description: `Abscesses, tendon sheath infections, and osteomyelitis.`,
     },
   ],
 
   complications: [
     {
-      heading: 'Non-Surgical Treatment',
+      heading: "Non-Surgical Treatment",
       aneurysmSymptoms: [
         {
           description:
-            'Splinting and Bracing: To immobilize the affected area and promote healing.',
+            "Splinting and Bracing: To immobilize the affected area and promote healing.",
         },
         {
           description:
-            'Physical Therapy: Restores strength and range of motion.',
+            "Physical Therapy: Restores strength and range of motion.",
         },
         {
           description:
-            'Medication: Pain relievers, anti-inflammatory drugs, or antibiotics for infections.',
+            "Medication: Pain relievers, anti-inflammatory drugs, or antibiotics for infections.",
         },
         {
           description:
-            'Injections: Corticosteroids to reduce inflammation (e.g., for trigger finger or carpal tunnel syndrome).',
+            "Injections: Corticosteroids to reduce inflammation (e.g., for trigger finger or carpal tunnel syndrome).",
         },
       ],
     },
 
     {
-      heading: 'Surgical Treatment',
+      heading: "Surgical Treatment",
       aneurysmSymptoms: [
         {
           description:
-            'Fracture Fixation: Using plates, screws, or pins to stabilize bones and ensure proper healing.',
+            "Fracture Fixation: Using plates, screws, or pins to stabilize bones and ensure proper healing.",
         },
         {
           description:
-            'Nerve and Tendon Repairs: Restoring damaged structures through microsurgery.',
+            "Nerve and Tendon Repairs: Restoring damaged structures through microsurgery.",
         },
         {
           description:
-            'Carpal Tunnel Release: Relieving pressure on the median nerve.',
+            "Carpal Tunnel Release: Relieving pressure on the median nerve.",
         },
         {
           description:
-            'Tendon Transfers: Used for conditions like claw hand and brachial plexus injuries.',
+            "Tendon Transfers: Used for conditions like claw hand and brachial plexus injuries.",
         },
         {
           description:
-            'Congenital Anomaly Corrections: Surgery for conditions such as syndactyly, polydactyly, or club hand.',
+            "Congenital Anomaly Corrections: Surgery for conditions such as syndactyly, polydactyly, or club hand.",
         },
         {
           description:
-            'Reconstructive Surgery: Restoring function and appearance after trauma.',
+            "Reconstructive Surgery: Restoring function and appearance after trauma.",
         },
       ],
     },
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       <p>Foot and ankle surgery offers a pathway to pain relief, improved mobility, and enhanced quality of life for patients suffering from chronic conditions or traumatic injuries. By leveraging advanced surgical techniques, our specialized team aims to provide personalized care for each patient.</p>
       <p>If you are experiencing pain, deformities, or limited movement in your hand, wrist, or elbow, seek professional medical attention to avoid further complications. Early diagnosis and timely treatment are critical for optimal outcomes.</p>
@@ -122,130 +122,136 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description:
-        'Pain or Stiffness: Persistent pain in the hand, wrist, or elbow that limits mobility.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Pain or Stiffness: Persistent pain in the hand, wrist, or elbow that limits mobility.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Numbness or Tingling: A common sign of nerve compression (e.g., carpal tunnel syndrome).',
-      bgColor: 'bg-hciPrimary text-white',
+        "Numbness or Tingling: A common sign of nerve compression (e.g., carpal tunnel syndrome).",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Restricted mobility, making it difficult or impossible to walk or stand.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Restricted mobility, making it difficult or impossible to walk or stand.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Deformity or Swelling: Visible abnormalities in the hand or fingers.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Deformity or Swelling: Visible abnormalities in the hand or fingers.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Limited Range of Motion: Difficulty performing simple tasks like gripping or writing.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Limited Range of Motion: Difficulty performing simple tasks like gripping or writing.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Weakness or Paralysis: Loss of strength, especially after trauma or nerve injury.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Weakness or Paralysis: Loss of strength, especially after trauma or nerve injury.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Contractures: Fingers or joints locked in a bent position due to tendon or muscle issues.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Contractures: Fingers or joints locked in a bent position due to tendon or muscle issues.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Delayed Healing or Non-Union of Fractures: Indicating the need for surgical correction.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Delayed Healing or Non-Union of Fractures: Indicating the need for surgical correction.",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description:
-        'Physical Examination: To assess joint mobility, strength, and deformities.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Physical Examination: To assess joint mobility, strength, and deformities.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Imaging Studies: X-rays, MRI, CT scans, or ultrasound to identify fractures, tendon tears, or nerve damage.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Imaging Studies: X-rays, MRI, CT scans, or ultrasound to identify fractures, tendon tears, or nerve damage.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Electromyography (EMG) and Nerve Conduction Studies: To assess nerve function and identify conditions like carpal tunnel syndrome.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Electromyography (EMG) and Nerve Conduction Studies: To assess nerve function and identify conditions like carpal tunnel syndrome.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Blood Tests: For inflammatory or infectious conditions affecting joints or tissues.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Blood Tests: For inflammatory or infectious conditions affecting joints or tissues.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Clinical History: Understanding the patient’s medical history, previous injuries, and daily activities helps guide the diagnosis.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Clinical History: Understanding the patient’s medical history, previous injuries, and daily activities helps guide the diagnosis.",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Nerve Conduction Studies: To assess nerve function in cases involving numbness or tingling.',
-      bgColor: 'bg-hciSecondary text-white',
+        "Nerve Conduction Studies: To assess nerve function in cases involving numbness or tingling.",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
 
   consideration: [
     {
-      title: 'Physiotherapy and Rehabilitation Exercises:',
-      description: 'To enhance mobility and rebuild strength.',
+      title: "Physiotherapy and Rehabilitation Exercises:",
+      description: "To enhance mobility and rebuild strength.",
     },
     {
-      title: 'Pain Management:',
+      title: "Pain Management:",
       description:
-        'Medications or nerve blocks to manage post-operative discomfort.',
+        "Medications or nerve blocks to manage post-operative discomfort.",
     },
     {
-      title: 'Splinting or Casting:',
-      description: 'To protect the surgical site and promote proper healing.',
+      title: "Splinting or Casting:",
+      description: "To protect the surgical site and promote proper healing.",
     },
     {
-      title: 'Follow-Up Care:',
+      title: "Follow-Up Care:",
       description:
-        'Regular consultations to monitor healing and address complications.',
+        "Regular consultations to monitor healing and address complications.",
     },
     {
-      title: 'Lifestyle Modifications:',
+      title: "Lifestyle Modifications:",
       description:
-        'Adjusting daily activities to prevent re-injury or stress on the affected area.',
+        "Adjusting daily activities to prevent re-injury or stress on the affected area.",
     },
   ],
-}
+};
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <p
+          dangerouslySetInnerHTML={{ __html: data.description }}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="text-2xl font-semibold mb-4 text-center" />
+        <H2
+          title="Causes"
+          className="text-2xl font-semibold mb-4 text-center"
+        />
         <p className="font-light">
           Several conditions and injuries may require hand and upper limb
           surgery. These include:
@@ -327,7 +333,7 @@ function GeneralSurgery() {
           />
         </div>
         <div className="space-y-4">
-          <H2 title="Recovery and Rehabilitation" className="text-center"/>
+          <H2 title="Recovery and Rehabilitation" className="text-center" />
           <p className="font-light text-center">
             Post-surgery recovery focuses on restoring function, strength, and
             mobility. Key aspects include:
@@ -362,7 +368,7 @@ function GeneralSurgery() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

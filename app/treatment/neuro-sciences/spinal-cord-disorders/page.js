@@ -1,79 +1,79 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Spinal Cord Disorders',
-  bannerImage: '/neuro-sciences/spinal-cord-disorders.png',
+  title: "Spinal Cord Disorders",
+  bannerImage: "/neuro-sciences/spinal-cord-disorders.png",
   description: `Spinal cord disorders encompass a wide range of conditions that affect the spinal cord, a crucial part of the central nervous system responsible for transmitting signals between the brain and the rest of the body. These disorders can lead to significant physical and neurological impairments, impacting movement, sensation, and even autonomic functions like breathing and heart rate. In India, specialized hospitals offer advanced treatments for various spinal cord disorders, attracting patients from around the world due to high-quality care at affordable costs.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Traumatic Injury',
+      title: "Traumatic Injury",
       description:
-        'Accidents, falls, or sports injuries can lead to spinal cord damage.',
+        "Accidents, falls, or sports injuries can lead to spinal cord damage.",
     },
     {
-      title: 'Degenerative Diseases',
+      title: "Degenerative Diseases",
       description:
-        'Disorders like degenerative disc disease, spinal stenosis, and spondylosis result from age-related wear and tear.',
+        "Disorders like degenerative disc disease, spinal stenosis, and spondylosis result from age-related wear and tear.",
     },
     {
-      title: 'Tumors',
+      title: "Tumors",
       description:
-        'Benign or malignant growths within or around the spinal cord can compress nerves and disrupt function.',
+        "Benign or malignant growths within or around the spinal cord can compress nerves and disrupt function.",
     },
     {
-      title: 'Autoimmune Conditions',
+      title: "Autoimmune Conditions",
       description:
-        'Multiple sclerosis and transverse myelitis involve the immune system attacking the spinal cord.',
+        "Multiple sclerosis and transverse myelitis involve the immune system attacking the spinal cord.",
     },
     {
-      title: 'Infections',
+      title: "Infections",
       description:
-        'Conditions such as spinal tuberculosis (Pott’s disease) or viral infections can damage the spinal cord.',
+        "Conditions such as spinal tuberculosis (Pott’s disease) or viral infections can damage the spinal cord.",
     },
     {
-      title: 'Congenital Disorders',
+      title: "Congenital Disorders",
       description:
-        'Birth defects such as spina bifida can lead to lifelong spinal cord dysfunction.',
+        "Birth defects such as spina bifida can lead to lifelong spinal cord dysfunction.",
     },
   ],
 
   complications: [
     {
-      heading: 'Surgery',
-      description: '',
+      heading: "Surgery",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Surgical intervention is often required to remove tumors, stabilize fractures, decompress compressed nerves, or correct deformities in the spine. Minimally invasive techniques are often employed to reduce recovery times and minimize complications.',
+            "Surgical intervention is often required to remove tumors, stabilize fractures, decompress compressed nerves, or correct deformities in the spine. Minimally invasive techniques are often employed to reduce recovery times and minimize complications.",
         },
       ],
     },
 
     {
-      heading: 'Physical Therapy',
-      description: '',
+      heading: "Physical Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Rehabilitation plays a crucial role in helping patients regain mobility, strength, and independence. Physical therapy focuses on improving muscle strength, coordination, and flexibility.',
+            "Rehabilitation plays a crucial role in helping patients regain mobility, strength, and independence. Physical therapy focuses on improving muscle strength, coordination, and flexibility.",
         },
       ],
     },
     {
-      heading: 'Spinal Fusion',
-      description: '',
+      heading: "Spinal Fusion",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `In cases of instability, surgeons may perform a spinal fusion to join two or more vertebrae to prevent abnormal movement and stabilize the spine.
@@ -83,8 +83,8 @@ const data = {
       ],
     },
     {
-      heading: 'Decompression Surgery',
-      description: '',
+      heading: "Decompression Surgery",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `This procedure involves removing pressure from the spinal cord caused by herniated discs, bone spurs, or other sources of compression.
@@ -93,8 +93,8 @@ const data = {
       ],
     },
     {
-      heading: 'Steroid Injections',
-      description: '',
+      heading: "Steroid Injections",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Corticosteroid injections help reduce inflammation and pain in conditions like spinal stenosis or disc herniation.`,
@@ -102,8 +102,8 @@ const data = {
       ],
     },
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Depending on the condition, medications such as pain relievers, muscle relaxants, anti-inflammatory drugs, and nerve pain medications may be prescribed.
@@ -112,8 +112,8 @@ const data = {
       ],
     },
     {
-      heading: 'Rehabilitation',
-      description: '',
+      heading: "Rehabilitation",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Following surgery or other treatments, rehabilitation programs focus on helping patients regain mobility, function, and quality of life. Occupational therapy, physical therapy, and assistive devices may be part of the rehabilitation process.`,
@@ -123,15 +123,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       Spinal cord disorders require prompt diagnosis and comprehensive treatment to prevent irreversible damage and improve patient outcomes. With state-of-the-art diagnostic tools and advanced treatment options, including minimally invasive spine surgeries and tailored rehabilitation programs, India has become a leading destination for spinal cord disorder treatment. Early intervention and personalized care plans are key to maximizing recovery and improving quality of life for patients affected by spinal cord disorders.
           `,
@@ -140,82 +140,82 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description: `Pain: Persistent back pain or neck pain that may radiate to the arms, legs, or chest.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Weakness or Paralysis: Loss of muscle strength or complete paralysis in the limbs or torso.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Weakness or Paralysis: Loss of muscle strength or complete paralysis in the limbs or torso.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Numbness or Tingling:  Sensory changes such as numbness, tingling, or a burning sensation in the extremities.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Numbness or Tingling:  Sensory changes such as numbness, tingling, or a burning sensation in the extremities.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Loss of Coordination:  Difficulty with balance, walking, or performing coordinated movements.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Bladder or Bowel Dysfunction: Loss of control over bladder and bowel functions due to nerve damage.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Difficulty Breathing: In severe cases, respiratory issues may occur if the injury affects the nerves controlling the diaphragm.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: '',
+      category: "",
       description: `Magnetic Resonance Imaging (MRI): Provides detailed images of the spinal cord, helping to identify injuries, tumors, infections, or degenerative conditions.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Computed Tomography (CT) Scan: Offers cross-sectional images of the spine and spinal cord, often used to evaluate bone abnormalities or fractures.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `X-rays: Useful for assessing structural issues such as fractures or abnormal spine alignment.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Myelography: An imaging test using contrast dye to visualize the spinal cord and surrounding tissues, often used to diagnose spinal stenosis or herniated discs.
 `,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Electromyography (EMG): Measures the electrical activity in muscles to assess nerve damage and muscle function.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p className="text-start font-light" >{data.description}</p>
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -319,7 +319,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;

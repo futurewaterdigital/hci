@@ -25,31 +25,31 @@ const data = {
       items: [
         {
           title: "Blood in the urine (hematuria)",
-          className: "bg-blue-700 text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
         },
         {
           title: "Lower back pain (on one side)",
-          className: "bg-blue-700 text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
         },
         {
           title: "Unexplained weight loss",
-          className: "bg-blue-700 text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
         },
         {
           title: "Loss of appetite",
-          className: "bg-blue-700 text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
         },
         {
           title: "Fatigue",
-          className: "bg-blue-700 text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
         },
         {
           title: "Fever",
-          className: "bg-blue-700 text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
         },
         {
           title: "Lump or mass in the abdomen",
-          className: "bg-blue-700 text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
         },
       ],
     },
@@ -243,10 +243,7 @@ function KidneyCancer() {
         </div>
       </div>
       <div className="my-3">
-        <Link
-          href={""}
-          className="hover:text-blue-500 text-hciPrimary cursor-pointer"
-        >
+        <Link href={""} className="text-hciPrimary font-semibold underline">
           To Know More About Oesophagus Cancer And Its Treatment, Click Here
         </Link>
       </div>
@@ -270,7 +267,7 @@ function KidneyCancer() {
       <div className="mt-6 text-start">
         <Link
           href="/treatment/oncology/oesophagus-cancer-causes"
-          className="text-[#0E56A0] font-semibold hover:underline"
+          className="text-[#0E56A0] font-semibold underline"
         >
           To know more about oesophagus cancer and its causes and treatment,
           click here
@@ -296,7 +293,7 @@ function KidneyCancer() {
       <div className="mt-6 text-start">
         <Link
           href="/treatment/oncology/oesophagus-cancer-causes"
-          className="text-[#0E56A0] font-semibold hover:underline"
+          className="text-[#0E56A0] font-semibold underline"
         >
           To Know More About Oesophagus Cancer And Its Causes And Treatment,
           Click Here
@@ -357,7 +354,7 @@ function KidneyCancer() {
           <div key={index} className="text-start">
             <Link
               href={link.url}
-              className="text-hciPrimary text-semibold hover:underline"
+              className="text-hciPrimary font-semibold underline"
             >
               {link.text}
             </Link>

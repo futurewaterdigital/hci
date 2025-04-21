@@ -1,90 +1,90 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
 // import TextComponent from '@/components/Common/TextComponent'
-import Link from 'next/link'
-import H3 from '@/components/ui/h3'
+import Link from "next/link";
+import H3 from "@/components/ui/h3";
 
 const data = {
-  title: 'Pediatric Cancer',
-  bannerImage: '/oncology/pediatric-cancer.png',
+  title: "Pediatric Cancer",
+  bannerImage: "/oncology/pediatric-cancer.png",
   description: `Pediatric cancer refers to a group of cancer affecting children under 18 years of age. Though adult and pediatric cancers share many similarities, they differ in terms of causes, growth, treatment response, and prognosis. Recent advancements in medicine have significantly improved survival rates, with over 80% of affected children living five years or more post-diagnosis. However, statistics differ based on cancer type and stage, necessitating the understanding of childhood cancer manifestations and treatments.`,
-  overview: '',
+  overview: "",
 
   cancer_types: [
     {
-      title: 'Leukemia',
+      title: "Leukemia",
       description:
-        'Cancer of blood and bone marrow, including acute lymphoblastic leukemia (ALL) and acute myeloid leukemia (AML)',
-      bgColor: 'bg-pink-500 text-white',
+        "Cancer of blood and bone marrow, including acute lymphoblastic leukemia (ALL) and acute myeloid leukemia (AML)",
+      bgColor: "bg-pink-500 text-white",
     },
     {
-      title: 'Brain Tumors',
+      title: "Brain Tumors",
       description:
-        'Solid tumors within nervous tissue, being the most common childhood cancer',
-      bgColor: 'bg-pink-500 text-white',
+        "Solid tumors within nervous tissue, being the most common childhood cancer",
+      bgColor: "bg-pink-500 text-white",
     },
     {
-      title: 'Soft Cancers',
+      title: "Soft Cancers",
       description:
-        'Includes neuroblastoma, Wilms tumor, rhabdomyosarcoma, retinoblastoma, and others',
-      bgColor: 'bg-pink-500 text-white',
+        "Includes neuroblastoma, Wilms tumor, rhabdomyosarcoma, retinoblastoma, and others",
+      bgColor: "bg-pink-500 text-white",
     },
   ],
 
   diagnosis: [
     {
-      heading: 'Blood Tests',
+      heading: "Blood Tests",
       description:
-        'Screening and comprehensive evaluation of conditions like anemia',
+        "Screening and comprehensive evaluation of conditions like anemia",
       aneurysmSymptoms: [
-        { description: 'Complete blood count (CBC) to assess overall health' },
-        { description: 'Blood chemistry studies to evaluate organ function' },
-        { description: 'Tumor marker tests for specific cancer indicators' },
+        { description: "Complete blood count (CBC) to assess overall health" },
+        { description: "Blood chemistry studies to evaluate organ function" },
+        { description: "Tumor marker tests for specific cancer indicators" },
       ],
     },
     {
-      heading: 'Imaging Tests',
-      description: 'X-Rays, CT scans, MRIs, and ultrasounds to detect tumors',
+      heading: "Imaging Tests",
+      description: "X-Rays, CT scans, MRIs, and ultrasounds to detect tumors",
       aneurysmSymptoms: [
         {
           description:
-            'PET scans to identify areas of abnormal metabolic activity',
+            "PET scans to identify areas of abnormal metabolic activity",
         },
-        { description: 'Bone scans to detect metastasis to bones' },
+        { description: "Bone scans to detect metastasis to bones" },
         {
-          description: 'MIBG scans for specific tumor types like neuroblastoma',
+          description: "MIBG scans for specific tumor types like neuroblastoma",
         },
       ],
     },
     {
-      heading: 'Biopsy',
-      description: 'Tissue sample for pathological examination',
+      heading: "Biopsy",
+      description: "Tissue sample for pathological examination",
       aneurysmSymptoms: [
-        { description: 'Needle biopsy for accessible tumors' },
-        { description: 'Surgical biopsy when larger samples are needed' },
+        { description: "Needle biopsy for accessible tumors" },
+        { description: "Surgical biopsy when larger samples are needed" },
         {
-          description: 'Molecular testing of biopsy samples to guide treatment',
+          description: "Molecular testing of biopsy samples to guide treatment",
         },
       ],
     },
     {
-      heading: 'Bone Marrow and Lumbar Puncture',
+      heading: "Bone Marrow and Lumbar Puncture",
       description:
-        'Evaluation of bone marrow involvement and cerebrospinal fluid',
+        "Evaluation of bone marrow involvement and cerebrospinal fluid",
       aneurysmSymptoms: [
-        { description: 'Assessment for cancer cells in bone marrow' },
+        { description: "Assessment for cancer cells in bone marrow" },
         {
           description:
-            'Analysis of cerebrospinal fluid for cancer spread to the central nervous system',
+            "Analysis of cerebrospinal fluid for cancer spread to the central nervous system",
         },
-        { description: 'Cytogenetic studies of collected samples' },
+        { description: "Cytogenetic studies of collected samples" },
       ],
     },
   ],
@@ -92,30 +92,30 @@ const data = {
   causes: [
     {
       description:
-        'The exact causes of childhood cancer remain unclear, but genetic mutations during early development are believed to play a factor. Unlike adult cancers linked to environmental exposures or aging, pediatric cancers often arise from errors in cellular processes during rapid growth and development. Certain genetic conditions like Down syndrome and Li-Fraumeni syndrome may increase the likelihood of childhood cancers, making early screening critical for high-risk individuals.',
+        "The exact causes of childhood cancer remain unclear, but genetic mutations during early development are believed to play a factor. Unlike adult cancers linked to environmental exposures or aging, pediatric cancers often arise from errors in cellular processes during rapid growth and development. Certain genetic conditions like Down syndrome and Li-Fraumeni syndrome may increase the likelihood of childhood cancers, making early screening critical for high-risk individuals.",
     },
   ],
 
   treatments: [
     {
-      heading: 'Radiation Therapy',
+      heading: "Radiation Therapy",
       description:
-        'Radiation therapy uses high-energy rays or particles to kill cancer cells by damaging their DNA, which prevents them from growing and dividing',
+        "Radiation therapy uses high-energy rays or particles to kill cancer cells by damaging their DNA, which prevents them from growing and dividing",
       aneurysmSymptoms: [
         {
           description:
-            'For children, radiation is often used with other treatments to target specific cancers',
+            "For children, radiation is often used with other treatments to target specific cancers",
         },
         {
-          description: 'Precise targeting minimizes damage to healthy tissues',
-        },
-        {
-          description:
-            'May be delivered externally (external beam radiation) or internally (brachytherapy)',
+          description: "Precise targeting minimizes damage to healthy tissues",
         },
         {
           description:
-            'Physicians carefully consider the potential impact on growing bodies and cognitive development',
+            "May be delivered externally (external beam radiation) or internally (brachytherapy)",
+        },
+        {
+          description:
+            "Physicians carefully consider the potential impact on growing bodies and cognitive development",
         },
         {
           description:
@@ -124,98 +124,98 @@ const data = {
       ],
     },
     {
-      heading: 'Chemotherapy',
+      heading: "Chemotherapy",
       description:
-        'Chemotherapy is the cornerstone of childhood cancer treatment, involving the use of potent drugs to target and destroy rapidly dividing cancer cells',
+        "Chemotherapy is the cornerstone of childhood cancer treatment, involving the use of potent drugs to target and destroy rapidly dividing cancer cells",
       aneurysmSymptoms: [
         {
           description:
-            'These drugs can be administered in various ways, including intravenous infusion, oral medication, or directly into cerebrospinal fluid for cancers affecting the brain and spinal cord',
+            "These drugs can be administered in various ways, including intravenous infusion, oral medication, or directly into cerebrospinal fluid for cancers affecting the brain and spinal cord",
         },
         {
           description:
-            'Protocols typically involve combinations of medications, dosages, and administrations',
+            "Protocols typically involve combinations of medications, dosages, and administrations",
         },
         {
           description:
-            'Chemotherapy often requires lengthy treatment cycles to ensure complete eradication',
+            "Chemotherapy often requires lengthy treatment cycles to ensure complete eradication",
         },
         {
           description:
-            'Medications may vary based on cancer type, stage, and patient characteristics',
+            "Medications may vary based on cancer type, stage, and patient characteristics",
         },
         {
           description:
-            'Supportive care measures help manage side effects and ensure the child can maintain adequate nutrition, hydration, and immune function during treatment',
+            "Supportive care measures help manage side effects and ensure the child can maintain adequate nutrition, hydration, and immune function during treatment",
         },
       ],
     },
     {
-      heading: 'Surgery',
+      heading: "Surgery",
       description:
-        'Surgery is often essential to remove cancer entirely or significantly reduce tumor size before additional treatments',
+        "Surgery is often essential to remove cancer entirely or significantly reduce tumor size before additional treatments",
       aneurysmSymptoms: [
         {
           description:
-            'Surgeons with special training in pediatric oncology perform these procedures with extreme care',
+            "Surgeons with special training in pediatric oncology perform these procedures with extreme care",
         },
         {
           description:
-            'The goal is to remove as much tumor as possible while preserving organ function',
+            "The goal is to remove as much tumor as possible while preserving organ function",
         },
         {
           description:
-            'Surgery may be the primary treatment for solid tumors like Wilms tumor or neuroblastoma',
+            "Surgery may be the primary treatment for solid tumors like Wilms tumor or neuroblastoma",
         },
         {
           description:
-            'Minimally invasive techniques may be utilized when appropriate to reduce recovery time and complications',
+            "Minimally invasive techniques may be utilized when appropriate to reduce recovery time and complications",
         },
         {
           description:
-            'Advanced imaging guides surgeons to precisely locate tumors and plan surgical approaches',
+            "Advanced imaging guides surgeons to precisely locate tumors and plan surgical approaches",
         },
         {
           description:
-            'Tissue samples obtained during surgery provide crucial information for diagnosis and ongoing treatment planning',
+            "Tissue samples obtained during surgery provide crucial information for diagnosis and ongoing treatment planning",
         },
       ],
     },
     {
-      heading: 'Stem Cell (Bone Marrow) Transplantation',
+      heading: "Stem Cell (Bone Marrow) Transplantation",
       description:
-        'This procedure involves infusing healthy blood-forming cells into patients with cancers such as leukemia or lymphomas that have not responded to other therapies',
+        "This procedure involves infusing healthy blood-forming cells into patients with cancers such as leukemia or lymphomas that have not responded to other therapies",
       aneurysmSymptoms: [
         {
           description:
-            'Stem cells may come from the patient (autologous) or from a donor (allogeneic)',
+            "Stem cells may come from the patient (autologous) or from a donor (allogeneic)",
         },
         {
           description:
-            'Before transplantation, high-dose chemotherapy and/or radiation destroy the existing bone marrow',
+            "Before transplantation, high-dose chemotherapy and/or radiation destroy the existing bone marrow",
         },
         {
           description:
-            'The healthy cells begin to grow and make new blood cells, strengthening the immune system',
+            "The healthy cells begin to grow and make new blood cells, strengthening the immune system",
         },
         {
           description:
-            'Close monitoring and supportive care manage side effects and potential complications',
+            "Close monitoring and supportive care manage side effects and potential complications",
         },
         {
           description:
-            'This intensive procedure requires specialized transplant centers with expertise in pediatric cases',
+            "This intensive procedure requires specialized transplant centers with expertise in pediatric cases",
         },
       ],
     },
     {
-      heading: 'Immunotherapy',
+      heading: "Immunotherapy",
       description:
         "This innovative approach harnesses the power of the child's immune system to recognize and attack cancer cells",
       aneurysmSymptoms: [
         {
           description:
-            'Monoclonal antibodies target specific proteins on cancer cells, making them more visible to the immune system',
+            "Monoclonal antibodies target specific proteins on cancer cells, making them more visible to the immune system",
         },
         {
           description:
@@ -227,11 +227,11 @@ const data = {
         },
         {
           description:
-            'Shows promising results in certain childhood cancers, including some forms of leukemia',
+            "Shows promising results in certain childhood cancers, including some forms of leukemia",
         },
         {
           description:
-            'Active research continues to expand applications for pediatric patients, with special focus on children with difficult-to-treat cancers',
+            "Active research continues to expand applications for pediatric patients, with special focus on children with difficult-to-treat cancers",
         },
       ],
     },
@@ -239,32 +239,32 @@ const data = {
 
   side_effects: {
     description:
-      'Side effects such as fatigue, developmental delays, and long-term complications are managed through supportive care, including palliative treatments and psychological support.',
+      "Side effects such as fatigue, developmental delays, and long-term complications are managed through supportive care, including palliative treatments and psychological support.",
   },
 
   best_hospitals: [
-    { city: 'Delhi', url: '/best-cancer-hospital-delhi' },
-    { city: 'Mumbai', url: '/best-cancer-hospital-mumbai' },
-    { city: 'Bangalore', url: '/best-cancer-hospital-bangalore' },
-    { city: 'Chennai', url: '/best-cancer-hospital-chennai' },
-    { city: 'Kochi', url: '/best-cancer-hospital-kochi' },
-    { city: 'Hyderabad', url: '/best-cancer-hospital-hyderabad' },
+    { city: "Delhi", url: "/best-cancer-hospital-delhi" },
+    { city: "Mumbai", url: "/best-cancer-hospital-mumbai" },
+    { city: "Bangalore", url: "/best-cancer-hospital-bangalore" },
+    { city: "Chennai", url: "/best-cancer-hospital-chennai" },
+    { city: "Kochi", url: "/best-cancer-hospital-kochi" },
+    { city: "Hyderabad", url: "/best-cancer-hospital-hyderabad" },
   ],
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `While pediatric cancer poses significant challenges, advancements in medical science offer hope for survival and improved quality of life. The majority of children with cancer achieve remission and go on to lead normal lives with proper treatment and care. Early diagnosis and access to specialized pediatric oncology centers are essential for these positive outcomes. By treating each diagnosis as unique and addressing both medical and emotional aspects, healthcare providers strive to ensure the best possible outcome for every child facing cancer.`,
     },
   ],
-}
+};
 
 function PediatricCancer() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <Title title={data.title} />
+        <Title title={data.title} className="text-4xl text-pink-500" />
         <H2 title={data.description} className="text-start font-light" />
 
         <div className="space-y-2 mb-6">
@@ -299,8 +299,10 @@ function PediatricCancer() {
                   key={index}
                   className="border-b border-yellow-200 pb-2 last:border-0"
                 >
-
-                  <H3 title={method.heading} className="font-semibold text-yellow-800"/>
+                  <H3
+                    title={method.heading}
+                    className="font-semibold text-yellow-800"
+                  />
                   <p className="text-sm">{method.description}</p>
                 </div>
               ))}
@@ -378,7 +380,7 @@ function PediatricCancer() {
                 href={hospital.url}
                 className="text-pink-500 hover:text-pink-700"
               >
-                For The Best Hospital For The Treatment Of Pediatric Cancer In{' '}
+                For The Best Hospital For The Treatment Of Pediatric Cancer In{" "}
                 {hospital.city}, Click Here
               </Link>
             </div>
@@ -398,7 +400,7 @@ function PediatricCancer() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default PediatricCancer
+export default PediatricCancer;

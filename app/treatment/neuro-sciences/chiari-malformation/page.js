@@ -1,64 +1,64 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Title from '@/components/cardiacComponents/Title'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
 
 const data = {
-  title: 'Chiari Malformation',
-  bannerImage: '/neuro-sciences/chiari-malformation.png',
+  title: "Chiari Malformation",
+  bannerImage: "/neuro-sciences/chiari-malformation.png",
   description: `Chiari malformation is a structural defect in the brain that occurs when the lower part of the brain, known as the cerebellum, extends into the spinal canal. This condition can lead to various neurological symptoms and complications, making early diagnosis and management essential. In India, Chiari malformation is increasingly recognised as a significant health issue, particularly among individuals experiencing unexplained neurological symptoms.`,
   overview: ``,
 
   section_1: [
     {
-      title: 'Congenital Factors',
+      title: "Congenital Factors",
       description:
-        'Chiari malformation is often present at birth and may result from abnormal development of the brain and spinal cord during fetal growth.',
+        "Chiari malformation is often present at birth and may result from abnormal development of the brain and spinal cord during fetal growth.",
     },
     {
-      title: 'Genetic Factors',
+      title: "Genetic Factors",
       description:
-        'Some individuals may have a genetic predisposition to Chiari malformation, which can run in families.',
+        "Some individuals may have a genetic predisposition to Chiari malformation, which can run in families.",
     },
     {
-      title: 'Acquired Factors',
+      title: "Acquired Factors",
       description:
-        'In some cases, Chiari malformation may develop later in life due to conditions that affect the structure of the skull or spine, such as spinal cord injury, trauma, or tumours.',
+        "In some cases, Chiari malformation may develop later in life due to conditions that affect the structure of the skull or spine, such as spinal cord injury, trauma, or tumours.",
     },
   ],
 
   complications: [
     {
-      heading: 'Observation',
-      description: '',
+      heading: "Observation",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'In mild cases where symptoms are minimal, regular monitoring may be sufficient.',
+            "In mild cases where symptoms are minimal, regular monitoring may be sufficient.",
         },
       ],
     },
 
     {
-      heading: 'Medications',
-      description: '',
+      heading: "Medications",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            'Pain management and medications to address specific symptoms, such as headaches or dizziness.',
+            "Pain management and medications to address specific symptoms, such as headaches or dizziness.",
         },
       ],
     },
     {
-      heading: 'Physical Therapy',
-      description: '',
+      heading: "Physical Therapy",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `Rehabilitation exercises may help improve coordination and strength.
@@ -68,8 +68,8 @@ const data = {
       ],
     },
     {
-      heading: 'Surgery',
-      description: '',
+      heading: "Surgery",
+      description: "",
       aneurysmSymptoms: [
         {
           description: `In cases where symptoms are severe or progressive, surgical intervention may be necessary. The most common procedure is posterior fossa decompression, which involves removing a small section of bone at the back of the skull to relieve pressure on the cerebellum and improve CSF flow.
@@ -80,15 +80,15 @@ const data = {
   ],
 
   contact: {
-    title: 'Contact Us Today',
-    head: 'Contact HCI for Expert Urological Care',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Urological Care",
     content:
-      'Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.',
+      "Take the first step towards better urological health. Reach out to HCI today to schedule a consultation with one of our skilled urologists and begin your path to recovery and better quality of life.",
   },
 
   conclusion: [
     {
-      header: 'Conclusion',
+      header: "Conclusion",
       paragraph: `
       In India, the recognition and treatment of Chiari malformation is growing, with advancements in diagnostic imaging and surgical techniques. Early intervention and a multidisciplinary approach involving neurologists, neurosurgeons, and rehabilitation specialists are essential for optimizing outcomes and improving the quality of life for individuals affected by this condition. With appropriate care, many patients can manage their symptoms effectively and lead fulfilling lives.
           `,
@@ -97,79 +97,79 @@ const data = {
 
   symptoms: [
     {
-      category: '',
+      category: "",
       description: `Headaches: Often severe and worsening with coughing, sneezing, or straining.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description: 'Neck Pain: Pain or discomfort in the neck area.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Neck Pain: Pain or discomfort in the neck area.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description:
-        'Dizziness or Imbalance: Feeling lightheaded or having difficulty maintaining balance.',
-      bgColor: 'bg-hciPrimary text-white',
+        "Dizziness or Imbalance: Feeling lightheaded or having difficulty maintaining balance.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Numbness and Tingling: Sensations of numbness or tingling in the arms or legs.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Visual Disturbances: Blurred or double vision.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Difficulty with Coordination: Challenges with fine motor skills or coordination.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `Sleep Apnoea: Breathing difficulties during sleep.
 `,
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
   diagnosis: [
     {
-      category: 'Clinical Evaluation',
+      category: "Clinical Evaluation",
       description: `
 Diagnosis typically begins with a thorough medical history and physical examination, focusing on neurological function.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'Imaging Studies',
+      category: "Imaging Studies",
       description: `
 MRI scans are the most effective diagnostic tool, allowing for detailed imaging of the brain and spinal cord to assess the extent of the malformation.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: 'CT Scans',
+      category: "CT Scans",
       description: `
 These may also be used to evaluate structural changes in the skull and spine.`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
-}
+};
 
-console.log(data.complications[0].heading)
+console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <Title title={data.title} />
-        <p className="text-start font-light" >{data.description}</p>
+        <Title title={data.title} className="text-4xl text-pink-500" />
+        <H2 title={data.description} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -272,7 +272,7 @@ function GeneralSurgery() {
         <BookButton />
       </div>
     </>
-  )
+  );
 }
 
-export default GeneralSurgery
+export default GeneralSurgery;
