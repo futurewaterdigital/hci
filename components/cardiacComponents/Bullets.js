@@ -51,7 +51,7 @@ function Bullets({
               <li key={index} className="ml-6 font-light">
                 <p className="text-black font-light">
                   <strong className="text-hciSecondary">{symptom.title}</strong>
-                  {symptom.title && ''} <span dangerouslySetInnerHTML={{__html: symptom.description}}></span>
+                  {symptom.title && ''} <span dangerouslySetInnerHTML={{__html: symptom.description ? symptom.description : ''}}></span>
                 </p>
               </li>
             ))}
