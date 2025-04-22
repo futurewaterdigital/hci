@@ -55,7 +55,7 @@ function Bullets({
                   <strong className="text-hciSecondary">{symptom.title}</strong>
                   {symptom.title && ""}{" "}
                   <span
-                    dangerouslySetInnerHTML={{ __html: symptom.description }}
+                    dangerouslySetInnerHTML={{ __html: symptom.description  ? symptom.description : ''}}
                   ></span>
                 </p>
               </li>
