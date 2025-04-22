@@ -289,14 +289,15 @@ export default function page() {
             text="Several factors can contribute to the weakening of the aortic wall, leading to an aneurysm. Common causes include:"
             textCss="font-light py-2"
             data={vascularConditions}
+            titleCss="text-2xl text-center font-medium"
             myclass="grid lg:grid-cols-2"
           />
           
           <CausesLink head={title} />
-          <H2 title="Risk Factors Include" className="text-center"/>
+          <H2 title="Risk Factors Include" className="text-center font-medium mt-8 text-2xl"/>
           <DataSurgery data={riskFactor} />
           <div>
-          <H2 title="Symptoms" className="text-center"/>
+          <H2 title="Symptoms" className="text-center font-medium mt-8 text-2xl"/>
           <p className="mt-4 text-start font-light">
             Aortic aneurysms often remain asymptomatic until they enlarge or
             rupture. Symptoms vary based on the aneurysm&apos;s location and
@@ -317,7 +318,7 @@ export default function page() {
         <div className="space-y-6">
           <DataBoxes
             title="Diagnosis"
-            titleCss="text-2xl text-center mb-4 font-semibold"
+            titleCss="text-2xl text-center mb-4 font-medium"
             text="Since many aneurysms are asymptomatic, they are often discovered during routine check-ups or imaging tests conducted for other conditions."
             header="Common diagnostic tests include:"
             headerCss="text-xl -mt-6"
@@ -331,7 +332,7 @@ export default function page() {
             aneurysms.
           </p>
           <IssuesLinks head={title} />
-          <H2 title="Treatment" className="text-center" />
+          <H2 title="Treatment" className="text-center font-medium mt-8 text-2xl"/>
           <div>
           <p className="text-start font-light">
             The treatment approach depends on the aneurysm&apos;s size,
