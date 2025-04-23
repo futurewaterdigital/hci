@@ -320,30 +320,29 @@ export const footerMenu = [
   {
     category: 'Top medical Procedures',
     links :[
-      { name: 'ACL, PCL, and MCL Surgeries', url: '/' },
-      { name: 'Angiography', url: '/' },
-      { name: 'Angioplasty', url: '/' },
-      { name: 'Aortic Aneurysm', url: '/' },
-      { name: 'Benign Peripheral Nerve Tumour', url: '/' },
-      { name: 'Brain Metastases', url: '/' },
-      { name: 'Brain Tumour', url: '/' },
-      { name: 'Brain Tumour and Brain Cancer', url: '/' },
-      { name: 'By-Pass Surgery (CABG)', url: '/' },
-      { name: 'Cancer in Women', url: '/' },
-      { name: 'Cancers of the Digestive System', url: '/' },
-      { name: 'Colon polyps', url: '/' },
-      { name: 'Gallbladder Stone', url: '/' },
-      { name: 'Genitourinary Cancer', url: '/' },
-      { name: 'GI Cancer', url: '/' },
-      { name: 'Head & Neck Cancer', url: '/' },
-      { name: 'Hematology', url: '/' },
-      { name: 'Joint Replacement Surgery', url: '/' },
-      { name: 'Lung Cancer', url: '/' },
-      { name: 'Peripheral Nerve Disorders', url: '/' },
-      { name: 'Pituitary Tumours', url: '/' },
-      { name: 'Robotic Knee Replacement Surgery', url: '/' },
-      { name: 'Spinal Cord Disorder', url: '/' },
-      { name: 'Spinal Disorder', url: '/' },
+      { name: 'ACL, PCL, and MCL Surgeries', url: '/treatment/orthopaedics/surgeries' },
+      { name: 'Angiography', url: '/treatment/cardiac-sciences/angiography' },
+      { name: 'Angioplasty', url: '/treatment/cardiac-sciences/angioplasty' },
+      { name: 'Aortic Aneurysm', url: '/treatment/cardiac-sciences/aortic-aneurysm' },
+      { name: 'Benign Peripheral Nerve Tumour', url: '/treatment/neuro-sciences/benign-peripheral-nerve-tumour' },
+      { name: 'Brain Metastases', url: '/treatment/neuro-sciences/brain-metastases' },
+      
+      { name: 'Brain Tumour and Brain Cancer', url: '/treatment/neuro-sciences/brain-tumour-and-brain-cancer' },
+      { name: 'By-Pass Surgery (CABG)', url: '/treatment/cardiac-sciences/coronary-artery-bypass-surgery' },
+      { name: 'Cancer in Women', url: '/treatment/oncology/cancer-in-women' },
+      { name: 'Cancers of the Digestive System', url: '/treatment/gastroenterology/cancers-digestive-system' },
+      { name: 'Colon polyps', url: '/treatment/gastroenterology/colon-polyps' },
+      { name: 'Gallbladder Stone', url: '/treatment/gastroenterology/gallbladder-stones' },
+      { name: 'Genitourinary Cancer', url: '/treatment/oncology/genitourinary-cancer' },
+      { name: 'GI Cancer', url: '/treatment/oncology/gi-cancer' },
+      { name: 'Head & Neck Cancer', url: '/treatment/oncology/head-neck-cancer' },
+      { name: 'Hematology', url: '/treatment/oncology/hematology' },
+      { name: 'Joint Replacement Surgery', url: '/treatment/orthopaedics/joint-replacement-surgery' },
+      { name: 'Lung Cancer', url: '/treatment/oncology/lung-cancer' },
+      { name: 'Peripheral Nerve Disorders', url: '/treatment/neuro-sciences/peripheral-nerve-disorders' },
+      { name: 'Pituitary Tumours', url: '/treatment/neuro-sciences/pituitary-tumours' },
+      { name: 'Robotic Knee Replacement Surgery', url: '/treatment/orthopaedics/robotic-knee-replacement-surgery' },
+      { name: 'Spinal Disorder', url: '/treatment/orthopaedics/spinal-disorders' },
     ]
     
   },
@@ -356,29 +355,29 @@ export const footerMenu = [
         { name: 'Oncology', url: '/treatment/oncology' },
         { name: 'Neuro Science', url: '/treatment/neuro-sciences' },
         { name: 'Gastroenterology', url: '/treatment/gastroenterology' },
-        { name: 'Orthopaedics', url: '/treatment/orthopaedics' },
+        { name: 'Orthopaedics', url: '/treatment/orthopedics' },
         { name: 'Others', url: '/treatment/others' },
       ],
   },
   {
     category: 'Featured Hospitals',
     links: [
-      { name: 'Apollo', url: '/treatment/cardiac-sciences' },
-      { name: 'Aster', url: '/treatment/oncology' },
-      { name: 'Fortis', url: '/treatment/neuro-sciences' },
-      { name: 'Manipal', url: '/treatment/gastroenterology' },
-      { name: 'Max', url: '/treatment/orthopaedics' },
+      { name: 'Apollo', url: '/hospital/apollo' },
+      { name: 'Aster', url: '/hospital/aster' },
+      { name: 'Fortis', url: '/hospital/fortis' },
+      { name: 'Manipal', url: '/hospital/manipal' },
+      { name: 'Max', url: '/hospital/max' },
       
     ],
       },
       {
         category: 'Quick Links',
         links: [
-          { name: 'Home', url: '/treatment/cardiac-sciences' },
-          { name: 'About Us', url: '/treatment/oncology' },
-          { name: 'Our Services', url: '/treatment/neuro-sciences' },
-          { name: 'Cost Comparison', url: '/treatment/gastroenterology' },
-          { name: 'Contact us', url: '/treatment/orthopaedics' },
+          { name: 'Home', url: '/' },
+          { name: 'About Us', url: '/about-us' },
+          { name: 'Our Services', url: '/our-services' },
+          { name: 'Cost Comparison', url: '/cost-comparison' },
+          { name: 'Contact us', url: '/contact-us' },
           
         ],
           },
@@ -389,19 +388,19 @@ export const footerMenu = [
       {
         category: 'Featured Cities',
         links: [
-          { name: 'Bangalore', url: '/treatment/cardiac-sciences' },
-          { name: 'Chennai', url: '/treatment/oncology' },
-          { name: 'Delhi', url: '/treatment/neuro-sciences' },
-          { name: 'Hyderabad', url: '/treatment/gastroenterology' },
-          { name: 'Mumbai', url: '/treatment/orthopaedics' },
+          { name: 'Bangalore', url: '/city/bengaluru' },
+          { name: 'Chennai', url: '/city/chennai' },
+          { name: 'Delhi', url: '/city/delhi' },
+          { name: 'Hyderabad', url: '/city/hyderabad' },
+          { name: 'Mumbai', url: '/city/mumbai' },
           
         ],
     },
     {
       category: 'Patient Care',
       links: [
-        { name: 'Cost Comparison', url: '/treatment/cardiac-sciences' },
-        { name: 'Testimonials', url: '/treatment/oncology' },
+        { name: 'Cost Comparison', url: '/cost-comparison' },
+        { name: 'Testimonials', url: '/testimonials' },
         
         
       ],
@@ -409,10 +408,10 @@ export const footerMenu = [
         {
           category: 'Useful Links',
           links: [
-            { name: 'FAQs', url: '/treatment/cardiac-sciences' },
-            { name: 'Blog', url: '/treatment/oncology' },
-            { name: 'Medical Updates', url: '/treatment/neuro-sciences' },
-            { name: 'Terms & Conditions', url: '/treatment/gastroenterology' },
+            { name: 'FAQs', url: '/faqs' },
+            { name: 'Blog', url: '/blog' },
+            { name: 'Medical Updates', url: '/medical-updates' },
+            { name: 'Terms & Conditions', url: '/terms-and-conditions' },
             
             
           ],
@@ -420,9 +419,9 @@ export const footerMenu = [
       {
         category: 'International Patients',
         links: [
-          { name: 'Hospitals', url: '/treatment/cardiac-sciences' },
-          { name: 'Get an Opinion', url: '/treatment/oncology' },
-          { name: 'Request an Appointment', url: '/treatment/neuro-sciences' },
+          { name: 'Hospitals', url: '/hospitals' },
+          { name: 'Get an Opinion', url: '/get-an-opinion' },
+          { name: 'Request an Appointment', url: '/request-an-appointment' },
           
           
           

@@ -3,7 +3,7 @@ import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
 
 export const metadata = {
-  title: 'Benign peripheral nerve tumour',
+  title: 'Benign Peripheral Nerve Tumour',
   description: 'Healthcare International.',
   metadataBase: new URL('https://healthcareinternational.in/'),
   openGraph: {

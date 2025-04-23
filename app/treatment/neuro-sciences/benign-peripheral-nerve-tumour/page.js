@@ -12,7 +12,7 @@ import H1 from '@/components/ui/h1'
 import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
-  title: "Benign peripheral nerve tumour",
+  title: "Benign Peripheral Nerve Tumour",
   bannerImage: "/neuro-sciences/benign-peripheral-nerve-tumour.png",
   description: `Your peripheral nerves connect your brain and spinal cord to other parts of your body, allowing you to perform various functions such as walking, blinking, swallowing, and gripping objects. Tumours may occasionally develop on these nerves, though the precise cause is often unknown, with some linked to genetic conditions. Most peripheral nerve tumours are benign (non-cancerous), but they can still cause nerve damage and loss of muscle control. It’s essential to consult a healthcare professional if you experience unusual lumps, pain, tingling, numbness, or muscle weakness.`,
   overview: ``,

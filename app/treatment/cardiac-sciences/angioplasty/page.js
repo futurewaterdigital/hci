@@ -4,10 +4,9 @@ const bannerImage = '/cardio/main-banner.png'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import DataBoxes from '@/components/cardiacComponents/Box'
-import Title from '@/components/cardiacComponents/Title'
 import H2 from '@/components/ui/h2'
 import H3 from '@/components/ui/h3'
-
+import H1 from '@/components/ui/h1'
 function page() {
   const title = 'Angioplasty'
   const conditionsData = [
@@ -96,8 +95,9 @@ function page() {
       <Banner image={bannerImage} />
       {/* <!-- Content --> */}
       <div className="lg:container mx-auto mt-8 space-y-12">
+      <H1 title="Angioplasty" />
         <div className="space-y-4">
-        <Title title={title} />
+          <H2 title="What is Angioplasty?" className="text-center text-2xl font-medium"/>
         <p className="text-start font-light">
           Angioplasty, also known as{' '}
           <strong>percutaneous coronary intervention (PCI)</strong>, is a
@@ -110,7 +110,7 @@ function page() {
           </p>
         </div>
         <div className="space-y-4">
-        <H2 title="How is Angioplasty Performed?" className="text-center"/>
+        <H2 title="How is Angioplasty Performed?" className="text-center text-2xl font-medium"/>
         <div className="space-y-4">
           <p className="font-light">
             During angioplasty, a thin tube (catheter) with a small balloon at
@@ -132,7 +132,7 @@ function page() {
         <div className="space-y-4">
         <DataBoxes
             title="Additional Techniques"
-            titleCss="font-semibold text-2xl text-center mb-4"
+            titleCss="font-medium text-2xl text-center mb-4"
             data={conditionsData}
             text=""
             header=""
