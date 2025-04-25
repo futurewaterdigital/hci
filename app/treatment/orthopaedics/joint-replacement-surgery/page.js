@@ -140,6 +140,51 @@ const data = {
         },
       ],
     },
+    {
+      heading: 'Surgical Procedure:',
+      aneurysmSymptoms: [
+       
+        {
+          description:
+            'Hip Replacement: Involves replacing the ball and socket of the hip joint with prosthetic components.',
+        },
+        {
+          description:
+            'Knee Replacement: The damaged surfaces of the knee joint are replaced with metal and plastic components.',
+        },
+        {
+          description: 'Shoulder and Elbow Replacement: These procedures involve replacing the damaged joint surfaces with artificial implants to restore function and reduce pain.',
+        },
+      ],
+    },
+
+    {
+      heading: 'Types of Implants:',
+      aneurysmSymptoms: [
+        {
+          description:
+            'In some cases, the implant is fixed to the bone using a special bone cement, while in others, the bone is allowed to grow into the implant for natural fixation.',
+        },
+      ],
+    },
+
+    {
+      heading: 'Surgical Procedure:',
+      aneurysmSymptoms: [
+        {
+          description:
+            'Rehabilitation is crucial for regaining strength, mobility, and function in the replaced joint. A customized exercise programme is typically provided.',
+        },
+        {
+          description:
+            'Pain Management: Medications and therapies are used to control pain after surgery, ensuring comfort and promoting recovery.',
+        },
+        {
+          description:
+            'Follow-up Appointment: Regular check-ups with the surgeon to monitor healing and the function of the artificial joint.',
+        },
+      ],
+    },
   ],
 
   footerData: [
@@ -192,9 +237,9 @@ function JointReplacementSurgery() {
         <H1 title={title}/>
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-        <H2 title="Causes" className="text-2xl font-medium mb-4 text-center" />
+        <H2 title="Causes Leading to Joint Replacement Surgery" className="text-2xl font-medium mb-4 text-center" />
         <p className="font-light">
-          Injuries to the ACL, PCL, or MCL are often caused by:
+        Several conditions can lead to the need for joint replacement surgery, including:
         </p>
         <ListBox data={data} />
         <KnowMore title={title} />
@@ -207,7 +252,7 @@ function JointReplacementSurgery() {
             <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
-                text="The symptoms of ACL, PCL, or MCL injuries can include:"
+                text="Joint replacement surgery is typically considered when non-surgical treatments are no longer effective, and symptoms include:"
                 textCss="font-light py-4"
                 titleCss="text-black font-medium text-center text-2xl"
                 header=""
@@ -219,7 +264,7 @@ function JointReplacementSurgery() {
             <div className='space-y-4'>
               <DataBoxes
                 title="Diagnosis"
-                text="Accurate diagnosis is essential to determine the extent of ligament damage and the appropriate treatment approach. Common diagnostic methods include:"
+                text="Before deciding on joint replacement surgery, a thorough evaluation is carried out, including:"
                 textCss="font-light py-4"
                 header=""
                 titleCss="text-black font-medium text-center text-2xl"

@@ -3,6 +3,10 @@ import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import H1 from "@/components/ui/h1";
 import Banner from "@/components/Common/Banner";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import KnowMore from "@/components/ui/KnowMore";
 
 const data = {
   title: "Genitourinary Cancer",
@@ -13,7 +17,7 @@ const data = {
   cancerTypes: [
     {
       name: "BLADDER CANCER",
-      link: "/treatment/oncology/bowel-cancer",
+      link: "/treatment/oncology/genitourinary-cancer",
     },
     {
       name: "KIDNEY CANCER",
@@ -21,7 +25,7 @@ const data = {
     },
     {
       name: "PROSTATE CANCER",
-      link: "/treatment/oncology/liver-cancer",
+      link: "/treatment/oncology/prostate-cancer",
     },
   ],
 
@@ -226,9 +230,11 @@ const riskFactors = [
 
 function GenitourinaryCancer() {
   return (
+    <>
+       <Banner image="/oncology/genitourinary-banner.png" />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Banner Image */}
-      <Banner image="/oncology/genitourinary-banner.png" />
+     
       {/* Title Section */}
       <div className="text-center mb-12">
         <H1 title={data.title} />
@@ -239,7 +245,7 @@ function GenitourinaryCancer() {
           {data.cancerTypes.map((item, index) => (
             <Link
               key={index}
-              href={""}
+              href={item.link}
               className="hover:text-hciSecondary cursor-pointer"
             >
               {item.name}
@@ -334,15 +340,7 @@ function GenitourinaryCancer() {
               </div>
             ))}
           </div>
-          <div className="mt-4">
-            <Link
-              href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-hciPrimary font-semibold underline"
-            >
-              To get the best diagnosis of bladder cancer and related issues,
-              click here
-            </Link>
-          </div>
+          <KnowMore title={data.title} />
         </div>
       </div>
 
@@ -393,27 +391,18 @@ function GenitourinaryCancer() {
 
       {/* Conclusion */}
       <div className="mt-12">
-        <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
+        <Conclusion data={data.conclusion} />
         {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
-        <p className="text-gray-600 font-light">
-          {data.conclusion[0].paragraph}
-        </p>
       </div>
 
       {/* Links */}
       <div className="mt-8 space-y-4">
-        {data.links.map((link, index) => (
-          <div key={index} className="text-start">
-            <Link
-              href={link.url}
-              className="text-hciPrimary font-semibold underline"
-            >
-              {link.text}
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
+        <FooterLinks head={data.title} />
+        <BookButton />
+      
+    </div>  
+    </div>  
+    </>
   );
 }
 

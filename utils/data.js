@@ -376,7 +376,7 @@ export const footerMenu = [
           { name: 'Home', url: '/' },
           { name: 'About Us', url: '/about-us' },
           { name: 'Our Services', url: '/our-services' },
-          { name: 'Cost Comparison', url: '/cost-comparison' },
+          { name: 'Cost Comparison', url: '/price-comparison' },
           { name: 'Contact us', url: '/contact-us' },
           
         ],
@@ -399,7 +399,7 @@ export const footerMenu = [
     {
       category: 'Patient Care',
       links: [
-        { name: 'Cost Comparison', url: '/cost-comparison' },
+        { name: 'Cost Comparison', url: '/price-comparison' },
         { name: 'Testimonials', url: '/testimonials' },
         
         

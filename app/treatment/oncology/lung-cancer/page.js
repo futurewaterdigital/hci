@@ -3,12 +3,17 @@ import Banner from "@/components/Common/Banner";
 import H2 from "@/components/ui/h2";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
-import Link from "next/link";
+
+import H1 from "@/components/ui/h1";
+import KnowMore from "@/components/ui/KnowMore";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+
 
 const data = {
   title: "Lung Cancer",
   bannerImage: "/oncology/lung-cancer-banner.png",
-  description: `Lung cancer is one of the most serious health concerns in India, significantly contributing to cancer-related mortality. Although often associated with smoking, this cancer can also develop in non-smokers due to various predispositions. Early detection and a comprehensive treatment approach are crucial to positively influence the those affected.`,
+  description: `Lung cancer is a major health concern, significantly contributing to cancer-related deaths across the population. Although often associated with smoking, this cancer can also develop due to environmental factors or genetic predisposition. Early detection and a comprehensive treatment approach are critical to improving outcomes for those affected.`,
   overview:
     "Several factors contribute to the development of lung cancer, with smoking being the leading cause. However, environmental exposure can also be an issue to other environmental and genetic factors.",
 
@@ -272,14 +277,13 @@ const data = {
 
 function LungCancer() {
   return (
-    <div className="max-w-7xl relative mx-auto px-4 sm:px-6 lg:px-8">
+    <>
       <Banner image={data.bannerImage} />
-      <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <div className="text-5xl mt-14 text-center text-[#D84598] font-semibold">
-          {data.title}
-        </div>
+      <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
+        <H1 title={data.title} />
         <div className="mt-6">
-          <p className="text-gray-600 text-lg font-light">{data.description}</p>
+          <p className="text-gray-600  font-light">{data.description}</p>
         </div>
 
         <H2
@@ -298,7 +302,7 @@ function LungCancer() {
                 title={cause.title}
                 className="text-lg font-semibold text-blue-600 mb-2"
               /> */}
-              <h3 className="text-lg font-semibold text-[#0E56A0] mb-2">
+              <h3 className="text-lg font-medium text-[#0E56A0] mb-2">
                 {" "}
                 {cause.title}
               </h3>
@@ -310,19 +314,14 @@ function LungCancer() {
         </div>
 
         <div className="text-start mb-8">
-          <Link
-            href="/treatment/oncology/lung-cancer-info"
-            className="text-hciPrimary font-semibold underline"
-          >
-            To Know More About Lung Cancer And Its Treatment, Click Here
-          </Link>
+        <KnowMore title={data.title} />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div>
             <H2
               title="Symptoms of Lung Cancer"
-              className="text-xl font-semibold mb-4 text-center"
+              className="text-xl font-medium mb-4 text-center"
             />
             <p className="mb-4 font-light">
               In its early stages, lung cancer may not cause noticeable
@@ -337,19 +336,13 @@ function LungCancer() {
               />
             </div>
             <div className="text-start mt-4 mb-8">
-              <Link
-                href="/treatment/oncology/lung-cancer-causes"
-                className="text-[#0E56A0] font-semibold underline"
-              >
-                To Know More About Lung Cancer And Its Causes And Treatment,
-                Click Here
-              </Link>
+           <KnowMore title={data.title} />
             </div>
           </div>
           <div>
             <H2
               title="Diagnosis of Lung Cancer"
-              className="text-xl font-semibold mb-4 text-center"
+              className="text-xl font-medium mb-4 text-center"
             />
             <p className="mb-4 font-light">
               Lung cancer is diagnosed through a combination of physical exams,
@@ -364,20 +357,14 @@ function LungCancer() {
               />
             </div>
             <div className="text-start mt-4 mb-8">
-              <Link
-                href="/treatment/oncology/lung-cancer-diagnosis"
-                className="text-[#0E56A0] font-semibold underline"
-              >
-                To Get The Best Diagnosis For Lung Cancer And Related Issues,
-                Click Here
-              </Link>
+            <KnowMore title={data.title} />
             </div>
           </div>
         </div>
 
         <H2
           title="Treatment for Lung Cancer"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light mb-4">
           Lung cancer treatment is varialized based on the cancer type, stage,
@@ -391,13 +378,13 @@ function LungCancer() {
               key={index}
               className="border border-pink-400 rounded-lg p-4 shadow-sm"
             >
-              <h2 className="text-lg font-semibold text-[#0E56A0] mb-2">
+              <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
                 {treatment.heading}
               </h2>
-              <p className="text-gray-700 mb-2 text-sm">
+              <p className="text-gray-700 mb-2 font-light">
                 {treatment.description}
               </p>
-              <ul className="text-xs text-gray-600 list-disc pl-5">
+              <ul className="font-light text-gray-600 list-disc pl-5">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
                   <li key={idx}>{symptom.description}</li>
                 ))}
@@ -412,14 +399,14 @@ function LungCancer() {
               key={index}
               className="border border-pink-400 rounded-lg p-4 shadow-sm"
             >
-              <h2 className="text-lg font-semibold text-[#0E56A0] mb-2">
+              <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
                 {treatment.heading}
               </h2>
 
-              <p className="text-gray-700 mb-2 text-sm">
+              <p className="text-gray-700 mb-2 font-light">
                 {treatment.description}
               </p>
-              <ul className="text-xs text-gray-600 list-disc pl-5">
+              <ul className="font-light text-gray-600 list-disc pl-5">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
                   <li key={idx}>{symptom.description}</li>
                 ))}
@@ -434,14 +421,14 @@ function LungCancer() {
               key={index}
               className="border border-pink-400 rounded-lg p-4 shadow-sm"
             >
-              <h2 className="text-lg font-semibold text-[#0E56A0] mb-2">
+              <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
                 {treatment.heading}
               </h2>
 
-              <p className="text-gray-700 mb-2 text-sm">
+              <p className="text-gray-700 mb-2 font-light">
                 {treatment.description}
               </p>
-              <ul className="text-xs text-gray-600 list-disc pl-5">
+              <ul className="font-light text-gray-600 list-disc pl-5">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
                   <li key={idx}>{symptom.description}</li>
                 ))}
@@ -450,36 +437,14 @@ function LungCancer() {
           ))}
         </div>
 
-        <Conclusion data={data.conclusion} />
-
-        {/* Links */}
-        <div className="space-y-2 mb-8">
-          {data.best_hospitals.map((hospital, index) => (
-            <div
-              key={index}
-              className="text-start py-2 border-b border-blue-100 last:border-0"
-            >
-              <Link
-                href={hospital.url}
-                className="text-hciPrimary font-semibold underline"
-              >
-                For The Best Hospital For The Treatment Of Lung Cancer In{" "}
-                {hospital.city}, Click Here
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mb-8">
-          <Link
-            href="/book-appointment"
-            className="inline-block px-8 py-3 bg-pink-500 text-white rounded-md hover:bg-[#D84498] transition-colors font-semibold"
-          >
-            BOOK AN APPOINTMENT
-          </Link>
+        <div className="space-y-4 mt-8">
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
         </div>
       </div>
-    </div>
+        </div>
+        </>
   );
 }
 

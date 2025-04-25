@@ -82,7 +82,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      Spinal disorders can significantly impact an individual's daily life and overall health. Early diagnosis and a comprehensive treatment plan are crucial for effective management and improving quality of life. With advancements in medical technology and rehabilitation strategies, many individuals with spinal disorders can achieve symptom relief and regain function, allowing them to return to their normal activities. Regular follow-up care and adherence to treatment recommendations are vital for optimizing recovery and preventing future complications.
+      The recovery from an acetabular fracture depends on the severity of the injury, patient age, and adherence to rehabilitation protocols. While some individuals regain normal hip function, others may experience long-term limitations or chronic pain. Physical therapy plays a crucial role in restoring movement and strength, with full recovery often taking between 6 to 12 months. Early intervention and proper management can improve outcomes, helping patients return to everyday activities safely and effectively.
           `,
     },
   ],

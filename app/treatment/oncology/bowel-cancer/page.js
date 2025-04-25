@@ -1,8 +1,12 @@
 import React from "react";
-import Title from "@/components/cardiacComponents/Title";
+import Banner from "@/components/Common/Banner";
+import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
-import Link from "next/link";
 import H3 from "@/components/ui/h3";
+import KnowMore from "@/components/ui/KnowMore";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
 
 const data = {
   title: "Bowel Cancer",
@@ -19,31 +23,31 @@ const data = {
           title: "Diet",
           description:
             "High-fat and high-processed foods, and low fiber increases the risk of developing bowel cancer.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
         {
           title: "Family History",
           description:
             "A family history of bowel cancer or polyps heightens an individual's risk due to inherited genetic factors.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
         {
           title: "Inflammatory Bowel Disease",
           description:
             "Conditions like ulcerative colitis or Crohn's disease which can lead to chronic inflammation in the bowel.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
         {
           title: "Lifestyle Factors",
           description:
             "Sedentary lifestyle, high alcohol consumption, and a smoking lifestyle contribute to the development of bowel cancer.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
         {
           title: "Obesity",
           description:
             "Being overweight or obese has been linked to an increased risk of bowel cancer.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
       ],
     },
@@ -59,29 +63,29 @@ const data = {
           title: "Changes in bowel habits",
           description:
             "Persistent changes in bowel movements, including diarrhea or constipation.",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Blood in Stool",
           description:
             "Blood appearing in stool or rectal bleeding, which requires immediate attention.",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Abdominal Pain",
           description: "Persistent abdominal pain, bloating, or discomfort.",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Unexplained Weight Loss",
           description: "Significant weight loss without apparent reason.",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Weakness or Fatigue",
           description:
             "Persistent tiredness and weakness that affects daily activities.",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2 h-20 font-light",
         },
       ],
     },
@@ -97,25 +101,25 @@ const data = {
           title: "Colonoscopy",
           description:
             "A thin tube with a camera is used to examine the entire colon and rectum for any abnormalities.",
-          className: "bg-pink-500 text-white p-2 rounded mb-2",
+          className: "bg-pink-500 text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Sigmoidoscopy",
           description:
             "Similar to colonoscopy but examines only the lower part of the bowel and rectum.",
-          className: "bg-pink-500 text-white p-2 rounded mb-2",
+          className: "bg-pink-500 text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Stool Test",
           description:
             "Tests like FOBT or FIT to check for blood or abnormal DNA/RNA in stool samples.",
-          className: "bg-pink-500 text-white p-2 rounded mb-2",
+          className: "bg-pink-500 text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "CT Scan/MRI",
           description:
             "Advanced imaging to determine the extent of cancer and check if it has spread to other organs.",
-          className: "bg-pink-500 text-white p-2 rounded mb-2",
+          className: "bg-pink-500 text-white p-2 rounded mb-2 h-20 font-light",
         },
       ],
     },
@@ -213,44 +217,39 @@ const data = {
 
 function BowelCancer() {
   return (
+    <>
+    <Banner image="/oncology/bowel-cancer.png" />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Title title={data.title} className="text-pink-500" />
+      <H1 title={data.title} />
       <div className="mt-6">
-        <p className="text-gray-600 text-lg font-light">{data.description}</p>
+        <p className="text-gray-600 font-light">{data.description}</p>
       </div>
 
       {/* Causes Section */}
       <div className="mt-12">
-        <H2 title={data.causes[0].heading} className="font-semibold mb-4" />
+        <H2 title={data.causes[0].heading} className="font-medium mb-4 text-2xl" />
         <p className="text-gray-600 mb-6 font-light">
           {data.causes[0].description}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.causes[0].items.map((cause, idx) => (
             <div key={idx} className={cause.className}>
-              <H3 title={cause.title} className="font-semibold mb-2" />
-              <p className="text-sm font-light">{cause.description}</p>
+              <H3 title={cause.title} className="font-medium mb-2 text-lg" />
+              <p className="font-light">{cause.description}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="mt-6 text-center">
-        <Link
-          href="/treatment/oncology/bowel-cancer-info"
-          className="text-hciPrimary font-semibold underline"
-        >
-          To Know More About Bowel Cancer And Its Treatment, Click Here
-        </Link>
-      </div>
+    <KnowMore title={data.title} />
 
       {/* Symptoms Section */}
       <div className="mt-12">
-        <H2 title={data.symptoms[0].heading} className="font-semibold mb-4" />
+        <H2 title={data.symptoms[0].heading} className="font-medium mb-4 text-2xl" />
         <p className="text-gray-600 mb-6 font-light">
           {data.symptoms[0].description}
         </p>
-        <div className="space-y-2">
+        <div className="grid grid-cols-2 gap-2">
           {data.symptoms[0].items.map((symptom, idx) => (
             <div key={idx} className={symptom.className}>
               <strong>{symptom.title}:</strong> {symptom.description}
@@ -261,11 +260,11 @@ function BowelCancer() {
 
       {/* Diagnosis Section */}
       <div className="mt-12">
-        <H2 title={data.diagnosis[0].heading} className="font-semibold mb-4" />
+        <H2 title={data.diagnosis[0].heading} className="font-medium mb-4 text-2xl" />
         <p className="text-gray-600 mb-6 font-light">
           {data.diagnosis[0].description}
         </p>
-        <div className="space-y-2">
+        <div className="grid grid-cols-2 gap-2">
           {data.diagnosis[0].items.map((test, idx) => (
             <div key={idx} className={test.className}>
               <strong>{test.title}:</strong> {test.description}
@@ -274,19 +273,11 @@ function BowelCancer() {
         </div>
       </div>
 
-      <div className="mt-6 text-center">
-        <Link
-          href="/treatment/oncology/bowel-cancer-causes"
-          className="text-hciPrimary font-semibold underline"
-        >
-          To Know More About Bowel Cancer And Its Causes And Treatment, Click
-          Here
-        </Link>
-      </div>
+    <KnowMore title={data.title} />
 
       {/* Treatment Section */}
       <div className="mt-12">
-        <H2 title={data.treatments[0].heading} className="font-semibold mb-6" />
+        <H2 title={data.treatments[0].heading} className="font-medium mb-6 text-2xl" />
         <p className="text-gray-600 mb-6 font-light">
           {data.treatments[0].description}
         </p>
@@ -296,13 +287,13 @@ function BowelCancer() {
               <div key={idx} className="space-y-2">
                 <H3
                   title={treatment.title}
-                  className="text-lg font-semibold text-pink-600"
+                    className="text-lg font-medium text-hciSecondary"
                 />
                 {treatment.items ? (
                   <div className="space-y-2 pl-4">
                     {treatment.items.map((item, i) => (
-                      <div key={i}>
-                        <span className="font-medium text-pink-600">
+                      <div key={i} className="font-light">
+                        <span className="font-medium text-hciSecondary">
                           {item.name}:
                         </span>{" "}
                         {item.description}
@@ -320,33 +311,14 @@ function BowelCancer() {
         </div>
       </div>
 
-      {/* Conclusion */}
-      <div className="mt-12">
-        <div className="bg-gray-50 p-6 rounded-lg">
-          <H2
-            title={data.conclusion[0].header}
-            className="font-semibold mb-4"
-          />
-          <p className="text-gray-600 font-light">
-            {data.conclusion[0].paragraph}
-          </p>
-        </div>
-      </div>
-
-      {/* Links */}
-      <div className="mt-8 space-y-4">
-        {data.links.map((link, index) => (
-          <div key={index} className="text-center">
-            <Link
-              href={link.url}
-              className="text-hciPrimary font-semibold underline"
-            >
-              {link.text}
-            </Link>
+        {/* Conclusion */}
+        <div className="mt-12">
+      <Conclusion data={data.conclusion} />
+      <FooterLinks head={data.title} />
+          <BookButton />
           </div>
-        ))}
-      </div>
     </div>
+    </>
   );
 }
 

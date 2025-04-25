@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
+import H1 from "@/components/ui/h1";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
@@ -264,7 +264,8 @@ function PediatricCancer() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
+        
+        <H1 title={data.title} />
         <H2 title={data.description} className="text-start font-light" />
 
         <div className="space-y-2 mb-6">
@@ -287,7 +288,7 @@ function PediatricCancer() {
           <div>
             <H2
               title="Diagnosis of Pediatric Cancer"
-              className="text-xl font-semibold mb-4"
+              className="text-xl font-medium mb-4"
             />
             <p className="mb-4 font-light">
               Childhood cancers are often discovered through persistent symptoms
@@ -301,7 +302,7 @@ function PediatricCancer() {
                 >
                   <H3
                     title={method.heading}
-                    className="font-semibold text-yellow-800"
+                    className="font-medium text-yellow-800"
                   />
                   <p className="text-sm">{method.description}</p>
                 </div>
@@ -312,7 +313,7 @@ function PediatricCancer() {
 
         <H2
           title="Causes of Pediatric Cancer"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <div className="mb-8">
           {data.causes.map((cause, index) => (
@@ -333,7 +334,7 @@ function PediatricCancer() {
 
         <H2
           title="Treatment Options for Pediatric Cancer"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="font-light mb-4">
           Childhood cancer treatment varies based on the type and stage of
@@ -349,55 +350,17 @@ function PediatricCancer() {
           />
         </div>
 
-        <div className="bg-gray-50 p-4 rounded-lg mb-8">
+        <div className=" p-4 rounded-lg mb-8">
           <p className="font-light">{data.side_effects.description}</p>
         </div>
 
-        <div className="text-center mb-8">
-          <Link
-            href="/treatment/oncology/pediatric-cancer-causes"
-            className="inline-block px-6 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors"
-          >
-            To Know More About Pediatric Cancer And Its Causes And Treatment,
-            Click Here
-          </Link>
-        </div>
 
+        <div className="my-10">
         <Conclusion data={data.conclusion} />
-
-        <H2
-          title="To Consult The Best Doctor For The Treatment Of Pediatric Cancer, Click Here"
-          className="text-xl font-semibold mb-4 text-center text-pink-600"
-        />
-
-        <div className="space-y-2 mb-8">
-          {data.best_hospitals.map((hospital, index) => (
-            <div
-              key={index}
-              className="text-center py-2 border-b border-pink-100 last:border-0"
-            >
-              <Link
-                href={hospital.url}
-                className="text-pink-500 hover:text-pink-700"
-              >
-                For The Best Hospital For The Treatment Of Pediatric Cancer In{" "}
-                {hospital.city}, Click Here
-              </Link>
-            </div>
-          ))}
+<FooterLinks head={data.title} />
+<BookButton />
         </div>
-
-        <div className="text-center mb-8">
-          <Link
-            href="/book-appointment"
-            className="inline-block px-8 py-3 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors font-semibold"
-          >
-            BOOK AN APPOINTMENT
-          </Link>
-        </div>
-
-        <FooterLinks head={data.title} />
-        <BookButton />
+      
       </div>
     </>
   );

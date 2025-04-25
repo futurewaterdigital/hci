@@ -1,8 +1,13 @@
 import React from "react";
-import Title from "@/components/cardiacComponents/Title";
 import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import H3 from "@/components/ui/h3";
+import Banner from "@/components/Common/Banner";
+import H1 from "@/components/ui/h1";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+
 const data = {
   title: "Prostate Cancer",
   description:
@@ -223,8 +228,10 @@ const data = {
 
 function ProstateCancer() {
   return (
+    <>
+    <Banner image="/oncology/prostate-cancer.png" />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Title title={data.title} className="text-pink-500" />
+      <H1 title={data.title} />
       <div className="mt-6">
         <p className="text-gray-600 text-lg font-light">{data.description}</p>
       </div>
@@ -354,31 +361,15 @@ function ProstateCancer() {
 
       {/* Conclusion */}
       <div className="mt-12">
-        <div className="bg-gray-50 p-6 rounded-lg">
-          <H2
-            title={data.conclusion[0].header}
-            className="text-xl font-semibold mb-4"
-          />
-          <p className="text-gray-600 font-light">
-            {data.conclusion[0].paragraph}
-          </p>
-        </div>
+        <Conclusion data={data.conclusion} />
+        <FooterLinks head={data.title} />
+        <BookButton />
       </div>
 
       {/* Links */}
-      <div className="mt-8 space-y-4">
-        {data.links.map((link, index) => (
-          <div key={index} className="text-center">
-            <Link
-              href={link.url}
-              className="text-hciPrimary font-semibold underline"
-            >
-              {link.text}
-            </Link>
-          </div>
-        ))}
-      </div>
+    
     </div>
+    </>
   );
 }
 
