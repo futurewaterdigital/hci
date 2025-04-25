@@ -6,7 +6,7 @@ import H1 from "@/components/ui/h1";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
-
+import Link from "next/link";
 
 const data = {
   title: "Prostate Cancer",

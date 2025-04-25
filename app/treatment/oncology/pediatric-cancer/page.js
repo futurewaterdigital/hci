@@ -7,6 +7,7 @@ import H2 from "@/components/ui/h2";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import Link from "next/link";
 import H1 from "@/components/ui/h1";
+import H3 from "@/components/ui/h3";
 
 const data = {
   title: "Pediatric Cancer",
