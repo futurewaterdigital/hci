@@ -2,10 +2,16 @@ import React from "react";
 import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import H1 from "@/components/ui/h1";
-
+import Banner from "@/components/Common/Banner";
+import KnowMore from "@/components/ui/KnowMore";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import IssuesLink from "@/components/ui/IssuesLinks";
 const data = {
   title: "GI Cancer",
   subtitle: "Genitourinary Cancer",
+  bannerImage: "/oncology/GICancer_Banner.png",
   description:
     "Gastrointestinal (GI) cancer refers to a group of cancers that affect the digestive system and associated organs. These cancers can develop in any part of the gastrointestinal tract, from the esophagus to the rectum.",
 
@@ -100,89 +106,83 @@ const data = {
     {
       heading: "Surgery",
       description:
-        "Surgery is often the first line of treatment for early-stage cervical cancer and may include various procedures depending on the stage and spread of the cancer:",
+        "",
       aneurysmSymptoms: [
+      
         {
-          title: "Conization",
+          title: "Partial Colectomy",
           description:
-            "The removal of a cone-shaped piece of tissue from the cervix. This procedure can treat early cervical cancer by removing abnormal cells while preserving fertility.",
+            "Removal of part of the colon or rectum that contains the cancer. This is the most common treatment for early-stage Bowel cancer.",
         },
         {
-          title: "Trachelectomy",
+          title: "Total Colectomy",
           description:
-            "Partial removal of the cervix and upper part of the vagina but leaves the uterus intact, preserving the possibility of pregnancy. This is an option for women wanting to retain fertility, especially when cancer is confined to a small area.",
+            "In some cases, the entire colon may need to be removed.",
         },
         {
-          title: "Radical Hysterectomy",
+          title: "Laparoscopic Surgery",
           description:
-            "Involves removal of the cervix, uterus, part of the vagina, and surrounding tissues, as well as lymph nodes. This option is used when the cancer is at a slightly advanced stage but still localized.",
+            "A minimally invasive technique that allows for quicker recovery and fewer complications compared to traditional surgery",
         },
-        {
-          title: "Pelvic Exenteration",
-          description:
-            "For advanced cancer that has spread within the pelvic area, this extensive surgery removes the cervix, uterus, bladder, and part of the lower colon. This is generally considered only when other treatments are not effective and are often combined with reconstructive surgery.",
-        },
-      ],
-    },
-    {
-      heading: "Radiation Therapy",
-      description:
-        "Radiation therapy uses high-energy beams to kill or shrink cancer cells. It is often combined with chemotherapy (chemoradiation) in advanced cases to increase effectiveness. Types include:",
-      aneurysmSymptoms: [
-        {
-          title: "External Beam Radiation Therapy (EBRT)",
-          description:
-            "Delivers radiation from an external machine targeting the pelvic area, which can also include nearby lymph nodes. Treatment typically extends over a few sessions each week.",
-        },
-        {
-          title: "Brachytherapy",
-          description:
-            "Internal radiation where a device containing radioactive material is placed inside the vagina or next to deliver high-dose radiation directly to the cancer cells. Often used in combination with EBRT for more targeted treatment and can be done over a shorter period.",
-        },
-        {
-          title: "Combined Radiation Therapy",
-          description:
-            "In some cases, both EBRT and brachytherapy are used to achieve maximum effect, especially when the tumor is large or the cancer has spread beyond the cervix.",
-        },
+       
       ],
     },
     {
       heading: "Chemotherapy",
       description:
-        "Chemotherapy uses drugs to kill or stop the growth of cancer cells. It is often used in conjunction with radiation therapy (chemoradiation) for advanced cervical cancer or as standalone treatment in recurrent cases.",
+        "",
       aneurysmSymptoms: [
         {
-          title: "Concurrent Chemoradiation",
+          title: "Chemotherapy",
           description:
-            "Combines low-dose chemotherapy with radiation therapy to make cancer cells more sensitive to radiation, improving the effectiveness of treatment. Cisplatin is a common chemotherapy drug used in this combination.",
+            "Uses drugs to kill cancer cells or stop their growth. It is often used after surgery to destroy any remaining cancer cells and reduce the chance of recurrence.",
+        },
+        
+      ],
+    },
+    {
+      heading: "Radiation Therapy",
+      description:
+        "",
+      aneurysmSymptoms: [
+        {
+          title: "Radiation Therapy",
+          description:
+            "Radiation Therapy involves using high-energy rays to target and destroy cancer cells. It is particularly effective for treating rectal cancer, especially when combined with chemotherapy.",
         },
         {
-          title: "Systemic Chemotherapy",
+          title: "Proton Therapy",
           description:
-            "For more advanced or recurrent cervical cancer, systemic chemotherapy may be used with drugs like paclitaxel, carboplatin, or topotecan. Treatment is given in cycles to minimize side effects and allow the body to recover between sessions.",
+            "An advanced form of radiation therapy, Proton Therapy delivers precise radiation to the tumor while minimizing damage to surrounding healthy tissue. This allows for higher radiation doses to be safely used.",
         },
+        {
+          title: "CyberKnife",
+          description:
+            "A non-invasive robotic system, CyberKnife delivers highly focused radiation beams to the tumor with extreme precision. This is especially useful for tumors located near sensitive areas or in patients who cannot undergo traditional surgery.",
+        },
+        
       ],
     },
     {
       heading: "Targeted Therapy",
       description:
-        "Targeted therapies are drugs that focus on specific molecules involved in cancer cell growth and spread, offering a more precise treatment with fewer side effects.",
+        "Targeted therapy focuses on specific molecules in cancer cells, blocking their growth and spread. This therapy is particularly effective for patients whose tumors exhibit certain genetic mutations.",
       aneurysmSymptoms: [
         {
-          title: "Bevacizumab (Avastin)",
+          title: "",
           description:
-            "An anti-angiogenic inhibitor that blocks the formation of new blood vessels, cutting off the blood supply to the tumor and slowing its growth. This drug is often used alongside chemotherapy for advanced or recurrent cervical cancer.",
+            "",
         },
       ],
     },
     {
       heading: "Immunotherapy",
-      description: `Immunotherapy harnesses the body's immune system to identify and attack cancer cells. This is particularly beneficial in cases where the cancer has spread or recurred after other treatment.'`,
+      description: `Immunotherapy uses drugs to enhance the body’s immune system to recognize and fight cancer cells. It may be an option for advanced Bowel cancer that does not respond to standard treatments.`,
       aneurysmSymptoms: [
         {
-          title: "Immune Checkpoint Inhibitors",
+          title: "",
           description:
-            "Pembrolizumab (Keytruda) is an example of an immune checkpoint inhibitor approved for advanced cervical cancer. It targets PD-1, a protein on immune cells that, when blocked, allows the immune system to recognize and attack cancer cells more effectively.",
+            "",
         },
       ],
     },
@@ -273,15 +273,12 @@ const riskFactors = [
 
 function GICancer() {
   return (
+
+    <>
+    <Banner image={data.bannerImage} />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Banner Image */}
-      <div className="relative w-full mb-8">
-        <img
-          src="/oncology/GICancer_Banner.png"
-          alt="GI Cancer Visualization"
-          className="w-full h-full object-cover rounded-lg"
-        />
-      </div>
+  
       {/* Title Section */}
       <div className="text-center mb-12">
         <H1 title={data.title} />
@@ -303,7 +300,7 @@ function GICancer() {
       <div className="text-3xl mt-14 text-center text-[#D84598] font-semibold">
         Bowel Cancer
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full mx-auto font-light leading-relaxed">
         Bowel cancer or Colorectal cancer, which originates in the colon or
         rectum, has become a significant health concern globally, including in
         India. Although it primarily affects individuals over the age of 50, it
@@ -322,10 +319,10 @@ function GICancer() {
         />
       </div>
 
-      <div className="text-xl text-center font-bold">
+      <div className="text-2xl text-center font-medium">
         Causes of Bowel cancer
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full mx-auto font-light leading-relaxed mb-4">
         Several factors can contribute to the development of Bowel cancer, with
         diet and lifestyle playing a significant role alongside genetic risks.
       </p>
@@ -333,47 +330,39 @@ function GICancer() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {riskFactors.map((factor, index) => (
           <div key={index} className="bg-[#FFE7B6] rounded-md p-4 shadow-sm">
-            <h3 className="font-bold mb-1">{factor.title}</h3>
+            <h3 className="font-medium mb-1 text-lg">{factor.title}</h3>
             <p className="text-gray-800">{factor.description}</p>
           </div>
         ))}
       </div>
       <div className="my-3">
-        <Link href={""} className="text-hciPrimary font-semibold underline">
-          To know more about bowel cancer and its treatment, click here
-        </Link>
+       <KnowMore title={data.title} />
       </div>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-1 gap-8">
         {/* Causes Section */}
         <div>
           <H2
             title="Symptoms of Bowel Cancer"
-            className="text-xl font-semibold mb-4"
+            className="text-2xl font-medium mb-4"
           />
           <p className="text-gray-700 mb-6 font-light">
             Bowel cancer may not present symptoms in its early stages. However,
             as the cancer grows, common symptoms include:
           </p>
-          <div className="space-y-2">
+          <div className="grid grid-cols-2 gap-2">
             {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
               <div
                 key={idx}
-                className="bg-[#0E56A0] text-white font-light p-4 rounded text-sm"
+                className="bg-[#0E56A0] text-white font-light p-4 rounded h-24 font-light"
               >
-                <span className="font-semibold pr-1">{cause.title}</span>
+                <span className="font-medium pr-1">{cause.title}</span>
                 {cause.description}
               </div>
             ))}
           </div>
           <div className="mt-4 text-start">
-            <Link
-              href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-hciPrimary underline block mb-2 font-semibold capitalize"
-            >
-              To know more about bowel cancer and its causes and treatment,
-              click here
-            </Link>
+           <KnowMore title={data.title} />
           </div>
         </div>
 
@@ -381,23 +370,26 @@ function GICancer() {
         <div>
           <H2
             title="Diagnosis of Bowel cancer"
-            className="text-xl font-semibold mb-4"
+            className="text-2xl font-medium mb-4"
           />
           <p className="text-gray-700 mb-6 font-light">
             Several diagnostic methods are used to detect and confirm Bowel
             cancer, helping doctors determine the stage and plan the appropriate
             treatment.
           </p>
-          <div className="space-y-2">
+          <div className="grid grid-cols-2 gap-2">
             {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
               <div
                 key={idx}
-                className="bg-[#D84498] text-white p-3 rounded text-sm"
+                className="bg-[#D84498] text-white p-3 rounded h-24 font-light"
               >
-                <div className="font-semibold">{diagnosis.title}</div>
+                <div className="font-medium">{diagnosis.title}</div>
                 {diagnosis.description}
               </div>
             ))}
+          </div>
+          <div className="mt-4 text-start">
+           <KnowMore title={data.title} />
           </div>
         </div>
       </div>
@@ -406,7 +398,7 @@ function GICancer() {
       <div className="mt-12">
         <H2
           title="Treatment for Bowel cancer"
-          className="text-2xl font-semibold mb-6 text-center"
+            className="text-2xl font-medium mb-6 text-center"
         />
         <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
           Treatment for Bowel cancer depends on the stage of the cancer, its
@@ -418,7 +410,7 @@ function GICancer() {
               key={index}
               className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
             >
-              <h2 className="text-xl text-hciPrimary font-bold text-black">
+              <h2 className="text-xl text-hciPrimary font-medium text-black">
                 {treatment.heading}
               </h2>
               {treatment.description && (
@@ -426,9 +418,10 @@ function GICancer() {
                   {treatment.description}
                 </p>
               )}
-              <div className="space-y-4">
+              <div className="space-y-4 mb-4">
+                
                 {treatment.aneurysmSymptoms.map((item, idx) => (
-                  <div key={idx} className="text-gray-600">
+                  <div key={idx} className="text-gray-600 font-light">
                     <span className="text-[#D84498]">
                       {" "}
                       {item.title && <strong>{item.title}: </strong>}
@@ -437,46 +430,23 @@ function GICancer() {
                   </div>
                 ))}
               </div>
-
-              {index === 0 && (
-                <div className="mt-4 text-start">
-                  <Link
-                    href="/treatment/oncology/cervical-cancer-diagnosis"
-                    className="text-hciPrimary underline block mb-2 font-semibold capitalize"
-                  >
-                    To get the best diagnosis of bowel cancer and related
-                    issues, click here
-                  </Link>
-                </div>
+              {treatment.heading === "Surgery" && (
+                <IssuesLink head='Bowel cancer' />
               )}
+              
             </div>
           ))}
         </div>
       </div>
 
       {/* Conclusion */}
-      <div className="mt-12">
-        <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
-        {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
-        <p className="text-gray-600 font-light">
-          {data.conclusion[0].paragraph}
-        </p>
-      </div>
-
-      {/* Links */}
-      <div className="mt-8 space-y-4">
-        {data.links.map((link, index) => (
-          <div key={index} className="text-start">
-            <Link
-              href={link.url}
-              className="text-hciPrimary font-semibold underline"
-            >
-              {link.text}
-            </Link>
-          </div>
-        ))}
-      </div>
+      <div className="space-y-4 mt-8">
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head='Bowel cancer' />
+          <BookButton />
+        </div>
     </div>
+    </>
   );
 }
 

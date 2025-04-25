@@ -298,13 +298,7 @@ const data = {
     },
   ],
 };
-const footerData = [
-  {
-    header: "Conclusion",
-    paragraph: `
-     Brain tumours and brain cancers are challenging to treat, but advances in neurosurgery, radiation, and targeted therapies provide hope for better outcomes. Early diagnosis and comprehensive care tailored to the tumour type are key to improving quality of life for patients.`,
-  },
-];
+
 
 function GeneralSurgery() {
   return (
@@ -370,7 +364,7 @@ function GeneralSurgery() {
         </div>
         <KnowMore title={data.title} />
 
-        <Conclusion data={footerData} />
+        <Conclusion data={data.conclusion} />
         <FooterLinks head={data.title} />
         <BookButton />
       </div>

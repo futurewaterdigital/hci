@@ -6,7 +6,7 @@ const hospitalName = [
   {
     name: 'Apollo',
     link: '/hospital/apollo',
-    img: '/hospitals/home_apollo.jpg',
+    img: '/hospitals/home_apollos.jpg',
   },
   { name: 'Aster', link: '/hospital/aster', img: '/hospitals/home_aster.jpg' },
   {

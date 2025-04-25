@@ -16,7 +16,7 @@ function Menu() {
       url: '/treatment/oncology/gi-cancer',
     },
     {
-      menu: 'Head & Neck Cancer',
+      menu: 'Head and Neck Malignancy',
       url: '/treatment/oncology/head-neck-malignancy',
     },
     {
@@ -29,14 +29,14 @@ function Menu() {
     },
     {
       menu: 'Genitourinary Cancer',
-      url: '/treatment/oncology/gynecological-cancers',
+      url: '/treatment/oncology/genitourinary-cancer',
     },
   ]
 
   const otherGastro = [
     {
       menu: 'Pediatric',
-      url: '/treatment/oncology/pediatric',
+      url: '/treatment/oncology/pediatric-cancer',
     },
     {
       menu: 'Advanced & recurrent',

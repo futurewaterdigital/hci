@@ -141,9 +141,9 @@ function PediatricCancer() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        {/* <Title title={data.title} className="text-4xl text-[#D84598]" /> */}
+
         <H1 title={data.title} />
-        <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <p className="text-gray-600 text-start max-w-7xl mx-auto font-light">
           {data.description}
         </p>
 
@@ -170,7 +170,7 @@ function PediatricCancer() {
           <div>
             <H2
               title="Diagnosis of Pediatric Cancer"
-              className="text-xl font-semibold mb-2"
+              className="text-xl font-medium mb-4"
             />
             <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
               Childhood cancers are often discovered through persistent symptoms
@@ -178,11 +178,15 @@ function PediatricCancer() {
             </p>
             <div className=" rounded-lg">
               {data.diagnosis.map((method, index) => (
-                <div key={index} className="bg-[#FFE7B6] p-2 mb-2">
-                  <h2 className="font-medium text-black font-semibold text-gray-800">
-                    {method.heading}
-                  </h2>
-                  <p className="text-sm text-gray-800">{method.description}</p>
+                <div
+                  key={index}
+                  className="border-b border-yellow-200 pb-2 last:border-0"
+                >
+                  <H3
+                    title={method.heading}
+                    className="font-medium text-yellow-800"
+                  />
+                  <p className="text-sm">{method.description}</p>
                 </div>
               ))}
             </div>
@@ -195,7 +199,7 @@ function PediatricCancer() {
 
         <H2
           title="Causes of Pediatric Cancer"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
           The exact causes of childhood cancer remain unclear, but genetic
@@ -218,7 +222,7 @@ function PediatricCancer() {
 
         <H2
           title="Treatment Options for Pediatric Cancer"
-          className="text-2xl font-semibold mb-4 text-center"
+          className="text-2xl font-medium mb-4 text-center"
         />
         <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
           Childhood cancer treatment varies based on the type and stage of
@@ -233,10 +237,17 @@ function PediatricCancer() {
             ulClass="list-disc pl-5"
           />
         </div>
+        <div className=" p-4 rounded-lg mb-8">
+          <p className="font-light">{data.side_effects.description}</p>
+        </div>
 
+
+        <div className="my-10">
         <Conclusion data={data.conclusion} />
-        <FooterLinks head={data.title} />
-        <BookButton />
+<FooterLinks head={data.title} />
+<BookButton />
+        </div>
+
       </div>
     </>
   );

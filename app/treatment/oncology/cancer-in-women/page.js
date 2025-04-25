@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
+import H1 from "@/components/ui/h1";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
@@ -293,15 +293,18 @@ const womenCancerTypes = [
 
 function CancerInWomen() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
       <Banner image={data.bannerImage} />
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
+          
+          <H1 title={data.title} />
         <H2 title={data.description} className="text-center font-light" />
 
         {/* More Link about brain tumor */}
         <div className="my-4">
-          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-semibold">
+          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-medium">
             {womenCancerTypes.map((item, index) => (
               <Link
                 key={index}
@@ -317,7 +320,7 @@ function CancerInWomen() {
         <div className="mb-8">
           <H2
             title="Breast Cancer"
-            className="text-3xl font-semibold mb-4 text-center text-pink-600"
+            className="text-3xl font-medium mb-4 text-center text-hciSecondary"
           />
           <p className="text-gray-700 mb-6 font-light">
             {data.breastCancerIntro}
@@ -328,7 +331,7 @@ function CancerInWomen() {
             <div key={index}>
               <H3
                 title={cause.heading}
-                className="text-lg text-center font-semibold text-black mb-2"
+                className="text-2xl text-center font-medium text-black mb-2"
               />
               <p className="text-gray-600 text-lg mb-4 font-light">
                 {cause.description}
@@ -339,10 +342,10 @@ function CancerInWomen() {
                     key={index}
                     className="bg-white rounded-lg shadow-md p-6 border border-gray-200"
                   >
-                    <h4 className="text-lg text-center font-semibold text-[#0E56A0] mb-2">
+                    <h4 className="text-lg text-center font-medium text-[#0E56A0] mb-2">
                       {symptom.title}
                     </h4>
-                    <p className="text-gray-600 text-center text-sm mb-4 font-light">
+                    <p className="text-gray-600 text-center  mb-4 font-light">
                       {symptom.description}
                     </p>
                   </div>
@@ -356,7 +359,7 @@ function CancerInWomen() {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 mb-8">
+        <div className="grid grid-cols-1 gap-6 pt-8 mb-8">
           <div>
             {/* <DataLists
               divClass="space-y-4"
@@ -366,26 +369,26 @@ function CancerInWomen() {
             <DataBoxes
               title="Symptoms of Breast Cancer"
               text="Common symptoms include:"
-              titleCss="text-black font-semibold text-start"
+              titleCss="text-black font-medium text-start text-2xl mb-2"
               header=""
               data={data.symptoms}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
           </div>
           <div>
             <DataBoxes
               title="Diagnosis of Breast Cancer"
               text="Breast cancer can be diagnosed through a combination of methods:"
-              titleCss="text-black font-semibold text-start"
+              titleCss="text-black font-medium text-start text-2xl mb-2"
               header=""
               data={data.diagnosis}
-              myclass="grid grid-cols-1"
+              myclass="grid grid-cols-2"
             />
 
             <div className="mt-4 text-start">
               <Link
                 href="/treatment/oncology/breast-cancer-diagnosis"
-                className="text-hciPrimary underline block mb-2 font-semibold capitalize"
+                className="text-hciPrimary underline block mb-2 font-medium capitalize"
               >
                 For The Best Diagnosis Of Breast Cancer And Related Issues,
                 Click Here
@@ -400,7 +403,7 @@ function CancerInWomen() {
               <div key={index} className="">
                 <H3
                   title={treatment.heading}
-                  className="text-lg text-center font-semibold mb-2"
+                  className="text-2xl text-center font-medium mb-2"
                 />
                 <p className="text-gray-600 text-lg mb-4 font-light">
                   {treatment.description}
@@ -411,14 +414,14 @@ function CancerInWomen() {
                   {treatment.aneurysmSymptoms.map((item, idx) => (
                     <div
                       key={idx}
-                      className="text-gray-600 text-sm border p-2 rounded-md shadow-md space-y-2"
+                      className="text-gray-600  border p-2 rounded-md shadow-md space-y-2"
                     >
                       {item.title && (
-                        <span className="font-semibold text-hciPrimary">
+                        <span className="font-medium text-hciPrimary">
                           {item.title}:{" "}
                         </span>
                       )}
-                      <p className="text-gray-600 text-sm font-light">
+                      <p className="text-gray-600  font-light">
                         {item.description}
                       </p>
                     </div>
@@ -429,27 +432,30 @@ function CancerInWomen() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           <DataBoxes
             title="Key Advantages of these Techniques"
             text=""
-            titleCss="text-black text-xl mb-5 font-semibold text-center"
+            titleCss="text-black text-2xl mb-5 font-medium text-center"
             header=""
             data={data.advantages}
-            myclass="grid grid-cols-1"
+            myclass="grid grid-cols-2"
           />
+        
+          </div>
+          
           <div>
             <Conclusion data={data.conclusion} />
             <FooterLinks head={data.title} />
+            <BookButton />
           </div>
-        </div>
 
         {/* <div className="space-y-2 mb-8">
           {data.hospital_links.map((link, index) => (
             <div key={index} className="text-center">
               <Link
                 href={link.url}
-                className="text-pink-600 hover:text-pink-700"
+                className="text-hciSecondary hover:text-pink-700"
               >
                 {link.text}, Click Here
               </Link>
@@ -457,9 +463,10 @@ function CancerInWomen() {
           ))}
         </div> */}
 
-        <BookButton />
+        
       </div>
-    </div>
+      </div>
+      </>
   );
 }
 

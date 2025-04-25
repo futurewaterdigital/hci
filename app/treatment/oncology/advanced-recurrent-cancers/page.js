@@ -1,12 +1,11 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
+import H1 from "@/components/ui/h1";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
-import Link from "next/link";
-
+import KnowMore from "@/components/ui/KnowMore";
 const data = {
   title: "Advanced and Recurrent Cancers",
   bannerImage: "/oncology/advanced-recurrent-cancers.png",
@@ -380,35 +379,36 @@ const data = {
 
 function AdvancedRecurrentCancers() {
   return (
+    <>
+    <Banner image={data.bannerImage} />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <H1 title={data.title} />
+        <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
           {data.description}{" "}
         </p>
 
-        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
-          <strong className="font-semibold"> Advanced </strong>cancer refers to
+        <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
+          <strong className="font-medium"> Advanced </strong>cancer refers to
           a cancer that has spread beyond its primary site to other organs
           (metastasis), or a cancer that has recurred after initial treatment. 
-          <strong className="font-semibold"> Breast cancer</strong>, along with
-          cancers of the <strong className="font-semibold"> lung, liver</strong>
-          , and <strong className="font-semibold"> cervix</strong>, are among
+          <strong className="font-medium"> Breast cancer</strong>, along with
+          cancers of the <strong className="font-medium"> lung, liver</strong>
+          , and <strong className="font-medium"> cervix</strong>, are among
           the most common cancers diagnosed at advanced stages in India.
         </p>
 
         <H2
           title="Common Types of Advanced Cancers in India:"
-          className="text-xl font-semibold mb-4"
+          className="text-xl font-medium mb-4"
         />
         <div className="space-y-2">
           {data.common_cancers.map((cause, idx) => (
             <div
               key={idx}
-              className="bg-[#0E56A0] text-white font-light py-6 px-4 rounded text-sm"
+              className="bg-[#0E56A0] text-white font-light py-6 px-4 rounded"
             >
-              <div className="font-medium text-lg pr-1">{cause.title}</div>
+              <div className="font-medium pr-1">{cause.title}</div>
               {cause.description}
             </div>
           ))}
@@ -416,41 +416,34 @@ function AdvancedRecurrentCancers() {
 
         <H2
           title="Treatments for Advanced Cancers"
-          className="text-xl text-center text-[#D84498] font-semibold mb-4"
+          className="text-center text-[#D84498] font-medium mb-4 text-2xl"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            
           {data.treatment_options.map((cause, index) => (
             <div
               key={index}
               className="border border-gray-200 hover:shadow-lg transition-shadow rounded-lg p-4 shadow-sm"
             >
-              <h3 className="text-lg font-semibold text-[#0E56A0] mb-2">
-                {" "}
+              <h3 className="font-medium text-[#0E56A0] mb-2 text-lg">
                 {cause.heading}
               </h3>
-              <p className="text-gray-700 text-sm font-light">
+              <p className="text-gray-700 font-light">
                 {cause.description}
               </p>
             </div>
           ))}
         </div>
+       <KnowMore title={data.title} />
 
-        <div className="text-start mb-8">
-          <Link
-            href=""
-            className="text-hciPrimary text-lg font-semibold underline"
-          >
-            To Know More About Lung Cancer And Its Treatment, Click Here
-          </Link>
-        </div>
 
         <H2
           title="Recurrent Cancers in India"
-          className="text-xl text-center text-black font-semibold mb-4"
+          className="text-xl text-center text-black font-medium mb-4"
         />
 
-        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
           A recurrent cancer occurs when cancer returns after a period of
           remission following initial treatment. In India, recurrent cancers are
           often diagnosed in patients who initially received inadequate or
@@ -459,14 +452,14 @@ function AdvancedRecurrentCancers() {
 
         <H2
           title="Common risk factors for recurrence"
-          className="text-xl text-center text-black font-semibold mb-4"
+          className="text-xl text-center text-black font-medium mb-4"
         />
 
         <div className="space-y-2">
           {data.risk_factors.map((cause, idx) => (
             <div
               key={idx}
-              className="bg-[#D84498] text-white font-light py-4 px-4 rounded text-md"
+              className="bg-[#D84498] text-white font-light py-4 px-4 rounded"
             >
               {cause.description}
             </div>
@@ -480,7 +473,7 @@ function AdvancedRecurrentCancers() {
                 key={index}
                 className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
               >
-                <h2 className="text-xl text-center mb-4 text-hciPrimary font-bold text-black">
+                <h2 className="text-xl font-medium text-center mb-4 text-hciPrimary">
                   {treatment.heading}
                 </h2>
                 {treatment.description && (
@@ -490,9 +483,8 @@ function AdvancedRecurrentCancers() {
                 )}
                 <div className="space-y-4">
                   {treatment?.aneurysmSymptoms?.map((item, idx) => (
-                    <div key={idx} className="text-gray-600">
-                      <span className="text-black">
-                        {" "}
+                    <div key={idx} className="text-gray-600 font-light">
+                      <span className="text-black font-medium">
                         {item.title && <strong>{item.title}: </strong>}
                       </span>
                       {item.description}
@@ -500,17 +492,7 @@ function AdvancedRecurrentCancers() {
                   ))}
                 </div>
               </div>
-              {index === 1 && (
-                <div className="text-start mb-8">
-                  <Link
-                    href=""
-                    className="text-hciPrimary text-lg font-semibold underline"
-                  >
-                    To get the best diagnosis for An advanced and recurrent
-                    cancer and related issues, click here
-                  </Link>
-                </div>
-              )}
+             <KnowMore title={data.title} />
             </>
           ))}
         </div>
@@ -519,6 +501,7 @@ function AdvancedRecurrentCancers() {
         <BookButton />
       </div>
     </div>
+    </>
   );
 }
 

@@ -3,13 +3,13 @@ import Header from "@/components/Header/page";
 import Footer from "@/components/Footer/page";
 
 export const metadata = {
-  title: "Prostate Cancer",
+  title: "Cerebral Palsy",
   description: "Healthcare International.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   openGraph: {
     url: "https://healthcareinternational.in/",
-    title: "Prostate Cancer",
-    description: "Prostate Cancer",
+    title: "Healthcare International",
+    description: "Healthcare International",
     images: [
       {
         url: "images/homeBanner.jpg",

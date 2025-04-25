@@ -1,8 +1,10 @@
 import React from "react";
-import Title from "@/components/cardiacComponents/Title";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
-import H2 from "@/components/ui/h2";
+import H1 from "@/components/ui/h1";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
 
 const data = {
   title: "Brain Tumor",
@@ -319,7 +321,26 @@ const data = {
   conclusion: [
     {
       header: "Conclusion",
-      paragraph: `The management of advanced and recurrent cancers is highly complex and requires a multidisciplinary approach. With significant advancements in molecular diagnostics, targeted therapies, and immunotherapy, many patients now have improved outcomes and quality of life. At HCI, our comprehensive approach combines cutting-edge treatments with personalized care to address each patient's unique needs. We remain committed to advancing cancer care through research, innovation, and dedicated clinical excellence to give our patients the best possible chance for recovery.`,
+      paragraph: `
+<p>
+        There is no projected survival rate for those diagnosed with a brain
+        tumor, as individual circumstances play a big role. For example, some
+        malignant tumors can be successfully controlled by radiation therapy.
+        Others, because of their location, may be life-threatening even if they
+        are benign. Doctors have to look at thousands of patients with similar
+        characteristics to see a trend in how certain tumors progress and how
+        different treatments affect them.
+   </p>
+   <p>
+
+     
+        Your overall outlook and prognosis is likely to change as you undergo
+        various treatments. If you have surgery, how much of the tumor the
+        neurosurgeon can remove will impact what will happen next. Other brain
+        tumor treatments will determine future steps as well.
+        </p>  
+     
+      `,
     },
   ],
 
@@ -651,20 +672,22 @@ const therapistInfo = [
 
 function BrainTumor() {
   return (
+    <>
+      <Banner image="/oncology/brain-tumor-banner.png" />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Banner Image */}
-      <Banner image="/oncology/brain-tumor-banner.png" />
+    
 
       {/* Title and Description */}
       <div className="text-center mb-12">
-        <Title title={data.title} className="text-4xl text-pink-500" />
-        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <H1 title={data.title} />
+        <p className="mt-4 text-gray-600 text-start  max-w-7xl mx-auto font-light">
           {data.description}
         </p>
       </div>
       {/* More Link about brain tumor */}
       <div className="my-4">
-        <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-semibold">
+        <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-medium">
           {mainGastro.map((item, index) => (
             <Link
               key={index}
@@ -680,27 +703,27 @@ function BrainTumor() {
       <div className="text-center my-10">
         {tumorInfo?.map((item, index) => (
           <div className="text-center my-10" key={index}>
-            <div className="text-xl font-bold">{item.title}</div>
-            <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+            <div className="text-xl font-medium">{item.title}</div>
+            <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
               {item.description}
             </p>
           </div>
         ))}
       </div>
       <div className="flex mx-auto justify-center items-center">
-        <div className="bg-[#0E56A0] rounded-l-3xl py-8 px-20 text-xl font-bold text-white">
+        <div className="bg-[#0E56A0] rounded-l-3xl py-8 px-20 text-xl font-medium text-white">
           BrainTumor
         </div>
-        <div className="bg-[#D84498] rounded-r-3xl py-8 px-20 text-xl font-bold text-white">
+        <div className="bg-[#D84498] rounded-r-3xl py-8 px-20 text-xl font-medium text-white">
           BrainCancer
         </div>
       </div>
       <div className="my-10">
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           All brain cancers are tumors, but not all brain tumors are cancerous.
           Noncancerous brain tumors are called benign brain tumors.
         </p>
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           Benign brain tumors typically grow slowly, have distinct borders and
           rarely spread. Benign tumors can still be dangerous. They can damage
           and compress parts of the brain, causing severe dysfunction. Benign
@@ -709,7 +732,7 @@ function BrainTumor() {
           Examples of typically benign tumors include meningioma, vestibular
           schwannoma and pituitary adenoma.
         </p>
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           Malignant brain tumors are cancerous. They typically grow rapidly and
           invade surrounding healthy brain structures. Brain cancer can be
           life-threatening due to the changes it causes to the vital structures
@@ -718,17 +741,17 @@ function BrainTumor() {
           medulloblastoma.
         </p>
       </div>
-      <div className="text-xl text-center font-bold">
+      <div className="text-xl text-center font-medium">
         Primary vs. Metastatic Brain Tumors
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Primary brain tumors are tumors that start in the brain. Examples of
         tumors that most often originate in the brain include meningioma and
         glioma. Very rarely, these tumors can break away and spread to other
         parts of the brain and spinal cord. More commonly, tumors spread to the
         brain from other parts of the body.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Metastatic brain tumors, also called secondary brain tumors, are
         malignant tumors that originate as cancer elsewhere in the body and then
         metastasize (spread) to the brain. Metastatic brain tumors are about
@@ -736,12 +759,12 @@ function BrainTumor() {
         crowding or invading nearby brain tissue.
       </p>
       {/*  Brain Cancer Types */}
-      <div className="mt-10 text-lg text-center font-bold">
+      <div className="mt-10  text-center font-medium">
         Common cancers that can spread to the brain are:
       </div>
       {/* More Link about brain tumor */}
       <div className="my-4">
-        <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-semibold">
+        <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-medium">
           {brainCancerTypes.map((item, index) => (
             <Link
               key={index}
@@ -760,10 +783,10 @@ function BrainTumor() {
           className="w-full mt-5 h-full object-cover"
         />
       </div>
-      <div className="text-lg mt-10 text-center font-bold">
+      <div className=" mt-10 text-center font-medium">
         Brain Tumor Locations
       </div>
-      <p className="mt-4 text-gray-600 text-center w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-center w-full  mx-auto font-light leading-relaxed">
         Brain tumors can form in any part of the brain, but there are certain
         regions where specific tumors form:
       </p>
@@ -771,26 +794,26 @@ function BrainTumor() {
         {tumorLocationsCard?.map((item, index) => (
           <div
             key={index}
-            className="py-6 px-4 shadow-lg text-sm rounded-lg font-light w-full"
+            className="py-6 px-4 shadow-lg  rounded-lg font-light w-full"
           >
-            <span className="font-semibold">{item?.title}</span>{" "}
+            <span className="font-medium">{item?.title}</span>{" "}
             {item?.description}
           </div>
         ))}
       </div>
-      <p className="mt-4 text-gray-600 text-center w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-center w-full  mx-auto font-light leading-relaxed">
         Other brain tumors are described by the kinds of cells they are made of.
         For instance, gliomas are composed of glial cells.
       </p>
       <div className="text-center my-5 underline">
-        <a className="text-lg text-[#0E56A0] text-bold " href="">
+        <a className=" text-hciPrimary text-bold " href="">
           Learn more about these and other brain tumor types.
         </a>
       </div>
-      <div className="text-xl text-center font-bold">
+      <div className="text-xl text-center font-medium">
         Brain Tumors in Children
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Brain tumors are the most common solid tumor in children and
         adolescents, affecting about 5,000 children each year. Several different
         types of brain tumors can occur in children, including astrocytomas
@@ -798,7 +821,7 @@ function BrainTumor() {
         medulloblastomas.
       </p>
       <div className="text-center my-5 underline">
-        <a className="text-lg text-[#0E56A0] text-bold " href="">
+        <a className=" text-hciPrimary text-bold " href="">
           Learn more about brain tumors in children.
         </a>
       </div>
@@ -812,10 +835,10 @@ function BrainTumor() {
         </div>
 
         <div className="flex-1">
-          <div className="text-lg mt-2 text-start font-bold">
+          <div className=" mt-2 text-start font-medium">
             Brain Tumor Symptoms
           </div>
-          <p className="mt-4 text-gray-600 text-start w-full text-sm mx-auto font-light leading-relaxed">
+          <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
             Different parts of the brain control different functions, so brain
             tumor symptoms will vary depending on the tumor’s location. For
             example, a brain tumor located in the cerebellum at the back of the
@@ -825,14 +848,14 @@ function BrainTumor() {
             and how fast it’s growing also affect which symptoms a person will
             experience.
           </p>
-          <p className="mt-2 text-gray-600 text-start w-full text-sm mx-auto font-light leading-relaxed">
+          <p className="mt-2 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
             The tumor’s size and how fast it’s growing also affect which
             symptoms a person will experience.
           </p>
-          <p className="mt-2 text-gray-600 text-start w-full text-sm mx-auto font-light leading-relaxed">
+          <p className="mt-2 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
             In general, the most common symptoms of a brain tumor may include:
           </p>
-          <ul className="list-disc mt-2 pl-6 text-sm space-y-2 marker:text-red-500">
+          <ul className="list-disc mt-2 pl-6  space-y-2 marker:text-red-500">
             <li>Headaches</li>
             <li>Seizures or convulsions</li>
             <li>Difficulty thinking, speaking or finding words</li>
@@ -853,7 +876,7 @@ function BrainTumor() {
         {/* First Section */}
         <div className="flex flex-col md:flex-row gap-4 mb-8">
           <div className="md:w-1/2 bg-white p-4 rounded-md shadow">
-            <h2 className="text-lg font-bold mb-4">
+            <h2 className=" font-medium mb-4">
               Can you have a Brain Tumor with no symptoms?
             </h2>
             <p className="text-gray-700 mb-4">
@@ -864,7 +887,7 @@ function BrainTumor() {
               inside the brain.
             </p>
 
-            <h3 className="text-pink-500 font-bold mb-2">
+            <h3 className="text-hciSecondary font-medium mb-2">
               Brain Tumor Causes and Risk Factors
             </h3>
             <p className="text-gray-700 mb-4">
@@ -887,7 +910,7 @@ function BrainTumor() {
           </div>
 
           <div className="md:w-1/2 bg-[#FFE7B6] p-4 rounded-md shadow">
-            <h2 className="text-lg font-bold mb-4">
+            <h2 className=" font-medium mb-4">
               Are Brain Tumors hereditary?
             </h2>
             <p className="text-gray-700 mb-4">
@@ -896,7 +919,7 @@ function BrainTumor() {
               of developing tumors, including:
             </p>
 
-            <ul className="list-disc pl-8 space-y-2  marker:text-pink-500">
+            <ul className="list-disc pl-8 space-y-2  marker:text-hciSecondary">
               <li className="text-gray-700">Neurofibromatosis</li>
               <li className="text-gray-700">
                 Von Hippel-Lindau disease Li-Fraumeni syndrome
@@ -913,7 +936,7 @@ function BrainTumor() {
         </div>
 
         {/* Second Section */}
-        <h2 className="text-xl font-bold text-center mb-6">
+        <h2 className="text-xl font-medium text-center mb-6">
           Brain Tumor Diagnosis
         </h2>
 
@@ -927,15 +950,15 @@ function BrainTumor() {
           </div>
 
           <div className="md:w-1/2">
-            <p className="text-pink-400 text-lg mb-4">
+            <p className="text-pink-400  mb-4">
               Diagnosing a brain tumor usually involves a neurological exam,
               brain scans and a biopsy, if it can be done safely.
             </p>
 
-            <div className="bg-blue-50 p-4 text-sm rounded-md mb-4">
+            <div className="bg-blue-50 p-4  rounded-md mb-4">
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <span className="text-pink-500 font-bold mr-2">•</span>
+                  <span className="text-hciSecondary font-medium mr-2">•</span>
                   <span className="text-gray-700">
                     A neurological exam may include a variety of tests to
                     evaluate neurological functions such as balance, hearing,
@@ -944,7 +967,7 @@ function BrainTumor() {
                 </li>
 
                 <li className="flex items-start">
-                  <span className="text-pink-500 font-bold mr-2">•</span>
+                  <span className="text-hciSecondary font-medium mr-2">•</span>
                   <span className="text-gray-700">
                     A variety of imaging techniques, including CT (or CAT) scan,
                     MRI, occasionally an angiogram or X-rays can be used to
@@ -954,7 +977,7 @@ function BrainTumor() {
                 </li>
 
                 <li className="flex items-start">
-                  <span className="text-pink-500 font-bold mr-2">•</span>
+                  <span className="text-hciSecondary font-medium mr-2">•</span>
                   <span className="text-gray-700">
                     If doctors cannot safely perform a{" "}
                     <span className="font-medium">biopsy</span> (tissue sample
@@ -969,15 +992,15 @@ function BrainTumor() {
               </ul>
             </div>
 
-            <p className="text-pink-400 text-lg mb-4">
+            <p className="text-pink-400  mb-4">
               Depending on your symptoms, doctors may also perform these tests
               to help confirm the diagnosis and rule out other conditions:
             </p>
 
-            <div className="bg-orange-50 text-sm p-4 rounded-md">
+            <div className="bg-hciYellow  p-4 rounded-md">
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <span className="text-pink-500 font-bold mr-2">•</span>
+                  <span className="text-hciSecondary font-medium mr-2">•</span>
                   <span className="text-gray-700">
                     Lumbar puncture to collect a sample of cerebrospinal fluid
                     and see if it contains traces of the tumor cells.
@@ -985,7 +1008,7 @@ function BrainTumor() {
                 </li>
 
                 <li className="flex items-start">
-                  <span className="text-pink-500 font-bold mr-2">•</span>
+                  <span className="text-hciSecondary font-medium mr-2">•</span>
                   <span className="text-gray-700">
                     Evoked potentials studies to measure electrical activity in
                     the nerves and/or electroencephalography (EEG) to measure
@@ -994,7 +1017,7 @@ function BrainTumor() {
                 </li>
 
                 <li className="flex items-start">
-                  <span className="text-pink-500 font-bold mr-2">•</span>
+                  <span className="text-hciSecondary font-medium mr-2">•</span>
                   <span className="text-gray-700">
                     Neurocognitive assessment to evaluate any changes in
                     cognition and well-being.
@@ -1002,7 +1025,7 @@ function BrainTumor() {
                 </li>
 
                 <li className="flex items-start">
-                  <span className="text-pink-500 font-bold mr-2">•</span>
+                  <span className="text-hciSecondary font-medium mr-2">•</span>
                   <span className="text-gray-700">
                     Neuro-ophthalmological examination to assess for signs of
                     tumor affecting the eyes.
@@ -1010,7 +1033,7 @@ function BrainTumor() {
                 </li>
 
                 <li className="flex items-start">
-                  <span className="text-pink-500 font-bold mr-2">•</span>
+                  <span className="text-hciSecondary font-medium mr-2">•</span>
                   <span className="text-gray-700">
                     Endocrinological evaluation to assess hormone function.
                   </span>
@@ -1025,15 +1048,15 @@ function BrainTumor() {
           </div>
         </div>
       </div>
-      <div className="text-xl text-center font-bold">Brain Tumor Grading</div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <div className="text-2xl text-center font-medium">Brain Tumor Grading</div>
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         The grade of a brain tumor defines how serious it is. Using the biopsy
         sample, a pathologist will examine the tumor under a microscope to
         determine its grade. Brain tumor grading is a category system that
         describes the brain tumor cells and indicates how likely the tumor is to
         grow and spread.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Brain tumor grading uses a scale from 1 (least aggressive) to 4 (most
         aggressive).
       </p>
@@ -1044,12 +1067,12 @@ function BrainTumor() {
             key={index}
             className="border border-pink-400 rounded-xl shadow-md p-5 hover:shadow-lg transition-all duration-300"
           >
-            <h2 className="text-lg font-bold text-blue-800 mb-4">
+            <h2 className=" font-medium text-blue-800 mb-4">
               {grade.title}
             </h2>
-            <ul className="list-disc pl-2 pr-2 list-outside space-y-2 text-gray-700 marker:text-pink-500">
+            <ul className="list-disc pl-2 pr-2 list-outside space-y-2 text-gray-700 marker:text-hciSecondary font-light">
               {grade.points.map((point, idx) => (
-                <li key={idx} className="text-sm">
+                <li key={idx} className="">
                   {point}
                 </li>
               ))}
@@ -1057,14 +1080,14 @@ function BrainTumor() {
           </div>
         ))}
       </div>
-      <div className="text-xl text-center font-bold">A changing diagnosis</div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <div className="text-2xl text-center font-medium">A changing diagnosis</div>
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         The grade of a brain tumor might change, usually to a higher grade,
         often without a cause. It’s also possible that the biopsy sample might
         not represent the entire tumor, giving an inaccurate initial data for
         the grade.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         A change from a low-grade tumor to a high-grade tumor happens more often
         in adults than in children.
       </p>
@@ -1074,35 +1097,35 @@ function BrainTumor() {
         alt="MRI scan machine"
         className="w-full h-auto my-10 shadow"
       />
-      <div className="text-xl text-center font-bold">Brain Tumor Staging</div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <div className="text-2xl text-center font-medium">Brain Tumor Staging</div>
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Staging refers to how far a tumor has spread. If a tumor has migrated to
         other parts of the body, it has metastasized. Staging is often done for
         other types of tumors but not primary brain tumors. This is because
         brain tumors are unlikely to spread beyond the nervous system.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Conversely, other types of tumors (e.g., lung cancer) can spread to the
         brain. Tumors that have spread to the brain are advanced stage.
       </p>
-      <div className="text-xl text-center mt-10 font-bold">
+      <div className="text-2xl text-center mt-10 font-medium">
         What does the size of a brain tumor mean?
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Because larger tumors are more likely to interfere with normal brain
         function, they more often cause symptoms and complications.
       </p>
-      <div className="text-xl text-center mt-10 font-bold">
+      <div className="text-2xl text-center mt-10 font-medium">
         Brain Tumor Treatment
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         The most common treatment for brain tumors is surgery. For some tumors,
         surgical removal and continued monitoring may be the only treatment
         needed. Common surgical approaches to brain tumor removal include
         craniotomy, neuroendoscopy, laser ablation and laser interstitial
         thermal therapy.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Chemotherapy and radiation therapy can be used to treat brain cancer by
         helping shrink the tumor, slowing down its growth and/or preventing it
         from coming back. External beam radiation therapy, stereotactic
@@ -1111,45 +1134,45 @@ function BrainTumor() {
       </p>
       <div className="text-start my-5 underline">
         <a
-          className="text-lg text-[#0E56A0] text-bold hover:text-blue-500"
+          className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
           href=""
         >
           To learn more about other brain tumor treatment options, click here
         </a>
       </div>
-      <div className="text-xl text-center mt-10 font-bold">
+      <div className="text-2xl text-center mt-10 font-medium">
         Brain Tumor Treatment
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        <span className="text-pink-500">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
+        <span className="text-hciSecondary font-medium text-lg">
           Neurology Brain, Nerves and Spine Brain Tumors and Brain Cancer
         </span>{" "}
         <br /> There is more hope than ever before for people with brain tumors.
         Research has helped create advanced treatments such as tumor-treating
         fields and other innovations.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         The treatment for a brain tumor will depend on many things, including
         the type, size and location of the tumor, as well as your symptoms,
         general health and treatment preferences. The main treatment options for
         a brain tumor include:
       </p>
       <div className="my-2">
-        <ul className="list-disc pl-2 pr-2 list-outside space-y-2 text-gray-700 marker:text-pink-500">
+        <ul className="list-disc pl-2 pr-2 list-outside space-y-2 text-gray-700 marker:text-hciSecondary font-light">
           <li> Surgery</li>
           <li> Radiation therapy Chemotherapy</li>
           <li> Targeted drug therapy Tumor treating fields Clinical trials</li>
           <li> Follow-up care and rehabilitation</li>
         </ul>
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         If you’ve been diagnosed with a specific type of brain tumor, see what
         treatments may be available to you:
       </p>
-      <div className="text-xl text-center mt-10 font-bold">
+      <div className="text-2xl text-center mt-10 font-medium">
         Brain Tumor Surgery
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         The most popular therapy for brain tumors is surgery, which is
         frequently the only option. Depending on their location and size, brain
         tumors can be removed surgically using a variety of techniques.
@@ -1158,10 +1181,10 @@ function BrainTumor() {
         {tumorTumorOptions?.map((item, index) => (
           <div
             key={index}
-            className="p-4 bg-[#D84498] font-white shadow-lg text-sm font-light w-full"
+            className="p-4 bg-[#D84498] font-white shadow-lg  font-light w-full"
           >
-            <p className="text-white text-start w-full text-lg mx-auto font-light leading-relaxed">
-              <span className="font-semibold">{item?.title}</span>{" "}
+            <p className="text-white text-start w-full  mx-auto font-light leading-relaxed">
+              <span className="font-medium">{item?.title}</span>{" "}
               {item?.description}
             </p>
           </div>
@@ -1169,7 +1192,7 @@ function BrainTumor() {
       </div>
       <div className="text-start my-5 underline">
         <a
-          className="text-lg text-[#0E56A0] text-bold hover:text-blue-500"
+          className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
           href=""
         >
           To learn more about brain tumor surgery or to explore various
@@ -1177,17 +1200,17 @@ function BrainTumor() {
         </a>
       </div>
       {/* Radiation Therapy  */}
-      <div className="text-xl text-center mt-10 font-bold">
+      <div className="text-2xl text-center mt-10 font-medium">
         Radiation Therapy for Brain Cancer and Brain Tumors
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Radiation therapy uses X-rays and other forms of light energy to destroy
         cancer cells in malignant tumors or to slow the growth of a benign brain
         tumor. Learn more about radiation therapy, or explore the types of
         radiation therapy used to treat brain tumors:
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        <span className="font-semibold text-black">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
+        <span className="font-medium text-black">
           External beam radiation therapy:{" "}
         </span>
         The most common type of radiation therapy for brain tumors, it can be
@@ -1196,33 +1219,33 @@ function BrainTumor() {
         tumors, especially when there are multiple metastatic tumors throughout
         the brain, including tumors that are too small to be seen on a scan.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        <span className="font-semibold text-black">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
+        <span className="font-medium text-black">
           Stereotactic radiosurgery:{" "}
         </span>
         This form of radiation therapy uses smaller, more targeted beams of
         X-rays to spare healthy surrounding tissue. It is often used on areas of
         the brain that are difficult to reach.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        <span className="font-semibold text-black">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
+        <span className="font-medium text-black">
           Stereotactic radiosurgery:{" "}
         </span>
         This form of radiation therapy uses smaller, more targeted beams of
         X-rays to spare healthy surrounding tissue. It is often used on areas of
         the brain that are difficult to reach.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        <span className="font-semibold text-black">Proton therapy:</span>
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
+        <span className="font-medium text-black">Proton therapy:</span>
         This uses a particle, the proton, to deliver radiation. Proton therapy
         may be a good choice for certain types of tumors. Compared with other
         methods, it delivers less radiation to surrounding healthy tissue.
       </p>
 
-      <div className="text-xl text-center mt-10 font-bold">
+      <div className="text-2xl text-center mt-10 font-medium">
         Chemotherapy for Brain Cancer
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Chemotherapy drugs are medicines that kill cancer cells. Chemotherapy is
         rarely used as a stand-alone treatment for brain tumors; it is often
         used in combination with surgery and/or radiation. Researchers have
@@ -1234,18 +1257,18 @@ function BrainTumor() {
 
       <div className="text-start my-5 underline">
         <a
-          className="text-lg text-[#0E56A0] text-bold hover:text-blue-500"
+          className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
           href=""
         >
           To learn more about chemotherapy for brain tumors, click here
         </a>
       </div>
 
-      <div className="text-xl text-center mt-10 font-bold">
+      <div className="text-2xl text-center mt-10 font-medium">
         Targeted Drug Therapy for Brain Tumors
       </div>
 
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Targeted drug therapies are medications that selectively attack specific
         cell traits to halt a tumor’s spread. Unlike chemotherapy, targeted
         therapies spare healthy tissue, so they generally have fewer, milder
@@ -1254,10 +1277,10 @@ function BrainTumor() {
         radiation.
       </p>
 
-      <div className="text-xl text-center mt-10 font-bold">
+      <div className="text-2xl text-center mt-10 font-medium">
         Tumor Treating Fields
       </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Tumor treating fields use painless electrical pulses to interrupt brain
         tumor cell division. This slows their growth and spread. The device is
         portable and resembles a swim cap connected to a small backpack. The
@@ -1267,10 +1290,10 @@ function BrainTumor() {
 
       {/* Clinical Trials */}
       <div className="my-10 bg-[#B8DEFF] py-2 px-16">
-        <div className="text-xl text-center mt-10 py-8 font-bold">
+        <div className="text-2xl text-center mt-10 py-8 font-medium">
           Clinical Trials
         </div>
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           Clinical trials are an important form of clinical research. They are
           designed to test new therapies or diagnostic techniques in patients.
           In general, clinical trials address whether a new treatment or
@@ -1278,23 +1301,23 @@ function BrainTumor() {
           tumor clinical trials are frequently focused on finding new ways to
           manage malignant brain tumors.
         </p>
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           Involvement in clinical trials generally requires some commitment and
           comes with certain risks. Clinical trials might be an option for
           patients whose tumor came back and/or if it’s a tumor known to be
           aggressive and generally incurable with current therapies.
         </p>
 
-        <div className="text-xl text-center mt-10 font-bold py-8">
+        <div className="text-xl text-center mt-10 font-medium py-8">
           Follow-up Care and Rehabilitation after Brain Tumor Treatment
         </div>
 
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           After completion of treatment, your brain tumor care team will help
           you prepare to leave the hospital, provide follow-up care, and
           coordinate any necessary rehabilitation services or home care.
         </p>
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           Follow-up care after brain tumor treatment may involve seeing a
           neurosurgeon or neurologist for periodic examinations and brain scans,
           usually MRIs. The doctor will check for tumor recurrence and possible
@@ -1327,8 +1350,8 @@ function BrainTumor() {
       </div>
 
       {/* Clinical Trails */}
-      <div className="text-xl text-center mt-10 font-bold">Clinical Trials</div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <div className="text-xl text-center mt-10 font-medium">Clinical Trials</div>
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Clinical trials are an important form of clinical research. They are
         designed to test new therapies or diagnostic techniques in patients. In
         general, clinical trials address whether a new treatment or technique is
@@ -1338,17 +1361,17 @@ function BrainTumor() {
       </p>
 
       {/* Pink Bg paragraph */}
-      <p className="p-3 my-1 text-sm bg-[#D84498] text-white text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="p-3 my-1  bg-[#D84498] text-white text-start w-full  mx-auto font-light leading-relaxed">
         If an inpatient stay is recommended, a social worker will help you find
         a facility close to home and work with your insurance provider to get
         you set up.
       </p>
-      <p className="p-3 my-1 text-sm bg-[#D84498] text-white text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="p-3 my-1  bg-[#D84498] text-white text-start w-full  mx-auto font-light leading-relaxed">
         If home therapy is recommended, the team will arrange for home
         therapists to visit you. They usually come two to three times a week for
         30–60 minutes.
       </p>
-      <p className="p-3 my-1 text-sm bg-[#D84498] text-white text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="p-3 my-1  bg-[#D84498] text-white text-start w-full  mx-auto font-light leading-relaxed">
         If outpatient therapy is recommended, you will receive a referral or
         prescription before leaving the hospital that will detail the type of
         therapy necessary.
@@ -1360,24 +1383,24 @@ function BrainTumor() {
             key={index}
             className="shadow-md border border-gray-200 rounded-lg p-4 bg-white"
           >
-            <h3 className="text-[#0E56A0] font-semibold text-lg mb-2">
+            <h3 className="text-hciPrimary font-medium  mb-2">
               {item.title}
             </h3>
-            <p className="text-gray-700 text-sm">{item.description}</p>
+            <p className="text-gray-700 font-light">{item.description}</p>
           </div>
         ))}
       </div>
 
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed text-2xl font-medium">
         There are different types of rehabilitation specialists who can help you
       </p>
 
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         Support services, such as counseling, patient education and support
         groups are available and can typically be accessed through your
         treatment center even after your treatment has ended.
       </p>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+      <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
         A brain tumor can be a frightening diagnosis. It’s important to partner
         with a medical team you trust to determine the best next steps, whether
         it’s observation, surgery, radiation therapy or another treatment. How
@@ -1386,7 +1409,7 @@ function BrainTumor() {
       </p>
 
       <div className="my-2">
-        <ul className="list-disc pl-2 pr-2 list-outside space-y-2 text-gray-700 marker:text-pink-500">
+        <ul className="list-disc pl-2 pr-2 list-outside space-y-2 text-gray-700 marker:text-hciSecondary font-light">
           <li> The type of brain tumor, its size, grade and location</li>
           <li>
             {" "}
@@ -1406,35 +1429,14 @@ function BrainTumor() {
         </ul>
       </div>
 
-      <H2 title="Conclusion" className="text-center text-black mt-8" />
-
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        There is no projected survival rate for those diagnosed with a brain
-        tumor, as individual circumstances play a big role. For example, some
-        malignant tumors can be successfully controlled by radiation therapy.
-        Others, because of their location, may be life-threatening even if they
-        are benign. Doctors have to look at thousands of patients with similar
-        characteristics to see a trend in how certain tumors progress and how
-        different treatments affect them.
-      </p>
-
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        Your overall outlook and prognosis is likely to change as you undergo
-        various treatments. If you have surgery, how much of the tumor the
-        neurosurgeon can remove will impact what will happen next. Other brain
-        tumor treatments will determine future steps as well.
-      </p>
+     
 
       {/* CTA Section */}
-      <div className="text-center mt-6 mb-12">
-        <Link
-          href="/contact"
-          className="inline-block bg-pink-500 text-white px-8 py-3 rounded-lg hover:bg-pink-600 transition-colors"
-        >
-          Book an Appointment
-        </Link>
+      <Conclusion data={data.conclusion} />
+      <FooterLinks head={data.title} />
+      <BookButton />
       </div>
-    </div>
+      </>
   );
 }
 
