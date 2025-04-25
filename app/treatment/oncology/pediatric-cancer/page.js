@@ -1,15 +1,11 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
-import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
-// import TextComponent from '@/components/Common/TextComponent'
 import Link from "next/link";
-import H3 from "@/components/ui/h3";
 import H1 from "@/components/ui/h1";
 
 const data = {
