@@ -1,12 +1,12 @@
 import React from "react";
 import H2 from "@/components/ui/h2";
-import Link from "next/link";
 import H3 from "@/components/ui/h3";
 import Banner from "@/components/Common/Banner";
 import H1 from "@/components/ui/h1";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
+
 
 const data = {
   title: "Prostate Cancer",
@@ -23,31 +23,31 @@ const data = {
           title: "Age",
           description:
             "The risk of prostate cancer increases significantly after age 50.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+          className: "bg-[#FFE7B6] p-4 rounded-lg",
         },
         {
           title: "Family History",
           description:
-            "Men with a family history of prostate cancer are at higher risk.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+            "A family history of prostate cancer can increase the risk.",
+          className: "bg-[#FFE7B6] p-4 rounded-lg",
         },
         {
           title: "Genetic Mutations",
           description:
-            "Inherited mutations, such as those in the BRCA1 or BRCA2 genes, can increase the risk.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+            "Certain inherited gene mutations (like BRCA1 and BRCA2) may contribute.",
+          className: "bg-[#FFE7B6] p-4 rounded-lg",
         },
         {
           title: "Lifestyle Factors",
           description:
             "Obesity, smoking, and lack of physical activity may contribute to a higher likelihood of developing prostate cancer.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+          className: "bg-[#FFE7B6] p-4 rounded-lg",
         },
         {
           title: "Diet",
           description:
             "A diet high in red meat and dairy products, with low fruit and vegetable intake, can increase the risk.",
-          className: "bg-yellow-100 p-4 rounded-lg",
+          className: "bg-[#FFE7B6] p-4 rounded-lg",
         },
       ],
     },
@@ -91,7 +91,7 @@ const data = {
         "Prostate cancer is diagnosed through several methods, often starting with a physical examination and screening tests:",
       items: [
         {
-          title: "Digital Rectal Exam (DRE)",
+          title: "Digital Rectal Exam (DRE",
           description:
             "A physical examination to check the prostate for abnormalities.",
           className: "bg-pink-500 text-white p-2 rounded mb-2",
@@ -142,17 +142,17 @@ const data = {
         {
           title: "Radiation Therapy",
           description:
-            "Radiation therapy plays a crucial role in treating prostate cancer, particularly for patients who are not candidates for surgery or those with localized tumors. The latest advancements in radiation therapy allow for more precise treatments, minimizing side effects and improving patient outcomes.",
+            "Radiation therapy plays a crucial role in treating prostate cancer, particularly for patients who are not candidates for surgery or those with localized tumors.",
         },
         {
           title: "Proton Therapy",
           description:
-            "Proton therapy is an advanced form of radiation that uses protons instead of traditional X-rays to target cancer cells. Its precision ensures that the surrounding healthy tissues, such as the bladder and rectum, are spared from excessive radiation exposure. Proton therapy allows for higher doses of radiation to be delivered directly to the tumor, reducing side effects and improving long-term outcomes for prostate cancer patients.",
+            "Proton therapy is an advanced form of radiation that uses protons instead of traditional X-rays to target cancer cells, reducing side effects and improving outcomes.",
         },
         {
           title: "CyberKnife Treatment",
           description:
-            "CyberKnife is a non-invasive robotic system that delivers targeted radiation with pinpoint accuracy. It tracks the prostate's movement in real-time during treatment, ensuring that radiation is precisely delivered while avoiding nearby healthy tissues. CyberKnife treatment for prostate cancer is typically completed in fewer sessions compared to traditional radiation therapy, offering a quicker and more convenient option for patients. The treatment is painless and does not require surgery or anesthesia.",
+            "CyberKnife is a non-invasive robotic system that delivers targeted radiation with pinpoint accuracy, typically completed in fewer sessions.",
         },
       ],
     },
@@ -179,8 +179,7 @@ const data = {
         },
         {
           title: "No Admission",
-          description:
-            "Proton Therapy and CyberKnife are typically performed on an outpatient basis, allowing patients to return home the same day.",
+          description: "These therapies are usually outpatient procedures.",
         },
       ],
     },
@@ -190,7 +189,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph:
-        "Prostate cancer treatment has advanced significantly with the introduction of cutting-edge radiation techniques like Proton Therapy and CyberKnife, offering more precise, effective, and patient-friendly options. These advancements find the cancer is targeted while minimizing damage to surrounding tissues, improving patient outcomes and quality of life. Early diagnosis and a personalized treatment plan are crucial for managing prostate cancer effectively, offering hope for a successful recovery.",
+        "Prostate cancer treatment has advanced significantly with techniques like Proton Therapy and CyberKnife, offering more precise, effective, and patient-friendly options. Early diagnosis and personalized treatment are key to success.",
     },
   ],
 
@@ -233,14 +232,19 @@ function ProstateCancer() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <H1 title={data.title} />
       <div className="mt-6">
-        <p className="text-gray-600 text-lg font-light">{data.description}</p>
+        <p className="text-gray-600 text-start text-lg font-light">
+          {data.description}
+        </p>
+        <div className="py-4">
+          <Banner image="/oncology/prostate-banner.png" />
+        </div>
       </div>
 
-      {/* Causes Section */}
+      {/* Causes */}
       <div className="mt-12">
         <H2
           title={data.causes[0].heading}
-          className="text-2xl font-semibold mb-4"
+          className="text-2xl text-center font-semibold mb-4"
         />
         <p className="text-gray-600 mb-6 font-light">
           {data.causes[0].description}
@@ -248,14 +252,14 @@ function ProstateCancer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.causes[0].items.map((cause, idx) => (
             <div key={idx} className={cause.className}>
-              <H3 title={cause.title} className="font-semibold mb-2" />
+              <h2 className="font-medium text-black text-md">{cause.title}</h2>
               <p className="text-sm">{cause.description}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="mt-6 text-center">
+      <div className="mt-6 text-start">
         <Link
           href="/treatment/oncology/prostate-cancer-info"
           className="text-hciPrimary font-semibold underline"
@@ -264,7 +268,7 @@ function ProstateCancer() {
         </Link>
       </div>
 
-      {/* Symptoms Section */}
+      {/* Symptoms */}
       <div className="mt-12">
         <H2
           title={data.symptoms[0].heading}
@@ -282,7 +286,7 @@ function ProstateCancer() {
         </div>
       </div>
 
-      {/* Diagnosis Section */}
+      {/* Diagnosis */}
       <div className="mt-12">
         <H2
           title={data.diagnosis[0].heading}
@@ -310,7 +314,7 @@ function ProstateCancer() {
         </Link>
       </div>
 
-      {/* Treatment Section */}
+      {/* Treatments */}
       <div className="mt-12">
         <H2
           title={data.treatments[0].heading}
@@ -319,43 +323,39 @@ function ProstateCancer() {
         <p className="text-gray-600 mb-6 font-light">
           {data.treatments[0].description}
         </p>
-        <div className="border border-pink-200 rounded-lg p-6">
-          <div className="space-y-6">
-            {data.treatments[0].items.map((treatment, idx) => (
-              <div key={idx} className="space-y-2">
-                <H3
-                  title={treatment.title}
-                  className="text-lg font-semibold text-pink-600"
-                />
-                <p className="text-gray-600 font-light">
-                  {treatment.description}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div className="border border-pink-200 rounded-lg p-6 space-y-6">
+          {data.treatments[0].items.map((treatment, idx) => (
+            <div key={idx} className="space-y-2">
+              <H3
+                title={treatment.title}
+                className="text-lg font-semibold text-pink-600"
+              />
+              <p className="text-gray-600 font-light">
+                {treatment.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Advantages Section */}
+      {/* Advantages */}
       <div className="mt-12">
         <H2
           title={data.advantages[0].heading}
           className="text-2xl font-semibold mb-6"
         />
-        <div className="border border-pink-200 rounded-lg p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {data.advantages[0].items.map((advantage, idx) => (
-              <div key={idx} className="bg-pink-50 p-4 rounded-lg">
-                <H3
-                  title={advantage.title}
-                  className="font-semibold text-pink-600 mb-2"
-                />
-                <p className="text-gray-600 font-light">
-                  {advantage.description}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div className="border border-pink-200 rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          {data.advantages[0].items.map((advantage, idx) => (
+            <div key={idx} className="bg-pink-50 p-4 rounded-lg">
+              <H3
+                title={advantage.title}
+                className="font-semibold text-pink-600 mb-2"
+              />
+              <p className="text-gray-600 font-light">
+                {advantage.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -365,9 +365,6 @@ function ProstateCancer() {
         <FooterLinks head={data.title} />
         <BookButton />
       </div>
-
-      {/* Links */}
-    
     </div>
     </>
   );

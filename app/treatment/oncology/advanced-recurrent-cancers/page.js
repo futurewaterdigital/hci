@@ -435,8 +435,8 @@ function AdvancedRecurrentCancers() {
             </div>
           ))}
         </div>
-
        <KnowMore title={data.title} />
+
 
         <H2
           title="Recurrent Cancers in India"
@@ -496,9 +496,6 @@ function AdvancedRecurrentCancers() {
             </>
           ))}
         </div>
-
-       
-
         <Conclusion data={data.conclusion} />
         <FooterLinks head={data.title} />
         <BookButton />

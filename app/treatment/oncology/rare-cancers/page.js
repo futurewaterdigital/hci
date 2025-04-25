@@ -1,174 +1,206 @@
-'use client'
-import { useEffect } from 'react'
-import H3 from '@/components/ui/h3'
-import H1 from '@/components/ui/h1'
+"use client";
+import { useEffect } from "react";
+import H3 from "@/components/ui/h3";
+import H1 from "@/components/ui/h1";
+import Banner from "@/components/Common/Banner";
+import Link from "next/link";
+import BookButton from "@/components/cardiacComponents/BookButton";
 
 export default function RareCancers() {
   useEffect(() => {
-    document.title = 'Rare Cancers Treatment in India'
-  }, [])
+    document.title = "Rare Cancers Treatment in India";
+  }, []);
+
+  const cancerData = [
+    {
+      title: "Sarcomas",
+      content: [
+        "Sarcomas are cancers that arise from connective tissues like muscles, fat, bones, and cartilage. They can occur in various forms, including osteosarcoma (bone), liposarcoma (fat), and rhabdomyosarcoma (muscle). Sarcomas are rare, accounting for only about 1% of all cancers. However, they are increasingly being recognized due to advancements in diagnostic imaging and oncology.",
+        "Sarcomas are often diagnosed late because their symptoms can mimic benign conditions such as muscle strains or injuries. Treatment usually involves a combination of surgery, chemotherapy, and sometimes radiation.",
+      ],
+    },
+    {
+      title: "Neuroendocrine Tumors (NETs)",
+      content: [
+        "NETs are a group of cancers that arise in the neuroendocrine system, which can produce hormones. They can occur in various parts of the body, including the lungs, pancreas, and gastrointestinal tract.",
+        "Although neuroendocrine tumors are relatively rare, their incidence is gradually increasing in India, associated with improved diagnostic methods.",
+        "Symptoms can be non-specific, such as abdominal pain, flushing, and diarrhea, leading to delayed diagnosis. NETs may be associated with more common cancers of the digestive tract and lung. Treatment involves surgery, targeted therapies, and sometimes radiation. India has advanced centers of excellence for the treatment of NETs.",
+      ],
+    },
+    {
+      title: "Gastric Lymphoma",
+      content: [
+        "Gastric lymphoma is a cancer of the lymphatic tissue in the stomach. It is a rare type of non-Hodgkin lymphoma and accounts for a very small percentage of all gastric cancers.",
+        "It is rare but more common than other lymphomas, with a strong incidence in certain regions, possibly linked to dietary habits and Helicobacter pylori infection.",
+        "Diagnosis can be delayed because the symptoms (such as nausea, weight loss, and stomach pain) are often mistaken for common gastric disorders. Treatment involves chemotherapy, radiation, and in some cases, surgery. Specialized lymphoma centers in India offer treatment for gastric lymphoma.",
+      ],
+    },
+    {
+      title: "Mesothelioma",
+      content: [
+        "Mesothelioma is a rare and aggressive cancer linked to exposure to asbestos. It typically affects the lining of the lungs (pleura) but can also affect the abdomen (peritoneum) and the heart (pericardium).",
+        "**Prevalence in India:** Though mesothelioma is rare globally, it has been reported in industrial regions of India, especially in areas with significant asbestos exposure from industries.",
+        "**Challenges:** It often presents in an advanced stage, as it can mimic other respiratory conditions. Symptoms include coughing, shortness of breath, and chest pain.",
+        "**Treatment:** Due to its rarity, treatment options in India are evolving, with a focus on improving early diagnosis and providing specialized care.",
+      ],
+    },
+    {
+      title: "Retinoblastoma",
+      content: [
+        "Retinoblastoma is a rare cancer of the eye that is the most common eye cancer among children. It originates in the retina and can lead to vision loss or even death if untreated.",
+        "It is critical that diagnosing this condition is critical for preserving vision, as many children are diagnosed too late, especially in rural areas where there is limited access to specialized ophthalmological care.",
+        "Treatment may involve chemotherapy, radiation, or laser therapy, and in some cases, eye removal (enucleation) is necessary.",
+      ],
+    },
+  ];
+
+  const risk_factors = [
+    {
+      description:
+        " Many rare cancers are diagnosed late due to the lack of awareness among both patients and healthcare providers. Symptoms may mimic more common conditions, leading to misdiagnosis or delayed diagnosis.",
+    },
+    {
+      description:
+        "  Rural areas often lack access to advanced diagnostic and treatment facilities for rare cancers.",
+    },
+    {
+      description:
+        "  Both the public and medical professionals may not be aware of the signs and symptoms of rare cancers, leading to missed opportunities for early intervention.",
+    },
+    {
+      description:
+        " The cost of treatment for rare cancers, particularly with newer therapies like targeted therapy and immunotherapy, can be prohibitive, especially for patients from low-income families.",
+    },
+    {
+      description:
+        " Currently, there is limited data on the incidence and outcomes of rare cancers in India, which makes it difficult to develop standardized treatment protocols.",
+    },
+  ];
+
+  const links = [
+    {
+      title:
+        "To Consult With The Best Doctor For Treatment Of A Rare Cancer, Click Here",
+      url: "",
+    },
+    {
+      title:
+        "For The Best Hospital For The Treatment Of A Rare Cancer In Bangalore, Click Here",
+      url: "",
+    },
+    {
+      title:
+        "For The Best Hospital For The Treatment Of A Rare Cancer In Mumbai, Click Here",
+      url: "",
+    },
+    {
+      title:
+        "To Consult With The Best Doctor For Treatment Of A Rare Cancer, Click Here",
+      url: "",
+    },
+    {
+      title:
+        "For The best hospital for the treatment of A rare cancer in Delhi, click here",
+      url: "",
+    },
+    {
+      title:
+        "For The best hospital for the treatment of A rare cancer in Hyderabad, click here",
+      url: "",
+    },
+    {
+      title:
+        "For The best hospital for the treatment of A rare cancer in Mumbai, click here",
+      url: "",
+    },
+  ];
 
   return (
     <>
-      <section class="relative">
-        <img
-          alt="DNA Strand"
-          class="w-full h-96 object-cover"
-          src="https://placehold.co/1920x400"
-        />
-      </section>
+      {/* Banner Image */}
+      <Banner image="/oncology/rare-cancer-banner.png" />
       {/* <!-- Main Content --> */}
       <main class="container mx-auto py-12 px-6">
         <H1 title="Rare Cancers" />
-        <p class="text-lg mb-6">
-          Rare cancers are those cancers that occur in a small percentage of the
-          population, often with unique characteristics, and are not as commonly
-          diagnosed as more prevalent cancers. In developing and developed
-          countries, the development of rare cancers poses unique challenges as
-          the healthcare infrastructure is not always equipped to handle these
-          less common conditions, and awareness among the public and healthcare
-          providers is limited.
+        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+          Rare cancers are defined as cancers that occur in a small percentage
+          of the population, often with unique characteristics, and are not as
+          commonly diagnosed as more prevalent cancers like breast, lung and
+          colorectal cancers. In India, the occurrence of rare cancers poses
+          unique challenges, as the healthcare infrastructure is not always
+          equipped to handle these less common conditions, and awareness among
+          the public and healthcare providers is limited.
         </p>
-        <p class="text-lg mb-6">
-          While exact numbers are difficult to determine due to lack of
-          comprehensive cancer registries for rare cancers, it is estimated that
-          rare cancers represent around 20-25% of all cancers globally. This
-          proportion is likely to be similar in India. These cancers often
-          present prolonged periods of time before diagnosis and treatment,
-          leading to their advancement into later, more difficult-to-treat
-          stages.
+        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+          While exact numbers are difficult to determine due to the lack of
+          comprehensive cancer registries for all rare cancers, it is estimated
+          that rare cancers represent around {" "}
+          <strong className="font-medium"> 20-25% of all cancers </strong>
+           globally. These cancers often present diagnostic challenges and are
+          sometimes misdiagnosed due to their uncommon nature.
         </p>
-        <p class="text-lg mb-6">
-          Patients diagnosed with rare cancers in India may face delays in
-          receiving treatment due to lack of specialized care centers, advanced
-          diagnostic tools, and targeted therapies. Most cancer treatments in
-          India are still focused on the more common types of cancer.
+        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+          Rare cancers are not as well known, both among the general public and
+          healthcare professionals, leading to delays in diagnosis and
+          treatment. Early signs may be misinterpreted as benign conditions, and
+          many healthcare facilities are not equipped with the specialized
+          knowledge or diagnostic tools required.
         </p>
-        <h2 class="text-2xl font-bold text-pink-500 mb-4">
+
+        <h2 class="text-2xl my-16 font-bold text-center text-black">
           Some of the Rare Cancers identified in the Indian context could
           include:
         </h2>
-        <div class="bg-yellow-100 p-4 mb-6">
-          <H3 title="Sarcomas" className="text-xl font-bold mb-2"/>
-          <p class="mb-2">
-            Sarcomas are cancers that arise from connective tissues like
-            muscles, fat, bones, and cartilage. They can occur in various forms,
-            including osteosarcoma (bone), liposarcoma (fat), and
-            rhabdomyosarcoma (muscle). Sarcomas are rare, accounting for only
-            about 1% of all cancers. However, they are increasingly being
-            recognized due to advancements in diagnostic imaging and oncology.
-            Sarcomas are often diagnosed late because their symptoms can mimic
-            benign conditions such as muscle strains or injuries. Treatment
-            usually involves a combination of surgery, chemotherapy, and
-            sometimes radiation.
-          </p>
+
+        <div>
+          {cancerData.map((item, index) => (
+            <div key={index} className="bg-[#FFE7B6] p-4 mb-6">
+              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+              {item.content.map((paragraph, i) => (
+                <p key={i} className="mb-2">
+                  {paragraph.includes("**") ? (
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: paragraph.replace(
+                          /\*\*(.*?)\*\*/g,
+                          "<strong>$1</strong>"
+                        ),
+                      }}
+                    />
+                  ) : (
+                    paragraph
+                  )}
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
-        <div class="bg-yellow-100 p-4 mb-6">
-          <H3 title="Neuroendocrine Tumors (NETs)" className="text-xl font-bold mb-2"/>
-          <p class="mb-2">
-            NETs are a group of cancers that arise in the neuroendocrine system,
-            which can produce hormones. They can occur in various parts of the
-            body, including the lungs, pancreas, and gastrointestinal tract.
-            Although neuroendocrine tumors are relatively rare, their incidence
-            is gradually increasing in India, associated with improved
-            diagnostic methods. Symptoms can be non-specific, such as abdominal
-            pain, flushing, and diarrhea, leading to delayed diagnosis. NETs may
-            be associated with more common cancers of the digestive tract and
-            lung. Treatment involves surgery, targeted therapies, and sometimes
-            radiation. India has advanced centers of excellence for the
-            treatment of NETs.
-          </p>
+
+        <div className="text-start mb-8">
+          <Link
+            href=""
+            className="text-hciPrimary text-lg font-semibold underline"
+          >
+            To Know More About Rare Cancers, Click Here
+          </Link>
         </div>
-        <div class="bg-yellow-100 p-4 mb-6">
-          <H3 title="Gastric Lymphoma" className="text-xl font-bold mb-2"/>
-          <p class="mb-2">
-            Gastric lymphoma is a cancer of the lymphatic tissue in the stomach.
-            It is a rare type of non-Hodgkin lymphoma and accounts for a very
-            small percentage of all gastric cancers. It is rare but more common
-            than other lymphomas, with a strong incidence in certain regions,
-            possibly linked to dietary habits and Helicobacter pylori infection.
-            Diagnosis can be delayed because the symptoms (such as nausea,
-            weight loss, and stomach pain) are often mistaken for common gastric
-            disorders. Treatment involves chemotherapy, radiation, and in some
-            cases, surgery. Specialized lymphoma centers in India offer
-            treatment for gastric lymphoma.
-          </p>
-        </div>
-        <div class="bg-yellow-100 p-4 mb-6">
-          <H3 title="Mesothelioma" className="text-xl font-bold mb-2"/>
-          <p class="mb-2">
-            Mesothelioma is a rare and aggressive cancer linked to exposure to
-            asbestos. It typically affects the lining of the lungs (pleura) but
-            can also affect the abdomen (peritoneum) and the heart
-            (pericardium).
-          </p>
-          <p class="mb-2">
-            <strong>Prevalence in India:</strong>
-            Though mesothelioma is rare globally, it has been reported in
-            industrial regions of India, especially in areas with significant
-            asbestos exposure from industries.
-          </p>
-          <p class="mb-2">
-            <strong>Challenges:</strong>
-            It often presents in an advanced stage, as it can mimic other
-            respiratory conditions. Symptoms include coughing, shortness of
-            breath, and chest pain.
-          </p>
-          <p class="mb-2">
-            <strong>Treatment:</strong>
-            Due to its rarity, treatment options in India are evolving, with a
-            focus on improving early diagnosis and providing specialized care.
-          </p>
-        </div>
-        <div class="bg-yellow-100 p-4 mb-6">
-          <H3 title="Retinoblastoma" className="text-xl font-bold mb-2"/>
-          <p class="mb-2">
-            Retinoblastoma is a rare cancer of the eye that is the most common
-            eye cancer among children. It originates in the retina and can lead
-            to vision loss or even death if untreated. It is critical that
-            diagnosing this condition is critical for preserving vision, as many
-            children are diagnosed too late, especially in rural areas where
-            there is limited access to specialized ophthalmological care.
-            Treatment may involve chemotherapy, radiation, or laser therapy, and
-            in some cases, eye removal (enucleation) is necessary.
-          </p>
-        </div>
-        <a class="text-blue-500 underline mb-6 block" href="#">
-          To Know More About Rare Cancers, Click Here
-        </a>
-        <h2 class="text-2xl font-bold text-pink-500 mb-4">
+
+        <h2 class="text-2xl my-6 font-bold text-center text-black">
           Challenges in Managing Rare Cancers in India
         </h2>
-        <div class="bg-pink-100 p-4 mb-6">
-          <ul class="list-disc list-inside">
-            <li class="mb-2">
-              Many rare cancers are diagnosed late due to the lack of awareness
-              among both patients and healthcare providers. Symptoms may mimic
-              more common conditions, leading to misdiagnosis or delayed
-              diagnosis.
-            </li>
-            <li class="mb-2">
-              Rural areas often lack access to advanced diagnostic and treatment
-              facilities for rare cancers.
-            </li>
-            <li class="mb-2">
-              Both the public and medical professionals may not be aware of the
-              signs and symptoms of rare cancers, leading to missed
-              opportunities for early intervention.
-            </li>
-            <li class="mb-2">
-              The cost of treatment for rare cancers, particularly with newer
-              therapies like targeted therapy and immunotherapy, can be
-              prohibitive, especially for patients from low-income families.
-            </li>
-            <li class="mb-2">
-              Currently, there is limited data on the incidence and outcomes of
-              rare cancers in India, which makes it difficult to develop
-              standardized treatment protocols.
-            </li>
-          </ul>
+
+        <div className="space-y-2">
+          {risk_factors.map((cause, idx) => (
+            <div
+              key={idx}
+              className="bg-[#D84498] text-white font-light py-4 px-4 rounded text-md"
+            >
+              {cause.description}
+            </div>
+          ))}
         </div>
-        <p class="text-lg mb-6">
+
+        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
           Rare cancers present significant diagnostic and treatment challenges
           in India due to the lack of awareness, limited access to specialized
           care, and high treatment costs. However, with improvements in
@@ -178,22 +210,23 @@ export default function RareCancers() {
           trials, and better public health initiatives hold promise for
           improving outcomes for patients with these rare but serious diseases.
         </p>
-        <a class="text-blue-500 underline mb-6 block" href="#">
-          To Consult With The Best Doctor For Treatment Of A Rare Cancer, Click
-          Here
-        </a>
-        <a class="text-blue-500 underline mb-6 block" href="#">
-          For The Best Hospital For The Treatment Of A Rare Cancer In Bangalore,
-          Click Here
-        </a>
-        <a class="text-blue-500 underline mb-6 block" href="#">
-          For The Best Hospital For The Treatment Of A Rare Cancer In Mumbai,
-          Click Here
-        </a>
-        <button class="bg-pink-500 text-white px-6 py-3 rounded mt-6">
-          Book An Appointment
-        </button>
+
+        {/* Links */}
+        <div className="my-6">
+          {links.map((link, index) => (
+            <div className="text-start mb-4" key={index}>
+              <Link
+                href={link.url}
+                className="text-hciPrimary text-lg font-semibold underline"
+              >
+                {link.title}
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <BookButton />
       </main>
     </>
-  )
+  );
 }
