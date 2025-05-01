@@ -1,16 +1,15 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from "@/components/ui/IssuesLinks"
-
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Pediatric Orthopedic Conditions",
@@ -226,7 +225,10 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="text-2xl font-medium mb-4 text-center" />
         <p className="font-light" text="">
@@ -243,18 +245,18 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <p>
+        {/* <p>
           In older adults, fractures can also occur from low-energy trauma, such
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
-        </p>
+        </p> */}
         <KnowMore title={data.title} />
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">
               <DataBoxes
                 title="Symptoms"
-                text="Common symptoms of an acetabular fracture include:"
+                text="The symptoms of pediatric orthopedic conditions vary based on the disorder but may include:"
                 textCss="font-light py-4"
                 titleCss="text-black font-medium text-center text-2xl"
                 header=""
@@ -263,10 +265,10 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div className='space-y-4'>
+            <div className="space-y-4">
               <DataBoxes
                 title="Diagnosis"
-                text="Proper diagnosis is essential to determine the severity and pattern of the fracture. Healthcare providers typically perform the following:"
+                text="Accurate diagnosis is essential to ensure timely intervention. Diagnostic methods may include:"
                 header=""
                 textCss="font-light py-4"
                 titleCss="text-black font-medium text-center text-2xl"
@@ -288,13 +290,13 @@ function GeneralSurgery() {
             the child&apos;s age, and overall health. Both non-surgical and
             surgical interventions are considered.
           </p>
-          <DataLists
-            desc="If the fracture is unstable or involves displaced bone fragments, surgery is typically required:"
-            data={data.complications}
-          />
+          <DataLists desc="" data={data.complications} />
         </div>
         <div className="space-y-4">
-          <H2 title="Prevention and Support" className="text-2xl font-medium mb-4 text-center"/>
+          <H2
+            title="Prevention and Support"
+            className="text-2xl font-medium mb-4 text-center"
+          />
           <p className="font-light text-center">
             Prevention strategies can reduce the risk of pediatric orthopedic
             issues and improve outcomes. Some key recommendations include:
@@ -324,7 +326,10 @@ function GeneralSurgery() {
         </div>
 
         <div className="space-y-4">
-          <H2 title="When to See a Doctor?" className="text-2xl font-medium mb-4 text-center"/>
+          <H2
+            title="When to See a Doctor?"
+            className="text-2xl font-medium mb-4 text-center"
+          />
           <p className="font-light text-center">
             Consult a doctor if your child experiences any of the following:
           </p>
@@ -335,7 +340,7 @@ function GeneralSurgery() {
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[120px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>

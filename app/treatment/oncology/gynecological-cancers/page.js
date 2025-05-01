@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-import Title from "@/components/cardiacComponents/Title";
+import H1 from "@/components/ui/h1";
 // import DataLists from '@/components/cardiacComponents/Bullets'
 // import BookButton from '@/components/cardiacComponents/BookButton'
 // import FooterLinks from '@/components/cardiacComponents/FooterLink'
@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const data = {
   title: "Gynecological Cancers",
-  title_1: "Endometrial Cancer",
+  title_1: "Endometrial / Uterine Cancer",
   bannerImage: "/oncology/gynecological-cancers-banner.png",
   bannerImage_1: "/oncology/gynecological-cancers.png",
   description:
@@ -42,9 +42,9 @@ const data = {
       heading: "Transvaginal Ultrasound",
       description: "Uses sound waves to create images of the uterus",
       aneurysmSymptoms: [
-        { description: "Non-invasive imaging technique" },
-        { description: "Creates detailed images of the uterine cavity" },
-        { description: "Helps measure endometrial thickness" },
+        {description: "Non-invasive imaging technique"},
+        {description: "Creates detailed images of the uterine cavity"},
+        {description: "Helps measure endometrial thickness"},
       ],
     },
     {
@@ -52,9 +52,9 @@ const data = {
       description:
         "A sample of the uterine lining is taken for laboratory analysis",
       aneurysmSymptoms: [
-        { description: "Confirms presence of cancer cells" },
-        { description: "Determines cancer type and grade" },
-        { description: "Usually performed in office" },
+        {description: "Confirms presence of cancer cells"},
+        {description: "Determines cancer type and grade"},
+        {description: "Usually performed in office"},
       ],
     },
     {
@@ -62,9 +62,9 @@ const data = {
       description:
         "A thin tube with a camera is inserted into the uterus to examine the lining",
       aneurysmSymptoms: [
-        { description: "Direct visualization of the uterine cavity" },
-        { description: "Can identify abnormal growths" },
-        { description: "Allows for targeted biopsies" },
+        {description: "Direct visualization of the uterine cavity"},
+        {description: "Can identify abnormal growths"},
+        {description: "Allows for targeted biopsies"},
       ],
     },
   ],
@@ -106,18 +106,18 @@ const data = {
       heading: "Hormone Therapy",
       description: "Hormonal treatment approach",
       aneurysmSymptoms: [
-        { description: "Used for advanced or recurrent cases" },
-        { description: "May include progesterone therapy" },
-        { description: "Can help slow cancer growth" },
+        {description: "Used for advanced or recurrent cases"},
+        {description: "May include progesterone therapy"},
+        {description: "Can help slow cancer growth"},
       ],
     },
     {
       heading: "Chemotherapy",
       description: "Systemic treatment with drugs",
       aneurysmSymptoms: [
-        { description: "Commonly uses carboplatin and paclitaxel" },
-        { description: "Used for advanced stage or high-grade cancer" },
-        { description: "May be combined with radiation for better outcomes" },
+        {description: "Commonly uses carboplatin and paclitaxel"},
+        {description: "Used for advanced stage or high-grade cancer"},
+        {description: "May be combined with radiation for better outcomes"},
       ],
     },
     {
@@ -182,7 +182,7 @@ const data = {
 
 const womenCancerTypes = [
   {
-    menu: "Endometrial Cancer",
+    menu: "Endometrial / Uterine Cancer",
     url: "/treatment/oncology/gynecological-cancers",
   },
   {
@@ -197,12 +197,13 @@ const womenCancerTypes = [
 
 function EndometrialCancer() {
   return (
-    <div className="container mx-auto">
+    <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
         <div className="my-10">
-          <Title title={data.title} className="text-4xl text-pink-500" />
-          <H2 title={data.description} className="text-start text-lg" />
+          <H1 title={data.title} />
+
+          <p className="text-start font-light">{data.description}</p>
         </div>
 
         {/* More Link about brain tumor */}
@@ -212,16 +213,18 @@ function EndometrialCancer() {
               <Link
                 key={index}
                 href={item.url}
-                className="hover:text-hciSecondary cursor-pointer"
-              >
+                className="hover:text-hciSecondary cursor-pointer">
                 {item.menu}
               </Link>
             ))}
           </div>
         </div>
-
+        <H2
+          title={data.title_1}
+          className="text-center text-4xl text-hciSecondary"
+        />
         <Banner image={data.bannerImage_1} />
-        <Title title={data.title_1} titleCss="text-black" />
+
         <p className="text-start font-light">{data.description_1}</p>
         <H2
           title={data.causes[0].heading}
@@ -285,8 +288,7 @@ function EndometrialCancer() {
           {data.treatments.map((treatment, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
-            >
+              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
               <H3
                 title={treatment.heading}
                 className="text-lg font-semibold mb-3 text-hciPrimary"
@@ -296,7 +298,7 @@ function EndometrialCancer() {
               </p> */}
               <ul className="space-y-2">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                  <li key={idx} className="text-gray-700">
+                  <li key={idx} className="text-gray-700 font-light">
                     {symptom.title && <strong>{symptom.title}: </strong>}
                     {symptom.description}
                   </li>
@@ -310,7 +312,7 @@ function EndometrialCancer() {
 
         <FooterLinks head={data.title} />
       </div>
-    </div>
+    </>
   );
 }
 

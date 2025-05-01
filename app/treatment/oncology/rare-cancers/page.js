@@ -1,11 +1,12 @@
 "use client";
-import { useEffect } from "react";
-import H3 from "@/components/ui/h3";
+import {useEffect} from "react";
+//import H3 from "@/components/ui/h3";
 import H1 from "@/components/ui/h1";
 import Banner from "@/components/Common/Banner";
-import Link from "next/link";
 import BookButton from "@/components/cardiacComponents/BookButton";
-
+import KnowMore from "@/components/ui/KnowMore";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
 export default function RareCancers() {
   useEffect(() => {
     document.title = "Rare Cancers Treatment in India";
@@ -77,43 +78,22 @@ export default function RareCancers() {
     },
   ];
 
-  const links = [
-    {
-      title:
-        "To Consult With The Best Doctor For Treatment Of A Rare Cancer, Click Here",
-      url: "",
-    },
-    {
-      title:
-        "For The Best Hospital For The Treatment Of A Rare Cancer In Bangalore, Click Here",
-      url: "",
-    },
-    {
-      title:
-        "For The Best Hospital For The Treatment Of A Rare Cancer In Mumbai, Click Here",
-      url: "",
-    },
-    {
-      title:
-        "To Consult With The Best Doctor For Treatment Of A Rare Cancer, Click Here",
-      url: "",
-    },
-    {
-      title:
-        "For The best hospital for the treatment of A rare cancer in Delhi, click here",
-      url: "",
-    },
-    {
-      title:
-        "For The best hospital for the treatment of A rare cancer in Hyderabad, click here",
-      url: "",
-    },
-    {
-      title:
-        "For The best hospital for the treatment of A rare cancer in Mumbai, click here",
-      url: "",
-    },
-  ];
+  const data = {
+    conclusion: [
+      {
+        header: "Conclusion",
+        paragraph: `
+        Rare cancers present significant diagnostic and treatment challenges
+        in India due to the lack of awareness, limited access to specialized
+        care, and high treatment costs. However, with improvements in
+        healthcare infrastructure, access to advanced diagnostic tools, and
+        growing awareness, India is gradually making progress in the
+        management of rare cancers. Specialized treatment centers, clinical
+        trials, and better public health initiatives hold promise for
+        improving outcomes for patients with these rare but serious diseases.`,
+      },
+    ],
+  };
 
   return (
     <>
@@ -122,7 +102,7 @@ export default function RareCancers() {
       {/* <!-- Main Content --> */}
       <main class="container mx-auto py-12 px-6">
         <H1 title="Rare Cancers" />
-        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <p className="mt-4 text-gray-600 text-start  max-w-7xl mx-auto font-light">
           Rare cancers are defined as cancers that occur in a small percentage
           of the population, often with unique characteristics, and are not as
           commonly diagnosed as more prevalent cancers like breast, lung and
@@ -131,7 +111,7 @@ export default function RareCancers() {
           equipped to handle these less common conditions, and awareness among
           the public and healthcare providers is limited.
         </p>
-        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
           While exact numbers are difficult to determine due to the lack of
           comprehensive cancer registries for all rare cancers, it is estimated
           that rare cancers represent around {" "}
@@ -139,7 +119,7 @@ export default function RareCancers() {
            globally. These cancers often present diagnostic challenges and are
           sometimes misdiagnosed due to their uncommon nature.
         </p>
-        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
           Rare cancers are not as well known, both among the general public and
           healthcare professionals, leading to delays in diagnosis and
           treatment. Early signs may be misinterpreted as benign conditions, and
@@ -147,7 +127,7 @@ export default function RareCancers() {
           knowledge or diagnostic tools required.
         </p>
 
-        <h2 class="text-2xl my-16 font-bold text-center text-black">
+        <h2 class="text-2xl my-16 font-medium text-center text-black">
           Some of the Rare Cancers identified in the Indian context could
           include:
         </h2>
@@ -155,9 +135,9 @@ export default function RareCancers() {
         <div>
           {cancerData.map((item, index) => (
             <div key={index} className="bg-[#FFE7B6] p-4 mb-6">
-              <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+              <h3 className="text-xl font-medium mb-2">{item.title}</h3>
               {item.content.map((paragraph, i) => (
-                <p key={i} className="mb-2">
+                <p key={i} className="mb-2 font-light">
                   {paragraph.includes("**") ? (
                     <span
                       dangerouslySetInnerHTML={{
@@ -177,15 +157,10 @@ export default function RareCancers() {
         </div>
 
         <div className="text-start mb-8">
-          <Link
-            href=""
-            className="text-hciPrimary text-lg font-semibold underline"
-          >
-            To Know More About Rare Cancers, Click Here
-          </Link>
+          <KnowMore title="Rare Cancers" />
         </div>
 
-        <h2 class="text-2xl my-6 font-bold text-center text-black">
+        <h2 class="text-2xl my-6 font-medium text-center text-black">
           Challenges in Managing Rare Cancers in India
         </h2>
 
@@ -193,39 +168,18 @@ export default function RareCancers() {
           {risk_factors.map((cause, idx) => (
             <div
               key={idx}
-              className="bg-[#D84498] text-white font-light py-4 px-4 rounded text-md"
-            >
+              className="bg-hciSecondary text-white font-light py-4 px-4 rounded text-md">
               {cause.description}
             </div>
           ))}
         </div>
 
-        <p className="mt-4 text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
-          Rare cancers present significant diagnostic and treatment challenges
-          in India due to the lack of awareness, limited access to specialized
-          care, and high treatment costs. However, with improvements in
-          healthcare infrastructure, access to advanced diagnostic tools, and
-          growing awareness, India is gradually making progress in the
-          management of rare cancers. Specialized treatment centers, clinical
-          trials, and better public health initiatives hold promise for
-          improving outcomes for patients with these rare but serious diseases.
-        </p>
-
         {/* Links */}
         <div className="my-6">
-          {links.map((link, index) => (
-            <div className="text-start mb-4" key={index}>
-              <Link
-                href={link.url}
-                className="text-hciPrimary text-lg font-semibold underline"
-              >
-                {link.title}
-              </Link>
-            </div>
-          ))}
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head="Rare Cancers" />
+          <BookButton />
         </div>
-
-        <BookButton />
       </main>
     </>
   );

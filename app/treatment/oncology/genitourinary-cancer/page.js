@@ -7,7 +7,7 @@ import Conclusion from "@/components/cardiacComponents/Conclusion";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
-
+import IssuesLink from "@/components/ui/IssuesLinks";
 const data = {
   title: "Genitourinary Cancer",
   subtitle: "Genitourinary Cancer",
@@ -21,7 +21,7 @@ const data = {
     },
     {
       name: "KIDNEY CANCER",
-      link: "/treatment/oncology/gallbladder-cancer",
+      link: "/treatment/oncology/kidney-cancer",
     },
     {
       name: "PROSTATE CANCER",
@@ -134,6 +134,13 @@ const data = {
         "Intravesical chemotherapy involves placing the drug directly into the bladder to target cancerous cells.",
     },
     {
+      heading: "Radiation Therapy",
+      description: "",
+      descriptionTwo:
+        "Uses high-energy rays to destroy cancer cells, especially if surgery is not an option.",
+    },
+
+    {
       heading: "Immunotherapy",
       description:
         "Bacillus Calmette-Guerin (BCG) therapy, a form of immunotherapy, is widely used in India for treating bladder cancer. It involves placing a weakened bacterium directly into the bladder to activate the immune system to attack cancer cells.",
@@ -157,41 +164,6 @@ const data = {
       header: "Conclusion",
       paragraph:
         "Bladder cancer, when diagnosed early, has a high chance of successful treatment. Awareness of the symptoms and risk factors, along with timely medical attention, can significantly improve outcomes. With India’s advancements in cancer care, including access to specialized treatment options like BCG therapy, patients can receive high-quality care at affordable costs.",
-    },
-  ],
-
-  links: [
-    {
-      text: "To Get The Best Diagnosis Of Cervical Cancer And Related Issues, Click Here",
-      url: "/cervical-cancer-diagnosis",
-    },
-    {
-      text: "To Consult With The Best Doctor For Cervical Cancer Treatment, Click Here",
-      url: "/best-doctor-cervical-cancer-treatment",
-    },
-    {
-      text: "For The Best Hospital For Cervical Cancer Treatment In India, Click Here",
-      url: "/best-cervical-cancer-hospital-india",
-    },
-    {
-      text: "For The Best Hospital For Cervical Cancer Treatment In Bangalore, Click Here",
-      url: "/best-cervical-cancer-hospital-bangalore",
-    },
-    {
-      text: "For The Best Hospital For Cervical Cancer Treatment In Chennai, Click Here",
-      url: "/best-cervical-cancer-hospital-chennai",
-    },
-    {
-      text: "For The Best Hospital For Cervical Cancer Treatment In Delhi, Click Here",
-      url: "/best-cervical-cancer-hospital-delhi",
-    },
-    {
-      text: "For The Best Hospital For Cervical Cancer Treatment In Hyderabad, Click Here",
-      url: "/best-cervical-cancer-hospital-hyderabad",
-    },
-    {
-      text: "For The Best Hospital For Cervical Cancer Treatment In Mumbai, Click Here",
-      url: "/best-cervical-cancer-hospital-mumbai",
     },
   ],
 };
@@ -231,177 +203,176 @@ const riskFactors = [
 function GenitourinaryCancer() {
   return (
     <>
-       <Banner image="/oncology/genitourinary-banner.png" />
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Banner Image */}
-     
-      {/* Title Section */}
-      <div className="text-center mb-12">
-        <H1 title={data.title} />
-      </div>
-      {/* Cancer Types Navigation */}
-      <div className="my-4">
-        <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-semibold">
-          {data.cancerTypes.map((item, index) => (
-            <Link
-              key={index}
-              href={item.link}
-              className="hover:text-hciSecondary cursor-pointer"
-            >
-              {item.name}
-            </Link>
-          ))}
+      <Banner image="/oncology/genitourinary-banner.png" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Banner Image */}
+
+        {/* Title Section */}
+        <div className="text-center mb-12">
+          <H1 title={data.title} />
         </div>
-      </div>
-      <div className="text-3xl mt-14 text-center text-[#D84598] font-semibold">
-        Bladder cancer
-      </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        Bladder cancer is a type of cancer that begins in the tissues of the
-        bladder, a hollow organ in the lower abdomen that stores urine. In
-        India, bladder cancer is becoming increasingly prevalent, especially
-        among men, and is often linked to risk factors such as smoking, exposure
-        to industrial chemicals, and certain infections.
-      </p>
-
-      <div className="my-10">
-        <img
-          src="/oncology/genitourinary-2.png"
-          alt="GI Cancer Visualization"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      <div className="text-xl text-center font-bold">
-        Causes of Bladder Cancer
-      </div>
-      <p className="mt-4 mb-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        Bladder cancer can develop due to several factors. In India, the
-        following are some of the common causes and risk factors:
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {riskFactors.map((factor, index) => (
-          <div key={index} className="bg-[#FFE7B6] rounded-md p-4 shadow-sm">
-            <h3 className="font-bold mb-1">{factor.title}</h3>
-            <p className="text-gray-800">{factor.description}</p>
-          </div>
-        ))}
-      </div>
-      <div className="my-3">
-        <Link href={""} className="text-hciPrimary font-semibold underline">
-          To know more about bladder cancer and its treatment, click here
-        </Link>
-      </div>
-
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Causes Section */}
-        <div>
-          <H2
-            title="Symptoms of Bowel Cancer"
-            className="text-xl font-semibold mb-4"
-          />
-          <div className="space-y-2">
-            {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
-              <div
-                key={idx}
-                className="bg-[#0E56A0] text-white font-light py-6 px-4 rounded text-sm"
-              >
-                <span className="font-semibold pr-1">{cause.title}</span>
-                {cause.description}
-              </div>
+        {/* Cancer Types Navigation */}
+        <div className="my-4">
+          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-medium">
+            {data.cancerTypes.map((item, index) => (
+              <Link
+                key={index}
+                href={item.link}
+                className="hover:text-hciSecondary cursor-pointer">
+                {item.name}
+              </Link>
             ))}
           </div>
-          <div className="mt-4">
-            <Link
-              href="/treatment/oncology/cervical-cancer-info"
-              className="text-hciPrimary font-semibold underline"
-            >
-              To know more about bladder cancer and its causes and treatment,
-              click here
-            </Link>
-          </div>
         </div>
-
-        {/* Diagnosis Section */}
-        <div>
-          <H2
-            title="Diagnosis of Bowel cancer"
-            className="text-xl font-semibold mb-4"
-          />
-          <div className="space-y-2">
-            {data.diagnosis[0]?.aneurysmSymptoms?.map((diagnosis, idx) => (
-              <div
-                key={idx}
-                className="bg-[#D84498] text-white p-3 rounded text-sm"
-              >
-                <div className="font-semibold">{diagnosis.title}</div>
-                {diagnosis.description}
-              </div>
-            ))}
-          </div>
-          <KnowMore title={data.title} />
+        <div className="text-3xl mt-14 text-center text-[#D84598] font-medium">
+          Bladder cancer
         </div>
-      </div>
-
-      {/* Treatments Section */}
-      <div className="mt-12">
-        <H2
-          title="Treatment for Bowel cancer"
-          className="text-2xl font-semibold mb-6 text-center"
-        />
         <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-          Treatment for Bowel cancer depends on the stage of the cancer, its
-          location, and the patient’s overall health. Common treatments include:
+          Bladder cancer is a type of cancer that begins in the tissues of the
+          bladder, a hollow organ in the lower abdomen that stores urine. In
+          India, bladder cancer is becoming increasingly prevalent, especially
+          among men, and is often linked to risk factors such as smoking,
+          exposure to industrial chemicals, and certain infections.
         </p>
-        <div className="grid grid-cols-1 gap-6">
-          {data.treatments.map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
-            >
-              <h2 className="text-xl mb-2  text-hciPrimary font-bold text-black">
-                {treatment.heading}
-              </h2>
-              {treatment.description && (
-                <p className="text-gray-600 mb-4 font-light">
-                  {treatment.description}
-                </p>
-              )}
-              {treatment.descriptionTwo && (
-                <p className="text-gray-600 mb-4 font-light">
-                  {treatment.descriptionTwo}
-                </p>
-              )}
-              <div className="space-y-4">
-                {treatment?.aneurysmSymptoms?.map((item, idx) => (
-                  <div key={idx} className="text-gray-600">
-                    <span className="text-[#D84498]">
-                      {" "}
-                      {item.title && <strong>{item.title}: </strong>}
-                    </span>
-                    {item.description}
-                  </div>
-                ))}
-              </div>
+
+        <div className="my-10">
+          <img
+            src="/oncology/genitourinary-2.png"
+            alt="GI Cancer Visualization"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="text-xl text-center font-bold">
+          Causes of Bladder Cancer
+        </div>
+        <p className="mt-4 mb-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+          Bladder cancer can develop due to several factors. In India, the
+          following are some of the common causes and risk factors:
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {riskFactors.map((factor, index) => (
+            <div key={index} className="bg-[#FFE7B6] rounded-md p-4 shadow-sm">
+              <h3 className="font-bold mb-1">{factor.title}</h3>
+              <p className="text-gray-800">{factor.description}</p>
             </div>
           ))}
         </div>
-      </div>
+        <div className="my-3">
+          <KnowMore title="Bladder Cancer" />
+        </div>
 
-      {/* Conclusion */}
-      <div className="mt-12">
-        <Conclusion data={data.conclusion} />
-        {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
-      </div>
+        <div className="mt-12 grid grid-cols-1 ">
+          {/* Causes Section */}
+          <div>
+            <H2
+              title="Symptoms of Bladder Cancer"
+              className="text-xl font-medium mb-4"
+            />
+            <p className="text-gray-600 text-start w-full  mx-auto font-light leading-relaxed py-2">
+              The symptoms of bladder cancer may be subtle in the early stages
+              but become more noticeable as the disease progresses. Some common
+              symptoms include:
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#0E56A0] text-white font-light py-6 px-4 rounded text-sm">
+                  <span className="font-medium pr-1">{cause.title}</span>
+                  {cause.description}
+                </div>
+              ))}
+            </div>
+            <div className="mt-4">
+              <KnowMore title="Bladder Cancer" />
+            </div>
+          </div>
 
-      {/* Links */}
-      <div className="mt-8 space-y-4">
-        <FooterLinks head={data.title} />
-        <BookButton />
-      
-    </div>  
-    </div>  
+          {/* Diagnosis Section */}
+          <div className="mt-12">
+            <H2
+              title="Diagnosis of Bladder Cancer"
+              className="text-xl font-medium mb-4"
+            />
+            <p className="text-gray-600 text-start w-full mx-auto font-light leading-relaxed py-2">
+              Bladder cancer is typically diagnosed through a combination of the
+              following tests:
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              {data.diagnosis[0]?.aneurysmSymptoms?.map((diagnosis, idx) => (
+                <div
+                  key={idx}
+                  className="bg-hciSecondary text-white p-3 rounded text-sm">
+                  <div className="font-medium ">{diagnosis.title}</div>
+                  {diagnosis.description}
+                </div>
+              ))}
+            </div>
+            <div className="mt-4">
+              <IssuesLink head="Bladder Cancer" />
+            </div>
+          </div>
+        </div>
+
+        {/* Treatments Section */}
+        <div className="mt-12">
+          <H2
+            title="Treatment for Bladder Cancer"
+            className="text-2xl font-medium mb-6 text-center"
+          />
+          <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+            The treatment of bladder cancer depends on the stage of the disease,
+            the patient’s overall health, and other factors. Common treatment
+            options in India include:
+          </p>
+          <div className="grid grid-cols-1 gap-6">
+            {data.treatments.map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-hciSecondary rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h2 className="text-xl mb-2  text-hciPrimary font-bold text-black">
+                  {treatment.heading}
+                </h2>
+                {treatment.description && (
+                  <p className="text-gray-600 mb-4 font-light">
+                    {treatment.description}
+                  </p>
+                )}
+                {treatment.descriptionTwo && (
+                  <p className="text-gray-600 mb-4 font-light">
+                    {treatment.descriptionTwo}
+                  </p>
+                )}
+                <div className="space-y-4">
+                  {treatment?.aneurysmSymptoms?.map((item, idx) => (
+                    <div key={idx} className="text-gray-600">
+                      <span className="text-hciSecondary">
+                        {" "}
+                        {item.title && <strong>{item.title}: </strong>}
+                      </span>
+                      {item.description}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <div className="mt-12">
+          <Conclusion data={data.conclusion} />
+          {/* <H2 title="Conclusion" className="text-xl font-medium mb-4" /> */}
+        </div>
+
+        {/* Links */}
+        <div className="mt-8 space-y-4">
+          <FooterLinks head="Bladder cancer" />
+          <BookButton />
+        </div>
+      </div>
     </>
   );
 }

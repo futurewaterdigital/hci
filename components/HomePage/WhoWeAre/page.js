@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function WhoWeAre() {
   return (
@@ -7,7 +7,7 @@ export default function WhoWeAre() {
         <h4 className="text-3xl font-bold pb-10 font-roboto">
           Who We Are <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
         </h4>
-        <p className="font-light">
+        <p className="font-light text-start">
           Welcome to HCI an undertaking of GSC Private Limited, a company with
           an established network of world-class healthcare facilities and
           experts across the globe including 600 international clinicians across
@@ -15,7 +15,7 @@ export default function WhoWeAre() {
           comprehensive support to patients from various countries seeking
           expert healthcare services in India.
         </p>
-        <p className="py-4 font-light">
+        <p className="py-4 font-light text-start">
           Patients are offered competent advice on travel, selection of
           hospitals, and choosing of procedures and specialists ensuring
           complete comfort, safety and authenticity. With HCI, your journey to
@@ -47,5 +47,5 @@ export default function WhoWeAre() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,15 +1,15 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import H1 from '@/components/ui/h1'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import IssuesLinks from '@/components/ui/IssuesLinks'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import H1 from "@/components/ui/h1";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Neurovascular Conditions",
@@ -33,11 +33,7 @@ const data = {
       description:
         "Some neurovascular conditions, such as AVMs and certain types of aneurysms, can have a hereditary component.",
     },
-    {
-      title: "Hypertension",
-      description:
-        "High blood pressure is a major risk factor for both strokes and aneurysms, contributing to the weakening of blood vessel walls.",
-    },
+
     {
       title: "Lifestyle Factors",
       description:
@@ -88,7 +84,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      Parkinson’s Disease and movement disorders are complex conditions that significantly affect a person’s daily life. India’s specialized treatment centers offer comprehensive care, from diagnosis to advanced treatments like DBS and medication management. Early diagnosis and a multi-disciplinary approach are crucial in effectively managing these disorders, helping patients maintain their independence and quality of life for as long as possible.
+      In India, advances in neurovascular care have led to improved outcomes for patients with these conditions. A multidisciplinary approach involving neurologists, neurosurgeons, and rehabilitation specialists is vital for comprehensive management. Timely diagnosis and intervention can significantly enhance recovery prospects, allowing patients to lead healthier, more active lives. Awareness of risk factors and early symptoms is crucial for effective prevention and management of neurovascular disorders.
           `,
     },
   ],
@@ -196,7 +192,7 @@ function GeneralSurgery() {
             <div>
               <DataBoxes
                 title="Symptoms"
-                text="Symptoms of Parkinson&apos;s Disease and other movement disorders vary but generally include:"
+                text="Symptoms of Parkinson's Disease and other movement disorders vary but generally include:"
                 titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 header=""
                 textCss="font-light py-4"
@@ -205,7 +201,7 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div className='space-y-6'>
+            <div className="space-y-6">
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosing Parkinson’s Disease and movement disorders involves a detailed examination of the patient’s symptoms, medical history, and neurological testing. Common diagnostic methods include:         "
@@ -220,12 +216,15 @@ function GeneralSurgery() {
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
+          <H2
+            title="Treatment"
+            className="font-medium mb-4 text-center text-2xl"
+          />
 
           <p className="font-light">
-            While there is no cure for Parkinson’s Disease or most movement
-            disorders, treatments focus on managing symptoms and improving
-            quality of life. Options include:
+            Treatment options for neurovascular conditions vary based on the
+            specific disorder and its severity. Common treatment approaches
+            include:
           </p>
           <DataLists
             desc={data.complications[0].description}

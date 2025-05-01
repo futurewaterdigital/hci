@@ -5,7 +5,7 @@ import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
-import Link from "next/link";
+import KnowMore from "@/components/ui/KnowMore";
 import H1 from "@/components/ui/h1";
 import H3 from "@/components/ui/h3";
 
@@ -42,9 +42,9 @@ const data = {
       description:
         "Screening and comprehensive evaluation of conditions like anemia",
       aneurysmSymptoms: [
-        { description: "Complete blood count (CBC) to assess overall health" },
-        { description: "Blood chemistry studies to evaluate organ function" },
-        { description: "Tumor marker tests for specific cancer indicators" },
+        {description: "Complete blood count (CBC) to assess overall health"},
+        {description: "Blood chemistry studies to evaluate organ function"},
+        {description: "Tumor marker tests for specific cancer indicators"},
       ],
     },
     {
@@ -55,7 +55,7 @@ const data = {
           description:
             "PET scans to identify areas of abnormal metabolic activity",
         },
-        { description: "Bone scans to detect metastasis to bones" },
+        {description: "Bone scans to detect metastasis to bones"},
         {
           description: "MIBG scans for specific tumor types like neuroblastoma",
         },
@@ -65,8 +65,8 @@ const data = {
       heading: "Biopsy",
       description: "Tissue sample for pathological examination",
       aneurysmSymptoms: [
-        { description: "Needle biopsy for accessible tumors" },
-        { description: "Surgical biopsy when larger samples are needed" },
+        {description: "Needle biopsy for accessible tumors"},
+        {description: "Surgical biopsy when larger samples are needed"},
         {
           description: "Molecular testing of biopsy samples to guide treatment",
         },
@@ -77,12 +77,12 @@ const data = {
       description:
         "Evaluation of bone marrow involvement and cerebrospinal fluid",
       aneurysmSymptoms: [
-        { description: "Assessment for cancer cells in bone marrow" },
+        {description: "Assessment for cancer cells in bone marrow"},
         {
           description:
             "Analysis of cerebrospinal fluid for cancer spread to the central nervous system",
         },
-        { description: "Cytogenetic studies of collected samples" },
+        {description: "Cytogenetic studies of collected samples"},
       ],
     },
   ],
@@ -121,12 +121,12 @@ const data = {
   },
 
   best_hospitals: [
-    { city: "Delhi", url: "/best-cancer-hospital-delhi" },
-    { city: "Mumbai", url: "/best-cancer-hospital-mumbai" },
-    { city: "Bangalore", url: "/best-cancer-hospital-bangalore" },
-    { city: "Chennai", url: "/best-cancer-hospital-chennai" },
-    { city: "Kochi", url: "/best-cancer-hospital-kochi" },
-    { city: "Hyderabad", url: "/best-cancer-hospital-hyderabad" },
+    {city: "Delhi", url: "/best-cancer-hospital-delhi"},
+    {city: "Mumbai", url: "/best-cancer-hospital-mumbai"},
+    {city: "Bangalore", url: "/best-cancer-hospital-bangalore"},
+    {city: "Chennai", url: "/best-cancer-hospital-chennai"},
+    {city: "Kochi", url: "/best-cancer-hospital-kochi"},
+    {city: "Hyderabad", url: "/best-cancer-hospital-hyderabad"},
   ],
 
   conclusion: [
@@ -142,7 +142,6 @@ function PediatricCancer() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-
         <H1 title={data.title} />
         <p className="text-gray-600 text-start max-w-7xl mx-auto font-light">
           {data.description}
@@ -181,8 +180,7 @@ function PediatricCancer() {
               {data.diagnosis.map((method, index) => (
                 <div
                   key={index}
-                  className="border-b border-yellow-200 pb-2 last:border-0"
-                >
+                  className="border-b border-yellow-200 pb-2 last:border-0">
                   <H3
                     title={method.heading}
                     className="font-medium text-yellow-800"
@@ -202,30 +200,25 @@ function PediatricCancer() {
           title="Causes of Pediatric Cancer"
           className="text-2xl font-medium mb-4 text-center"
         />
-        <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <p className="text-gray-600 text-start  max-w-7xl mx-auto font-light">
           The exact causes of childhood cancer remain unclear, but genetic
           mutations during early development are a key factor. Unlike adult
           cancers linked to environmental exposures or aging, pediatric cancers
           often arise from inherited conditions or DNA replication errors.
           Genetic disorders such as Li-Fraumeni Syndrome and Fanconi Anemia
           increase the likelihood of childhood cancers, making early screening
-          crucial for high-risk individuals.",
+          crucial for high-risk individuals.
         </p>
 
         <div className="text-start mb-8">
-          <Link
-            href="/treatment/oncology/pediatric-cancer-info"
-            className="text-hciPrimary text-lg font-semibold underline"
-          >
-            To know more about pediatric cancer and its treatment, click here
-          </Link>
+          <KnowMore title="Pediatric Cancer" />
         </div>
 
         <H2
           title="Treatment Options for Pediatric Cancer"
           className="text-2xl font-medium mb-4 text-center"
         />
-        <p className="text-gray-600 text-start text-lg max-w-7xl mx-auto font-light">
+        <p className="text-gray-600 text-start  max-w-7xl mx-auto font-light">
           Childhood cancer treatment varies based on the type and stage of
           cancer, as well as the child’s age and overall health. Common
           treatments include:
@@ -241,14 +234,13 @@ function PediatricCancer() {
         <div className=" p-4 rounded-lg mb-8">
           <p className="font-light">{data.side_effects.description}</p>
         </div>
-
+        <KnowMore title="Pediatric Cancer" />
 
         <div className="my-10">
-        <Conclusion data={data.conclusion} />
-<FooterLinks head={data.title} />
-<BookButton />
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
         </div>
-
       </div>
     </>
   );

@@ -1,160 +1,164 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-const bannerImage = '/cardio/CoronaryArteryBypassSurgery.png'
-import DataSurgery from '@/components/cardiacComponents/Button'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import SimpleLists from '@/components/cardiacComponents/SimpleLists'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import H1 from '@/components/ui/h1'
-import H2 from '@/components/ui/h2'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+const bannerImage = "/cardio/CoronaryArteryBypassSurgery.png";
+import DataSurgery from "@/components/cardiacComponents/Button";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import SimpleLists from "@/components/cardiacComponents/SimpleLists";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import H1 from "@/components/ui/h1";
+import H2 from "@/components/ui/h2";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
 
-
-const title = 'Coronary Artery Bypass Surgery'
+const title = "Coronary Artery Bypass Surgery";
 const surgeryInclude = [
   {
-    title: 'Coronary artery bypass grafting',
-    description: '',
-    minHeight: 'h-[80px]',
+    title: "Coronary artery bypass grafting",
+    description: "",
+    minHeight: "h-[80px]",
   },
   {
-    title: 'CABG',
-    description: '',
-    minHeight: 'h-[80px]',
+    title: "CABG",
+    description: "",
+    minHeight: "h-[80px]",
   },
-  
+
   {
-    title: 'Heart bypass surgery',
-    description: '',
-    minHeight: 'h-[80px]',
+    title: "Heart bypass surgery",
+    description: "",
+    minHeight: "h-[80px]",
   },
   {
-    title: 'Coronary artery bypass graft surgery',
-    description: '',
-    minHeight: 'h-[80px]',
+    title: "Coronary artery bypass graft surgery",
+    description: "",
+    minHeight: "h-[80px]",
   },
-  
-]
+];
 const vascularConditions = [
   {
-    category: '',
+    category: "",
     description:
       "There is a <strong class='font-medium'>blockage in the left main coronary artery</strong>, which supplies most of the heart's blood.",
-    bgColor: 'bg-hciYellow',
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
+    category: "",
     description:
       "A blockage can't be managed with less invasive treatments like <strong class='font-medium'>angioplasty or stenting</strong>, or if previous procedures have failed.",
-    bgColor: 'bg-hciYellow',
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
+    category: "",
     description:
       "You experience <strong class='font-medium'>severe chest pain</strong> due to narrowed arteries that limit blood flow even during rest.",
-    bgColor: 'bg-hciYellow',
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
+    category: "",
     description:
       "An emergency bypass is needed during a <strong class='font-medium'>heart attack</strong> when other treatments are ineffective.",
-    bgColor: 'bg-hciYellow',
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
+    category: "",
     description:
-        "Multiple heart arteries are diseased, and the heart's main pumping chamber (left ventricle) isn't functioning well.",
-    bgColor: 'bg-hciYellow',
+      "Multiple heart arteries are diseased, and the heart's main pumping chamber (left ventricle) isn't functioning well.",
+    bgColor: "bg-hciYellow",
   },
-]
+];
 const dataLists = [
   {
-    title: '<span class="text-hciSecondary font-medium">Bleeding</span><span class="text-black"> or infection at the surgical site</span> ',
-    description: '',
+    title:
+      '<span class="text-hciSecondary font-medium">Bleeding</span><span class="text-black"> or infection at the surgical site</span> ',
+    description: "",
   },
   {
-    title: '<span class="text-hciSecondary font-medium">Arrhythmias</span><span class="text-black"> (irregular heartbeats)</span>',
-    description: '',
+    title:
+      '<span class="text-hciSecondary font-medium">Arrhythmias</span><span class="text-black"> (irregular heartbeats)</span>',
+    description: "",
   },
   {
-    title: '<span class="text-black">Blood clots, which can lead to a</span> <span class="text-hciSecondary font-medium">heart attack or stroke</span><span class="text-black">.</span>',
-    description: '',
+    title:
+      '<span class="text-black">Blood clots, which can lead to a</span> <span class="text-hciSecondary font-medium">heart attack or stroke</span><span class="text-black">.</span>',
+    description: "",
   },
   {
-    title: '<span class="text-hciSecondary font-medium">Kidney problems</span><span class="text-black"> or temporary memory issues</span>',
-    description: '',
+    title:
+      '<span class="text-hciSecondary font-medium">Kidney problems</span><span class="text-black"> or temporary memory issues</span>',
+    description: "",
   },
   {
-    title: '<span class="text-black">Prolonged dependence on a breathing machine</span>',
-    description: '',
+    title:
+      '<span class="text-black">Prolonged dependence on a breathing machine</span>',
+    description: "",
   },
-]
+];
 const dataList = [
   {
-    title: '<span class="text-black">Follow instructions on dietary changes and medication adjustments.</span>',
-    description: '',
+    title:
+      '<span class="text-black">Follow instructions on dietary changes and medication adjustments.</span>',
+    description: "",
   },
   {
-    title: '<span class="text-black">Arrange for someone to assist you after discharge.</span>',
-    description: '',
+    title:
+      '<span class="text-black">Arrange for someone to assist you after discharge.</span>',
+    description: "",
   },
   {
     title:
       '<span class="text-black">Undergo necessary heart and blood tests in the days leading up to surgery.</span>',
-    description: '',
+    description: "",
   },
-]
+];
 const bypassSurgery = [
   {
-    heading: '',
+    heading: "",
     aneurysmSymptoms: [
       {
-        title: '',
+        title: "",
         description: `<span class="text-hciSecondary">General Anesthesia</span> is administered, ensuring you're in a sleep-like state.`,
       },
       {
-        title: '',
+        title: "",
         description: `A <span class="text-hciSecondary">breathing tube</span> is inserted and connected to a ventilator.`,
       },
       {
-        title: '',
+        title: "",
         description: `If on-pump surgery is performed, a <span class="text-hciSecondary">heart-lung machine</span> takes over the heart's functions while the heart is temporarily stopped.`,
       },
       {
-        title: '',
+        title: "",
         description: `A section of a healthy blood vessel, called a graft, is attached to bypass the blockage.`,
       },
     ],
   },
-]
+];
 const advancedApproaches = [
   {
-    heading: '',
+    heading: "",
     aneurysmSymptoms: [
-     
       {
-        title: '',
+        title: "",
         description: `<span class="text-hciSecondary">Off-pump or beating-heart surgery</span>, which doesn't use a heart-lung machine.`,
       },
       {
-        title: '',
+        title: "",
         description: `<span class="text-hciSecondary">Minimally invasive bypass surgery</span>, performed through small incisions instead of opening the chest.`,
       },
     ],
   },
-]
+];
 
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
         By adopting these lifestyle changes, you can improve your overall
               heart health and minimize the risk of needing additional
               procedures.`,
   },
-]
+];
 
 function page() {
   return (
@@ -178,7 +182,10 @@ function page() {
           pain and improving overall heart function.
         </p>
         <div className="py-4">
-          <H2 title="Alternative Names for the Surgery Include" className="text-center font-medium"/>
+          <H2
+            title="Alternative Names for the Surgery Include"
+            className="text-center font-medium text-2xl"
+          />
           <DataSurgery data={surgeryInclude} />
           <p className="py-4 text-start font-light">
             While the surgery doesn&apos;t cure the underlying heart condition
@@ -220,7 +227,10 @@ function page() {
         </div>
 
         <div>
-          <H2 title="What to Expect During the Procedure" className="text-center mt-8 mb-4 font-medium"/>
+          <H2
+            title="What to Expect During the Procedure"
+            className="text-center mt-8 mb-4 font-medium text-2xl"
+          />
 
           <div className="grid lg:grid-cols-2 gap-4">
             <div>
@@ -228,99 +238,126 @@ function page() {
                 Coronary artery bypass surgery typically lasts 3 to 6 hours and
                 involves the following steps:
               </p>
-              <DataLists data={bypassSurgery} ulClass="list-disc list-outside text-hciSecondary h-40"/>
+              <DataLists
+                data={bypassSurgery}
+                ulClass="list-disc list-outside text-hciSecondary h-40"
+              />
             </div>
             <div>
-              <p className="h-12 font-light">Some advanced approaches include:</p>
-              <DataLists data={advancedApproaches} ulClass="list-disc list-outside text-hciSecondary h-40"/>
+              <p className="h-12 font-light">
+                Some advanced approaches include:
+              </p>
+              <DataLists
+                data={advancedApproaches}
+                ulClass="list-disc list-outside text-hciSecondary h-40"
+              />
             </div>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 mt-8">
-          <section className="mb-8">
-            <H2 title="After the Surgery" className="mb-4 font-medium"/>
-            <p className="mb-4 font-light">
-              Post-surgery care involves close monitoring and gradually resuming
-              activities:
-            </p>
-            <ul className="list-disc list-inside mb-4 font-light space-y-2">
-              <li>
-                A <strong className="text-hciSecondary">breathing tube</strong>{' '}
-                remains until you can breathe on your own.
-              </li>
-              <li>
-                Expect a{' '}
-                <strong className="text-hciSecondary">hospital stay</strong> of
-                about 5 to 7 days, with initial recovery in an ICU.
-              </li>
-              <li>
-                <strong className="text-hciSecondary">
-                  Cardiac rehabilitation
-                </strong>{' '}
-                begins early to improve heart health and prevent future issues.
-              </li>
-            </ul>
-            <p className="mb-4 font-light pt-8">
-              Contact your healthcare provider if you notice:
-            </p>
-            <ul className="list-disc list-inside mb-4 font-light space-y-2">
-              <li>Fever or rapid heart rate.</li>
-              <li>New or worsening chest pain.</li>
-              <li>Discharge, redness, or swelling near the surgical site.</li>
-            </ul>
-            <p className="font-light">
-              Recovery typically takes 6 to 12 weeks. You can return to daily
-              activities, including driving, work, or exercise, as advised by
-              your doctor.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-4">
+          <section className="mb-8 gap-4 grid ">
+            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
+              <H2
+                title="After the Surgery"
+                className="mb-4 font-medium text-lg"
+              />
+              <p className="mb-4 font-light">
+                Post-surgery care involves close monitoring and gradually
+                resuming activities:
+              </p>
+              <ul className="list-disc list-inside mb-4 font-light space-y-2">
+                <li>
+                  A{" "}
+                  <strong className="text-hciSecondary">breathing tube</strong>{" "}
+                  remains until you can breathe on your own.
+                </li>
+                <li>
+                  Expect a{" "}
+                  <strong className="text-hciSecondary">hospital stay</strong>{" "}
+                  of about 5 to 7 days, with initial recovery in an ICU.
+                </li>
+                <li>
+                  <strong className="text-hciSecondary">
+                    Cardiac rehabilitation
+                  </strong>{" "}
+                  begins early to improve heart health and prevent future
+                  issues.
+                </li>
+              </ul>
+            </div>
+            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
+              <p className="mb-4 font-light font-medium text-lg">
+                Contact your healthcare provider if you notice:
+              </p>
+              <ul className="list-disc list-inside mb-4 font-light space-y-2">
+                <li>Fever or rapid heart rate.</li>
+                <li>New or worsening chest pain.</li>
+                <li>Discharge, redness, or swelling near the surgical site.</li>
+              </ul>
+              <p className="font-light">
+                Recovery typically takes 6 to 12 weeks. You can return to daily
+                activities, including driving, work, or exercise, as advised by
+                your doctor.
+              </p>
+            </div>
           </section>
-          <section className="mb-8">
-            <H2 title="Results and Long-Term Care" className="mb-4 font-medium"/>
-            <p className="mb-4 font-light">
-              Most people experience significant relief from symptoms and
-              improved quality of life after coronary artery bypass surgery.
-              However, grafts or arteries may narrow again over time.
-            </p>
-            <p className="mb-4 font-medium pt-8 text-lg">To maintain your heart health:</p>
-            <ul className="list-disc list-inside mb-4 font-light space-y-2">
-              <li>
-                <strong className="text-hciSecondary">Quit smoking</strong> and
-                avoid second-hand smoke.
-              </li>
-              <li>
-                Follow a{' '}
-                <strong className="text-hciSecondary">
-                  heart-healthy diet
-                </strong>{' '}
-                rich in fruits, vegetables, and whole grains.
-              </li>
-              <li>
-                <strong className="text-hciSecondary">
-                  Exercise regularly
-                </strong>{' '}
-                under medical guidance.
-              </li>
-              <li>Manage stress and consider mindfulness or support groups.</li>
-              <li>
-                Control conditions like{' '}
-                <strong className="text-hciSecondary">
-                  diabetes, high blood pressure, and high cholesterol
-                </strong>
-                .
-              </li>
-            </ul>
-           
+          <section className="mb-8 gap-4 grid ">
+            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
+              <H2
+                title="Results and Long-Term Care"
+                className="mb-4 font-medium text-lg"
+              />
+              <p className="mb-4 font-light">
+                Most people experience significant relief from symptoms and
+                improved quality of life after coronary artery bypass surgery.
+                However, grafts or arteries may narrow again over time.
+              </p>
+            </div>
+            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
+              <p className="mb-4 font-medium text-lg">
+                To maintain your heart health:
+              </p>
+              <ul className="list-disc list-inside mb-4 font-light space-y-2">
+                <li>
+                  <strong className="text-hciSecondary">Quit smoking</strong>{" "}
+                  and avoid second-hand smoke.
+                </li>
+                <li>
+                  Follow a{" "}
+                  <strong className="text-hciSecondary">
+                    heart-healthy diet
+                  </strong>{" "}
+                  rich in fruits, vegetables, and whole grains.
+                </li>
+                <li>
+                  <strong className="text-hciSecondary">
+                    Exercise regularly
+                  </strong>{" "}
+                  under medical guidance.
+                </li>
+                <li>
+                  Manage stress and consider mindfulness or support groups.
+                </li>
+                <li>
+                  Control conditions like{" "}
+                  <strong className="text-hciSecondary">
+                    diabetes, high blood pressure, and high cholesterol
+                  </strong>
+                  .
+                </li>
+              </ul>
+            </div>
           </section>
         </div>
         <div className="mt-2 space-y-6">
-        <Conclusion data={footerData} />
+          <Conclusion data={footerData} />
           <FooterLinks head={title} />
           <BookButton />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default page
+export default page;

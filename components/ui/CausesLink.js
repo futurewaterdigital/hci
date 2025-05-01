@@ -1,25 +1,41 @@
-import React from 'react'
-import Link from 'next/link'
-export default function FooterLink({ head }) {
+"use client";
+import React from "react";
+import {useRouter} from "next/navigation";
+
+export default function FooterLink({head}) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    // Navigate to homepage
+    router.push("/");
+
+    // Wait for navigation to complete then scroll to form
+    setTimeout(() => {
+      const formElement = document.querySelector("#consultation-form");
+      if (formElement) {
+        formElement.scrollIntoView({behavior: "smooth"});
+      }
+    }, 100);
+  };
+
   const linkshead = [
     {
       text: `To know more about ${head} and its causes and treatment, click here`,
-      url: 'https://jalal.com/', // Replace "#" with the actual link
+      url: "#", // Replace "#" with the actual link
     },
-   
-  ]
+  ];
 
   return (
     <div className="text-start space-y-4">
       {linkshead.map((link, index) => (
-        <Link
+        <button
           key={index}
+          onClick={handleClick}
           className="text-hciPrimary underline block mb-2 font-semibold capitalize"
-          href={link.url}
-        >
+          href={link.url}>
           {link.text}
-        </Link>
+        </button>
       ))}
     </div>
-  )
+  );
 }

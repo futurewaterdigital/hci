@@ -1,16 +1,15 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
+import React from "react";
+import Banner from "@/components/Common/Banner";
 
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import H1 from '@/components/ui/h1'
-import FlexBox from '@/components/cardiacComponents/FlexBox'
-import ListBox from '@/components/cardiacComponents/ListBox'
-import CTaButton from '@/components/cardiacComponents/CtaButton'
-
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import H1 from "@/components/ui/h1";
+import FlexBox from "@/components/cardiacComponents/FlexBox";
+import ListBox from "@/components/cardiacComponents/ListBox";
+import CTaButton from "@/components/cardiacComponents/CtaButton";
 
 const data = {
   bannerImage: "/others/general-surgery.png",
@@ -28,35 +27,32 @@ const data = {
       content: `HCI’s network of general surgeons is proficient in managing surgical procedures for a variety of conditions, including:`,
       bullets: [
         "Minimally invasive procedures",
-        "Emergency surgical care",
-        "Oncological surgery",
-        "Hernia repair",
-        "Gallbladder surgery",
+        "Pre and post-operative management",
       ],
       bgColor: "bg-hciPrimary",
     },
   ],
   complications: [
     {
-      heading: "Potential Complications",
+      heading: "",
       aneurysmSymptoms: [
-        { description: "Hernias (inguinal, umbilical, and incisional)" },
-        { description: "Gallbladder issues, including gallstones" },
-        { description: "Appendicitis" },
-        { description: "Gastrointestinal conditions" },
-        { description: "Thyroid and parathyroid disorders" },
+        {description: "Hernias (inguinal, umbilical, and incisional)"},
+        {description: "Gallbladder issues, including gallstones"},
+        {description: "Appendicitis"},
+        {description: "Gastrointestinal conditions"},
+        {description: "Thyroid and parathyroid disorders"},
         {
           description:
             "Skin and soft tissue conditions, including cysts and abscesses",
         },
-        { description: "Benign and malignant tumors" },
+        {description: "Benign and malignant tumors"},
       ],
     },
   ],
   benefits: [
-    { title: "Reduced pain and scarring" },
-    { title: "Faster recovery times" },
-    { title: "Shorter hospital stays" },
+    {title: "Reduced pain and scarring"},
+    {title: "Faster recovery times"},
+    {title: "Shorter hospital stays"},
   ],
   contact: {
     title: "Contact Us Today",
@@ -71,7 +67,6 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
         <H1 title={data.title} />
         <H2
           title={data.description}
@@ -79,11 +74,16 @@ function GeneralSurgery() {
         />
         <p className="font-light">{data.overview}</p>
         <FlexBox data={data} />
+        <p className="font-light">
+          Our multidisciplinary approach ensures that patients receive
+          comprehensive care, often collaborating with specialists in
+          gastroenterology, oncology, and other fields.
+        </p>
         <div>
-        <H2
-          title="Conditions We Treat"
-          className="text-2xl font-medium mt-8 text-center"
-        />
+          <H2
+            title="Conditions We Treat"
+            className="text-2xl font-medium mt-8 text-center"
+          />
 
           <p className="text-center font-light">
             Our general surgery services encompass a broad range of conditions,
@@ -101,25 +101,34 @@ function GeneralSurgery() {
           procedures. These techniques result in:
         </p>
         <ListBox data={data} />
-
-        <div className='pt-12 space-y-4'>
-
-        <div className='font-light'>
-          <H2 title="When to Consider General Surgery" className="font-medium mb-4 text-center text-2xl" />
-        <p className='font-light'>
-        If you have a condition that requires surgical intervention, our general surgery network is here to provide expert guidance. Symptoms such as persistent abdominal pain, swelling, or unexplained changes in your health may indicate the need for evaluation by a specialist. Our goal is to ensure timely intervention and the best possible outcomes.
-        </p>
-
+        <div className="pt-12 space-y-4">
+          <div className="font-light">
+            <H2
+              title="When to Consider General Surgery"
+              className="font-medium mb-4 text-center text-2xl"
+            />
+            <p className="font-light">
+              If you have a condition that requires surgical intervention, our
+              general surgery network is here to provide expert guidance.
+              Symptoms such as persistent abdominal pain, swelling, or
+              unexplained changes in your health may indicate the need for
+              evaluation by a specialist. Our goal is to ensure timely
+              intervention and the best possible outcomes.
+            </p>
+          </div>
+          <div className="font-light">
+            <H2
+              title="Committed to Your Recovery"
+              className="font-medium mb-4 text-center text-2xl"
+            />
+            <p className="font-light">
+              At HCI, we believe in delivering world-class surgical care with a
+              personal touch. Our network of highly skilled general surgeons are
+              dedicated to addressing your concerns, providing clarity on
+              treatment options, and supporting you every step of the way.
+            </p>
+          </div>
         </div>
-        <div className='font-light'>
-          <H2 title="Committed to Your Recovery" className="font-medium mb-4 text-center text-2xl" />
-        <p className='font-light'>
-        At HCI, we believe in delivering world-class surgical care with a personal touch. Our network of highly skilled general surgeons are dedicated to addressing your concerns, providing clarity on treatment options, and supporting you every step of the way.
-        </p>
-
-          </div>
-          </div>
-
         <CTaButton data={data} />
         <FooterLinks head={data.title} />
         <BookButton />

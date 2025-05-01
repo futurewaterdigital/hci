@@ -9,7 +9,7 @@ import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 
 const data = {
-  title: "Bowel Cancer",
+  title: "Bowel/Colorectal Cancer",
   description:
     "Bowel cancer, or colorectal cancer, which originates in the colon or rectum, has become a significant health concern globally, including in India. Although it primarily affects individuals over the age of 50, it can also occur at younger ages due to a combination of genetic factors, lifestyle habits, and poor diet. However, early detection and treatment can lead to better outcomes.",
 
@@ -218,106 +218,118 @@ const data = {
 function BowelCancer() {
   return (
     <>
-    <Banner image="/oncology/bowel-cancer.png" />
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <H1 title={data.title} />
-      <div className="mt-6">
-        <p className="text-gray-600 font-light">{data.description}</p>
-      </div>
-
-      {/* Causes Section */}
-      <div className="mt-12">
-        <H2 title={data.causes[0].heading} className="font-medium mb-4 text-2xl" />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.causes[0].description}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.causes[0].items.map((cause, idx) => (
-            <div key={idx} className={cause.className}>
-              <H3 title={cause.title} className="font-medium mb-2 text-lg" />
-              <p className="font-light">{cause.description}</p>
-            </div>
-          ))}
+      <Banner image="/oncology/bowel-cancer.png" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <H1 title={data.title} />
+        <div className="mt-6">
+          <p className="text-gray-600 font-light">{data.description}</p>
         </div>
-      </div>
 
-    <KnowMore title={data.title} />
-
-      {/* Symptoms Section */}
-      <div className="mt-12">
-        <H2 title={data.symptoms[0].heading} className="font-medium mb-4 text-2xl" />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.symptoms[0].description}
-        </p>
-        <div className="grid grid-cols-2 gap-2">
-          {data.symptoms[0].items.map((symptom, idx) => (
-            <div key={idx} className={symptom.className}>
-              <strong>{symptom.title}:</strong> {symptom.description}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Diagnosis Section */}
-      <div className="mt-12">
-        <H2 title={data.diagnosis[0].heading} className="font-medium mb-4 text-2xl" />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.diagnosis[0].description}
-        </p>
-        <div className="grid grid-cols-2 gap-2">
-          {data.diagnosis[0].items.map((test, idx) => (
-            <div key={idx} className={test.className}>
-              <strong>{test.title}:</strong> {test.description}
-            </div>
-          ))}
-        </div>
-      </div>
-
-    <KnowMore title={data.title} />
-
-      {/* Treatment Section */}
-      <div className="mt-12">
-        <H2 title={data.treatments[0].heading} className="font-medium mb-6 text-2xl" />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.treatments[0].description}
-        </p>
-        <div className="border border-pink-200 rounded-lg p-6">
-          <div className="space-y-6">
-            {data.treatments[0].items.map((treatment, idx) => (
-              <div key={idx} className="space-y-2">
-                <H3
-                  title={treatment.title}
-                    className="text-lg font-medium text-hciSecondary"
-                />
-                {treatment.items ? (
-                  <div className="space-y-2 pl-4">
-                    {treatment.items.map((item, i) => (
-                      <div key={i} className="font-light">
-                        <span className="font-medium text-hciSecondary">
-                          {item.name}:
-                        </span>{" "}
-                        {item.description}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-gray-600 font-light">
-                    {treatment.description}
-                  </p>
-                )}
+        {/* Causes Section */}
+        <div className="mt-12">
+          <H2
+            title={data.causes[0].heading}
+            className="font-medium mb-4 text-2xl"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.causes[0].description}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {data.causes[0].items.map((cause, idx) => (
+              <div key={idx} className={cause.className}>
+                <H3 title={cause.title} className="font-medium mb-2 text-lg" />
+                <p className="font-light">{cause.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </div>
+
+        <KnowMore title={data.title} />
+
+        {/* Symptoms Section */}
+        <div className="mt-12">
+          <H2
+            title={data.symptoms[0].heading}
+            className="font-medium mb-4 text-2xl"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.symptoms[0].description}
+          </p>
+          <div className="grid grid-cols-2 gap-2">
+            {data.symptoms[0].items.map((symptom, idx) => (
+              <div key={idx} className={symptom.className}>
+                <strong>{symptom.title}:</strong> {symptom.description}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Diagnosis Section */}
+        <div className="mt-12">
+          <H2
+            title={data.diagnosis[0].heading}
+            className="font-medium mb-4 text-2xl"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.diagnosis[0].description}
+          </p>
+          <div className="grid grid-cols-2 gap-2">
+            {data.diagnosis[0].items.map((test, idx) => (
+              <div key={idx} className={test.className}>
+                <strong>{test.title}:</strong> {test.description}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <KnowMore title={data.title} />
+
+        {/* Treatment Section */}
+        <div className="mt-12">
+          <H2
+            title={data.treatments[0].heading}
+            className="font-medium mb-6 text-2xl"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.treatments[0].description}
+          </p>
+          <div className="border border-pink-200 rounded-lg p-6">
+            <div className="space-y-6">
+              {data.treatments[0].items.map((treatment, idx) => (
+                <div key={idx} className="space-y-2">
+                  <H3
+                    title={treatment.title}
+                    className="text-lg font-medium text-hciSecondary"
+                  />
+                  {treatment.items ? (
+                    <div className="space-y-2 pl-4">
+                      {treatment.items.map((item, i) => (
+                        <div key={i} className="font-light">
+                          <span className="font-medium text-hciSecondary">
+                            {item.name}:
+                          </span>{" "}
+                          {item.description}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-gray-600 font-light">
+                      {treatment.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Conclusion */}
         <div className="mt-12">
-      <Conclusion data={data.conclusion} />
-      <FooterLinks head={data.title} />
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
           <BookButton />
-          </div>
-    </div>
+        </div>
+      </div>
     </>
   );
 }

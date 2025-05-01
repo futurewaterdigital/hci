@@ -1,10 +1,9 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-const bannerImage = '/images/price-comparison.png'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import H2 from '@/components/ui/h2'
-import H1 from '@/components/ui/h1'
-
+import React from "react";
+import Banner from "@/components/Common/Banner";
+const bannerImage = "/images/price-comparison.png";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import H2 from "@/components/ui/h2";
+import H1 from "@/components/ui/h1";
 
 // const medicalProcedures = [
 //   {
@@ -189,9 +188,6 @@ import H1 from '@/components/ui/h1'
 //   }
 // ];
 
-
-
-
 // const hotelData = [
 //   {
 //     category: '5-Star Hotel',
@@ -200,7 +196,7 @@ import H1 from '@/components/ui/h1'
 //     Delhi: '133',
 //     Hyderabad: '63',
 //   },
- 
+
 //   {
 //     category: '3-Star Hotel',
 //     Bangalore: '33',
@@ -208,7 +204,7 @@ import H1 from '@/components/ui/h1'
 //     Delhi: '43',
 //     Hyderabad: '43',
 //   },
-  
+
 // ]
 
 // const medicalProcedures = [
@@ -458,15 +454,34 @@ function page() {
 
         <section className="container mx-auto px-6">
           <p className="mb-8 font-light">
-          Value based medicine and treatment is a very compelling reason why people are travelling abroad to avail the best medical facilities at a lower cost of what they have to pay in their resident country. India is able to afford world class medical care at a value for money thanks to the focus on healthcare, innovations, make in India, selfless care, private hospitals leading the improved access to healthcare and doctors who go beyond the call of duty putting patients first.
+            Value based medicine and treatment is a very compelling reason why
+            people are travelling abroad to avail the best medical facilities at
+            a lower cost of what they have to pay in their resident country.
+            India is able to afford world class medical care at a value for
+            money thanks to the focus on healthcare, innovations, make in India,
+            selfless care, private hospitals leading the improved access to
+            healthcare and doctors who go beyond the call of duty putting
+            patients first.
           </p>
           <p className="mb-8 font-light">
-          As per a cost comparison study by the American Medical Association, a knee replacement surgery will cost $40,000 in US, $10,000 in Thailand and $13,000 in Singapore, and only $8500 in India. Similarly, in the US for a bone marrow transplant you will have to pay around $400,000, in UK $150,000 but in India it will cost just $30,000. No matter what treatment you opt for, you are going to save around 70-75 % of the total cost including health or medical services, wellness travel, accommodation and food services.
+            As per a cost comparison study by the American Medical Association,
+            a knee replacement surgery will cost $40,000 in US, $10,000 in
+            Thailand and $13,000 in Singapore, and only $8500 in India.
+            Similarly, in the US for a bone marrow transplant you will have to
+            pay around $400,000, in UK $150,000 but in India it will cost just
+            $30,000. No matter what treatment you opt for, you are going to save
+            around 70-75 % of the total cost including health or medical
+            services, wellness travel, accommodation and food services.
           </p>
           <p className="mb-8 font-light">
-          Refer to the chart below for a comparative analysis of treatment costs:
+            Refer to the chart below for a comparative analysis of treatment
+            costs:
           </p>
-    <div className='text-center py-4'><h2 className='text-black font-semibold text-lg'>Treatment Cost Comparison (USD)</h2></div>
+          <div className="text-center py-4">
+            <h2 className="text-black font-semibold text-lg">
+              Treatment Cost Comparison (USD)
+            </h2>
+          </div>
           <div className="overflow-x-auto">
             <img src="/images/table.png" alt="Treatment Cost Comparison" />
             {/* <table className="min-w-full bg-white border border-hciPrimary">
@@ -511,12 +526,22 @@ function page() {
 
           <div className="max-w-6xl mx-auto text-start mt-12">
             <p className="font-light mb-8">
-            The cost of treatment in India is much lower, almost three times less expensive in comparison to a number of western countries such as the United States and United Kingdom. Just opt for healthcare tourism services through Healthcare International and get the best of healthcare services. We, at Healthcare International offer excellent assistance to patients who visit India to avail advanced surgery/treatment. We are dedicated in offering the most advanced treatments in the world through our network of JCI & HCI accredited hospitals and specialists.
+              The cost of treatment in India is much lower, almost three times
+              less expensive in comparison to a number of western countries such
+              as the United States and United Kingdom. Just opt for healthcare
+              tourism services through Healthcare International and get the best
+              of healthcare services. We, at Healthcare International offer
+              excellent assistance to patients who visit India to avail advanced
+              surgery/treatment. We are dedicated in offering the most advanced
+              treatments in the world through our network of JCI & HCI
+              accredited hospitals and specialists.
             </p>
-            
           </div>
 
-          <H2 title="Hotel Expenses in India" className=" text-pink-600 font-bold mb-4"/>
+          <H2
+            title="Hotel Expenses in India"
+            className=" text-pink-600 font-bold mb-4"
+          />
           <div className="overflow-x-auto">
             <img src="/images/hotels.png" alt="Treatment Cost Comparison" />
             {/* <table className="min-w-full bg-white border border-gray-200">
@@ -558,7 +583,7 @@ function page() {
         </section>
       </div>
     </>
-  )
+  );
 }
 
-export default page
+export default page;

@@ -6,8 +6,7 @@ import H1 from "@/components/ui/h1";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import Link from "next/link";
-
+import KnowMore from "@/components/ui/KnowMore";
 const data = {
   title: "Prostate Cancer",
   description:
@@ -23,31 +22,31 @@ const data = {
           title: "Age",
           description:
             "The risk of prostate cancer increases significantly after age 50.",
-          className: "bg-[#FFE7B6] p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
         {
           title: "Family History",
           description:
             "A family history of prostate cancer can increase the risk.",
-          className: "bg-[#FFE7B6] p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
         {
           title: "Genetic Mutations",
           description:
             "Certain inherited gene mutations (like BRCA1 and BRCA2) may contribute.",
-          className: "bg-[#FFE7B6] p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
         {
           title: "Lifestyle Factors",
           description:
             "Obesity, smoking, and lack of physical activity may contribute to a higher likelihood of developing prostate cancer.",
-          className: "bg-[#FFE7B6] p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
         {
           title: "Diet",
           description:
             "A diet high in red meat and dairy products, with low fruit and vegetable intake, can increase the risk.",
-          className: "bg-[#FFE7B6] p-4 rounded-lg",
+          className: "bg-hciYellow p-4 rounded-lg",
         },
       ],
     },
@@ -62,23 +61,23 @@ const data = {
         {
           title:
             "Difficulty urinating or frequent urination, especially at night",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-hciPrimary text-white p-2 rounded mb-2",
         },
         {
           title: "Weak or interrupted urine flow",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-hciPrimary text-white p-2 rounded mb-2",
         },
         {
           title: "Blood in urine or semen",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-hciPrimary text-white p-2 rounded mb-2",
         },
         {
           title: "Pain or discomfort in the pelvic area",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-hciPrimary text-white p-2 rounded mb-2",
         },
         {
           title: "Erectile dysfunction",
-          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+          className: "bg-hciPrimary text-white p-2 rounded mb-2",
         },
       ],
     },
@@ -94,25 +93,25 @@ const data = {
           title: "Digital Rectal Exam (DRE",
           description:
             "A physical examination to check the prostate for abnormalities.",
-          className: "bg-pink-500 text-white p-2 rounded mb-2",
+          className: "bg-hciSecondary text-white p-2 rounded mb-2",
         },
         {
           title: "Prostate-Specific Antigen (PSA) Test",
           description:
             "A blood test that measures PSA levels, which may be elevated in men with prostate cancer.",
-          className: "bg-pink-500 text-white p-2 rounded mb-2",
+          className: "bg-hciSecondary text-white p-2 rounded mb-2",
         },
         {
           title: "Biopsy",
           description:
             "If the PSA or DRE indicates possible cancer, a biopsy is performed to confirm the diagnosis.",
-          className: "bg-pink-500 text-white p-2 rounded mb-2",
+          className: "bg-hciSecondary text-white p-2 rounded mb-2",
         },
         {
           title: "Imaging Tests",
           description:
             "MRI, CT scans, or bone scans may be used to determine the extent of the cancer.",
-          className: "bg-pink-500 text-white p-2 rounded mb-2",
+          className: "bg-hciSecondary text-white p-2 rounded mb-2",
         },
       ],
     },
@@ -228,144 +227,132 @@ const data = {
 function ProstateCancer() {
   return (
     <>
-    <Banner image="/oncology/prostate-cancer.png" />
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <H1 title={data.title} />
-      <div className="mt-6">
-        <p className="text-gray-600 text-start text-lg font-light">
-          {data.description}
-        </p>
-        <div className="py-4">
-          <Banner image="/oncology/prostate-banner.png" />
+      <Banner image="/oncology/prostate-cancer.png" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <H1 title={data.title} />
+        <div className="mt-6">
+          <p className="text-gray-600 text-start text-lg font-light">
+            {data.description}
+          </p>
+        </div>
+
+        {/* Causes */}
+        <div className="mt-12">
+          <H2
+            title={data.causes[0].heading}
+            className="text-2xl text-center font-medium mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.causes[0].description}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {data.causes[0].items.map((cause, idx) => (
+              <div key={idx} className={cause.className}>
+                <h2 className="font-medium text-black text-md">
+                  {cause.title}
+                </h2>
+                <p className="text-sm">{cause.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 text-start">
+          <KnowMore title="Prostate Cancer" />
+        </div>
+
+        {/* Symptoms */}
+        <div className="mt-12">
+          <H2
+            title={data.symptoms[0].heading}
+            className="text-2xl font-medium mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.symptoms[0].description}
+          </p>
+          <div className="space-y-2">
+            {data.symptoms[0].items.map((symptom, idx) => (
+              <div key={idx} className={symptom.className}>
+                {symptom.title}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Diagnosis */}
+        <div className="mt-12">
+          <H2
+            title={data.diagnosis[0].heading}
+            className="text-2xl font-medium mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.diagnosis[0].description}
+          </p>
+          <div className="space-y-2">
+            {data.diagnosis[0].items.map((test, idx) => (
+              <div key={idx} className={test.className}>
+                <strong>{test.title}:</strong> {test.description}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 text-center">
+          <KnowMore title="Prostate Cancer" />
+        </div>
+
+        {/* Treatments */}
+        <div className="mt-12">
+          <H2
+            title={data.treatments[0].heading}
+            className="text-2xl font-medium mb-6"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.treatments[0].description}
+          </p>
+          <div className="border border-hciSecondary rounded-lg p-6 space-y-6">
+            {data.treatments[0].items.map((treatment, idx) => (
+              <div key={idx} className="space-y-2">
+                <H3
+                  title={treatment.title}
+                  className="text-lg font-medium text-hciSecondary"
+                />
+                <p className="text-gray-600 font-light">
+                  {treatment.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Advantages */}
+        <div className="mt-12">
+          <H2
+            title={data.advantages[0].heading}
+            className="text-2xl font-medium mb-6"
+          />
+          <div className="border border-pink-200 rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {data.advantages[0].items.map((advantage, idx) => (
+              <div key={idx} className="bg-pink-50 p-4 rounded-lg">
+                <H3
+                  title={advantage.title}
+                  className="font-medium text-hciSecondary mb-2"
+                />
+                <p className="text-gray-600 font-light">
+                  {advantage.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <div className="mt-12">
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
         </div>
       </div>
-
-      {/* Causes */}
-      <div className="mt-12">
-        <H2
-          title={data.causes[0].heading}
-          className="text-2xl text-center font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.causes[0].description}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.causes[0].items.map((cause, idx) => (
-            <div key={idx} className={cause.className}>
-              <h2 className="font-medium text-black text-md">{cause.title}</h2>
-              <p className="text-sm">{cause.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-6 text-start">
-        <Link
-          href="/treatment/oncology/prostate-cancer-info"
-          className="text-hciPrimary font-semibold underline"
-        >
-          To Know More About Prostate Cancer And Its Treatment, Click Here
-        </Link>
-      </div>
-
-      {/* Symptoms */}
-      <div className="mt-12">
-        <H2
-          title={data.symptoms[0].heading}
-          className="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.symptoms[0].description}
-        </p>
-        <div className="space-y-2">
-          {data.symptoms[0].items.map((symptom, idx) => (
-            <div key={idx} className={symptom.className}>
-              {symptom.title}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Diagnosis */}
-      <div className="mt-12">
-        <H2
-          title={data.diagnosis[0].heading}
-          className="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.diagnosis[0].description}
-        </p>
-        <div className="space-y-2">
-          {data.diagnosis[0].items.map((test, idx) => (
-            <div key={idx} className={test.className}>
-              <strong>{test.title}:</strong> {test.description}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-6 text-center">
-        <Link
-          href="/treatment/oncology/prostate-cancer-causes"
-          className="text-hciPrimary font-semibold underline"
-        >
-          To Know More About Prostate Cancer And Its Causes And Treatment, Click
-          Here
-        </Link>
-      </div>
-
-      {/* Treatments */}
-      <div className="mt-12">
-        <H2
-          title={data.treatments[0].heading}
-          className="text-2xl font-semibold mb-6"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.treatments[0].description}
-        </p>
-        <div className="border border-pink-200 rounded-lg p-6 space-y-6">
-          {data.treatments[0].items.map((treatment, idx) => (
-            <div key={idx} className="space-y-2">
-              <H3
-                title={treatment.title}
-                className="text-lg font-semibold text-pink-600"
-              />
-              <p className="text-gray-600 font-light">
-                {treatment.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Advantages */}
-      <div className="mt-12">
-        <H2
-          title={data.advantages[0].heading}
-          className="text-2xl font-semibold mb-6"
-        />
-        <div className="border border-pink-200 rounded-lg p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          {data.advantages[0].items.map((advantage, idx) => (
-            <div key={idx} className="bg-pink-50 p-4 rounded-lg">
-              <H3
-                title={advantage.title}
-                className="font-semibold text-pink-600 mb-2"
-              />
-              <p className="text-gray-600 font-light">
-                {advantage.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Conclusion */}
-      <div className="mt-12">
-        <Conclusion data={data.conclusion} />
-        <FooterLinks head={data.title} />
-        <BookButton />
-      </div>
-    </div>
     </>
   );
 }

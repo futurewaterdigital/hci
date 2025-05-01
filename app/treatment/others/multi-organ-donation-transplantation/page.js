@@ -1,16 +1,16 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
+import React from "react";
+import Banner from "@/components/Common/Banner";
 
 // import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import H1 from '@/components/ui/h1'
-import FlexBox from '@/components/cardiacComponents/FlexBox'
-import ListBox from '@/components/cardiacComponents/ListBox'
-import CTaButton from '@/components/cardiacComponents/CtaButton'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import H1 from "@/components/ui/h1";
+import FlexBox from "@/components/cardiacComponents/FlexBox";
+import ListBox from "@/components/cardiacComponents/ListBox";
+import CTaButton from "@/components/cardiacComponents/CtaButton";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
 
 const data = {
   bannerImage: "/others/Multi-OrganDonationandTransplantation.png",
@@ -44,10 +44,10 @@ This life-saving procedure often offers a second chance to individuals in critic
     {
       heading: "Possible Complications",
       aneurysmSymptoms: [
-        { description: "Organ rejection" },
-        { description: "Infections and immune system suppression" },
-        { description: "Surgical risks and complications" },
-        { description: "Post-transplant medication side effects" },
+        {description: "Organ rejection"},
+        {description: "Infections and immune system suppression"},
+        {description: "Surgical risks and complications"},
+        {description: "Post-transplant medication side effects"},
       ],
     },
   ],
@@ -55,12 +55,12 @@ This life-saving procedure often offers a second chance to individuals in critic
     {
       heading: "Transplant Services Offered",
       aneurysmSymptoms: [
-        { description: "Kidney transplantation" },
-        { description: "Liver transplantation" },
-        { description: "Heart transplantation" },
-        { description: "Lung transplantation" },
-        { description: "Pancreas transplantation" },
-        { description: "Intestinal transplantation" },
+        {description: "Kidney transplantation"},
+        {description: "Liver transplantation"},
+        {description: "Heart transplantation"},
+        {description: "Lung transplantation"},
+        {description: "Pancreas transplantation"},
+        {description: "Intestinal transplantation"},
       ],
     },
   ],
@@ -105,15 +105,15 @@ This life-saving procedure often offers a second chance to individuals in critic
     },
   ],
   contact: {
-    title: 'Contact Us Today',
-    head: 'Reach Out to Us Today',
+    title: "Contact Us Today",
+    head: "Reach Out to Us Today",
     content:
-      'Contact HCI to learn more about our comprehensive multi-organ donation and transplantation services and discover how we can support your journey to a healthier life.',
+      "Contact HCI to learn more about our comprehensive multi-organ donation and transplantation services and discover how we can support your journey to a healthier life.",
   },
   footerData: [
     {
       header: "Conclusion",
-      paragraph: `Organ donation and transplantation save countless lives each year. With advancements in medical science and expert care, HCI strives to make this life-saving process accessible and successful for all eligible patients.`,
+      paragraph: `Organ donation and transplantation are transformative medical advancements that embody the spirit of generosity and compassion. By bridging the gap between hope and survival, they offer critically ill individuals a second chance at life. With specialized care and informed decisions, donors play an invaluable role in shaping brighter futures for recipients. Despite challenges, organ donation remains a noble and life-changing act, ensuring a legacy of life and health for generations to come.`,
     },
   ],
 };
@@ -123,23 +123,22 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <div className="py-4">
-          
           <H1 title={data.title} />
-        <H2
-          title={data.description}
-          className="text-start font-medium text-2xl"
-        />
-        <p className="font-light">{data.overview}</p>
+          <H2
+            title={data.description}
+            className="text-start font-medium text-2xl"
+          />
+          <p className="font-light">{data.overview}</p>
         </div>
         <FlexBox data={data} />
-<div className="py-4">
-        <H2
-          title="Types of Living Donor Transplants"
-          className="text-2xl font-medium mb-4 text-center"
-        />
-        <p className="font-light">
-          Living donor transplants can take several forms:
-        </p>
+        <div className="py-4">
+          <H2
+            title="Types of Living Donor Transplants"
+            className="text-2xl font-medium mb-4 text-center"
+          />
+          <p className="font-light">
+            Living donor transplants can take several forms:
+          </p>
           <ListBox data={data} />
         </div>
         <H2

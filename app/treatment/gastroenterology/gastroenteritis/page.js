@@ -1,15 +1,15 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
 // import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from '@/components/ui/IssuesLinks'
-import KnowMore from '@/components/ui/KnowMore'
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
+import KnowMore from "@/components/ui/KnowMore";
 
 const data = {
   title: "Gastroenteritis",
@@ -46,36 +46,34 @@ const data = {
 
   data_9: [
     {
-      heading: 'Infectious gastroenteritis:',
-      description: '',
+      heading: "Infectious gastroenteritis:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Caused by viruses, bacteria, parasites, or fungi.',
+          description: "Caused by viruses, bacteria, parasites, or fungi.",
         },
-       
-       
       ],
     },
     {
-      heading: 'Chemical gastroenteritis:',
-      description: '',
+      heading: "Chemical gastroenteritis:",
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Triggered by toxic chemicals, contaminated food or water, medications, or excessive alcohol consumption.',
+          description:
+            "Triggered by toxic chemicals, contaminated food or water, medications, or excessive alcohol consumption.",
         },
-       
       ],
     },
   ],
 
-
-  data_9: [
+  data_10: [
     {
-      heading: 'Intestinal symptoms:',
-      description: '',
+      heading: "Intestinal symptoms:",
+
+      description: "",
       aneurysmSymptoms: [
         {
-          description: 'Diarrhoea (sometimes watery)',
+          description: "Caused by viruses, bacteria, parasites, or fungi.",
         },
         {
           description: "Nausea and vomiting",
@@ -86,7 +84,6 @@ const data = {
         {
           description: "Loss of appetite",
         },
-       
       ],
     },
     {
@@ -94,13 +91,13 @@ const data = {
       description: "",
       aneurysmSymptoms: [
         {
-          description: 'Chills and body aches',
+          description: "Chills and body aches",
         },
         {
-          description: 'Fatigue and weakness',
+          description: "Fatigue and weakness",
         },
         {
-          description: 'Fever',
+          description: "Fever",
         },
       ],
     },
@@ -162,8 +159,8 @@ const data = {
       ],
     },
     {
-      heading: 'Chemical Exposure:',
-      description: '',
+      heading: "Chemical Exposure:",
+      description: "",
       aneurysmSymptoms: [
         {
           description: "Contaminated food and water",
@@ -214,7 +211,7 @@ const data = {
         {
           description:
             '<span class="font-semibold text-hciSecondary">Avoid irritants:</span> Limit alcohol, caffeine, and dairy products during recovery.',
-        },  
+        },
       ],
     },
 
@@ -223,7 +220,8 @@ const data = {
       description: "",
       aneurysmSymptoms: [
         {
-          description: '<span class="font-semibold text-hciSecondary">Intravenous fluids:</span> If dehydration is severe.',
+          description:
+            '<span class="font-semibold text-hciSecondary">Intravenous fluids:</span> If dehydration is severe.',
         },
         {
           description: `<span class="font-semibold text-hciSecondary">Medications:</span> 
@@ -234,7 +232,6 @@ const data = {
           </ul>
           `,
         },
-       
       ],
     },
     {
@@ -302,18 +299,18 @@ const data = {
       category: "",
       description:
         '<span class="font-semibold">Stool tests:</span> To detect viral, bacterial, or parasitic infections.',
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `<span class="font-semibold">Blood tests:</span> To assess dehydration or other underlying health issues`,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description:
         '<span class="font-semibold">Electrolyte panel:</span> To monitor for imbalances caused by dehydration.',
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
 };
@@ -333,14 +330,18 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
 
-        
         <div className="grid grid-cols-2 gap-4 pt-12">
           <div>
-         
-            <H2 title="There are two main Types of Gastroenteritis" className="font-medium mb-4 text-start text-2xl" />
+            <H2
+              title="There are two main Types of Gastroenteritis"
+              className="font-medium mb-4 text-start text-2xl"
+            />
 
             <div className="mb-8">
               <DataLists
@@ -373,7 +374,7 @@ function GeneralSurgery() {
             ulClass="list-disc list-outside"
             boxClass="bg-hciYellow h-[220px]"
           />
-         <KnowMore title={data.title} />
+          <KnowMore title={data.title} />
         </div>
         <H2
           title="Symptoms"
@@ -388,20 +389,20 @@ function GeneralSurgery() {
             divClass="grid grid-cols-2 gap-4"
             // key={index}
             // desc={data.complications[0].description}
-            data={data.data_1}
+            data={data.data_10}
             ulClass="list-disc list-outside"
             // boxClass="grid grid-cols-2"
           />
-          <IssuesLinks head={data.title} />
+
+          <KnowMore title={data.title} />
         </div>
         <p className="font-light">
           These symptoms tend to appear suddenly, with diarrhoea or vomiting
           often being the first indicators. While most cases resolve within a
           few days, severe or persistent symptoms may indicate complications.
         </p>
-       
+
         <div className="grid grid-cols-1 gap-4">
-         
           <div>
             <DataBoxes
               title="Diagnosis"
@@ -413,7 +414,7 @@ function GeneralSurgery() {
               myclass="grid grid-cols-1"
             />
           </div>
-          <KnowMore title={data.title} />
+          <IssuesLinks head={data.title} />
         </div>
 
         <div>
@@ -436,8 +437,6 @@ function GeneralSurgery() {
               // boxClass="grid grid-cols-2"
             />
           </div>
-
-         
         </div>
 
         <Conclusion data={footerData} />

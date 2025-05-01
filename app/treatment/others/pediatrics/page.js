@@ -1,11 +1,11 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import H1 from '@/components/ui/h1'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import H1 from "@/components/ui/h1";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
 
 // import FlexBox from '@/components/cardiacComponents/FlexBox'
 // import ListBox from '@/components/cardiacComponents/ListBox'
@@ -17,7 +17,7 @@ const data = {
   title: "Pediatrics",
   description: ``,
   overview: ` <p class="text-lg mb-6 font-light">
-     At HCI, our pediatrics department is dedicated to providing compassionate, comprehensive healthcare for children from infancy through adolescence. We offer a wide range of services, from routine check-ups and vaccinations to the diagnosis and treatment of more complex pediatric conditions. Our team of experienced pediatricians, specialists, and nursing staff are committed to ensuring that every child receives personalized, expert care in a safe and nurturing environment.
+     At HCI, the pediatrics department is dedicated to providing compassionate, comprehensive healthcare for children from infancy through adolescence. We offer a wide range of services, from routine check-ups and vaccinations to the diagnosis and treatment of more complex pediatric conditions. Our team of experienced pediatricians, specialists, and nursing staff are committed to ensuring that every child receives personalized, expert care in a safe and nurturing environment.
     </p>
     <p class="text-lg mb-6">
      We understand that children's healthcare requires a unique approach that is sensitive to their physical, emotional, and developmental needs. Whether managing chronic conditions, addressing acute illnesses, or supporting child development, we strive to create positive healthcare experiences for both the child and their family.
@@ -53,7 +53,7 @@ This life-saving procedure often offers a second chance to individuals in critic
           description:
             "Neonatal care and intensive care for premature or critically ill newborns.",
         },
-        { description: "Growth and development assessments." },
+        {description: "Growth and development assessments."},
         {
           description:
             "Management of childhood diseases and disorders, including asthma, diabetes, and infections.",
@@ -73,12 +73,12 @@ This life-saving procedure often offers a second chance to individuals in critic
     {
       heading: "Transplant Services Offered",
       aneurysmSymptoms: [
-        { description: "Kidney transplantation" },
-        { description: "Liver transplantation" },
-        { description: "Heart transplantation" },
-        { description: "Lung transplantation" },
-        { description: "Pancreas transplantation" },
-        { description: "Intestinal transplantation" },
+        {description: "Kidney transplantation"},
+        {description: "Liver transplantation"},
+        {description: "Heart transplantation"},
+        {description: "Lung transplantation"},
+        {description: "Pancreas transplantation"},
+        {description: "Intestinal transplantation"},
       ],
     },
   ],
@@ -140,15 +140,11 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
         <H1 title={data.title} />
-        <H2
-          title={data.description}
-          className="text-start font-medium text-2xl"
-        />
-        
+        <H2 title={data.description} className="text-start font-medium " />
+
         <div
-          dangerouslySetInnerHTML={{ __html: data.overview }}
+          dangerouslySetInnerHTML={{__html: data.overview}}
           className="font-light text-start"
         />
         <div>

@@ -1,15 +1,15 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from '@/components/ui/IssuesLinks'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Diverticulitis",
@@ -98,7 +98,8 @@ const data = {
             '<span class="font-semibold text-hciSecondary">Rest and liquid diet:</span> Allows the digestive tract to heal.',
         },
         {
-          description: '<span class="font-semibold text-hciSecondary">Antibiotics:</span> Prescribed if there is an infection.',
+          description:
+            '<span class="font-semibold text-hciSecondary">Antibiotics:</span> Prescribed if there is an infection.',
         },
         {
           description:
@@ -153,42 +154,36 @@ const data = {
 
   symptoms: [
     {
-      category: '',
-      description:   
-        `<span class="font-semibold ">Severe abdominal pain:</span> Typically felt on the lower left side, though it can vary based on ethnicity (e.g., upper right pain in some populations).`,
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: `<span class="font-semibold ">Severe abdominal pain:</span> Typically felt on the lower left side, though it can vary based on ethnicity (e.g., upper right pain in some populations).`,
+      bgColor: "bg-hciPrimary text-white",
     },
     {
-      category: '',
-      description:
-        'Bloating and tenderness in the abdomen.',
-      bgColor: 'bg-hciPrimary text-white',
+      category: "",
+      description: "Bloating and tenderness in the abdomen.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "",
       description:
         '<span class="font-semibold ">Fever:</span> Indicating possible infection.',
-      bgColor: 'bg-hciPrimary text-white',
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "",
-      description:
-        'Nausea and vomiting.',
-      bgColor: 'bg-hciPrimary text-white',
+      description: "Nausea and vomiting.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "",
-      description:
-        'Constipation or, occasionally, diarrhoea.',
-      bgColor: 'bg-hciPrimary text-white',
+      description: "Constipation or, occasionally, diarrhoea.",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "",
-      description:
-        'Rectal bleeding or blood in stool.',
-      bgColor: 'bg-hciPrimary text-white',
+      description: "Rectal bleeding or blood in stool.",
+      bgColor: "bg-hciPrimary text-white",
     },
-
   ],
 
   diagnosis: [
@@ -196,32 +191,32 @@ const data = {
       category: "",
       description:
         '<span class="font-semibold ">Medical history and physical exam:</span> A healthcare provider may suspect diverticulitis based on symptoms and abdominal tenderness.',
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
-      category: '',
+      category: "",
       description: `
       <span class="font-semibold ">CT Scan:</span> This imaging test helps identify inflammation, infections, or complications.
       `,
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description:
         '<span class="font-semibold ">Blood tests:</span> To check for signs of infection or inflammation.',
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description:
         '<span class="font-semibold ">Colonoscopy:</span> Sometimes used to assess the colon directly, though it is avoided during acute flare-ups to reduce the risk of perforation.',
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description:
         '<span class="font-semibold ">Stool and urine tests:</span> Used to rule out other conditions like infections or gastrointestinal bleeding.',
-      bgColor: 'bg-hciSecondary text-white',
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
 };
@@ -240,13 +235,15 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
-       
+
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
-        
+
         <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
@@ -291,10 +288,10 @@ function GeneralSurgery() {
             title="Treatment"
             className="font-medium mb-4 text-center text-2xl"
           />
-          <p className="font-light py-4">
+          {/* <p className="font-light py-4">
             The treatment approach depends on the severity of the symptoms and
             the size or location of the stones. Options include:
-          </p>
+          </p> */}
           <div className="mb-8">
             <DataLists
               divClass="grid grid-cols-1 gap-4"
@@ -305,7 +302,6 @@ function GeneralSurgery() {
               // boxClass="grid grid-cols-2"
             />
           </div>
-        
         </div>
 
         <Conclusion data={footerData} />

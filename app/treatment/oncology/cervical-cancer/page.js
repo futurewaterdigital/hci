@@ -1,13 +1,15 @@
 import React from "react";
-import Title from "@/components/cardiacComponents/Title";
+import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
-import Link from "next/link";
 import Banner from "@/components/Common/Banner";
+import KnowMore from "@/components/ui/KnowMore";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Cervical Cancer",
   description:
-    "Cervical cancer originates in the cervix, the lower part of the uterus connecting to the vagina. It typically develops slowly and can be detected early through regular screening. The primary cause of cervical cancer is persistent infection with high-risk types of the human papillomavirus (HPV). Early stage cervical cancer often has no symptoms, which is why routine Pap tests and HPV tests are essential for timely detection and prevention.",
+    "Cervical cancer originates in the cervix, the lower part of the uterus connecting to the vagina. It typically develops slowly and can be detected early through regular screening. The primary cause of cervical cancer is persistent infection with high-risk types of the human papillomavirus (HPV). Early-stage cervical cancer often has no symptoms, which is why routine Pap tests and HPV tests are essential for timely detection and intervention.",
 
   causes: [
     {
@@ -39,35 +41,33 @@ const data = {
       aneurysmSymptoms: [
         {
           title: "Pap Test:",
-          description:
-            "Pap Test: Detects precancerous or abnormal cervical cells",
-          className: "bg-pink-500 text-white p-2 rounded text-sm",
+          description: `${" "}Detects precancerous or abnormal cervical cells`,
+          className: "bg-hciSecondary text-white p-2 rounded text-sm",
         },
         {
           title: "HPV Testing:",
           description:
             " Identifies high-risk HPV strains associated with cervical cancer",
-          className: "bg-pink-500 text-white p-2 rounded text-sm",
+          className: "bg-hciSecondary text-white p-2 rounded text-sm",
         },
         {
           title: "Colposcopy:",
           description:
-            "Uses a magnifying device to closely examine the cervix for abnormalities",
+            " Uses a magnifying device to closely examine the cervix for abnormalities",
           className:
-            "bg-pink-500 text-white p-2 rounded whitespace-nowrap text-sm",
+            "bg-hciSecondary text-white p-2 rounded whitespace-nowrap text-sm",
         },
         {
           title: "Biopsy:",
-          description:
-            "Biopsy: Removes tissue samples to confirm cancer diagnosis",
-          className: "bg-pink-500 text-white p-2 rounded text-sm",
+          description: " Removes tissue samples to confirm cancer diagnosis",
+          className: "bg-hciSecondary text-white p-2 rounded text-sm",
         },
         {
           title: "Imaging (CT/MRI/PET):",
           description:
             " Determines the extent and spread of the cancer in advanced stages",
           className:
-            "bg-pink-500 text-white p-2 rounded whitespace-nowrap text-sm",
+            "bg-hciSecondary text-white p-2 rounded whitespace-nowrap text-sm",
         },
       ],
     },
@@ -81,23 +81,25 @@ const data = {
       aneurysmSymptoms: [
         {
           title: "Conization",
-          description:
-            "The removal of a cone-shaped piece of tissue from the cervix. This procedure can treat early cervical cancer by removing abnormal cells while preserving fertility.",
+          description: `Conization is the removal of a cone-shaped piece of tissue from the cervix. This procedure can treat early-stage, localized cancer by removing abnormal cells while preserving the rest of the cervix.
+This is an option for women wanting to retain fertility, especially when cancer is confined to a small area.`,
+        },
+        {
+          title: "Hysterectomy",
+          description: `Total Hysterectomy: Involves removal of the cervix and uterus. It is effective for early-stage cancer that has not spread beyond the cervix.
+Radical Hysterectomy: Involves removal of the cervix, uterus, part of the vagina, and surrounding tissues, as well as lymph nodes. This option is used when the cancer is at a slightly advanced stage but still localized.
+Hysterectomy can reduce the risk of recurrence but is not suitable for patients who wish to retain fertility.`,
         },
         {
           title: "Trachelectomy",
-          description:
-            "Partial removal of the cervix and upper part of the vagina but leaves the uterus intact, preserving the possibility of pregnancy. This is an option for women wanting to retain fertility, especially when cancer is confined to a small area.",
+          description: `This procedure removes the cervix and upper part of the vagina but leaves the uterus intact, preserving the possibility of pregnancy.
+Typically recommended for younger patients with early-stage, small tumors who wish to maintain fertility.`,
         },
-        {
-          title: "Radical Hysterectomy",
-          description:
-            "Involves removal of the cervix, uterus, part of the vagina, and surrounding tissues, as well as lymph nodes. This option is used when the cancer is at a slightly advanced stage but still localized.",
-        },
+
         {
           title: "Pelvic Exenteration",
-          description:
-            "For advanced cancer that has spread within the pelvic area, this extensive surgery removes the cervix, uterus, bladder, and part of the lower colon. This is generally considered only when other treatments are not effective and are often combined with reconstructive surgery.",
+          description: `For advanced cancer that has spread within the pelvic area, this extensive surgery removes the uterus, cervix, bladder, and parts of the lower colon.
+This is generally considered only when other treatments are not effective and are often combined with reconstructive surgery.`,
         },
       ],
     },
@@ -143,7 +145,7 @@ const data = {
     {
       heading: "Targeted Therapy",
       description:
-        "Targeted therapies are drugs that focus on specific molecules involved in cancer cell growth and spread, offering a more precise treatment with fewer side effects.",
+        "Targeted therapies are drugs that focus on specific molecules involved in cancer cell growth and spread, offering a more precise treatment with fewer side effects compared to chemotherapy.",
       aneurysmSymptoms: [
         {
           title: "Bevacizumab (Avastin)",
@@ -217,127 +219,106 @@ const data = {
 
 function CervicalCancer() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Title title={data.title} className="text-4xl text-pink-500" />
-      <div className="mt-6">
-        <p className="text-gray-600 text-lg font-light">{data.description}</p>
-      </div>
+    <>
+      <Banner image={"/oncology/ovarian-cancer-2.png"} />
 
-      <div className="my-10">
-        <Banner image={"/oncology/ovarian-cancer-2.png"} />
-      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <H1 title={data.title} />
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Causes Section */}
-        <div>
-          <H2 title="Causes" className="text-xl font-semibold mb-4" />
-          <div className="space-y-2">
-            {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
-              <div
-                key={idx}
-                className="bg-[#0E56A0] text-white p-4 rounded whitespace-nowrap text-sm"
-              >
-                {cause.description}
-              </div>
-            ))}
+        <div className="mt-6">
+          <p className="text-gray-600 font-light">{data.description}</p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Causes Section */}
+          <div>
+            <H2 title="Causes" className="text-xl font-semibold mb-4" />
+            <div className="space-y-2">
+              {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#0E56A0] text-white p-4 rounded whitespace-nowrap text-sm">
+                  {cause.description}
+                </div>
+              ))}
+            </div>
+            <div className="mt-4">
+              <KnowMore title="Cervical Cancer" />
+            </div>
           </div>
-          <div className="mt-4">
-            <Link
-              href="/treatment/oncology/cervical-cancer-info"
-              className="text-[#0E56A0] underline font-semibold"
-            >
-              For More About Cervical Cancer, Its Causes And Treatment, Click
-              Here
-            </Link>
+
+          {/* Diagnosis Section */}
+          <div>
+            <H2 title="Diagnosis" className="text-xl font-semibold mb-4" />
+            <div className="space-y-2">
+              {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#D84498] text-white p-4 rounded whitespace-nowrap text-sm">
+                  <span className="font-semibold">{diagnosis.title}</span>
+                  {diagnosis.description}
+                </div>
+              ))}
+            </div>
+            <div className="mt-4">
+              <IssuesLinks head="Cervical Cancer" />
+            </div>
           </div>
         </div>
 
-        {/* Diagnosis Section */}
-        <div>
-          <H2 title="Diagnosis" className="text-xl font-semibold mb-4" />
-          <div className="space-y-2">
-            {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
+        {/* Treatments Section */}
+        <div className="mt-12">
+          <H2
+            title="Treatment"
+            className="text-2xl font-semibold mb-6 text-center"
+          />
+          <div className="grid grid-cols-1 gap-6">
+            {data.treatments.map((treatment, index) => (
               <div
-                key={idx}
-                className="bg-[#D84498] text-white p-4 rounded whitespace-nowrap text-sm"
-              >
-                <span className="font-semibold">{diagnosis.title}</span>
-                {diagnosis.description}
-              </div>
-            ))}
-          </div>
-          <div className="mt-4">
-            <Link
-              href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-[#0E56A0] underline font-semibold"
-            >
-              For The Best Diagnosis And Treatment For Cervical Cancer, Click
-              Here
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Treatments Section */}
-      <div className="mt-12">
-        <H2
-          title="Treatment"
-          className="text-2xl font-semibold mb-6 text-center"
-        />
-        <div className="grid grid-cols-1 gap-6">
-          {data.treatments.map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
-            >
-              <h2 className="text-xl text-hciPrimary font-bold text-black">
-                {treatment.heading}
-              </h2>
-              {/* <H3
+                key={index}
+                className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h2 className="text-xl text-hciPrimary font-medium text-black">
+                  {treatment.heading}
+                </h2>
+                {/* <H3
                 title={treatment.heading}
                 className="text-lg font-semibold mb-3 text-pink-600"
               /> */}
-              {treatment.description && (
-                <p className="text-gray-600 mb-4 font-light">
-                  {treatment.description}
-                </p>
-              )}
-              <div className="space-y-4">
-                {treatment.aneurysmSymptoms.map((item, idx) => (
-                  <div key={idx} className="text-gray-600">
-                    {item.title && <strong>{item.title}: </strong>}
-                    {item.description}
-                  </div>
-                ))}
+                {treatment.description && (
+                  <p className="text-gray-600 mb-4 font-light">
+                    {treatment.description}
+                  </p>
+                )}
+                <div className="space-y-4">
+                  {treatment.aneurysmSymptoms.map((item, idx) => (
+                    <div key={idx} className="text-gray-600 font-light">
+                      {item.title && <strong>{item.title}: </strong>}
+                      {item.description}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+        <div className="mt-8">
+          <IssuesLinks head={data.title} />
+        </div>
+        {/* Conclusion */}
+        <div className="mt-12">
+          <h2 className={`text-xl font-medium text-center mb-6`}>Conclusion</h2>
+          {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
+          <p className="text-gray-600 font-light">
+            {data.conclusion[0].paragraph}
+          </p>
+        </div>
+
+        {/* Links */}
+        <div className="mt-8 space-y-4">
+          <FooterLinks head={data.title} />
         </div>
       </div>
-
-      {/* Conclusion */}
-      <div className="mt-12">
-        <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
-        {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
-        <p className="text-gray-600 font-light">
-          {data.conclusion[0].paragraph}
-        </p>
-      </div>
-
-      {/* Links */}
-      <div className="mt-8 space-y-4">
-        {data.links.map((link, index) => (
-          <div key={index} className="text-start">
-            <Link
-              href={link.url}
-              className="text-hciPrimary font-semibold underline"
-            >
-              {link.text}
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
 

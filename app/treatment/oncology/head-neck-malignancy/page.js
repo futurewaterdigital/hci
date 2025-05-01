@@ -2,7 +2,12 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 import H2 from "@/components/ui/h2";
 import DataBoxes from "@/components/cardiacComponents/Box";
-import Link from "next/link";
+import H1 from "@/components/ui/h1";
+import KnowMore from "@/components/ui/KnowMore";
+import IssueLinks from "@/components/ui/IssuesLinks";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
 
 const data = {
   title: "Head and Neck Malignancy",
@@ -37,7 +42,7 @@ const data = {
       description:
         "Originates in the voice box, affecting breathing and vocalization.",
       aneurysmSymptoms: [
-        { description: "Hoarseness and chronic coughing are common symptoms." },
+        {description: "Hoarseness and chronic coughing are common symptoms."},
       ],
     },
     {
@@ -54,7 +59,7 @@ const data = {
       heading: "Salivary Gland Tumors",
       description: "Develops in the major or minor salivary glands.",
       aneurysmSymptoms: [
-        { description: "May include swelling and facial numbness." },
+        {description: "May include swelling and facial numbness."},
       ],
     },
     {
@@ -75,36 +80,36 @@ const data = {
       category: "Tobacco and Alcohol Use",
       description:
         "Heavy use of tobacco (smoking, chewing) and alcohol consumption are major risk factors",
-      bgColor: "bg-pink-500 text-white",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "HPV Infection",
       description:
         "Human papillomavirus is increasingly linked to certain types of head and neck cancers",
-      bgColor: "bg-pink-500 text-white",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "Sun Exposure",
       description: "Prolonged sun exposure increases risk for lip cancers",
-      bgColor: "bg-pink-500 text-white",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "Environmental Hazards",
       description:
         "Exposure to asbestos, wood dust, and other industrial pollutants",
-      bgColor: "bg-pink-500 text-white",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "Genetics and Family History",
       description:
         "Some individuals have genetic predisposition to these cancers",
-      bgColor: "bg-pink-500 text-white",
+      bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "Poor Oral Hygiene and Diet Deficiency",
       description:
         "Chronic irritation and nutritional deficiencies may contribute to cancer risk",
-      bgColor: "bg-pink-500 text-white",
+      bgColor: "bg-hciSecondary text-white",
     },
   ],
 
@@ -113,34 +118,34 @@ const data = {
       category: "Physical Examination",
       description:
         "Detailed examination of visible lesions or areas in the mouth and throat",
-      bgColor: "bg-[#FFE7B6] text-gray-800",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "Endoscopy",
       description:
         "Flexible scope is used to examine deeper tissues in the throat and larynx",
-      bgColor: "bg-[#FFE7B6] text-gray-800",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "Imaging Studies",
       description:
         "MRI, CT scan, and PET scans help determine cancer size and spread",
-      bgColor: "bg-[#FFE7B6] text-gray-800",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "Biopsy",
       description: "Tissue samples are examined to confirm malignancy",
-      bgColor: "bg-[#FFE7B6] text-gray-800",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "HPV Testing",
       description: "Specific screening for HPV-positive oropharyngeal cancers",
-      bgColor: "bg-[#FFE7B6] text-gray-800",
+      bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "Ultrasound and Fine Needle Aspiration",
       description: "Common for examining thyroid nodules",
-      bgColor: "bg-[#FFE7B6] text-gray-800",
+      bgColor: "bg-hciPrimary text-white",
     },
   ],
 
@@ -190,7 +195,7 @@ const data = {
           description:
             "Commonly used for advanced cancers or when surgery is not possible",
         },
-        { description: "Often combined with radiation (chemoradiation)" },
+        {description: "Often combined with radiation (chemoradiation)"},
       ],
     },
     {
@@ -198,8 +203,8 @@ const data = {
       description:
         "Focuses on specific molecules involved in cancer growth (e.g., cetuximab)",
       aneurysmSymptoms: [
-        { description: "Less toxic compared to chemotherapy" },
-        { description: "Often used for recurrent or metastatic cases" },
+        {description: "Less toxic compared to chemotherapy"},
+        {description: "Often used for recurrent or metastatic cases"},
       ],
     },
     {
@@ -270,179 +275,136 @@ const data = {
     },
   ],
   best_hospitals: [
-    { city: "Delhi", url: "/best-head-neck-cancer-hospital-delhi" },
-    { city: "Mumbai", url: "/best-head-neck-cancer-hospital-mumbai" },
-    { city: "Bangalore", url: "/best-head-neck-cancer-hospital-bangalore" },
-    { city: "Hyderabad", url: "/best-head-neck-cancer-hospital-hyderabad" },
-    { city: "Kolkata", url: "/best-head-neck-cancer-hospital-kolkata" },
+    {city: "Delhi", url: "/best-head-neck-cancer-hospital-delhi"},
+    {city: "Mumbai", url: "/best-head-neck-cancer-hospital-mumbai"},
+    {city: "Bangalore", url: "/best-head-neck-cancer-hospital-bangalore"},
+    {city: "Hyderabad", url: "/best-head-neck-cancer-hospital-hyderabad"},
+    {city: "Kolkata", url: "/best-head-neck-cancer-hospital-kolkata"},
   ],
 };
 
 function HeadNeckMalignancy() {
   return (
-    <div className="max-w-7xl relative mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Banner Image */}
+    <>
       <Banner image={data.bannerImage} />
+      <div className="max-w-7xl relative mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Banner Image */}
 
-      <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <div className="text-5xl mt-14 text-center text-[#D84598] font-semibold">
-          {data.title}
-        </div>
-        <div className="mt-6">
-          <p className="text-gray-600 text-lg font-light">{data.description}</p>
-        </div>
-        <H2
-          title="Types of Head and Neck Malignancies"
-          className="text-2xl font-semibold mb-4 text-center"
-        />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          {data.cancer_types.map((cancer, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 rounded-lg p-4 shadow-sm"
-            >
-              <h2 className="text-lg font-semibold mb-2 text-[#0E56A0]">
-                {cancer.heading}
-              </h2>
-              <p className="text-gray-700 mb-2 font-light">
-                {cancer.description}
-              </p>
-              {cancer.aneurysmSymptoms.map((symptom, idx) => (
-                <p key={idx} className="text-sm text-gray-600 font-light">
-                  {symptom.description}
+        <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
+          <H1 title={data.title} />
+          <div className="mt-6">
+            <p className="text-gray-600 font-light">{data.description}</p>
+          </div>
+          <H2
+            title="Types of Head and Neck Malignancies"
+            className="text-2xl font-medium mb-4 text-center"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            {data.cancer_types.map((cancer, index) => (
+              <div
+                key={index}
+                className="border border-gray-200 rounded-lg p-4 shadow-sm">
+                <h2 className="text-lg font-medium mb-2 text-hciPrimary">
+                  {cancer.heading}
+                </h2>
+                <p className="text-gray-700 mb-2 font-light">
+                  {cancer.description}
                 </p>
-              ))}
+                {cancer.aneurysmSymptoms.map((symptom, idx) => (
+                  <p key={idx} className=" text-gray-600 font-light">
+                    {symptom.description}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 gap-6 mb-8">
+            <div>
+              <H2 title="Causes" className="text-xl font-medium mb-4" />
+              <div className="space-y-2">
+                <DataBoxes
+                  title=""
+                  header=""
+                  data={data.causes}
+                  myclass="grid grid-cols-2 gap-2"
+                />
+              </div>
+              <div className="mt-6 text-start">
+                <KnowMore title={data.title} />
+              </div>
             </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div>
-            <H2 title="Causes" className="text-xl font-semibold mb-4" />
-            <div className="space-y-2">
-              <DataBoxes
-                title=""
-                header=""
-                data={data.causes}
-                myclass="grid grid-cols-1 gap-2"
-              />
-            </div>
-            <div className="mt-6 text-start">
-              <Link
-                href="/treatment/oncology/head-neck-cancer-info"
-                className="text-[#0E56A0] font-semibold underline"
-              >
-                To Know More About A Head And Neck Malignancy And Its Treatment,
-                Click Here
-              </Link>
+            <div>
+              <H2 title="Diagnosis" className="text-xl font-medium mb-4" />
+              <div className="space-y-2">
+                <DataBoxes
+                  title=""
+                  header=""
+                  data={data.diagnosis}
+                  myclass="grid grid-cols-2 gap-2"
+                />
+              </div>
+              <div className="mt-6 text-start">
+                <IssueLinks head={data.title} />
+              </div>
             </div>
           </div>
-          <div>
-            <H2 title="Diagnosis" className="text-xl font-semibold mb-4" />
-            <div className="space-y-2">
-              <DataBoxes
-                title=""
-                header=""
-                data={data.diagnosis}
-                myclass="grid grid-cols-1 gap-2"
-              />
-            </div>
-            <div className="mt-6 text-start">
-              <Link
-                href="/treatment/oncology/head-neck-diagnosis"
-                className="text-[#0E56A0] font-semibold underline"
-              >
-                To Get The Best Diagnosis Of Head And Neck Malignancy And
-                Related Issues, Click Here
-              </Link>
-            </div>
+          <div className="mb-8">
+            <Banner image="/oncology/head-neck-brain-image.png" />
           </div>
-        </div>
-        <div className="mb-8">
-          <Banner image="/oncology/head-neck-brain-image.png" />
-        </div>
-        <H2
-          title="Treatment"
-          className="text-2xl font-semibold mb-4 text-center"
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mb-8">
-          {data.treatments.slice(0, 4).map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-4 shadow-sm"
-            >
-              <h2 className="text-lg font-semibold text-[#0E56A0] mb-2">
-                {treatment.heading}
-              </h2>
-              <p className="text-gray-700 mb-2 font-light">
-                {treatment.description}
-              </p>
-              <ul className="text-sm text-gray-600 list-disc pl-5">
-                {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                  <li key={idx}>{symptom.description}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {data.treatments.slice(4, 6).map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-4 shadow-sm"
-            >
-              <h2 className="text-lg font-semibold text-[#0E56A0] mb-2">
-                {treatment.heading}
-              </h2>
-              <p className="text-gray-700 mb-2 font-light">
-                {treatment.description}
-              </p>
-              <ul className="text-sm text-gray-600 list-disc pl-5">
-                {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                  <li key={idx}>{symptom.description}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="mt-6 text-start">
-          <Link
-            href="/treatment/oncology/head-neck-treatment"
-            className="text-[#0E56A0] font-semibold underline"
-          >
-            To Know More About A Head And Neck Malignancy And Its Causes And
-            Treatment, Click Here
-          </Link>
-        </div>
-        {/* Conclusion */}
-        <div className="mt-12">
-          <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
-          <p className="text-gray-600 font-light">
-            {data.conclusion[0].paragraph}
-          </p>
-        </div>
-        {/* Links */}
-        <div className="mt-8 space-y-4">
-          {data.links?.map((link, index) => (
-            <div key={index} className="text-start">
-              <Link
-                href={link.url}
-                className="text-hciPrimary font-semibold underline"
-              >
-                {link.title}
-              </Link>
-            </div>
-          ))}
-        </div>
-        <div className="text-center mb-8">
-          <Link
-            href="/book-appointment"
-            className="inline-block px-8 py-3 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors font-semibold"
-          >
-            BOOK AN APPOINTMENT
-          </Link>
+          <H2
+            title="Treatment"
+            className="text-2xl font-medium mb-4 text-center"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mb-8">
+            {data.treatments.slice(0, 4).map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-hciSecondary rounded-lg p-4 shadow-sm">
+                <h2 className="text-lg font-medium text-hciPrimary mb-2">
+                  {treatment.heading}
+                </h2>
+                <p className="text-gray-700 mb-2 font-light">
+                  {treatment.description}
+                </p>
+                <ul className=" text-gray-600 list-disc pl-5 font-light">
+                  {treatment.aneurysmSymptoms.map((symptom, idx) => (
+                    <li key={idx}>{symptom.description}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            {data.treatments.slice(4, 6).map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-hciSecondary rounded-lg p-4 shadow-sm">
+                <h2 className="text-lg font-medium text-hciPrimary mb-2">
+                  {treatment.heading}
+                </h2>
+                <p className="text-gray-700 mb-2 font-light">
+                  {treatment.description}
+                </p>
+                <ul className=" text-gray-600 list-disc pl-5 font-light">
+                  {treatment.aneurysmSymptoms.map((symptom, idx) => (
+                    <li key={idx}>{symptom.description}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-start">
+            <KnowMore title={data.title} />
+          </div>
+          {/* Conclusion */}
+          <div className="mt-12">
+            <Conclusion data={data.conclusion} />
+            <FooterLinks head={data.title} />
+            <BookButton />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,15 +1,15 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from '@/components/ui/IssuesLinks'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Gastritis",
@@ -242,10 +242,13 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         <H2
-          title="Types of Gastric Ulcers"
+          title="Types of Gastritis"
           className="font-medium mb-4 text-center text-2xl"
         />
         <div className="mb-8">
@@ -258,8 +261,11 @@ function GeneralSurgery() {
             // boxClass="grid grid-cols-2"
           />
         </div>
-       
-        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl pt-12" />
+
+        <H2
+          title="Causes"
+          className="font-medium mb-4 text-center text-2xl pt-12"
+        />
         {/* <p className="font-light">
           While the exact cause of gallstones isn’t fully understood, several
           factors may increase the risk:

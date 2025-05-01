@@ -1,16 +1,15 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from '@/components/ui/IssuesLinks'
-
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Multiple Sclerosis (MS)",
@@ -136,6 +135,12 @@ const data = {
 
   symptoms: [
     {
+      title: "",
+      description:
+        "Fatigue: One of the most frequent symptoms, often overwhelming and unrelated to physical activity.",
+      bgColor: "bg-hciPrimary text-white",
+    },
+    {
       category: "",
       description: `Numbness or Tingling: Typically in the face, arms, legs, or trunk.`,
       bgColor: "bg-hciPrimary text-white",
@@ -210,7 +215,7 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
-        <p className="text-start font-light" >{data.description}</p>
+        <p className="text-start font-light">{data.description}</p>
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
@@ -255,7 +260,7 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div className='space-y-6'>
+            <div className="space-y-6">
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosing MS requires a combination of tests and assessments, as there is no single definitive test for the disease. The process typically includes:"
@@ -270,7 +275,10 @@ function GeneralSurgery() {
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
+          <H2
+            title="Treatment"
+            className="font-medium mb-4 text-center text-2xl"
+          />
 
           <p className="font-light">
             While there is no cure for MS, a variety of treatments are available

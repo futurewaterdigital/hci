@@ -1,14 +1,14 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from '@/components/ui/IssuesLinks'
-import KnowMore from '@/components/ui/KnowMore'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
+import KnowMore from "@/components/ui/KnowMore";
 
 const data = {
   title: "Gastroesophageal Reflux Disease (GERD)",
@@ -310,9 +310,11 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
 
         <H2
@@ -342,9 +344,12 @@ function GeneralSurgery() {
             // boxClass="grid grid-cols-2"
           />
         </div>
+        <KnowMore title={data.title} />
 
-        
-        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl pt-12" />
+        <H2
+          title="Causes"
+          className="font-medium mb-4 text-center text-2xl pt-12"
+        />
         <p className="font-light">
           GERD results from repeated episodes of acid or non-acid reflux. This
           occurs when the lower esophageal sphincter does not close properly,
@@ -359,12 +364,10 @@ function GeneralSurgery() {
             ulClass="list-disc list-outside"
             boxClass="bg-hciYellow"
           />
-        <KnowMore title={data.title} />
+          <KnowMore title={data.title} />
         </div>
-        
 
         <div className="grid grid-cols-1 gap-4 pt-8">
-         
           <div>
             <DataBoxes
               title="Diagnosis"
@@ -384,7 +387,7 @@ function GeneralSurgery() {
             title="Treatment"
             className="font-medium mb-4 text-center text-2xl"
           />
-       
+
           <div className="mb-8">
             <DataLists
               divClass="grid grid-cols-1 gap-4"
@@ -411,7 +414,7 @@ function GeneralSurgery() {
             />
           </div>
 
-         <KnowMore title={data.title} />
+          <KnowMore title={data.title} />
         </div>
 
         <Conclusion data={footerData} />

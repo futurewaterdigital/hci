@@ -2,11 +2,11 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
 // import Image from 'next/image'
-import H1 from '@/components/ui/h1'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
+import H1 from "@/components/ui/h1";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
 
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import ListBox from "@/components/cardiacComponents/ListBox";
@@ -41,16 +41,13 @@ const data = {
 
       aneurysmSymptoms: [
         {
-          description:
-            `<span class='font-medium'>Physical Therapists:</span> To aid in recovery and improve mobility. `,
+          description: `<span class='font-medium'>Physical Therapists:</span> To aid in recovery and improve mobility. `,
         },
         {
-          description:
-            `<span class='font-medium'>Certified Athletic Trainers:</span> To design rehabilitation programs and prevent future injuries.`,
+          description: `<span class='font-medium'>Certified Athletic Trainers:</span> To design rehabilitation programs and prevent future injuries.`,
         },
         {
-          description:
-            `<span class='font-medium'>Nutritionists:</span> To optimize performance and assist with weight management.`,
+          description: `<span class='font-medium'>Nutritionists:</span> To optimize performance and assist with weight management.`,
         },
       ],
     },
@@ -60,12 +57,12 @@ const data = {
       heading: "Conditions we Treat",
       desc: "HCI’s sports medicine network addresses a range of conditions, including:",
       aneurysmSymptoms: [
-        { description: "Botox and dermal fillers" },
-        { description: "Knee and shoulder injuries" },
-        { description: "Tendonitis and cartilage injuries" },
-        { description: "Concussions and heat illnesse" },
-        { description: "Exercise-induced asthma" },
-        { description: "Eating disorders related to athletic performance" },
+        {description: "Ankle sprains and fractures"},
+        {description: "Knee and shoulder injuries"},
+        {description: "Tendonitis and cartilage injuries"},
+        {description: "Concussions and heat illnesse"},
+        {description: "Exercise-induced asthma"},
+        {description: "Eating disorders related to athletic performance"},
       ],
     },
   ],
@@ -73,10 +70,10 @@ const data = {
     {
       heading: "Conditions we Treat",
       aneurysmSymptoms: [
-        { description: "Ankle sprains and fractures" },
-        { description: "Cleft lip and palate repair" },
-        { description: "Hand and microsurgery" },
-        { description: " Scar revision surgery" },
+        {description: "Ankle sprains and fractures"},
+        {description: "Cleft lip and palate repair"},
+        {description: "Hand and microsurgery"},
+        {description: " Scar revision surgery"},
       ],
     },
   ],
@@ -156,14 +153,13 @@ function GeneralSurgery() {
           className="text-2xl font-medium mb-4 text-center pt-12"
         />
         <p className="font-light">
-          If you or your child experience a sports-related injury, it’s
-          essential to determine the severity. For injuries involving severe
-          pain, swelling, numbness, or an inability to bear weight, immediate
-          care at an emergency room is recommended. For less severe injuries,
-          HCI specialists can offer tailored treatment plans, including:
+          t HCI, we partner with leading hospitals and specialists to provide
+          cutting-edge treatment for sports injuries. Our goal is to help you or
+          your loved ones recover quickly and safely, empowering you to return
+          to the activities you love.
         </p>
         <ListBox data={data} />
-        <div className='pb-12'>
+        <div className="pb-12">
           <H2
             title="Empowering Recovery Through Expert Care"
             className="text-2xl font-medium mb-4 text-center pt-12"
@@ -176,7 +172,7 @@ function GeneralSurgery() {
             HCI specialists can offer tailored treatment plans, including:
           </p>
         </div>
-      
+
         <CTaButton data={data} />
         <FooterLinks head={data.title} />
         <BookButton />

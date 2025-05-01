@@ -1,249 +1,248 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-const bannerImage = '/cardio/aortic.png'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import DataSurgery from '@/components/cardiacComponents/Button'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import IssuesLinks from '@/components/ui/IssuesLinks'
-import CausesLink from '@/components/ui/CausesLink'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import H1 from '@/components/ui/h1'
-import H2 from '@/components/ui/h2'
-import H3 from '@/components/ui/h3'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+const bannerImage = "/cardio/aortic.png";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import DataSurgery from "@/components/cardiacComponents/Button";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import IssuesLinks from "@/components/ui/IssuesLinks";
+import CausesLink from "@/components/ui/CausesLink";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import H1 from "@/components/ui/h1";
+import H2 from "@/components/ui/h2";
+import H3 from "@/components/ui/h3";
 
-const title = 'Aortic Aneurysm'
+const title = "Aortic Aneurysm";
 const vascularConditions = [
   {
-    category: 'Atherosclerosis',
+    category: "Atherosclerosis",
     description:
-      'Buildup of plaque in arteries that makes them stiff and narrow.',
-    bgColor: 'bg-hciYellow',
+      "Buildup of plaque in arteries that makes them stiff and narrow.",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: 'Connective tissue disorders',
+    category: "Connective tissue disorders",
     description:
-      'Genetic conditions like Marfan syndrome or Ehlers-Danlos syndrome that weaken connective tissues.',
-    bgColor: 'bg-hciYellow',
+      "Genetic conditions like Marfan syndrome or Ehlers-Danlos syndrome that weaken connective tissues.",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: 'Infections',
+    category: "Infections",
     description:
-      'Rarely, conditions like syphilis can affect the aortic walls.',
-    bgColor: 'bg-hciYellow',
+      "Rarely, conditions like syphilis can affect the aortic walls.",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: 'High blood pressure (hypertension)',
-    description: 'Increases the stress on the arterial walls over time.',
-    bgColor: 'bg-hciYellow',
+    category: "High blood pressure (hypertension)",
+    description: "Increases the stress on the arterial walls over time.",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: 'Trauma or injury',
+    category: "Trauma or injury",
     description:
-      'Aortic aneurysms can develop after severe chest or abdominal injuries.',
-    bgColor: 'bg-hciYellow',
+      "Aortic aneurysms can develop after severe chest or abdominal injuries.",
+    bgColor: "bg-hciYellow",
   },
-]
+];
 const riskFactor = [
   {
-    title: 'Smoking',
-    description: '',
-    minHeight: 'h-[80px]',
+    title: "Smoking",
+    description: "",
+    minHeight: "h-[80px]",
   },
   {
-    title: 'Age over 65 years',
-    description: '',
-    minHeight: 'h-[80px]',
+    title: "Age over 65 years",
+    description: "",
+    minHeight: "h-[80px]",
   },
   {
-    title: 'Male sex (men are more prone to abdominal aneurysms)',
-    description: '',
-    minHeight: 'h-[80px] text-center',
+    title: "Male sex (men are more prone to abdominal aneurysms)",
+    description: "",
+    minHeight: "h-[80px] text-center",
   },
   {
-    title: 'Family history of aneurysms',
-    description: '',
-    minHeight: 'h-[80px]',
+    title: "Family history of aneurysms",
+    description: "",
+    minHeight: "h-[80px]",
   },
   {
-    title: 'High cholesterol and hypertension',
-    description: '',
-    minHeight: 'h-[80px] text-center',
+    title: "High cholesterol and hypertension",
+    description: "",
+    minHeight: "h-[80px] text-center",
   },
-]
+];
 const symptomsData = [
   {
-    heading: 'Symptoms of a Growing Aortic Aneurysm',
+    heading: "Symptoms of a Growing Aortic Aneurysm",
     aneurysmSymptoms: [
       {
-        title: '',
-        description: 'Chest, back, or abdominal pain',
+        title: "",
+        description: "Chest, back, or abdominal pain",
       },
       {
-        title: '',
+        title: "",
         description:
-          'Difficulty swallowing or shortness of breath (for thoracic aneurysms)',
+          "Difficulty swallowing or shortness of breath (for thoracic aneurysms)",
       },
       {
-        title: '',
+        title: "",
         description:
-          'Feeling of fullness after eating small meals (abdominal aneurysms)',
+          "Feeling of fullness after eating small meals (abdominal aneurysms)",
       },
       {
-        title: '',
-        description: 'Swelling in the face, arms, or neck',
+        title: "",
+        description: "Swelling in the face, arms, or neck",
       },
     ],
   },
-]
+];
 const symptomsRData = [
   {
-    heading: 'Symptoms of a Ruptured Aortic Aneurysm (Medical Emergency)',
+    heading: "Symptoms of a Ruptured Aortic Aneurysm (Medical Emergency)",
     aneurysmSymptoms: [
       {
-        title: '',
-        description: 'Sudden, severe chest or abdominal pain',
+        title: "",
+        description: "Sudden, severe chest or abdominal pain",
       },
       {
-        title: '',
-        description: 'Rapid heart rate',
+        title: "",
+        description: "Rapid heart rate",
       },
       {
-        title: '',
-        description: 'Lightheadedness or dizziness',
+        title: "",
+        description: "Lightheadedness or dizziness",
       },
       {
-        title: '',
-        description: 'Loss of consciousness',
+        title: "",
+        description: "Loss of consciousness",
       },
     ],
   },
-]
+];
 const diagnosticTests = [
   {
-    category: 'Ultrasound',
-    description: 'Frequently used to detect abdominal aneurysms.',
-    bgColor: 'bg-hciPrimary text-white',
+    category: "Ultrasound",
+    description: "Frequently used to detect abdominal aneurysms.",
+    bgColor: "bg-hciPrimary text-white",
   },
   {
-    category: 'MRI and MRI Angiography',
+    category: "MRI and MRI Angiography",
     description:
-      'Help detect aneurysms and examine their impact on nearby structures.',
-    bgColor: 'bg-hciPrimary text-white',
+      "Help detect aneurysms and examine their impact on nearby structures.",
+    bgColor: "bg-hciPrimary text-white",
   },
   {
-    category: 'CT Scan and CT Angiography',
+    category: "CT Scan and CT Angiography",
     description:
-      'Provide detailed images of the aorta to detect aneurysms and assess their size.',
-    bgColor: 'bg-hciPrimary text-white',
+      "Provide detailed images of the aorta to detect aneurysms and assess their size.",
+    bgColor: "bg-hciPrimary text-white",
   },
   {
-    category: 'X-rays',
-    description: 'May incidentally reveal thoracic aneurysms.',
-    bgColor: 'bg-hciPrimary text-white',
+    category: "X-rays",
+    description: "May incidentally reveal thoracic aneurysms.",
+    bgColor: "bg-hciPrimary text-white",
   },
-]
+];
 const medicalManagement = [
   {
-    category: 'Blood pressure management',
+    category: "Blood pressure management",
     description:
-      'Use of medications to control hypertension and reduce strain on the aorta.',
-    bgColor: 'bg-hciSecondary text-white',
+      "Use of medications to control hypertension and reduce strain on the aorta.",
+    bgColor: "bg-hciSecondary text-white",
   },
   {
-    category: 'Cholesterol management',
+    category: "Cholesterol management",
     description:
-      'Statins to help lower cholesterol levels, reducing plaque buildup.',
-    bgColor: 'bg-hciSecondary text-white',
+      "Statins to help lower cholesterol levels, reducing plaque buildup.",
+    bgColor: "bg-hciSecondary text-white",
   },
   {
-    category: 'Lifestyle changes',
+    category: "Lifestyle changes",
     description:
-      'Quitting smoking, eating heart-healthy foods, and exercising regularly can slow aneurysm growth.',
-    bgColor: 'bg-hciSecondary text-white',
+      "Quitting smoking, eating heart-healthy foods, and exercising regularly can slow aneurysm growth.",
+    bgColor: "bg-hciSecondary text-white",
   },
   {
-    category: 'Monitoring',
+    category: "Monitoring",
     description:
-      'Routine imaging tests are recommended to track aneurysm size and progression.',
-    bgColor: 'bg-hciSecondary text-white',
+      "Routine imaging tests are recommended to track aneurysm size and progression.",
+    bgColor: "bg-hciSecondary text-white",
   },
-]
+];
 const surgicalTreatment = [
   {
-    category: 'Open Aneurysm Repair:',
+    category: "Open Aneurysm Repair:",
     description:
-      'The damaged section of the aorta is removed and replaced with a synthetic graft. This approach is more invasive but effective, especially for ruptured aneurysms.',
-    bgColor: 'bg-hciSecondary text-white',
+      "The damaged section of the aorta is removed and replaced with a synthetic graft. This approach is more invasive but effective, especially for ruptured aneurysms.",
+    bgColor: "bg-hciSecondary text-white",
   },
   {
-    category: 'Endovascular Aneurysm Repair (EVAR or TEVAR):',
+    category: "Endovascular Aneurysm Repair (EVAR or TEVAR):",
     description:
-      'A minimally invasive procedure where a catheter is used to insert a stent graft into the aorta. The graft reinforces the artery wall and prevents further bulging',
-    bgColor: 'bg-hciSecondary text-white',
+      "A minimally invasive procedure where a catheter is used to insert a stent graft into the aorta. The graft reinforces the artery wall and prevents further bulging",
+    bgColor: "bg-hciSecondary text-white",
   },
-]
+];
 const complications = [
   {
-    heading: 'Potential Complications',
+    heading: "Potential Complications",
     aneurysmSymptoms: [
       {
-        title: 'Endoleak',
+        title: "Endoleak",
         description:
-          'Leakage of blood around the graft used during endovascular repair.',
+          "Leakage of blood around the graft used during endovascular repair.",
       },
       {
-        title: 'Blood clots',
-        description: 'Formation of clots around the graft or within the aorta.',
+        title: "Blood clots",
+        description: "Formation of clots around the graft or within the aorta.",
       },
       {
-        title: 'Infections',
-        description: 'Infections at the surgical site or graft infection.',
+        title: "Infections",
+        description: "Infections at the surgical site or graft infection.",
       },
       {
-        title: 'Graft migration',
-        description: 'The graft may shift from its original position.',
+        title: "Graft migration",
+        description: "The graft may shift from its original position.",
       },
       {
-        title: 'Control blood pressure and cholesterol',
+        title: "Control blood pressure and cholesterol",
         description:
-          'Medications and lifestyle adjustments can reduce arterial damage and lower the risk of aneurysms.',
+          "Medications and lifestyle adjustments can reduce arterial damage and lower the risk of aneurysms.",
       },
     ],
   },
-]
+];
 const prevention = [
   {
-    heading: '',
+    heading: "",
     aneurysmSymptoms: [
-     
       {
-        title: 'Quit smoking',
+        title: "Quit smoking",
         description:
-          'Tobacco use is a major risk factor for cardiovascular diseases and aneurysms.',
+          "Tobacco use is a major risk factor for cardiovascular diseases and aneurysms.",
       },
       {
-        title: 'Eat a balanced diet',
+        title: "Eat a balanced diet",
         description:
-          'A heart-healthy diet helps prevent atherosclerosis and supports vascular health.',
+          "A heart-healthy diet helps prevent atherosclerosis and supports vascular health.",
       },
       {
-        title: 'Exercise regularly',
+        title: "Exercise regularly",
         description:
-          'Physical activity improves cardiovascular health, strengthens the heart, and lowers blood pressure.',
+          "Physical activity improves cardiovascular health, strengthens the heart, and lowers blood pressure.",
       },
       {
-        title: 'Routine screenings',
+        title: "Routine screenings",
         description:
-          'High-risk individuals, such as those with family history or pre-existing conditions, should undergo regular testing to monitor vascular health.',
+          "High-risk individuals, such as those with family history or pre-existing conditions, should undergo regular testing to monitor vascular health.",
       },
     ],
   },
-]
+];
 const footerData = [
   {
-    header: 'Conclusion',
+    header: "Conclusion",
     paragraph: `
       Aortic aneurysms are serious conditions that may develop silently
             but pose life-threatening risks if they rupture. Early detection
@@ -254,14 +253,14 @@ const footerData = [
             immediate care for any signs of rupture is critical for survival and
             improved outcomes.`,
   },
-]
+];
 
 export default function page() {
   return (
     <div>
       <Banner image={bannerImage} />
       <main className="lg:container mx-auto py-8 px-6">
-        <H1 title={title}  />
+        <H1 title={title} />
         <div className="py-8 space-y-6">
           <p className="text-start font-light">
             An aortic aneurysm occurs when a section of the aorta, the
@@ -292,28 +291,34 @@ export default function page() {
             titleCss="text-2xl text-center font-medium"
             myclass="grid lg:grid-cols-2"
           />
-          
+
           <CausesLink head={title} />
-          <H2 title="Risk Factors Include" className="text-center font-medium mt-8 text-2xl"/>
+          <H2
+            title="Risk Factors Include"
+            className="text-center font-medium mt-8 text-2xl"
+          />
           <DataSurgery data={riskFactor} />
           <div>
-          <H2 title="Symptoms" className="text-center font-medium mt-8 text-2xl"/>
-          <p className="mt-4 text-start font-light">
-            Aortic aneurysms often remain asymptomatic until they enlarge or
-            rupture. Symptoms vary based on the aneurysm&apos;s location and
-            size.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-            <DataLists data={symptomsData} boxClass="h-[250px]" />
-            <DataLists data={symptomsRData} boxClass="h-[250px]" />
-            </div>
-            
-          <p className="mt-4 text-start font-light">
-            If an aneurysm ruptures, it requires immediate medical attention, as
-            internal bleeding can be fatal without prompt intervention.
+            <H2
+              title="Symptoms"
+              className="text-center font-medium mt-8 text-2xl"
+            />
+            <p className="mt-4 text-start font-light">
+              Aortic aneurysms often remain asymptomatic until they enlarge or
+              rupture. Symptoms vary based on the aneurysm&apos;s location and
+              size.
             </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <DataLists data={symptomsData} boxClass="h-[250px]" />
+              <DataLists data={symptomsRData} boxClass="h-[250px]" />
             </div>
+
+            <p className="mt-4 text-start font-light">
+              If an aneurysm ruptures, it requires immediate medical attention,
+              as internal bleeding can be fatal without prompt intervention.
+            </p>
+          </div>
         </div>
         <div className="space-y-6">
           <DataBoxes
@@ -332,36 +337,42 @@ export default function page() {
             aneurysms.
           </p>
           <IssuesLinks head={title} />
-          <H2 title="Treatment" className="text-center font-medium mt-8 text-2xl"/>
+          <H2
+            title="Treatment"
+            className="text-center font-medium mt-8 text-2xl"
+          />
           <div>
-          <p className="text-start font-light">
-            The treatment approach depends on the aneurysm&apos;s size,
-            location, and risk of rupture.
+            <p className="text-start font-light">
+              The treatment approach depends on the aneurysm&apos;s size,
+              location, and risk of rupture.
             </p>
-            
-          <div className="grid lg:grid-cols-1 gap-4">
-            <DataBoxes
-              title=""
-              text=""
-              header="Medical Management (for small, unruptured aneurysms):"
-              headerCss="text-xl"
-              data={medicalManagement}
-              myclass="grid grid-cols-2"
-            />
-            <DataBoxes
-              title=""
-              text=""
-              header="Surgical Treatment (for large or at-risk aneurysms):"
-              headerCss="text-xl"
-              data={surgicalTreatment}
-              myclass="grid grid-cols-2"
-            />
+
+            <div className="grid lg:grid-cols-1 gap-4">
+              <DataBoxes
+                title=""
+                text=""
+                header="Medical Management (for small, unruptured aneurysms):"
+                headerCss="text-xl"
+                data={medicalManagement}
+                myclass="grid grid-cols-2"
+              />
+              <DataBoxes
+                title=""
+                text=""
+                header="Surgical Treatment (for large or at-risk aneurysms):"
+                headerCss="text-xl"
+                data={surgicalTreatment}
+                myclass="grid grid-cols-2"
+              />
             </div>
-            </div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-4">
             <div className="space-y-4">
-              <H3 title="Recovery and Complications after Surgery" className="text-start"/>
+              <H3
+                title="Recovery and Complications after Surgery"
+                className="text-start"
+              />
               <p className="h-20 font-light">
                 Recovery from aneurysm surgery can take several weeks to months,
                 depending on the procedure type. Patients receive close
@@ -388,5 +399,5 @@ export default function page() {
         </div>
       </main>
     </div>
-  )
+  );
 }

@@ -1,16 +1,15 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from "@/components/ui/IssuesLinks"
-
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Osteosarcoma",
@@ -345,7 +344,10 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         {/* <H2 text="Causes" textClass="text-2xl font-medium mb-4 text-center" /> */}
         {/* <p className="font-light" text="">
@@ -417,11 +419,11 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <p className="font-light" text="">
+        {/* <p className="font-light" text="">
           In older adults, fractures can also occur from low-energy trauma, such
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
-        </p>
+        </p> */}
         <KnowMore title={data.title} />
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
@@ -437,7 +439,7 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div className='space-y-4'>
+            <div className="space-y-4">
               <DataBoxes
                 title="Diagnosis"
                 text="Accurate diagnosis is essential to determine the extent and progression of osteosarcoma. Healthcare providers use several diagnostic tests, as detailed below:"

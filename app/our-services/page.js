@@ -1,118 +1,117 @@
-import React from 'react'
-import Image from 'next/image'
-import Banner from '@/components/Common/Banner'
-const bannerImage = '/images/Neurology.png'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import Title from '@/components/cardiacComponents/Title'
-import H2 from '@/components/ui/h2'
-import H3 from '@/components/ui/h3'
-
-
+import React from "react";
+import Image from "next/image";
+import Banner from "@/components/Common/Banner";
+const bannerImage = "/images/Neurology.png";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import Title from "@/components/cardiacComponents/Title";
+import H2 from "@/components/ui/h2";
+import H3 from "@/components/ui/h3";
+import H1 from "@/components/ui/h1";
 
 const helpData = [
   {
-    title: 'Finding the Right Doctor',
+    title: "Finding the Right Doctor",
     content:
       "Our global network of leading clinicians allows us to connect you with top specialists. We can even assemble a team to review your records and recommend the best treatment options. Video consultations are available if you'd like to discuss your condition directly with our doctors.",
   },
   {
-    title: 'Choosing the Best Hospital',
+    title: "Choosing the Best Hospital",
     content:
-      'HCI partners with highly regarded hospitals in India, Egypt, UAE, and Mauritius, all known for advanced technology and patient care. We guide you in selecting a facility that fits your specific medical need.',
+      "HCI partners with highly regarded hospitals in India, Egypt, UAE, and Mauritius, all known for advanced technology and patient care. We guide you in selecting a facility that fits your specific medical need.",
   },
   {
-    title: 'Understanding Treatment Costs',
+    title: "Understanding Treatment Costs",
     content:
-      'To ensure transparency, we provide cost estimates from multiple hospitals, helping you make informed financial decisions. Countries like India and Egypt often offer high-quality care at a fraction of the cost, making treatment accessible and affordable.',
+      "To ensure transparency, we provide cost estimates from multiple hospitals, helping you make informed financial decisions. Countries like India and Egypt often offer high-quality care at a fraction of the cost, making treatment accessible and affordable.",
   },
   {
-    title: 'Evaluating Success Rates',
+    title: "Evaluating Success Rates",
     content:
-      'We share clinician profiles, patient testimonials, and information about treatment outcomes, so you know what to expect and can make confident choices about your healthcare.',
+      "We share clinician profiles, patient testimonials, and information about treatment outcomes, so you know what to expect and can make confident choices about your healthcare.",
   },
   {
-    title: 'Life after Surgery',
+    title: "Life after Surgery",
     content:
-      'With new technologies like minimally invasive, laser, and robotic surgery, recovery times are shorter, and outcomes are highly successful. We recommend the best procedures for your condition to support a fast and smooth recovery.',
+      "With new technologies like minimally invasive, laser, and robotic surgery, recovery times are shorter, and outcomes are highly successful. We recommend the best procedures for your condition to support a fast and smooth recovery.",
   },
   {
-    title: 'Starting the Process',
+    title: "Starting the Process",
     content:
       "Submit your medical reports via our form, and our team will reach out within 24 hours with a treatment plan, cost estimate, and other details. You'll have a dedicated manager who will guide you through each step.",
   },
-]
+];
 const services = [
   {
-    title: 'Cardiac Surgery',
-    description: 'Cardiac Surgery',
-    icon: '/images/Cardiac.svg',
+    title: "Cardiac Surgery",
+    description: "Cardiac Surgery",
+    icon: "/images/Cardiac.svg",
   },
   {
-    title: 'Cancer Treatment',
-    description: 'Cancer Treatment',
-    icon: '/images/Cancer.svg',
+    title: "Cancer Treatment",
+    description: "Cancer Treatment",
+    icon: "/images/Cancer.svg",
   },
   {
-    title: 'Brain and Spine Surgery',
-    description: 'Brain and Spine Surgery',
-    icon: '/images/BrainSpine.svg',
+    title: "Brain and Spine Surgery",
+    description: "Brain and Spine Surgery",
+    icon: "/images/BrainSpine.svg",
   },
   {
-    title: 'Gastroenterology and complicated surgeries',
-    description: 'Gastroenterology and complicated surgeries',
-    icon: '/images/GastroImage.svg',
+    title: "Gastroenterology and complicated surgeries",
+    description: "Gastroenterology and complicated surgeries",
+    icon: "/images/GastroImage.svg",
   },
   {
-    title: 'Orthopaedics and Joint Replacement',
-    description: 'Orthopaedics and Joint Replacement',
-    icon: '/images/Orthopaedics.svg',
+    title: "Orthopaedics and Joint Replacement",
+    description: "Orthopaedics and Joint Replacement",
+    icon: "/images/Orthopaedics.svg",
   },
   {
-    title: 'Organ Transplants (Liver & Kidney)',
-    description: 'Organ Transplants (Liver & Kidney)',
-    icon: '/images/Organ.svg',
+    title: "Organ Transplants (Liver & Kidney)",
+    description: "Organ Transplants (Liver & Kidney)",
+    icon: "/images/Organ.svg",
   },
   {
-    title: 'Bone Marrow Transplant (for blood cancers)',
-    description: 'Bone Marrow Transplant (for blood cancers)',
-    icon: '/images/BoneMarrow.svg',
+    title: "Bone Marrow Transplant (for blood cancers)",
+    description: "Bone Marrow Transplant (for blood cancers)",
+    icon: "/images/BoneMarrow.svg",
   },
   {
-    title: 'Urology and Infertility (IVF)',
-    description: 'Urology and Infertility (IVF)',
-    icon: '/images/Urology.svg',
+    title: "Urology and Infertility (IVF)",
+    description: "Urology and Infertility (IVF)",
+    icon: "/images/Urology.svg",
   },
   {
-    title: 'Ophthalmology',
-    description: 'Ophthalmology',
-    icon: '/images/Ophthalmology.svg',
+    title: "Ophthalmology",
+    description: "Ophthalmology",
+    icon: "/images/Ophthalmology.svg",
   },
   {
-    title: 'Dental and Cosmetic Surgery',
-    description: 'Dental and Cosmetic Surgery',
-    icon: '/images/DentalCosmetic.svg',
+    title: "Dental and Cosmetic Surgery",
+    description: "Dental and Cosmetic Surgery",
+    icon: "/images/DentalCosmetic.svg",
   },
-]
+];
 
 const faqData = [
-  'Who is the most qualified doctor for my condition?',
-  'Which hospital best suits my needs?',
-  'How much will treatment cost?',
-  'What are the success rates?',
-  'What can I expect during recovery?',
-  'How do I manage travel and logistics?',
-  'Who will handle post-treatment follow-up?',
-]
+  "Who is the most qualified doctor for my condition?",
+  "Which hospital best suits my needs?",
+  "How much will treatment cost?",
+  "What are the success rates?",
+  "What can I expect during recovery?",
+  "How do I manage travel and logistics?",
+  "Who will handle post-treatment follow-up?",
+];
 
 const servicesData = [
-  'Visa assistance and invitation letters',
-  'Airport pickup and drop-off',
-  'Accommodation bookings near your hospital',
-  'City orientation and recommended Apps for your stay',
-  'Currency exchange and money transfer guidance',
-  'Translation services (French, Bangla, Arabic)',
-  'Appointment scheduling and hospital coordination',
-]
+  "Visa assistance and invitation letters",
+  "Airport pickup and drop-off",
+  "Accommodation bookings near your hospital",
+  "City orientation and recommended Apps for your stay",
+  "Currency exchange and money transfer guidance",
+  "Translation services (French, Bangla, Arabic)",
+  "Appointment scheduling and hospital coordination",
+];
 
 function Page() {
   return (
@@ -122,7 +121,7 @@ function Page() {
         {/* banner end here */}
 
         <div className="space-y-6">
-          <Title title="Our Services" />
+          <H1 title="Our Services" />
           <p className="text-center font-light">
             Healthcare International (HCI) is your trusted partner, supporting
             you at every stage of your medical journey. Navigating medical
@@ -156,8 +155,7 @@ function Page() {
             {helpData.map((section, index) => (
               <div
                 key={index}
-                className="p-4 bg-hciYellow rounded-lg hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
-              >
+                className="p-4 bg-hciYellow rounded-lg hover:scale-105 hover:cursor-pointer transition-all ease-in-out">
                 <h4 className="text-xl font-regular mb-2 text-center font-roboto">
                   {section.title}
                 </h4>
@@ -165,7 +163,10 @@ function Page() {
               </div>
             ))}
           </div>
-          <H3 title="Handling Logistics" className="text-3xl font-regular font-roboto text-center text-hciPrimary"/>
+          <H3
+            title="Handling Logistics"
+            className="text-3xl font-regular font-roboto text-center text-hciPrimary"
+          />
 
           <p className="font-light">
             We manage all logistics to make your experience as smooth as
@@ -179,7 +180,10 @@ function Page() {
             ))}
           </ul>
 
-          <H3 title="What treatments do we specialize in?" className="text-3xl font-regular font-roboto text-center text-hciPrimary"/>
+          <H3
+            title="What treatments do we specialize in?"
+            className="text-3xl font-regular font-roboto text-center text-hciPrimary"
+          />
           <p className="text-center font-light">
             With experience in over 50 specialties, HCI has supported patients
             from 125+ countries. Our specialties include:
@@ -191,8 +195,7 @@ function Page() {
           {services.map((service, index) => (
             <div
               className="p-4 bg-white border rounded-lg flex flex-col items-center justify-center hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
-              key={index}
-            >
+              key={index}>
               <Image
                 width={300}
                 height={300}
@@ -222,7 +225,7 @@ function Page() {
       </div>
       {/* section end here */}
     </>
-  )
+  );
 }
 
-export default Page
+export default Page;

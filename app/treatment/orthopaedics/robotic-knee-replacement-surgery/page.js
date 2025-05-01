@@ -1,22 +1,24 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from "@/components/ui/IssuesLinks"
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Robotic Knee Replacement Surgery",
-  bannerImage: "/orthopaedics/GICancer_Banner.png",
-  description: `Designed for individuals suffering from severe knee pain and mobility issues, robotic knee replacement ensures a personalised surgical plan tailored to each patient’s anatomy, helping them regain their active lifestyle with enhanced comfort and functionality.`,
-  overview: `Robotic knee replacement surgery is an advanced, minimally invasive procedure that uses robotic-assisted technology to enhance the precision of knee joint replacement. This approach offers improved alignment, faster recovery, and longer-lasting outcomes compared to conventional methods.`,
+  bannerImage: "/orthopaedics/robotics.jpeg",
+  description: `
+  Robotic knee replacement surgery is an advanced, minimally invasive procedure that uses robotic-assisted technology to enhance the precision of knee joint replacement. This approach offers improved alignment, faster recovery, and longer-lasting outcomes compared to conventional methods.
+  `,
+  overview: `Designed for individuals suffering from severe knee pain and mobility issues, robotic knee replacement ensures a personalised surgical plan tailored to each patient’s anatomy, helping them regain their active lifestyle with enhanced comfort and functionality.`,
 
   causes: [
     {
@@ -276,9 +278,11 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="text-2xl font-medium mb-4 text-center" />
         <p className="font-light" text="">
@@ -314,7 +318,7 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div className='space-y-4'>
+            <div className="space-y-4">
               <DataBoxes
                 title="Diagnosis"
                 text="Diagnosis for robotic knee replacement surgery involves a comprehensive evaluation, including:"
@@ -349,7 +353,7 @@ function GeneralSurgery() {
         />
         <p
           className="font-light"
-          dangerouslySetInnerHTML={{ __html: data.DataSurgery.description }}
+          dangerouslySetInnerHTML={{__html: data.DataSurgery.description}}
         />
         <div>
           {/* First two items */}
@@ -377,7 +381,10 @@ function GeneralSurgery() {
           </div>
         </div>
         <div className="py-12 space-y-8">
-          <H2 title="Benefits of Robotic Knee Replacement" className="text-2xl font-medium mb-4 text-center"/>
+          <H2
+            title="Benefits of Robotic Knee Replacement"
+            className="text-2xl font-medium mb-4 text-center"
+          />
           <div className="flex justify-center items-center gap-6">
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
@@ -405,7 +412,10 @@ function GeneralSurgery() {
           </div>
         </div>
         <div className="space-y-4">
-          <H2 title="When to Consider Robotic Knee Replacement?" className="text-2xl font-medium mb-4 text-center"/>
+          <H2
+            title="When to Consider Robotic Knee Replacement?"
+            className="text-2xl font-medium mb-4 text-center"
+          />
           <p className="font-light text-center">
             Consult a doctor if you experience:
           </p>

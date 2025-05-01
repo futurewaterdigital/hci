@@ -1,16 +1,15 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from "@/components/ui/IssuesLinks"
-
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Spinal Disorders",
@@ -103,7 +102,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      The recovery from an acetabular fracture depends on the severity of the injury, patient age, and adherence to rehabilitation protocols. While some individuals regain normal hip function, others may experience long-term limitations or chronic pain. Physical therapy plays a crucial role in restoring movement and strength, with full recovery often taking between 6 to 12 months. Early intervention and proper management can improve outcomes, helping patients return to everyday activities safely and effectively.
+      Spinal disorders can significantly impact an individual's daily life and overall health. Early diagnosis and a comprehensive treatment plan are crucial for effective management and improving quality of life. With advancements in medical technology and rehabilitation strategies, many individuals with spinal disorders can achieve symptom relief and regain function, allowing them to return to their normal activities. Regular follow-up care and adherence to treatment recommendations are vital for optimizing recovery and preventing future complications.
           `,
     },
   ],
@@ -181,7 +180,10 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         <H2
           title="Causes of Spinal Disorders"
@@ -215,10 +217,10 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div className='space-y-4'>
+            <div className="space-y-4">
               <DataBoxes
                 title="Diagnosis"
-                text="Diagnosis for robotic knee replacement surgery involves a comprehensive evaluation, including:"
+                text="Diagnosing spinal disorders typically involves a comprehensive evaluation, including:"
                 header=""
                 titleCss="text-black font-medium text-center text-2xl"
                 textCss="font-light py-4 min-h-[80px]"

@@ -1,5 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 
 export default function Patients() {
   return (
@@ -10,8 +10,7 @@ export default function Patients() {
           height="100%"
           viewBox="0 0 1000 1000"
           xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
+          preserveAspectRatio="none">
           <defs>
             <path
               id="wavepath"
@@ -26,21 +25,19 @@ export default function Patients() {
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:w-11/12 absolute lg:h-[30em] gap-4 lg:mt-4 p-4 lg:p-0">
         <div className="flex flex-col justify-center lg:w-11/12 xl:w-11/12 order-2 lg:order-1 ">
           <h4 className="text-3xl font-bold pb-10 font-roboto xl:text-left lg:text-left md:text-center sms:text-center xs:text-center sxs:text-center">
-            Assisting Patients{' '}
+            Assisting Patients{" "}
             <hr className="xl:mx-0 lg:mx-0 md:mx-auto sms:mx-auto sxs:mx-auto xs:mx-auto w-28 h-1 bg-[#D84498]" />
           </h4>
           <p className="font-light">
-            At HCI, we are dedicated to providing a seamless and enriching
-            experience for our patients. Our extensive network connects you with
-            top-notch service providers across India, allowing you to choose the
-            location and specialist that best suits your needs. We take care of
-            all the details, offering comprehensive logistical support for
-            travel, accommodation, and local transportation, so you can focus on
-            your health and recovery. Additionally, we ensure you receive
-            ongoing support through follow-up care and monitoring
-            post-treatment. With HCI, your journey into medical tourism is not
-            just a process; it’s a personalized experience designed to
-            prioritize your comfort and well-being every step of the way.
+            Patients can benefit from our vast, proven ecosystem to connect with
+            service providers in various locations across India. They can choose
+            the location and the specialist they wish to receive their treatment
+            from. Further, we provide logistical support including travel,
+            accommodation, and local transportation assistance. The patient is
+            also offered support in areas such as follow-up care including
+            post-treatment and monitoring. We are committed to making medical
+            tourism a hassle-free and positive experience for all stakeholders
+            concerned.
           </p>
         </div>
         <div className="flex justify-center items-center relative order-1 lg:order-2">
@@ -57,5 +54,5 @@ export default function Patients() {
         </div>
       </div>
     </div>
-  )
+  );
 }

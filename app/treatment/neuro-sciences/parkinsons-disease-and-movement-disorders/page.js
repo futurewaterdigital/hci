@@ -1,20 +1,20 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from '@/components/ui/IssuesLinks'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: `Parkinson's Disease and Movement Disorders`,
-  bannerImage: '/neuro-sciences/parkinson-disease-movement-disorders.png',
-  description: `Parkinson&apoo;s Disease (PD) and other movement disorders are neurological conditions that affect the brain's ability to control movement. Parkinson’s Disease is a progressive disorder that leads to tremors, stiffness, and difficulty with balance and coordination. Movement disorders also include conditions such as dystonia, tremor, and ataxia, which can severely impact an individual’s quality of life. India is increasingly recognized as a destination for world-class treatment of Parkinson’s and movement disorders, offering access to expert neurologists and advanced therapeutic options.`,
+  bannerImage: "/neuro-sciences/parkinson-disease-movement-disorders.png",
+  description: `Parkinson's Disease (PD) and other movement disorders are neurological conditions that affect the brain's ability to control movement. Parkinson’s Disease is a progressive disorder that leads to tremors, stiffness, and difficulty with balance and coordination. Movement disorders also include conditions such as dystonia, tremor, and ataxia, which can severely impact an individual’s quality of life. India is increasingly recognized as a destination for world-class treatment of Parkinson’s and movement disorders, offering access to expert neurologists and advanced therapeutic options.`,
   overview: ``,
 
   section_1: [
@@ -31,7 +31,7 @@ const data = {
     {
       title: "Environmental Triggers",
       description:
-        'Exposure to toxins like pesticides or heavy metals may increase the risk of developing Parkinson&apos;s Disease.',
+        "Exposure to toxins like pesticides or heavy metals may increase the risk of developing Parkinson&apos;s Disease.",
     },
     {
       title: "Medications",
@@ -238,13 +238,13 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
-        <p className="text-start font-light" >{data.description}</p>
+        <p className="text-start font-light">{data.description}</p>
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
-          The exact cause of Parkinson&apos;s Disease is still unknown, but various
-          factors may contribute to its development. Other movement disorders
-          may also have different origins. Common causes include:
+          The exact cause of Parkinson&apos;s Disease is still unknown, but
+          various factors may contribute to its development. Other movement
+          disorders may also have different origins. Common causes include:
         </p>
         {/* <H2 text="Types" textClass="text-2xl font-semibold mb-4 text-center" />
         <p className="font-light" text="">
@@ -275,7 +275,7 @@ function GeneralSurgery() {
             <div>
               <DataBoxes
                 title="Symptoms"
-                text="Symptoms of Parkinson&apos;s Disease and other movement disorders vary but generally include:"
+                text="Symptoms of Parkinson's Disease and other movement disorders vary but generally include:"
                 titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 header=""
                 textCss="font-light py-4"
@@ -284,10 +284,10 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div className='space-y-6'>
+            <div className="space-y-6">
               <DataBoxes
                 title="Diagnosis"
-                text="Diagnosing Parkinson&apos;s Disease and movement disorders involves a detailed examination of the patient&apos;s symptoms, medical history, and neurological testing. Common diagnostic methods include:         "
+                text="Diagnosing Parkinson's Disease and movement disorders involves a detailed examination of the patient's symptoms, medical history, and neurological testing. Common diagnostic methods include:         "
                 header=""
                 titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 textCss="font-light py-4"
@@ -299,7 +299,10 @@ function GeneralSurgery() {
           </div>
         </div>
         <div>
-          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
+          <H2
+            title="Treatment"
+            className="font-medium mb-4 text-center text-2xl"
+          />
 
           <p className="font-light">
             While there is no cure for Parkinson&apos;s Disease or most movement
@@ -311,7 +314,6 @@ function GeneralSurgery() {
             data={data.complications}
           />
         </div>
-       
 
         <Conclusion data={data.conclusion} />
         <FooterLinks head={data.title} />

@@ -7,6 +7,7 @@ import Conclusion from "@/components/cardiacComponents/Conclusion";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
+import IssuesLink from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Bladder Cancer",
@@ -62,27 +63,32 @@ const data = {
           title: "Blood in Urine",
           description:
             "Blood in urine (hematuria), which may appear pink, red, or cola-colored.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Frequent Urination",
           description: "Needing to urinate more often than usual.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Pain or Burning During Urination",
           description: "Discomfort while passing urine.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Pain in Back Pain",
           description: "Pain may be felt in the lower region of your back.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Urinary Incontinence",
           description: "Difficulty controlling the flow of urine.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
         },
       ],
     },
@@ -97,25 +103,29 @@ const data = {
           title: "Cystoscopy",
           description:
             "A thin tube with a camera is inserted through the urethra to examine the bladder.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciPrimary text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Biopsy",
           description:
             "A small sample of tissue is removed during cystoscopy for examination.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciPrimary text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Imaging Tests",
           description:
             "CT scans and ultrasounds help assess the extent of the disease.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciPrimary text-white p-2 rounded mb-2 h-20 font-light",
         },
         {
           title: "Urine Cytology",
           description:
             "Examination of urine for cancer cells under a microscope.",
-          className: "bg-hciSecondary text-white p-2 rounded mb-2 h-20 font-light",
+          className:
+            "bg-hciPrimary text-white p-2 rounded mb-2 h-20 font-light",
         },
       ],
     },
@@ -215,112 +225,127 @@ const data = {
 function BladderCancer() {
   return (
     <>
-    <Banner image="/oncology/bladder-cancer.png" />
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+      <Banner image="/oncology/bladder-cancer.png" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <H1 title={data.title} />
-      <div className="mt-6">
-        <p className="text-gray-600 font-light">{data.description}</p>
-      </div>
-
-      {/* Causes Section */}
-      <div className="mt-12">
-        <H2 title={data.causes[0].heading} className="font-medium mb-4 text-2xl" />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.causes[0].description}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data.causes[0].items.map((cause, idx) => (
-            <div key={idx} className={cause.className}>
-              <H3 title={cause.title} className="font-medium mb-2 text-lg" />
-              <p className="font-light">{cause.description}</p>
-            </div>
-          ))}
+        <div className="mt-6">
+          <p className="text-gray-600 font-light">{data.description}</p>
         </div>
-      </div>
 
-     <KnowMore title={data.title} />
-
-      {/* Symptoms Section */}
-      <div className="mt-12 ">
-        <H2 title={data.symptoms[0].heading} className="font-medium mb-4 text-2xl" />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.symptoms[0].description}
-        </p>
-        <div className="grid grid-cols-2 gap-2">
-          {data.symptoms[0].items.map((symptom, idx) => (
-            <div key={idx} className={symptom.className}>
-              <strong>{symptom.title}:</strong> {symptom.description}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Diagnosis Section */}
-      <div className="mt-12">
-        <H2 title={data.diagnosis[0].heading} className="font-medium mb-4 text-2xl" />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.diagnosis[0].description}
-        </p>
-        <div className="grid grid-cols-2 gap-2">
-          {data.diagnosis[0].items.map((test, idx) => (
-            <div key={idx} className={test.className}>
-              <strong>{test.title}:</strong> {test.description}
-            </div>
-          ))}
-        </div>
-      </div>
-
-    <KnowMore title={data.title} />
-
-      {/* Treatment Section */}
-      <div className="mt-12">
-        <H2 title={data.treatments[0].heading} className="font-medium mb-6 text-2xl" />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.treatments[0].description}
-        </p>
-        <div className="border border-pink-200 rounded-lg p-6">
-          <div className="space-y-6">
-            {data.treatments[0].items.map((treatment, idx) => (
-              <div key={idx} className="space-y-2">
-                <H3
-                  title={treatment.title}
-                  className="text-lg font-medium text-hciPrimary"
-                />
-                {treatment.items ? (
-                  <div className="space-y-2 pl-4">
-                    {treatment.items.map((item, i) => (
-                      <div key={i} className="font-light">
-                        <span className="font-medium text-hciSecondary">
-                          {item.name}:
-                        </span>{" "}
-                        {item.description}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-gray-600 font-light">
-                    {treatment.description}
-                  </p>
-                )}
+        {/* Causes Section */}
+        <div className="mt-12">
+          <H2
+            title={data.causes[0].heading}
+            className="font-medium mb-4 text-2xl"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.causes[0].description}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {data.causes[0].items.map((cause, idx) => (
+              <div key={idx} className={cause.className}>
+                <H3 title={cause.title} className="font-medium mb-2 text-lg" />
+                <p className="font-light">{cause.description}</p>
               </div>
             ))}
           </div>
         </div>
+
+        <KnowMore title={data.title} />
+
+        {/* Symptoms Section */}
+        <div className="mt-12 ">
+          <H2
+            title={data.symptoms[0].heading}
+            className="font-medium mb-4 text-2xl"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.symptoms[0].description}
+          </p>
+          <div className="grid grid-cols-2 gap-2">
+            {data.symptoms[0].items.map((symptom, idx) => (
+              <div key={idx} className={symptom.className}>
+                <strong>{symptom.title}:</strong> {symptom.description}
+              </div>
+            ))}
+          </div>
+          <KnowMore title={data.title} />
+        </div>
+
+        {/* Diagnosis Section */}
+        <div className="mt-12">
+          <H2
+            title={data.diagnosis[0].heading}
+            className="font-medium mb-4 text-2xl"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.diagnosis[0].description}
+          </p>
+          <div className="grid grid-cols-2 gap-2">
+            {data.diagnosis[0].items.map((test, idx) => (
+              <div key={idx} className={test.className}>
+                <strong>{test.title}:</strong> {test.description}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <IssuesLink head={data.title} />
+
+        {/* Treatment Section */}
+        <div className="mt-12">
+          <H2
+            title={data.treatments[0].heading}
+            className="font-medium mb-6 text-2xl"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.treatments[0].description}
+          </p>
+          <div className="border border-pink-200 rounded-lg p-6">
+            <div className="space-y-6">
+              {data.treatments[0].items.map((treatment, idx) => (
+                <div key={idx} className="space-y-2">
+                  <H3
+                    title={treatment.title}
+                    className="text-lg font-medium text-hciPrimary"
+                  />
+                  {treatment.items ? (
+                    <div className="space-y-2 pl-4">
+                      {treatment.items.map((item, i) => (
+                        <div key={i} className="font-light">
+                          <span className="font-medium text-hciSecondary">
+                            {item.name}:
+                          </span>{" "}
+                          {item.description}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-gray-600 font-light">
+                      {treatment.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Follow-up Care */}
+        <div className="mt-12">
+          <H2
+            title={data.followUp.heading}
+            className="font-medium mb-4 text-2xl"
+          />
+          <p className="text-gray-600 font-light">
+            {data.followUp.description}
+          </p>
+        </div>
+
+        <Conclusion data={data.conclusion} />
+        <FooterLinks head={data.title} />
+        <BookButton />
       </div>
-
-      {/* Follow-up Care */}
-      <div className="mt-12">
-        <H2 title={data.followUp.heading} className="font-medium mb-4 text-2xl" />
-        <p className="text-gray-600 font-light">{data.followUp.description}</p>
-      </div>
-
-  <Conclusion data={data.conclusion} />
-  <FooterLinks head={data.title} />
-  <BookButton />
-
-  
-    </div>
     </>
   );
 }

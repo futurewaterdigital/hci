@@ -14,10 +14,10 @@ const data = {
     "Advanced cancer refers to a cancer that has spread beyond its primary site to other organs (metastasis), or a cancer that has recurred after initial treatment. Breast cancer, along with cancers of the lung, liver, and cervix, are among the most common cancers diagnosed at advanced stages in India.",
 
   early_symptoms: [
-    { description: "Localized Symptoms" },
-    { description: "Pain" },
-    { description: "Fatigue, Weight Loss and Weakness" },
-    { description: "Abnormal Bleeding" },
+    {description: "Localized Symptoms"},
+    {description: "Pain"},
+    {description: "Fatigue, Weight Loss and Weakness"},
+    {description: "Abnormal Bleeding"},
   ],
 
   common_cancers: [
@@ -32,14 +32,14 @@ const data = {
         "Advanced colorectal cancer often spreads to the liver or lungs requiring approach to target specific mutations including KRAS, NRAS and BRAF. We utilize innovative surgical and radiation techniques for optimal outcomes.",
     },
     {
-      title: "Ovarian Cancer",
+      title: "Cervical Cancer",
       description:
-        "Commonly discovered through screening and considered one of the most challenging to treat due to recurrence and chemotherapy resistance. Our approach combines cytoreductive surgery with targeted therapy for platinum-resistant cases.",
+        "While it is preventable through screening and vaccination, cervical cancer is often diagnosed late due to limited awareness of screening methods (e.g., Pap smear).",
     },
     {
-      title: "Lung and Head Cancers",
+      title: "Head and Neck Cancers",
       description:
-        "Often detected in later stages with poor prognosis, we conduct extensive molecular testing for EGFR, ALK, ROS1 and PD-L1 to determine targeted and immunotherapy approaches for personalized treatment.",
+        "These cancers, particularly oral cancer linked to tobacco and betel nut use, are also frequently diagnosed at advanced stages",
     },
   ],
 
@@ -66,9 +66,9 @@ const data = {
       heading: "Tumor Characteristics",
       description: "Aggressive tumor biology with rapid cellular division",
       aneurysmSymptoms: [
-        { description: "High-grade histology" },
-        { description: "Rapid growth rate" },
-        { description: "Extensive local invasion" },
+        {description: "High-grade histology"},
+        {description: "Rapid growth rate"},
+        {description: "Extensive local invasion"},
       ],
     },
     {
@@ -76,9 +76,9 @@ const data = {
       description:
         "Cancer cells that develop mechanisms to evade standard treatments",
       aneurysmSymptoms: [
-        { description: "Drug resistance mutations" },
-        { description: "Adaptive cellular mechanisms" },
-        { description: "Multiple pathway activation" },
+        {description: "Drug resistance mutations"},
+        {description: "Adaptive cellular mechanisms"},
+        {description: "Multiple pathway activation"},
       ],
     },
     {
@@ -86,9 +86,9 @@ const data = {
       description:
         "Detection after cancer has already metastasized to other organs",
       aneurysmSymptoms: [
-        { description: "Multiple organ involvement" },
-        { description: "Complex symptom management" },
-        { description: "Limited treatment options" },
+        {description: "Multiple organ involvement"},
+        {description: "Complex symptom management"},
+        {description: "Limited treatment options"},
       ],
     },
     {
@@ -96,16 +96,16 @@ const data = {
       description:
         "Inherited gene mutations that predispose to aggressive cancer forms",
       aneurysmSymptoms: [
-        { description: "BRCA mutations" },
-        { description: "Lynch syndrome" },
-        { description: "P53 mutations" },
+        {description: "BRCA mutations"},
+        {description: "Lynch syndrome"},
+        {description: "P53 mutations"},
       ],
     },
   ],
 
   treatments: [
     {
-      heading: "Common Cancers and their Recurrence in India",
+      heading: "Common Cancers and their Recurrence",
       aneurysmSymptoms: [
         {
           title: "Breast Cancer",
@@ -131,9 +131,8 @@ const data = {
     },
     {
       heading:
-        "Treatment of Recurrent Cancers in India include all the modalities of the treatment such as",
-      description:
-        "Radiation therapy uses high-energy rays to target and destroy cancer cells. It may be employed after surgery to eliminate any remaining cancer cells, especially if there is a high risk of recurrence.",
+        "Treatment of Recurrent Cancers include all the modalities of the treatment such as",
+      description: "",
       aneurysmSymptoms: [
         {
           title: "Surgery",
@@ -163,7 +162,7 @@ const data = {
       ],
     },
     {
-      heading: "Barriers to Managing Advanced and Recurrent Cancers in India",
+      heading: "Barriers to Managing Advanced and Recurrent Cancers",
       aneurysmSymptoms: [
         {
           title: "",
@@ -226,14 +225,14 @@ const data = {
           description:
             "Used for isolated recurrences that can be surgically addressed",
         },
-        { description: "Often combined with intraoperative radiation therapy" },
+        {description: "Often combined with intraoperative radiation therapy"},
       ],
     },
     {
       heading: "Cytoreductive Surgery",
       description: "Removal of as much tumor burden as possible",
       aneurysmSymptoms: [
-        { description: "Particularly beneficial in peritoneal carcinomatosis" },
+        {description: "Particularly beneficial in peritoneal carcinomatosis"},
         {
           description:
             "May be combined with HIPEC (Hyperthermic Intraperitoneal Chemotherapy)",
@@ -248,7 +247,7 @@ const data = {
           description:
             "Faster recovery and reduced postoperative complications",
         },
-        { description: "Enhanced precision in difficult anatomical locations" },
+        {description: "Enhanced precision in difficult anatomical locations"},
       ],
     },
   ],
@@ -272,7 +271,7 @@ const data = {
       heading: "Access to Healthcare",
       description: "Uneven distribution of cancer centers across India",
       aneurysmSymptoms: [
-        { description: "Concentration of specialized centers in major cities" },
+        {description: "Concentration of specialized centers in major cities"},
         {
           description:
             "Transportation and accommodation challenges for rural patients",
@@ -283,7 +282,7 @@ const data = {
       heading: "Financial Considerations",
       description: "High cost of advanced cancer treatments",
       aneurysmSymptoms: [
-        { description: "Limited insurance coverage for novel therapies" },
+        {description: "Limited insurance coverage for novel therapies"},
         {
           description:
             "Catastrophic health expenditure affecting treatment completion",
@@ -298,7 +297,7 @@ const data = {
           description:
             "Preference for alternative medicines delaying conventional treatment",
         },
-        { description: "Fatalistic attitudes toward cancer diagnosis" },
+        {description: "Fatalistic attitudes toward cancer diagnosis"},
       ],
     },
   ],
@@ -326,12 +325,12 @@ const data = {
       heading: "Advanced Imaging",
       description: "High-resolution scanning technologies",
       aneurysmSymptoms: [
-        { description: "PET-CT for metabolic activity assessment" },
+        {description: "PET-CT for metabolic activity assessment"},
         {
           description:
             "MRI with contrast enhancement for soft tissue evaluation",
         },
-        { description: "Whole-body imaging for metastasis detection" },
+        {description: "Whole-body imaging for metastasis detection"},
       ],
     },
     {
@@ -342,7 +341,7 @@ const data = {
           description:
             "Next-generation sequencing for comprehensive genomic profiling",
         },
-        { description: "Liquid biopsies to detect circulating tumor DNA" },
+        {description: "Liquid biopsies to detect circulating tumor DNA"},
         {
           description:
             "Expression profiling for personalized treatment selection",
@@ -353,20 +352,20 @@ const data = {
       heading: "Tissue Sampling",
       description: "Obtaining specimens for analysis",
       aneurysmSymptoms: [
-        { description: "Image-guided biopsies for difficult-to-access tumors" },
-        { description: "Endoscopic ultrasound-guided fine needle aspiration" },
-        { description: "Sentinel node evaluation for recurrent disease" },
+        {description: "Image-guided biopsies for difficult-to-access tumors"},
+        {description: "Endoscopic ultrasound-guided fine needle aspiration"},
+        {description: "Sentinel node evaluation for recurrent disease"},
       ],
     },
   ],
 
   best_hospitals: [
-    { city: "Delhi", url: "/best-cancer-hospital-delhi" },
-    { city: "Mumbai", url: "/best-cancer-hospital-mumbai" },
-    { city: "Bangalore", url: "/best-cancer-hospital-bangalore" },
-    { city: "Chennai", url: "/best-cancer-hospital-chennai" },
-    { city: "Hyderabad", url: "/best-cancer-hospital-hyderabad" },
-    { city: "Pune", url: "/best-cancer-hospital-pune" },
+    {city: "Delhi", url: "/best-cancer-hospital-delhi"},
+    {city: "Mumbai", url: "/best-cancer-hospital-mumbai"},
+    {city: "Bangalore", url: "/best-cancer-hospital-bangalore"},
+    {city: "Chennai", url: "/best-cancer-hospital-chennai"},
+    {city: "Hyderabad", url: "/best-cancer-hospital-hyderabad"},
+    {city: "Pune", url: "/best-cancer-hospital-pune"},
   ],
 
   conclusion: [
@@ -380,127 +379,177 @@ const data = {
 function AdvancedRecurrentCancers() {
   return (
     <>
-    <Banner image={data.bannerImage} />
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <H1 title={data.title} />
-        <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-          {data.description}{" "}
-        </p>
+      <Banner image={data.bannerImage} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
+          <H1 title={data.title} />
+          <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
+            {data.description}{" "}
+          </p>
 
-        <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-          <strong className="font-medium"> Advanced </strong>cancer refers to
-          a cancer that has spread beyond its primary site to other organs
-          (metastasis), or a cancer that has recurred after initial treatment. 
-          <strong className="font-medium"> Breast cancer</strong>, along with
-          cancers of the <strong className="font-medium"> lung, liver</strong>
-          , and <strong className="font-medium"> cervix</strong>, are among
-          the most common cancers diagnosed at advanced stages in India.
-        </p>
+          <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
+            <strong className="font-medium"> Advanced </strong>cancer refers to
+            a cancer that has spread beyond its primary site to other organs
+            (metastasis), or a cancer that has recurred after initial
+            treatment. 
+            <strong className="font-medium"> Breast cancer</strong>, along with
+            cancers of the <strong className="font-medium"> lung, liver</strong>
+            , and <strong className="font-medium"> cervix</strong>, are among
+            the most common cancers diagnosed at advanced stages in India.
+          </p>
 
-        <H2
-          title="Common Types of Advanced Cancers in India:"
-          className="text-xl font-medium mb-4"
-        />
-        <div className="space-y-2">
-          {data.common_cancers.map((cause, idx) => (
-            <div
-              key={idx}
-              className="bg-[#0E56A0] text-white font-light py-6 px-4 rounded"
-            >
-              <div className="font-medium pr-1">{cause.title}</div>
-              {cause.description}
-            </div>
-          ))}
-        </div>
-
-        <H2
-          title="Treatments for Advanced Cancers"
-          className="text-center text-[#D84498] font-medium mb-4 text-2xl"
-        />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            
-          {data.treatment_options.map((cause, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 hover:shadow-lg transition-shadow rounded-lg p-4 shadow-sm"
-            >
-              <h3 className="font-medium text-[#0E56A0] mb-2 text-lg">
-                {cause.heading}
-              </h3>
-              <p className="text-gray-700 font-light">
-                {cause.description}
+          <div className="flex gap-4">
+            <div>
+              <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-medium">
+                The causes and challenges faced for such cancers are primarily
+                due to the following reasons:
               </p>
-            </div>
-          ))}
-        </div>
-       <KnowMore title={data.title} />
-
-
-        <H2
-          title="Recurrent Cancers in India"
-          className="text-xl text-center text-black font-medium mb-4"
-        />
-
-        <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-          A recurrent cancer occurs when cancer returns after a period of
-          remission following initial treatment. In India, recurrent cancers are
-          often diagnosed in patients who initially received inadequate or
-          delayed treatment, which can lead to higher rates of recurrence.
-        </p>
-
-        <H2
-          title="Common risk factors for recurrence"
-          className="text-xl text-center text-black font-medium mb-4"
-        />
-
-        <div className="space-y-2">
-          {data.risk_factors.map((cause, idx) => (
-            <div
-              key={idx}
-              className="bg-[#D84498] text-white font-light py-4 px-4 rounded"
-            >
-              {cause.description}
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 gap-6">
-          {data.treatments.map((treatment, index) => (
-            <>
-              <div
-                key={index}
-                className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
-                <h2 className="text-xl font-medium text-center mb-4 text-hciPrimary">
-                  {treatment.heading}
-                </h2>
-                {treatment.description && (
-                  <p className="text-gray-600 mb-4 font-light">
-                    {treatment.description}
-                  </p>
-                )}
-                <div className="space-y-4">
-                  {treatment?.aneurysmSymptoms?.map((item, idx) => (
-                    <div key={idx} className="text-gray-600 font-light">
-                      <span className="text-black font-medium">
-                        {item.title && <strong>{item.title}: </strong>}
-                      </span>
-                      {item.description}
-                    </div>
-                  ))}
+              <div className="space-y-2 mt-4">
+                <div className="text-gray-600 font-light flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
+                  <span>Lack of Awareness</span>
+                </div>
+                <div className="text-gray-600 font-light flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
+                  <span>Late Diagnosis</span>
+                </div>
+                <div className="text-gray-600 font-light flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
+                  <span>Access to Healthcare</span>
+                </div>
+                <div className="text-gray-600 font-light flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
+                  <span>Access to Newer Technologies and Molecules</span>
+                </div>
+                <div className="text-gray-600 font-light flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
+                  <span>Economic Barriers</span>
                 </div>
               </div>
-             <KnowMore title={data.title} />
-            </>
-          ))}
+            </div>
+            <img
+              src="/oncology/AdvancedRecurrent2.png"
+              alt="advanced-recurrent-cancers"
+            />
+          </div>
+
+          <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
+            A significant percentage of breast cancers in India are diagnosed at
+            advanced stages (III or IV), often due to limited awareness and
+            delayed healthcare seeking, particularly in rural areas. This is
+            primarily due to women not having access to regular screening, and
+            breast cancer awareness is still low in many regions, leading to
+            late-stage diagnoses.
+          </p>
+
+          <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
+            Treatment for an advanced cancer requires access to targeted
+            therapies, chemotherapy, radiation and immunotherapies. This may be
+            another challenge in cities which are beyond Tier 1 cities.
+          </p>
+
+          <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
+            Treatment costs for an advanced cancer (including chemotherapy,
+            targeted therapies, and immunotherapy) can be prohibitive for many
+            families, resulting in discontinuation or delays in treatment.
+          </p>
+          <KnowMore title={data.title} />
+
+          <H2
+            title="Common Types of Advanced Cancers:"
+            className="text-xl font-medium mb-4"
+          />
+          <div className="space-y-2">
+            {data.common_cancers.map((cause, idx) => (
+              <div
+                key={idx}
+                className="bg-[#0E56A0] text-white font-light py-6 px-4 rounded">
+                <div className="font-medium pr-1">{cause.title}</div>
+                {cause.description}
+              </div>
+            ))}
+          </div>
+
+          <H2
+            title="Treatments for Advanced Cancers"
+            className="text-center text-[#D84498] font-medium mb-4 text-2xl"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            {data.treatment_options.map((cause, index) => (
+              <div
+                key={index}
+                className="border border-gray-200 hover:shadow-lg transition-shadow rounded-lg p-4 shadow-sm">
+                <h3 className="font-medium text-[#0E56A0] mb-2 text-lg">
+                  {cause.heading}
+                </h3>
+                <p className="text-gray-700 font-light">{cause.description}</p>
+              </div>
+            ))}
+          </div>
+          <KnowMore title={data.title} />
+
+          <H2
+            title="Recurrent Cancers"
+            className="text-xl text-center text-black font-medium mb-4"
+          />
+
+          <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
+            A recurrent cancer occurs when cancer returns after a period of
+            remission following initial treatment. In India, recurrent cancers
+            are often diagnosed in patients who initially received inadequate or
+            delayed treatment, which can lead to higher rates of recurrence.
+          </p>
+
+          <H2
+            title="Common risk factors for recurrence"
+            className="text-xl text-center text-black font-medium mb-4"
+          />
+
+          <div className="space-y-2">
+            {data.risk_factors.map((cause, idx) => (
+              <div
+                key={idx}
+                className="bg-[#D84498] text-white font-light py-4 px-4 rounded">
+                {cause.description}
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 gap-6">
+            {data.treatments.map((treatment, index) => (
+              <>
+                <div
+                  key={index}
+                  className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                  <h2 className="text-xl font-medium text-center mb-4 text-hciPrimary">
+                    {treatment.heading}
+                  </h2>
+                  {treatment.description && (
+                    <p className="text-gray-600 mb-4 font-light">
+                      {treatment.description}
+                    </p>
+                  )}
+                  <div className="space-y-4">
+                    {treatment?.aneurysmSymptoms?.map((item, idx) => (
+                      <div key={idx} className="text-gray-600 font-light">
+                        <span className="text-black font-medium">
+                          {item.title && <strong>{item.title}: </strong>}
+                        </span>
+                        {item.description}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <KnowMore title={data.title} />
+              </>
+            ))}
+          </div>
+          <Conclusion data={data.conclusion} />
+          <FooterLinks head={data.title} />
+          <BookButton />
         </div>
-        <Conclusion data={data.conclusion} />
-        <FooterLinks head={data.title} />
-        <BookButton />
       </div>
-    </div>
     </>
   );
 }

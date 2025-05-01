@@ -1,16 +1,16 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
 
-import KnowMore from '@/components/ui/KnowMore'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
-import H1 from '@/components/ui/h1'
-import IssuesLinks from "@/components/ui/IssuesLinks"
+import KnowMore from "@/components/ui/KnowMore";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import Conclusion from "@/components/cardiacComponents/Conclusion";
+import TextComponent from "@/components/Common/TextComponent";
+import H1 from "@/components/ui/h1";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
   title: "Acetabular Fractures",
@@ -180,7 +180,10 @@ function GeneralSurgery() {
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
-        <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
+        <p
+          dangerouslySetInnerHTML={{__html: data.description}}
+          className="text-start font-light"
+        />
         <p className="font-light">{data.overview}</p>
         <H2
           title="Causes of Acetabular Fractures"
@@ -219,7 +222,7 @@ function GeneralSurgery() {
               />
               <KnowMore title={data.title} />
             </div>
-            <div className='space-y-4'>
+            <div className="space-y-4">
               <DataBoxes
                 title="Diagnosis"
                 text="Proper diagnosis is essential to determine the severity and pattern of the fracture. Healthcare providers typically perform the following:"
@@ -243,16 +246,16 @@ function GeneralSurgery() {
             The treatment approach depends on the severity and stability of the
             fracture.
           </p>
-          <DataLists
-            desc="If the fracture is unstable or involves displaced bone fragments, surgery is typically required:"
-            data={data.complications}
-          />
+          <DataLists desc="" data={data.complications} />
         </div>
         <div className="space-y-8">
           <div>
-          <H2 title="When to Consider Robotic Knee Replacement?" className="text-2xl font-medium mb-4 text-center"/>
-          <p className="font-light text-center">
-            Consult a doctor if you experience:
+            <H2
+              title="Complications of Acetabular Fractures"
+              className="text-2xl font-medium mb-4 text-center"
+            />
+            <p className="font-light text-center">
+              Consult a doctor if you experience:
             </p>
           </div>
           <div className="space-y-4">

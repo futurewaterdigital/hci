@@ -1,280 +1,280 @@
- 'use client'
-import React, { useState } from 'react'
-import { medicalConditions, countryCode } from '@/utils/data' // Assuming you've updated the data to include hospital and doctor mappings
-import { FaFileAlt } from 'react-icons/fa'
-import axios from 'axios'
+"use client";
+import React, {useState} from "react";
+import {medicalConditions, countryCode} from "@/utils/data"; // Assuming you've updated the data to include hospital and doctor mappings
+import {FaFileAlt} from "react-icons/fa";
+import axios from "axios";
 
 function ConsultantForm() {
-  const [yourName, setYourName] = useState('')
-  const [yourPhone, setYourPhone] = useState('')
-  const [yourEmail, setYourEmail] = useState('')
-  const [medicalCondition, setMedicalCondition] = useState('')
-  const [hospital, setHospital] = useState('')
-  const [doctor, setDoctor] = useState('')
-  const [yourFile, setYourFile] = useState(null)
-  const [additionalMessage, setAdditionalMessage] = useState('')
-  const [errors, setErrors] = useState({})
-  const [post, setPost] = useState('')
-  const [fileName, setFileName] = useState('')
-  const [hospitalOptions, setHospitalOptions] = useState([])
-  const [doctorOptions, setDoctorOptions] = useState([])
+  const [yourName, setYourName] = useState("");
+  const [yourPhone, setYourPhone] = useState("");
+  const [yourEmail, setYourEmail] = useState("");
+  const [medicalCondition, setMedicalCondition] = useState("");
+  const [hospital, setHospital] = useState("");
+  const [doctor, setDoctor] = useState("");
+  const [yourFile, setYourFile] = useState(null);
+  const [additionalMessage, setAdditionalMessage] = useState("");
+  const [errors, setErrors] = useState({});
+  const [post, setPost] = useState("");
+  const [fileName, setFileName] = useState("");
+  const [hospitalOptions, setHospitalOptions] = useState([]);
+  const [doctorOptions, setDoctorOptions] = useState([]);
 
-  const [filteredCountryCodes, setFilteredCountryCodes] = useState([])
-  const [selectedCode, setSelectedCode] = useState('+91')
+  const [filteredCountryCodes, setFilteredCountryCodes] = useState([]);
+  const [selectedCode, setSelectedCode] = useState("+91");
 
   // Handle input change for filtering country codes
   const handleCodeInputChange = (e) => {
-    const input = e.target.value.toLowerCase()
+    const input = e.target.value.toLowerCase();
     const filtered = countryCode.filter(
       (country) =>
         country.name.toLowerCase().includes(input) ||
         country.code.includes(input)
-    )
-    setFilteredCountryCodes(filtered)
-    setSelectedCode(input)
-  }
+    );
+    setFilteredCountryCodes(filtered);
+    setSelectedCode(input);
+  };
 
   // Handle selecting a country from the list
   const handleCountrySelect = (code) => {
-    setSelectedCode(code)
-    setFilteredCountryCodes([]) // Hide the dropdown after selection
-  }
+    setSelectedCode(code);
+    setFilteredCountryCodes([]); // Hide the dropdown after selection
+  };
 
   // Regex for email validation
-  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
   const customErrors = {
-    field: 'yourEmail',
-    message: 'Please enter a valid email address.',
-  }
+    field: "yourEmail",
+    message: "Please enter a valid email address.",
+  };
   const customDomainErrors = {
-    field: 'yourEmail',
-    message: 'This email domain is not allowed.',
-  }
+    field: "yourEmail",
+    message: "This email domain is not allowed.",
+  };
   const notAllowedDomains = [
-    'test.com',
-    'sample.com',
-    'example.com',
-    'testing.com',
-    'gmail.co',
-    'gmail.c',
-    'gmail.',
-  ]
+    "test.com",
+    "sample.com",
+    "example.com",
+    "testing.com",
+    "gmail.co",
+    "gmail.c",
+    "gmail.",
+  ];
 
   const isValidEmail = (email) => {
-    const [, domain] = email.split('@')
-    return !notAllowedDomains.includes(domain)
-  }
+    const [, domain] = email.split("@");
+    return !notAllowedDomains.includes(domain);
+  };
 
   // Regex for name and phone number validation
-  const nameRegex = /^[a-zA-Z\s]*$/
+  const nameRegex = /^[a-zA-Z\s]*$/;
   const nameErrors = {
-    field: 'yourName',
-    message: 'Invalid character in name',
-  }
+    field: "yourName",
+    message: "Invalid character in name",
+  };
 
-  const numRegex = /^[0-9]{1,10}$/ // Adjusted to allow up to 10 digits
+  const numRegex = /^[0-9]{1,10}$/; // Adjusted to allow up to 10 digits
   const numErrors = {
-    field: 'yourPhone',
-    message: 'Please enter a valid phone number (up to 10 digits).',
-  }
+    field: "yourPhone",
+    message: "Please enter a valid phone number (up to 10 digits).",
+  };
 
   // Validate the medical condition, hospital, and doctor fields
   const selectErrors = {
-    field: 'medicalCondition',
-    message: 'Please select a speciality.',
-  }
+    field: "medicalCondition",
+    message: "Please select a speciality.",
+  };
   const hospitalErrors = {
-    field: 'hospital',
-    message: 'Please select a hospital.',
-  }
+    field: "hospital",
+    message: "Please select a hospital.",
+  };
   const doctorErrors = {
-    field: 'doctor',
-    message: 'Please select a doctor.',
-  }
+    field: "doctor",
+    message: "Please select a doctor.",
+  };
 
   // Validate file input
   const fileErrors = {
-    field: 'yourFile',
+    field: "yourFile",
     message:
-      'Please upload a valid file (PDF, JPG, JPEG,PNG) not exceeding 4MB.',
-  }
+      "Please upload a valid file (PDF, JPG, JPEG,PNG) not exceeding 4MB.",
+  };
 
   const handleTextChange = (e) => {
-    const { name, value } = e.target
+    const {name, value} = e.target;
 
-    if (name === 'yourName') {
+    if (name === "yourName") {
       if (!nameRegex.test(value)) {
-        setErrors({ [name]: nameErrors.message })
+        setErrors({[name]: nameErrors.message});
       } else {
-        setErrors({})
-        setYourName(value)
+        setErrors({});
+        setYourName(value);
       }
     }
 
-    if (name === 'yourEmail') {
+    if (name === "yourEmail") {
       if (!emailRegex.test(value)) {
-        setErrors({ [name]: customErrors.message })
+        setErrors({[name]: customErrors.message});
       } else if (!isValidEmail(value)) {
-        setErrors({ [name]: customDomainErrors.message })
+        setErrors({[name]: customDomainErrors.message});
       } else {
-        setErrors({})
+        setErrors({});
       }
-      setYourEmail(value)
+      setYourEmail(value);
     }
 
-    if (name === 'yourPhone') {
+    if (name === "yourPhone") {
       if (!numRegex.test(value)) {
-        setErrors({ [name]: numErrors.message })
+        setErrors({[name]: numErrors.message});
       } else {
-        setErrors({})
-        setYourPhone(value)
+        setErrors({});
+        setYourPhone(value);
       }
     }
 
-    if (name === 'additionalMessage') {
-      setAdditionalMessage(value)
+    if (name === "additionalMessage") {
+      setAdditionalMessage(value);
     }
-  }
+  };
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0]
+    const file = e.target.files[0];
 
     if (!file) {
-      setErrors({ yourFile: 'Please select a file.' })
-      setYourFile(null)
-      return
+      setErrors({yourFile: "Please select a file."});
+      setYourFile(null);
+      return;
     }
 
-    const fileTypes = ['application/pdf', 'image/jpeg', 'image/png']
+    const fileTypes = ["application/pdf", "image/jpeg", "image/png"];
 
     if (!fileTypes.includes(file.type)) {
-      setErrors({ yourFile: 'Please select a PDF, DOC, or DOCX file.' })
-      setYourFile(null)
-      setFileName('')
-      return
+      setErrors({yourFile: "Please select a PDF, DOC, or DOCX file."});
+      setYourFile(null);
+      setFileName("");
+      return;
     }
 
     if (file.size > 4 * 1024 * 1024) {
-      setErrors({ yourFile: 'File size exceeds 4MB limit.' })
-      setYourFile(null)
-      setFileName('')
+      setErrors({yourFile: "File size exceeds 4MB limit."});
+      setYourFile(null);
+      setFileName("");
     } else {
-      setErrors({})
-      setYourFile(file)
-      setFileName(file.name)
+      setErrors({});
+      setYourFile(file);
+      setFileName(file.name);
     }
-  }
+  };
 
   // Handle change in medical condition
   const handleConditionChange = (condition) => {
-    setMedicalCondition(condition)
+    setMedicalCondition(condition);
 
     const selectedCondition = medicalConditions.find(
       (item) => item.condition === condition
-    )
+    );
 
     if (selectedCondition) {
-      setHospitalOptions(selectedCondition.hospitals.map((h) => h.name))
-      setDoctorOptions([]) // Reset doctors when condition changes
-      setHospital('')
-      setDoctor('')
+      setHospitalOptions(selectedCondition.hospitals.map((h) => h.name));
+      setDoctorOptions([]); // Reset doctors when condition changes
+      setHospital("");
+      setDoctor("");
     } else {
-      setHospitalOptions([])
-      setDoctorOptions([])
+      setHospitalOptions([]);
+      setDoctorOptions([]);
     }
-  }
+  };
 
   // Handle change in hospital
   const handleHospitalChange = (selectedHospital) => {
-    setHospital(selectedHospital)
+    setHospital(selectedHospital);
 
     const selectedCondition = medicalConditions.find(
       (item) => item.condition === medicalCondition
-    )
+    );
 
     if (selectedCondition) {
       const selectedHospitalData = selectedCondition.hospitals.find(
         (h) => h.name === selectedHospital
-      )
+      );
 
       if (selectedHospitalData) {
-        setDoctorOptions(selectedHospitalData.doctors)
+        setDoctorOptions(selectedHospitalData.doctors);
       } else {
-        setDoctorOptions([])
+        setDoctorOptions([]);
       }
     }
-  }
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const validationErrors = {}
-    if (!yourName) validationErrors.yourName = 'Name is required.'
-    if (!yourEmail) validationErrors.yourEmail = 'Email is required.'
-    if (!yourPhone) validationErrors.yourPhone = 'Phone number is required.'
+    const validationErrors = {};
+    if (!yourName) validationErrors.yourName = "Name is required.";
+    if (!yourEmail) validationErrors.yourEmail = "Email is required.";
+    if (!yourPhone) validationErrors.yourPhone = "Phone number is required.";
     if (yourPhone.length > 10)
-      validationErrors.yourPhone = 'Phone number cannot exceed 10 digits.'
+      validationErrors.yourPhone = "Phone number cannot exceed 10 digits.";
     if (!medicalCondition)
-      validationErrors.medicalCondition = selectErrors.message
-    if (!hospital) validationErrors.hospital = hospitalErrors.message
-    if (!doctor) validationErrors.doctor = doctorErrors.message
-    if (!yourFile) validationErrors.yourFile = fileErrors.message
+      validationErrors.medicalCondition = selectErrors.message;
+    if (!hospital) validationErrors.hospital = hospitalErrors.message;
+    if (!doctor) validationErrors.doctor = doctorErrors.message;
+    if (!yourFile) validationErrors.yourFile = fileErrors.message;
 
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors)
-      return
+      setErrors(validationErrors);
+      return;
     }
 
-    const formData = new FormData()
-    formData.append('yourName', yourName)
-    formData.append('yourEmail', yourEmail)
-    formData.append('yourPhone', selectedCode + '-' + yourPhone)
-    formData.append('medicalCondition', medicalCondition)
-    formData.append('hospital', hospital)
-    formData.append('doctor', doctor)
-    formData.append('additionalMessage', additionalMessage)
+    const formData = new FormData();
+    formData.append("yourName", yourName);
+    formData.append("yourEmail", yourEmail);
+    formData.append("yourPhone", selectedCode + "-" + yourPhone);
+    formData.append("medicalCondition", medicalCondition);
+    formData.append("hospital", hospital);
+    formData.append("doctor", doctor);
+    formData.append("additionalMessage", additionalMessage);
     if (yourFile) {
-      formData.append('yourFile', yourFile)
+      formData.append("yourFile", yourFile);
     }
 
     try {
       const response = await axios.post(
-        'https://cdn.healthcareinternational.in/wp-json/contact-form-7/v1/contact-forms/8/feedback',
+        "https://cdn.healthcareinternational.in/wp-json/contact-form-7/v1/contact-forms/8/feedback",
         formData,
-        { headers: { 'Content-Type': 'multipart/form-data' } }
-      )
-      setPost(response.data.message)
-      const msg = response.data.status
-      if (msg === 'mail_sent') {
-        resetForm()
-      } else if (msg === 'validation_failed') {
-        const fieldErrors = {}
+        {headers: {"Content-Type": "multipart/form-data"}}
+      );
+      setPost(response.data.message);
+      const msg = response.data.status;
+      if (msg === "mail_sent") {
+        resetForm();
+      } else if (msg === "validation_failed") {
+        const fieldErrors = {};
         response.data.invalid_fields.forEach((field) => {
-          fieldErrors[field.field] = field.message
-        })
-        setErrors(fieldErrors)
-      } else if (msg === 'mail_failed') {
-        setPost('Failed to send request')
+          fieldErrors[field.field] = field.message;
+        });
+        setErrors(fieldErrors);
+      } else if (msg === "mail_failed") {
+        setPost("Failed to send request");
       }
     } catch (error) {
-      console.error('Error submitting the form!', error)
+      console.error("Error submitting the form!", error);
     }
-  }
+  };
 
   const resetForm = () => {
-    setYourName('')
-    setYourEmail('')
-    setYourPhone('')
-    setMedicalCondition('')
-    setHospital('')
-    setDoctor('')
-    setYourFile(null)
-    setAdditionalMessage('')
-    setErrors({})
-  }
+    setYourName("");
+    setYourEmail("");
+    setYourPhone("");
+    setMedicalCondition("");
+    setHospital("");
+    setDoctor("");
+    setYourFile(null);
+    setAdditionalMessage("");
+    setErrors({});
+  };
 
   return (
-    <div className="w-full my-20 px-2 lg:px-0">
+    <div id="consultation-form" className="w-full my-20 px-2 lg:px-0">
       <div className="bg-white lg:w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
         <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
           To Get The Best Treatment Options, Please Provide Details
@@ -316,8 +316,7 @@ function ConsultantForm() {
                             <li
                               key={country.code}
                               onClick={() => handleCountrySelect(country.code)}
-                              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                            >
+                              className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                               {country.name} ({country.code})
                             </li>
                           ))}
@@ -384,14 +383,12 @@ function ConsultantForm() {
                   id="medicalCondition"
                   value={medicalCondition}
                   onChange={(e) => handleConditionChange(e.target.value)}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                >
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4">
                   <option value="">Select Speciality</option>
                   {medicalConditions.map((condition) => (
                     <option
                       key={condition.condition}
-                      value={condition.condition}
-                    >
+                      value={condition.condition}>
                       {condition.condition}
                     </option>
                   ))}
@@ -410,8 +407,7 @@ function ConsultantForm() {
                     value={hospital}
                     onChange={(e) => handleHospitalChange(e.target.value)}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                    disabled={!hospitalOptions.length}
-                  >
+                    disabled={!hospitalOptions.length}>
                     <option value="">Select Hospital</option>
                     {hospitalOptions.map((hosp) => (
                       <option key={hosp} value={hosp}>
@@ -433,8 +429,7 @@ function ConsultantForm() {
                   value={doctor}
                   onChange={(e) => setDoctor(e.target.value)}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                  disabled={!doctorOptions.length}
-                >
+                  disabled={!doctorOptions.length}>
                   <option value="">Select Doctor</option>
                   {doctorOptions.map((doctor) => (
                     <option key={doctor} value={doctor}>
@@ -463,10 +458,9 @@ function ConsultantForm() {
                 {/* Custom label to replace the default file input */}
                 <label
                   htmlFor="file-upload"
-                  className="flex items-center justify-between w-full h-[53px] mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-200 transition-colors"
-                >
+                  className="flex items-center justify-between w-full h-[53px] mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-200 transition-colors">
                   <span className="pl-4 text-start">
-                    {fileName || 'Upload Report'}
+                    {fileName || "Upload Report"}
                   </span>
                   <FaFileAlt className="text-gray-600 mr-2" size={20} />
                 </label>
@@ -490,8 +484,7 @@ function ConsultantForm() {
             <div>
               <button
                 type="submit"
-                className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white"
-              >
+                className="text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white">
                 Submit
               </button>
 
@@ -505,7 +498,7 @@ function ConsultantForm() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ConsultantForm
+export default ConsultantForm;

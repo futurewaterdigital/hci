@@ -3,10 +3,11 @@ import Title from "@/components/cardiacComponents/Title";
 import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
+import KnowMore from "@/components/ui/KnowMore";
 const data = {
   title: "Kidney Cancer",
   description:
-    "Kidney cancer, also known as renal cancer, originates in the kidneys, two bean-shaped organs located in the back of the abdomen. The most common type of kidney cancer is renal cell carcinoma (RCC), which starts in the lining of the small tubes in the kidney. Other types include urothelial carcinoma, Wilms tumor (more common in children), and renal sarcoma.",
+    "Kidney cancer, also known as <span class='font-semibold'>renal cancer</span>, originates in the kidneys, two bean-shaped organs located in the back of the abdomen. The most common type of kidney cancer is <span class='font-semibold'>renal cell carcinoma (RCC)</span>, which starts in the lining of the small tubes in the kidney. Other types include <span class='font-semibold'>urothelial carcinoma</span>, <span class='font-semibold'>Wilms tumor</span> (more common in children), and <span class='font-semibold'>renal sarcoma</span>.",
 
   causes: [
     {
@@ -85,8 +86,7 @@ const data = {
   treatments: [
     {
       title: "Treatment for Kidney Cancer",
-      description:
-        "The treatment of kidney cancer depends on the stage, size and spread of the tumor, as well as the patient's overall health. Options include:",
+      description: "",
       heading: "Surgery",
       aneurysmSymptoms: [
         {
@@ -122,12 +122,17 @@ const data = {
         {
           title: "Angiogenesis Inhibitors",
           description:
-            "These drugs block the formation of new blood vessels that tumors need to grow. Examples include sunitinib and pazopanib.",
+            "These drugs block the formation of new blood vessels that tumors need to grow. Examples include <span class='font-semibold'>sunitinib</span> and <span class='font-semibold'>pazopanib</span>.",
         },
         {
           title: "mTOR Inhibitors",
           description:
-            "Drugs like everolimus target the mTOR protein, which plays a role in cancer cell growth.",
+            "Drugs like <span class='font-semibold'>everolimus</span> target the mTOR protein, which plays a role in cancer cell growth.",
+        },
+        {
+          title: "",
+          description:
+            "Targeted therapy is often used for advanced kidney cancer or if cancer has spread beyond the kidneys.",
         },
       ],
     },
@@ -137,12 +142,17 @@ const data = {
         {
           title: "Immune Checkpoint Inhibitors",
           description:
-            "Drugs such as nivolumab and pembrolizumab work by enhancing the body's immune response to fight cancer. These therapies block proteins that prevent the immune system from attacking cancer cells.",
+            "Drugs such as <span class='font-semibold'>nivolumab</span> and <span class='font-semibold'>pembrolizumab</span> work by enhancing the body's immune response to fight cancer. These therapies block proteins that prevent the immune system from attacking cancer cells.",
         },
         {
           title: "Cytokines",
           description:
-            "Older forms of immunotherapy, including interleukin-2, stimulate the immune system to destroy cancer cells.",
+            "Older forms of immunotherapy, including <span class='font-semibold'>interleukin-2</span>, stimulate the immune system to destroy cancer cells.",
+        },
+        {
+          title: "",
+          description:
+            "Immunotherapy is typically used in advanced stages or in combination with other treatments.",
         },
       ],
     },
@@ -159,12 +169,17 @@ const data = {
           description:
             "A needle inserted into the tumor heats and destroys the cancerous tissue.",
         },
+        {
+          title: "",
+          description:
+            "These minimally invasive procedures are effective for smaller tumors or for patients who cannot have surgery.",
+        },
       ],
     },
     {
       heading: "Chemotherapy",
       description:
-        "While not commonly used for kidney cancer, chemotherapy may be an option for rare types like transitional cell carcinoma.",
+        "While not commonly used for kidney cancer, chemotherapy may be an option for rare types like <span class='font-semibold'>transitional cell carcinoma</span>.",
     },
   ],
 
@@ -210,158 +225,153 @@ const data = {
 
 function KidneyCancer() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Title title={data.title} className="text-pink-500" />
-      <div className="mt-6">
-        <p className="text-gray-600 mb-10 text-lg font-light">
-          {data.description}
-        </p>
-      </div>
-      {/* Banner Image  */}
+    <>
       <Banner image="/oncology/kidney-banner.png" />
-      {/* Causes Section */}
-      <div className="mt-12">
-        <H2
-          title={data.causes[0].heading}
-          className="text-2xl text-center font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.causes[0].description}
-        </p>
-        <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
-          {data.causes[0].items.map((factor, index) => (
-            <div
-              key={index}
-              className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]"
-            >
-              <h3 className="font-bold text-base mb-1">{factor.title}</h3>
-              <p className="text-sm text-gray-900 leading-snug">
-                {factor.description}
-              </p>
-            </div>
-          ))}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Title title={data.title} className="text-pink-500" />
+        <div className="mt-6">
+          <p
+            className="text-gray-600 mb-10 text-lg font-light"
+            dangerouslySetInnerHTML={{__html: data.description}}
+          />
         </div>
-      </div>
-      <div className="my-3">
-        <Link href={""} className="text-hciPrimary font-semibold underline">
-          To Know More About Oesophagus Cancer And Its Treatment, Click Here
-        </Link>
-      </div>
-      {/* Symptoms Section */}
-      <div className="mt-12">
-        <H2
-          title={data.symptoms[0].heading}
-          className="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.symptoms[0].description}
-        </p>
-        <div className="space-y-2">
-          {data.symptoms[0].items.map((symptom, idx) => (
-            <div key={idx} className={symptom.className}>
-              <strong>{symptom.title}:</strong> {symptom.description}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="mt-6 text-start">
-        <Link
-          href="/treatment/oncology/oesophagus-cancer-causes"
-          className="text-[#0E56A0] font-semibold underline"
-        >
-          To know more about oesophagus cancer and its causes and treatment,
-          click here
-        </Link>
-      </div>
-      {/* Diagnosis Section */}
-      <div className="mt-12">
-        <H2
-          title={data.diagnosis[0].heading}
-          className="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.diagnosis[0].description}
-        </p>
-        <div className="space-y-2">
-          {data.diagnosis[0].items.map((test, idx) => (
-            <div key={idx} className={test.className}>
-              <strong>{test.title}:</strong> {test.description}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="mt-6 text-start">
-        <Link
-          href="/treatment/oncology/oesophagus-cancer-causes"
-          className="text-[#0E56A0] font-semibold underline"
-        >
-          To Know More About Oesophagus Cancer And Its Causes And Treatment,
-          Click Here
-        </Link>
-      </div>
-      {/* Treatments Section */}
-      <div className="mt-12">
-        <H2
-          title="Treatment for Gallbladder Cancer"
-          className="text-2xl font-semibold mb-6 text-center"
-        />
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-          The treatment approach for gallbladder cancer depends on the stage of
-          the disease, the patient&lsquo;s overall health, and their
-          preferences. Treatment options may include:
-        </p>
-        <div className="grid grid-cols-1 gap-6">
-          {data.treatments.map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
-            >
-              <h2 className="text-xl text-hciPrimary font-bold text-black">
-                {treatment.heading}
-              </h2>
-              {treatment.description && (
-                <p className="text-gray-600 mb-4 font-light">
-                  {treatment.description}
-                </p>
-              )}
-              <div className="space-y-4">
-                {treatment?.aneurysmSymptoms?.map((item, idx) => (
-                  <div key={idx} className="text-gray-600">
-                    <span className="text-[#D84498]">
-                      {" "}
-                      {item.title && <strong>{item.title}: </strong>}
-                    </span>
-                    {item.description}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Conclusion */}
-      <div className="mt-12">
-        <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
-        {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
-        <p className="text-gray-600 font-light">
-          {data.conclusion[0].paragraph}
-        </p>
-      </div>
+        {/* Banner Image  */}
 
-      {/* Links */}
-      <div className="mt-8 space-y-4">
-        {data.links.map((link, index) => (
-          <div key={index} className="text-start">
-            <Link
-              href={link.url}
-              className="text-hciPrimary font-semibold underline"
-            >
-              {link.text}
-            </Link>
+        {/* Causes Section */}
+        <div className="mt-12">
+          <H2
+            title={data.causes[0].heading}
+            className="text-2xl text-center font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.causes[0].description}
+          </p>
+          <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
+            {data.causes[0].items.map((factor, index) => (
+              <div
+                key={index}
+                className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]">
+                <h3 className="font-bold text-base mb-1">{factor.title}</h3>
+                <p className="text-sm text-gray-900 leading-snug">
+                  {factor.description}
+                </p>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <div className="my-3">
+          <KnowMore title={data.causes[0].heading} />
+        </div>
+        {/* Symptoms Section */}
+        <div className="mt-12">
+          <H2
+            title={data.symptoms[0].heading}
+            className="text-2xl font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.symptoms[0].description}
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            {data.symptoms[0].items.map((symptom, idx) => (
+              <div key={idx} className={symptom.className}>
+                <strong>
+                  {symptom.title} {symptom.description && ":"}
+                </strong>{" "}
+                {symptom.description}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-6 text-start">
+          <KnowMore title={data.symptoms[0].heading} />
+        </div>
+        {/* Diagnosis Section */}
+        <div className="mt-12">
+          <H2
+            title={data.diagnosis[0].heading}
+            className="text-2xl font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.diagnosis[0].description}
+          </p>
+          <div className="space-y-2">
+            {data.diagnosis[0].items.map((test, idx) => (
+              <div key={idx} className={test.className}>
+                <strong>{test.title}:</strong> {test.description}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-6 text-start">
+          <KnowMore title={data.diagnosis[0].heading} />
+        </div>
+        {/* Treatments Section */}
+        <div className="mt-12">
+          <H2
+            title="Treatment for Kidney Cancer"
+            className="text-2xl font-semibold mb-6 text-center"
+          />
+          <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+            The treatment of kidney cancer depends on the stage, size, and
+            spread of the tumor, as well as the patient’s overall health.
+            Options include:
+          </p>
+          <div className="grid grid-cols-1 gap-6">
+            {data.treatments.map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h2 className="text-xl text-hciPrimary font-bold text-black">
+                  {treatment.heading}
+                </h2>
+                {treatment.description && (
+                  <p
+                    className="text-gray-600 mb-4 font-light"
+                    dangerouslySetInnerHTML={{__html: treatment.description}}
+                  />
+                )}
+                <div className="space-y-4">
+                  {treatment?.aneurysmSymptoms?.map((item, idx) => (
+                    <div key={idx} className="text-gray-600 font-light">
+                      <span className="text-[#D84498]">
+                        {" "}
+                        {item.title && <strong>{item.title}: </strong>}
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: item.description,
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* Conclusion */}
+        <div className="mt-12">
+          <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
+          {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
+          <p className="text-gray-600 font-light">
+            {data.conclusion[0].paragraph}
+          </p>
+        </div>
+
+        {/* Links */}
+        <div className="mt-8 space-y-4">
+          {data.links.map((link, index) => (
+            <div key={index} className="text-start">
+              <Link
+                href={link.url}
+                className="text-hciPrimary font-semibold underline">
+                {link.text}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

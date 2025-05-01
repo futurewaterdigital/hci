@@ -17,8 +17,8 @@ const data = {
 
   cancerTypes: [
     {
-      name: "BOWEL CANCER",
-      url: "/treatment/oncology/bowel-cancer",
+      name: "Bowel / Colorectal Cancer",
+      url: "",
     },
     {
       name: "GALLBLADDER CANCER",
@@ -105,10 +105,8 @@ const data = {
   treatments: [
     {
       heading: "Surgery",
-      description:
-        "",
+      description: "",
       aneurysmSymptoms: [
-      
         {
           title: "Partial Colectomy",
           description:
@@ -124,26 +122,22 @@ const data = {
           description:
             "A minimally invasive technique that allows for quicker recovery and fewer complications compared to traditional surgery",
         },
-       
       ],
     },
     {
       heading: "Chemotherapy",
-      description:
-        "",
+      description: "",
       aneurysmSymptoms: [
         {
           title: "Chemotherapy",
           description:
             "Uses drugs to kill cancer cells or stop their growth. It is often used after surgery to destroy any remaining cancer cells and reduce the chance of recurrence.",
         },
-        
       ],
     },
     {
       heading: "Radiation Therapy",
-      description:
-        "",
+      description: "",
       aneurysmSymptoms: [
         {
           title: "Radiation Therapy",
@@ -160,7 +154,6 @@ const data = {
           description:
             "A non-invasive robotic system, CyberKnife delivers highly focused radiation beams to the tumor with extreme precision. This is especially useful for tumors located near sensitive areas or in patients who cannot undergo traditional surgery.",
         },
-        
       ],
     },
     {
@@ -170,8 +163,7 @@ const data = {
       aneurysmSymptoms: [
         {
           title: "",
-          description:
-            "",
+          description: "",
         },
       ],
     },
@@ -181,16 +173,9 @@ const data = {
       aneurysmSymptoms: [
         {
           title: "",
-          description:
-            "",
+          description: "",
         },
       ],
-    },
-    {
-      heading: "Hormonal Therapy",
-      description:
-        "Hormonal treatment is used less frequently for cervical cancer but may be considered in cases where the cancer cells are hormone sensitive. It works by blocking hormones that could potentially fuel cancer growth.",
-      aneurysmSymptoms: [],
     },
   ],
 
@@ -273,179 +258,174 @@ const riskFactors = [
 
 function GICancer() {
   return (
-
     <>
-    <Banner image={data.bannerImage} />
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Banner Image */}
-  
-      {/* Title Section */}
-      <div className="text-center mb-12">
-        <H1 title={data.title} />
-      </div>
-      {/* Cancer Types Navigation */}
-      <div className="my-4">
-        <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-semibold">
-          {data.cancerTypes.map((item, index) => (
-            <Link
-              key={index}
-              href={item?.url}
-              className="hover:text-hciSecondary cursor-pointer"
-            >
-              {item.name}
-            </Link>
-          ))}
+      <Banner image={data.bannerImage} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Banner Image */}
+
+        {/* Title Section */}
+        <div className="text-center mb-12">
+          <H1 title={data.title} />
         </div>
-      </div>
-      <div className="text-3xl mt-14 text-center text-[#D84598] font-semibold">
-        Bowel Cancer
-      </div>
-      <p className="mt-4 text-gray-600 text-start w-full mx-auto font-light leading-relaxed">
-        Bowel cancer or Colorectal cancer, which originates in the colon or
-        rectum, has become a significant health concern globally, including in
-        India. Although it primarily affects individuals over the age of 50, it
-        can also occur in younger people due to a combination of dietary habits,
-        lifestyle factors, and genetic predispositions. As cases rise in India,
-        especially with changing food patterns and urban lifestyles, early
-        detection and comprehensive treatment remain essential for better
-        outcomes.
-      </p>
-
-      <div className="my-10">
-        <img
-          src="/oncology/Gi-cancer-2.png"
-          alt="GI Cancer Visualization"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      <div className="text-2xl text-center font-medium">
-        Causes of Bowel cancer
-      </div>
-      <p className="mt-4 text-gray-600 text-start w-full mx-auto font-light leading-relaxed mb-4">
-        Several factors can contribute to the development of Bowel cancer, with
-        diet and lifestyle playing a significant role alongside genetic risks.
-      </p>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {riskFactors.map((factor, index) => (
-          <div key={index} className="bg-[#FFE7B6] rounded-md p-4 shadow-sm">
-            <h3 className="font-medium mb-1 text-lg">{factor.title}</h3>
-            <p className="text-gray-800">{factor.description}</p>
-          </div>
-        ))}
-      </div>
-      <div className="my-3">
-       <KnowMore title={data.title} />
-      </div>
-
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-1 gap-8">
-        {/* Causes Section */}
-        <div>
-          <H2
-            title="Symptoms of Bowel Cancer"
-            className="text-2xl font-medium mb-4"
-          />
-          <p className="text-gray-700 mb-6 font-light">
-            Bowel cancer may not present symptoms in its early stages. However,
-            as the cancer grows, common symptoms include:
-          </p>
-          <div className="grid grid-cols-2 gap-2">
-            {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
-              <div
-                key={idx}
-                className="bg-[#0E56A0] text-white font-light p-4 rounded h-24 font-light"
-              >
-                <span className="font-medium pr-1">{cause.title}</span>
-                {cause.description}
-              </div>
+        {/* Cancer Types Navigation */}
+        <div className="my-4">
+          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-semibold">
+            {data.cancerTypes.map((item, index) => (
+              <Link
+                key={index}
+                href={item?.url}
+                className="hover:text-hciSecondary cursor-pointer">
+                {item.name}
+              </Link>
             ))}
           </div>
-          <div className="mt-4 text-start">
-           <KnowMore title={data.title} />
-          </div>
         </div>
-
-        {/* Diagnosis Section */}
-        <div>
-          <H2
-            title="Diagnosis of Bowel cancer"
-            className="text-2xl font-medium mb-4"
-          />
-          <p className="text-gray-700 mb-6 font-light">
-            Several diagnostic methods are used to detect and confirm Bowel
-            cancer, helping doctors determine the stage and plan the appropriate
-            treatment.
-          </p>
-          <div className="grid grid-cols-2 gap-2">
-            {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
-              <div
-                key={idx}
-                className="bg-[#D84498] text-white p-3 rounded h-24 font-light"
-              >
-                <div className="font-medium">{diagnosis.title}</div>
-                {diagnosis.description}
-              </div>
-            ))}
-          </div>
-          <div className="mt-4 text-start">
-           <KnowMore title={data.title} />
-          </div>
+        <div className="text-3xl mt-14 text-center text-[#D84598] font-semibold">
+          Bowel / Colorectal Cancer
         </div>
-      </div>
-
-      {/* Treatments Section */}
-      <div className="mt-12">
-        <H2
-          title="Treatment for Bowel cancer"
-            className="text-2xl font-medium mb-6 text-center"
-        />
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-          Treatment for Bowel cancer depends on the stage of the cancer, its
-          location, and the patient’s overall health. Common treatments include:
+        <p className="mt-4 text-gray-600 text-start w-full mx-auto font-light leading-relaxed">
+          Bowel cancer or Colorectal cancer, which originates in the colon or
+          rectum, has become a significant health concern globally, including in
+          India. Although it primarily affects individuals over the age of 50,
+          it can also occur in younger people due to a combination of dietary
+          habits, lifestyle factors, and genetic predispositions. As cases rise
+          in India, especially with changing food patterns and urban lifestyles,
+          early detection and comprehensive treatment remain essential for
+          better outcomes.
         </p>
-        <div className="grid grid-cols-1 gap-6">
-          {data.treatments.map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
-            >
-              <h2 className="text-xl text-hciPrimary font-medium text-black">
-                {treatment.heading}
-              </h2>
-              {treatment.description && (
-                <p className="text-gray-600 mb-4 font-light">
-                  {treatment.description}
-                </p>
-              )}
-              <div className="space-y-4 mb-4">
-                
-                {treatment.aneurysmSymptoms.map((item, idx) => (
-                  <div key={idx} className="text-gray-600 font-light">
-                    <span className="text-[#D84498]">
-                      {" "}
-                      {item.title && <strong>{item.title}: </strong>}
-                    </span>
-                    {item.description}
-                  </div>
-                ))}
-              </div>
-              {treatment.heading === "Surgery" && (
-                <IssuesLink head='Bowel cancer' />
-              )}
-              
+
+        <div className="my-10">
+          <img
+            src="/oncology/Gi-cancer-2.png"
+            alt="GI Cancer Visualization"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="text-2xl text-center font-medium">
+          Causes of Bowel cancer
+        </div>
+        <p className="mt-4 text-gray-600 text-start w-full mx-auto font-light leading-relaxed mb-4">
+          Several factors can contribute to the development of Bowel cancer,
+          with diet and lifestyle playing a significant role alongside genetic
+          risks.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {riskFactors.map((factor, index) => (
+            <div key={index} className="bg-[#FFE7B6] rounded-md p-4 shadow-sm">
+              <h3 className="font-medium mb-1 text-lg">{factor.title}</h3>
+              <p className="text-gray-800 font-light">{factor.description}</p>
             </div>
           ))}
         </div>
-      </div>
+        <div className="my-3">
+          <KnowMore title={data.title} />
+        </div>
 
-      {/* Conclusion */}
-      <div className="space-y-4 mt-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-1 gap-8">
+          {/* Causes Section */}
+          <div>
+            <H2
+              title="Symptoms of Bowel Cancer"
+              className="text-2xl font-medium mb-4"
+            />
+            <p className="text-gray-700 mb-6 font-light">
+              Bowel cancer may not present symptoms in its early stages.
+              However, as the cancer grows, common symptoms include:
+            </p>
+            <div className="grid grid-cols-2 gap-2">
+              {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
+                <div
+                  key={idx}
+                  className="bg-hciPrimary text-white p-4 rounded h-24">
+                  <span className="font-medium pr-1">{cause.title}</span>
+                  <span className="font-light">{cause.description}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 text-start">
+              <KnowMore title={data.title} />
+            </div>
+          </div>
+
+          {/* Diagnosis Section */}
+          <div>
+            <H2
+              title="Diagnosis of Bowel cancer"
+              className="text-2xl font-medium mb-4"
+            />
+            <p className="text-gray-700 mb-6 font-light">
+              Several diagnostic methods are used to detect and confirm Bowel
+              cancer, helping doctors determine the stage and plan the
+              appropriate treatment.
+            </p>
+            <div className="grid grid-cols-2 gap-2">
+              {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
+                <div
+                  key={idx}
+                  className="bg-hciSecondary text-white p-3 rounded h-24 font-light">
+                  <div className="font-medium">{diagnosis.title}</div>
+                  <div className="font-light">{diagnosis.description}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 text-start">
+              <KnowMore title={data.title} />
+            </div>
+          </div>
+        </div>
+
+        {/* Treatments Section */}
+        <div className="mt-12">
+          <H2
+            title="Treatment for Bowel cancer"
+            className="text-2xl font-medium mb-6 text-center"
+          />
+          <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+            Treatment for Bowel cancer depends on the stage of the cancer, its
+            location, and the patient’s overall health. Common treatments
+            include:
+          </p>
+          <div className="grid grid-cols-1 gap-6">
+            {data.treatments.map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-hciSecondary rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <h2 className="text-xl text-hciPrimary font-medium text-black">
+                  {treatment.heading}
+                </h2>
+                {treatment.description && (
+                  <p className="text-gray-600 mb-4 font-light">
+                    {treatment.description}
+                  </p>
+                )}
+                <div className="space-y-4 mb-4">
+                  {treatment.aneurysmSymptoms.map((item, idx) => (
+                    <div key={idx} className="text-gray-600 font-light">
+                      <span className="text-[#D84498]">
+                        {" "}
+                        {item.title && <strong>{item.title}: </strong>}
+                      </span>
+                      {item.description}
+                    </div>
+                  ))}
+                </div>
+                {treatment.heading === "Surgery" && (
+                  <IssuesLink head="Bowel cancer" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <div className="space-y-4 mt-8">
           <Conclusion data={data.conclusion} />
-          <FooterLinks head='Bowel cancer' />
+          <FooterLinks head="Bowel cancer" />
           <BookButton />
         </div>
-    </div>
+      </div>
     </>
   );
 }
