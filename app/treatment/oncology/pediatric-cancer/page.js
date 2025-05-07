@@ -42,9 +42,9 @@ const data = {
       description:
         "Screening and comprehensive evaluation of conditions like anemia",
       aneurysmSymptoms: [
-        {description: "Complete blood count (CBC) to assess overall health"},
-        {description: "Blood chemistry studies to evaluate organ function"},
-        {description: "Tumor marker tests for specific cancer indicators"},
+        { description: "Complete blood count (CBC) to assess overall health" },
+        { description: "Blood chemistry studies to evaluate organ function" },
+        { description: "Tumor marker tests for specific cancer indicators" },
       ],
     },
     {
@@ -55,7 +55,7 @@ const data = {
           description:
             "PET scans to identify areas of abnormal metabolic activity",
         },
-        {description: "Bone scans to detect metastasis to bones"},
+        { description: "Bone scans to detect metastasis to bones" },
         {
           description: "MIBG scans for specific tumor types like neuroblastoma",
         },
@@ -65,8 +65,8 @@ const data = {
       heading: "Biopsy",
       description: "Tissue sample for pathological examination",
       aneurysmSymptoms: [
-        {description: "Needle biopsy for accessible tumors"},
-        {description: "Surgical biopsy when larger samples are needed"},
+        { description: "Needle biopsy for accessible tumors" },
+        { description: "Surgical biopsy when larger samples are needed" },
         {
           description: "Molecular testing of biopsy samples to guide treatment",
         },
@@ -77,12 +77,12 @@ const data = {
       description:
         "Evaluation of bone marrow involvement and cerebrospinal fluid",
       aneurysmSymptoms: [
-        {description: "Assessment for cancer cells in bone marrow"},
+        { description: "Assessment for cancer cells in bone marrow" },
         {
           description:
             "Analysis of cerebrospinal fluid for cancer spread to the central nervous system",
         },
-        {description: "Cytogenetic studies of collected samples"},
+        { description: "Cytogenetic studies of collected samples" },
       ],
     },
   ],
@@ -121,12 +121,12 @@ const data = {
   },
 
   best_hospitals: [
-    {city: "Delhi", url: "/best-cancer-hospital-delhi"},
-    {city: "Mumbai", url: "/best-cancer-hospital-mumbai"},
-    {city: "Bangalore", url: "/best-cancer-hospital-bangalore"},
-    {city: "Chennai", url: "/best-cancer-hospital-chennai"},
-    {city: "Kochi", url: "/best-cancer-hospital-kochi"},
-    {city: "Hyderabad", url: "/best-cancer-hospital-hyderabad"},
+    { city: "Delhi", url: "/best-cancer-hospital-delhi" },
+    { city: "Mumbai", url: "/best-cancer-hospital-mumbai" },
+    { city: "Bangalore", url: "/best-cancer-hospital-bangalore" },
+    { city: "Chennai", url: "/best-cancer-hospital-chennai" },
+    { city: "Kochi", url: "/best-cancer-hospital-kochi" },
+    { city: "Hyderabad", url: "/best-cancer-hospital-hyderabad" },
   ],
 
   conclusion: [
@@ -176,16 +176,16 @@ function PediatricCancer() {
               Childhood cancers are often discovered through persistent symptoms
               or routine examinations. Diagnosis methods include:
             </p>
-            <div className=" rounded-lg">
+            <div className="rounded-lg">
               {data.diagnosis.map((method, index) => (
                 <div
                   key={index}
-                  className="border-b border-yellow-200 pb-2 last:border-0">
-                  <H3
-                    title={method.heading}
-                    className="font-medium text-yellow-800"
-                  />
-                  <p className="text-sm">{method.description}</p>
+                  className="border-b mt-4 bg-hciYellow p-2 mb-2 rounded-lg border-yellow-200 pb-2 last:border-0"
+                >
+                  <h2 className="font-medium text-yellow-800 text-black text-lg text-2xl">
+                    {method.heading}
+                  </h2>
+                  <p className="text-md text-gray-600">{method.description}</p>
                 </div>
               ))}
             </div>

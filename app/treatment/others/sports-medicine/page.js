@@ -41,6 +41,9 @@ const data = {
 
       aneurysmSymptoms: [
         {
+          description: `<span class='font-medium'>Sports medicine specialist:</span>  to provide expert opinion and solutions for sports injury related. `,
+        },
+        {
           description: `<span class='font-medium'>Physical Therapists:</span> To aid in recovery and improve mobility. `,
         },
         {
@@ -57,12 +60,12 @@ const data = {
       heading: "Conditions we Treat",
       desc: "HCI’s sports medicine network addresses a range of conditions, including:",
       aneurysmSymptoms: [
-        {description: "Ankle sprains and fractures"},
-        {description: "Knee and shoulder injuries"},
-        {description: "Tendonitis and cartilage injuries"},
-        {description: "Concussions and heat illnesse"},
-        {description: "Exercise-induced asthma"},
-        {description: "Eating disorders related to athletic performance"},
+        { description: "Ankle sprains and fractures" },
+        { description: "Knee and shoulder injuries" },
+        { description: "Tendonitis and cartilage injuries" },
+        { description: "Concussions and heat illness" },
+        { description: "Exercise-induced asthma" },
+        { description: "Eating disorders related to athletic performance" },
       ],
     },
   ],
@@ -70,10 +73,10 @@ const data = {
     {
       heading: "Conditions we Treat",
       aneurysmSymptoms: [
-        {description: "Ankle sprains and fractures"},
-        {description: "Cleft lip and palate repair"},
-        {description: "Hand and microsurgery"},
-        {description: " Scar revision surgery"},
+        { description: "Ankle sprains and fractures" },
+        { description: "Cleft lip and palate repair" },
+        { description: "Hand and microsurgery" },
+        { description: " Scar revision surgery" },
       ],
     },
   ],
@@ -153,7 +156,7 @@ function GeneralSurgery() {
           className="text-2xl font-medium mb-4 text-center pt-12"
         />
         <p className="font-light">
-          t HCI, we partner with leading hospitals and specialists to provide
+          At HCI, we partner with leading hospitals and specialists to provide
           cutting-edge treatment for sports injuries. Our goal is to help you or
           your loved ones recover quickly and safely, empowering you to return
           to the activities you love.
@@ -165,11 +168,10 @@ function GeneralSurgery() {
             className="text-2xl font-medium mb-4 text-center pt-12"
           />
           <p className="font-light">
-            If you or your child experience a sports-related injury, it’s
-            essential to determine the severity. For injuries involving severe
-            pain, swelling, numbness, or an inability to bear weight, immediate
-            care at an emergency room is recommended. For less severe injuries,
-            HCI specialists can offer tailored treatment plans, including:
+            At HCI, we partner with leading hospitals and specialists to provide
+            cutting-edge treatment for sports injuries. Our goal is to help you
+            or your loved ones recover quickly and safely, empowering you to
+            return to the activities you love.
           </p>
         </div>
 

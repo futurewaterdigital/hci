@@ -1,12 +1,12 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Image from 'next/image'
-import H1 from '@/components/ui/h1'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Image from "next/image";
+import H1 from "@/components/ui/h1";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
 
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import ListBox from "@/components/cardiacComponents/ListBox";
@@ -87,10 +87,10 @@ const data = {
     },
   ],
   contact: {
-    title: 'Contact Us Today',
-    head: 'REACH OUT TO HCI',
+    title: "Contact Us Today",
+    head: "Contact HCI for Expert Cosmetic Care",
     content:
-      'To explore our aesthetic, cosmetic, and plastic surgery services and find top-notch care in India to meet your needs and aspirations.',
+      "To explore our aesthetic, cosmetic, and plastic surgery services and find top-notch care in India to meet your needs and aspirations.",
   },
 };
 
@@ -107,17 +107,17 @@ function GeneralSurgery() {
         <p className="font-light text-start">{data.overview}</p>
         <FlexBox data={data} />
         <div>
-        <H2
-          title="Procedures We Offer"
-          className="text-2xl font-medium text-hciSecondary mt-8 text-center"
-        />
-        <p className="text-center font-light">
-          Our aesthetic, cosmetic, and plastic surgery services include:
+          <H2
+            title="Procedures We Offer"
+            className="text-2xl font-medium text-hciSecondary mt-8 text-center"
+          />
+          <p className="text-center font-light">
+            Our aesthetic, cosmetic, and plastic surgery services include:
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-4">
           <DataLists data={data.complications} />
-          <div className='flex justify-center items-center py-2 rounded-lg'>
+          <div className="flex justify-center items-center py-2 rounded-lg">
             <Image
               src="/others/plastic-surgeries.png"
               width={300}
@@ -141,7 +141,7 @@ function GeneralSurgery() {
           Here’s why patients trust us:
         </p>
         <ListBox data={data} />
-        <div className='pt-12'>
+        <div className="pt-12">
           <H2
             title="When to Consider Cosmetic or Plastic Surgery"
             className="text-2xl font-medium mb-4 text-center"
@@ -154,7 +154,7 @@ function GeneralSurgery() {
             restoration, HCI is here to support your journey.
           </p>
         </div>
-        <div className='pb-12'>
+        <div className="pb-12">
           <H2
             title="Committed to Your Transformation"
             className="text-2xl font-medium mb-4 text-center"

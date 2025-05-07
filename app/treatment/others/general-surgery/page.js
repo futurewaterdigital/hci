@@ -36,29 +36,29 @@ const data = {
     {
       heading: "",
       aneurysmSymptoms: [
-        {description: "Hernias (inguinal, umbilical, and incisional)"},
-        {description: "Gallbladder issues, including gallstones"},
-        {description: "Appendicitis"},
-        {description: "Gastrointestinal conditions"},
-        {description: "Thyroid and parathyroid disorders"},
+        { description: "Hernias (inguinal, umbilical, and incisional)" },
+        { description: "Gallbladder issues, including gallstones" },
+        { description: "Appendicitis" },
+        { description: "Gastrointestinal conditions" },
+        { description: "Thyroid and parathyroid disorders" },
         {
           description:
             "Skin and soft tissue conditions, including cysts and abscesses",
         },
-        {description: "Benign and malignant tumors"},
+        { description: "Benign and malignant tumors" },
       ],
     },
   ],
   benefits: [
-    {title: "Reduced pain and scarring"},
-    {title: "Faster recovery times"},
-    {title: "Shorter hospital stays"},
+    { title: "Reduced pain and scarring" },
+    { title: "Faster recovery times" },
+    { title: "Shorter hospital stays" },
   ],
   contact: {
     title: "Contact Us Today",
     head: "Connect with HCI",
     content:
-      "To learn more about our general surgery services and find the best surgical care in India for your needs.",
+      "To explore our general surgery services and access top-quality surgical care tailored to your needs.",
   },
 };
 

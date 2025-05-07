@@ -1,5 +1,5 @@
-import React from 'react'
-import { GoDotFill } from 'react-icons/go'
+import React from "react";
+import { GoDotFill } from "react-icons/go";
 
 function Treatment({ data, heading, headingCss }) {
   return (
@@ -14,11 +14,11 @@ function Treatment({ data, heading, headingCss }) {
           )}
           <ul className="space-y-4 ml-2">
             {data.aneurysmSymptoms.map((symptom, index) => (
-              <li key={index} className="flex item-center gap-2 ">
+              <li key={index} className="flex flex-row item-center gap-2 ">
                 <GoDotFill color="#D84498" size={10} />
-                <p className="font-light">
+                <p className="font-light mt-[-7px]">
                   <strong className="text-hciSecondary">{symptom.title}</strong>
-                  {symptom.title && ':'} {symptom.description}
+                  {symptom.title && ":"} {symptom.description}
                 </p>
               </li>
             ))}
@@ -26,7 +26,7 @@ function Treatment({ data, heading, headingCss }) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default Treatment
+export default Treatment;

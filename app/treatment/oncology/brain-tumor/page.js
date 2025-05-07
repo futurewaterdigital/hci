@@ -22,8 +22,8 @@ const data = {
       menu: "What is brain cancer?",
       url: "/treatment/oncology/brain-tumor/what-is-brain-cancer",
     },
-    {menu: "Symptoms", url: "/treatment/oncology/brain-tumor/symptoms"},
-    {menu: "Causes", url: "/treatment/oncology/brain-tumor/causes"},
+    { menu: "Symptoms", url: "/treatment/oncology/brain-tumor/symptoms" },
+    { menu: "Causes", url: "/treatment/oncology/brain-tumor/causes" },
     {
       menu: "Locations and Types",
       url: "/treatment/oncology/brain-tumor/locations-and-types",
@@ -32,9 +32,9 @@ const data = {
       menu: "Brain Tumors in Children",
       url: "/treatment/oncology/brain-tumor/brain-tumors-in-children",
     },
-    {menu: "Diagnosis", url: "/treatment/oncology/brain-tumor/diagnosis"},
-    {menu: "Treatment", url: "/treatment/oncology/brain-tumor/treatment"},
-    {menu: "Prognosis", url: "/treatment/oncology/brain-tumor/prognosis"},
+    { menu: "Diagnosis", url: "/treatment/oncology/brain-tumor/diagnosis" },
+    { menu: "Treatment", url: "/treatment/oncology/brain-tumor/treatment" },
+    { menu: "Prognosis", url: "/treatment/oncology/brain-tumor/prognosis" },
   ],
 
   common_cancers: [
@@ -110,12 +110,12 @@ const data = {
           description:
             "Combination chemotherapy protocols targeting specific cancer pathways",
         },
-        {description: "Dose-dense regimens for aggressive recurrent cases"},
+        { description: "Dose-dense regimens for aggressive recurrent cases" },
         {
           description:
             "Integration with radiation therapy for localized tumors",
         },
-        {description: "Hypofractionated protocols for patient convenience"},
+        { description: "Hypofractionated protocols for patient convenience" },
       ],
     },
     {
@@ -154,7 +154,7 @@ const data = {
           description:
             "Nutritional support to counter cachexia and maintain strength",
         },
-        {description: "Psychological support for patients and caregivers"},
+        { description: "Psychological support for patients and caregivers" },
         {
           description:
             "Integration with curative approaches for better outcomes",
@@ -172,14 +172,14 @@ const data = {
           description:
             "Used for isolated recurrences that can be surgically addressed",
         },
-        {description: "Often combined with intraoperative radiation therapy"},
+        { description: "Often combined with intraoperative radiation therapy" },
       ],
     },
     {
       heading: "Cytoreductive Surgery",
       description: "Removal of as much tumor burden as possible",
       aneurysmSymptoms: [
-        {description: "Particularly beneficial in peritoneal carcinomatosis"},
+        { description: "Particularly beneficial in peritoneal carcinomatosis" },
         {
           description:
             "May be combined with HIPEC (Hyperthermic Intraperitoneal Chemotherapy)",
@@ -194,7 +194,7 @@ const data = {
           description:
             "Faster recovery and reduced postoperative complications",
         },
-        {description: "Enhanced precision in difficult anatomical locations"},
+        { description: "Enhanced precision in difficult anatomical locations" },
       ],
     },
   ],
@@ -218,7 +218,7 @@ const data = {
       heading: "Access to Healthcare",
       description: "Uneven distribution of cancer centers across India",
       aneurysmSymptoms: [
-        {description: "Concentration of specialized centers in major cities"},
+        { description: "Concentration of specialized centers in major cities" },
         {
           description:
             "Transportation and accommodation challenges for rural patients",
@@ -229,7 +229,7 @@ const data = {
       heading: "Financial Considerations",
       description: "High cost of advanced cancer treatments",
       aneurysmSymptoms: [
-        {description: "Limited insurance coverage for novel therapies"},
+        { description: "Limited insurance coverage for novel therapies" },
         {
           description:
             "Catastrophic health expenditure affecting treatment completion",
@@ -244,7 +244,7 @@ const data = {
           description:
             "Preference for alternative medicines delaying conventional treatment",
         },
-        {description: "Fatalistic attitudes toward cancer diagnosis"},
+        { description: "Fatalistic attitudes toward cancer diagnosis" },
       ],
     },
   ],
@@ -275,12 +275,12 @@ const data = {
       heading: "Advanced Imaging",
       description: "High-resolution scanning technologies",
       aneurysmSymptoms: [
-        {description: "PET-CT for metabolic activity assessment"},
+        { description: "PET-CT for metabolic activity assessment" },
         {
           description:
             "MRI with contrast enhancement for soft tissue evaluation",
         },
-        {description: "Whole-body imaging for metastasis detection"},
+        { description: "Whole-body imaging for metastasis detection" },
       ],
     },
     {
@@ -291,7 +291,7 @@ const data = {
           description:
             "Next-generation sequencing for comprehensive genomic profiling",
         },
-        {description: "Liquid biopsies to detect circulating tumor DNA"},
+        { description: "Liquid biopsies to detect circulating tumor DNA" },
         {
           description:
             "Expression profiling for personalized treatment selection",
@@ -302,20 +302,20 @@ const data = {
       heading: "Tissue Sampling",
       description: "Obtaining specimens for analysis",
       aneurysmSymptoms: [
-        {description: "Image-guided biopsies for difficult-to-access tumors"},
-        {description: "Endoscopic ultrasound-guided fine needle aspiration"},
-        {description: "Sentinel node evaluation for recurrent disease"},
+        { description: "Image-guided biopsies for difficult-to-access tumors" },
+        { description: "Endoscopic ultrasound-guided fine needle aspiration" },
+        { description: "Sentinel node evaluation for recurrent disease" },
       ],
     },
   ],
 
   best_hospitals: [
-    {city: "Delhi", url: "/best-cancer-hospital-delhi"},
-    {city: "Mumbai", url: "/best-cancer-hospital-mumbai"},
-    {city: "Bangalore", url: "/best-cancer-hospital-bangalore"},
-    {city: "Chennai", url: "/best-cancer-hospital-chennai"},
-    {city: "Hyderabad", url: "/best-cancer-hospital-hyderabad"},
-    {city: "Pune", url: "/best-cancer-hospital-pune"},
+    { city: "Delhi", url: "/best-cancer-hospital-delhi" },
+    { city: "Mumbai", url: "/best-cancer-hospital-mumbai" },
+    { city: "Bangalore", url: "/best-cancer-hospital-bangalore" },
+    { city: "Chennai", url: "/best-cancer-hospital-chennai" },
+    { city: "Hyderabad", url: "/best-cancer-hospital-hyderabad" },
+    { city: "Pune", url: "/best-cancer-hospital-pune" },
   ],
 
   conclusion: [
@@ -561,7 +561,7 @@ const brainCancerTypes = [
   },
   {
     menu: "Lung cancer",
-    url: "/treatment/oncology/liver-cancer",
+    url: "/treatment/oncology/lung-cancer",
   },
   {
     menu: "Skin cancer",
@@ -574,7 +574,7 @@ const tumorLocationsCard = [
     title: "Meningiomas",
     description: "form in the meninges, the protective lining of the brain",
   },
-  {title: "Pituitary", description: "tumors develop in the pituitary gland."},
+  { title: "Pituitary", description: "tumors develop in the pituitary gland." },
   {
     title: "Medulloblastoma",
     description: "tumors arise from the cerebellum or brainstem.",
@@ -770,7 +770,8 @@ function BrainTumor() {
               <Link
                 key={index}
                 href={item.url}
-                className="hover:text-hciSecondary cursor-pointer">
+                className="hover:text-hciSecondary cursor-pointer"
+              >
                 {item.menu}
               </Link>
             ))}
@@ -794,7 +795,8 @@ function BrainTumor() {
           {tumorLocationsCard?.map((item, index) => (
             <div
               key={index}
-              className="py-6 px-4 shadow-lg  rounded-lg font-light w-full">
+              className="py-6 px-4 shadow-lg  rounded-lg font-light w-full"
+            >
               <span className="font-medium">{item?.title}</span>{" "}
               {item?.description}
             </div>
@@ -1084,7 +1086,8 @@ function BrainTumor() {
           {tumorGrades.map((grade, index) => (
             <div
               key={index}
-              className="border border-pink-400 rounded-xl shadow-md p-5 hover:shadow-lg transition-all duration-300">
+              className="border border-pink-400 rounded-xl shadow-md p-5 hover:shadow-lg transition-all duration-300"
+            >
               <h2 className=" font-medium text-blue-800 mb-4">{grade.title}</h2>
               <ul className="list-disc pl-2 pr-2 list-outside space-y-2 text-gray-700 marker:text-hciSecondary font-light">
                 {grade.points.map((point, idx) => (
@@ -1155,7 +1158,8 @@ function BrainTumor() {
         <div className="text-start my-5 underline">
           <a
             className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
-            href="">
+            href=""
+          >
             To learn more about other brain tumor treatment options, click here
           </a>
         </div>
@@ -1203,7 +1207,8 @@ function BrainTumor() {
           {tumorTumorOptions?.map((item, index) => (
             <div
               key={index}
-              className="p-4 bg-[#D84498] font-white shadow-lg  font-light w-full">
+              className="p-4 bg-[#D84498] font-white shadow-lg  font-light w-full"
+            >
               <p className="text-white text-start w-full  mx-auto font-light leading-relaxed">
                 <span className="font-medium">{item?.title}</span>{" "}
                 {item?.description}
@@ -1214,7 +1219,8 @@ function BrainTumor() {
         <div className="text-start my-5 underline">
           <a
             className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
-            href="">
+            href=""
+          >
             To learn more about brain tumor surgery or to explore various
             procedures, click here
           </a>
@@ -1272,7 +1278,8 @@ function BrainTumor() {
         <div className="text-start my-5 underline">
           <a
             className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
-            href="">
+            href=""
+          >
             To learn more about chemotherapy for brain tumors, click here
           </a>
         </div>
@@ -1395,7 +1402,8 @@ function BrainTumor() {
           {therapistInfo.map((item, index) => (
             <div
               key={index}
-              className="shadow-md border border-gray-200 rounded-lg p-4 bg-white">
+              className="shadow-md border border-gray-200 rounded-lg p-4 bg-white"
+            >
               <h3 className="text-hciPrimary font-medium  mb-2">
                 {item.title}
               </h3>

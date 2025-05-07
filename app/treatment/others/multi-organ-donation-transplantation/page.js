@@ -44,10 +44,10 @@ This life-saving procedure often offers a second chance to individuals in critic
     {
       heading: "Possible Complications",
       aneurysmSymptoms: [
-        {description: "Organ rejection"},
-        {description: "Infections and immune system suppression"},
-        {description: "Surgical risks and complications"},
-        {description: "Post-transplant medication side effects"},
+        { description: "Organ rejection" },
+        { description: "Infections and immune system suppression" },
+        { description: "Surgical risks and complications" },
+        { description: "Post-transplant medication side effects" },
       ],
     },
   ],
@@ -55,12 +55,12 @@ This life-saving procedure often offers a second chance to individuals in critic
     {
       heading: "Transplant Services Offered",
       aneurysmSymptoms: [
-        {description: "Kidney transplantation"},
-        {description: "Liver transplantation"},
-        {description: "Heart transplantation"},
-        {description: "Lung transplantation"},
-        {description: "Pancreas transplantation"},
-        {description: "Intestinal transplantation"},
+        { description: "Kidney transplantation" },
+        { description: "Liver transplantation" },
+        { description: "Heart transplantation" },
+        { description: "Lung transplantation" },
+        { description: "Pancreas transplantation" },
+        { description: "Intestinal transplantation" },
       ],
     },
   ],
@@ -106,7 +106,7 @@ This life-saving procedure often offers a second chance to individuals in critic
   ],
   contact: {
     title: "Contact Us Today",
-    head: "Reach Out to Us Today",
+    head: "Contact HCI for Expert in Multi-Organ transplant",
     content:
       "Contact HCI to learn more about our comprehensive multi-organ donation and transplantation services and discover how we can support your journey to a healthier life.",
   },

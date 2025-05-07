@@ -296,13 +296,13 @@ function OesophagusCancer() {
       {/* Treatments Section */}
       <div className="mt-12">
         <H2
-          title="Treatment for Gallbladder Cancer"
+          title="Treatment for Oesophagus Cancer"
           className="text-2xl font-semibold mb-6 text-center"
         />
-        <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-          The treatment approach for gallbladder cancer depends on the stage of
-          the disease, the patient&lsquo;s overall health, and their
-          preferences. Treatment options may include:
+        <p className="mt-4 mb-6 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+          Treatment options depend on the cancer stage, location, and the
+          patient&lsquo;s overall health. The common treatments for oesophagus
+          cancer include:
         </p>
         <div className="grid grid-cols-1 gap-6">
           {data.treatments.map((treatment, index) => (

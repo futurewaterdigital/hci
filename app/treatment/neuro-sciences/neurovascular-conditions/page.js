@@ -192,7 +192,7 @@ function GeneralSurgery() {
             <div>
               <DataBoxes
                 title="Symptoms"
-                text="Symptoms of Parkinson's Disease and other movement disorders vary but generally include:"
+                text="The symptoms of neurovascular conditions can vary based on the specific condition and its severity. Common symptoms may include:"
                 titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 header=""
                 textCss="font-light py-4"
@@ -204,7 +204,7 @@ function GeneralSurgery() {
             <div className="space-y-6">
               <DataBoxes
                 title="Diagnosis"
-                text="Diagnosing Parkinson’s Disease and movement disorders involves a detailed examination of the patient’s symptoms, medical history, and neurological testing. Common diagnostic methods include:         "
+                text="Diagnosis of neurovascular conditions typically involves a combination of clinical evaluation and imaging studies:"
                 header=""
                 titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 textCss="font-light py-4"

@@ -159,11 +159,11 @@ function page() {
             {angioplastyData.map((item, index) => (
               <div
                 key={index}
-                className="bg-white border border-hciSecondary p-4 rounded shadow-lg">
-                <H3
-                  title={item.title}
-                  className="font-bold text-hciPrimary mb-2 text-xl"
-                />
+                className="bg-white border border-hciSecondary p-4 rounded shadow-lg"
+              >
+                <h2 className="font-medium text-black font-medium text-2xl font-bold text-hciPrimary mb-2 text-xl">
+                  {item.title}
+                </h2>
                 <p className="text-hciSecondary py-1 font-semibold text-lg">
                   {item.description}
                 </p>
@@ -172,7 +172,7 @@ function page() {
                     <li key={idx}>
                       <span
                         className="text-black text-[16px] font-light -ml-2"
-                        dangerouslySetInnerHTML={{__html: point}}
+                        dangerouslySetInnerHTML={{ __html: point }}
                       />
                     </li>
                   ))}
@@ -190,14 +190,16 @@ function page() {
             <li>
               <Link
                 href="/treatment/cardiac-sciences/angiography"
-                className="text-hciPrimary font-semibold">
+                className="text-hciPrimary font-semibold"
+              >
                 Causes of Coronary Artery Disease
               </Link>
             </li>
             <li>
               <Link
                 href="/treatment/cardiac-sciences/angiography"
-                className="text-hciPrimary font-semibold">
+                className="text-hciPrimary font-semibold"
+              >
                 Diagnosis and Imaging Techniques
               </Link>
             </li>

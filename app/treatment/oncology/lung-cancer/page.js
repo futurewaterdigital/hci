@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Banner from "@/components/Common/Banner";
 import H2 from "@/components/ui/h2";
@@ -8,7 +9,7 @@ import H1 from "@/components/ui/h1";
 import KnowMore from "@/components/ui/KnowMore";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
-
+import { useRouter } from "next/navigation";
 
 const data = {
   title: "Lung Cancer",
@@ -276,175 +277,196 @@ const data = {
 };
 
 function LungCancer() {
+  const router = useRouter();
+  const handleClick = () => {
+    // Navigate to homepage
+    router.push("/");
+
+    // Wait for navigation to complete then scroll to form
+    setTimeout(() => {
+      const formElement = document.querySelector("#consultation-form");
+      if (formElement) {
+        formElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
   return (
     <>
       <Banner image={data.bannerImage} />
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-        <H1 title={data.title} />
-        <div className="mt-6">
-          <p className="text-gray-600  font-light">{data.description}</p>
-        </div>
+          <H1 title={data.title} />
+          <div className="mt-6">
+            <p className="text-gray-600  font-light">{data.description}</p>
+          </div>
 
-        <H2
-          title="Causes of Lung Cancer"
-          className="text-2xl font-semibold mb-4 text-center"
-        />
-        <p className="font-light">{data.overview}</p>
+          <H2
+            title="Causes of Lung Cancer"
+            className="text-2xl font-semibold mb-4 text-center"
+          />
+          <p className="font-light">{data.overview}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          {data.causes.map((cause, index) => (
-            <div
-              key={index}
-              className="border border-gray-200 rounded-lg p-4 shadow-sm"
-            >
-              {/* <H3
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            {data.causes.map((cause, index) => (
+              <div
+                key={index}
+                className="border border-gray-200 rounded-lg p-4 shadow-sm"
+              >
+                {/* <H3
                 title={cause.title}
                 className="text-lg font-semibold text-blue-600 mb-2"
               /> */}
-              <h3 className="text-lg font-medium text-[#0E56A0] mb-2">
-                {" "}
-                {cause.title}
-              </h3>
-              <p className="text-gray-700 text-sm font-light">
-                {cause.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-start mb-8">
-        <KnowMore title={data.title} />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div>
-            <H2
-              title="Symptoms of Lung Cancer"
-              className="text-xl font-medium mb-4 text-center"
-            />
-            <p className="mb-4 font-light">
-              In its early stages, lung cancer may not cause noticeable
-              symptoms. As the disease progresses, common symptoms include:
-            </p>
-            <div className="space-y-2">
-              <DataBoxes
-                title=""
-                header=""
-                data={data.symptoms}
-                myclass="grid grid-cols-1 gap-2"
-              />
-            </div>
-            <div className="text-start mt-4 mb-8">
-           <KnowMore title={data.title} />
-            </div>
+                <h3 className="text-lg font-medium text-[#0E56A0] mb-2">
+                  {" "}
+                  {cause.title}
+                </h3>
+                <p className="text-gray-700 text-sm font-light">
+                  {cause.description}
+                </p>
+              </div>
+            ))}
           </div>
-          <div>
-            <H2
-              title="Diagnosis of Lung Cancer"
-              className="text-xl font-medium mb-4 text-center"
-            />
-            <p className="mb-4 font-light">
-              Lung cancer is diagnosed through a combination of physical exams,
-              imaging, and laboratory tests:
-            </p>
-            <div className="space-y-2">
-              <DataBoxes
-                title=""
-                header=""
-                data={data.diagnosis}
-                myclass="grid grid-cols-1 gap-2"
-              />
-            </div>
-            <div className="text-start mt-4 mb-8">
+
+          <div className="text-start mb-8">
             <KnowMore title={data.title} />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div>
+              <H2
+                title="Symptoms of Lung Cancer"
+                className="text-xl font-medium mb-4 text-center"
+              />
+              <p className="mb-4 font-light">
+                In its early stages, lung cancer may not cause noticeable
+                symptoms. As the disease progresses, common symptoms include:
+              </p>
+              <div className="space-y-2">
+                <DataBoxes
+                  title=""
+                  header=""
+                  data={data.symptoms}
+                  myclass="grid grid-cols-1 gap-2"
+                />
+              </div>
+              <div className="text-start mt-4 mb-8">
+                <KnowMore title={data.title} />
+              </div>
+            </div>
+            <div>
+              <H2
+                title="Diagnosis of Lung Cancer"
+                className="text-xl font-medium mb-4 text-center"
+              />
+              <p className="mb-4 font-light">
+                Lung cancer is diagnosed through a combination of physical
+                exams, imaging, and laboratory tests:
+              </p>
+              <div className="space-y-2">
+                <DataBoxes
+                  title=""
+                  header=""
+                  data={data.diagnosis}
+                  myclass="grid grid-cols-1 gap-2"
+                />
+              </div>
+              <div className="text-start mt-4 mb-8">
+                <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+                  <button
+                    onClick={handleClick}
+                    className="text-start underline"
+                  >
+                    To get the best diagnosis for lung cancer and related
+                    issues, click here
+                  </button>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <H2
-          title="Treatment for Lung Cancer"
-          className="text-2xl font-medium mb-4 text-center"
-        />
-        <p className="font-light mb-4">
-          Lung cancer treatment is varialized based on the cancer type, stage,
-          and the patient&apos;s overall health. The most common treatments
-          include:
-        </p>
+          <H2
+            title="Treatment for Lung Cancer"
+            className="text-2xl font-medium mb-4 text-center"
+          />
+          <p className="font-light mb-4">
+            Lung cancer treatment is varialized based on the cancer type, stage,
+            and the patient&apos;s overall health. The most common treatments
+            include:
+          </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          {data.treatments.slice(0, 3).map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-4 shadow-sm"
-            >
-              <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
-                {treatment.heading}
-              </h2>
-              <p className="text-gray-700 mb-2 font-light">
-                {treatment.description}
-              </p>
-              <ul className="font-light text-gray-600 list-disc pl-5">
-                {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                  <li key={idx}>{symptom.description}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            {data.treatments.slice(0, 3).map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-pink-400 rounded-lg p-4 shadow-sm"
+              >
+                <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
+                  {treatment.heading}
+                </h2>
+                <p className="text-gray-700 mb-2 font-light">
+                  {treatment.description}
+                </p>
+                <ul className="font-light text-gray-600 list-disc pl-5">
+                  {treatment.aneurysmSymptoms.map((symptom, idx) => (
+                    <li key={idx}>{symptom.description}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {data.treatments.slice(3, 5).map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-4 shadow-sm"
-            >
-              <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
-                {treatment.heading}
-              </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            {data.treatments.slice(3, 5).map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-pink-400 rounded-lg p-4 shadow-sm"
+              >
+                <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
+                  {treatment.heading}
+                </h2>
 
-              <p className="text-gray-700 mb-2 font-light">
-                {treatment.description}
-              </p>
-              <ul className="font-light text-gray-600 list-disc pl-5">
-                {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                  <li key={idx}>{symptom.description}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+                <p className="text-gray-700 mb-2 font-light">
+                  {treatment.description}
+                </p>
+                <ul className="font-light text-gray-600 list-disc pl-5">
+                  {treatment.aneurysmSymptoms.map((symptom, idx) => (
+                    <li key={idx}>{symptom.description}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          {data.treatments.slice(5, 8).map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-4 shadow-sm"
-            >
-              <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
-                {treatment.heading}
-              </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            {data.treatments.slice(5, 8).map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-pink-400 rounded-lg p-4 shadow-sm"
+              >
+                <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
+                  {treatment.heading}
+                </h2>
 
-              <p className="text-gray-700 mb-2 font-light">
-                {treatment.description}
-              </p>
-              <ul className="font-light text-gray-600 list-disc pl-5">
-                {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                  <li key={idx}>{symptom.description}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+                <p className="text-gray-700 mb-2 font-light">
+                  {treatment.description}
+                </p>
+                <ul className="font-light text-gray-600 list-disc pl-5">
+                  {treatment.aneurysmSymptoms.map((symptom, idx) => (
+                    <li key={idx}>{symptom.description}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-        <div className="space-y-4 mt-8">
-          <Conclusion data={data.conclusion} />
-          <FooterLinks head={data.title} />
-          <BookButton />
+          <div className="space-y-4 mt-8">
+            <Conclusion data={data.conclusion} />
+            <FooterLinks head={data.title} />
+            <BookButton />
+          </div>
         </div>
       </div>
-        </div>
-        </>
+    </>
   );
 }
 

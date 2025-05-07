@@ -1,12 +1,12 @@
 // generalSurgery.js
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-import Image from 'next/image'
-import H1 from '@/components/ui/h1'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import H2 from '@/components/ui/h2'
+import React from "react";
+import Banner from "@/components/Common/Banner";
+import Image from "next/image";
+import H1 from "@/components/ui/h1";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import H2 from "@/components/ui/h2";
 
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import FlexBoxSection from "@/components/cardiacComponents/FlexBoxSection";
@@ -75,7 +75,7 @@ const data = {
   ],
   complications: [
     {
-      heading: '',
+      heading: "",
 
       aneurysmSymptoms: [
         {
@@ -167,7 +167,6 @@ const data = {
         { description: "Persistent pelvic or lower abdominal pain." },
         { description: "Swelling or lumps in the genital area or testicles." },
         { description: "Urinary incontinence or leakage." },
-        { description: "Difficulty achieving or maintaining an erection." },
       ],
     },
   ],
@@ -279,7 +278,7 @@ function GeneralSurgery() {
           should trust us with your urological health:
         </p>
         <ListBox data={data} />
-        <div className=' pt-12'>
+        <div className=" pt-12">
           <H2
             title="When to See a Urologist"
             className="text-2xl font-medium mb-4 text-center"
@@ -291,7 +290,7 @@ function GeneralSurgery() {
           <DataLists data={data.urologist} desc="" />
         </div>
 
-        <div className='pb-12'>
+        <div className="pb-12">
           <H2
             title="Take Charge of Your Urological Health"
             className="text-2xl font-medium mb-4 text-center"

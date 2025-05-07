@@ -1,217 +1,232 @@
-import React from 'react'
-import Banner from '@/components/Common/Banner'
-const bannerImage = '/cardio/peripheral-artery-disease.png'
-import DataBoxes from '@/components/cardiacComponents/Box'
-import DataLists from '@/components/cardiacComponents/Bullets'
-import FooterLinks from '@/components/cardiacComponents/FooterLink'
-import BookButton from '@/components/cardiacComponents/BookButton'
-import KnowMore from '@/components/ui/KnowMore'
-import H2 from '@/components/ui/h2'
-import H1 from '@/components/ui/h1'
+"use client";
+import React from "react";
+import Banner from "@/components/Common/Banner";
+const bannerImage = "/cardio/peripheral-artery-disease.png";
+import DataBoxes from "@/components/cardiacComponents/Box";
+import DataLists from "@/components/cardiacComponents/Bullets";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+import KnowMore from "@/components/ui/KnowMore";
+import H2 from "@/components/ui/h2";
+import H1 from "@/components/ui/h1";
+import { useRouter } from "next/navigation";
 const padConditionsList = [
   {
-    category: '',
-    description: 'Smoking Increases PAD risk by 400%.',
-    bgColor: 'bg-hciYellow',
+    category: "",
+    description: "Smoking Increases PAD risk by 400%.",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
-    description: 'Age 50 years and above.',
-    bgColor: 'bg-hciYellow',
+    category: "",
+    description: "Age 50 years and above.",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
-    description: 'Diabetes',
-    bgColor: 'bg-hciYellow',
+    category: "",
+    description: "Diabetes",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
-    description: 'Family or Personal History Includes vascular diseases',
-    bgColor: 'bg-hciYellow',
+    category: "",
+    description: "Family or Personal History Includes vascular diseases",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
-    description: 'High Cholesterol & High Blood Pressure',
-    bgColor: 'bg-hciYellow',
+    category: "",
+    description: "High Cholesterol & High Blood Pressure",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
-    description: 'African American ethnicity',
-    bgColor: 'bg-hciYellow',
+    category: "",
+    description: "African American ethnicity",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
-    description: 'Obesity and poor diet',
-    bgColor: 'bg-hciYellow',
+    category: "",
+    description: "Obesity and poor diet",
+    bgColor: "bg-hciYellow",
   },
   {
-    category: '',
-    description: 'Sedentary Lifestyle & Chronic Kidney Disease',
-    bgColor: 'bg-hciYellow',
+    category: "",
+    description: "Sedentary Lifestyle & Chronic Kidney Disease",
+    bgColor: "bg-hciYellow",
   },
-]
+];
 
 const padSymptoms = [
   {
-    heading: 'Symptoms',
+    heading: "Symptoms",
     aneurysmSymptoms: [
       {
-        title: 'Intermittent claudication',
+        title: "Intermittent claudication",
         description:
-          'Pain or cramping in the legs during activity, which subsides with rest',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+          "Pain or cramping in the legs during activity, which subsides with rest",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Cold feet or legs',
-        description: 'Cold feet or legs',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Cold feet or legs",
+        description: "Cold feet or legs",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Skin colour changes',
-        description: 'Skin colour changes (red or bluish discoloration)',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Skin colour changes",
+        description: "Skin colour changes (red or bluish discoloration)",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Sores or ulcers',
-        description: 'Sores or ulcers on the feet or toes that do not heal',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Sores or ulcers",
+        description: "Sores or ulcers on the feet or toes that do not heal",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Numbness or tingling',
-        description: 'Numbness or tingling in the legs or feet',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Numbness or tingling",
+        description: "Numbness or tingling in the legs or feet",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Weak or absent pulses',
-        description: 'Weak or absent pulses in the affected limbs',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Weak or absent pulses",
+        description: "Weak or absent pulses in the affected limbs",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'In severe cases: Gangrene',
-        description: 'In severe cases: Gangrene (tissue death)',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "In severe cases: Gangrene",
+        description: "In severe cases: Gangrene (tissue death)",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
     ],
   },
-]
+];
 const padDiagnosis = [
   {
-    heading: 'Diagnosis',
+    heading: "Diagnosis",
     aneurysmSymptoms: [
       {
-        title: 'Ankle-Brachial Index (ABI)',
+        title: "Ankle-Brachial Index (ABI)",
         description:
-          'Measures blood pressure differences between the arms and legs',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+          "Measures blood pressure differences between the arms and legs",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Vascular ultrasound',
-        description: 'Checks for blockages in blood vessels',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Vascular ultrasound",
+        description: "Checks for blockages in blood vessels",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Pulse Volume Recording (PVR)',
-        description: 'Assesses blood flow',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Pulse Volume Recording (PVR)",
+        description: "Assesses blood flow",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Angiography',
-        description: 'Involves injecting dye to identify arterial blockages',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Angiography",
+        description: "Involves injecting dye to identify arterial blockages",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
     ],
   },
-]
+];
 const lifestyleChanges = [
   {
-    heading: 'Lifestyle Changes',
+    heading: "Lifestyle Changes",
     aneurysmSymptoms: [
       {
-        title: 'Quit smoking',
-        description: 'This is the most important step in managing PAD',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Quit smoking",
+        description: "This is the most important step in managing PAD",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Exercise',
+        title: "Exercise",
         description:
-          'Regular walking can improve circulation and ease symptoms',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+          "Regular walking can improve circulation and ease symptoms",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Healthy diet',
-        description: 'Focus on high-fiber, low-fat foods, and avoid trans fats',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Healthy diet",
+        description: "Focus on high-fiber, low-fat foods, and avoid trans fats",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Manage chronic conditions',
-        description: 'Control diabetes, hypertension, and cholesterol levels',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Manage chronic conditions",
+        description: "Control diabetes, hypertension, and cholesterol levels",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
     ],
   },
-]
+];
 const medicationsData = [
   {
-    heading: 'Medications',
+    heading: "Medications",
     aneurysmSymptoms: [
       {
-        title: 'Antiplatelet drugs',
-        description: 'e.g., aspirin, clopidogrel to reduce blood clot risk',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Antiplatelet drugs",
+        description: "e.g., aspirin, clopidogrel to reduce blood clot risk",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Statins',
-        description: 'To control cholesterol',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Statins",
+        description: "To control cholesterol",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Cilostazol',
-        description: 'To improve walking distance and reduce leg pain',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Cilostazol",
+        description: "To improve walking distance and reduce leg pain",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Medications for high blood pressure and diabetes',
-        description: 'Helps in managing PAD-related conditions',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Medications for high blood pressure and diabetes",
+        description: "Helps in managing PAD-related conditions",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
     ],
   },
-]
+];
 const minimallyInvasiveSurgery = [
   {
-    heading: 'Minimally Invasive Procedures or Surgery',
+    heading: "Minimally Invasive Procedures or Surgery",
     aneurysmSymptoms: [
       {
-        title: 'Angioplasty',
-        description: 'Opens narrowed arteries using a balloon',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Angioplasty",
+        description: "Opens narrowed arteries using a balloon",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Stent placement',
-        description: 'Keeps arteries open',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Stent placement",
+        description: "Keeps arteries open",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Atherectomy',
-        description: 'Removes plaque buildup',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Atherectomy",
+        description: "Removes plaque buildup",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Peripheral artery bypass surgery',
-        description: 'Creates a bypass around blocked arteries',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+        title: "Peripheral artery bypass surgery",
+        description: "Creates a bypass around blocked arteries",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: 'Recovery time',
+        title: "Recovery time",
         description:
-          'Minimally invasive treatments may require only a few days, while bypass surgery might need six to eight weeks.',
-        bgColor: 'bg-blue-100 p-4 rounded-md',
+          "Minimally invasive treatments may require only a few days, while bypass surgery might need six to eight weeks.",
+        bgColor: "bg-blue-100 p-4 rounded-md",
       },
     ],
   },
-]
+];
 
 export default function page() {
+  const router = useRouter();
+  const handleClick = () => {
+    // Navigate to homepage
+    router.push("/");
+
+    // Wait for navigation to complete then scroll to form
+    setTimeout(() => {
+      const formElement = document.querySelector("#consultation-form");
+      if (formElement) {
+        formElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
   return (
     <div className="pt-12">
       <Banner image={bannerImage} />
@@ -264,25 +279,31 @@ export default function page() {
               footerdata=""
               boxClass="min-h-[550px]"
             />
-            <KnowMore title="Peripheral Artery Disease (PAD)" />
+            <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+              <button onClick={handleClick} className="text-start underline">
+                To get the the best diagnosis for Peripheral Artery Disease
+                (PAD) and related issues, click here
+              </button>
+            </p>
+            {/* <KnowMore title="Peripheral Artery Disease (PAD)" /> */}
           </div>
         </div>
         <div>
           <div className="grid lg:grid-cols-3 gap-4 pt-12">
             <DataLists
-              desc="Diagnosing PAD involves a combination of medical history, physical examination, and diagnostic tests, such as:"
+              desc=""
               data={lifestyleChanges}
               footerdata=""
               boxClass="min-h-[500px]"
             />
             <DataLists
-              desc="Diagnosing PAD involves a combination of medical history, physical examination, and diagnostic tests, such as:"
+              desc=""
               data={medicationsData}
               footerdata=""
               boxClass="min-h-[500px]"
             />
             <DataLists
-              desc="Diagnosing PAD involves a combination of medical history, physical examination, and diagnostic tests, such as:"
+              desc=""
               data={minimallyInvasiveSurgery}
               footerdata=""
               boxClass="min-h-[500px]"
@@ -291,7 +312,7 @@ export default function page() {
         </div>
 
         <div className="py-0">
-          <H2 title="Conclusion" className="text-center text-pink-600 mt-8"/>
+          <H2 title="Conclusion" className="text-center text-pink-600 mt-8" />
           <p className="mt-4 text-start font-light">
             Peripheral Artery Disease (PAD) is a lifelong condition, but with
             early detection and proper management, patients can significantly
@@ -311,5 +332,5 @@ export default function page() {
         </div>
       </main>
     </div>
-  )
+  );
 }

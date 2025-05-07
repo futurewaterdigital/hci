@@ -90,7 +90,7 @@ const dataLists = [
   },
   {
     title:
-      '<span class="text-black">Prolonged dependence on a breathing machine</span>',
+      '<span class="text-black">Prolonged dependence on a breathing machine in rare cases</span>',
     description: "",
   },
 ];

@@ -15,7 +15,7 @@ const helpData = [
       "Our global network of leading clinicians allows us to connect you with top specialists. We can even assemble a team to review your records and recommend the best treatment options. Video consultations are available if you'd like to discuss your condition directly with our doctors.",
   },
   {
-    title: "Choosing the Best Hospital",
+    title: "Choosing the Reputed Hospital",
     content:
       "HCI partners with highly regarded hospitals in India, Egypt, UAE, and Mauritius, all known for advanced technology and patient care. We guide you in selecting a facility that fits your specific medical need.",
   },
@@ -72,11 +72,6 @@ const services = [
     icon: "/images/Organ.svg",
   },
   {
-    title: "Bone Marrow Transplant (for blood cancers)",
-    description: "Bone Marrow Transplant (for blood cancers)",
-    icon: "/images/BoneMarrow.svg",
-  },
-  {
     title: "Urology and Infertility (IVF)",
     description: "Urology and Infertility (IVF)",
     icon: "/images/Urology.svg",
@@ -105,7 +100,6 @@ const faqData = [
 
 const servicesData = [
   "Visa assistance and invitation letters",
-  "Airport pickup and drop-off",
   "Accommodation bookings near your hospital",
   "City orientation and recommended Apps for your stay",
   "Currency exchange and money transfer guidance",
@@ -155,7 +149,8 @@ function Page() {
             {helpData.map((section, index) => (
               <div
                 key={index}
-                className="p-4 bg-hciYellow rounded-lg hover:scale-105 hover:cursor-pointer transition-all ease-in-out">
+                className="p-4 bg-hciYellow rounded-lg hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
+              >
                 <h4 className="text-xl font-regular mb-2 text-center font-roboto">
                   {section.title}
                 </h4>
@@ -195,7 +190,8 @@ function Page() {
           {services.map((service, index) => (
             <div
               className="p-4 bg-white border rounded-lg flex flex-col items-center justify-center hover:scale-105 hover:cursor-pointer transition-all ease-in-out"
-              key={index}>
+              key={index}
+            >
               <Image
                 width={300}
                 height={300}

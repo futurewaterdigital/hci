@@ -189,24 +189,24 @@ const complications = [
     heading: "Potential Complications",
     aneurysmSymptoms: [
       {
-        title: "Endoleak",
+        title: "Endoleak:",
         description:
           "Leakage of blood around the graft used during endovascular repair.",
       },
       {
-        title: "Blood clots",
+        title: "Blood clots:",
         description: "Formation of clots around the graft or within the aorta.",
       },
       {
-        title: "Infections",
+        title: "Infections:",
         description: "Infections at the surgical site or graft infection.",
       },
       {
-        title: "Graft migration",
+        title: "Graft migration:",
         description: "The graft may shift from its original position.",
       },
       {
-        title: "Control blood pressure and cholesterol",
+        title: "Control blood pressure and cholesterol:",
         description:
           "Medications and lifestyle adjustments can reduce arterial damage and lower the risk of aneurysms.",
       },
@@ -218,22 +218,22 @@ const prevention = [
     heading: "",
     aneurysmSymptoms: [
       {
-        title: "Quit smoking",
+        title: "Quit smoking:",
         description:
           "Tobacco use is a major risk factor for cardiovascular diseases and aneurysms.",
       },
       {
-        title: "Eat a balanced diet",
+        title: "Eat a balanced diet:",
         description:
           "A heart-healthy diet helps prevent atherosclerosis and supports vascular health.",
       },
       {
-        title: "Exercise regularly",
+        title: "Exercise regularly:",
         description:
           "Physical activity improves cardiovascular health, strengthens the heart, and lowers blood pressure.",
       },
       {
-        title: "Routine screenings",
+        title: "Routine screenings:",
         description:
           "High-risk individuals, such as those with family history or pre-existing conditions, should undergo regular testing to monitor vascular health.",
       },
@@ -369,10 +369,7 @@ export default function page() {
 
           <div className="grid lg:grid-cols-2 gap-4">
             <div className="space-y-4">
-              <H3
-                title="Recovery and Complications after Surgery"
-                className="text-start"
-              />
+              <H3 title="Recovery and Complications after Surgery" />
               <p className="h-20 font-light">
                 Recovery from aneurysm surgery can take several weeks to months,
                 depending on the procedure type. Patients receive close

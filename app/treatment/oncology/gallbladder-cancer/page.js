@@ -159,16 +159,6 @@ const data = {
         "Gallbladder cancer is more common in women and tends to occur in individuals over the age of 65.",
     },
     {
-      title: "Age",
-      description:
-        "The likelihood of developing Bowel cancer rises with age, especially after 50.",
-    },
-    {
-      title: "Obesity",
-      description:
-        " Higher body mass index (BMI) is associated with an increased risk of developing gallbladder cancer.",
-    },
-    {
       title: "Diet ",
       description:
         " A diet high in fat and low in fruits and vegetables may contribute to the risk.",

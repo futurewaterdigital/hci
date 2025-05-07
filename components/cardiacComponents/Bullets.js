@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Bullets({
   data,
@@ -11,17 +11,15 @@ function Bullets({
   divClass,
 }) {
   return (
-    <div className={`${divClass ? divClass : 'py-4 space-y-6'}`}>
+    <div className={`${divClass ? divClass : "py-4 space-y-6"}`}>
       {data?.map((data, index) => (
         <div
           className={`border border-[#D84498] rounded-lg shadow-lg p-4 ${
-            boxClass ? boxClass : 'flex flex-col'
+            boxClass ? boxClass : "flex flex-col"
           }`}
           key={index}
         >
-          {data && (
-            <h2 className="text-lg font-medium mb-4">{data.heading}</h2>
-          )}
+          {data && <h2 className="text-lg font-medium mb-4">{data.heading}</h2>}
           {desc && (
             <p
               className="font-light mb-4"
@@ -32,7 +30,7 @@ function Bullets({
             <p
               className="font-light mb-4"
               dangerouslySetInnerHTML={{
-                __html: data.description ? data.description : '',
+                __html: data.description ? data.description : "",
               }}
             />
           )}
@@ -44,14 +42,19 @@ function Bullets({
           )}
           <ul
             className={`space-y-4 ${
-              ulClass ? ulClass : 'list-disc list-outside'
+              ulClass ? ulClass : "list-disc list-outside"
             } text-hciSecondary`}
           >
             {data.aneurysmSymptoms?.map((symptom, index) => (
               <li key={index} className="ml-6 font-light">
                 <p className="text-black font-light">
                   <strong className="text-hciSecondary">{symptom.title}</strong>
-                  {symptom.title && ''} <span dangerouslySetInnerHTML={{__html: symptom.description ? symptom.description : ''}}></span>
+                  {symptom.title && ""}{" "}
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: symptom.description ? symptom.description : "",
+                    }}
+                  ></span>
                 </p>
               </li>
             ))}
@@ -63,7 +66,7 @@ function Bullets({
               <p
                 className="font-light mb-4"
                 dangerouslySetInnerHTML={{
-                  __html: data.footer ? data.footer : '',
+                  __html: data.footer ? data.footer : "",
                 }}
               />
             )}
@@ -71,7 +74,7 @@ function Bullets({
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default Bullets
+export default Bullets;

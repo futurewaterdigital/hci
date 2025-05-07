@@ -1,74 +1,74 @@
-'use client'
-import React, { useEffect, useState, useRef } from 'react'
-import dynamic from 'next/dynamic' // Lazy load Footer
-import Header from '../../../components/Header/page'
-import Banner from '../../../components/Treatment/Banner/page'
-import { usePathname } from 'next/navigation'
-import CardioMenu from '../../../components/cardiacComponents/Menu'
-import OthersMenu from '../../../components/OthersComppnents/Menu'
-import OrthopaedicsMenu from '../../../components/OrthopaedicsMenu/page'
-import BookNow from '@/components/cardiacComponents/BookButton'
-import OurNetwork from '@/components/HomePage/Partners/Partners'
-import Testimonials from '@/components/HomePage/Testimonials/page'
-import NeuroMenu from '../../../components/NeuroMenu/page'
-import GastroenterologyMenu from '../../../components/GastroenterologyMenu/page'
-import OncologyMenu from '../../../components/OncologyMenu/page'
-import H1 from '@/components/ui/h1'
-import TreatmentDoctors from '@/components/TreatmentDoctors'
+"use client";
+import React, { useEffect, useState, useRef } from "react";
+import dynamic from "next/dynamic"; // Lazy load Footer
+import Header from "../../../components/Header/page";
+import Banner from "../../../components/Treatment/Banner/page";
+import { usePathname } from "next/navigation";
+import CardioMenu from "../../../components/cardiacComponents/Menu";
+import OthersMenu from "../../../components/OthersComppnents/Menu";
+import OrthopaedicsMenu from "../../../components/OrthopaedicsMenu/page";
+import BookNow from "@/components/cardiacComponents/BookButton";
+import OurNetwork from "@/components/HomePage/Partners/Partners";
+import Testimonials from "@/components/HomePage/Testimonials/page";
+import NeuroMenu from "../../../components/NeuroMenu/page";
+import GastroenterologyMenu from "../../../components/GastroenterologyMenu/page";
+import OncologyMenu from "../../../components/OncologyMenu/page";
+import H1 from "@/components/ui/h1";
+import TreatmentDoctors from "@/components/TreatmentDoctors";
 // Dynamically import Footer to lazy-load
-const Footer = dynamic(() => import('../../../components/Footer/page'), {
+const Footer = dynamic(() => import("../../../components/Footer/page"), {
   loading: () => <div className="bg-gray-300 h-24 w-full"></div>, // Placeholder while Footer is loading
-})
+});
 
 export default function City({ params }) {
-  const pathname = usePathname()
-  const [selectedCategory] = useState(params.slug) // Default to the slug from params
-  const [network, setNetworks] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [noData, setNoData] = useState(null)
+  const pathname = usePathname();
+  const [selectedCategory] = useState(params.slug); // Default to the slug from params
+  const [network, setNetworks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [noData, setNoData] = useState(null);
 
-  const cache = useRef(new Map()) // Cache to store API responses
+  const cache = useRef(new Map()); // Cache to store API responses
 
   useEffect(() => {
     // Check if data is already cached to prevent redundant API calls
     if (cache.current.has(selectedCategory)) {
-      setNetworks(cache.current.get(selectedCategory))
-      setLoading(false)
-      return
+      setNetworks(cache.current.get(selectedCategory));
+      setLoading(false);
+      return;
     }
 
-    setLoading(true)
+    setLoading(true);
     fetch(
       `https://cdn.healthcareinternational.in/wp-json/wp/v2/posts?embed&slug=${selectedCategory}&_fields=title,content,acf.banner`
     )
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok')
+          throw new Error("Network response was not ok");
         }
-        return response.json()
+        return response.json();
       })
       .then((data) => {
         if (data.length > 0) {
           // Sort the data if necessary
           const sortedData = data.sort((a, b) =>
             a.title.rendered.localeCompare(b.title.rendered)
-          )
-          setNetworks(sortedData)
+          );
+          setNetworks(sortedData);
           //console.log(object)
-          cache.current.set(selectedCategory, sortedData) // Cache the response
-          setNoData(null)
+          cache.current.set(selectedCategory, sortedData); // Cache the response
+          setNoData(null);
         } else {
-          setNoData('No Data Available')
-          setNetworks([])
+          setNoData("No Data Available");
+          setNetworks([]);
         }
-        setLoading(false)
+        setLoading(false);
       })
       .catch((error) => {
-        setError(error.message)
-        setLoading(false)
-      })
-  }, [selectedCategory])
+        setError(error.message);
+        setLoading(false);
+      });
+  }, [selectedCategory]);
 
   return (
     <>
@@ -115,16 +115,16 @@ export default function City({ params }) {
             </React.Fragment>
           ))}
           <div className="container mx-auto text-center pt-4 space-y-8">
-            {pathname === '/treatment/cardiac-sciences' && <CardioMenu />}
-            {pathname === '/treatment/orthopedics' && <OrthopaedicsMenu />}
-            {pathname === '/treatment/neuro-sciences' && <NeuroMenu />}
-            {pathname === '/treatment/others' && <OthersMenu />}
-            {pathname === '/treatment/oncology' && <OncologyMenu />}
-            {pathname === '/treatment/gastroenterology' && (
+            {pathname === "/treatment/cardiac-sciences" && <CardioMenu />}
+            {pathname === "/treatment/orthopedics" && <OrthopaedicsMenu />}
+            {pathname === "/treatment/neuro-sciences" && <NeuroMenu />}
+            {pathname === "/treatment/others" && <OthersMenu />}
+            {pathname === "/treatment/oncology" && <OncologyMenu />}
+            {pathname === "/treatment/gastroenterology" && (
               <GastroenterologyMenu />
             )}
-            </div>
-            <TreatmentDoctors pathname={pathname} paramSlug={params.slug} />
+          </div>
+          <TreatmentDoctors pathname={pathname} paramSlug={params.slug} />
           <OurNetwork />
           <Testimonials />
           <BookNow />
@@ -133,5 +133,5 @@ export default function City({ params }) {
 
       <Footer />
     </>
-  )
+  );
 }

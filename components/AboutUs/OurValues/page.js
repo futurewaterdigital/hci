@@ -1,11 +1,11 @@
-import React from 'react'
-import Image from 'next/image'
-import { valueHCI } from '@/utils/data'
+import React from "react";
+import Image from "next/image";
+import { valueHCI } from "@/utils/data";
 
 export default function ourValue() {
   return (
     <div className="mt-0 flex flex-col justify-center items-center text-center py-8">
-      <div className="pt-0 w-10/12 gap-4 grid lg:grid-cols-2 ">
+      <div className="pt-0 w-10/12 gap-4 grid lg:grid-cols-2 items-center">
         <div className="flex justify-center items-center  w-full ">
           <div className="flex justify-center items-center relative ">
             <Image
@@ -34,5 +34,5 @@ export default function ourValue() {
         </div>
       </div>
     </div>
-  )
+  );
 }

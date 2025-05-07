@@ -42,7 +42,7 @@ const data = {
       description:
         "Originates in the voice box, affecting breathing and vocalization.",
       aneurysmSymptoms: [
-        {description: "Hoarseness and chronic coughing are common symptoms."},
+        { description: "Hoarseness and chronic coughing are common symptoms." },
       ],
     },
     {
@@ -59,7 +59,7 @@ const data = {
       heading: "Salivary Gland Tumors",
       description: "Develops in the major or minor salivary glands.",
       aneurysmSymptoms: [
-        {description: "May include swelling and facial numbness."},
+        { description: "May include swelling and facial numbness." },
       ],
     },
     {
@@ -195,7 +195,7 @@ const data = {
           description:
             "Commonly used for advanced cancers or when surgery is not possible",
         },
-        {description: "Often combined with radiation (chemoradiation)"},
+        { description: "Often combined with radiation (chemoradiation)" },
       ],
     },
     {
@@ -203,8 +203,8 @@ const data = {
       description:
         "Focuses on specific molecules involved in cancer growth (e.g., cetuximab)",
       aneurysmSymptoms: [
-        {description: "Less toxic compared to chemotherapy"},
-        {description: "Often used for recurrent or metastatic cases"},
+        { description: "Less toxic compared to chemotherapy" },
+        { description: "Often used for recurrent or metastatic cases" },
       ],
     },
     {
@@ -275,11 +275,11 @@ const data = {
     },
   ],
   best_hospitals: [
-    {city: "Delhi", url: "/best-head-neck-cancer-hospital-delhi"},
-    {city: "Mumbai", url: "/best-head-neck-cancer-hospital-mumbai"},
-    {city: "Bangalore", url: "/best-head-neck-cancer-hospital-bangalore"},
-    {city: "Hyderabad", url: "/best-head-neck-cancer-hospital-hyderabad"},
-    {city: "Kolkata", url: "/best-head-neck-cancer-hospital-kolkata"},
+    { city: "Delhi", url: "/best-head-neck-cancer-hospital-delhi" },
+    { city: "Mumbai", url: "/best-head-neck-cancer-hospital-mumbai" },
+    { city: "Bangalore", url: "/best-head-neck-cancer-hospital-bangalore" },
+    { city: "Hyderabad", url: "/best-head-neck-cancer-hospital-hyderabad" },
+    { city: "Kolkata", url: "/best-head-neck-cancer-hospital-kolkata" },
   ],
 };
 
@@ -303,7 +303,8 @@ function HeadNeckMalignancy() {
             {data.cancer_types.map((cancer, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg p-4 shadow-sm">
+                className="border border-gray-200 rounded-lg p-4 shadow-sm"
+              >
                 <h2 className="text-lg font-medium mb-2 text-hciPrimary">
                   {cancer.heading}
                 </h2>
@@ -349,7 +350,7 @@ function HeadNeckMalignancy() {
             </div>
           </div>
           <div className="mb-8">
-            <Banner image="/oncology/head-neck-brain-image.png" />
+            <Banner image="/oncology/head-neck-malignancy-2.png" />
           </div>
           <H2
             title="Treatment"
@@ -359,7 +360,8 @@ function HeadNeckMalignancy() {
             {data.treatments.slice(0, 4).map((treatment, index) => (
               <div
                 key={index}
-                className="border border-hciSecondary rounded-lg p-4 shadow-sm">
+                className="border border-hciSecondary rounded-lg p-4 shadow-sm"
+              >
                 <h2 className="text-lg font-medium text-hciPrimary mb-2">
                   {treatment.heading}
                 </h2>
@@ -378,7 +380,8 @@ function HeadNeckMalignancy() {
             {data.treatments.slice(4, 6).map((treatment, index) => (
               <div
                 key={index}
-                className="border border-hciSecondary rounded-lg p-4 shadow-sm">
+                className="border border-hciSecondary rounded-lg p-4 shadow-sm"
+              >
                 <h2 className="text-lg font-medium text-hciPrimary mb-2">
                   {treatment.heading}
                 </h2>
