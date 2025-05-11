@@ -13,6 +13,8 @@ import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H3 from "@/components/ui/h3";
 import Link from "next/link";
 
+
+
 const data = {
   title: "Endometrial Cancers",
   title_1: "Endometrial / Uterine Cancer",
