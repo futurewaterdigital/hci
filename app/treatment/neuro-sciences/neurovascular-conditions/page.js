@@ -14,7 +14,7 @@ import IssuesLinks from "@/components/ui/IssuesLinks";
 const data = {
   title: "Neurovascular Conditions",
   bannerImage: "/neuro-sciences/neurovascular-conditions.png",
-  description: `Neurovascular conditions encompass a range of disorders that affect the blood vessels in the brain, leading to serious health implications. These conditions include strokes, aneurysms, and arteriovenous malformations (AVMs). In India, the prevalence of neurovascular disorders is increasing, making awareness and timely intervention crucial for effective management and recovery.`,
+  description: `Neurovascular conditions encompass a range of disorders that affect the blood vessels in the brain, leading to serious health implications. These conditions include strokes, aneurysms, and arteriovenous malformations (AVMs). The prevalence of neurovascular disorders is increasing, making awareness and timely intervention crucial for effective management and recovery.`,
   overview: ``,
 
   section_1: [
@@ -71,6 +71,16 @@ const data = {
         },
       ],
     },
+    {
+      heading: "Rehabilitation:",
+      description: "",
+      aneurysmSymptoms: [
+        {
+          description:
+            "Post-stroke rehabilitation may involve physical, occupational, and speech therapy to help individuals regain lost functions.",
+        },
+      ],
+    },
   ],
 
   contact: {
@@ -84,7 +94,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      In India, advances in neurovascular care have led to improved outcomes for patients with these conditions. A multidisciplinary approach involving neurologists, neurosurgeons, and rehabilitation specialists is vital for comprehensive management. Timely diagnosis and intervention can significantly enhance recovery prospects, allowing patients to lead healthier, more active lives. Awareness of risk factors and early symptoms is crucial for effective prevention and management of neurovascular disorders.
+      Advances in neurovascular care have led to improved outcomes for patients with these conditions. A multidisciplinary approach involving neurologists, neurosurgeons, and rehabilitation specialists is vital for comprehensive management. Timely diagnosis and intervention can significantly enhance recovery prospects, allowing patients to lead healthier, more active lives. Awareness of risk factors and early symptoms is crucial for effective prevention and management of neurovascular disorders.
           `,
     },
   ],
@@ -186,7 +196,14 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To know more about neurovascular conditions and its treatment, click here
+          </button>
+        </p>
+
+
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>

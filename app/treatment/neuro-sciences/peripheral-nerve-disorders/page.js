@@ -8,13 +8,13 @@ import H2 from '@/components/ui/h2'
 import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
-import TextComponent from '@/components/Common/TextComponent'
+import TextComponentPeripheralNerve from '@/components/Common/TextComponentPeripheralNerve'
 import IssuesLinks from '@/components/ui/IssuesLinks'
 
 const data = {
   title: "Peripheral Nerve Disorders",
   bannerImage: "/neuro-sciences/peripheral-nerve-disorders.png",
-  description: `Peripheral nerve disorders refer to a range of conditions that affect the peripheral nervous system, which comprises the nerves outside the brain and spinal cord. These disorders can significantly impact an individual’s quality of life, leading to symptoms such as weakness, numbness, and pain. In India, the prevalence of peripheral nerve disorders is rising due to factors like diabetes, trauma, and exposure to toxins.`,
+  description: `Peripheral nerve disorders refer to a range of conditions that affect the peripheral nervous system, which comprises the nerves outside the brain and spinal cord. These disorders can significantly impact an individual’s quality of life, leading to symptoms such as weakness, numbness, and pain. The prevalence of peripheral nerve disorders is rising due to factors like diabetes, trauma, and exposure to toxins.`,
   overview: ``,
 
   section_1: [
@@ -110,7 +110,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      In India, specialized medical centres offer comprehensive care for peripheral nerve disorders, employing advanced diagnostic techniques and treatment options. Early intervention is crucial for optimizing outcomes, enabling individuals to lead healthier, more active lives despite their conditions.
+      Specialized medical centres offer comprehensive care for peripheral nerve disorders, employing advanced diagnostic techniques and treatment options. Early intervention is crucial for optimizing outcomes, enabling individuals to lead healthier, more active lives despite their conditions.
           `,
     },
   ],
@@ -208,7 +208,7 @@ function GeneralSurgery() {
         {/* <DataSurgery data={data.section_1} /> */}
         <div className="grid grid-cols-5 gap-4">
           {data.section_1.map((item, index) => (
-            <TextComponent
+            <TextComponentPeripheralNerve
               key={index}
               title={item.title}
               description={item.description}
@@ -221,7 +221,13 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More about Peripheral Nerve Disorders and Its Treatment, Click here
+          </button>
+        </p>
         <div>
           <div className="grid lg:grid-cols-2 gap-4">
             <div className="space-y-4">
@@ -246,13 +252,13 @@ function GeneralSurgery() {
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />
-                <IssuesLinks head={data.title} />
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>
-        
+
         <div className=''>
-        <H2
+          <H2
             title="Treatment"
             className="text-2xl font-medium mb-4 text-center "
           />

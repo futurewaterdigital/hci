@@ -97,7 +97,7 @@ const data = {
     },
     {
       category: "",
-      description: "Redness or scaling of nipple or breast skin",
+      description: "Inversion or retraction of the nipple",
       bgColor: "bg-hciPrimary text-white",
     },
     {
@@ -171,23 +171,23 @@ const data = {
       aneurysmSymptoms: [
         {
           title: "Surgery",
-          description:
-            "Lumpectomy (removing tumor) or Mastectomy (removing most or all of the breast)",
+          description: `**Lumpectomy:** Removing the tumor while preserving most of the breast.
+                       ** Mastectomy:** Complete removal of the breast tissue to prevent the spread of cancer.`,
         },
         {
           title: "Chemotherapy",
           description:
-            "Uses powerful drugs to kill or slow the growth of cancer cells. Treatment can be given before or after surgery depending on the stage of the cancer",
+            "Chemotherapy uses drugs to kill or slow the growth of cancer cells. It can be administered before or after surgery, depending on the type and stage of the cancer.",
         },
         {
           title: "Hormone Therapy",
           description:
-            "For cancers that are sensitive to hormones, this treatment blocks or lowers hormone levels to slow cancer growth",
+            "Hormone therapy is used for hormone receptor-positive breast cancers. It blocks the body’s natural hormones from feeding the cancer cells.",
         },
         {
           title: "Targeted Therapy",
           description:
-            "Specifically targets cancer cells without affecting normal cells. Drugs like Herceptin are commonly used",
+            "Targeted therapies specifically target cancer cells without affecting normal cells. Drugs like Herceptin are commonly used for HER2-positive breast cancer.",
         },
       ],
     },
@@ -198,12 +198,12 @@ const data = {
         {
           title: "Radiation Therapy",
           description:
-            "Directed radiation beams target any remaining cancer cells after surgery to eliminate any remaining cancer cells",
+            "Radiation therapy is often recommended after surgery to eliminate any remaining cancer cells. Advanced techniques have made this treatment even more precise and effective, offering better outcomes with fewer side effects.",
         },
         {
           title: "Proton Therapy",
           description:
-            "An advanced form of radiation treatment that uses protons to precisely target cancerous breast tissue while sparing surrounding healthy tissue. This treatment is particularly beneficial for left-sided breast cancer patients as it reduces the risk of damage to the heart",
+            "Proton therapy is a state-of-the-art treatment that uses protons to precisely target cancerous tissues while sparing surrounding healthy tissue. This precision is especially beneficial for breast cancer patients, as it reduces the risk of damage to the heart and lungs, which are close to the breast. Proton therapy allows higher doses of radiation to be delivered to the tumor while minimizing side effects, enhancing treatment outcomes.",
         },
         {
           title: "CyberKnife Treatment",
@@ -400,19 +400,22 @@ function CancerInWomen() {
                     {treatment.description}
                   </p>
                   <div
-                    className={`grid grid-cols-${treatment.aneurysmSymptoms.length} gap-6`}>
+                    className={`grid grid-cols-${treatment.aneurysmSymptoms.length} gap-6 `}>
                     {treatment.aneurysmSymptoms.map((item, idx) => (
                       <div
                         key={idx}
-                        className="text-gray-600  border p-2 rounded-md shadow-md space-y-2">
+                        className="text-gray-600  border p-4 rounded-md shadow-md space-y-2">
                         {item.title && (
                           <span className="font-medium text-hciPrimary">
                             {item.title}:{" "}
                           </span>
                         )}
-                        <p className="text-gray-600  font-light">
-                          {item.description}
-                        </p>
+                        <p
+                          className="text-gray-600 font-light"
+                          dangerouslySetInnerHTML={{
+                            __html: item.description.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br/> <br/>"),
+                          }}
+                        ></p>
                       </div>
                     ))}
                   </div>

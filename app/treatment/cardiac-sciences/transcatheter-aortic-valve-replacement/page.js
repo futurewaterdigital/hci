@@ -31,18 +31,18 @@ const WhyDone = [
           "Health conditions (e.g., lung or kidney disease) that make open-heart surgery too risky.",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
-      {
-        title: "",
-        description:
-          "TAVR offers a shorter hospital stay and quicker recovery compared to open-heart surgery.",
-        bgColor: "bg-blue-100 p-4 rounded-md",
-      },
+      // {
+      //   title: "",
+      //   description:
+      //     "TAVR offers a shorter hospital stay and quicker recovery compared to open-heart surgery.",
+      //   bgColor: "bg-blue-100 p-4 rounded-md",
+      // },
     ],
   },
 ];
 const RiskDone = [
   {
-    heading: "Post-TAVR Care",
+    heading: "Risks",
     aneurysmSymptoms: [
       {
         title: "",
@@ -223,14 +223,14 @@ export default function page() {
               head="You may be a candidate for TAVR if you experience:"
               data={WhyDone}
               footerdata="TAVR offers a shorter hospital stay and quicker recovery compared to open-heart surgery."
-              boxClass="min-h-[500px]"
+              boxClass="min-h-[410px]"
             />
             <DataLists
               desc="As with any medical procedure, TAVR has potential risks, which include:"
               head=""
               data={RiskDone}
               footerdata="However, studies show comparable risks of severe complications between TAVR and traditional surgery."
-              boxClass="min-h-[500px]"
+              boxClass="min-h-[410px]"
             />
           </div>
         </div>

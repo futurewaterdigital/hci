@@ -19,7 +19,7 @@ function BookButton() {
   };
 
   return (
-    <div className="text-center">
+    <div className="text-center py-5">
       <button
         onClick={handleClick}
         className="bg-pink-500 text-white px-6 py-3 rounded-xl uppercase tracking-wider hover:bg-pink-600 transition-colors">

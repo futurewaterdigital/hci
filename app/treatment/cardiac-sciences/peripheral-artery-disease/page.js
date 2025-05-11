@@ -58,39 +58,39 @@ const padSymptoms = [
     heading: "Symptoms",
     aneurysmSymptoms: [
       {
-        title: "Intermittent claudication",
+        title: "Intermittent claudication:",
         description:
           "Pain or cramping in the legs during activity, which subsides with rest",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Cold feet or legs",
+        // title: "Cold feet or legs",
         description: "Cold feet or legs",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
         title: "Skin colour changes",
-        description: "Skin colour changes (red or bluish discoloration)",
+        description: "(red or bluish discoloration)",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
         title: "Sores or ulcers",
-        description: "Sores or ulcers on the feet or toes that do not heal",
+        description: "on the feet or toes that do not heal",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
         title: "Numbness or tingling",
-        description: "Numbness or tingling in the legs or feet",
+        description: "in the legs or feet",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
         title: "Weak or absent pulses",
-        description: "Weak or absent pulses in the affected limbs",
+        description: "in the affected limbs",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
         title: "In severe cases: Gangrene",
-        description: "In severe cases: Gangrene (tissue death)",
+        description: " (tissue death)",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
     ],
@@ -101,7 +101,7 @@ const padDiagnosis = [
     heading: "Diagnosis",
     aneurysmSymptoms: [
       {
-        title: "Ankle-Brachial Index (ABI)",
+        title: "Ankle-Brachial Index (ABI): ",
         description:
           "Measures blood pressure differences between the arms and legs",
         bgColor: "bg-blue-100 p-4 rounded-md",
@@ -112,12 +112,12 @@ const padDiagnosis = [
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Pulse Volume Recording (PVR)",
+        title: "Pulse Volume Recording (PVR):",
         description: "Assesses blood flow",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Angiography",
+        title: "Angiography:",
         description: "Involves injecting dye to identify arterial blockages",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
@@ -129,23 +129,23 @@ const lifestyleChanges = [
     heading: "Lifestyle Changes",
     aneurysmSymptoms: [
       {
-        title: "Quit smoking",
+        title: "Quit smoking:",
         description: "This is the most important step in managing PAD",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Exercise",
+        title: "Exercise:",
         description:
           "Regular walking can improve circulation and ease symptoms",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Healthy diet",
+        title: "Healthy diet:",
         description: "Focus on high-fiber, low-fat foods, and avoid trans fats",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Manage chronic conditions",
+        title: "Manage chronic conditions:",
         description: "Control diabetes, hypertension, and cholesterol levels",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
@@ -163,17 +163,17 @@ const medicationsData = [
       },
       {
         title: "Statins",
-        description: "To control cholesterol",
+        description: "to control cholesterol",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
         title: "Cilostazol",
-        description: "To improve walking distance and reduce leg pain",
+        description: "to improve walking distance and reduce leg pain",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
         title: "Medications for high blood pressure and diabetes",
-        description: "Helps in managing PAD-related conditions",
+        description: "helps in managing PAD-related conditions",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
     ],
@@ -184,27 +184,27 @@ const minimallyInvasiveSurgery = [
     heading: "Minimally Invasive Procedures or Surgery",
     aneurysmSymptoms: [
       {
-        title: "Angioplasty",
+        title: "Angioplasty:",
         description: "Opens narrowed arteries using a balloon",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Stent placement",
+        title: "Stent placement:",
         description: "Keeps arteries open",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Atherectomy",
+        title: "Atherectomy:",
         description: "Removes plaque buildup",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Peripheral artery bypass surgery",
+        title: "Peripheral artery bypass surgery:",
         description: "Creates a bypass around blocked arteries",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Recovery time",
+        title: "Recovery time:",
         description:
           "Minimally invasive treatments may require only a few days, while bypass surgery might need six to eight weeks.",
         bgColor: "bg-blue-100 p-4 rounded-md",
@@ -281,7 +281,7 @@ export default function page() {
             />
             <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
               <button onClick={handleClick} className="text-start underline">
-                To get the the best diagnosis for Peripheral Artery Disease
+                To get the best diagnosis for Peripheral Artery Disease
                 (PAD) and related issues, click here
               </button>
             </p>
@@ -289,7 +289,9 @@ export default function page() {
           </div>
         </div>
         <div>
-          <div className="grid lg:grid-cols-3 gap-4 pt-12">
+          <p className="font-bold pt-16 text-center text-2xl">Treatment</p>
+          <p className="py-2">The goal of PAD treatment is to alleviate symptoms, prevent disease progression, and lower the risk of heart attacks and strokes. Treatment approaches include:</p>
+          <div className="grid lg:grid-cols-3 gap-4 Cilostazol">
             <DataLists
               desc=""
               data={lifestyleChanges}
@@ -312,7 +314,7 @@ export default function page() {
         </div>
 
         <div className="py-0">
-          <H2 title="Conclusion" className="text-center text-pink-600 mt-8" />
+          <H2 title="Conclusion" className="text-center text-2xl font-bold mt-8" />
           <p className="mt-4 text-start font-light">
             Peripheral Artery Disease (PAD) is a lifelong condition, but with
             early detection and proper management, patients can significantly

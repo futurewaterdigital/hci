@@ -32,7 +32,7 @@ const data = {
       description: "High-fat, low-fibre, and processed foods",
     },
     {
-      title:'',
+      title: '',
       description: 'Family history of GI cancers',
     },
     {
@@ -274,62 +274,62 @@ function GeneralSurgery() {
         />
         <div className="grid lg:grid-cols-2 gap-4 ">
           <div>
-        <H3 title="Types of Cancers of the Digestive System" className="font-medium mb-4 text-start text-2xl" />
-          <div className="space-y-4 border border-gray-300 shadow-lg rounded-lg p-4">
-            
-            <p className="font-light">
-              <span className="font-medium text-lg text-hciPrimary">
-                Oesophageal Cancer (Ca Oesophagus)
-              </span>
-              <br />
-              Affects the oesophagus, the tube connecting the throat to the
-              stomach
-            </p>
-            <p className="font-light">
-              <span className="font-medium text-lg text-hciPrimary">
-                Stomach Cancer (Ca Stomach)
-              </span>
-              <br />
-              Also known as gastric cancer, originating from the stomach lining.
-            </p>
-            <p className="font-light">
-              <span className="font-medium text-lg text-hciPrimary">
-                Colon Cancer (Ca Colon)
-              </span>
-              <br />
-              Develops in the colon, the initial part of the large intestine.
-            </p>
-            <p className="font-light">
-              <span className="font-medium text-lg text-hciPrimary">
-                Rectal Cancer (Ca Rectum)
-              </span>
-              <br />
-              Forms in the rectum, the lower part of the large intestine before
-              the anus.
-            </p>
-            <p className="font-light">
-              <span className="font-medium text-lg text-hciPrimary">
-                Gallbladder Cancer (Ca Gallbladder)
-              </span>
-              <br />
-              Begins in the gallbladder, a small organ beneath the liver that
-              stores bile.
-            </p>
-            <p className="font-light">
-              <span className="font-medium text-lg text-hciPrimary">
-                Pancreatic Cancer (Ca Pancreas)
-              </span>
-              <br />
-              Originates in the pancreas, an organ involved in digestion and
-              hormone production.
-            </p>
+            <H3 title="Types of Cancers of the Digestive System" className="font-medium mb-4 text-start text-2xl" />
+            <div className="space-y-4 border border-gray-300 shadow-lg rounded-lg p-4">
+
+              <p className="font-light">
+                <span className="font-medium text-lg text-hciPrimary">
+                  Oesophageal Cancer (Ca Oesophagus)
+                </span>
+                <br />
+                Affects the oesophagus, the tube connecting the throat to the
+                stomach
+              </p>
+              <p className="font-light">
+                <span className="font-medium text-lg text-hciPrimary">
+                  Stomach Cancer (Ca Stomach)
+                </span>
+                <br />
+                Also known as gastric cancer, originating from the stomach lining.
+              </p>
+              <p className="font-light">
+                <span className="font-medium text-lg text-hciPrimary">
+                  Colon Cancer (Ca Colon)
+                </span>
+                <br />
+                Develops in the colon, the initial part of the large intestine.
+              </p>
+              <p className="font-light">
+                <span className="font-medium text-lg text-hciPrimary">
+                  Rectal Cancer (Ca Rectum)
+                </span>
+                <br />
+                Forms in the rectum, the lower part of the large intestine before
+                the anus.
+              </p>
+              <p className="font-light">
+                <span className="font-medium text-lg text-hciPrimary">
+                  Gallbladder Cancer (Ca Gallbladder)
+                </span>
+                <br />
+                Begins in the gallbladder, a small organ beneath the liver that
+                stores bile.
+              </p>
+              <p className="font-light">
+                <span className="font-medium text-lg text-hciPrimary">
+                  Pancreatic Cancer (Ca Pancreas)
+                </span>
+                <br />
+                Originates in the pancreas, an organ involved in digestion and
+                hormone production.
+              </p>
             </div>
-            </div>
+          </div>
           <div className="mt-20">
             <img src="/gastroenterology/digestive-system.png" alt="" />
           </div>
         </div>
-          <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
+        <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         {/* <p className="font-light">
           Several factors can contribute to the development of digestive system
           cancers. Understanding these risk factors is crucial for prevention
@@ -345,7 +345,13 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Cancers Of The Digestive System And Its Treatment, Click Here
+          </button>
+        </p>
+
 
         <div className="grid lg:grid-cols-1 gap-4">
           <div className="space-y-4">
@@ -353,7 +359,7 @@ function GeneralSurgery() {
               title="Symptoms"
               // text="Digestive system cancers can present with various symptoms, which may include:"
               textCss="font-light py-4"
-              
+
               titleCss="text-black font-medium text-center text-xl pb-4 mt-4"
               header=""
               data={data.symptoms}

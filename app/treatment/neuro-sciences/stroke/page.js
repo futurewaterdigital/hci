@@ -149,7 +149,7 @@ function GeneralSurgery() {
           following are common types of benign peripheral nerve tumours:
         </p> */}
         {/* <DataSurgery data={data.section_1} /> */}
-        <div className="grid grid-cols-2 gap-4 pb-4">
+        <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
@@ -159,6 +159,12 @@ function GeneralSurgery() {
             />
           ))}
         </div>
+        <p className="text-start text-hciPrimary underline font-semibold capitalize py-4 text-lg">
+          <button className="text-start underline">
+          To Know More About A Stroke And Its Treatment, Click Here
+          </button>
+        </p>
+  
         <H2 title="Risk Factors" className="font-medium mb-4 text-center text-2xl" />
         <div className="grid grid-cols-2 gap-4">
           <div>

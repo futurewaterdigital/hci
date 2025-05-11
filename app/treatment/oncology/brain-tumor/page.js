@@ -530,17 +530,17 @@ const mainGastro = [
 
 const tumorInfo = [
   {
-    title: "What is brain tumor?",
+    title: "What is Brain Tumor?",
     description:
       "A brain tumor is a growth of abnormal cells in the brain. The anatomy of the brain is very complex, with different parts responsible for different nervous system functions. Brain tumors can develop in any part of the brain or skull, including its protective lining, the underside of the brain (skull base), the brainstem, the sinuses and the nasal cavity, and many other areas. There are more than 120 different types of tumors that can develop in the brain, depending on what tissue they arise from.",
   },
   {
-    title: "How common are brain tumors, and are they dangerous?",
+    title: "How Common are Brain Tumors, and are they Dangerous?",
     description:
       "Brain and nervous system tumors affect about 30 adults out of 100,000. Brain tumors are dangerous because they can put pressure on healthy parts of the brain or spread into those areas. Some brain tumors can also be cancerous or become cancerous. They can cause problems if they block the flow of fluid around the brain, which can lead to an increase in pressure inside the skull. Some types of tumors can spread through the spinal fluid to distant areas of the brain or the spine.",
   },
   {
-    title: "How is a tumor different from a brain lesion?",
+    title: "How is a Tumor Different from a Brain Lesion?",
     description:
       "A brain tumor is a specific type of brain lesion. A lesion describes any area of damaged tissue. All tumors are lesions, but not all lesions are tumors. Other brain lesions can be caused by stroke, injury, encephalitis and arteriovenous malformation.",
   },
@@ -761,7 +761,7 @@ function BrainTumor() {
         </p>
         {/*  Brain Cancer Types */}
         <div className="mt-10  text-center font-medium">
-          Common cancers that can spread to the brain are:
+          Common Cancers that can spread to the brain are:
         </div>
         {/* More Link about brain tumor */}
         <div className="my-4">
@@ -856,7 +856,7 @@ function BrainTumor() {
             <p className="mt-2 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
               In general, the most common symptoms of a brain tumor may include:
             </p>
-            <ul className="list-disc mt-2 pl-6  space-y-2 marker:text-red-500">
+            <ul className="list-disc mt-2 pl-6 font-light space-y-2 marker:text-red-500">
               <li>Headaches</li>
               <li>Seizures or convulsions</li>
               <li>Difficulty thinking, speaking or finding words</li>
@@ -880,7 +880,7 @@ function BrainTumor() {
               <h2 className=" font-medium mb-4">
                 Can you have a Brain Tumor with no symptoms?
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 font-light">
                 Brain tumors don&apos;t always cause symptoms. In fact, the most
                 common brain tumor in adults, meningioma, often grows so slowly
                 that it goes unnoticed. Tumors may not start causing symptoms
@@ -891,21 +891,21 @@ function BrainTumor() {
               <h3 className="text-hciSecondary font-medium mb-2">
                 Brain Tumor Causes and Risk Factors
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 font-light">
                 Doctors don&apos;t know why some cells begin to form into tumor
                 cells. It may have something to do with a person&apos;s genes or
                 his or her environment, or both. Some potential brain tumor
                 causes and risk factors may include:
               </p>
 
-              <div className="bg-blue-100 p-3 mb-2 rounded">
+              <div className="bg-blue-100 p-3 mb-2 rounded font-light">
                 Cancers that spread from other parts of the body
               </div>
-              <div className="bg-blue-100 p-3 mb-2 rounded">
+              <div className="bg-blue-100 p-3 mb-2 rounded font-light">
                 Certain genetic conditions that predispose a person to
                 overproduction of certain cells
               </div>
-              <div className="bg-blue-100 p-3 mb-2 rounded">
+              <div className="bg-blue-100 p-3 mb-2 rounded font-light">
                 Exposure to some forms of radiation
               </div>
             </div>
@@ -914,13 +914,13 @@ function BrainTumor() {
               <h2 className=" font-medium mb-4">
                 Are Brain Tumors hereditary?
               </h2>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 font-light">
                 Genetics are to blame for a small number (fewer than 5%) of
                 brain tumors. Some inherited conditions put individuals at
                 greater risk of developing tumors, including:
               </p>
 
-              <ul className="list-disc pl-8 space-y-2  marker:text-hciSecondary">
+              <ul className="list-disc pl-8 space-y-2 font-light marker:text-hciSecondary">
                 <li className="text-gray-700">Neurofibromatosis</li>
                 <li className="text-gray-700">
                   Von Hippel-Lindau disease Li-Fraumeni syndrome
@@ -964,7 +964,7 @@ function BrainTumor() {
                     <span className="text-hciSecondary font-medium mr-2">
                       •
                     </span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 font-light">
                       A neurological exam may include a variety of tests to
                       evaluate neurological functions such as balance, hearing,
                       vision and reflexes.
@@ -975,7 +975,7 @@ function BrainTumor() {
                     <span className="text-hciSecondary font-medium mr-2">
                       •
                     </span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 font-light">
                       A variety of imaging techniques, including CT (or CAT)
                       scan, MRI, occasionally an angiogram or X-rays can be used
                       to identify the tumor, pinpoint its location and/or assess
@@ -987,7 +987,7 @@ function BrainTumor() {
                     <span className="text-hciSecondary font-medium mr-2">
                       •
                     </span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 font-light">
                       If doctors cannot safely perform a{" "}
                       <span className="font-medium">biopsy</span> (tissue sample
                       collection and analysis), they will diagnose the brain
@@ -1012,7 +1012,7 @@ function BrainTumor() {
                     <span className="text-hciSecondary font-medium mr-2">
                       •
                     </span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 font-light">
                       Lumbar puncture to collect a sample of cerebrospinal fluid
                       and see if it contains traces of the tumor cells.
                     </span>
@@ -1022,7 +1022,7 @@ function BrainTumor() {
                     <span className="text-hciSecondary font-medium mr-2">
                       •
                     </span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 font-light">
                       Evoked potentials studies to measure electrical activity
                       in the nerves and/or electroencephalography (EEG) to
                       measure electrical activity in the brain.
@@ -1033,7 +1033,7 @@ function BrainTumor() {
                     <span className="text-hciSecondary font-medium mr-2">
                       •
                     </span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 font-light">
                       Neurocognitive assessment to evaluate any changes in
                       cognition and well-being.
                     </span>
@@ -1043,7 +1043,7 @@ function BrainTumor() {
                     <span className="text-hciSecondary font-medium mr-2">
                       •
                     </span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 font-light">
                       Neuro-ophthalmological examination to assess for signs of
                       tumor affecting the eyes.
                     </span>
@@ -1053,14 +1053,14 @@ function BrainTumor() {
                     <span className="text-hciSecondary font-medium mr-2">
                       •
                     </span>
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 font-light">
                       Endocrinological evaluation to assess hormone function.
                     </span>
                   </li>
                 </ul>
               </div>
 
-              <p className="text-gray-700 mt-4">
+              <p className="text-gray-700 mt-4 font-light">
                 Proper diagnosis is essential in determining the best course of
                 treatment.
               </p>
@@ -1412,7 +1412,7 @@ function BrainTumor() {
           ))}
         </div>
 
-        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed text-2xl font-medium">
+        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed text-2xl">
           There are different types of rehabilitation specialists who can help
           you
         </p>

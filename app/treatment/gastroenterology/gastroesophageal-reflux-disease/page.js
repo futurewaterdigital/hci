@@ -2,13 +2,15 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinkGastroenterologys from "@/components/cardiacComponents/FooterLinkGastroenterology";
 import H2 from "@/components/ui/h2";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import H1 from "@/components/ui/h1";
 import IssuesLinks from "@/components/ui/IssuesLinks";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
+
 
 const data = {
   title: "Gastroesophageal Reflux Disease (GERD)",
@@ -364,7 +366,7 @@ function GeneralSurgery() {
             ulClass="list-disc list-outside"
             boxClass="bg-hciYellow"
           />
-          <KnowMore title={data.title} />
+          <CausesKnowMore title={data.title} />
         </div>
 
         <div className="grid grid-cols-1 gap-4 pt-8">
@@ -414,12 +416,12 @@ function GeneralSurgery() {
             />
           </div>
 
-          <KnowMore title={data.title} />
+          {/* <KnowMore title={data.title} /> */}
         </div>
 
         <Conclusion data={footerData} />
 
-        <FooterLinks head={data.title} />
+        <FooterLinkGastroenterologys head={data.title} />
         <BookButton />
       </div>
     </>

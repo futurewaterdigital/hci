@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinkGastroenterology from "@/components/cardiacComponents/FooterLinkGastroenterology";
 import H2 from "@/components/ui/h2";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
@@ -10,6 +10,7 @@ import Conclusion from "@/components/cardiacComponents/Conclusion";
 import H1 from "@/components/ui/h1";
 import IssuesLinks from "@/components/ui/IssuesLinks";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
 
 const data = {
   title: "Gastroenteritis",
@@ -374,7 +375,7 @@ function GeneralSurgery() {
             ulClass="list-disc list-outside"
             boxClass="bg-hciYellow h-[220px]"
           />
-          <KnowMore title={data.title} />
+          <CausesKnowMore title={data.title} />
         </div>
         <H2
           title="Symptoms"
@@ -440,7 +441,7 @@ function GeneralSurgery() {
         </div>
 
         <Conclusion data={footerData} />
-        <FooterLinks head={data.title} />
+        <FooterLinkGastroenterology head={data.title} />
         <BookButton />
       </div>
     </>

@@ -11,9 +11,9 @@ import TextComponent from '@/components/Common/TextComponent'
 import IssuesLinks from '@/components/ui/IssuesLinks'
 import H1 from '@/components/ui/h1'
 const data = {
-  title: "Traumatic Brain Injuries (TBI)",
+  title: "Traumatic Brain Injuries ",
   bannerImage: "/neuro-sciences/traumatic-brain-injuries.png",
-  description: `A Traumatic Brain Injury (TBI) refers to damage to the brain resulting from an external mechanical force, which can have significant and lasting effects on a person’s cognitive, physical, and emotional well-being. In India, TBIs are a growing health concern, often linked to road accidents, falls, and sports-related injuries. Understanding TBI is vital for timely intervention and rehabilitation, enhancing recovery and quality of life.`,
+  description: `A Traumatic Brain Injury (TBI) refers to damage to the brain resulting from an external mechanical force, which can have significant and lasting effects on a person’s cognitive, physical, and emotional well-being. TBIs are a growing health concern, often linked to road accidents, falls, and sports-related injuries. Understanding TBI is vital for timely intervention and rehabilitation, enhancing recovery and quality of life.`,
   overview: ``,
 
   section_1: [
@@ -198,7 +198,14 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Trigeminal Neuralgia And Its Treatment, Click Here
+          </button>
+        </p>
+
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>

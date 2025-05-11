@@ -6,6 +6,7 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
 import KnowMore from '@/components/ui/KnowMore'
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
@@ -305,11 +306,11 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
+
         <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
-       
+
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl mt-12" />
         <div className="grid grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
@@ -321,11 +322,11 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <KnowMore title={data.title} />
+        <CausesKnowMore title={data.title} />
 
         <div className="space-y-8">
           <div>
-            <H2 title="Symptoms" className="font-medium mb-4 text-center text-2xl mt-12"/>
+            <H2 title="Symptoms" className="font-medium mb-4 text-center text-2xl mt-12" />
             <DataLists
               divClass="grid grid-cols-3 gap-4"
               data={data.symptoms_data}
@@ -347,7 +348,7 @@ function GeneralSurgery() {
             />
           </div>
         </div>
-        <IssuesLinks head={data.title} />
+        {/* <IssuesLinks head={data.title} /> */}
 
         <div className="pt-12">
           <H2
@@ -362,7 +363,14 @@ function GeneralSurgery() {
             />
           </div>
         </div>
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Get The Best Diagnosis For Celiac Disease and Related Issues, Click Here
+          </button>
+        </p>
+
 
         <Conclusion data={data.conclusion} />
         <FooterLinks head={data.title} />

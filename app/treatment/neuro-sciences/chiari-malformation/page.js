@@ -90,7 +90,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      In India, the recognition and treatment of Chiari malformation is growing, with advancements in diagnostic imaging and surgical techniques. Early intervention and a multidisciplinary approach involving neurologists, neurosurgeons, and rehabilitation specialists are essential for optimizing outcomes and improving the quality of life for individuals affected by this condition. With appropriate care, many patients can manage their symptoms effectively and lead fulfilling lives.
+      The recognition and treatment of Chiari malformation is growing, with advancements in diagnostic imaging and surgical techniques. Early intervention and a multidisciplinary approach involving neurologists, neurosurgeons, and rehabilitation specialists are essential for optimizing outcomes and improving the quality of life for individuals affected by this condition. With appropriate care, many patients can manage their symptoms effectively and lead fulfilling lives.
           `,
     },
   ],
@@ -198,7 +198,13 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Chiari Malformation And Its Treatment, Click Here
+          </button>
+        </p>
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>
@@ -222,7 +228,12 @@ function GeneralSurgery() {
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              <IssuesLinks head={data.title} />
+              {/* <IssuesLinks head={data.title} /> */}
+              <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+                <button className="text-start underline">
+                  To Get The Best Diagnosis For Chiari Malformation And Related Issues, Click Here
+                </button>
+              </p>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ import H3 from "@/components/ui/h3";
 import Link from "next/link";
 
 const data = {
-  title: "Gynecological Cancers",
+  title: "Endometrial Cancers",
   title_1: "Endometrial / Uterine Cancer",
   bannerImage: "/oncology/gynecological-cancers-banner.png",
   bannerImage_1: "/oncology/gynecological-cancers.png",
@@ -42,9 +42,9 @@ const data = {
       heading: "Transvaginal Ultrasound",
       description: "Uses sound waves to create images of the uterus",
       aneurysmSymptoms: [
-        {description: "Non-invasive imaging technique"},
-        {description: "Creates detailed images of the uterine cavity"},
-        {description: "Helps measure endometrial thickness"},
+        { description: "Non-invasive imaging technique" },
+        { description: "Creates detailed images of the uterine cavity" },
+        { description: "Helps measure endometrial thickness" },
       ],
     },
     {
@@ -52,9 +52,9 @@ const data = {
       description:
         "A sample of the uterine lining is taken for laboratory analysis",
       aneurysmSymptoms: [
-        {description: "Confirms presence of cancer cells"},
-        {description: "Determines cancer type and grade"},
-        {description: "Usually performed in office"},
+        { description: "Confirms presence of cancer cells" },
+        { description: "Determines cancer type and grade" },
+        { description: "Usually performed in office" },
       ],
     },
     {
@@ -62,9 +62,9 @@ const data = {
       description:
         "A thin tube with a camera is inserted into the uterus to examine the lining",
       aneurysmSymptoms: [
-        {description: "Direct visualization of the uterine cavity"},
-        {description: "Can identify abnormal growths"},
-        {description: "Allows for targeted biopsies"},
+        { description: "Direct visualization of the uterine cavity" },
+        { description: "Can identify abnormal growths" },
+        { description: "Allows for targeted biopsies" },
       ],
     },
   ],
@@ -77,12 +77,14 @@ const data = {
         {
           title: "Hysterectomy",
           description:
-            "Removal of the uterus and surrounding tissues (may include ovaries and lymph nodes)",
+            "Removal of the uterus and sometimes the ovaries and fallopian tubes (bilateral salpingo-oophorectomy).",
         },
         {
           title: "Lymph Node Removal",
-          description:
-            "Nearby lymph nodes may be removed to check for cancer spread",
+          description: [
+            "Nearby lymph nodes may also be removed to check for cancer spread.",
+            "Surgery is the primary treatment in most cases, especially for early-stage cancer."
+          ],
         },
       ],
     },
@@ -93,12 +95,12 @@ const data = {
         {
           title: "External Beam Radiation Therapy (EBRT)",
           description:
-            "High-energy beams target cancer cells from outside the body",
+            "High-energy beams target cancer cells from outside the body.",
         },
         {
           title: "Brachytherapy",
           description:
-            "A radiation source is placed directly near the cancer site",
+            "A radioactive source is placed inside the vagina to target the cancer site more directly.",
         },
       ],
     },
@@ -106,18 +108,18 @@ const data = {
       heading: "Hormone Therapy",
       description: "Hormonal treatment approach",
       aneurysmSymptoms: [
-        {description: "Used for advanced or recurrent cases"},
-        {description: "May include progesterone therapy"},
-        {description: "Can help slow cancer growth"},
+        { description: "Used for advanced or recurrent cases, hormone therapy involves progesterone or anti-estrogen drugs like megestrol acetate." },
+        { description: "This therapy helps slow the cancer’s growth, especially in cancers that depend on hormones like estrogen." },
+        // { description: "Can help slow cancer growth" },
       ],
     },
     {
       heading: "Chemotherapy",
       description: "Systemic treatment with drugs",
       aneurysmSymptoms: [
-        {description: "Commonly uses carboplatin and paclitaxel"},
-        {description: "Used for advanced stage or high-grade cancer"},
-        {description: "May be combined with radiation for better outcomes"},
+        { description: "Common drugs include carboplatin and paclitaxel. Chemotherapy is recommended for advanced-stage or high-grade cancers." },
+        { description: "It may be given alone or combined with radiation or other treatments for better outcomes." },
+        // { description: "May be combined with radiation for better outcomes" },
       ],
     },
     {
@@ -125,9 +127,11 @@ const data = {
       description: "Precision medicine approach",
       aneurysmSymptoms: [
         {
-          title: "Lenvatinib",
-          description:
-            "Used to target specific molecular pathways involved in cancer growth",
+          title: "",
+          description: [
+            "Drugs like <b>lenvatinib</b> (used with pembrolizumab) target specific molecular pathways involved in cancer growth.",
+            "Targeted therapy is mainly used for advanced cases or when cancer has spread.",
+          ],
         },
       ],
     },
@@ -138,7 +142,7 @@ const data = {
         {
           title: "Immune Checkpoint Inhibitors",
           description:
-            "Like pembrolizumab, help the immune system fight cancer by blocking proteins that prevent immune attacks",
+            "Immune Checkpoint Inhibitors like pembrolizumab help the immune system fight cancer by blocking proteins that prevent immune attacks.",
         },
       ],
     },
@@ -195,6 +199,7 @@ const womenCancerTypes = [
   },
 ];
 
+
 function EndometrialCancer() {
   return (
     <>
@@ -228,10 +233,15 @@ function EndometrialCancer() {
         <p className="text-start font-light">{data.description_1}</p>
         <H2
           title={data.causes[0].heading}
-          className="text-xl font-semibold mb-4 text-center"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="text-start font-light mb-20">
           {data.causes[0].description}
+        </p>
+        <p className="text-start text-hciPrimary underline font-semibold capitalize text-lg">
+          <button className="text-start underline">
+            To know more about The Best treatment for endometrial cancer, click here
+          </button>
         </p>
         {/* <Link
           href="/treatment/oncology/endometrial-cancer-info"
@@ -242,10 +252,9 @@ function EndometrialCancer() {
         </Link> */}
         <H2
           title={data.causes_1[0].heading}
-          className="text-lg font-semibold mb-4 text-center"
+          className="text-2xl font-semibold mb-4 text-center"
         />
         <p className="text-start font-light">{data.causes_1[0].description}</p>
-
         <div className="grid grid-cols-3 gap-6">
           {data.diagnosis.map((diagnosis, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6">
@@ -275,6 +284,11 @@ function EndometrialCancer() {
             </div>
           </div> */}
         </div>
+        <p className="text-start text-hciPrimary underline font-semibold capitalize text-lg">
+          <button className="text-start underline">
+            To get the best diagnosis of endometrial cancer and related issues, click here
+          </button>
+        </p>
 
         <H2
           title="Treatments"
@@ -299,14 +313,34 @@ function EndometrialCancer() {
               <ul className="space-y-2">
                 {treatment.aneurysmSymptoms.map((symptom, idx) => (
                   <li key={idx} className="text-gray-700 font-light">
-                    {symptom.title && <strong>{symptom.title}: </strong>}
-                    {symptom.description}
+                    {Array.isArray(symptom.description) ? (
+                      <div className="space-y-2">
+                        <p>
+                          {symptom.title && <strong>{symptom.title}: </strong>}
+                          {symptom.description[0]}
+                        </p>
+                        {symptom.description.slice(1).map((para, i) => (
+                          <p key={i} className="mt-1">{para}</p>
+                        ))}
+                      </div>
+                    ) : (
+                      <p>
+                        {symptom.title && <strong>{symptom.title}: </strong>}
+                        {symptom.description}
+                      </p>
+                    )}
                   </li>
                 ))}
               </ul>
+
             </div>
           ))}
         </div>
+        <p className="text-start text-hciPrimary underline font-semibold capitalize text-lg">
+          <button className="text-start underline">
+            To know more about endometrial cancer and its causes and treatment, click here
+          </button>
+        </p>
 
         <Conclusion data={data.conclusion} />
 

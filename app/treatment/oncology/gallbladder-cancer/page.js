@@ -6,7 +6,7 @@ import Banner from "@/components/Common/Banner";
 const data = {
   title: "Gallbladder Cancer",
   description:
-    "Gallbladder cancer is a rare but aggressive form of cancer that originates in the gallbladder, a small organ located between the liver that stores bile. Although it is uncommon, gallbladder cancer poses a significant health concern, particularly in certain populations, including those in India. Early detection is crucial for improving treatment outcomes, as this cancer is often diagnosed at an advanced stage.",
+    "Gallbladder cancer is a rare but aggressive form of cancer that originates in the gallbladder, a small organ located beneath the liver that stores bile. Although it is uncommon, gallbladder cancer poses a significant health concern, particularly in certain populations. Early detection is crucial for improving treatment outcomes, as this cancer is often diagnosed at an advanced stage.",
 
   causes: [
     {
@@ -149,9 +149,9 @@ const data = {
         "Higher body mass index (BMI) is associated with an increased risk of developing gallbladder cancer.",
     },
     {
-      title: "Chronic",
+      title: "Chronic Inflammation",
       description:
-        "Inflammation Conditions like chronic cholecystitis (inflammation of the gallbladder) or biliary dyskinesia can increase the risk of gallbladder cancer due to ongoing inflammation.",
+        "Conditions like chronic cholecystitis (inflammation of the gallbladder) or biliary dyskinesia can increase the risk of gallbladder cancer due to ongoing inflammation.",
     },
     {
       title: "Age and Gender",
@@ -236,11 +236,11 @@ const data = {
           description:
             "Liver function tests and tumor markers like CA 19-9 may be assessed to evaluate the overall health of the liver and the presence of cancer.",
         },
-        {
-          title: "Blood Tests",
-          description:
-            "Liver function tests and tumor markers like CA 19-9 may be assessed to evaluate the overall health of the liver and the presence of cancer.",
-        },
+        // {
+        //   title: "Blood Tests",
+        //   description:
+        //     "Liver function tests and tumor markers like CA 19-9 may be assessed to evaluate the overall health of the liver and the presence of cancer.",
+        // },
       ],
     },
   ],
@@ -276,11 +276,11 @@ const data = {
           description:
             "In certain cases, internal radiation therapy may be used, where radioactive material is placed near or within the tumor to provide a higher dose of radiation to cancer cells while sparing normal tissues.",
         },
-        {
-          title: "Combined Radiation Therapy",
-          description:
-            "In some cases, both EBRT and brachytherapy are used to achieve maximum effect, especially when the tumor is large or the cancer has spread beyond the cervix.",
-        },
+        // {
+        //   title: "Combined Radiation Therapy",
+        //   description:
+        //     "In some cases, both EBRT and brachytherapy are used to achieve maximum effect, especially when the tumor is large or the cancer has spread beyond the cervix.",
+        // },
       ],
     },
     {
@@ -304,7 +304,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph:
-        "Gallbladder cancer is a challenging condition that requires timely diagnosis and comprehensive treatment. Despite its rarity, the incidence is rising, particularly in certain demographics in India. Awareness of the risk factors, symptoms, and the importance of regular check-ups is essential for early detection. Treatment advancements, including surgery, targeted therapies, and innovative radiation options like Proton Therapy, offer hope for improved outcomes, highlighting the significance of personalized care tailored to each patient's needs.",
+        "Gallbladder cancer is a challenging condition that requires timely diagnosis and comprehensive treatment. Despite its rarity, the incidence is rising, particularly in certain demographics. Awareness of the risk factors, symptoms, and the importance of regular check-ups is essential for early detection. Treatment advancements, including surgery, targeted therapies, and innovative radiation options like Proton Therapy, offer hope for improved outcomes, highlighting the significance of personalized care tailored to each patient's needs.",
     },
   ],
 
@@ -378,7 +378,7 @@ function GallbladderCancer() {
           To know more about bowel cancer and its treatment, click here
         </Link>
       </div>
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="mt-12 gap-8">
         {/* Causes Section */}
         <div>
           <H2
@@ -401,14 +401,13 @@ function GallbladderCancer() {
               href="/treatment/oncology/cervical-cancer-info"
               className="text-[#0E56A0] font-semibold underline"
             >
-              For More About Cervical Cancer, Its Causes And Treatment, Click
-              Here
+             To know more about gallbladder cancer and its causes and  treatment, click here
             </Link>
           </div>
         </div>
 
         {/* Diagnosis Section */}
-        <div>
+        <div className="mt-10">
           <H2
             title="Diagnosis of Bowel cancer"
             className="text-xl font-semibold mb-4"
@@ -429,8 +428,7 @@ function GallbladderCancer() {
               href="/treatment/oncology/cervical-cancer-diagnosis"
               className="text-[#0E56A0] font-semibold underline"
             >
-              For The Best Diagnosis And Treatment For Cervical Cancer, Click
-              Here
+              To get the best diagnosis of gallbladder cancer and related issues, click here
             </Link>
           </div>
         </div>
@@ -452,7 +450,7 @@ function GallbladderCancer() {
               key={index}
               className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
             >
-              <h2 className="text-xl text-hciPrimary font-bold text-black">
+              <h2 className="text-xl text-hciPrimary font-bold">
                 {treatment.heading}
               </h2>
               {treatment.description && (

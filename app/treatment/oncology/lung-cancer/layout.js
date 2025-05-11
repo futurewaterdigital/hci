@@ -3,7 +3,7 @@ import Header from "@/components/Header/page";
 import Footer from "@/components/Footer/page";
 
 export const metadata = {
-  title: "Liver Cancer",
+  title: "Lung Cancer",
   description:
     "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
   keywords:

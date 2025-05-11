@@ -218,7 +218,7 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
+
         <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
@@ -294,7 +294,14 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Gallbladder Stones And Its Treatment, Click here
+          </button>
+        </p>
+
 
         <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div>
@@ -338,7 +345,7 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.complications}
               ulClass="list-none list-outside"
-              // boxClass="grid grid-cols-2"
+            // boxClass="grid grid-cols-2"
             />
           </div>
           <H2
@@ -352,24 +359,24 @@ function GeneralSurgery() {
           <ul className="list-disc list-inside py-4 space-y-2 font-light text-hciSecondary">
             <li>
               <span className="font-medium ">Maintain a Healthy Weight:</span> <span className="font-light text-black">Gradual weight management helps prevent
-              changes in bile composition.</span>
+                changes in bile composition.</span>
             </li>
             <li>
               <span className="font-medium">Eat a Balanced Diet:</span> <span className="font-light text-black">Opt for fibre-rich foods like fruits,
-              vegetables, and whole grains. Avoid excessive intake of fatty and
-              fried foods.</span>
+                vegetables, and whole grains. Avoid excessive intake of fatty and
+                fried foods.</span>
             </li>
             <li>
               <span className="font-medium">Stay Hydrated:</span> <span className="font-light text-black">Drinking plenty of water helps keep bile flowing
-              smoothly.</span>
+                smoothly.</span>
             </li>
             <li>
               <span className="font-medium">Exercise Regularly:</span> <span className="font-light text-black">Physical activity promotes healthy digestion
-              and overall well-being.</span>
+                and overall well-being.</span>
             </li>
             <li>
               <span className="font-medium">Avoid Crash Diets:</span> <span className="font-light text-black">Losing weight too quickly can increase the risk
-              of gallstones.</span>
+                of gallstones.</span>
             </li>
           </ul>
           {/* <DataLists
@@ -392,7 +399,7 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.data_1}
               ulClass="list-none list-outside"
-              // boxClass="grid grid-cols-2"
+            // boxClass="grid grid-cols-2"
             />
           </div>
         </div>

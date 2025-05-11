@@ -14,7 +14,7 @@ import IssuesLinks from "@/components/ui/IssuesLinks";
 const data = {
   title: "Multiple Sclerosis (MS)",
   bannerImage: "/neuro-sciences/multiple-sclerosis.png",
-  description: `Multiple Sclerosis (MS) is a chronic neurological disorder that affects the central nervous system, which includes the brain and spinal cord. It disrupts the flow of information within the brain and between the brain and the body. MS is considered an autoimmune disease, where the body's immune system mistakenly attacks the protective covering of nerve fibers (myelin), leading to communication problems between the brain and the rest of the body. Over time, this can cause permanent damage to the nerves themselves. India is emerging as a hub for advanced treatment options for MS, offering expertise in neurology, cutting-edge therapies, and comprehensive patient care.`,
+  description: `Multiple Sclerosis (MS) is a chronic neurological disorder that affects the central nervous system, which includes the brain and spinal cord. It disrupts the flow of information within the brain and between the brain and the body. MS is considered an autoimmune disease, where the body's immune system mistakenly attacks the protective covering of nerve fibers (myelin), leading to communication problems between the brain and the rest of the body. Over time, this can cause permanent damage to the nerves themselves. The region is emerging as a hub for advanced treatment options for MS, offering expertise in neurology, cutting-edge therapies, and comprehensive patient care.`,
   overview: ``,
 
   section_1: [
@@ -128,7 +128,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-     Multiple Sclerosis is a complex and unpredictable disease that significantly impacts the lives of those affected. While the disease presents unique challenges, advances in treatments and therapies offer hope for better disease management and improved quality of life. India’s healthcare infrastructure, with its access to cutting-edge neurology care and personalized treatment plans, has become a destination for patients seeking high-quality MS treatment. Early diagnosis and an individualized approach to therapy are key to managing MS effectively and slowing its progression.
+     Multiple Sclerosis is a complex and unpredictable disease that significantly impacts the lives of those affected. While the disease presents unique challenges, advances in treatments and therapies offer hope for better disease management and improved quality of life. The healthcare infrastructure, with its access to cutting-edge neurology care and personalized treatment plans, has become a destination for patients seeking high-quality MS treatment. Early diagnosis and an individualized approach to therapy are key to managing MS effectively and slowing its progression.
           `,
     },
   ],
@@ -245,7 +245,14 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Multiple Sclerosis And Its Treatment, Click Here
+          </button>
+        </p>
+
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>

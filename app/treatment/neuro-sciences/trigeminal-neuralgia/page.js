@@ -13,7 +13,7 @@ import TextComponent from "@/components/Common/TextComponent";
 const data = {
   title: "Trigeminal Neuralgia",
   bannerImage: "/neuro-sciences/trigeminal-neuralgia.png",
-  description: `Trigeminal neuralgia, often referred to as "tic douloureux," is a neurological disorder characterised by sudden, severe, and recurrent facial pain. It primarily affects the trigeminal nerve, which is responsible for sensation in the face and motor functions such as biting and chewing. This condition can have a significant impact on an individual's quality of life, leading to debilitating episodes of pain that can be triggered by everyday activities like talking, eating, or even touching the face. In India, trigeminal neuralgia is a recognized health issue, particularly among older adults.`,
+  description: `Trigeminal neuralgia, often referred to as "tic douloureux," is a neurological disorder characterised by sudden, severe, and recurrent facial pain. It primarily affects the trigeminal nerve, which is responsible for sensation in the face and motor functions such as biting and chewing. This condition can have a significant impact on an individual's quality of life, leading to debilitating episodes of pain that can be triggered by everyday activities like talking, eating, or even touching the face. Trigeminal neuralgia is a recognized health issue, particularly among older adults.`,
   overview: ``,
 
   section_1: [
@@ -116,7 +116,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-     Access to advanced diagnostic tools and a wide range of treatment options has greatly improved the management of trigeminal neuralgia. Early intervention and a personalized treatment approach are essential for relieving pain and improving the quality of life for those affected by this challenging condition.
+    Access to advanced diagnostic tools and a wide range of treatment options has greatly improved the management of trigeminal neuralgia. Early intervention and a personalized treatment approach are essential for relieving pain and improving the quality of life for those affected by this challenging condition.
           `,
     },
   ],

@@ -7,7 +7,7 @@ import Banner from "@/components/Common/Banner";
 const data = {
   title: "Oesophagus Cancer",
   description:
-    "Oesophagus cancer is a type of cancer that develops in the long, hollow tube connecting the throat to the stomach, known as the oesophagus. It plays a key role in moving food from the mouth to the stomach for digestion. This type of cancer often begins in the cells lining the oesophagus and can spread to other parts of the body if not treated early. It is one of the leading types of cancers in India, particularly affecting individuals over the age of 50, with lifestyle factors and dietary habits contributing significantly to its risk.",
+    "Oesophagus cancer is a type of cancer that develops in the long, hollow tube connecting the throat to the stomach, known as the oesophagus. It plays a key role in moving food from the mouth to the stomach for digestion. This type of cancer often begins in the cells lining the oesophagus and can spread to other parts of the body if not treated early. It is one of the leading types of cancers, particularly affecting individuals over the age of 50, with lifestyle factors and dietary habits contributing significantly to its risk.",
 
   causes: [
     {
@@ -28,7 +28,7 @@ const data = {
         },
         {
           title: "Gastroesophageal Reflux Disease (GERD)",
-          description: `Chronic acid reflux can lead to Barrett's oesophagus, a precursor to oesophageal cancer.'`,
+          description: `Chronic acid reflux can lead to Barrett's oesophagus, a precursor to oesophageal cancer.`,
           className: "bg-yellow-100 p-4 rounded-lg",
         },
         {
@@ -226,10 +226,10 @@ function OesophagusCancer() {
           {data.causes[0].items.map((factor, index) => (
             <div
               key={index}
-              className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]"
+              className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col h-full min-h-[120px]"
             >
               <h3 className="font-bold text-base mb-1">{factor.title}</h3>
-              <p className="text-sm text-gray-900 leading-snug">
+              <p className="text-sm text-gray-900 leading-snug py-2 font-light">
                 {factor.description}
               </p>
             </div>
@@ -253,7 +253,9 @@ function OesophagusCancer() {
         <div className="space-y-2">
           {data.symptoms[0].items.map((symptom, idx) => (
             <div key={idx} className={symptom.className}>
-              <strong>{symptom.title}:</strong> {symptom.description}
+              <strong>{symptom.title}:</strong>{" "}
+              <span className="font-light">{symptom.description}</span>
+
             </div>
           ))}
         </div>
@@ -279,7 +281,8 @@ function OesophagusCancer() {
         <div className="space-y-2">
           {data.diagnosis[0].items.map((test, idx) => (
             <div key={idx} className={test.className}>
-              <strong>{test.title}:</strong> {test.description}
+              <strong>{test.title}: </strong> 
+              <span className="font-light">{test.description}</span>
             </div>
           ))}
         </div>
@@ -289,8 +292,7 @@ function OesophagusCancer() {
           href="/treatment/oncology/oesophagus-cancer-causes"
           className="text-[#0E56A0] font-semibold underline"
         >
-          To Know More About Oesophagus Cancer And Its Causes And Treatment,
-          Click Here
+          To get the best diagnosis For liver cancer and related issues, click here
         </Link>
       </div>
       {/* Treatments Section */}
@@ -310,7 +312,7 @@ function OesophagusCancer() {
               key={index}
               className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
             >
-              <h2 className="text-xl text-hciPrimary font-bold text-black">
+              <h2 className="text-xl text-hciPrimary font-bold">
                 {treatment.heading}
               </h2>
               {treatment.description && (
@@ -320,12 +322,12 @@ function OesophagusCancer() {
               )}
               <div className="space-y-4">
                 {treatment?.aneurysmSymptoms?.map((item, idx) => (
-                  <div key={idx} className="text-gray-600">
+                  <div key={idx} className="text-gray-600 ">
                     <span className="text-[#D84498]">
                       {" "}
                       {item.title && <strong>{item.title}: </strong>}
                     </span>
-                    {item.description}
+                   <span className="font-light"> {item.description} </span>
                   </div>
                 ))}
               </div>

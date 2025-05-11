@@ -16,19 +16,19 @@ const commonCauses = [
   {
     title: "Coronary artery disease",
     description:
-      "Occurs when arteries supplying blood to the heart muscle become narrow, causing the heart to work harder.",
+      "This occurs when the arteries that supply blood to the heart muscle become narrow, causing the heart to work harder to pump blood. Eventually, coronary artery disease can weaken the heart muscle and affect the heart’s pumping ability.",
     bgColor: "bg-hciSecondary text-white",
   },
   {
     title: "Heart attack",
     description:
-      "Can cause scar tissue that interferes with the heart's ability to pump.",
+      "A heart attack (myocardial infarction) can cause scar tissue that interferes with the heart’s ability to pump. Heart attacks are usually caused by blockages in the heart’s arteries.",
     bgColor: "bg-hciSecondary text-white",
   },
   {
     title: "High blood pressure",
     description:
-      "Increased pressure on artery walls can lead to heart failure.",
+      "Also called hypertension, this increased pressure on the artery walls can lead to heart failure.",
     bgColor: "bg-hciSecondary text-white",
   },
 ];
@@ -37,7 +37,7 @@ const otherCauses = [
   {
     category: "Cardiomyopathy",
     description:
-      "Disease in the heart muscle that makes the heart less able to pump blood effectively.",
+      "This is a disease in the heart muscle that makes the heart less able to pump blood effectively. Several conditions can cause cardiomyopathy, including amyloidosis and sarcoidosis.",
     bgColor: "bg-hciSecondary text-white",
   },
   {
@@ -49,7 +49,7 @@ const otherCauses = [
   {
     category: "Lung disease",
     description:
-      "Conditions like COPD, emphysema, or pulmonary embolism can cause low oxygen levels, straining the heart.",
+      "Examples include chronic obstructive pulmonary disease (COPD), emphysema or pulmonary embolism (blood clot in the lungs). Lung conditions often cause low oxygen levels. Low oxygen can put extra strain on the heart, weakening it and possibly leading to heart failure.",
     bgColor: "bg-hciSecondary text-white",
   },
   {
@@ -269,7 +269,7 @@ export default function page() {
 
         <div className="space-y-4">
           <H2
-            title="What causes heart failure?"
+            title="What Causes Heart Failure?"
             className="text-center font-medium mt-8 text-2xl"
           />
           <p className="mt-4 text-start font-light">
@@ -371,7 +371,7 @@ export default function page() {
                   </span>
                 </li>
                 <li>
-                  <span class="text-black">
+                  <span class="text-black ">
                     Ejection fraction is the percentage of blood the left
                     ventricle of the heart pumps out with every beat. A normal,
                     healthy ejection fraction is 55% to 65%.
@@ -456,7 +456,7 @@ export default function page() {
                 blood pressure and weight. They will also ask about your:
               </p>
               <ul class="space-y-2">
-                <li class="flex items-start">
+                <li class="flex items-start p-0">
                   <span class="text-pink-500 mr-2 text-2xl">•</span>
                   <span class="text-md font-light">
                     Family&apos;s medical history, especially previous cardiac
@@ -668,19 +668,19 @@ export default function page() {
               </h3>
               <ul class="space-y-2 text-gray-700 font-light">
                 <li class="flex items-start">
-                  <span class="text-pink-500 mr-2">•</span>
+                  <span class="text-pink-500 mr-2 text-2xl">•</span>
                   Addressing any underlying causes
                 </li>
                 <li class="flex items-start">
-                  <span class="text-pink-500 mr-2">•</span>
+                  <span class="text-pink-500 mr-2 text-2xl">•</span>
                   Relieving symptoms
                 </li>
                 <li class="flex items-start">
-                  <span class="text-pink-500 mr-2">•</span>
+                  <span class="text-pink-500 mr-2 text-2xl">•</span>
                   Improving overall health
                 </li>
                 <li class="flex items-start">
-                  <span class="text-pink-500 mr-2">•</span>
+                  <span class="text-pink-500 mr-2 text-2xl">•</span>
                   Education and lifestyle choices
                 </li>
               </ul>
@@ -694,37 +694,37 @@ export default function page() {
             </h3>
             <ul class="space-y-2 text-gray-700 font-light">
               <li class="flex items-start">
-                <span class="text-pink-500 mr-2">•</span>
+                <span class="text-pink-500 mr-2 text-2xl">•</span>
                 Controlling blood pressure and controlling blood sugar (if you
                 have diabetes)
               </li>
               <li class="flex items-start">
-                <span class="text-pink-500 mr-2">•</span>
+                <span class="text-pink-500 mr-2 text-2xl">•</span>
                 Eating a heart-healthy diet, including controlling sodium
               </li>
               <li class="flex items-start">
-                <span class="text-pink-500 mr-2">•</span>
+                <span class="text-pink-500 mr-2 text-2xl">•</span>
                 Participating in moderate exercise
               </li>
               <li class="flex items-start">
-                <span class="text-pink-500 mr-2">•</span>
+                <span class="text-pink-500 mr-2 text-2xl ">•</span>
                 Recognizing small warning signs in your body, such as swelling
                 or weight gain
               </li>
               <li class="flex items-start">
-                <span class="text-pink-500 mr-2">•</span>
+                <span class="text-pink-500 mr-2 text-2xl">•</span>
                 Getting enough sleep
               </li>
               <li class="flex items-start">
-                <span class="text-pink-500 mr-2">•</span>
+                <span class="text-pink-500 mr-2 text-2xl">•</span>
                 Losing weight if necessary
               </li>
               <li class="flex items-start">
-                <span class="text-pink-500 mr-2">•</span>
+                <span class="text-pink-500 mr-2 text-2xl">•</span>
                 Quitting smoking
               </li>
               <li class="flex items-start">
-                <span class="text-pink-500 mr-2">•</span>
+                <span class="text-pink-500 mr-2 text-2xl">•</span>
                 Avoiding alcohol
               </li>
             </ul>

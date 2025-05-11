@@ -73,34 +73,33 @@ const data = {
       items: [
         {
           title: "Surgery",
-          items: [
-            {
-              name: "Whipple Procedure",
-              description:
-                "Removal of the head of the pancreas, part of the stomach, and other nearby structures.",
-            },
-            {
-              name: "Distal Pancreatectomy",
-              description: "Removal of the body and tail of the pancreas.",
-            },
-          ],
         },
         {
-          title: "Radiation Therapy",
-          description: "High-energy rays are used to destroy cancer cells.",
+          title: "Whipple Procedure: ",
+          description: "Removal of the head of the pancreas, part of the stomach, and other nearby structures.",
         },
         {
-          title: "Chemotherapy",
+          title: "Distal Pancreatectomy: ",
+          description:
+            "Removal of the body and tail of the pancreas.",
+        },
+        {
+          title: "Radiation Therapy: ",
+          description:
+            "High-energy rays are used to destroy cancer cells.",
+        },
+        {
+          title: "Chemotherapy: ",
           description:
             "Drugs like gemcitabine or FOLFIRINOX are used to kill cancer cells.",
         },
         {
-          title: "Targeted Therapy",
+          title: "Targeted Therapy: ",
           description:
             "Drugs that target specific cancer cell mechanisms (e.g., PARP inhibitors).",
         },
         {
-          title: "Immunotherapy",
+          title: "Immunotherapy: ",
           description:
             "Boosting the immune system to recognize and fight cancer cells.",
         },
@@ -177,7 +176,7 @@ function PancreaticCancer() {
       <div className="mt-6 text-start">
         <Link
           href="/treatment/oncology/pancreatic-cancer-info"
-          className="text-[#0E56A0] text-semibold"
+          className="text-hciPrimary font-semibold underline"
         >
           To Know More About Pancreatic Cancer And Its Treatment, Click Here
         </Link>
@@ -203,7 +202,7 @@ function PancreaticCancer() {
           <div className="mt-6 text-start">
             <Link
               href="/treatment/oncology/pancreatic-cancer-causes"
-              className="text-[#0E56A0] text-semibold"
+              className="text-hciPrimary font-semibold underline"
             >
               To Know More About Pancreatic Cancer And Its Causes And Treatment,
               Click Here
@@ -215,37 +214,35 @@ function PancreaticCancer() {
         <div className="mt-12">
           <H2
             title={data.treatments[0].heading}
-            className="text-2xl font-semibold mb-6"
+            className="text-2xl font-semibold mb-8"
           />
-          <div className="border border-pink-200 rounded-lg p-6">
+          <div className="border border-pink-200 rounded-lg p-7">
             <div className="space-y-6">
               {data.treatments[0].items.map((treatment, idx) => (
                 <div key={idx} className="space-y-2">
-                  <h2 className="text-lg font-semibold text-pink-600">
-                    {treatment.title}
-                  </h2>
                   {treatment.items ? (
-                    <div className="space-y-2 pl-4">
-                      {treatment.items.map((item, i) => (
-                        <div key={i}>
-                          <span className="font-medium">{item.name}:</span>{" "}
-                          {item.description}
-                        </div>
-                      ))}
-                    </div>
+                    <>
+                      <h2 className="text-lg font-semibold text-hciPrimary">
+                        {treatment.title}
+                      </h2>
+                    </>
                   ) : (
-                    <p className="text-gray-600 font-light">
-                      {treatment.description}
+                    <p className="text-gray-600">
+                      <span className="text-lg font-semibold text-pink-600">
+                        {treatment.title}:
+                      </span>{" "}
+                      <span className="font-light">{treatment.description}</span>
                     </p>
                   )}
                 </div>
               ))}
             </div>
+
           </div>
           <div className="mt-6 text-start">
             <Link
               href="/treatment/oncology/pancreatic-cancer-diagnosis"
-              className="text-[#0E56A0] text-semibold"
+              className="text-hciPrimary font-semibold underline"
             >
               To Get The Best Diagnosis Of Pancreatic Cancer And Related Issues,
               Click Here
@@ -256,11 +253,13 @@ function PancreaticCancer() {
 
       {/* Diagnosis Note */}
       <div className="mt-12">
+      <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
         <p className="text-gray-600 font-light">{data.diagnosis}</p>
       </div>
 
       {/* Links */}
       <div className="mt-8 space-y-4">
+        
         {data.links.map((link, index) => (
           <div key={index} className="text-start">
             <Link

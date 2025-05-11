@@ -14,12 +14,12 @@ function Bullets({
     <div className={`${divClass ? divClass : "py-4 space-y-6"}`}>
       {data?.map((data, index) => (
         <div
-          className={`border border-[#D84498] rounded-lg shadow-lg p-4 ${
+          className={`border border-[#D84498] rounded-lg shadow-lg p-8 ${
             boxClass ? boxClass : "flex flex-col"
           }`}
           key={index}
         >
-          {data && <h2 className="text-lg font-medium mb-4">{data.heading}</h2>}
+          {data && <h2 className="text-lg font-medium mb-4 text-hciPrimary">{data.heading}</h2>}
           {desc && (
             <p
               className="font-light mb-4"
@@ -46,7 +46,7 @@ function Bullets({
             } text-hciSecondary`}
           >
             {data.aneurysmSymptoms?.map((symptom, index) => (
-              <li key={index} className="ml-6 font-light">
+              <li key={index} className="font-light">
                 <p className="text-black font-light">
                   <strong className="text-hciSecondary">{symptom.title}</strong>
                   {symptom.title && ""}{" "}

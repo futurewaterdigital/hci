@@ -9,27 +9,27 @@ import KnowMore from "@/components/ui/KnowMore";
 const data = {
   title: "Advanced and Recurrent Cancers",
   bannerImage: "/oncology/advanced-recurrent-cancers.png",
-  description: `In India, the advanced and recurrent cancers pose a significant public health concern due to increasing cancer rates, delayed diagnoses, and challenges in healthcare access. Managing these cancers in India is guided by factors such as healthcare infrastructure, socioeconomic disparities, and the access to cancer treatment in the country.`,
+  description: `The advanced and recurrent cancers pose a significant public health concern due to increasing cancer rates, delayed diagnoses, and challenges in healthcare access. Managing these cancers is guided by factors such as healthcare infrastructure, socioeconomic disparities, and the access to cancer treatment in the country.`,
   overview:
     "Advanced cancer refers to a cancer that has spread beyond its primary site to other organs (metastasis), or a cancer that has recurred after initial treatment. Breast cancer, along with cancers of the lung, liver, and cervix, are among the most common cancers diagnosed at advanced stages in India.",
 
   early_symptoms: [
-    {description: "Localized Symptoms"},
-    {description: "Pain"},
-    {description: "Fatigue, Weight Loss and Weakness"},
-    {description: "Abnormal Bleeding"},
+    { description: "Localized Symptoms" },
+    { description: "Pain" },
+    { description: "Fatigue, Weight Loss and Weakness" },
+    { description: "Abnormal Bleeding" },
   ],
 
   common_cancers: [
     {
       title: "Breast Cancer",
       description:
-        "The most common cancer among women, locally advanced or metastatic breast cancer (MBC) requires a multi-disciplinary approach. HER2-positive, ER/PR-negative breast cancer (TNBC), hormone-positive and other subtypes each demand specialized approaches.",
+        "This is the most common cancer among women. Advanced or metastatic breast cancer, especially HER2-positive or triple-negative breast cancer (TNBC), is associated with poor prognosis if not treated early.",
     },
     {
       title: "Advanced and Recurrent Colorectal",
       description:
-        "Advanced colorectal cancer often spreads to the liver or lungs requiring approach to target specific mutations including KRAS, NRAS and BRAF. We utilize innovative surgical and radiation techniques for optimal outcomes.",
+        "Often diagnosed at advanced stages, advanced and recurrent cancers are increasing, especially in urban areas where smoking and air pollution are significant risk factors.",
     },
     {
       title: "Cervical Cancer",
@@ -66,9 +66,9 @@ const data = {
       heading: "Tumor Characteristics",
       description: "Aggressive tumor biology with rapid cellular division",
       aneurysmSymptoms: [
-        {description: "High-grade histology"},
-        {description: "Rapid growth rate"},
-        {description: "Extensive local invasion"},
+        { description: "High-grade histology" },
+        { description: "Rapid growth rate" },
+        { description: "Extensive local invasion" },
       ],
     },
     {
@@ -76,9 +76,9 @@ const data = {
       description:
         "Cancer cells that develop mechanisms to evade standard treatments",
       aneurysmSymptoms: [
-        {description: "Drug resistance mutations"},
-        {description: "Adaptive cellular mechanisms"},
-        {description: "Multiple pathway activation"},
+        { description: "Drug resistance mutations" },
+        { description: "Adaptive cellular mechanisms" },
+        { description: "Multiple pathway activation" },
       ],
     },
     {
@@ -86,9 +86,9 @@ const data = {
       description:
         "Detection after cancer has already metastasized to other organs",
       aneurysmSymptoms: [
-        {description: "Multiple organ involvement"},
-        {description: "Complex symptom management"},
-        {description: "Limited treatment options"},
+        { description: "Multiple organ involvement" },
+        { description: "Complex symptom management" },
+        { description: "Limited treatment options" },
       ],
     },
     {
@@ -96,9 +96,9 @@ const data = {
       description:
         "Inherited gene mutations that predispose to aggressive cancer forms",
       aneurysmSymptoms: [
-        {description: "BRCA mutations"},
-        {description: "Lynch syndrome"},
-        {description: "P53 mutations"},
+        { description: "BRCA mutations" },
+        { description: "Lynch syndrome" },
+        { description: "P53 mutations" },
       ],
     },
   ],
@@ -120,7 +120,7 @@ const data = {
         {
           title: "Oral Cancer",
           description:
-            "In India, oral cancers, often linked to tobacco and alcohol use, have high recurrence rates after initial surgery or radiation therapy.",
+            "Oral cancers, often linked to tobacco and alcohol use, have high recurrence rates after initial surgery or radiation therapy.",
         },
         {
           title: "Lung Cancer",
@@ -142,7 +142,7 @@ const data = {
         {
           title: "Chemotherapy and Radiation",
           description:
-            "These remain the primary treatments for recurrent cancers in India, though access to advanced chemotherapy regimens may be limited outside major cities.",
+            "These remain the primary treatments for recurrent cancers, though access to advanced chemotherapy regimens may be limited outside major cities.",
         },
         {
           title: "Targeted Therapy",
@@ -152,7 +152,7 @@ const data = {
         {
           title: "Immunotherapy",
           description:
-            " Still an emerging option in India, immunotherapy has shown promise for recurrent cancers, particularly in cancers like melanoma and advanced and recurrent cancer. Clinical trials in major hospitals are increasing.",
+            "Still an emerging option, immunotherapy has shown promise for recurrent cancers, particularly in cancers like melanoma and advanced and recurrent cancer. Clinical trials in major hospitals are increasing.",
         },
         {
           title: "Palliative Care",
@@ -167,7 +167,7 @@ const data = {
         {
           title: "",
           description:
-            "Several factors make the management of advanced and recurrent cancers particularly challenging in India:",
+            "Several factors make the management of advanced and recurrent cancers particularly challenging:",
         },
         {
           title: "Awareness",
@@ -225,14 +225,14 @@ const data = {
           description:
             "Used for isolated recurrences that can be surgically addressed",
         },
-        {description: "Often combined with intraoperative radiation therapy"},
+        { description: "Often combined with intraoperative radiation therapy" },
       ],
     },
     {
       heading: "Cytoreductive Surgery",
       description: "Removal of as much tumor burden as possible",
       aneurysmSymptoms: [
-        {description: "Particularly beneficial in peritoneal carcinomatosis"},
+        { description: "Particularly beneficial in peritoneal carcinomatosis" },
         {
           description:
             "May be combined with HIPEC (Hyperthermic Intraperitoneal Chemotherapy)",
@@ -247,7 +247,7 @@ const data = {
           description:
             "Faster recovery and reduced postoperative complications",
         },
-        {description: "Enhanced precision in difficult anatomical locations"},
+        { description: "Enhanced precision in difficult anatomical locations" },
       ],
     },
   ],
@@ -271,7 +271,7 @@ const data = {
       heading: "Access to Healthcare",
       description: "Uneven distribution of cancer centers across India",
       aneurysmSymptoms: [
-        {description: "Concentration of specialized centers in major cities"},
+        { description: "Concentration of specialized centers in major cities" },
         {
           description:
             "Transportation and accommodation challenges for rural patients",
@@ -282,7 +282,7 @@ const data = {
       heading: "Financial Considerations",
       description: "High cost of advanced cancer treatments",
       aneurysmSymptoms: [
-        {description: "Limited insurance coverage for novel therapies"},
+        { description: "Limited insurance coverage for novel therapies" },
         {
           description:
             "Catastrophic health expenditure affecting treatment completion",
@@ -297,7 +297,7 @@ const data = {
           description:
             "Preference for alternative medicines delaying conventional treatment",
         },
-        {description: "Fatalistic attitudes toward cancer diagnosis"},
+        { description: "Fatalistic attitudes toward cancer diagnosis" },
       ],
     },
   ],
@@ -311,7 +311,7 @@ const data = {
     {
       category: "",
       description:
-        "Patients in India may not receive the most optimal or complete treatment due to financial constraints, limited healthcare access, or misdiagnosis.",
+        "Patients may not receive the most optimal or complete treatment due to financial constraints, limited healthcare access, or misdiagnosis.",
     },
     {
       category: "",
@@ -325,12 +325,12 @@ const data = {
       heading: "Advanced Imaging",
       description: "High-resolution scanning technologies",
       aneurysmSymptoms: [
-        {description: "PET-CT for metabolic activity assessment"},
+        { description: "PET-CT for metabolic activity assessment" },
         {
           description:
             "MRI with contrast enhancement for soft tissue evaluation",
         },
-        {description: "Whole-body imaging for metastasis detection"},
+        { description: "Whole-body imaging for metastasis detection" },
       ],
     },
     {
@@ -341,7 +341,7 @@ const data = {
           description:
             "Next-generation sequencing for comprehensive genomic profiling",
         },
-        {description: "Liquid biopsies to detect circulating tumor DNA"},
+        { description: "Liquid biopsies to detect circulating tumor DNA" },
         {
           description:
             "Expression profiling for personalized treatment selection",
@@ -352,26 +352,26 @@ const data = {
       heading: "Tissue Sampling",
       description: "Obtaining specimens for analysis",
       aneurysmSymptoms: [
-        {description: "Image-guided biopsies for difficult-to-access tumors"},
-        {description: "Endoscopic ultrasound-guided fine needle aspiration"},
-        {description: "Sentinel node evaluation for recurrent disease"},
+        { description: "Image-guided biopsies for difficult-to-access tumors" },
+        { description: "Endoscopic ultrasound-guided fine needle aspiration" },
+        { description: "Sentinel node evaluation for recurrent disease" },
       ],
     },
   ],
 
   best_hospitals: [
-    {city: "Delhi", url: "/best-cancer-hospital-delhi"},
-    {city: "Mumbai", url: "/best-cancer-hospital-mumbai"},
-    {city: "Bangalore", url: "/best-cancer-hospital-bangalore"},
-    {city: "Chennai", url: "/best-cancer-hospital-chennai"},
-    {city: "Hyderabad", url: "/best-cancer-hospital-hyderabad"},
-    {city: "Pune", url: "/best-cancer-hospital-pune"},
+    { city: "Delhi", url: "/best-cancer-hospital-delhi" },
+    { city: "Mumbai", url: "/best-cancer-hospital-mumbai" },
+    { city: "Bangalore", url: "/best-cancer-hospital-bangalore" },
+    { city: "Chennai", url: "/best-cancer-hospital-chennai" },
+    { city: "Hyderabad", url: "/best-cancer-hospital-hyderabad" },
+    { city: "Pune", url: "/best-cancer-hospital-pune" },
   ],
 
   conclusion: [
     {
       header: "Conclusion",
-      paragraph: `The management of <b> advanced and recurrent cancers </b> in India remains a significant challenge due to issues of late diagnosis, limited healthcare infrastructure, and financial constraints. However, with growing awareness, advances in medical research, and improved access to cancer care in major urban centers, there is hope for better outcomes. Addressing these challenges requires a multifaceted approach, including improving access to early detection, expanding healthcare infrastructure, and ensuring that newer treatments like targeted therapies and immunotherapy become more widely accessible. For patients, ongoing support, palliative care, and regular follow-up are crucial for managing advanced or recurrent cancers.`,
+      paragraph: `The management of <b> advanced and recurrent cancers </b> in India remains a significant challenge due to issues of late diagnosis, limited healthcare infrastructure, and financial constraints. However, with growing awareness, advances in medical research, and improved access to cancer care in major urban centers, there is hope for better outcomes. Addressing these challenges requires a multifaceted approach, including improving access to early detection, expanding healthcare infrastructure, and ensuring that newer treatments like targeted therapies and immunotherapy become more widely accessible. For patients, ongoing support, palliative care, and regular follow-up are crucial for managing advanced or recurrent cancers.`,
     },
   ],
 };
@@ -388,14 +388,7 @@ function AdvancedRecurrentCancers() {
           </p>
 
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-            <strong className="font-medium"> Advanced </strong>cancer refers to
-            a cancer that has spread beyond its primary site to other organs
-            (metastasis), or a cancer that has recurred after initial
-            treatment. 
-            <strong className="font-medium"> Breast cancer</strong>, along with
-            cancers of the <strong className="font-medium"> lung, liver</strong>
-            , and <strong className="font-medium"> cervix</strong>, are among
-            the most common cancers diagnosed at advanced stages in India.
+            <strong className="font-medium"> Advanced </strong> refers to a cancer that has spread beyond its primary site to other organs (metastasis), or a cancer that has recurred after initial treatment. <strong className="font-medium"> Breast cancer</strong>, along with cancers of the <strong className="font-medium"> lung, liver</strong> , and <strong className="font-medium"> cervix</strong>, are among the most common cancers diagnosed at advanced stages.
           </p>
 
           <div className="flex gap-4">
@@ -434,24 +427,15 @@ function AdvancedRecurrentCancers() {
           </div>
 
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-            A significant percentage of breast cancers in India are diagnosed at
-            advanced stages (III or IV), often due to limited awareness and
-            delayed healthcare seeking, particularly in rural areas. This is
-            primarily due to women not having access to regular screening, and
-            breast cancer awareness is still low in many regions, leading to
-            late-stage diagnoses.
+          A significant percentage of breast cancers are diagnosed at advanced stages (III or IV), often due to limited awareness and delayed healthcare seeking, particularly in rural areas. This is primarily due to women not having access to regular screening, and breast cancer awareness is still low in many regions, leading to late-stage diagnoses.
           </p>
 
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-            Treatment for an advanced cancer requires access to targeted
-            therapies, chemotherapy, radiation and immunotherapies. This may be
-            another challenge in cities which are beyond Tier 1 cities.
+          Treatment for an advanced cancer requires access to targeted therapies, chemotherapy, radiation and immunotherapies. This may be another challenge in cities which are beyond Tier 1 cities.
           </p>
 
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-            Treatment costs for an advanced cancer (including chemotherapy,
-            targeted therapies, and immunotherapy) can be prohibitive for many
-            families, resulting in discontinuation or delays in treatment.
+          Treatment costs for an advanced cancer (including chemotherapy, targeted therapies, and immunotherapy) can be prohibitive for many families, resulting in discontinuation or delays in treatment.
           </p>
           <KnowMore title={data.title} />
 

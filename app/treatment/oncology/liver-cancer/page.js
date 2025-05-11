@@ -7,7 +7,7 @@ import Banner from "@/components/Common/Banner";
 const data = {
   title: "Liver Cancer",
   description:
-    "Liver cancer, or hepatic cancer, originates in the liver cells used to carry out the various functions of cancer and storing glycols, including iron. It is a serious condition often associated with chronic liver disease and typically occurs in individuals with a history of hepatitis or long-term liver damage. Early detection is crucial to improving survival rates, as liver cancer often progresses rapidly.",
+    "Liver cancer, or hepatic cancer, originates in the liver cells and is one of the leading causes of cancer-related deaths globally. It is a serious condition often associated with chronic liver disease and typically occurs in individuals with a history of hepatitis or long-term liver damage. Early detection is crucial to improving survival rates, as liver cancer often progresses rapidly.",
 
   riskFactors: [
     {
@@ -109,46 +109,46 @@ const data = {
           title: "Unexplained Weight Loss",
           description:
             "Significant and unintentional weight loss without any clear cause",
-          className: "bg-[#0E56A0] text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded font-light",
         },
         {
           title: "Loss of Appetite",
           description:
             "Decreased interest in food, often leading to malnutrition",
-          className: "bg-[#0E56A0] text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded font-light",
         },
         {
           title: "Upper Abdominal Pain",
           description:
-            "Persistent pain or discomfort in the upper right side of the abdomen, where the liver is located",
-          className: "bg-[#0E56A0] text-white p-2 rounded",
+            "Persistent pain or discomfort in the upper right side of the abdomen, which may radiate to the back or shoulder.",
+          className: "bg-[#0E56A0] text-white p-2 rounded font-light",
         },
         {
           title: "Swelling of the Abdomen",
-          description: "Bloating or swelling caused by an enlarged liver",
-          className: "bg-[#0E56A0] text-white p-2 rounded",
+          description: "Abdominal bloating or swelling caused by an enlarged liver or accumulation of fluid (ascites).",
+          className: "bg-[#0E56A0] text-white p-2 rounded font-light",
         },
         {
           title: "Jaundice",
           description:
             "Yellowing of the skin and eyes, indicating liver dysfunction",
-          className: "bg-[#0E56A0] text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded font-light",
         },
         {
           title: "Fatigue",
           description: `Persistent tiredness and weakness that doesn't improve with rest`,
-          className: "bg-[#0E56A0] text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded font-light",
         },
         {
           title: "Nausea and Vomiting",
           description: "Frequent feelings of nausea or bouts of vomiting",
-          className: "bg-[#0E56A0] text-white p-2 rounded",
+          className: "bg-[#0E56A0] text-white p-2 rounded font-light",
         },
         {
           title: "Itchy Skin",
           description:
-            "Generalized itching of the skin due to the accumulation in the bloodstream of substances that should be processed by the liver",
-          className: "bg-[#0E56A0] text-white p-2 rounded",
+            "Irritation or itching of the skin due to bile accumulation in the bloodstream, a sign of liver dysfunction.",
+          className: "bg-[#0E56A0] text-white p-2 rounded font-light",
         },
       ],
     },
@@ -157,35 +157,34 @@ const data = {
   diagnosis: [
     {
       heading: "Diagnosis of Liver Cancer",
-      description: `Diagnosing liver cancer typically begins with a thorough review of the patient's medical history and physical examination, followed by diagnostic procedures, including:'`,
+      description: `Diagnosing liver cancer typically begins with a thorough review of the patient's medical history and physical examination, followed by diagnostic procedures, including:`,
       items: [
         {
           title: "Blood Tests",
           items: [
-            "Alpha-Fetoprotein (AFP) Test: Elevated levels of AFP in the blood may indicate liver cancer",
-            "Liver Function Tests (LFTs): These tests measure the levels of liver enzymes and other substances to show its general health",
+            "Alpha-fetoprotein (AFP) Test: Elevated levels of AFP in the blood may indicate liver cancer or other liver diseases.",
+            "Liver Function Tests (LFTs): These tests measure the levels of liver enzymes and other substances in the blood to assess liver health.",
           ],
           className: "bg-[#D84498] text-white p-2 rounded",
         },
         {
           title: "Imaging Tests",
           items: [
-            "Ultrasound: A non-invasive imaging test that can detect masses or tumors in the liver",
-            "CT Scan or MRI: These provide more detailed images of the liver, helping determine the size, location, and spread of tumors",
-            "PET Scan: Shows how organs and tissues are functioning",
+            "Ultrasound: A non-invasive imaging test that can detect masses or tumors in the liver.",
+            "CT Scan or MRI: These provide more detailed images of the liver, helping determine the size, location, and extent of the cancer.",
           ],
           className: "bg-[#D84498] text-white p-2 rounded",
         },
         {
           title: "Biopsy",
           description:
-            "A small sample of liver tissue is taken and examined under a microscope to confirm the presence of cancer cells",
+            "A small sample of liver tissue is taken and examined under a microscope to confirm the presence of cancer cells. This is often done using a fine needle inserted into the liver.",
           className: "bg-[#D84498] text-white p-2 rounded",
         },
         {
           title: "Liver Function Tests (LFTs)",
           description:
-            "Blood tests that assess the overall functioning of the liver and used to determine if the liver is healthy enough to undergo treatment",
+            "These tests assess the overall functioning of the liver and are used to determine if the liver is healthy enough to undergo surgery or other treatments.",
           className: "bg-[#D84498] text-white p-2 rounded",
         },
       ],
@@ -301,7 +300,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph:
-        "Liver cancer poses a significant health threat, particularly in individuals with chronic liver disease. In India, where hepatitis infections and alcohol-related liver damage are common, the disease poses a serious concern. However, early detection through regular screenings and comprehensive understanding of risk factors is high priority. With advancements in surgery, radiation therapy, and targeted treatments, patients have more options and better chances for recovery. A comprehensive approach that includes specialists, oncologists, and support staff is essential for managing and treating liver cancer effectively.",
+        "Liver cancer poses a significant health threat, particularly in individuals with chronic liver disease. In regions where hepatitis infections and alcohol-related liver damage are common, the incidence of liver cancer remains high. However, early detection, through regular screenings and monitoring in high-risk individuals, can improve treatment outcomes. With advancements in surgery, radiation therapy, and targeted treatments, patients have more options and better chances for recovery. A comprehensive approach that includes liver specialists, oncologists, and support staff is essential for managing and treating liver cancer effectively.",
     },
   ],
 
@@ -366,7 +365,7 @@ function LiverCancer() {
               className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]"
             >
               <h3 className="font-bold text-base mb-1">{factor.title}</h3>
-              <p className="text-sm text-gray-900 leading-snug">
+              <p className="text-sm text-gray-900 leading-snug font-light">
                 {factor.description}
               </p>
             </div>
@@ -375,7 +374,7 @@ function LiverCancer() {
         <div className="mt-6 text-start">
           <Link
             href="/treatment/oncology/liver-cancer-info"
-            className="text-[#0E56A0]"
+            className="text-hciPrimary font-semibold underline"
           >
             To Know More About Liver Cancer And Its Treatment, Click Here
           </Link>
@@ -398,7 +397,7 @@ function LiverCancer() {
             </div>
           ))}
         </div>
-        <div className="mt-6 text-center">
+        <div className="mt-6">
           <Link
             href="/treatment/oncology/liver-cancer-causes"
             className="text-hciPrimary font-semibold underline"
@@ -423,18 +422,25 @@ function LiverCancer() {
             <div key={idx} className={test.className}>
               <strong>{test.title}</strong>
               {test.items ? (
-                <ul className="list-disc pl-5 mt-2">
+                <ul className="list-disc pl-5 mt-2 font-light">
                   {test.items.map((item, i) => (
-                    <li key={i}>{item}</li>
+                    <li key={i}>
+                      <span className="font-semibold">
+                        {item.split(":")[0]}:
+                      </span>{" "}
+                      <span className="font-light">
+                        {item.split(":").slice(1).join(":").trim()}
+                      </span>
+                    </li>
                   ))}
                 </ul>
               ) : (
-                <p>{test.description}</p>
+                <p className="font-light">{test.description}</p>
               )}
             </div>
           ))}
         </div>
-        <div className="mt-6 text-center">
+        <div className="mt-6 text-left">
           <Link
             href="/treatment/oncology/liver-cancer-diagnosis"
             className="text-hciPrimary font-semibold underline"
@@ -462,9 +468,11 @@ function LiverCancer() {
               key={index}
               className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
             >
-              <h3 className={`text-lg font-semibold mb-3 text-[#0E56A0]`}>
-                Treatment for Liver Cancer
-              </h3>
+              {treatment.heading && (
+                <h3 className={`text-lg font-semibold mb-3 text-[#0E56A0]`}>
+                  {treatment.heading}
+                </h3>
+              )}
               {treatment.description && (
                 <p className="text-gray-600 mb-4 font-light">
                   {treatment.description}

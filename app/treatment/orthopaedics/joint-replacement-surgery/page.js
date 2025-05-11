@@ -3,13 +3,14 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from "@/components/ui/h2";
 import H1 from "@/components/ui/h1";
 import ListBox from "@/components/cardiacComponents/ListBox";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
 import IssuesLink from "@/components/ui/IssuesLinks";
 
 const title = "Joint Replacement Surgery";
@@ -17,7 +18,7 @@ const title = "Joint Replacement Surgery";
 const data = {
   bannerImage: "/orthopaedics/joint_Banner.png",
   description:
-    "Joint replacement surgery, also known as arthroplasty, is a highly effective procedure designed to relieve pain and restore function in damaged or worn-out joints. It involves replacing parts of a joint with artificial implants made from metal, plastic, or ceramic materials. This surgery is commonly performed on joints such as the hip, knee, shoulder, and elbow. In India, joint replacement surgery has significantly improved the quality of life for individuals suffering from severe joint pain and mobility issues due to conditions like arthritis and trauma.",
+    "Joint replacement surgery, also known as arthroplasty, is a highly effective procedure designed to relieve pain and restore function in damaged or worn-out joints. It involves replacing parts of a joint with artificial implants made from metal, plastic, or ceramic materials. This surgery is commonly performed on joints such as the hip, knee, shoulder, and elbow. Joint replacement surgery has significantly improved the quality of life for individuals suffering from severe joint pain and mobility issues due to conditions like arthritis and trauma.",
   //   overview: `Joint replacement surgery is commonly performed on joints such as the hip, knee, shoulder, and elbow. It involves replacing parts of a joint with artificial implants made from materials like metal, plastic, or ceramic. This surgery is often done in cases of arthritis or trauma where pain and mobility issues severely affect quality of life.`,
 
   benefits: [
@@ -249,7 +250,7 @@ function JointReplacementSurgery() {
           including:
         </p>
         <ListBox data={data} />
-        <KnowMore title={title} />
+        <CausesKnowMore title={title} />
         <div>
           {/* <h2 className={`text-2xl font-bold text-center text-hciSecondary py-1`}>
           Treatment

@@ -79,52 +79,52 @@ const data = {
 
       aneurysmSymptoms: [
         {
-          title: "Urinary Tract Infections (UTIs)",
+          title: "Urinary Tract Infections (UTIs):",
           description:
             "Infections affecting any part of the urinary system, causing pain and discomfort.",
         },
         {
-          title: "Kidney Stones",
+          title: "Kidney Stones:",
           description:
             "Hard deposits of minerals and salts that form in the kidneys and cause pain when passing through the urinary tract.",
         },
         {
-          title: "Prostate Disorders",
+          title: "Prostate Disorders:",
           description:
             "Conditions like benign prostatic hyperplasia (BPH) and prostate cancer affecting male reproductive health.",
         },
         {
-          title: "Bladder Disorders",
+          title: "Bladder Disorders:",
           description:
             "Conditions like overactive bladder, incontinence, and interstitial cystitis.",
         },
         {
-          title: "Male Infertility",
+          title: "Male Infertility:",
           description:
             "Issues that affect sperm production or delivery, impacting a man’s ability to father a child.",
         },
         {
-          title: "Erectile Dysfunction (ED)",
+          title: "Erectile Dysfunction (ED):",
           description:
             "Inability to maintain or achieve an erection for sexual activity.",
         },
         {
-          title: "Testicular Cancer",
+          title: "Testicular Cancer:",
           description:
             "Cancer affecting the testes, commonly diagnosed in younger men.",
         },
         {
-          title: "Hematuria",
+          title: "Hematuria:",
           description:
             "Presence of blood in the urine, which may indicate underlying issues.",
         },
         {
-          title: "Hydronephrosis",
+          title: "Hydronephrosis:",
           description:
             "Swelling of a kidney due to urine buildup, often caused by obstruction.",
         },
         {
-          title: "Urinary Incontinence",
+          title: "Urinary Incontinence:",
           description:
             "Loss of bladder control, leading to involuntary urine leakage.",
         },

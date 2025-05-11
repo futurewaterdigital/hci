@@ -13,6 +13,7 @@ import H2 from "@/components/ui/h2";
 import ListBox from "@/components/cardiacComponents/ListBox";
 // import CTaButton from '@/components/cardiacComponents/CtaButton'
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
 import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import DataSurgery from "@/components/cardiacComponents/Button";
@@ -266,7 +267,7 @@ function GeneralSurgery() {
           Injuries to the ACL, PCL, or MCL are often caused by:
         </p>
         <ListBox data={data} />
-        <KnowMore title={title} />
+        <CausesKnowMore title={title} />
         <div>
           {/* <h2 className={`text-2xl font-bold text-center text-hciSecondary py-1`}>
           Treatment
@@ -318,7 +319,7 @@ function GeneralSurgery() {
         />
         <p
           className="font-light"
-          dangerouslySetInnerHTML={{__html: data.DataSurgery.description}}
+          dangerouslySetInnerHTML={{ __html: data.DataSurgery.description }}
         />
         <DataSurgery data={data.DataSurgery.DataLists} />
         {/* <FlexBoxSection data={data.sec_para_3} /> */}

@@ -19,7 +19,7 @@ export default function FooterLink({head}) {
 
   const linkshead = [
     {
-      text: `To get the the best diagnosis for ${head} and related issues, click here`,
+      text: `To get the best diagnosis for ${head} and related issues, click here`,
       url: "", // Replace "#" with the actual link
     },
   ];

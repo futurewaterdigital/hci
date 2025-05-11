@@ -37,8 +37,8 @@ const data = {
       description:
         'This form can occur in older adults and may develop gradually, often mistaken for other conditions like dementia.',
     },
-   
-    
+
+
     {
       title: 'Congenital Conditions',
       description:
@@ -68,7 +68,7 @@ const data = {
         },
       ],
     },
-    
+
     {
       heading: "Medications",
       description: "",
@@ -110,7 +110,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      In India, healthcare facilities are increasingly equipped to manage hydrocephalus, offering a range of treatment options tailored to individual needs. Early diagnosis and intervention are crucial for optimising outcomes, helping individuals lead healthier lives and preventing long-term complications associated with the condition.
+      Healthcare facilities are increasingly equipped to manage hydrocephalus, offering a range of treatment options tailored to individual needs. Early diagnosis and intervention are crucial for optimising outcomes, helping individuals lead healthier lives and preventing long-term complications associated with the condition.
           `,
     },
   ],
@@ -199,14 +199,21 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Hydrocephalus And Its Treatment, Click Here
+          </button>
+        </p>
+
+
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>
               <DataBoxes
                 title="Symptoms"
-//                 text="Epilepsy is characterized by seizures, which can take various forms depending on the affected brain regions. Common symptoms include:
-// "
+                //                 text="Epilepsy is characterized by seizures, which can take various forms depending on the affected brain regions. Common symptoms include:
+                // "
                 titleCss="text-black font-medium text-center text-2xl pb-4 mt-4"
                 header=""
                 data={data.symptoms}

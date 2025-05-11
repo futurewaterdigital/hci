@@ -212,7 +212,7 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
         <p
-          dangerouslySetInnerHTML={{__html: data.description}}
+          dangerouslySetInnerHTML={{ __html: data.description }}
           className="text-start font-light"
         />
         <p className="font-light">{data.overview}</p>
@@ -291,7 +291,14 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Colon Polyps And Its Treatment, Click Here
+          </button>
+        </p>
+
 
         <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div className="space-y-4">

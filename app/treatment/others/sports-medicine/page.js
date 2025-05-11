@@ -3,8 +3,8 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 // import Image from 'next/image'
 import H1 from "@/components/ui/h1";
-import DataLists from "@/components/cardiacComponents/Bullets";
-import BookButton from "@/components/cardiacComponents/BookButton";
+import DataLists from "@/components/cardiacComponents/Bullets"; 
+import BookButton from "@/components/cardiacComponents/BookButton"; 
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
 
@@ -118,6 +118,7 @@ const data = {
     content:
       "Contact HCI to explore our comprehensive sports medicine services and discover how we can support your recovery journey.",
   },
+  
 };
 
 function GeneralSurgery() {

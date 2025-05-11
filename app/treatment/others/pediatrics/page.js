@@ -53,7 +53,7 @@ This life-saving procedure often offers a second chance to individuals in critic
           description:
             "Neonatal care and intensive care for premature or critically ill newborns.",
         },
-        {description: "Growth and development assessments."},
+        { description: "Growth and development assessments." },
         {
           description:
             "Management of childhood diseases and disorders, including asthma, diabetes, and infections.",
@@ -73,12 +73,12 @@ This life-saving procedure often offers a second chance to individuals in critic
     {
       heading: "Transplant Services Offered",
       aneurysmSymptoms: [
-        {description: "Kidney transplantation"},
-        {description: "Liver transplantation"},
-        {description: "Heart transplantation"},
-        {description: "Lung transplantation"},
-        {description: "Pancreas transplantation"},
-        {description: "Intestinal transplantation"},
+        { description: "Kidney transplantation" },
+        { description: "Liver transplantation" },
+        { description: "Heart transplantation" },
+        { description: "Lung transplantation" },
+        { description: "Pancreas transplantation" },
+        { description: "Intestinal transplantation" },
       ],
     },
   ],
@@ -144,7 +144,7 @@ function GeneralSurgery() {
         <H2 title={data.description} className="text-start font-medium " />
 
         <div
-          dangerouslySetInnerHTML={{__html: data.overview}}
+          dangerouslySetInnerHTML={{ __html: data.overview }}
           className="font-light text-start"
         />
         <div>

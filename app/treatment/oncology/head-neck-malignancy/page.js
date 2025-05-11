@@ -19,17 +19,17 @@ const data = {
     {
       heading: "Oral Cancers",
       description:
-        "Develop in the lips, tongue, gums, inner lining of the cheeks, floor of mouth, and palate.",
+        "Found on the lips, tongue, gums, inner cheeks, and roof of the mouth",
       aneurysmSymptoms: [
         {
           description:
-            "Signs include non-healing sores, swelling, and difficulty eating.",
+            "Signs include non-healing sores, bleeding, and difficulty eating.",
         },
       ],
     },
     {
       heading: "Oropharyngeal Cancer",
-      description: "Affects the back of the mouth, tonsils, and soft palate.",
+      description: "Affects the back of the throat, tonsils, and soft palate, often linked to HPV.",
       aneurysmSymptoms: [
         {
           description:
@@ -40,36 +40,36 @@ const data = {
     {
       heading: "Laryngeal Cancer",
       description:
-        "Originates in the voice box, affecting breathing and vocalization.",
+        "Occurs in the voice box, affecting breathing and speech.",
       aneurysmSymptoms: [
-        { description: "Hoarseness and chronic coughing are common symptoms." },
+        { description: "Hoarseness and chronic coughing are common indicators." },
       ],
     },
     {
       heading: "Nasopharyngeal Cancer",
-      description: "Occurs in the upper throat behind the nose.",
+      description: "Found in the upper throat behind the nose.",
       aneurysmSymptoms: [
         {
           description:
-            "Causes ringing ears, headaches, and often nasal congestion.",
+            "Causes nasal blockage, nosebleeds, and headaches.",
         },
       ],
     },
     {
       heading: "Salivary Gland Tumors",
-      description: "Develops in the major or minor salivary glands.",
+      description: "Affect the parotid, submandibular, or sublingual glands.",
       aneurysmSymptoms: [
-        { description: "May include swelling and facial numbness." },
+        { description: "Symptoms include swelling and facial numbness." },
       ],
     },
     {
       heading: "Thyroid Cancer",
       description:
-        "Affects the thyroid gland which may affect hormone production.",
+        "Manifests as a lump in the neck and may affect hormone production.",
       aneurysmSymptoms: [
         {
           description:
-            "Often presents with neck mass and swallowing difficulties.",
+            "",
         },
       ],
     },
@@ -79,36 +79,36 @@ const data = {
     {
       category: "Tobacco and Alcohol Use",
       description:
-        "Heavy use of tobacco (smoking, chewing) and alcohol consumption are major risk factors",
+        "Primary risk factors for most head and neck cancers.",
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "HPV Infection",
       description:
-        "Human papillomavirus is increasingly linked to certain types of head and neck cancers",
+        "Strongly linked to oropharyngeal cancers.",
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "Sun Exposure",
-      description: "Prolonged sun exposure increases risk for lip cancers",
+      description: "Associated with lip cancers.",
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "Environmental Hazards",
       description:
-        "Exposure to asbestos, wood dust, and other industrial pollutants",
+        "Exposure to chemicals and industrial pollutants.",
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "Genetics and Family History",
       description:
-        "Some individuals have genetic predisposition to these cancers",
+        "Some individuals are predisposed to these cancers.",
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "Poor Oral Hygiene and Diet Deficiency",
       description:
-        "Chronic irritation and nutritional deficiencies may contribute to cancer risk",
+        "Contributing factors, particularly for oral cancers.",
       bgColor: "bg-hciSecondary text-white",
     },
   ],
@@ -117,34 +117,34 @@ const data = {
     {
       category: "Physical Examination",
       description:
-        "Detailed examination of visible lesions or areas in the mouth and throat",
+        "Doctors assess visible lumps or sores in the mouth and throat.",
       bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "Endoscopy",
       description:
-        "Flexible scope is used to examine deeper tissues in the throat and larynx",
+        "A flexible camera is used to examine deeper tissues in the throat and larynx.",
       bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "Imaging Studies",
       description:
-        "MRI, CT scan, and PET scans help determine cancer size and spread",
+        "CT, MRI, and PET scans help determine tumour size and spread.",
       bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "Biopsy",
-      description: "Tissue samples are examined to confirm malignancy",
+      description: "Tissue samples are examined to confirm malignancy.",
       bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "HPV Testing",
-      description: "Specific screening for HPV-positive oropharyngeal cancers",
+      description: "Used for detecting HPV-positive oropharyngeal cancers.",
       bgColor: "bg-hciPrimary text-white",
     },
     {
       category: "Ultrasound and Fine Needle Aspiration",
-      description: "Common for examining thyroid nodules",
+      description: "Common for diagnosing thyroid cancers.",
       bgColor: "bg-hciPrimary text-white",
     },
   ],
@@ -153,86 +153,88 @@ const data = {
     {
       heading: "Surgery",
       description:
-        "Usually involves excising along with affected tissues or lymph nodes",
+        "",
       aneurysmSymptoms: [
         {
           description:
-            "Options range from minimally invasive procedures to more extensive surgeries",
+            "Removes the tumour along with affected tissues or lymph nodes.",
         },
         {
           description:
-            "May include reconstructive surgery to restore function after removal of large tumors",
+            "Reconstructive surgery restores function after removal of large tumours.",
         },
         {
           description:
-            "Minimally invasive options are used when possible to preserve appearance and function",
+            "Minimally invasive surgeries are used for early-stage cancers.",
         },
       ],
     },
     {
       heading: "Radiation Therapy",
-      description: "High-energy beams target the cancer cells",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            "External beam radiation therapy (EBRT) is commonly used",
+            "External beams of radiation target the tumour cells.",
         },
         {
           description:
-            "Intensity-modulated radiation therapy (IMRT) precisely focuses radiation to minimize side effects",
+            "Techniques like IMRT (Intensity-Modulated Radiation Therapy) limit damage to surrounding tissues.",
         },
         {
           description:
-            "Can be combined with surgery or chemotherapy for better outcomes",
+            "Can be combined with surgery or chemotherapy for better outcomes.",
         },
       ],
     },
     {
       heading: "Chemotherapy",
-      description: "Anti-cancer drugs destroy cancer cells",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            "Commonly used for advanced cancers or when surgery is not possible",
+            "Drugs destroy rapidly growing cancer cells.",
         },
-        { description: "Often combined with radiation (chemoradiation)" },
+        { description: "Commonly used for advanced cancers or when surgery is not feasible." },
+        { description: "Can be used in conjunction with radiation (chemoradiation)." },
+
       ],
     },
     {
       heading: "Targeted Therapy",
       description:
-        "Focuses on specific molecules involved in cancer growth (e.g., cetuximab)",
+        "",
       aneurysmSymptoms: [
-        { description: "Less toxic compared to chemotherapy" },
-        { description: "Often used for recurrent or metastatic cases" },
+        { description: "Focuses on specific molecules driving cancer growth, like EGFR inhibitors (e.g., cetuximab)." },
+        { description: "Less toxic compared to chemotherapy, with fewer side effects." },
       ],
     },
     {
       heading: "Immunotherapy",
-      description: "Uses the immune system to fight cancer cells effectively",
+      description: "",
       aneurysmSymptoms: [
         {
           description:
-            "Checkpoint inhibitors have shown promising results for certain types of head and neck cancers",
+            "Boosts the immune system to fight cancer cells effectively.",
         },
         {
           description:
-            "Pembrolizumab and nivolumab are used for advanced or recurrent disease",
+            "Checkpoint inhibitors such as nivolumab are used for HPV-positive or treatment-resistant cancers.",
         },
       ],
     },
     {
       heading: "Rehabilitation And Support",
       description:
-        "Speech Therapy: Helps patients regain speech function after surgery or treatment",
+        "Speech Therapy: Helps patients regain speech after surgery or radiation.",
       aneurysmSymptoms: [
         {
           description:
-            "Swallowing Support: Crucial for maintaining nutrition and preventing complications",
+            "Nutritional Support: Critical for maintaining strength during treatment.",
         },
         {
           description:
-            "Psychological counseling and support to manage emotional well-being",
+            "Psychological support and counselling are essential to manage emotional well-being.",
         },
       ],
     },
@@ -240,13 +242,13 @@ const data = {
   conclusion: [
     {
       header: "Conclusion",
-      paragraph: `Head and neck cancers require multidisciplinary management integrating surgery, radiation therapy, chemotherapy, targeted therapy, and immunotherapy. Comprehensive diagnosis and staging helps guide the selection of primary and adjunctive therapies based on specific type and extent of disease. Early detection is key to optimal outcomes. If you have risk factors such as smoking, alcohol use, or HPV exposure, regular check-ups with healthcare providers can significantly improve prognosis through early intervention.`,
+      paragraph: `Head and neck malignancies are treatable with early diagnosis and a comprehensive care approach. Multidisciplinary treatment—including surgery, radiation, chemotherapy, and immunotherapy—improves the chances of recovery. Rehabilitation services such as speech and nutritional therapy are essential for restoring function and ensuring a good quality of life. Patients are encouraged to seek timely medical advice, especially if they have risk factors such as smoking, alcohol use, or HPV exposure.`,
     },
   ],
 
   links: [
     {
-      title: `To Consult The Best Doctor For Treatment Of Head and Neck Malignancy, Click Here`,
+      title: `To Consult with The Best Doctor For Treatment Of Head and Neck Malignancy, Click Here`,
       url: "", // Replace "#" with the actual link
     },
     {

@@ -1,5 +1,5 @@
 "use client";
-import {useEffect} from "react";
+import { useEffect } from "react";
 //import H3 from "@/components/ui/h3";
 import H1 from "@/components/ui/h1";
 import Banner from "@/components/Common/Banner";
@@ -83,14 +83,7 @@ export default function RareCancers() {
       {
         header: "Conclusion",
         paragraph: `
-        Rare cancers present significant diagnostic and treatment challenges
-        in India due to the lack of awareness, limited access to specialized
-        care, and high treatment costs. However, with improvements in
-        healthcare infrastructure, access to advanced diagnostic tools, and
-        growing awareness, India is gradually making progress in the
-        management of rare cancers. Specialized treatment centers, clinical
-        trials, and better public health initiatives hold promise for
-        improving outcomes for patients with these rare but serious diseases.`,
+        Rare cancers present significant diagnostic and treatment challenges due to the lack of awareness, limited access to specialized care, and high treatment costs. However, with improvements in healthcare infrastructure, access to advanced diagnostic tools, and growing awareness, progress is gradually being made in the management of rare cancers. Specialized treatment centers, clinical trials, and better public health initiatives hold promise for improving outcomes for patients with these rare but serious diseases.`,
       },
     ],
   };
@@ -103,20 +96,14 @@ export default function RareCancers() {
       <main class="container mx-auto py-12 px-6">
         <H1 title="Rare Cancers" />
         <p className="mt-4 text-gray-600 text-start  max-w-7xl mx-auto font-light">
-          Rare cancers are defined as cancers that occur in a small percentage
-          of the population, often with unique characteristics, and are not as
-          commonly diagnosed as more prevalent cancers like breast, lung and
-          colorectal cancers. In India, the occurrence of rare cancers poses
-          unique challenges, as the healthcare infrastructure is not always
-          equipped to handle these less common conditions, and awareness among
-          the public and healthcare providers is limited.
+          Rare cancers are defined as cancers that occur in a small percentage of the population, often with unique characteristics, and are not as commonly diagnosed as more prevalent cancers like breast, lung and colorectal cancers. In India, the occurrence of rare cancers poses unique challenges, as the healthcare infrastructure is not always equipped to handle these less common conditions, and awareness among the public and healthcare providers is limited.
         </p>
         <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
           While exact numbers are difficult to determine due to the lack of
           comprehensive cancer registries for all rare cancers, it is estimated
           that rare cancers represent around {" "}
           <strong className="font-medium"> 20-25% of all cancers </strong>
-           globally. These cancers often present diagnostic challenges and are
+          globally. These cancers often present diagnostic challenges and are
           sometimes misdiagnosed due to their uncommon nature.
         </p>
         <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
@@ -128,8 +115,7 @@ export default function RareCancers() {
         </p>
 
         <h2 class="text-2xl my-16 font-medium text-center text-black">
-          Some of the Rare Cancers identified in the Indian context could
-          include:
+          Some of the Rare Cancers identified in the context could include:
         </h2>
 
         <div>
@@ -161,7 +147,7 @@ export default function RareCancers() {
         </div>
 
         <h2 class="text-2xl my-6 font-medium text-center text-black">
-          Challenges in Managing Rare Cancers in India
+          Challenges in Managing Rare Cancers
         </h2>
 
         <div className="space-y-2">

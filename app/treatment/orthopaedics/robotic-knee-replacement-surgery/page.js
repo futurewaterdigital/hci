@@ -3,7 +3,8 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
 import H2 from "@/components/ui/h2";
 import KnowMore from "@/components/ui/KnowMore";
 import DataBoxes from "@/components/cardiacComponents/Box";
@@ -280,7 +281,7 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
         <p
-          dangerouslySetInnerHTML={{__html: data.description}}
+          dangerouslySetInnerHTML={{ __html: data.description }}
           className="text-start font-light"
         />
         <p className="font-light">{data.overview}</p>
@@ -299,7 +300,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <KnowMore title={data.title} />
+        <CausesKnowMore title={data.title} />
         <div>
           {/* <h2 className={`text-2xl font-bold text-center text-hciSecondary py-1`}>
           Treatment
@@ -353,7 +354,7 @@ function GeneralSurgery() {
         />
         <p
           className="font-light"
-          dangerouslySetInnerHTML={{__html: data.DataSurgery.description}}
+          dangerouslySetInnerHTML={{ __html: data.DataSurgery.description }}
         />
         <div>
           {/* First two items */}
@@ -385,7 +386,7 @@ function GeneralSurgery() {
             title="Benefits of Robotic Knee Replacement"
             className="text-2xl font-medium mb-4 text-center"
           />
-          <div className="flex justify-center items-center gap-6">
+          <div className="flex justify-center items-center gap-20">
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 {data.benefits.slice(0, 4).map((item, index) => (
@@ -408,7 +409,12 @@ function GeneralSurgery() {
                 ))}
               </div>
             </div>
-            <img src="/orthopaedics/joint_1.svg" alt="" />
+            <img
+              src="/orthopaedics/joint_1.svg"
+              alt="Benefits of Robotic Knee Replacement"
+              className="w-96 h-96"
+            />
+
           </div>
         </div>
         <div className="space-y-4">

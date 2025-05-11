@@ -14,7 +14,7 @@ import IssuesLinks from "@/components/ui/IssuesLinks";
 const data = {
   title: `Parkinson's Disease and Movement Disorders`,
   bannerImage: "/neuro-sciences/parkinson-disease-movement-disorders.png",
-  description: `Parkinson's Disease (PD) and other movement disorders are neurological conditions that affect the brain's ability to control movement. Parkinson’s Disease is a progressive disorder that leads to tremors, stiffness, and difficulty with balance and coordination. Movement disorders also include conditions such as dystonia, tremor, and ataxia, which can severely impact an individual’s quality of life. India is increasingly recognized as a destination for world-class treatment of Parkinson’s and movement disorders, offering access to expert neurologists and advanced therapeutic options.`,
+  description: `Parkinson’s Disease (PD) and other movement disorders are neurological conditions that affect the brain’s ability to control movement. Parkinson’s Disease is a progressive disorder that leads to tremors, stiffness, and difficulty with balance and coordination. Movement disorders also include conditions such as dystonia, tremor, and ataxia, which can severely impact an individual’s quality of life. This region is increasingly recognized as a destination for world-class treatment of Parkinson’s and movement disorders, offering access to expert neurologists and advanced therapeutic options.`,
   overview: ``,
 
   section_1: [
@@ -135,7 +135,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      Parkinson’s Disease and movement disorders are complex conditions that significantly affect a person’s daily life. India’s specialized treatment centers offer comprehensive care, from diagnosis to advanced treatments like DBS and medication management. Early diagnosis and a multi-disciplinary approach are crucial in effectively managing these disorders, helping patients maintain their independence and quality of life for as long as possible.
+      Parkinson’s Disease and movement disorders are complex conditions that significantly affect a person’s daily life. Specialized treatment centers offer comprehensive care, from diagnosis to advanced treatments like DBS and medication management. Early diagnosis and a multi-disciplinary approach are crucial in effectively managing these disorders, helping patients maintain their independence and quality of life for as long as possible.
           `,
     },
   ],
@@ -269,7 +269,13 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+          To Know More About Parkinson&rsquo;s Disease or Most Movement Disorders and Its Treatment, Click Here
+          </button>
+        </p>
+
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>

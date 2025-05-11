@@ -111,7 +111,7 @@ const data = {
       description: "",
       aneurysmSymptoms: [
         {
-          description: `Newer treatments harness the body's immune system to fight cancer cells and are being explored for advanced cases.'`,
+          description: `Newer treatments harness the body's immune system to fight cancer cells and are being explored for advanced cases.`,
         },
       ],
     },
@@ -196,11 +196,11 @@ function OvarianCancer() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Causes Section */}
           <div>
-            <H2 title="Causes" className="text-xl font-medium mb-4" />
+            <H2 title="Causes" className="text-xl font-light mb-4" />
             <div className="space-y-2">
               {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
                 <div key={idx} className={cause.className}>
-                  {cause.description}
+                  <span className="font-light">{cause.description}</span>
                 </div>
               ))}
             </div>
@@ -211,12 +211,18 @@ function OvarianCancer() {
 
           {/* Diagnosis Section */}
           <div>
-            <H2 title="Diagnosis" className="text-xl font-medium mb-4" />
+            <H2 title="Diagnosis" className="text-xl mb-4" />
             <div className="space-y-2">
               {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
                 <div key={idx} className={diagnosis.className}>
-                  {diagnosis.description}
+                  <span className="font-semibold">
+                    {diagnosis.description.split(":")[0]}:
+                  </span>{" "}
+                  <span className="font-light">
+                    {diagnosis.description.split(":").slice(1).join(":").trim()}
+                  </span>
                 </div>
+
               ))}
             </div>
             <div className="mt-4">

@@ -14,7 +14,7 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: "Neurodegenerative Disorders",
   bannerImage: "/neuro-sciences/neurodegenerative-disorders.png",
-  description: `Neurodegenerative disorders are a group of debilitating conditions that primarily affect the neurons in the brain and spinal cord. These disorders lead to progressive deterioration of nerve cells, which can result in problems related to movement (ataxia), mental functioning (dementia), and overall neurological health. In India, the demand for treatment of neurodegenerative disorders is rising, with specialized centers offering advanced therapies and patient care. These disorders include Alzheimer's disease, Parkinson's disease, Huntington's disease, Amyotrophic Lateral Sclerosis (ALS), and others.`,
+  description: `Neurodegenerative disorders are a group of debilitating conditions that primarily affect the neurons in the brain and spinal cord. These disorders lead to progressive deterioration of nerve cells, which can result in problems related to movement (ataxia), mental functioning (dementia), and overall neurological health. The demand for treatment of neurodegenerative disorders is rising, with specialized centers offering advanced therapies and patient care. These disorders include Alzheimer's disease, Parkinson's disease, Huntington's disease, Amyotrophic Lateral Sclerosis (ALS), and others.`,
   overview: ``,
 
   section_1: [
@@ -137,7 +137,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      Neurodegenerative disorders are challenging, both for the patients who suffer from them and for their caregivers. However, India has developed an extensive network of neurological centers equipped to provide advanced, specialized care for these complex conditions. From symptomatic management to experimental therapies, patients can access a wide range of treatment options designed to enhance their quality of life. Early diagnosis, consistent treatment, and a multidisciplinary approach are key in managing these disorders and slowing their progression.
+      Neurodegenerative disorders are challenging, both for the patients who suffer from them and for their caregivers. However, an extensive network of neurological centers has been developed, equipped to provide advanced, specialized care for these complex conditions. From symptomatic management to experimental therapies, patients can access a wide range of treatment options designed to enhance their quality of life. Early diagnosis, consistent treatment, and a multidisciplinary approach are key in managing these disorders and slowing their progression.
           `,
     },
   ],
@@ -251,7 +251,13 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Neurodegenerative Disorders And Its Treatment, Click Here
+          </button>
+        </p>
+
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>
@@ -281,7 +287,7 @@ function GeneralSurgery() {
           </div>
         </div>
         <div>
-            <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
+          <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
             While there is currently no cure for neurodegenerative disorders,

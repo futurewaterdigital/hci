@@ -73,8 +73,8 @@ const data = {
     },
     {
       title: "12. Meningitis and Meningioma:",
-      description: `<p>Meningitis: Inflammation of the brain’s protective membranes, typically caused by infection.</p>
-      <p>Meningioma: A mostly benign tumour arising from the brain's outer membranes</p>`,
+      description: `<p><strong>Meningitis:</strong> Inflammation of the brain’s protective membranes, typically caused by infection.</p>
+      <p><strong>Meningioma:</strong> A mostly benign tumour arising from the brain's outer membranes</p>`,
     },
     {
       title: "13. Oligodendroglioma:",
@@ -167,7 +167,7 @@ const data = {
       description:
         "This approach blocks specific molecules or mutations that drive tumour growth.",
       aneurysmSymptoms: [
-        
+
         {
           description:
             '<strong class="text-hciSecondary">EGFR Inhibitors:</strong> Effective for tumours with EGFR mutations (common in glioblastoma).',
@@ -375,7 +375,12 @@ function GeneralSurgery() {
           like osteoporosis that weaken bones.
         </p>
          */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To know more about Brain Tumours and brain cancer and its treatment, click here
+          </button>
+        </p>
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">

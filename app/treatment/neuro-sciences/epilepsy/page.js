@@ -13,7 +13,7 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: "Epilepsy",
   bannerImage: "/neuro-sciences/epilepsy.png",
-  description: `Epilepsy is a neurological disorder characterized by recurrent, unprovoked seizures caused by abnormal electrical activity in the brain. It affects millions of people worldwide and can vary significantly in terms of frequency and severity. Epilepsy is treatable, and many individuals with the condition lead normal, productive lives. India is well-regarded for its advanced epilepsy care, attracting patients globally due to its specialized treatment centers and expert neurologists.`,
+  description: `Epilepsy is a neurological disorder characterized by recurrent, unprovoked seizures caused by abnormal electrical activity in the brain. It affects millions of people worldwide and can vary significantly in terms of frequency and severity. Epilepsy is treatable, and many individuals with the condition lead normal, productive lives. The country is well-regarded for its advanced epilepsy care, attracting patients globally due to its specialized treatment centers and expert neurologists.`,
   overview: ``,
 
   section_1: [
@@ -133,7 +133,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      Epilepsy is a complex condition that requires a tailored treatment approach to ensure optimal outcomes. India’s epilepsy treatment centers offer comprehensive care, from diagnosis to advanced surgical options, ensuring a better quality of life for patients. Early diagnosis and effective management play a crucial role in preventing complications and enabling individuals with epilepsy to lead fulfilling lives.
+      Epilepsy is a complex condition that requires a tailored treatment approach to ensure optimal outcomes. Epilepsy treatment centers offer comprehensive care, from diagnosis to advanced surgical options, ensuring a better quality of life for patients. Early diagnosis and effective management play a crucial role in preventing complications and enabling individuals with epilepsy to lead fulfilling lives.
           `,
     },
   ],
@@ -235,7 +235,13 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+          To know more about epilepsy and its treatment, click here
+          </button>
+        </p>
+  
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>

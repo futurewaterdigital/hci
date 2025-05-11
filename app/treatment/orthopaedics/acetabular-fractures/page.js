@@ -4,7 +4,6 @@ import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
-
 import KnowMore from "@/components/ui/KnowMore";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
@@ -181,7 +180,7 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
         <p
-          dangerouslySetInnerHTML={{__html: data.description}}
+          dangerouslySetInnerHTML={{ __html: data.description }}
           className="text-start font-light"
         />
         <p className="font-light">{data.overview}</p>
@@ -202,7 +201,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <p>
+        <p className="font-light">
           In older adults, fractures can also occur from low-energy trauma, such
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
@@ -248,6 +247,12 @@ function GeneralSurgery() {
           </p>
           <DataLists desc="" data={data.complications} />
         </div>
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Get The Best Treatment For Acetabular Fractures and Related Issues, Click here
+          </button>
+        </p>
+
         <div className="space-y-8">
           <div>
             <H2
@@ -258,6 +263,7 @@ function GeneralSurgery() {
               Consult a doctor if you experience:
             </p>
           </div>
+
           <div className="space-y-4">
             <div className="grid grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (

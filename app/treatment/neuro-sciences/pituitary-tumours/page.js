@@ -13,7 +13,7 @@ import TextComponent from '@/components/Common/TextComponent'
 const data = {
   title: 'Pituitary Tumours',
   bannerImage: '/neuro-sciences/pituitary-tumours.png',
-  description: `Pituitary tumours are abnormal growths that develop in the pituitary gland, a small gland located at the base of the brain. The pituitary gland plays a crucial role in regulating various hormonal functions in the body, affecting growth, metabolism, and reproductive processes. Although many pituitary tumours are benign (non-cancerous), they can still have significant effects on health, leading to various symptoms and complications. In India, awareness and understanding of pituitary tumours are essential for timely diagnosis and effective management.`,
+  description: `Pituitary tumours are abnormal growths that develop in the pituitary gland, a small gland located at the base of the brain. The pituitary gland plays a crucial role in regulating various hormonal functions in the body, affecting growth, metabolism, and reproductive processes. Although many pituitary tumours are benign (non-cancerous), they can still have significant effects on health, leading to various symptoms and complications. Awareness and understanding of pituitary tumours are essential for timely diagnosis and effective management.`,
   overview: ``,
 
   section_1: [
@@ -37,7 +37,7 @@ const data = {
       description:
         'Autoimmune Conditions:Multiple sclerosis and transverse myelitis involve the immune system attacking the spinal cord.',
     },
-   
+
   ],
 
   complications: [
@@ -72,7 +72,7 @@ const data = {
         },
       ],
     },
-    
+
   ],
 
   contact: {
@@ -86,7 +86,7 @@ const data = {
     {
       header: 'Conclusion',
       paragraph: `
-      In India, the management of pituitary tumours involves a multidisciplinary approach, including neurologists, endocrinologists, and neurosurgeons. Early detection and treatment are vital to prevent complications and improve patient outcomes. Regular monitoring and follow-ups are essential to manage any hormonal changes and assess for potential recurrence of the tumour. With advancements in diagnostic and therapeutic techniques, patients with pituitary tumours can expect improved quality of life and effective management of their condition.
+      The management of pituitary tumours involves a multidisciplinary approach, including neurologists, endocrinologists, and neurosurgeons. Early detection and treatment are vital to prevent complications and improve patient outcomes. Regular monitoring and follow-ups are essential to manage any hormonal changes and assess for potential recurrence of the tumour. With advancements in diagnostic and therapeutic techniques, patients with pituitary tumours can expect improved quality of life and effective management of their condition.
           `,
     },
   ],
@@ -121,7 +121,7 @@ const data = {
         'Unexplained fatigue or weakness due to hormonal imbalances.',
       bgColor: 'text-black',
     },
-   
+
   ],
 
   diagnosis: [
@@ -142,7 +142,7 @@ const data = {
         'Hormonal Testing: Blood tests are conducted to measure hormone levels and assess any imbalances.',
       bgColor: 'bg-hciSecondary text-white',
     },
-   
+
   ],
 }
 
@@ -151,14 +151,14 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
+
         <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
 
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
-        The exact cause of pituitary tumours is often unknown, but several factors may contribute to their development:
+          The exact cause of pituitary tumours is often unknown, but several factors may contribute to their development:
 
         </p>
         {/* <H2 text="Types" textClass="text-2xl font-semibold mb-4 text-center" />
@@ -183,7 +183,14 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Pituitary Tumours And Its Treatment, Click Here
+          </button>
+        </p>
+
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">
@@ -208,7 +215,13 @@ function GeneralSurgery() {
                 data={data.diagnosis}
                 myclass="grid grid-cols-1"
               />
-              <KnowMore title={data.title} />
+              {/* <KnowMore title={data.title} /> */}
+              <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+                <button className="text-start underline">
+                  To Get The Best Diagnosis For Pituitary Tumours And Related Issues, Click Here
+                </button>
+              </p>
+
             </div>
           </div>
         </div>
@@ -216,7 +229,7 @@ function GeneralSurgery() {
           <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
           <p className="font-light">
-          The treatment of pituitary tumours depends on the type, size, and whether the tumour is causing hormonal imbalances or other complications. Common treatment options include:
+            The treatment of pituitary tumours depends on the type, size, and whether the tumour is causing hormonal imbalances or other complications. Common treatment options include:
 
           </p>
           <DataLists

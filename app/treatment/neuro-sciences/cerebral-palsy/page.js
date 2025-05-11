@@ -15,7 +15,7 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: "Cerebral Palsy",
   bannerImage: "/neuro-sciences/cerebral-palsy.png",
-  description: `Cerebral palsy (CP) is a group of neurological disorders that affect movement, muscle tone, and posture, primarily caused by abnormal brain development or damage to the developing brain. It is one of the most common causes of motor disability in childhood, significantly impacting a person’s ability to move and maintain balance and posture. In India, cerebral palsy poses considerable challenges to affected individuals and their families, necessitating comprehensive care and support.`,
+  description: `Cerebral palsy (CP) is a group of neurological disorders that affect movement, muscle tone, and posture, primarily caused by abnormal brain development or damage to the developing brain. It is one of the most common causes of motor disability in childhood, significantly impacting a person’s ability to move and maintain balance and posture. Cerebral palsy poses considerable challenges to affected individuals and their families, necessitating comprehensive care and support.`,
   overview: ``,
 
   section_1: [
@@ -116,7 +116,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      In India, early diagnosis and intervention play a crucial role in managing cerebral palsy. A multidisciplinary approach involving healthcare professionals, therapists, and support services is essential for providing comprehensive care and enhancing the quality of life for individuals living with this condition. Support from families and communities also plays a vital role in empowering individuals with cerebral palsy to achieve their full potential.
+      Early diagnosis and intervention play a crucial role in managing cerebral palsy. A multidisciplinary approach involving healthcare professionals, therapists, and support services is essential for providing comprehensive care and enhancing the quality of life for individuals living with this condition. Support from families and communities also plays a vital role in empowering individuals with cerebral palsy to achieve their full potential.
           `,
     },
   ],
@@ -218,7 +218,14 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Cerebral Palsy And Its Treatment, Click Here
+          </button>
+        </p>
+
+
         <div className='pt-6'>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>
@@ -243,7 +250,12 @@ function GeneralSurgery() {
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              <IssuesLinks head={data.title} />
+              {/* <IssuesLinks head={data.title} /> */}
+              <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+                <button className="text-start underline">
+                  To Get The Best Diagnoses For Cerebral Palsy and Related Issues, Click Here
+                </button>
+              </p>
             </div>
           </div>
         </div>

@@ -183,7 +183,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph:
-        "Bowel cancer is becoming more prevalent in India due to changing dietary patterns and increasingly sedentary lifestyles. Fortunately, advancements in early detection through regular screenings like colonoscopy and innovative treatments, including Proton Therapy and CyberKnife, provide better chances for successful outcomes. Comprehensive cancer centers across the country offer multidisciplinary approaches, ensuring patients receive the best possible care from diagnosis to recovery.",
+        "Bowel cancer is becoming more prevalent due to changing dietary patterns and increasingly sedentary lifestyles. Fortunately, advancements in early detection through regular screenings like colonoscopy and innovative treatments, including Proton Therapy and CyberKnife, provide better chances for successful outcomes. Comprehensive cancer centers across the country offer multidisciplinary approaches, ensuring patients receive the best possible care from diagnosis to recovery.",
     },
   ],
 
@@ -284,14 +284,7 @@ function GICancer() {
           Bowel / Colorectal Cancer
         </div>
         <p className="mt-4 text-gray-600 text-start w-full mx-auto font-light leading-relaxed">
-          Bowel cancer or Colorectal cancer, which originates in the colon or
-          rectum, has become a significant health concern globally, including in
-          India. Although it primarily affects individuals over the age of 50,
-          it can also occur in younger people due to a combination of dietary
-          habits, lifestyle factors, and genetic predispositions. As cases rise
-          in India, especially with changing food patterns and urban lifestyles,
-          early detection and comprehensive treatment remain essential for
-          better outcomes.
+          Bowel cancer or Colorectal cancer, which originates in the colon or rectum, has become a significant health concern globally. Although it primarily affects individuals over the age of 50, it can also occur in younger people due to a combination of dietary habits, lifestyle factors, and genetic predispositions. As cases rise, especially with changing food patterns and urban lifestyles, early detection and comprehensive treatment remain essential for better outcomes.
         </p>
 
         <div className="my-10">
@@ -392,7 +385,7 @@ function GICancer() {
               <div
                 key={index}
                 className="border border-hciSecondary rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h2 className="text-xl text-hciPrimary font-medium text-black">
+                <h2 className="text-xl text-hciPrimary font-medium ">
                   {treatment.heading}
                 </h2>
                 {treatment.description && (

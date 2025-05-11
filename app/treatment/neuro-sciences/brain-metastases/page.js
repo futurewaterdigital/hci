@@ -10,6 +10,8 @@ import KnowMore from "@/components/ui/KnowMore";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import TextComponent from "@/components/Common/TextComponent";
 import IssuesLinks from "@/components/ui/IssuesLinks";
+import Link from "next/link";
+
 
 const data = {
   title: "Brain Metastases",
@@ -21,24 +23,35 @@ const data = {
     {
       title: "Neurological Examination:",
       description: `
-A doctor will conduct a thorough examination of the patient&apos;s nervous system, testing vision, hearing, reflexes, balance, coordination, strength, and memory. This helps identify the areas of the brain that may be affected by metastases.`,
+              A doctor will conduct a thorough examination of the patient&apos;s nervous system, testing vision, hearing, reflexes, balance, coordination, strength, and memory. This helps identify the areas of the brain that may be affected by metastases.`,
     },
     {
       title: "Imaging Studies:",
-      description: `
-     ⦁   Magnetic Resonance Imaging (MRI): Provides detailed images of the brain to detect abnormalities.
-     ⦁   Computed Tomography (CT) Scan: A CT scan may be used if an MRI is not available or as an additional tool. It can detect tumours, bleeding, and swelling in the brain.
-     ⦁   Positron Emission Tomography (PET) Scan: A PET scan helps identify areas of increased metabolic activity, which may indicate tumour growth.`,
+      description: [
+        {
+          bold: "Magnetic Resonance Imaging (MRI):",
+          text: "Provides detailed images of the brain to detect abnormalities.",
+        },
+        {
+          bold: "Computed Tomography (CT) Scan:",
+          text: "A CT scan may be used if an MRI is not available or as an additional tool. It can detect tumours, bleeding, and swelling in the brain.",
+        },
+        {
+          bold: "Positron Emission Tomography (PET) Scan:",
+          text: "A PET scan helps identify areas of increased metabolic activity, which may indicate tumour growth.",
+        },
+      ],
+      isList: true,
     },
     {
       title: "Biopsy:",
       description: `
-In cases where the origin of the tumour is unclear, a biopsy may be performed. This involves removing a small tissue sample for microscopic examination. It can be done via a craniotomy or stereotactic needle biopsy.`,
+              In cases where the origin of the tumour is unclear, a biopsy may be performed. This involves removing a small tissue sample for microscopic examination. It can be done via a craniotomy or stereotactic needle biopsy.`,
     },
     {
       title: "Lumbar Puncture (Spinal Tap):",
       description: `
-In some cases, a spinal tap may be performed to collect cerebrospinal fluid (CSF) for analysis. This can help determine whether cancer cells have spread to the brain's lining or the spinal cord.`,
+              In some cases, a spinal tap may be performed to collect cerebrospinal fluid (CSF) for analysis. This can help determine whether cancer cells have spread to the brain's lining or the spinal cord.`,
     },
   ],
 
@@ -268,7 +281,15 @@ function GeneralSurgery() {
           previously been treated for cancer, as your medical history may help
           with diagnosis and treatment.
         </p>
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <div className="mt-4">
+          <Link
+            href="/treatment/oncology/cervical-cancer-diagnosis"
+            className="text-[#0E56A0] font-semibold underline"
+          >
+            To know more about brain metastases and its causes and treatment, click here
+          </Link>
+        </div>
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           Brain metastases occurs when cancer cells detach from their original
@@ -278,7 +299,15 @@ function GeneralSurgery() {
           spreads from the breast to the brain is termed metastatic breast
           cancer, not brain cancer.
         </p>
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <div className="mt-4">
+          <Link
+            href="/treatment/oncology/cervical-cancer-diagnosis"
+            className="text-[#0E56A0] font-semibold underline"
+          >
+            To know more about brain metastases and its treatment, click here
+          </Link>
+        </div>
         <H2
           title="Risk Factors"
           className="font-medium mb-4 text-center text-2xl"
@@ -322,9 +351,12 @@ function GeneralSurgery() {
               title={item.title}
               description={item.description}
               boxCss="min-h-[130px] w-full bg-hciSecondary text-white hover:bg-hciPrimary hover:text-white items-start justify-center"
+              isList={item.isList}
             />
+
           ))}
         </div>
+
         <IssuesLinks head={data.title} />
         {/* <p>
           In older adults, fractures can also occur from low-energy trauma, such

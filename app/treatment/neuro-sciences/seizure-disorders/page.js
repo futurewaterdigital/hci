@@ -9,11 +9,11 @@ import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
 import H1 from '@/components/ui/h1'
-import IssuesLinks from '@/components/ui/IssuesLinks' 
+import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: "Seizure Disorders",
   bannerImage: "/neuro-sciences/seizure-disorders.png",
-  description: `Seizure disorders, commonly referred to as epilepsy, encompass a range of neurological conditions characterized by recurrent seizures. These seizures result from abnormal electrical activity in the brain and can vary significantly in severity and type. In India, seizure disorders are a pressing health issue, affecting millions and often leading to social stigma and misconceptions. Understanding seizure disorders is essential for effective management and support for those affected.`,
+  description: `Seizure disorders, commonly referred to as epilepsy, encompass a range of neurological conditions characterized by recurrent seizures. These seizures result from abnormal electrical activity in the brain and can vary significantly in severity and type. Seizure disorders are a pressing health issue, affecting millions and often leading to social stigma and misconceptions. Understanding seizure disorders is essential for effective management and support for those affected.`,
   overview: ``,
 
   section_1: [
@@ -203,7 +203,14 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Seizure Disorders And Its Treatment, Click Here
+          </button>
+        </p>
+
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>

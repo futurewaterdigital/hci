@@ -2,7 +2,9 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+// import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
 import H2 from "@/components/ui/h2";
 import KnowMore from "@/components/ui/KnowMore";
 import DataBoxes from "@/components/cardiacComponents/Box";
@@ -14,7 +16,7 @@ import IssuesLinks from "@/components/ui/IssuesLinks";
 const data = {
   title: "Spinal Disorders",
   bannerImage: "/orthopaedics/spinal.jpeg",
-  description: `Spinal disorders encompass a range of conditions that affect the spine, including the vertebrae, intervertebral discs, and surrounding tissues. These disorders can lead to significant pain, discomfort, and functional limitations, impacting individuals' quality of life. In India, spinal disorders are a major health concern, with both conservative and surgical treatment options available to help manage symptoms and improve function.`,
+  description: `Spinal disorders encompass a range of conditions that affect the spine, including the vertebrae, intervertebral discs, and surrounding tissues. These disorders can lead to significant pain, discomfort, and functional limitations, impacting individuals quality of life. Spinal disorders are a major health concern, with both conservative and surgical treatment options available to help manage symptoms and improve function.`,
   overview: ``,
 
   causes: [
@@ -202,7 +204,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <KnowMore title={data.title} />
+        <CausesKnowMore title={data.title} />
         <div className="space-y-8 pt-8">
           <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">

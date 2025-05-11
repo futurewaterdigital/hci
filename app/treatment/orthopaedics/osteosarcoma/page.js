@@ -3,6 +3,7 @@ import Banner from "@/components/Common/Banner";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
 import H2 from "@/components/ui/h2";
 import KnowMore from "@/components/ui/KnowMore";
 import DataBoxes from "@/components/cardiacComponents/Box";
@@ -118,7 +119,7 @@ const data = {
       ],
     },
     {
-      heading: "Immunotherapy (Experimental)::",
+      heading: "Immunotherapy (Experimental):",
       aneurysmSymptoms: [
         {
           description:
@@ -424,7 +425,7 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        <CausesKnowMore title={data.title} />
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div className="space-y-4">

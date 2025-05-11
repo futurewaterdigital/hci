@@ -22,10 +22,12 @@ function KnowMore({ title }) {
     <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
       <button onClick={handleClick} className="text-start underline">
         {/* To know more about {title}  and its treatment, click here */}
-        To Know More About {title} And Its Causes And Treatment, Click Here
+        To Know More About {title} And Its Treatment, Click Here
       </button>
     </p>
   );
 }
 
 export default KnowMore;
+
+

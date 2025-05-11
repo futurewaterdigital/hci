@@ -7,27 +7,27 @@ export default function FooterLink({ head }) {
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In India, Click Here`,
+      text: `For The Best Hospital For The Treatment Of ${head} In India, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Bangalore, Click Here`,
+      text: `For The Best Hospital For The Treatment Of ${head} In Bangalore, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Chennai, Click Here`,
+      text: `For The Best Hospital For The Treatment Of ${head} In Chennai, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Delhi, Click Here`,
+      text: `For The Best Hospital For The Treatment Of ${head} In Delhi, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Hyderabad, Click Here`,
+      text: `For The Best Hospital For The Treatment Of ${head} In Hyderabad, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Mumbai, Click Here`,
+      text: `For The Best Hospital For The Treatment Of ${head} In Mumbai, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
   ];

@@ -13,7 +13,7 @@ import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: "Spinal Cord Disorders",
   bannerImage: "/neuro-sciences/spinal-cord-disorders.png",
-  description: `Spinal cord disorders encompass a wide range of conditions that affect the spinal cord, a crucial part of the central nervous system responsible for transmitting signals between the brain and the rest of the body. These disorders can lead to significant physical and neurological impairments, impacting movement, sensation, and even autonomic functions like breathing and heart rate. In India, specialized hospitals offer advanced treatments for various spinal cord disorders, attracting patients from around the world due to high-quality care at affordable costs.`,
+  description: `Spinal cord disorders encompass a wide range of conditions that affect the spinal cord, a crucial part of the central nervous system responsible for transmitting signals between the brain and the rest of the body. These disorders can lead to significant physical and neurological impairments, impacting movement, sensation, and even autonomic functions like breathing and heart rate. Specialized hospitals offer advanced treatments for various spinal cord disorders, attracting patients from around the world due to high-quality care at affordable costs.`,
   overview: ``,
 
   section_1: [
@@ -133,7 +133,7 @@ const data = {
     {
       header: "Conclusion",
       paragraph: `
-      Spinal cord disorders require prompt diagnosis and comprehensive treatment to prevent irreversible damage and improve patient outcomes. With state-of-the-art diagnostic tools and advanced treatment options, including minimally invasive spine surgeries and tailored rehabilitation programs, India has become a leading destination for spinal cord disorder treatment. Early intervention and personalized care plans are key to maximizing recovery and improving quality of life for patients affected by spinal cord disorders.
+     Spinal cord disorders require prompt diagnosis and comprehensive treatment to prevent irreversible damage and improve patient outcomes. With state-of-the-art diagnostic tools and advanced treatment options, including minimally invasive spine surgeries and tailored rehabilitation programs, this region has become a leading destination for spinal cord disorder treatment. Early intervention and personalized care plans are key to maximizing recovery and improving quality of life for patients affected by spinal cord disorders.
           `,
     },
   ],
@@ -243,7 +243,13 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        {/* <KnowMore title={data.title} /> */}
+        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+          <button className="text-start underline">
+            To Know More About Spinal Cord Disorders And Its Treatment, Click Here
+          </button>
+        </p>
+
         <div className='pt-6'>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>
@@ -268,7 +274,14 @@ function GeneralSurgery() {
                 data={data.diagnosis}
                 myclass="grid grid-cols-2"
               />
-              <IssuesLinks head={data.title} />
+              {/* <IssuesLinks head={data.title} /> */}
+              <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
+                <button className="text-start underline">
+                  To get the best diagnosis For spinal cord disorders and related issues, click here
+                </button>
+              </p>
+
+
             </div>
           </div>
         </div>
@@ -286,7 +299,7 @@ function GeneralSurgery() {
             desc={data.complications[0].description}
             data={data.complications}
           /> */}
-           {data.complications.map((item, index) => (
+          {data.complications.map((item, index) => (
             <TextComponent
               key={index}
               title={item.heading}

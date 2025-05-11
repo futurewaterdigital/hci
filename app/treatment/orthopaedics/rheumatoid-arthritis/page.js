@@ -3,7 +3,9 @@ import React from 'react'
 import Banner from '@/components/Common/Banner'
 import DataLists from '@/components/cardiacComponents/Bullets'
 import BookButton from '@/components/cardiacComponents/BookButton'
+// import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
 import H2 from '@/components/ui/h2'
 import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
@@ -15,7 +17,7 @@ import IssuesLinks from "@/components/ui/IssuesLinks"
 const data = {
   title: "Rheumatoid Arthritis",
   bannerImage: "/orthopaedics/rheumatoid-arthritis.png",
-  description: `Rheumatoid arthritis (RA) is a chronic autoimmune disorder that primarily affects the joints, causing inflammation, pain, and progressive joint damage. This condition is prevalent worldwide, including India, and can significantly impact daily activities and overall quality of life. Unlike osteoarthritis, which is primarily due to wear and tear, rheumatoid arthritis is an autoimmune disease where the body’s immune system mistakenly attacks healthy joint tissues.`,
+  description: `Rheumatoid arthritis (RA) is a chronic autoimmune disorder that primarily affects the joints, causing inflammation, pain, and progressive joint damage. This condition is prevalent worldwide and can significantly impact daily activities and overall quality of life. Unlike osteoarthritis, which is primarily due to wear and tear, rheumatoid arthritis is an autoimmune disease where the body’s immune system mistakenly attacks healthy joint tissues.`,
   overview: ``,
 
   causes: [
@@ -274,7 +276,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <KnowMore title={data.title} />
+        <CausesKnowMore title={data.title} />
         <div>
           {/* <h2 className={`text-2xl font-bold text-center text-hciSecondary py-1`}>
           Treatment

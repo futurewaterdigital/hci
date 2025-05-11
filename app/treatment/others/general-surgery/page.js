@@ -27,6 +27,7 @@ const data = {
       content: `HCI’s network of general surgeons is proficient in managing surgical procedures for a variety of conditions, including:`,
       bullets: [
         "Minimally invasive procedures",
+        "Emergency surgical care",
         "Pre and post-operative management",
       ],
       bgColor: "bg-hciPrimary",
@@ -85,10 +86,10 @@ function GeneralSurgery() {
             className="text-2xl font-medium mt-8 text-center"
           />
 
-          <p className="text-center font-light">
+          {/* <p className="text-center font-light">
             Our general surgery services encompass a broad range of conditions,
             including:
-          </p>
+          </p> */}
           <DataLists data={data.complications} />
         </div>
         <H2

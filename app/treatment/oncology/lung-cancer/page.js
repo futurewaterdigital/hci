@@ -331,7 +331,7 @@ function LungCancer() {
             <KnowMore title={data.title} />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className=" gap-6 mb-8">
             <div>
               <H2
                 title="Symptoms of Lung Cancer"
@@ -376,8 +376,7 @@ function LungCancer() {
                     onClick={handleClick}
                     className="text-start underline"
                   >
-                    To get the best diagnosis for lung cancer and related
-                    issues, click here
+                    To get the best diagnosis for lung cancer and related issues, click here
                   </button>
                 </p>
               </div>
