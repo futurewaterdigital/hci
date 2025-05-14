@@ -26,7 +26,7 @@ const data = {
       title: "Specialties in General Surgery",
       content: `HCI’s network of general surgeons is proficient in managing surgical procedures for a variety of conditions, including:`,
       bullets: [
-        "Minimally invasive procedures",
+        "Minimally invasive laparoscopic surgery",
         "Emergency surgical care",
         "Pre and post-operative management",
       ],

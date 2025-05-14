@@ -117,15 +117,15 @@ const bypassSurgery = [
     aneurysmSymptoms: [
       {
         title: "",
-        description: `<span class="text-hciSecondary">General Anesthesia</span> is administered, ensuring you're in a sleep-like state.`,
+        description: `<span class="text-hciSecondary font-medium ">General Anesthesia</span> is administered, ensuring you're in a sleep-like state.`,
       },
       {
         title: "",
-        description: `A <span class="text-hciSecondary">breathing tube</span> is inserted and connected to a ventilator.`,
+        description: `A <span class="text-hciSecondary font-medium">breathing tube</span> is inserted and connected to a ventilator.`,
       },
       {
         title: "",
-        description: `If on-pump surgery is performed, a <span class="text-hciSecondary">heart-lung machine</span> takes over the heart's functions while the heart is temporarily stopped.`,
+        description: `If on-pump surgery is performed, a <span class="text-hciSecondary font-medium">heart-lung machine</span> takes over the heart's functions while the heart is temporarily stopped.`,
       },
       {
         title: "",
@@ -140,11 +140,11 @@ const advancedApproaches = [
     aneurysmSymptoms: [
       {
         title: "",
-        description: `<span class="text-hciSecondary">Off-pump or beating-heart surgery</span>, which doesn't use a heart-lung machine.`,
+        description: `<span class="text-hciSecondary font-medium">Off-pump or beating-heart surgery</span>, which doesn't use a heart-lung machine.`,
       },
       {
         title: "",
-        description: `<span class="text-hciSecondary">Minimally invasive bypass surgery</span>, performed through small incisions instead of opening the chest.`,
+        description: `<span class="text-hciSecondary font-medium">Minimally invasive bypass surgery</span>, performed through small incisions instead of opening the chest.`,
       },
     ],
   },
@@ -266,19 +266,20 @@ function page() {
                 Post-surgery care involves close monitoring and gradually
                 resuming activities:
               </p>
-              <ul className="list-disc list-inside mb-4 font-light space-y-2">
+              <ul className="list-disc list-inside mb-4 font-light space-y-2 text-black [&>li::marker]:text-hciSecondary">
+
                 <li>
                   A{" "}
-                  <strong className="text-hciSecondary">breathing tube</strong>{" "}
+                  <strong className="font-medium text-hciSecondary">breathing tube</strong>{" "}
                   remains until you can breathe on your own.
                 </li>
                 <li>
                   Expect a{" "}
-                  <strong className="text-hciSecondary">hospital stay</strong>{" "}
+                  <strong className="font-medium text-hciSecondary">hospital stay</strong>{" "}
                   of about 5 to 7 days, with initial recovery in an ICU.
                 </li>
                 <li>
-                  <strong className="text-hciSecondary">
+                  <strong className="font-medium text-hciSecondary">
                     Cardiac rehabilitation
                   </strong>{" "}
                   begins early to improve heart health and prevent future
@@ -287,10 +288,11 @@ function page() {
               </ul>
             </div>
             <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
-              <p className="mb-4 font-light font-medium text-lg">
+              <p className="mb-4 font-light text-lg">
                 Contact your healthcare provider if you notice:
               </p>
-              <ul className="list-disc list-inside mb-4 font-light space-y-2">
+              <ul className="list-disc list-inside mb-4 font-light space-y-2 text-black [&>li::marker]:text-hciSecondary">
+
                 <li>Fever or rapid heart rate.</li>
                 <li>New or worsening chest pain.</li>
                 <li>Discharge, redness, or swelling near the surgical site.</li>
@@ -318,20 +320,21 @@ function page() {
               <p className="mb-4 font-medium text-lg">
                 To maintain your heart health:
               </p>
-              <ul className="list-disc list-inside mb-4 font-light space-y-2">
+              <ul className="list-disc list-inside mb-4 font-light space-y-2 text-black [&>li::marker]:text-hciSecondary">
+
                 <li>
-                  <strong className="text-hciSecondary">Quit smoking</strong>{" "}
+                  <strong className="font-medium text-hciSecondary">Quit smoking</strong>{" "}
                   and avoid second-hand smoke.
                 </li>
                 <li>
                   Follow a{" "}
-                  <strong className="text-hciSecondary">
+                  <strong className="font-medium text-hciSecondary">
                     heart-healthy diet
                   </strong>{" "}
                   rich in fruits, vegetables, and whole grains.
                 </li>
                 <li>
-                  <strong className="text-hciSecondary">
+                  <strong className="font-medium text-hciSecondary">
                     Exercise regularly
                   </strong>{" "}
                   under medical guidance.
@@ -341,7 +344,7 @@ function page() {
                 </li>
                 <li>
                   Control conditions like{" "}
-                  <strong className="text-hciSecondary">
+                  <strong className="font-medium text-hciSecondary">
                     diabetes, high blood pressure, and high cholesterol
                   </strong>
                   .

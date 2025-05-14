@@ -5,7 +5,7 @@ const bannerImage = "/cardio/DeepVeinThrombosis.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataSurgery from "@/components/cardiacComponents/Button";
 import TreatmentBox from "@/components/cardiacComponents/TreatmentBox";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import KnowMore from "@/components/ui/KnowMore";

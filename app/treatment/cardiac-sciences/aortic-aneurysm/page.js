@@ -4,7 +4,7 @@ const bannerImage = "/cardio/aortic.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataSurgery from "@/components/cardiacComponents/Button";
 import DataLists from "@/components/cardiacComponents/Bullets";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinkTwo from "@/components/cardiacComponents/FooterLinkTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import IssuesLinks from "@/components/ui/IssuesLinks";
 import CausesLink from "@/components/ui/CausesLink";
@@ -198,17 +198,17 @@ const complications = [
         description: "Formation of clots around the graft or within the aorta.",
       },
       {
-        title: "Infections:",
+        title: "",
         description: "Infections at the surgical site or graft infection.",
       },
       {
         title: "Graft migration:",
-        description: "The graft may shift from its original position.",
+        description: "The stent graft may shift from its original position",
       },
       {
         title: "Control blood pressure and cholesterol:",
         description:
-          "Medications and lifestyle adjustments can reduce arterial damage and lower the risk of aneurysms.",
+          "Medications and lifestyle adjustments can reduce arterial damage.",
       },
     ],
   },
@@ -220,22 +220,22 @@ const prevention = [
       {
         title: "Quit smoking:",
         description:
-          "Tobacco use is a major risk factor for cardiovascular diseases and aneurysms.",
+          "Tobacco use is a major risk factor.",
       },
       {
         title: "Eat a balanced diet:",
         description:
-          "A heart-healthy diet helps prevent atherosclerosis and supports vascular health.",
+          "Eat a balanced diet: A heart-healthy diet helps prevent atherosclerosis.",
       },
       {
         title: "Exercise regularly:",
         description:
-          "Physical activity improves cardiovascular health, strengthens the heart, and lowers blood pressure.",
+          "Physical activity improves cardiovascular health.",
       },
       {
         title: "Routine screenings:",
         description:
-          "High-risk individuals, such as those with family history or pre-existing conditions, should undergo regular testing to monitor vascular health.",
+          "High-risk individuals should undergo regular imaging tests to catch aneurysms early.",
       },
     ],
   },
@@ -376,7 +376,7 @@ export default function page() {
                 follow-up to monitor for complications and ensure the aneurysm
                 does not recur or grow.
               </p>
-              <DataLists data={complications} boxClass="h-[310px]" />
+              <DataLists data={complications} boxClass="h-[340px]" />
             </div>
             <div className="space-y-4">
               <H3 title="Prevention" />
@@ -384,14 +384,14 @@ export default function page() {
                 While not all aortic aneurysms can be prevented, adopting
                 healthy habits can reduce the risk of developing them:
               </p>
-              <DataLists data={prevention} boxClass="h-[310px]" />
+              <DataLists data={prevention} boxClass="h-[340px]" />
             </div>
           </div>
         </div>
 
         <div className="py-0 space-y-6 mt-8">
           <Conclusion data={footerData} />
-          <FooterLinks head="Aortic Aneurysm" />
+          <FooterLinkTwo head="Aortic Aneurysm" />
           <BookButton />
         </div>
       </main>

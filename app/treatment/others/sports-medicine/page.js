@@ -114,7 +114,7 @@ const data = {
   ],
   contact: {
     title: "Contact Us Today",
-    head: "Reach Out to Us Today",
+    head: "",
     content:
       "Contact HCI to explore our comprehensive sports medicine services and discover how we can support your recovery journey.",
   },

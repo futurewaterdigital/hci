@@ -458,7 +458,7 @@ function page() {
             people are travelling abroad to avail the best medical facilities at
             a lower cost of what they have to pay in their resident country.
             India is able to afford world class medical care at a value for
-            money thanks to the focus on healthcare, innovations, make in India,
+            money, thanks to the focus on healthcare, innovations, make in India,
             selfless care, private hospitals leading the improved access to
             healthcare and doctors who go beyond the call of duty putting
             patients first.
@@ -540,7 +540,7 @@ function page() {
 
           <H2
             title="Hotel Expenses in India"
-            className=" text-pink-600 font-bold mb-4"
+            className=" text-pink-600 font-bold mb-4 text-center text-lg"
           />
           <div className="overflow-x-auto">
             <img src="/images/hotels.png" alt="Treatment Cost Comparison" />

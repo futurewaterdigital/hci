@@ -4,7 +4,7 @@ import Banner from "@/components/Common/Banner";
 import DataSurgery from "@/components/cardiacComponents/Button";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataLists from "@/components/cardiacComponents/Bullets";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import H3 from "@/components/ui/h3";
 import H1 from "@/components/ui/h1";
@@ -207,22 +207,22 @@ const recoveryOutlook = [
     heading: "Recovery and Long-Term Outlook",
     aneurysmSymptoms: [
       {
-        title: "Hospital stay",
+        title: "Hospital stay:",
         description:
           "Patients usually spend a few weeks in the hospital for recovery and monitoring.",
       },
       {
-        title: "Medications",
+        title: "Medications:",
         description:
           "Lifelong immunosuppressants are necessary to prevent organ rejection.",
       },
       {
-        title: "Follow-up care",
+        title: "Follow-up care:",
         description:
           "Regular check-ups and tests are essential to monitor organ function and overall health.",
       },
       {
-        title: "Quality of life",
+        title: "Quality of life:",
         description:
           "With proper care, most transplant recipients can return to daily activities, with many enjoying an improved quality of life.",
       },
@@ -350,11 +350,11 @@ function page() {
           <div className="grid lg:grid-cols-2 gap-4">
             <DataLists
               data={transplantEvaluation}
-              boxClass="h-[300px] font-medium"
+              boxClass="h-[290px] font-medium"
             />
             <DataLists
               data={SurgeryEvaluation}
-              boxClass="h-[300px] font-medium"
+              boxClass="h-[290px] font-medium"
             />
           </div>
         </div>

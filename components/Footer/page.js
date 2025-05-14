@@ -88,7 +88,7 @@ export default function Footer() {
                   <FaSquareXTwitter size={25} />
                 </Link>
                 <Link
-                  href="https://www.youtube.com/@HCI_MVT_service"
+                  href="https://www.youtube.com/@HCIIndia-x6t"
                   target="_blank">
                   <FaYoutube size={25} />
                 </Link>

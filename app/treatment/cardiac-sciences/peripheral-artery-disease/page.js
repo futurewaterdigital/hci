@@ -4,7 +4,7 @@ import Banner from "@/components/Common/Banner";
 const bannerImage = "/cardio/peripheral-artery-disease.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataLists from "@/components/cardiacComponents/Bullets";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
 import H2 from "@/components/ui/h2";

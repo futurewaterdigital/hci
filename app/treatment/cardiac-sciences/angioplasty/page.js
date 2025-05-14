@@ -161,26 +161,33 @@ function page() {
                 key={index}
                 className="bg-white border border-hciSecondary p-4 rounded shadow-lg"
               >
-                <h2 className="font-medium text-black font-medium text-2xl font-bold text-hciPrimary mb-2 text-xl">
+                <h2 className="text-2xl font-bold text-hciPrimary mb-2">
                   {item.title}
                 </h2>
                 <p className="text-hciSecondary py-1 font-semibold text-lg">
                   {item.description}
                 </p>
-                <ul className="list-disc list-inside ml-2 text-hciSecondary text-2xl">
+
+                {/* Bullet points with proper alignment */}
+                <div className="space-y-2 mt-2">
                   {item.list.map((point, idx) => (
-                    <li key={idx}>
+                    <div key={idx} className="flex items-start gap-2">
+                      <span className="text-hciSecondary text-lg">•</span>
                       <span
-                        className="text-black text-[16px] font-light -ml-2"
+                        className="text-black text-[16px] font-light leading-relaxed"
                         dangerouslySetInnerHTML={{ __html: point }}
                       />
-                    </li>
+                    </div>
                   ))}
-                </ul>
-                {item.extra && <p className="pt-2 font-light">{item.extra}</p>}
+                </div>
+
+                {item.extra && (
+                  <p className="pt-2 font-light text-black">{item.extra}</p>
+                )}
               </div>
             ))}
           </div>
+
 
           <p className="mb-4 font-light">
             For more information on angioplasty, including preparation and

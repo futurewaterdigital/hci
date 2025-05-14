@@ -25,7 +25,7 @@ export default function ListBox({ data }) {
           className="bg-hciYellow p-6 rounded-lg flex flex-col shadow-lg"
         >
           {benefit.title && (
-            <h4 className="text-lg font-medium mb-2 text-center">
+            <h4 className="text-lg font-medium text-center">
               {benefit && benefit.title}
             </h4>
           )}

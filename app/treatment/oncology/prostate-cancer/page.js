@@ -125,8 +125,11 @@ const data = {
       items: [
         {
           title: "Surgery",
-          description:
+          description: [
             "Radical Prostatectomy: Removal of the prostate gland, often used for early-stage cancer.",
+            "Robotic-Assisted Surgery (Robotic Prostatectomy): Robotic surgery is a minimally invasive technique that uses robotic arms controlled by a surgeon to perform precise procedures. This method offers improved accuracy, reduced blood loss, less postoperative pain, and quicker recovery compared to traditional surgery. Robotic prostatectomy has become a preferred choice for many patients due to its advanced capabilities and better functional outcomes, including urinary control and sexual function."
+          ]
+
         },
         {
           title: "Hormone Therapy",
@@ -302,28 +305,34 @@ function ProstateCancer() {
         </div>
 
         {/* Treatments */}
-        <div className="mt-12">
-          <H2
-            title={data.treatments[0].heading}
-            className="text-2xl font-medium mb-6"
-          />
-          <p className="text-gray-600 mb-6 font-light">
-            {data.treatments[0].description}
-          </p>
-          <div className="border border-hciSecondary rounded-lg p-6 space-y-6">
-            {data.treatments[0].items.map((treatment, idx) => (
-              <div key={idx} className="space-y-2">
-                <H3
-                  title={treatment.title}
-                  className="text-lg font-medium text-hciSecondary"
-                />
-                <p className="text-gray-600 font-light">
-                  {treatment.description}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div className="border border-hciSecondary rounded-lg p-6 space-y-6">
+          {data.treatments[0].items.map((treatment, idx) => (
+            <div key={idx} className="space-y-2">
+              <H3
+                title={treatment.title}
+                className="text-lg font-medium text-hciSecondary"
+              />
+              {(Array.isArray(treatment.description) ? treatment.description : [treatment.description]).map((desc, i) => {
+                const [boldText, ...rest] = desc.split(":");
+                const restText = rest.join(":").trim();
+
+                return (
+                  <p key={i} className="text-gray-600 font-light">
+                    {rest.length > 0 ? (
+                      <>
+                        <strong className="font-medium text-black">{boldText}:</strong> {restText}
+                      </>
+                    ) : (
+                      desc
+                    )}
+                  </p>
+                );
+              })}
+
+            </div>
+          ))}
         </div>
+
 
         {/* Advantages */}
         <div className="mt-12">

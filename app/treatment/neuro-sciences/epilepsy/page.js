@@ -111,6 +111,24 @@ const data = {
       ],
     },
     {
+      heading: "Radiation Therapy:",
+      description: "",
+      aneurysmSymptoms: [
+        {
+          description: `Radiation therapy is a non-invasive option for select patients with epilepsy, especially those with seizure-causing lesions or tumours. It involves targeting precise brain regions responsible for seizure activity with controlled doses of radiation. Over time, this disrupts abnormal neural circuits, reducing seizure frequency. This technique is beneficial for patients who are not suitable for conventional surgery.`,
+        },
+      ],
+    },
+    {
+      heading: "Stereotactic Radiosurgery (SRS):",
+      description: "",
+      aneurysmSymptoms: [
+        {
+          description: `SRS is a highly focused form of radiation therapy, typically delivered in a single session using technologies like Cyber Knife ,  Gamma Knife. It accurately targets seizure foci with minimal impact on surrounding brain tissue. SRS is especially useful for focal epilepsy caused by specific structural abnormalities and offers a non-invasive alternative with promising long-term seizure control.`,
+        },
+      ],
+    },
+    {
       heading: "Lifestyle Management",
       description: "",
       aneurysmSymptoms: [

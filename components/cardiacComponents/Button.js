@@ -22,7 +22,7 @@ function Button({ data }) {
         >
           <span className="font-medium capitalize text-hciSecondary group-hover:text-white pb-2">{items.title}</span>
           <span
-            className="text-sm font-light text-center"
+            className="text-sm font-light text-center text-black group-hover:text-white"
             dangerouslySetInnerHTML={{ __html: items.description }}
           />
         </div>

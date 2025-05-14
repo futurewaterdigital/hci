@@ -9,9 +9,9 @@ export default function PriceComparison() {
         <div className="space-y-4 flex flex-col items-center">
           <p className="font-light text-center max-w-6xl mx-auto">
             The cost of treatment in India is much lower, compared to other
-            countries. We at Healthcare international offer Medical value travel
+            countries. We at Healthcare international offer medical value travel
             and solutions for advance treatments, and ensure you lead a healthy
-            life. 
+            life.
           </p>
           <Link
             href="/cost-comparison"

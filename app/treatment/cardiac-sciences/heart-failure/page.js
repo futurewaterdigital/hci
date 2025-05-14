@@ -456,38 +456,38 @@ export default function page() {
                 blood pressure and weight. They will also ask about your:
               </p>
               <ul class="space-y-2">
-                <li class="flex items-start p-0">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   <span class="text-md font-light">
                     Family&apos;s medical history, especially previous cardiac
                     problems
                   </span>
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   <span class="text-md font-light">
                     Lifestyle (such as whether you smoke or exercise)
                   </span>
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   <span class="text-md font-light">
                     Medications, including prescriptions, over-the-counter drugs
                     and supplements
                   </span>
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   <span class="text-md font-light">
                     Personal medical history
                   </span>
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   <span class="text-md font-light">Symptoms</span>
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   <span class="text-md font-light">Blood tests</span>
                 </li>
               </ul>
@@ -495,14 +495,14 @@ export default function page() {
                 Blood tests can measure several things related to heart failure:
               </p>
               <ul class="space-y-2">
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   <span class="text-md font-light">
                     Sodium and potassium levels (electrolytes)
                   </span>
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   <span class="text-md font-light">
                     Creatinine, which helps measure how well your kidneys are
                     working
@@ -667,20 +667,20 @@ export default function page() {
                 Treatments also improve quality of life by:
               </h3>
               <ul class="space-y-2 text-gray-700 font-light">
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   Addressing any underlying causes
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   Relieving symptoms
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   Improving overall health
                 </li>
-                <li class="flex items-start">
-                  <span class="text-pink-500 mr-2 text-2xl">•</span>
+                <li class="flex items-center">
+                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   Education and lifestyle choices
                 </li>
               </ul>
@@ -693,38 +693,38 @@ export default function page() {
               team will talk with you about the importance of:
             </h3>
             <ul class="space-y-2 text-gray-700 font-light">
-              <li class="flex items-start">
-                <span class="text-pink-500 mr-2 text-2xl">•</span>
+              <li class="flex items-center">
+                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Controlling blood pressure and controlling blood sugar (if you
                 have diabetes)
               </li>
-              <li class="flex items-start">
-                <span class="text-pink-500 mr-2 text-2xl">•</span>
+              <li class="flex items-center">
+                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Eating a heart-healthy diet, including controlling sodium
               </li>
-              <li class="flex items-start">
-                <span class="text-pink-500 mr-2 text-2xl">•</span>
+              <li class="flex items-center">
+                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Participating in moderate exercise
               </li>
-              <li class="flex items-start">
-                <span class="text-pink-500 mr-2 text-2xl ">•</span>
+              <li class="flex items-center">
+                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Recognizing small warning signs in your body, such as swelling
                 or weight gain
               </li>
-              <li class="flex items-start">
-                <span class="text-pink-500 mr-2 text-2xl">•</span>
+              <li class="flex items-center">
+                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Getting enough sleep
               </li>
-              <li class="flex items-start">
-                <span class="text-pink-500 mr-2 text-2xl">•</span>
+              <li class="flex items-center">
+                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Losing weight if necessary
               </li>
-              <li class="flex items-start">
-                <span class="text-pink-500 mr-2 text-2xl">•</span>
+              <li class="flex items-center">
+                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Quitting smoking
               </li>
-              <li class="flex items-start">
-                <span class="text-pink-500 mr-2 text-2xl">•</span>
+              <li class="flex items-center">
+                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Avoiding alcohol
               </li>
             </ul>
@@ -761,23 +761,24 @@ export default function page() {
           </p>
 
           <ul class="space-y-4 mb-6 list-disc list-inside ml-4">
-            <li class="flex items-start">
-              <span class="text-pink-500 mr-2 text-2xl">•</span>
+            <li class="flex items-center">
+              <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
               <p class="text-gray-700 font-light text-md">
                 Pacemaker, which maintains a steady heart beat in people with a
                 slow or irregular heartbeat
               </p>
             </li>
-            <li class="flex items-start">
-              <span class="text-pink-500 mr-2 text-2xl">•</span>
+
+            <li class="flex items-center">
+              <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
               <p class="text-gray-700 font-light text-md">
                 Implantable cardioverter defibrillator (ICD), which monitors the
                 heart for fast rhythm and delivers an electrical shock to reset
                 normal rhythm
               </p>
             </li>
-            <li class="flex items-start">
-              <span class="text-pink-500 mr-2 text-2xl">•</span>
+            <li class="flex items-center">
+              <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
               <p class="text-gray-700 font-light text-md">
                 Left ventricular assist device (LVAD), which takes over the
                 pumping action of the heart

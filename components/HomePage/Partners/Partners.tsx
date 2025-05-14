@@ -55,7 +55,7 @@ const Partners: React.FC = () => {
   return (
     <div className="w-full mt-16 px-2 lg:px-0">
       <div className="bg-white lg:w-11/12 mx-auto text-center">
-        <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
+        <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 font-bold ">
           Our Network Hospitals
         </h3>
 

@@ -3,7 +3,7 @@ import Banner from "@/components/Common/Banner";
 const bannerImage = "/cardio/Heart-valve.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataLists from "@/components/cardiacComponents/Bullets";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
 import H2 from "@/components/ui/h2";
@@ -151,17 +151,17 @@ const surgicalProceduresData = [
     heading: `Surgical Procedures`,
     aneurysmSymptoms: [
       {
-        title: "Valve Repair",
+        title: "Valve Repair:",
         description:
           "Preferred when the valve structure can be preserved. Techniques include reshaping leaflets or repairing tears.",
       },
       {
-        title: "Valve Replacement",
+        title: "Valve Replacement:",
         description:
           "If repair isn't feasible, the valve is replaced with a mechanical valve or a bioprosthetic valve (from animal tissue).",
       },
       {
-        title: "Transcatheter Aortic Valve Replacement (TAVR)",
+        title: "Transcatheter Aortic Valve Replacement (TAVR):",
         description: "A less invasive procedure for high-risk patients.",
       },
     ],

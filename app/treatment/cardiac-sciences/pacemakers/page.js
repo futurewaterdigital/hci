@@ -65,18 +65,18 @@ const procedureDetails = [
     heading: `Procedure Details`,
     aneurysmSymptoms: [
       {
-        title: "Catheter-based approach (for leadless pacemakers)",
+        title: "Catheter-based approach (for leadless pacemakers):",
         description: "Inserted via a catheter through a vein.",
         bgColor: "bg-purple-100 p-4 rounded-md",
       },
       {
-        title: "Transvenous approach",
+        title: "Transvenous approach:",
         description:
           "Leads are threaded through a vein to the heart, with the device placed under the chest skin.",
         bgColor: "bg-purple-100 p-4 rounded-md",
       },
       {
-        title: "Surgical approach",
+        title: "Surgical approach:",
         description:
           "Leads are attached directly to the heart during open surgery, with the device implanted in the abdomen or chest.",
         bgColor: "bg-purple-100 p-4 rounded-md",
@@ -89,23 +89,23 @@ const valveConditionsData = [
     heading: `Types of Pacemakers`,
     aneurysmSymptoms: [
       {
-        title: "Leadless pacemakers",
+        title: "Leadless pacemakers:",
         description:
           "Small, wire-free devices implanted directly in the heart.",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Single-chamber pacemakers",
+        title: "Single-chamber pacemakers:",
         description: "A single wire connects to one heart chamber.",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Dual-chamber pacemakers",
+        title: "Dual-chamber pacemakers:",
         description: "Wires connect to two chambers for synchronized beats.",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Biventricular pacemakers",
+        title: "Biventricular pacemakers:",
         description:
           "Three wires for treating heart failure by improving coordination between heart chambers.",
         bgColor: "bg-blue-100 p-4 rounded-md",
@@ -175,19 +175,19 @@ const recoveryDetails = [
     heading: `Recovery and Maintenance`,
     aneurysmSymptoms: [
       {
-        title: "Battery life",
+        title: "Battery life:",
         description:
           "Pacemakers typically last 10–15 years. Replacement involves a less-invasive procedure.",
         bgColor: "bg-gray-100 p-4 rounded-md",
       },
       {
-        title: "Life expectancy",
+        title: "Life expectancy:",
         description:
           "Many patients with pacemakers enjoy normal or near-normal life spans, depending on their overall health.",
         bgColor: "bg-gray-100 p-4 rounded-md",
       },
       {
-        title: "Follow-up care",
+        title: "Follow-up care:",
         description:
           "Regular check-ups are essential to monitor device function and battery levels.",
         bgColor: "bg-gray-100 p-4 rounded-md",

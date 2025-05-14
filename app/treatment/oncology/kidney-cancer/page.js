@@ -321,7 +321,7 @@ function KidneyCancer() {
               <div
                 key={index}
                 className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h2 className="text-xl text-hciPrimary font-bold text-black">
+                <h2 className="text-xl text-hciPrimary font-bold">
                   {treatment.heading}
                 </h2>
                 {treatment.description && (

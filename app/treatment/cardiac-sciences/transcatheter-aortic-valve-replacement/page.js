@@ -230,7 +230,7 @@ export default function page() {
               head=""
               data={RiskDone}
               footerdata="However, studies show comparable risks of severe complications between TAVR and traditional surgery."
-              boxClass="min-h-[410px]"
+              boxClass="min-h-[430px]"
             />
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function page() {
             data={postTAVRCare}
             footerTitle="Follow-Up"
             footerdata="Regular check-ups and imaging tests ensure the new valve is functioning correctly. Notify your doctor of symptoms like swelling, dizziness, or sudden weight gain."
-            boxClass="min-h-[340px]"
+            boxClass="min-h-[360px]"
           />
           <DataLists
             desc="TAVR effectively reduces symptoms of aortic stenosis and enhances quality of life. Adopting a heart-healthy lifestyle after the procedure further supports recovery and long-term heart health:"
@@ -295,7 +295,7 @@ export default function page() {
             data={resultsData}
             footerTitle=""
             footerdata=""
-            boxClass="min-h-[340px]"
+            boxClass="min-h-[360px]"
           />
         </div>
         <div className="space-y-4 mt-8">

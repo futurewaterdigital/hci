@@ -15,9 +15,9 @@ const helpData = [
       "Our global network of leading clinicians allows us to connect you with top specialists. We can even assemble a team to review your records and recommend the best treatment options. Video consultations are available if you'd like to discuss your condition directly with our doctors.",
   },
   {
-    title: "Choosing the Reputed Hospital",
+    title: "Choosing the Best Hospital",
     content:
-      "HCI partners with highly regarded hospitals in India, Egypt, UAE, and Mauritius, all known for advanced technology and patient care. We guide you in selecting a facility that fits your specific medical need.",
+      "HCI partners with highly reputed hospitals in India, Egypt, UAE, and Mauritius, all known for advanced technology and patient care. We guide you in selecting a facility that fits your specific medical need.",
   },
   {
     title: "Understanding Treatment Costs",
@@ -100,6 +100,7 @@ const faqData = [
 
 const servicesData = [
   "Visa assistance and invitation letters",
+  "Airport pickup and drop",
   "Accommodation bookings near your hospital",
   "City orientation and recommended Apps for your stay",
   "Currency exchange and money transfer guidance",

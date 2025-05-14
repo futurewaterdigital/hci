@@ -87,7 +87,7 @@ const dataFile = [
           speciality: 'Comprehensive cancer care',
         },
         {
-          name: 'Apollo Proton Cancer Centre',
+          name: 'Apollo Proton Cancer Centre & Apollo Hospitals Jubilee Hills',
           city: 'Chennai',
           beds: 150,
           speciality:

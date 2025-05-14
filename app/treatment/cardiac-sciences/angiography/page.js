@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 const bannerImage = "/cardio/angiography.png";
 import H1 from "@/components/ui/h1";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinksTwo from "@/components/cardiacComponents/FooterLinkTwo";
 import H2 from "@/components/ui/h2";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataLists from "@/components/cardiacComponents/Bullets";
@@ -101,27 +101,27 @@ const treatmentOptions = [
     heading: "",
     aneurysmSymptoms: [
       {
-        title: "Angioplasty",
+        title: "Angioplasty:",
         description:
           "A balloon is inserted and inflated to open up narrowed or blocked arteries.",
       },
       {
-        title: "Stent Placement",
+        title: "Stent Placement:",
         description:
           "A tiny mesh tube is inserted to keep the artery open after angioplasty.",
       },
       {
-        title: "Medication",
+        title: "Medication:",
         description:
           "Depending on findings, your provider may prescribe blood thinners, cholesterol-lowering drugs, or medications to improve blood flow.",
       },
       {
-        title: "Lifestyle Modifications",
+        title: "Lifestyle Modifications:",
         description:
           "Dietary changes, exercise, and smoking cessation are often recommended to improve vascular health.",
       },
       {
-        title: "Surgical Intervention",
+        title: "Surgical Intervention:",
         description:
           "In severe cases, procedures like bypass surgery may be necessary to restore blood flow.",
       },
@@ -147,7 +147,7 @@ const surgeryData = [
   },
   {
     title: "Aneurysms",
-    description: "(Weakened arterial walls that can bulge and rupture.)",
+    description: "(weakened arterial walls.)",
     minHeight: "min-h-[100px] text-center",
   },
 ];
@@ -237,7 +237,7 @@ function page() {
 
             <div className="space-y-6 mt-4">
               <Conclusion data={conclusionData} />
-              <FooterLinks head="Angiography" />
+              <FooterLinksTwo head="Angiography" />
               <BookButton />
             </div>
           </section>
