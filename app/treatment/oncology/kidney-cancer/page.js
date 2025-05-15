@@ -375,4 +375,6 @@ function KidneyCancer() {
   );
 }
 
+// This component is the main export for the Kidney Cancer page
+
 export default KidneyCancer;
