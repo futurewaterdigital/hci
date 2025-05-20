@@ -6,6 +6,8 @@ import DataLists from "@/components/cardiacComponents/Bullets";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 import H2 from "@/components/ui/h2";
 import H1 from "@/components/ui/h1";
 import DataSurgery from "@/components/cardiacComponents/Button";
@@ -292,7 +294,7 @@ export default function page() {
           </div>
         </div>
 
-        <KnowMore title={title} />
+        {/* <KnowMore title={title} /> */}
 
         <div className="grid lg:grid-cols-2 gap-4 mt-8">
           <DataBoxes
@@ -313,7 +315,9 @@ export default function page() {
             myclass="grid grid-cols-1"
           />
         </div>
-        <KnowMore title={title} />
+        {/* <KnowMore title={title} /> */}
+        <CausesKnowMore title={title} />
+
 
         <div class="my-12">
           <div class="border border-pink-200 rounded-lg p-6">
@@ -554,7 +558,9 @@ export default function page() {
               </p>
             </div>
           </div>
-          <KnowMore title={title} />
+          {/* <KnowMore title={title} /> */}
+          <IssuesLinks head={title} />
+
         </div>
 
         <div class="mb-12">

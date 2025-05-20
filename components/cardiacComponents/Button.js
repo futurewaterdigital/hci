@@ -17,10 +17,14 @@ function Button({ data }) {
     >
       {data.map((items, index) => (
         <div
-          className={`bg-white border border-hciSecondary ${items.minHeight ? items.minHeight : 'min-h-[150px] text-hciSecondary'} rounded-xl flex items-center flex-col p-2 hover:bg-hciSecondary hover:text-white group`}
+          className={`bg-white border border-hciSecondary ${
+            items.minHeight ? items.minHeight : 'min-h-[150px] text-hciSecondary'
+          } rounded-xl flex flex-col items-center justify-center p-4 hover:bg-hciSecondary hover:text-white group`}
           key={index}
         >
-          <span className="font-medium capitalize text-hciSecondary group-hover:text-white pb-2">{items.title}</span>
+          <span className="font-medium capitalize text-hciSecondary group-hover:text-white py-2 text-center">
+            {items.title}
+          </span>
           <span
             className="text-sm font-light text-center text-black group-hover:text-white"
             dangerouslySetInnerHTML={{ __html: items.description }}

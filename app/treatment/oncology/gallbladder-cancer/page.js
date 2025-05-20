@@ -114,7 +114,7 @@ const data = {
       items: [
         {
           title: "Imaging Tests",
-          description:[
+          description: [
             "Ultrasound: A non-invasive test that uses sound waves to create images of the gallbladder and surrounding organs",
             "CT Scan: Provides detailed cross-sectional images to detect abnormalities in the gallbladder and assess the extent of cancer spread.",
             "MRI: Offers high-resolution images of soft tissues, including the gallbladder and nearby structures."
@@ -223,8 +223,11 @@ const data = {
       aneurysmSymptoms: [
         {
           title: " Imaging Tests",
-          description:
-            "A scope is inserted into the rectum to examine the entire colon and rectum for any abnormalities, including polyps or tumors.",
+          description: [
+            "Ultrasound: A non-invasive test that uses sound waves to create images of the gallbladder and surrounding organs",
+            "CT Scan: Provides detailed cross-sectional images to detect abnormalities in the gallbladder and assess the extent of cancer spread.",
+            "MRI: Offers high-resolution images of soft tissues, including the gallbladder and nearby structures."
+          ],
         },
         {
           title: "Biopsy",
@@ -342,167 +345,198 @@ const data = {
 
 function GallbladderCancer() {
   return (
-    <div className="max-w-7xl relative mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-3xl mt-14 text-center text-[#D84598] font-semibold">
-        {data.title}
-      </div>
-      <div className="mt-6">
-        <p className="text-gray-600 text-lg font-light">{data.description}</p>
-      </div>
-
-      {/* Banner Image */}
+    <>
+      {/* Banner image */}
       <Banner image="/oncology/gallbladder-cancer-banner.png" />
-
-      <div className="text-xl text-center font-bold">
-        Causes of Gallbladder cancer
-      </div>
-      <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-        Several factors contribute to the development of gallbladder cancer,
-        including:
-      </p>
-      <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
-        {data?.riskFactors.map((factor, index) => (
-          <div
-            key={index}
-            className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]"
-          >
-            <h3 className="font-bold text-base mb-1">{factor.title}</h3>
-            <p className="text-sm text-gray-900 leading-snug">
-              {factor.description}
-            </p>
-          </div>
-        ))}
-      </div>
-      <div className="my-3">
-        <Link href={""} className="text-hciPrimary font-semibold underline">
-          To Know More About Gallbladder Cancer and Its Treatment, Click here
-        </Link>
-      </div>
-      <div className="mt-12 gap-8">
-        {/* Causes Section */}
-        <div>
-          <H2
-            title="Symptoms of Bowel Cancer"
-            className="text-xl font-semibold mb-4"
-          />
-          <p className="text-gray-600 mb-6 font-light">
-            {data.symptoms[0].description}
-          </p>
-          <div className="space-y-2">
-            {data.causes[0]?.aneurysmSymptoms?.map((cause, idx) => (
-              <div
-                key={idx}
-                className="bg-[#0E56A0] text-white font-light p-4 rounded text-sm"
-              >
-                <span className="font-semibold pr-1">{cause.title}</span>
-                {cause.description}
-              </div>
-            ))}
-          </div>
-          <div className="mt-4">
-            <Link
-              href="/treatment/oncology/cervical-cancer-info"
-              className="text-[#0E56A0] font-semibold underline"
-            >
-              To Know More About Gallbladder Cancer and Its Causes and Treatment, Click here
-            </Link>
-          </div>
+      <div className="max-w-7xl relative mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-3xl mt-14 text-center text-[#D84598] font-semibold">
+          {data.title}
+        </div>
+        <div className="mt-6">
+          <p className="text-gray-600 text-lg font-light">{data.description}</p>
         </div>
 
-        {/* Diagnosis Section */}
-        <div className="mt-10">
-          <H2
-            title="Diagnosis of Bowel cancer"
-            className="text-xl font-semibold mb-4"
-          />
-          <p className="text-gray-600 mb-6 font-light">
-            Diagnosing gallbladder cancer typically involves a series of evaluations and tests, including:
-          </p>
-
-          <div className="space-y-2">
-            {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
-              <div
-                key={idx}
-                className="bg-[#D84498] text-white p-3 rounded text-sm"
-              >
-                <div className="font-semibold">{diagnosis.title}</div>
-                {diagnosis.description}
-              </div>
-            ))}
-          </div>
-          <div className="mt-4">
-            <Link
-              href="/treatment/oncology/cervical-cancer-diagnosis"
-              className="text-[#0E56A0] font-semibold underline"
-            >
-              To Get the Best Diagnosis of Gallbladder Cancer and Related Issues, Click here
-            </Link>
-          </div>
+        <div className="text-xl text-center font-bold pt-5">
+          Causes of Gallbladder cancer
         </div>
-      </div>
-      {/* Treatments Section */}
-      <div className="mt-12">
-        <H2
-          title="Treatment for Gallbladder Cancer"
-          className="text-2xl font-semibold mb-6 text-center"
-        />
         <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
-          The treatment approach for gallbladder cancer depends on the stage of
-          the disease, the patient&lsquo;s overall health, and their
-          preferences. Treatment options may include:
+          Several factors contribute to the development of gallbladder cancer,
+          including:
         </p>
-        <div className="grid grid-cols-1 gap-6">
-          {data.treatments.map((treatment, index) => (
+        <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
+          {data?.riskFactors.map((factor, index) => (
             <div
               key={index}
-              className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]"
             >
-              <h2 className="text-xl text-hciPrimary font-bold">
-                {treatment.heading}
-              </h2>
-              {treatment.description && (
-                <p className="text-gray-600 mb-4 font-light">
-                  {treatment.description}
-                </p>
-              )}
-              <div className="space-y-4">
-                {treatment?.aneurysmSymptoms?.map((item, idx) => (
-                  <div key={idx} className="text-gray-600">
-                    <span className="text-[#D84498]">
-                      {" "}
-                      {item.title && <strong>{item.title}: </strong>}
-                    </span>
-                    {item.description}
-                  </div>
-                ))}
+              <h3 className="font-bold text-base mb-1">{factor.title}</h3>
+              <p className="text-sm text-gray-900 leading-snug">
+                {factor.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="my-3">
+          <Link href={""} className="text-hciPrimary font-semibold underline">
+            To Know More About Gallbladder Cancer and Its Treatment, Click here
+          </Link>
+        </div>
+        <div className="mt-12 gap-8">
+          {/* Causes Section */}
+          <div>
+            <H2
+              title="Symptoms of Bowel Cancer"
+              className="text-xl font-semibold mb-4"
+            />
+            <p className="text-gray-600 mb-6 font-light">
+              {data.symptoms[0].description}
+            </p>
+            <div className="space-y-2">
+              {data.causes[0]?.aneurysmSymptoms?.map((cause, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#0E56A0] text-white font-light p-4 rounded text-sm"
+                >
+                  <span className="font-semibold pr-1">{cause.title}</span>
+                  {cause.description}
+                </div>
+              ))}
+            </div>
+            <div className="mt-4">
+              <Link
+                href="/treatment/oncology/cervical-cancer-info"
+                className="text-[#0E56A0] font-semibold underline"
+              >
+                To Know More About Gallbladder Cancer and Its Causes and Treatment, Click here
+              </Link>
+            </div>
+          </div>
+
+          {/* Diagnosis Section */}
+          <div className="mt-10">
+            <H2
+              title="Diagnosis of Bowel cancer"
+              className="text-xl font-semibold mb-4"
+            />
+            <p className="text-gray-600 mb-6 font-light">
+              Diagnosing gallbladder cancer typically involves a series of evaluations and tests, including:
+            </p>
+
+            <div className="space-y-2">
+              {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#D84498] text-white p-3 rounded text-sm"
+                >
+                  <div className="font-semibold">{diagnosis.title}</div>
+
+                  {Array.isArray(diagnosis.description) ? (
+                    <ul className="list-disc list-inside mt-1 space-y-1">
+                      {diagnosis.description.map((desc, i) => {
+                        const [beforeColon, afterColon] = desc.split(/:(.+)/);
+                        return (
+                          <li key={i}>
+                            {afterColon ? (
+                              <>
+                                <strong>{beforeColon}:</strong>{afterColon}
+                              </>
+                            ) : (
+                              desc
+                            )}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : (
+                    <p className="mt-1">
+                      {diagnosis.description.includes(":") ? (
+                        <>
+                          <strong>{diagnosis.description.split(/:(.+)/)[0]}:</strong>
+                          {diagnosis.description.split(/:(.+)/)[1]}
+                        </>
+                      ) : (
+                        diagnosis.description
+                      )}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4">
+              <Link
+                href="/treatment/oncology/cervical-cancer-diagnosis"
+                className="text-[#0E56A0] font-semibold underline"
+              >
+                To Get the Best Diagnosis of Gallbladder Cancer and Related Issues, Click here
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* Treatments Section */}
+        <div className="mt-12">
+          <H2
+            title="Treatment for Gallbladder Cancer"
+            className="text-2xl font-semibold mb-6 text-center"
+          />
+          <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+            The treatment approach for gallbladder cancer depends on the stage of
+            the disease, the patient&lsquo;s overall health, and their
+            preferences. Treatment options may include:
+          </p>
+          <div className="grid grid-cols-1 gap-6">
+            {data.treatments.map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
+                <h2 className="text-xl text-hciPrimary font-bold">
+                  {treatment.heading}
+                </h2>
+                {treatment.description && (
+                  <p className="text-gray-600 mb-4 font-light">
+                    {treatment.description}
+                  </p>
+                )}
+                <div className="space-y-4">
+                  {treatment?.aneurysmSymptoms?.map((item, idx) => (
+                    <div key={idx} className="text-gray-600">
+                      {item.title && (
+                        <span className="text-[#D84498] font-semibold">{item.title}: </span>
+                      )}
+                      <span className="font-light">{item.description}</span>
+                    </div>
+                  ))}
+                </div>
+
               </div>
+            ))}
+          </div>
+        </div>
+        {/* Conclusion */}
+        <div className="mt-12">
+          <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
+          {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
+          <p className="text-gray-600 font-light">
+            {data.conclusion[0].paragraph}
+          </p>
+        </div>
+
+        {/* Links */}
+        <div className="mt-8 space-y-4">
+          {data.links.map((link, index) => (
+            <div key={index} className="text-start">
+              <Link
+                href={link.url}
+                className="text-hciPrimary font-semibold underline"
+              >
+                {link.text}
+              </Link>
             </div>
           ))}
         </div>
       </div>
-      {/* Conclusion */}
-      <div className="mt-12">
-        <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
-        {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
-        <p className="text-gray-600 font-light">
-          {data.conclusion[0].paragraph}
-        </p>
-      </div>
-
-      {/* Links */}
-      <div className="mt-8 space-y-4">
-        {data.links.map((link, index) => (
-          <div key={index} className="text-start">
-            <Link
-              href={link.url}
-              className="text-hciPrimary font-semibold underline"
-            >
-              {link.text}
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
 

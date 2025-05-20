@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-import DataLists from "@/components/cardiacComponents/Bullets";
+import DataLists from "@/components/cardiacComponents/BulletsTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
@@ -12,7 +12,8 @@ import H1 from "@/components/ui/h1";
 import IssuesLinks from "@/components/ui/IssuesLinks";
 
 const data = {
-  title: "Multiple Sclerosis (MS)",
+  mainTile: "Multiple Sclerosis (MS)",
+  title: "Multiple Sclerosis",
   bannerImage: "/neuro-sciences/multiple-sclerosis.png",
   description: `Multiple Sclerosis (MS) is a chronic neurological disorder that affects the central nervous system, which includes the brain and spinal cord. It disrupts the flow of information within the brain and between the brain and the body. MS is considered an autoimmune disease, where the body's immune system mistakenly attacks the protective covering of nerve fibers (myelin), leading to communication problems between the brain and the rest of the body. Over time, this can cause permanent damage to the nerves themselves. The region is emerging as a hub for advanced treatment options for MS, offering expertise in neurology, cutting-edge therapies, and comprehensive patient care.`,
   overview: ``,
@@ -214,7 +215,7 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        <H1 title={data.title} />
+        <H1 title={data.mainTile} />
         <p className="text-start font-light">{data.description}</p>
         <p className="font-light">{data.overview}</p>
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />

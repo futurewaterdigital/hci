@@ -318,7 +318,7 @@ export const medicalConditions = [
 
 export const footerMenu = [
   {
-    category: "Top medical Procedures",
+    category: "Top Medical Procedures",
     links: [
       {
         name: "ACL, PCL, and MCL Surgeries",
@@ -352,7 +352,7 @@ export const footerMenu = [
         name: "Cancers of the Digestive System",
         url: "/treatment/gastroenterology/cancers-digestive-system",
       },
-      { name: "Colon polyps", url: "/treatment/gastroenterology/colon-polyps" },
+      { name: "Colon Polyps", url: "/treatment/gastroenterology/colon-polyps" },
       {
         name: "Gallbladder Stone",
         url: "/treatment/gastroenterology/gallbladder-stones",
@@ -401,7 +401,7 @@ export const footerMenu = [
         links: [
           { name: "Cardiac Sciences", url: "/treatment/cardiac-sciences" },
           { name: "Oncology", url: "/treatment/oncology" },
-          { name: "Neuro Science", url: "/treatment/neuro-sciences" },
+          { name: "Neuroscience", url: "/treatment/neuro-sciences" },
           { name: "Gastroenterology", url: "/treatment/gastroenterology" },
           { name: "Orthopedics", url: "/treatment/orthopedics" },
           { name: "Others", url: "/treatment/others" },
@@ -424,7 +424,7 @@ export const footerMenu = [
           { name: "About Us", url: "/about-us" },
           { name: "Our Services", url: "/our-services" },
           { name: "Cost Comparison", url: "/price-comparison" },
-          { name: "Contact us", url: "/contact-us" },
+          { name: "Contact Us", url: "/contact-us" },
         ],
       },
     ],
@@ -434,7 +434,7 @@ export const footerMenu = [
       {
         category: "Featured Cities",
         links: [
-          { name: "Bangalore", url: "/city/bengaluru" },
+          { name: "Bengaluru", url: "/city/bengaluru" },
           { name: "Chennai", url: "/city/chennai" },
           { name: "Delhi", url: "/city/delhi" },
           { name: "Hyderabad", url: "/city/hyderabad" },

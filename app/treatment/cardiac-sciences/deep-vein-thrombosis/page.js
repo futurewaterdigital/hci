@@ -5,10 +5,11 @@ const bannerImage = "/cardio/DeepVeinThrombosis.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataSurgery from "@/components/cardiacComponents/Button";
 import TreatmentBox from "@/components/cardiacComponents/TreatmentBox";
-import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkGastroenterology";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
 import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import { useRouter } from "next/navigation";
@@ -337,7 +338,8 @@ function page() {
             titleCss="text-2xl font-bold text-center mt-8"
             textCss="font-medium py-4"
           />
-          <KnowMore title={title} />
+          {/* <KnowMore title={title} /> */}
+          <CausesKnowMore title={title} />
         </div>
       </section>
 

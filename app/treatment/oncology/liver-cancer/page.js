@@ -338,184 +338,191 @@ const data = {
 
 function LiverCancer() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Title title={data.title} className="text-[#D84598]" />
-      <div className="mt-6">
-        <p className="text-gray-600 text-lg mb-10 font-light">
-          {data.description}
-        </p>
-      </div>
-
+    <>
       {/* Banner Image  */}
       <Banner image="/oncology/liver-cancer-banner.png" />
 
-      {/* Causes Section */}
-      <div className="mt-12">
-        <H2
-          title={data.causes[0].heading}
-          className="text-3xl text-center font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.causes[0].subheading}
-        </p>
-        <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
-          {data?.riskFactors.map((factor, index) => (
-            <div
-              key={index}
-              className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]"
-            >
-              <h3 className="font-bold text-base mb-1">{factor.title}</h3>
-              <p className="text-sm text-gray-900 leading-snug font-light">
-                {factor.description}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-6 text-start">
-          <Link
-            href="/treatment/oncology/liver-cancer-info"
-            className="text-hciPrimary font-semibold underline"
-          >
-            To Know More About Liver Cancer And Its Treatment, Click Here
-          </Link>
-        </div>
-      </div>
-
-      {/* Symptoms Section */}
-      <div className="mt-12">
-        <H2
-          title={data.symptoms[0].heading}
-          className="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.symptoms[0].description}
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {data.symptoms[0].items.map((symptom, idx) => (
-            <div key={idx} className={symptom.className}>
-              <strong>{symptom.title}:</strong> {symptom.description}
-            </div>
-          ))}
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Title title={data.title} className="text-[#D84598]" />
         <div className="mt-6">
-          <Link
-            href="/treatment/oncology/liver-cancer-causes"
-            className="text-hciPrimary font-semibold underline"
-          >
-            To Know More About Liver Cancer And Its Causes And Treatment, Click
-            Here
-          </Link>
+          <p className="text-gray-600 text-lg mb-10 font-light">
+            {data.description}
+          </p>
         </div>
-      </div>
 
-      {/* Diagnosis Section */}
-      <div className="mt-12">
-        <H2
-          title={data.diagnosis[0].heading}
-          className="text-2xl font-semibold mb-4"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          {data.diagnosis[0].description}
-        </p>
-        <div className="space-y-4">
-          {data.diagnosis[0].items.map((test, idx) => (
-            <div key={idx} className={test.className}>
-              <strong>{test.title}</strong>
-              {test.items ? (
-                <ul className="list-disc pl-5 mt-2 font-light">
-                  {test.items.map((item, i) => (
-                    <li key={i}>
-                      <span className="font-semibold">
-                        {item.split(":")[0]}:
-                      </span>{" "}
-                      <span className="font-light">
-                        {item.split(":").slice(1).join(":").trim()}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="font-light">{test.description}</p>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className="mt-6 text-left">
-          <Link
-            href="/treatment/oncology/liver-cancer-diagnosis"
-            className="text-hciPrimary font-semibold underline"
-          >
-            To Get The Best Diagnosis For Liver Cancer And Related Issues, Click
-            Here
-          </Link>
-        </div>
-      </div>
 
-      {/* Treatments Section */}
-      <div className="mt-12">
-        <H2
-          title="Treatment for Liver Cancer"
-          className="text-2xl font-semibold mb-6 text-center"
-        />
-        <p className="text-gray-600 mb-6 font-light">
-          The treatment approach for liver cancer depends on several factors,
-          including the size and function of the liver, the stage of cancer, and
-          the patient&apos;s overall health. Treatment options may include:
-        </p>
-        <div className="space-y-6">
-          {data.treatments.map((treatment, index) => (
-            <div
-              key={index}
-              className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
-            >
-              {treatment.heading && (
-                <h3 className={`text-lg font-semibold mb-3 text-[#0E56A0]`}>
-                  {treatment.heading}
-                </h3>
-              )}
-              {treatment.description && (
-                <p className="text-gray-600 mb-4 font-light">
-                  {treatment.description}
+
+        {/* Causes Section */}
+        <div className="mt-12">
+          <H2
+            title={data.causes[0].heading}
+            className="text-3xl text-center font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.causes[0].subheading}
+          </p>
+          <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
+            {data?.riskFactors.map((factor, index) => (
+              <div
+                key={index}
+                className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]"
+              >
+                <h3 className="font-bold text-base mb-1">{factor.title}</h3>
+                <p className="text-sm text-gray-900 leading-snug font-light">
+                  {factor.description}
                 </p>
-              )}
-              {treatment.items && treatment.items.length > 0 && (
-                <div className="space-y-4">
-                  {treatment.items.map((item, idx) => (
-                    <div key={idx} className="text-gray-600">
-                      <strong className="text-[#D84498]">{item.title}: </strong>
-                      {item.description}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Conclusion */}
-      <div className="mt-12">
-        <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
-        {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
-        <p className="text-gray-600 font-light">
-          {data.conclusion[0].paragraph}
-        </p>
-      </div>
-
-      {/* Links */}
-      <div className="mt-8 space-y-4">
-        {data.links.map((link, index) => (
-          <div key={index} className="text-start">
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-start">
             <Link
-              href={link.url}
+              href="/treatment/oncology/liver-cancer-info"
               className="text-hciPrimary font-semibold underline"
             >
-              {link.text}
+              To Know More About Liver Cancer And Its Treatment, Click Here
             </Link>
           </div>
-        ))}
+        </div>
+
+        {/* Symptoms Section */}
+        <div className="mt-12">
+          <H2
+            title={data.symptoms[0].heading}
+            className="text-2xl font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.symptoms[0].description}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {data.symptoms[0].items.map((symptom, idx) => (
+              <div key={idx} className={symptom.className}>
+                <strong>{symptom.title}:</strong> {symptom.description}
+              </div>
+            ))}
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/treatment/oncology/liver-cancer-causes"
+              className="text-hciPrimary font-semibold underline"
+            >
+              To Know More About Liver Cancer And Its Causes And Treatment, Click
+              Here
+            </Link>
+          </div>
+        </div>
+
+        {/* Diagnosis Section */}
+        <div className="mt-12">
+          <H2
+            title={data.diagnosis[0].heading}
+            className="text-2xl font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.diagnosis[0].description}
+          </p>
+          <div className="space-y-4">
+            {data.diagnosis[0].items.map((test, idx) => (
+              <div key={idx} className={test.className}>
+                <strong>{test.title}</strong>
+                {test.items ? (
+                  <ul className="list-disc pl-5 mt-2 font-light">
+                    {test.items.map((item, i) => (
+                      <li key={i}>
+                        <span className="font-semibold">
+                          {item.split(":")[0]}:
+                        </span>{" "}
+                        <span className="font-light">
+                          {item.split(":").slice(1).join(":").trim()}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="font-light">{test.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 text-left">
+            <Link
+              href="/treatment/oncology/liver-cancer-diagnosis"
+              className="text-hciPrimary font-semibold underline"
+            >
+              To Get The Best Diagnosis For Liver Cancer And Related Issues, Click
+              Here
+            </Link>
+          </div>
+        </div>
+
+        {/* Treatments Section */}
+        <div className="mt-12">
+          <H2
+            title="Treatment for Liver Cancer"
+            className="text-2xl font-semibold mb-6 text-center"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            The treatment approach for liver cancer depends on several factors,
+            including the size and function of the liver, the stage of cancer, and
+            the patient&apos;s overall health. Treatment options may include:
+          </p>
+          <div className="space-y-6">
+            {data.treatments.map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
+                {treatment.heading && (
+                  <h3 className={`text-lg font-semibold mb-3 text-[#0E56A0]`}>
+                    {treatment.heading}
+                  </h3>
+                )}
+                {treatment.description && (
+                  <p className="text-gray-600 mb-4 font-light">
+                    {treatment.description}
+                  </p>
+                )}
+                {treatment.items && treatment.items.length > 0 && (
+                  <div className="space-y-4">
+                    {treatment.items.map((item, idx) => (
+                      <div key={idx} className="text-gray-600">
+                        {item.title && (
+                          <span className="text-[#D84498] font-semibold">{item.title}: </span>
+                        )}
+                        <span className="font-light">{item.description}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Conclusion */}
+        <div className="mt-12">
+          <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
+          {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
+          <p className="text-gray-600 font-light">
+            {data.conclusion[0].paragraph}
+          </p>
+        </div>
+
+        {/* Links */}
+        <div className="mt-8 space-y-4">
+          {data.links.map((link, index) => (
+            <div key={index} className="text-start">
+              <Link
+                href={link.url}
+                className="text-hciPrimary font-semibold underline"
+              >
+                {link.text}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

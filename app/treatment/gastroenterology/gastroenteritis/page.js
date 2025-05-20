@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-import DataLists from "@/components/cardiacComponents/Bullets";
+import DataLists from "@/components/cardiacComponents/BulletsTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinkGastroenterology from "@/components/cardiacComponents/FooterLinkGastroenterology";
 import H2 from "@/components/ui/h2";
@@ -373,7 +373,7 @@ function GeneralSurgery() {
             // desc={data.complications[0].description}
             data={data.data_2}
             ulClass="list-disc list-outside"
-            boxClass="bg-hciYellow h-[180px]"
+            boxClass="bg-hciYellow "
           />
           <CausesKnowMore title={data.title} />
         </div>
@@ -395,11 +395,11 @@ function GeneralSurgery() {
           // boxClass="grid grid-cols-2"
           />
 
-          <KnowMore title={data.title} />
+        
         </div>
         <p className="font-light">
           These symptoms tend to appear suddenly, with diarrhoea or vomiting often being the first indicators. While most cases resolve within a few days, severe or persistent symptoms may indicate complications.
-
+          <KnowMore title={data.title} />
         </p>
 
         <div className="grid grid-cols-1 gap-4">

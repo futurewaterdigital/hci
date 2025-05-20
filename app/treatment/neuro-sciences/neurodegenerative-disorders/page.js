@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
+import DataLists from '@/components/cardiacComponents/BulletsTwo'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'

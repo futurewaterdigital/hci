@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-const bannerImage = "/cardio/aortic.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataSurgery from "@/components/cardiacComponents/Button";
 import DataLists from "@/components/cardiacComponents/Bullets";
@@ -12,6 +11,8 @@ import Conclusion from "@/components/cardiacComponents/Conclusion";
 import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import H3 from "@/components/ui/h3";
+
+const bannerImage = "/cardio/aortic.png";
 
 const title = "Aortic Aneurysm";
 const vascularConditions = [
@@ -225,7 +226,7 @@ const prevention = [
       {
         title: "Eat a balanced diet:",
         description:
-          "Eat a balanced diet: A heart-healthy diet helps prevent atherosclerosis.",
+          " A heart-healthy diet helps prevent atherosclerosis.",
       },
       {
         title: "Exercise regularly:",
@@ -297,7 +298,7 @@ export default function page() {
             title="Risk Factors Include"
             className="text-center font-medium mt-8 text-2xl"
           />
-          <DataSurgery data={riskFactor} />
+          <DataSurgery data={riskFactor} boxClass=""/>
           <div>
             <H2
               title="Symptoms"

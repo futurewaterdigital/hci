@@ -234,8 +234,8 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="grid lg:grid-cols-1 gap-4">
-          <h2 className="font-medium text-2xl">How to Prepare</h2>
+        <div className="grid lg:grid-cols-1 gap-4 ">
+          <h2 className="font-medium text-2xl mt-10">How to Prepare</h2>
           <div className="grid lg:grid-cols-2 gap-4">
             <DataBoxes
               title=""
@@ -256,7 +256,7 @@ export default function page() {
               myclass="grid grid-cols-1"
             />
           </div>
-          <h2 className="font-medium text-2xl">Procedure Overview</h2>
+          <h2 className="font-medium text-2xl mt-5">Procedure Overview</h2>
           <div className="grid lg:grid-cols-2 gap-4">
             <DataBoxes
               title=""
@@ -280,7 +280,7 @@ export default function page() {
             />
           </div>
         </div>
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4 mt-10">
           <DataLists
             desc=""
             head="After TAVR, you may be prescribed:"

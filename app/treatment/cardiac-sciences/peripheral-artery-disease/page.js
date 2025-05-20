@@ -4,12 +4,19 @@ import Banner from "@/components/Common/Banner";
 const bannerImage = "/cardio/peripheral-artery-disease.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataLists from "@/components/cardiacComponents/Bullets";
-import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkGastroenterology";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
 import H2 from "@/components/ui/h2";
 import H1 from "@/components/ui/h1";
 import { useRouter } from "next/navigation";
+
+
+const data = {
+  title: "Peripheral Artery Disease (PAD)",
+}
+
 const padConditionsList = [
   {
     category: "",
@@ -259,7 +266,7 @@ export default function page() {
               myclass="grid lg:grid-cols-2"
             />
           </div>
-          <KnowMore title="Peripheral Artery Disease (PAD)" />
+          <CausesKnowMore title={data.title} />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-4 mt-4">

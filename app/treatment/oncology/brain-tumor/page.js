@@ -694,7 +694,7 @@ function BrainTumor() {
               //   className="hover:text-hciSecondary cursor-pointer">
               //   {item.menu}
               // </Link>
-              <span className="font-medium text-black" key={index}>
+              <span className="font-bold text-black" key={index}>
                 {item.menu}
               </span>
             ))}
@@ -765,7 +765,7 @@ function BrainTumor() {
         </div>
         {/* More Link about brain tumor */}
         <div className="my-4">
-          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-medium">
+          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-bold">
             {brainCancerTypes.map((item, index) => (
               <Link
                 key={index}
@@ -826,8 +826,8 @@ function BrainTumor() {
             Learn more about brain tumors in children.
           </a>
         </div>
-        <div className="flex gap-2 flex-col md:flex-row my-10">
-          <div className="">
+        <div className="flex gap-8 flex-col md:flex-row my-10">
+          <div className="w-1/2">
             <img
               src="/oncology/brain-tumor-2.png"
               alt="Brain Tumor 2"
@@ -943,8 +943,8 @@ function BrainTumor() {
             Brain Tumor Diagnosis
           </h2>
 
-          <div className="flex flex-col md:flex-row gap-4 mb-8">
-            <div className="md:w-1/2">
+          <div className="flex flex-col md:flex-row gap-6 mb-8">
+            <div className="flex justify-center items-center">
               <img
                 src="/oncology/brain-tumor-3.png"
                 alt="MRI scan machine"
@@ -1397,11 +1397,11 @@ function BrainTumor() {
           prescription before leaving the hospital that will detail the type of
           therapy necessary.
         </p>
-        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
+        <p className="mt-6 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           There are different types of rehabilitation specialists who can help you
         </p>
 
-        <div className="grid my-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        <div className="grid my-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
           {therapistInfo.map((item, index) => (
             <div
               key={index}
@@ -1415,12 +1415,12 @@ function BrainTumor() {
           ))}
         </div>
 
-        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed text-2xl">
+        {/* <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed text-2xl">
           There are different types of rehabilitation specialists who can help
           you
-        </p>
+        </p> */}
 
-        <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
+        <p className=" text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
           Support services, such as counseling, patient education and support
           groups are available and can typically be accessed through your
           treatment center even after your treatment has ended.

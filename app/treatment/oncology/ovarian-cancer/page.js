@@ -2,7 +2,7 @@ import React from "react";
 import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import Banner from "@/components/Common/Banner";
-import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import IssuesLink from "@/components/ui/IssuesLinks";
@@ -198,7 +198,7 @@ function OvarianCancer() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Causes Section */}
           <div>
-            <H2 title="Causes" className="text-xl font-light mb-4" />
+            <H2 title="Causes" className="text-xl font-medium mb-4" />
             <div className="space-y-2">
               {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
                 <div key={idx} className={cause.className}>
@@ -207,13 +207,13 @@ function OvarianCancer() {
               ))}
             </div>
             <div className="mt-4">
-              <KnowMore title="Ovarian Cancer" />
+              <CausesKnowMore title="Ovarian Cancer" />
             </div>
           </div>
 
           {/* Diagnosis Section */}
           <div>
-            <H2 title="Diagnosis" className="text-xl mb-4" />
+            <H2 title="Diagnosis" className="text-xl mb-4 font-medium" />
             <div className="space-y-2">
               {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
                 <div key={idx} className={diagnosis.className}>

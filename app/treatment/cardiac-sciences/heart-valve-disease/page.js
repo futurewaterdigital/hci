@@ -3,9 +3,10 @@ import Banner from "@/components/Common/Banner";
 const bannerImage = "/cardio/Heart-valve.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataLists from "@/components/cardiacComponents/Bullets";
-import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkGastroenterology";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
 import H2 from "@/components/ui/h2";
 import H1 from "@/components/ui/h1";
 import H3 from "@/components/ui/h3";
@@ -284,9 +285,11 @@ export default function page() {
               myclass="grid grid-cols-2"
             />
           </div>
-          <KnowMore title={title} />
+          {/* <KnowMore title={title} /> */}
+          <CausesKnowMore title={title} />
+
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 mt-5">
           <div className="grid grid-cols-1 gap-4">
             <DataLists
               desc="Heart valve disease may remain asymptomatic for many years, but as the condition progresses, symptoms can emerge, including:"

@@ -1,33 +1,33 @@
 import React from "react";
 import Link from "next/link";
-export default function FooterLink({ head }) {
+export default function FooterLinkTwo({ head }) {
   const linkshead = [
     {
-      text: `To Consult The Best Doctor For Treatment Of ${head}, Click Here`,
+      text: `To Consult The Best ${head}, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In India, Click Here`,
+      text: `The Best Hospital For ${head} In India, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Bangalore, Click Here`,
+      text: `The Best Hospital For ${head} In Bangalore, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Chennai, Click Here`,
+      text: `The Best Hospital For ${head} In Chennai, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Delhi, Click Here`,
+      text: `The Best Hospital For ${head} In Delhi, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Hyderabad, Click Here`,
+      text: `The Best Hospital For ${head} In Hyderabad, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
     {
-      text: `The Best Hospital For The Treatment Of ${head} In Mumbai, Click Here`,
+      text: `The Best Hospital For ${head} In Mumbai, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
   ];

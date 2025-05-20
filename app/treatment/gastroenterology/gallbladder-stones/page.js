@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
+import DataLists from '@/components/cardiacComponents/BulletsTwo'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
@@ -356,7 +356,7 @@ function GeneralSurgery() {
             While surgery can effectively address existing stones, adopting
             healthy habits can reduce the risk of developing them:
           </p>
-          <ul className="list-disc list-inside py-4 space-y-2 font-light text-hciSecondary">
+          <ul className="list-disc list-inside py-4 space-y-2 font-light text-hciSecondary ps-3">
             <li>
               <span className="font-medium ">Maintain a Healthy Weight:</span> <span className="font-light text-black">Gradual weight management helps prevent
                 changes in bile composition.</span>

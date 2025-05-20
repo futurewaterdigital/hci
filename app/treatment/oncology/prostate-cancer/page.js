@@ -362,7 +362,7 @@ function ProstateCancer() {
 
 
         {/* Advantages */}
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <H2
             title={data.advantages[0].heading}
             className="text-2xl font-medium mb-6"
@@ -380,7 +380,7 @@ function ProstateCancer() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Conclusion */}
         <div className="mt-12">

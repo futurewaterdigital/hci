@@ -16,7 +16,7 @@ import Link from "next/link";
 
 
 const data = {
-  title: "Endometrial Cancers",
+  title: "Gynecological Cancer",
   title_1: "Endometrial / Uterine Cancer",
   bannerImage: "/oncology/gynecological-cancers-banner.png",
   bannerImage_1: "/oncology/gynecological-cancers.png",
@@ -103,8 +103,10 @@ const data = {
         },
         {
           title: "Brachytherapy",
-          description:
+          description: [
             "A radioactive source is placed inside the vagina to target the cancer site more directly.",
+            "Radiation is often used to prevent recurrence after surgery or as a primary treatment for those unable to undergo surgery.",
+          ]
         },
       ],
     },
@@ -145,8 +147,10 @@ const data = {
       aneurysmSymptoms: [
         {
           title: "Immune Checkpoint Inhibitors",
-          description:
+          description:[
             "Immune Checkpoint Inhibitors like pembrolizumab help the immune system fight cancer by blocking proteins that prevent immune attacks.",
+            "Immunotherapy is recommended for cases resistant to other treatments or for cancers with specific genetic markers (like MSI-H or dMMR).",
+          ],
         },
       ],
     },
@@ -279,7 +283,7 @@ function EndometrialCancer() {
           ))}
 
 
-        {/* <div>
+          {/* <div>
             <H2 text="Diagnosis" textClass="text-xl font-semibold mb-4" />
             <DataLists
               divClass="space-y-4"
@@ -296,69 +300,69 @@ function EndometrialCancer() {
               </Link>
             </div>
           </div> */}
-      </div>
-      <p className="text-start text-hciPrimary underline font-semibold capitalize text-lg">
-        <button className="text-start underline">
-          To get the best diagnosis of endometrial cancer and related issues, click here
-        </button>
-      </p>
+        </div>
+        <p className="text-start text-hciPrimary underline font-semibold capitalize text-lg">
+          <button className="text-start underline">
+            To get the best diagnosis of endometrial cancer and related issues, click here
+          </button>
+        </p>
 
-      <H2
-        title="Treatments"
-        className="text-2xl font-semibold mb-4 text-center"
-      />
-      <p className="text-start font-light mb-20">
-        Treatment options for endometrial cancer depend on the stage and grade
-        of the cancer and may include:
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {data.treatments.map((treatment, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-            <H3
-              title={treatment.heading}
-              className="text-lg font-semibold mb-3 text-hciPrimary"
-            />
-            {/* <p className="text-gray-600 mb-4 font-light">
+        <H2
+          title="Treatments"
+          className="text-2xl font-semibold mb-4 text-center"
+        />
+        <p className="text-start font-light mb-20">
+          Treatment options for endometrial cancer depend on the stage and grade
+          of the cancer and may include:
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {data.treatments.map((treatment, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <H3
+                title={treatment.heading}
+                className="text-lg font-semibold mb-3 text-hciPrimary"
+              />
+              {/* <p className="text-gray-600 mb-4 font-light">
                 {treatment.description}
               </p> */}
-            <ul className="space-y-2">
-              {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                <li key={idx} className="text-gray-700 font-light">
-                  {Array.isArray(symptom.description) ? (
-                    <div className="space-y-2">
+              <ul className="space-y-2">
+                {treatment.aneurysmSymptoms.map((symptom, idx) => (
+                  <li key={idx} className="text-gray-700 font-light">
+                    {Array.isArray(symptom.description) ? (
+                      <div className="space-y-2">
+                        <p>
+                          {symptom.title && <strong>{symptom.title}: </strong>}
+                          {symptom.description[0]}
+                        </p>
+                        {symptom.description.slice(1).map((para, i) => (
+                          <p key={i} className="mt-1">{para}</p>
+                        ))}
+                      </div>
+                    ) : (
                       <p>
                         {symptom.title && <strong>{symptom.title}: </strong>}
-                        {symptom.description[0]}
+                        {symptom.description}
                       </p>
-                      {symptom.description.slice(1).map((para, i) => (
-                        <p key={i} className="mt-1">{para}</p>
-                      ))}
-                    </div>
-                  ) : (
-                    <p>
-                      {symptom.title && <strong>{symptom.title}: </strong>}
-                      {symptom.description}
-                    </p>
-                  )}
-                </li>
-              ))}
-            </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
 
-          </div>
-        ))}
-      </div>
-      <p className="text-start text-hciPrimary underline font-semibold capitalize text-lg">
-        <button className="text-start underline">
-          To know more about endometrial cancer and its causes and treatment, click here
-        </button>
-      </p>
+            </div>
+          ))}
+        </div>
+        <p className="text-start text-hciPrimary underline font-semibold capitalize text-lg">
+          <button className="text-start underline">
+            To know more about endometrial cancer and its causes and treatment, click here
+          </button>
+        </p>
 
-      <Conclusion data={data.conclusion} />
+        <Conclusion data={data.conclusion} />
 
-      <FooterLinks head={data.title} />
-    </div >
+        <FooterLinks head={data.title} />
+      </div >
     </>
   );
 }

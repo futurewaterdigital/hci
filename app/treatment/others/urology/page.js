@@ -5,7 +5,7 @@ import Image from "next/image";
 import H1 from "@/components/ui/h1";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinkOthersTwo from "@/components/cardiacComponents/FooterLinkOthersTwo";
+import FooterLinkOthersTwo from "@/components/cardiacComponents/FooterLinkThree";
 import H2 from "@/components/ui/h2";
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import FlexBoxSection from "@/components/cardiacComponents/FlexBoxSection";

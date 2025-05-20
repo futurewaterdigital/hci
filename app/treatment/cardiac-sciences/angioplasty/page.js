@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
 const bannerImage = "/cardio/main-banner.png";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinkOthersTwo from "@/components/cardiacComponents/FooterLinkOthersTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import H2 from "@/components/ui/h2";
@@ -214,7 +214,7 @@ function page() {
           </ul>
         </div>
         <Conclusion data={conclusionData} />
-        <FooterLinks head={title} />
+        <FooterLinkOthersTwo head={title} />
         <BookButton />
       </div>
     </>

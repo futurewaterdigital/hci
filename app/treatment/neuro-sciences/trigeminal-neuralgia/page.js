@@ -1,11 +1,13 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
 import H1 from "@/components/ui/h1";
-import DataLists from "@/components/cardiacComponents/Bullets";
+import DataLists from "@/components/cardiacComponents/BulletsTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
 import KnowMore from "@/components/ui/KnowMore";
+import IssuesLinks from '@/components/ui/IssuesLinks'
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import TextComponent from "@/components/Common/TextComponent";
@@ -209,7 +211,7 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        <KnowMore title={data.title} />
+        <CausesKnowMore title={data.title} />
         <div>
           <div className="grid lg:grid-cols-1 gap-4">
             <div>
@@ -233,6 +235,7 @@ function GeneralSurgery() {
                 myclass="grid grid-cols-2 "
               />
               {/* <KnowMore title={title} /> */}
+              <IssuesLinks head={data.title} />
             </div>
           </div>
         </div>

@@ -210,7 +210,7 @@ const data = {
         {
           title: "CyberKnife Treatment",
           description:
-            "This robotic radiosurgery system delivers radiation with extreme precision to target tumors. Its advanced image guidance system allows for real-time tracking of tumor movement during breathing, ensuring accurate treatment delivery",
+            "CyberKnife is a non-invasive, robotic technology that delivers highly focused radiation beams to target tumors. For breast cancer patients, CyberKnife provides a precise, pain-free treatment option without the need for surgery or anesthesia. Its real-time imaging allows the system to adjust for any movement, such as breathing, ensuring that only the tumor is affected. CyberKnife treatment is typically done in fewer sessions compared to traditional radiation, offering a convenient and effective solution.",
         },
       ],
     },

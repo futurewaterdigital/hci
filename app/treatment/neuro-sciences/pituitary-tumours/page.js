@@ -1,7 +1,7 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
 import H1 from '@/components/ui/h1'
-import DataLists from '@/components/cardiacComponents/Bullets'
+import DataLists from '@/components/cardiacComponents/BulletsTwo'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
@@ -228,7 +228,7 @@ function GeneralSurgery() {
         <div>
           <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
-          <p className="font-light">
+          <p className="font-light pb-5">
             The treatment of pituitary tumours depends on the type, size, and whether the tumour is causing hormonal imbalances or other complications. Common treatment options include:
 
           </p>

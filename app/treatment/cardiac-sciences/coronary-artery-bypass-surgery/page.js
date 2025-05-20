@@ -3,7 +3,7 @@ import Banner from "@/components/Common/Banner";
 const bannerImage = "/cardio/CoronaryArteryBypassSurgery.png";
 import DataSurgery from "@/components/cardiacComponents/Button";
 import DataBoxes from "@/components/cardiacComponents/Box";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import SimpleLists from "@/components/cardiacComponents/SimpleLists";
 import DataLists from "@/components/cardiacComponents/Bullets";
@@ -234,21 +234,23 @@ function page() {
 
           <div className="grid lg:grid-cols-2 gap-4">
             <div>
-              <p className="h-12 font-light">
+              <p className="h-12 font-light mb-4">
                 Coronary artery bypass surgery typically lasts 3 to 6 hours and
                 involves the following steps:
               </p>
               <DataLists
                 data={bypassSurgery}
+                boxClass={"border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]"}
                 ulClass="list-disc list-outside text-hciSecondary h-40"
               />
             </div>
             <div>
-              <p className="h-12 font-light">
+              <p className="h-12 font-light mb-4">
                 Some advanced approaches include:
               </p>
               <DataLists
                 data={advancedApproaches}
+                boxClass={"border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]"}
                 ulClass="list-disc list-outside text-hciSecondary h-40"
               />
             </div>
@@ -256,7 +258,7 @@ function page() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-4">
-          <section className="mb-8 gap-4 grid ">
+          <section className="mb-8 gap-4 grid mt-4">
             <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
               <H2
                 title="After the Surgery"
@@ -304,7 +306,7 @@ function page() {
               </p>
             </div>
           </section>
-          <section className="mb-8 gap-4 grid ">
+          <section className="mb-8 gap-4 grid mt-4">
             <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
               <H2
                 title="Results and Long-Term Care"

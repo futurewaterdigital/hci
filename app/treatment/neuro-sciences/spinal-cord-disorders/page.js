@@ -304,7 +304,7 @@ function GeneralSurgery() {
               key={index}
               title={item.heading}
               description={item.aneurysmSymptoms[0].description}
-              boxCss="min-h-[100px] w-full hover:bg-hciPrimary hover:text-white items-start justify-center border border-hciSecondary rounded-lg shadow-lg my-2"
+              boxCss="min-h-[100px] w-full hover:bg-hciPrimary hover:text-white text-start items-start justify-center border border-hciSecondary rounded-lg shadow-lg my-2"
             />
           ))}
         </div>

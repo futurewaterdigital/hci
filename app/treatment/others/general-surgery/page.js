@@ -4,7 +4,7 @@ import Banner from "@/components/Common/Banner";
 
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinkOthers from "@/components/cardiacComponents/FooterLinkOthers";
+import FooterLinkOthers from "@/components/cardiacComponents/FooterLinkTwo";
 import H2 from "@/components/ui/h2";
 import H1 from "@/components/ui/h1";
 import FlexBox from "@/components/cardiacComponents/FlexBox";

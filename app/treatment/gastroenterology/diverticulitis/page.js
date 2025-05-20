@@ -5,6 +5,7 @@ import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import H2 from "@/components/ui/h2";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import TextComponent from "@/components/Common/TextComponent";
@@ -254,7 +255,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <KnowMore title={data.title} />
+        <CausesKnowMore title={data.title} />
 
         <div className="grid lg:grid-cols-1 gap-4 pt-8">
           <div className="space-y-4">

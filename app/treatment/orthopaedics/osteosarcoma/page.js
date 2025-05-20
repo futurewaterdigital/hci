@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
-import DataLists from "@/components/cardiacComponents/Bullets";
+import DataLists from "@/components/cardiacComponents/BulletsTwo";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import CausesKnowMore from '@/components/ui/CausesKnowMore'
@@ -130,7 +130,7 @@ const data = {
   ],
   treatment_data_1: [
     {
-      heading: "Chemotherapy",
+      heading: "Chemotherapy:",
       aneurysmSymptoms: [
         {
           description:
@@ -477,7 +477,7 @@ function GeneralSurgery() {
               ulClass="list-none list-outside"
             />
           </div>
-          <div>
+          <div className="my-6">
             <DataLists
               //   desc="If the fracture is unstable or involves displaced bone fragments, surgery is typically required:"
               data={data.treatment_data_2}
@@ -498,7 +498,7 @@ function GeneralSurgery() {
           title="Prognosis"
           className="text-2xl font-medium mb-4 text-center"
         />
-        <p className="font-light text-center" text="">
+        <p className="font-light text-start" text="">
           The outlook for osteosarcoma depends on several factors:
         </p>
         <div className="grid grid-cols-3 gap-4">

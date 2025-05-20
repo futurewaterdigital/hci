@@ -272,7 +272,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 mt-4">
+        <div className="grid grid-cols-1 gap-4 mt-6">
           <DataLists
             desc="The type of pacemaker depends on the condition it’s meant to treat:"
             data={valveConditionsData}
@@ -297,7 +297,7 @@ export default function page() {
             hours."
           />
         </div>
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4 mt-6">
           <DataLists
             desc="While pacemaker implantation is generally safe, potential risks include:"
             data={riskDetails}
@@ -305,7 +305,7 @@ export default function page() {
           />
           <DataLists desc="" data={benfitsDetails} boxClass="h-[300px]" />
         </div>
-        <div>
+        <div className="mt-6">
           <DataLists
             desc="While pacemaker implantation is generally safe, potential risks include:"
             data={recoveryDetails}

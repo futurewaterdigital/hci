@@ -1,10 +1,11 @@
 import React from 'react'
 import Banner from '@/components/Common/Banner'
-import DataLists from '@/components/cardiacComponents/Bullets'
+import DataLists from '@/components/cardiacComponents/BulletsTwo'
 import BookButton from '@/components/cardiacComponents/BookButton'
 import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from '@/components/ui/h2'
 import KnowMore from '@/components/ui/KnowMore'
+import CausesKnowMore from '@/components/ui/CausesKnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
@@ -183,7 +184,7 @@ function GeneralSurgery() {
           These inherited conditions increase the likelihood of developing nerve
           tumours.
         </p>
-        <KnowMore title={data.title} />
+        <CausesKnowMore title={data.title} />
         <H2 title="Types" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light" text="">
           Peripheral nerve tumours can grow within the nerves (intra-neural
@@ -239,7 +240,7 @@ function GeneralSurgery() {
          
           <H2 title="Treatment" className="font-medium mb-4 text-center text-2xl" />
 
-          <p className="font-light">
+          <p className="font-light pb-5">
             Treatment for benign peripheral nerve tumours depends on factors
             such as the type, size, location, and whether the tumour causes
             symptoms. Options include:

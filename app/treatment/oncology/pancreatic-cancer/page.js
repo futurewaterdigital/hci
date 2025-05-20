@@ -75,31 +75,31 @@ const data = {
           title: "Surgery",
         },
         {
-          title: "Whipple Procedure: ",
+          subtitle: "Whipple Procedure: ",
           description: "Removal of the head of the pancreas, part of the stomach, and other nearby structures.",
         },
         {
-          title: "Distal Pancreatectomy: ",
+          subtitle: "Distal Pancreatectomy: ",
           description:
             "Removal of the body and tail of the pancreas.",
         },
         {
-          title: "Radiation Therapy: ",
+          subtitle: "Radiation Therapy: ",
           description:
             "High-energy rays are used to destroy cancer cells.",
         },
         {
-          title: "Chemotherapy: ",
+          subtitle: "Chemotherapy: ",
           description:
             "Drugs like gemcitabine or FOLFIRINOX are used to kill cancer cells.",
         },
         {
-          title: "Targeted Therapy: ",
+          subtitle: "Targeted Therapy: ",
           description:
             "Drugs that target specific cancer cell mechanisms (e.g., PARP inhibitors).",
         },
         {
-          title: "Immunotherapy: ",
+          subtitle: "Immunotherapy: ",
           description:
             "Boosting the immune system to recognize and fight cancer cells.",
         },
@@ -144,134 +144,134 @@ const data = {
 
 function PancreaticCancer() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <Title title={data.title} className="text-pink-500" />
-      <div className="mt-6">
-        <p className="text-gray-600 mb-10 text-lg font-light">
-          {data.description}
-        </p>
-      </div>
-
+    <>
       {/* Banner Image  */}
       <Banner image="/oncology/pancreatic-cancer-banner.png" />
 
-      {/* Types Section */}
-      <div className="mt-12">
-        <H2
-          title={data.types[0].heading}
-          className="text-2xl font-semibold mb-6 text-center"
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {data.types[0].items.map((type, idx) => (
-            <div key={idx} className={type.className}>
-              <h2 className="text-xl font-bold mt-8 text-[#0E56A0]">
-                {type.title}
-              </h2>
-              <p className="text-gray-600 font-light">{type.description}</p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Title title={data.title} className="text-pink-500" />
+        <div className="mt-6">
+          <p className="text-gray-600 mb-10 text-lg font-light">
+            {data.description}
+          </p>
+        </div>
+
+        {/* Types Section */}
+        <div className="mt-12">
+          <H2
+            title={data.types[0].heading}
+            className="text-2xl font-semibold mb-6 text-center"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {data.types[0].items.map((type, idx) => (
+              <div key={idx} className={type.className}>
+                <h2 className="text-xl font-bold mt-8 text-[#0E56A0]">
+                  {type.title}
+                </h2>
+                <p className="text-gray-600 font-light">{type.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 text-start">
+          <Link
+            href="/treatment/oncology/pancreatic-cancer-info"
+            className="text-hciPrimary font-semibold underline"
+          >
+            To Know More About Pancreatic Cancer And Its Treatment, Click Here
+          </Link>
+        </div>
+
+        {/* Symptoms Section */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mt-12">
+            <H2
+              title={data.symptoms[0].heading}
+              className="text-2xl font-semibold mb-4"
+            />
+            <p className="text-gray-600 mb-6 font-light">
+              {data.symptoms[0].description}
+            </p>
+            <div className="space-y-2">
+              {data.symptoms[0].items.map((symptom, idx) => (
+                <div key={idx} className={symptom.className}>
+                  {symptom.title}
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 text-start">
+              <Link
+                href="/treatment/oncology/pancreatic-cancer-causes"
+                className="text-hciPrimary font-semibold underline"
+              >
+                To Know More About Pancreatic Cancer And Its Causes And Treatment,
+                Click Here
+              </Link>
+            </div>
+          </div>
+
+          {/* Treatment Section */}
+          <div className="mt-12">
+            <H2
+              title={data.treatments[0].heading}
+              className="text-2xl font-semibold mb-8"
+            />
+            <div className="border border-pink-200 rounded-lg p-7">
+              <div className="space-y-6">
+                {data.treatments[0].items.map((treatment, idx) => (
+                  <div key={idx} className="space-y-2">
+                    {treatment.title ? (
+                      <h2 className="text-lg font-semibold text-hciPrimary">
+                        {treatment.title}
+                      </h2>
+                    ) : (
+                      <p className="text-gray-600">
+                        <span className="text-lg font-semibold text-pink-600">
+                          {treatment.subtitle}
+                        </span>{" "}
+                        <span className="font-light">{treatment.description}</span>
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+            </div>
+            <div className="mt-6 text-start">
+              <Link
+                href="/treatment/oncology/pancreatic-cancer-diagnosis"
+                className="text-hciPrimary font-semibold underline"
+              >
+                To Get The Best Diagnosis Of Pancreatic Cancer And Related Issues,
+                Click Here
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Diagnosis Note */}
+        <div className="mt-12">
+          <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
+          <p className="text-gray-600 font-light">{data.diagnosis}</p>
+        </div>
+
+        {/* Links */}
+        <div className="mt-8 space-y-4">
+
+          {data.links.map((link, index) => (
+            <div key={index} className="text-start">
+              <Link
+                href={link.url}
+                className="text-hciPrimary font-semibold underline"
+              >
+                {link.text}
+              </Link>
             </div>
           ))}
         </div>
       </div>
-
-      <div className="mt-6 text-start">
-        <Link
-          href="/treatment/oncology/pancreatic-cancer-info"
-          className="text-hciPrimary font-semibold underline"
-        >
-          To Know More About Pancreatic Cancer And Its Treatment, Click Here
-        </Link>
-      </div>
-
-      {/* Symptoms Section */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="mt-12">
-          <H2
-            title={data.symptoms[0].heading}
-            className="text-2xl font-semibold mb-4"
-          />
-          <p className="text-gray-600 mb-6 font-light">
-            {data.symptoms[0].description}
-          </p>
-          <div className="space-y-2">
-            {data.symptoms[0].items.map((symptom, idx) => (
-              <div key={idx} className={symptom.className}>
-                {symptom.title}
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 text-start">
-            <Link
-              href="/treatment/oncology/pancreatic-cancer-causes"
-              className="text-hciPrimary font-semibold underline"
-            >
-              To Know More About Pancreatic Cancer And Its Causes And Treatment,
-              Click Here
-            </Link>
-          </div>
-        </div>
-
-        {/* Treatment Section */}
-        <div className="mt-12">
-          <H2
-            title={data.treatments[0].heading}
-            className="text-2xl font-semibold mb-8"
-          />
-          <div className="border border-pink-200 rounded-lg p-7">
-            <div className="space-y-6">
-              {data.treatments[0].items.map((treatment, idx) => (
-                <div key={idx} className="space-y-2">
-                  {treatment.items ? (
-                    <>
-                      <h2 className="text-lg font-semibold text-hciPrimary">
-                        {treatment.title}
-                      </h2>
-                    </>
-                  ) : (
-                    <p className="text-gray-600">
-                      <span className="text-lg font-semibold text-pink-600">
-                        {treatment.title}:
-                      </span>{" "}
-                      <span className="font-light">{treatment.description}</span>
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-
-          </div>
-          <div className="mt-6 text-start">
-            <Link
-              href="/treatment/oncology/pancreatic-cancer-diagnosis"
-              className="text-hciPrimary font-semibold underline"
-            >
-              To Get The Best Diagnosis Of Pancreatic Cancer And Related Issues,
-              Click Here
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Diagnosis Note */}
-      <div className="mt-12">
-      <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
-        <p className="text-gray-600 font-light">{data.diagnosis}</p>
-      </div>
-
-      {/* Links */}
-      <div className="mt-8 space-y-4">
-        
-        {data.links.map((link, index) => (
-          <div key={index} className="text-start">
-            <Link
-              href={link.url}
-              className="text-hciPrimary font-semibold underline"
-            >
-              {link.text}
-            </Link>
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
 

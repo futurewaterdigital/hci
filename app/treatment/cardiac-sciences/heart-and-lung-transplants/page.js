@@ -344,7 +344,7 @@ function page() {
         <div className="container mx-auto py-8">
           <H3
             title="The Transplant Process"
-            className="text-2xl font-regular font-roboto text-center font-medium"
+            className="text-2xl font-regular font-roboto text-center font-medium mb-5"
           />
 
           <div className="grid lg:grid-cols-2 gap-4">

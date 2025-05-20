@@ -7,12 +7,18 @@ import DataLists from "@/components/cardiacComponents/Bullets";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
+import DiagnosistLink from "@/components/ui/DiagnosistLink";
 import DataSurgery from "@/components/cardiacComponents/Button";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import { useRouter } from "next/navigation";
 
+
+const data = {
+  title: "Congenital Heart Disease (CHD)",
+}
 const title = "Congenital Heart Disease (CHD)";
 const symptomsData = [
   {
@@ -223,7 +229,9 @@ function page() {
             can increase the risk:
           </p>
           <DataSurgery data={surgeryData} />
-          <KnowMore title={title} />
+          {/* <KnowMore title={title} /> */}
+          <CausesKnowMore title={data.title} />
+
         </div>
 
         <div className="space-y-4">
@@ -236,13 +244,9 @@ function page() {
             textCss="font-light py-4"
             titleCss="text-2xl font-medium text-center mt-8"
           />
-          {/* <KnowMore title={title} /> */}
-          <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
-            <button onClick={handleClick} className="text-start underline">
-              To know more about Congenital heart disease (CHD) and its
-              treatment, click here
-            </button>
-          </p>
+          <DiagnosistLink title={title} />
+
+
         </div>
         <div className="py-8">
           <H2
@@ -261,13 +265,9 @@ function page() {
               <DataLists data={heartEvaluation} />
             </div>
           </div>
+          <KnowMore title={title} />
+
           {/* <KnowMore title={title} /> */}
-          <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
-            <button onClick={handleClick} className="text-start underline">
-              To get the best diagnosis for Congenital heart disease (CHD) and
-              related issues, click here
-            </button>
-          </p>
         </div>
         <div>
           <DataBoxes

@@ -7,6 +7,7 @@ import Conclusion from "@/components/cardiacComponents/Conclusion";
 
 import H1 from "@/components/ui/h1";
 import KnowMore from "@/components/ui/KnowMore";
+import CausesKnowMore from "@/components/ui/CausesKnowMore";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import { useRouter } from "next/navigation";
@@ -55,7 +56,7 @@ const data = {
     {
       category: "Persistent Cough",
       description:
-        "A cough that linger or worsens over time, especially with blood or mucus production.",
+        " A cough that lingers or worsens over time, sometimes withblood-tinged sputum.",
       bgColor: "bg-[#0E56A0] text-white",
     },
     {
@@ -78,13 +79,13 @@ const data = {
     {
       category: "Unexplained Weight Loss",
       description:
-        "Significant weight loss without a change in diet or activity level.",
+        "Significant weight loss without any clear reason.",
       bgColor: "bg-[#0E56A0] text-white",
     },
     {
       category: "Hoarseness",
       description:
-        "A change in voice, often indicating a tumor affecting the voice box.",
+        "A change in voice, often indicating a tumor affecting the nerves.",
       bgColor: "bg-[#0E56A0] text-white",
     },
     {
@@ -324,7 +325,7 @@ function LungCancer() {
           </div>
 
           <div className="text-start mb-8">
-            <KnowMore title={data.title} />
+            <CausesKnowMore title={data.title} />
           </div>
 
           <div className=" gap-6 mb-8">
