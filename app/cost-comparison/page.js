@@ -483,7 +483,7 @@ function page() {
             </h2>
           </div>
           <div className="overflow-x-auto">
-            <img src="/images/table.png" alt="Treatment Cost Comparison" />
+            <img src="/images/table2.png" alt="Treatment Cost Comparison" />
             {/* <table className="min-w-full bg-white border border-hciPrimary">
               <thead>
                 <tr className="bg-pink-600 text-white">

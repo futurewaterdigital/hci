@@ -2,6 +2,7 @@
 import React from "react";
 import Banner from "@/components/Common/Banner";
 import Image from "next/image";
+import Link from "next/link";
 import H1 from "@/components/ui/h1";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
@@ -209,6 +210,37 @@ const data = {
   },
 };
 
+const linkshead = [
+  {
+    text: `To Consult The Best Urologist, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Urology In India, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Urology In Bangalore, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Urology In Chennai, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Urology In Delhi, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Urology In Hyderabad, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Urology In Mumbai, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+];
+
 function GeneralSurgery() {
   return (
     <>
@@ -234,7 +266,7 @@ function GeneralSurgery() {
         <div className="grid grid-cols-1 gap-4">
           <DataLists
             data={data.complications}
-            // desc="We work closely with experts such as:"
+          // desc="We work closely with experts such as:"
           />
         </div>
         <H2
@@ -303,7 +335,19 @@ function GeneralSurgery() {
           </p>
         </div>
         <CTaButton data={data} />
-        <FooterLinkOthersTwo head={data.title} />
+        {/* <FooterLinkOthersTwo head={data.title} /> */}
+        {/* Footer Links */}
+        <div className="text-start space-y-4">
+          {linkshead.map((link, index) => (
+            <Link
+              key={index}
+              className="text-hciPrimary underline block mb-2 font-medium capitalize text-lg"
+              href={link.url}
+            >
+              {link.text}
+            </Link>
+          ))}
+        </div>
         <BookButton />
       </div>
     </>

@@ -20,7 +20,7 @@ export default function FooterLink({head}) {
 
   const linkshead = [
     {
-      text: `To know more about ${head} and its causes and treatment, click here`,
+      text: `To Know More About ${head} and its Causes and Treatment, Click Here`,
       url: "#", // Replace "#" with the actual link
     },
   ];
@@ -31,7 +31,7 @@ export default function FooterLink({head}) {
         <button
           key={index}
           onClick={handleClick}
-          className="text-hciPrimary underline block mb-2 font-semibold capitalize"
+          className="text-hciPrimary underline block mb-2 font-semibold capitalize text-lg"
           href={link.url}>
           {link.text}
         </button>

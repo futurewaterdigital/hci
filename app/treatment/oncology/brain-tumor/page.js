@@ -553,7 +553,7 @@ const brainCancerTypes = [
   },
   {
     menu: "Colon cancer",
-    url: "/treatment/oncology/bowel-cancer",
+    url: "/treatment/oncology/gi-cancer",
   },
   {
     menu: "Kidney cancer",

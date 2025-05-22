@@ -12,6 +12,7 @@ import ListBox from "@/components/cardiacComponents/ListBox";
 import CTaButton from "@/components/cardiacComponents/CtaButton";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 
+const title = "Organ Donation and Transplantation";
 const data = {
   bannerImage: "/others/Multi-OrganDonationandTransplantation.png",
   title: "Multi-Organ Donation and Transplantation",
@@ -177,7 +178,7 @@ function GeneralSurgery() {
           <Conclusion data={data.footerData} />
           <CTaButton data={data} />
 
-          <FooterLinkOthersTwo head={data.title} />
+          <FooterLinkOthersTwo head={title} />
           <BookButton />
         </div>
       </div>

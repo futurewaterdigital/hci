@@ -159,7 +159,7 @@ const data = {
         },
         {
           title: "Advantages of Proton Therapy and CyberKnife",
-          description:[
+          description: [
             "No Incision: These non-invasive treatments eliminate the need for surgical procedures. ",
             "No Blood Loss: With no surgery involved, there is no risk of blood loss.",
             "No Pain: Both treatments are painless, offering comfort to patients during therapy.",
@@ -241,7 +241,6 @@ const data = {
 function ProstateCancer() {
   return (
     <>
-      <Banner image="/oncology/prostate-cancer.png" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <H1 title={data.title} />
         <div className="mt-6">
@@ -249,7 +248,10 @@ function ProstateCancer() {
             {data.description}
           </p>
         </div>
+      </div>
+      <Banner image="/oncology/prostate-cancer.png" />
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Causes */}
         <div className="mt-12">
           <H2
@@ -332,6 +334,13 @@ function ProstateCancer() {
         </div>
 
         {/* Treatments */}
+        <H2
+            title={data.treatments[0].heading}
+            className="text-2xl font-medium mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.treatments[0].description}
+          </p>
         <div className="border border-hciSecondary rounded-lg p-6 space-y-6">
           {data.treatments[0].items.map((treatment, idx) => (
             <div key={idx} className="space-y-2">

@@ -9,6 +9,8 @@ import IssuesLinks from "@/components/ui/IssuesLinks";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import FooterNewLinks from "@/components/ui/FooterNewLinks";
+
+const title = "Hematology Disorders";
 const data = {
   title: "Hematology",
   bannerImage: "/oncology/hematology-banner.png",
@@ -361,12 +363,7 @@ function Hematology() {
         </div>
 
         <div className="text-start mb-8">
-          {/* <KnowMore title={data.title} /> */}
-          <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
-          <button className="text-start underline">
-            To Know More About Cancers Of The Digestive System And Its Treatment, Click Here
-          </button>
-        </p>
+          <KnowMore title={title} />
         </div>
 
         <div className="grid grid-cols-1 ap-6 mb-8">

@@ -3,7 +3,7 @@ import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import Banner from "@/components/Common/Banner";
 import KnowMore from "@/components/ui/KnowMore";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
+import FooterLinks from "@/components/cardiacComponents/FooterLinkOthers";
 import IssuesLinks from "@/components/ui/IssuesLinks";
 import DiagnosistLink from "@/components/ui/DiagnosistLink";
 
@@ -328,7 +328,7 @@ function CervicalCancer() {
 
         {/* Links */}
         <div className="mt-8 space-y-4">
-          <FooterLinks head={data.text} />
+          <FooterLinks head={data.title} />
         </div>
       </div>
     </>

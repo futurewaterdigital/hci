@@ -6,20 +6,20 @@ import DataBoxes from "@/components/cardiacComponents/Box";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import KnowMore from "@/components/ui/KnowMore";
+import IssuesLinks from "@/components/ui/IssuesLinks";
 import CausesKnowMore from "@/components/ui/CausesKnowMore";
-import DiagnosistLink from "@/components/ui/DiagnosistLink";
+import CausesLink from "@/components/ui/CausesLink";
 import DataSurgery from "@/components/cardiacComponents/Button";
 import Conclusion from "@/components/cardiacComponents/Conclusion";
 import H1 from "@/components/ui/h1";
 import H2 from "@/components/ui/h2";
 import { useRouter } from "next/navigation";
 
-
+const title = "Congenital Heart Disease (CHD)";
 const data = {
   title: "Congenital Heart Disease (CHD)",
 }
-const title = "Congenital Heart Disease (CHD)";
+
 const symptomsData = [
   {
     category: "Cyanosis",
@@ -244,7 +244,7 @@ function page() {
             textCss="font-light py-4"
             titleCss="text-2xl font-medium text-center mt-8"
           />
-          <DiagnosistLink title={title} />
+            <CausesLink head={title} />
 
 
         </div>
@@ -265,7 +265,7 @@ function page() {
               <DataLists data={heartEvaluation} />
             </div>
           </div>
-          <KnowMore title={title} />
+          <IssuesLinks head={title} />
 
           {/* <KnowMore title={title} /> */}
         </div>

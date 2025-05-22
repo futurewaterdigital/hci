@@ -1,15 +1,45 @@
 // generalSurgery.js
 import React from "react";
 import Banner from "@/components/Common/Banner";
-
+import Link from "next/link";
 import DataLists from "@/components/cardiacComponents/Bullets";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterLinkOthersTwo from "@/components/cardiacComponents/FooterLinkThree";
 import H2 from "@/components/ui/h2";
 import H1 from "@/components/ui/h1";
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import ListBox from "@/components/cardiacComponents/ListBox";
 import CTaButton from "@/components/cardiacComponents/CtaButton";
+
+const linkshead = [
+  {
+    text: `To Consult The Best Gynecologist, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Gynecology and Infertility In India, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Gynecology and Infertility In Bangalore, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Gynecology and Infertility In Chennai, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Gynecology and Infertility In Delhi, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Gynecology and Infertility In Hyderabad, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+  {
+    text: `The Best Hospital For Gynecology and Infertility In Mumbai, Click Here`,
+    url: "#", // Replace "#" with the actual link
+  },
+];
 
 const data = {
   bannerImage: "/others/Gynecology.png",
@@ -33,18 +63,19 @@ const data = {
       bgColor: "bg-hciPrimary text-white",
     },
   ],
+
   complications: [
     {
       heading: "",
       aneurysmSymptoms: [
-        {description: "Menstrual irregularities and abnormal bleeding"},
-        {description: "Polycystic Ovary Syndrome (PCOS)"},
-        {description: "Endometriosis"},
-        {description: "Uterine fibroids"},
-        {description: "Ovarian cysts"},
-        {description: "Pelvic inflammatory disease"},
-        {description: "Menopause-related symptoms"},
-        {description: "Urinary tract infections (UTIs)"},
+        { description: "Menstrual irregularities and abnormal bleeding" },
+        { description: "Polycystic Ovary Syndrome (PCOS)" },
+        { description: "Endometriosis" },
+        { description: "Uterine fibroids" },
+        { description: "Ovarian cysts" },
+        { description: "Pelvic inflammatory disease" },
+        { description: "Menopause-related symptoms" },
+        { description: "Urinary tract infections (UTIs)" },
       ],
     },
   ],
@@ -52,13 +83,13 @@ const data = {
     {
       heading: "",
       aneurysmSymptoms: [
-        {description: "Hormonal assessments"},
-        {description: "Ovulation tracking"},
-        {description: "Intrauterine Insemination (IUI)"},
-        {description: "In Vitro Fertilization (IVF)"},
-        {description: "Intracytoplasmic Sperm Injection (ICSI)"},
-        {description: "Egg and sperm freezing"},
-        {description: "Donor egg and sperm programmes"},
+        { description: "Hormonal assessments" },
+        { description: "Ovulation tracking" },
+        { description: "Intrauterine Insemination (IUI)" },
+        { description: "In Vitro Fertilization (IVF)" },
+        { description: "Intracytoplasmic Sperm Injection (ICSI)" },
+        { description: "Egg and sperm freezing" },
+        { description: "Donor egg and sperm programmes" },
       ],
     },
   ],
@@ -200,7 +231,18 @@ function GeneralSurgery() {
         </div>
         <div className="space-y-6 mt-8">
           <CTaButton data={data} />
-          <FooterLinkOthersTwo head={data.title} />
+          {/* Footer Links */}
+          <div className="text-start space-y-4">
+            {linkshead.map((link, index) => (
+              <Link
+                key={index}
+                className="text-hciPrimary underline block mb-2 font-medium capitalize text-lg"
+                href={link.url}
+              >
+                {link.text}
+              </Link>
+            ))}
+          </div>
           <BookButton />
         </div>
       </div>

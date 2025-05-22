@@ -401,7 +401,7 @@ export const footerMenu = [
         links: [
           { name: "Cardiac Sciences", url: "/treatment/cardiac-sciences" },
           { name: "Oncology", url: "/treatment/oncology" },
-          { name: "Neuroscience", url: "/treatment/neuro-sciences" },
+          { name: "Neurosciences", url: "/treatment/neuro-sciences" },
           { name: "Gastroenterology", url: "/treatment/gastroenterology" },
           { name: "Orthopedics", url: "/treatment/orthopedics" },
           { name: "Others", url: "/treatment/others" },
@@ -423,7 +423,7 @@ export const footerMenu = [
           { name: "Home", url: "/" },
           { name: "About Us", url: "/about-us" },
           { name: "Our Services", url: "/our-services" },
-          { name: "Cost Comparison", url: "/price-comparison" },
+          { name: "Cost Comparison", url: "/cost-comparison" },
           { name: "Contact Us", url: "/contact-us" },
         ],
       },

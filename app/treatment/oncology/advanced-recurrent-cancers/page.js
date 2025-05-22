@@ -429,15 +429,15 @@ function AdvancedRecurrentCancers() {
           </div>
 
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-          A significant percentage of breast cancers are diagnosed at advanced stages (III or IV), often due to limited awareness and delayed healthcare seeking, particularly in rural areas. This is primarily due to women not having access to regular screening, and breast cancer awareness is still low in many regions, leading to late-stage diagnoses.
+            A significant percentage of breast cancers are diagnosed at advanced stages (III or IV), often due to limited awareness and delayed healthcare seeking, particularly in rural areas. This is primarily due to women not having access to regular screening, and breast cancer awareness is still low in many regions, leading to late-stage diagnoses.
           </p>
 
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-          Treatment for an advanced cancer requires access to targeted therapies, chemotherapy, radiation and immunotherapies. This may be another challenge in cities which are beyond Tier 1 cities.
+            Treatment for an advanced cancer requires access to targeted therapies, chemotherapy, radiation and immunotherapies. This may be another challenge in cities which are beyond Tier 1 cities.
           </p>
 
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
-          Treatment costs for an advanced cancer (including chemotherapy, targeted therapies, and immunotherapy) can be prohibitive for many families, resulting in discontinuation or delays in treatment.
+            Treatment costs for an advanced cancer (including chemotherapy, targeted therapies, and immunotherapy) can be prohibitive for many families, resulting in discontinuation or delays in treatment.
           </p>
           <KnowMore title={data.title} />
 
@@ -473,7 +473,7 @@ function AdvancedRecurrentCancers() {
               </div>
             ))}
           </div>
-          {/* <KnowMore title={data.title} /> */}
+          <KnowMore title={data.title} />
 
           <H2
             title="Recurrent Cancers"
@@ -504,17 +504,13 @@ function AdvancedRecurrentCancers() {
 
           <div className="grid grid-cols-1 gap-6">
             {data.treatments.map((treatment, index) => (
-              <>
-                <div
-                  key={index}
-                  className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <React.Fragment key={index}>
+                <div className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <h2 className="text-xl font-medium text-center mb-4 text-hciPrimary">
                     {treatment.heading}
                   </h2>
                   {treatment.description && (
-                    <p className="text-gray-600 mb-4 font-light">
-                      {treatment.description}
-                    </p>
+                    <p className="text-gray-600 mb-4 font-light">{treatment.description}</p>
                   )}
                   <div className="space-y-4">
                     {treatment?.aneurysmSymptoms?.map((item, idx) => (
@@ -527,8 +523,15 @@ function AdvancedRecurrentCancers() {
                     ))}
                   </div>
                 </div>
-                <IssuesLinks title={data.title} />
-              </>
+
+                {/* Render CTA button AFTER the matching section */}
+                {treatment.heading ===
+                  "Treatment of Recurrent Cancers include all the modalities of the treatment such as" && (
+                    <div className="">
+                      <IssuesLinks head={data.title} />
+                    </div>
+                  )}
+              </React.Fragment>
             ))}
           </div>
           <Conclusion data={data.conclusion} />
