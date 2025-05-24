@@ -230,7 +230,7 @@ export default function page() {
               head=""
               data={RiskDone}
               footerdata="However, studies show comparable risks of severe complications between TAVR and traditional surgery."
-              boxClass="min-h-[430px]"
+              boxClass="min-h-[410px]"
             />
           </div>
         </div>

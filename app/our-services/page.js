@@ -62,8 +62,8 @@ const services = [
     icon: "/images/GastroImage.svg",
   },
   {
-    title: "Orthopaedics and Joint Replacement",
-    description: "Orthopaedics and Joint Replacement",
+    title: "Orthopedics and Joint Replacement",
+    description: "Orthopedics and Joint Replacement",
     icon: "/images/Orthopaedics.svg",
   },
   {

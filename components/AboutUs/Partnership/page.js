@@ -10,7 +10,7 @@ export default function partnetship() {
         <p className="font-light">
           Pursuing a vision of becoming one of the most recognised healthcare
           ecosystems, HCI envisages partnering with leading healthcare providers
-          with world class infrastructure and competent expertise. We welcome
+          with world-class infrastructure and competent expertise. We welcome
           partners who share our ideals of shaping a collaborative approach to
           align services that deliver optimal patient outcomes.
         </p>

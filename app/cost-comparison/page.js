@@ -457,7 +457,7 @@ function page() {
             Value based medicine and treatment is a very compelling reason why
             people are travelling abroad to avail the best medical facilities at
             a lower cost of what they have to pay in their resident country.
-            India is able to afford world class medical care at a value for
+            India is able to afford world-class medical care at a value for
             money, thanks to the focus on healthcare, innovations, make in India,
             selfless care, private hospitals leading the improved access to
             healthcare and doctors who go beyond the call of duty putting

@@ -290,7 +290,7 @@ function page() {
               </ul>
             </div>
             <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
-              <p className="mb-4 font-light text-lg">
+              <p className="mb-4 font-medium text-lg ">
                 Contact your healthcare provider if you notice:
               </p>
               <ul className="list-disc list-inside mb-4 font-light space-y-2 text-black [&>li::marker]:text-hciSecondary">

@@ -367,35 +367,35 @@ function GeneralSurgery() {
             provided relief. Common surgical procedures include:
           </p>
           <div className="grid grid-cols-2 gap-4 items-stretch">
-  {/* Left Column */}
-  <div className="flex flex-col h-full">
-    <DataLists data={data.complications} className="flex-1" />
-  </div>
+            {/* Left Column */}
+            <div className="flex flex-col h-full">
+              <DataLists data={data.complications} className="flex-1" />
+            </div>
 
-  {/* Right Column */}
-  <div className="flex flex-col h-full">
-    {/* Keep image from overflowing, and ensure it's not too tall */}
-    <div className="w-full mt-2">
-      <img
-        src="/orthopaedics/ankle-surgery.png"
-        alt=""
-        className="w-full h-full object-cover rounded"
-      />
-    </div>
+            {/* Right Column */}
+            <div className="flex flex-col h-full">
+              {/* Keep image from overflowing, and ensure it's not too tall */}
+              <div className="w-full mt-2">
+                <img
+                  src="/orthopaedics/ankle-surgery.png"
+                  alt=""
+                  className="w-full h-full object-cover rounded"
+                />
+              </div>
 
-    {/* Pushes DataLists to take up remaining space */}
-    <div className="flex-1 flex flex-col justify-between mt-4">
-      <DataLists data={data.complications_1} className="flex-1" />
-    </div>
-  </div>
-</div>
+              {/* Pushes DataLists to take up remaining space */}
+              <div className="flex-1 flex flex-col justify-between mt-4">
+                <DataLists boxClass="min-h-[235px]" data={data.complications_1} className="flex-1" />
+              </div>
+            </div>
+          </div>
 
 
         </div>
         <div className="space-y-4">
           <H2
             title="Recovery and Rehabilitation"
-            className="text-2xl font-medium mb-4 text-center"
+            className="text-2xl font-medium mb-4 text-center mt-10"
           />
           <p className="font-light text-center">
             Recovery after foot and ankle surgery depends on the type of

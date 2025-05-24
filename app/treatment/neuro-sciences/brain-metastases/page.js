@@ -402,6 +402,7 @@ function GeneralSurgery() {
           <DataLists
             // desc="If the fracture is unstable or involves displaced bone fragments, surgery is typically required:"
             data={data.complications}
+            boxClass="min-h-[80px]"
           />
         </div>
         {/* <div className="space-y-4">

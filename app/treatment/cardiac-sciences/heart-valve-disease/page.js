@@ -336,7 +336,7 @@ export default function page() {
               <DataLists boxClass="h-[250px]" data={medicationsData} />
               <DataLists boxClass="h-[250px]" data={lifestyleChangesData} />
             </div>
-            <div className="grid grid-cols-1">
+            <div className="grid grid-cols-1 mt-5">
               <DataLists data={surgicalProceduresData} />
             </div>
           </div>

@@ -444,24 +444,24 @@ export const footerMenu = [
       {
         category: "Patient Care",
         links: [
-          { name: "Cost Comparison", url: "/price-comparison" },
+          { name: "Cost Comparison", url: "/cost-comparison" },
           { name: "Testimonials", url: "/testimonials" },
         ],
       },
-      {
-        category: "Useful Links",
-        links: [
-          { name: "FAQs", url: "/faqs" },
-          { name: "Blog", url: "/blog" },
-          { name: "Medical Updates", url: "/medical-updates" },
-          { name: "Terms & Conditions", url: "/terms-and-conditions" },
-        ],
-      },
+      // {
+      //   category: "Useful Links",
+      //   links: [
+      //     { name: "FAQs", url: "/faqs" },
+      //     { name: "Blog", url: "/blog" },
+      //     { name: "Medical Updates", url: "/medical-updates" },
+      //     { name: "Terms & Conditions", url: "/terms-and-conditions" },
+      //   ],
+      // },
       {
         category: "International Patients",
         links: [
-          { name: "Hospitals", url: "/hospitals" },
-          { name: "Get an Opinion", url: "/get-an-opinion" },
+          // { name: "Hospitals", url: "/hospitals" },
+          // { name: "Get an Opinion", url: "/get-an-opinion" },
           { name: "Request an Appointment", url: "/request-an-appointment" },
         ],
       },

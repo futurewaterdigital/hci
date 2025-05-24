@@ -148,20 +148,20 @@ const data = {
       ],
     },
     {
-      heading: "Rotationplasty:",
-      aneurysmSymptoms: [
-        {
-          description:
-            "In cases where part of a limb must be removed, rotationplasty involves rotating the lower leg 180 degrees and attaching it to the thigh, with the ankle functioning as a new knee. This procedure allows for better prosthetic fitting.",
-        },
-      ],
-    },
-    {
       heading: "Rehabilitation and Physiotherapy:",
       aneurysmSymptoms: [
         {
           description:
             "Post-surgery, patients undergo rehabilitation to regain strength, mobility, and function. Physiotherapy helps adapt to limb loss or prosthetics.",
+        },
+      ],
+    },
+    {
+      heading: "Rotationplasty:",
+      aneurysmSymptoms: [
+        {
+          description:
+            "In cases where part of a limb must be removed, rotationplasty involves rotating the lower leg 180 degrees and attaching it to the thigh, with the ankle functioning as a new knee. This procedure allows for better prosthetic fitting.",
         },
       ],
     },
@@ -346,7 +346,7 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
         <p
-          dangerouslySetInnerHTML={{__html: data.description}}
+          dangerouslySetInnerHTML={{ __html: data.description }}
           className="text-start font-light"
         />
         <p className="font-light">{data.overview}</p>
@@ -507,7 +507,7 @@ function GeneralSurgery() {
               key={index}
               title={item.title}
               description={item.description}
-              boxCss="min-h-[50px] w-full rounded-lg border border-hciSecondary"
+              boxCss="min-h-[50px] w-full rounded-lg border border-hciSecondary flex items-center justify-center text-center"
             />
           ))}
         </div>

@@ -807,10 +807,11 @@ function BrainTumor() {
           of. For instance, gliomas are composed of glial cells.
         </p>
         <div className="text-center my-5 underline">
-          <a className=" text-hciPrimary text-bold " href="">
+          <a className="text-hciPrimary font-bold text-lg" href="">
             Learn more about these and other brain tumor types.
           </a>
         </div>
+
         <div className="text-xl text-center font-medium">
           Brain Tumors in Children
         </div>
@@ -822,7 +823,7 @@ function BrainTumor() {
           medulloblastomas.
         </p>
         <div className="text-center my-5 underline">
-          <a className=" text-hciPrimary text-bold " href="">
+          <a className=" text-hciPrimary font-bold text-lg" href="">
             Learn more about brain tumors in children.
           </a>
         </div>
@@ -836,7 +837,7 @@ function BrainTumor() {
           </div>
 
           <div className="flex-1">
-            <div className=" mt-2 text-start font-medium">
+            <div className=" mt-2 text-start font-bold">
               Brain Tumor Symptoms
             </div>
             <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
@@ -1157,7 +1158,7 @@ function BrainTumor() {
         </p>
         <div className="text-start my-5 underline">
           <a
-            className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
+            className=" text-hciPrimary font-bold hover:text-hciPrimary text-lg"
             href=""
           >
             To learn more about other brain tumor treatment options, click here
@@ -1218,7 +1219,7 @@ function BrainTumor() {
         </div>
         <div className="text-start my-5 underline">
           <a
-            className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
+            className=" text-hciPrimary font-bold hover:text-hciPrimary text-lg"
             href=""
           >
             To learn more about brain tumor surgery or to explore various
@@ -1277,7 +1278,7 @@ function BrainTumor() {
 
         <div className="text-start my-5 underline">
           <a
-            className=" text-hciPrimary text-bold hover:text-hciPrimary text-lg"
+            className=" text-hciPrimary font-bold hover:text-hciPrimary text-lg"
             href=""
           >
             To learn more about chemotherapy for brain tumors, click here

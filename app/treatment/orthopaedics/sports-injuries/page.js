@@ -54,19 +54,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Rest and Ice:Immediate rest and application of ice to reduce swelling and alleviate pain.",
+            "<b>Rest and Ice:</b> Immediate rest and application of ice to reduce swelling and alleviate pain.",
         },
         {
           description:
-            "Compression and Elevation:Using compression bandages and elevating the injured area to minimize swelling.",
+            "<b>Compression and Elevation:</b> Using compression bandages and elevating the injured area to minimize swelling.",
         },
         {
           description:
-            "Physical Therapy:Tailored rehabilitation programmes to strengthen muscles, improve flexibility, and facilitate recovery.",
+            "<b>Physical Therapy:</b> Tailored rehabilitation programmes to strengthen muscles, improve flexibility, and facilitate recovery.",
         },
         {
           description:
-            "Medications:Over-the-counter pain relievers and anti-inflammatory drugs to manage pain and swelling.",
+            "<b>Medications:</b> Over-the-counter pain relievers and anti-inflammatory drugs to manage pain and swelling.",
         },
       ],
     },
@@ -76,15 +76,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Arthroscopy: Minimally invasive surgery used to diagnose and treat joint injuries, such as cartilage tears.",
+            "<b>Arthroscopy:</b> Minimally invasive surgery used to diagnose and treat joint injuries, such as cartilage tears.",
         },
         {
           description:
-            "Reconstructive Surgery: Procedures to repair torn ligaments or tendons, ensuring stability and function in the joint.",
+            "<b>Reconstructive Surgery:</b> Procedures to repair torn ligaments or tendons, ensuring stability and function in the joint.",
         },
         {
           description:
-            "Fracture Repair: Surgical intervention to realign and stabilise fractured bones.",
+            "<b>Fracture Repair:</b> Surgical intervention to realign and stabilise fractured bones.",
         },
       ],
     },
@@ -93,11 +93,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            "Education: Instruction on proper techniques and training methods to reduce injury risk.",
+            "<b>Education:</b> Instruction on proper techniques and training methods to reduce injury risk.",
         },
         {
           description:
-            "Strength and Conditioning: Tailored training programmes to improve overall fitness, flexibility, and strength.",
+            "<b>Strength and Conditioning:</b> Tailored training programmes to improve overall fitness, flexibility, and strength.",
         },
       ],
     },

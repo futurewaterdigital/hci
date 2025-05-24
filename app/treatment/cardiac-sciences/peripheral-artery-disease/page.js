@@ -164,23 +164,23 @@ const medicationsData = [
     heading: "Medications",
     aneurysmSymptoms: [
       {
-        title: "Antiplatelet drugs",
-        description: "e.g., aspirin, clopidogrel to reduce blood clot risk",
+        title: "",
+        description: "Antiplatelet drugs e.g., aspirin, clopidogrel to reduce blood clot risk",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Statins",
-        description: "to control cholesterol",
+        title: "",
+        description: "Statins to control cholesterol",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Cilostazol",
-        description: "to improve walking distance and reduce leg pain",
+        title: "",
+        description: "Cilostazol to improve walking distance and reduce leg pain",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
       {
-        title: "Medications for high blood pressure and diabetes",
-        description: "helps in managing PAD-related conditions",
+        title: "",
+        description: "Medications for high blood pressure and diabetes helps in managing PAD-related conditions",
         bgColor: "bg-blue-100 p-4 rounded-md",
       },
     ],
@@ -303,19 +303,19 @@ export default function page() {
               desc=""
               data={lifestyleChanges}
               footerdata=""
-              boxClass="min-h-[500px]"
+              boxClass="min-h-[400px]"
             />
             <DataLists
               desc=""
               data={medicationsData}
               footerdata=""
-              boxClass="min-h-[500px]"
+              boxClass="min-h-[400px]"
             />
             <DataLists
               desc=""
               data={minimallyInvasiveSurgery}
               footerdata=""
-              boxClass="min-h-[500px]"
+              boxClass="min-h-[400px]"
             />
           </div>
         </div>
