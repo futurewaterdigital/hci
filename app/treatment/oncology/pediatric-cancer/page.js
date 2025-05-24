@@ -236,7 +236,7 @@ function PediatricCancer() {
             ulClass="list-disc pl-5"
           />
         </div>
-        <div className=" p-4 rounded-lg mb-8">
+        <div className=" py-4 rounded-lg mb-8">
           <p className="font-light">{data.side_effects.description}</p>
         </div>
         <KnowMore title="Pediatric Cancer" />

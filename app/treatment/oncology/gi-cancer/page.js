@@ -30,7 +30,7 @@ const data = {
     },
     {
       name: "OESOPHAGUS CANCER",
-      url: "/treatment/oncology/lung-cancer",
+      url: "/treatment/oncology/oesophagus-cancer",
     },
     {
       name: "PANCREATIC CANCER",

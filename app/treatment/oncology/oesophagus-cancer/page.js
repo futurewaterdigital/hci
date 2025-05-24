@@ -1,472 +1,370 @@
-"use client";
 import React from "react";
-import Banner from "@/components/Common/Banner";
+import Title from "@/components/cardiacComponents/Title";
 import H2 from "@/components/ui/h2";
-import DataBoxes from "@/components/cardiacComponents/Box";
-import Conclusion from "@/components/cardiacComponents/Conclusion";
-
-import H1 from "@/components/ui/h1";
-import KnowMore from "@/components/ui/KnowMore";
-import FooterLinks from "@/components/cardiacComponents/FooterLink";
-import BookButton from "@/components/cardiacComponents/BookButton";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import Banner from "@/components/Common/Banner";
 
 const data = {
-  title: "Lung Cancer",
-  bannerImage: "/oncology/lung-cancer-banner.png",
-  description: `Lung cancer is a major health concern, significantly contributing to cancer-related deaths across the population. Although often associated with smoking, this cancer can also develop due to environmental factors or genetic predisposition. Early detection and a comprehensive treatment approach are critical to improving outcomes for those affected.`,
-  overview:
-    "Several factors contribute to the development of lung cancer, with smoking being the leading cause. However, environmental exposure can also be an issue to other environmental and genetic factors.",
+  title: "Oesophagus Cancer",
+  description:
+    "Oesophagus cancer is a type of cancer that develops in the long, hollow tube connecting the throat to the stomach, known as the oesophagus. It plays a key role in moving food from the mouth to the stomach for digestion. This type of cancer often begins in the cells lining the oesophagus and can spread to other parts of the body if not treated early. It is one of the leading types of cancers, particularly affecting individuals over the age of 50, with lifestyle factors and dietary habits contributing significantly to its risk.",
 
   causes: [
     {
-      title: "Smoking",
+      heading: "Causes of Oesophagus Cancer",
       description:
-        "Tobacco use is responsible for about 80% of lung cancer deaths. The longer someone smokes and the more cigarettes smoked per day, the higher the risk of lung cancer.",
-    },
-    {
-      title: "Exposure to Carcinogens",
-      description:
-        "Harmful substances like asbestos, radon gas, and chemicals in the workplace can pose a risk for lung cancer when someone is exposed for extended periods.",
-    },
-    {
-      title: "Air Pollution",
-      description:
-        "Long-term exposure to high levels of pollution, particularly diesel exhaust, can contribute to the development of lung cancer.",
-    },
-    {
-      title: "Family History",
-      description:
-        "Having a close relative with lung cancer may increase risk. However, it's unclear whether this is due to genetics or shared environmental factors.",
-    },
-    {
-      title: "Previous Radiation Therapy",
-      description:
-        "Individuals who have undergone radiation therapy for other cancers, like breast or Hodgkin's disease, may be at increased risk.",
-    },
-    {
-      title: "Genetic Mutations",
-      description:
-        "Some people may develop lung cancer due to genetic mutations. These mutations may be inherited or may develop over time.",
+        "The exact cause of oesophageal cancer is not fully understood but certain factors can increase the risk of developing it, including:",
+      items: [
+        {
+          title: "Smoking and Tobacco Use",
+          description: "A leading cause of oesophagus cancer in India.",
+          className: "bg-yellow-100 p-4 rounded-lg",
+        },
+        {
+          title: "Heavy Alcohol Consumption",
+          description:
+            "Long-term alcohol use can irritate the oesophageal lining, increasing cancer risk.",
+          className: "bg-yellow-100 p-4 rounded-lg",
+        },
+        {
+          title: "Gastroesophageal Reflux Disease (GERD)",
+          description: `Chronic acid reflux can lead to Barrett's oesophagus, a precursor to oesophageal cancer.`,
+          className: "bg-yellow-100 p-4 rounded-lg",
+        },
+        {
+          title: "Dietary Factors",
+          description:
+            "Diet low in fruits and vegetables or high in processed foods, spicy or salty foods can contribute to its onset.",
+          className: "bg-yellow-100 p-4 rounded-lg",
+        },
+        {
+          title: "Obesity",
+          description:
+            "Excess body weight increases the risk of cancer due to acid reflux and changes in the oesophagus.",
+          className: "bg-yellow-100 p-4 rounded-lg",
+        },
+      ],
     },
   ],
 
   symptoms: [
     {
-      category: "Persistent Cough",
+      heading: "Symptoms of Oesophagus Cancer",
       description:
-        "A cough that linger or worsens over time, especially with blood or mucus production.",
-      bgColor: "bg-[#0E56A0] text-white",
-    },
-    {
-      category: "Chest Pain",
-      description:
-        "Discomfort in the chest, particularly when breathing deeply, laughing, or coughing.",
-      bgColor: "bg-[#0E56A0] text-white",
-    },
-    {
-      category: "Shortness of Breath",
-      description:
-        "Difficulty breathing, often due to blocked airways or fluid buildup around the lungs.",
-      bgColor: "bg-[#0E56A0] text-white",
-    },
-    {
-      category: "Fatigue",
-      description: "Persistent tiredness or weakness.",
-      bgColor: "bg-[#0E56A0] text-white",
-    },
-    {
-      category: "Unexplained Weight Loss",
-      description:
-        "Significant weight loss without a change in diet or activity level.",
-      bgColor: "bg-[#0E56A0] text-white",
-    },
-    {
-      category: "Hoarseness",
-      description:
-        "A change in voice, often indicating a tumor affecting the voice box.",
-      bgColor: "bg-[#0E56A0] text-white",
-    },
-    {
-      category: "Bone Pain",
-      description:
-        "Pain specifically in the back or hips, indicating that the cancer has spread.",
-      bgColor: "bg-[#0E56A0] text-white",
-    },
-    {
-      category: "Recurring Infections",
-      description: "Frequent episodes of pneumonia or bronchitis.",
-      bgColor: "bg-[#0E56A0] text-white",
+        "Early-stage oesophagus cancer may not show symptoms. However, as the cancer progresses, the following symptoms may appear:",
+      items: [
+        {
+          title: "Difficulty Swallowing (Dysphagia)",
+          description:
+            "A common symptom where patients feel as if food is stuck in their throat or chest.",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+        },
+        {
+          title: "Unexplained Weight Loss",
+          description:
+            "Significant, unintended weight loss over a short period.",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+        },
+        {
+          title: "Chest Pain or Discomfort",
+          description: "Pain or pressure in the chest or back.",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+        },
+        {
+          title: "Chronic Cough or Hoarseness",
+          description: "Especially if it persists for a long time.",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+        },
+        {
+          title: "Indigestion or Heartburn",
+          description:
+            "Ongoing heartburn or indigestion that does not improve with medication.",
+          className: "bg-[#0E56A0] text-white p-2 rounded mb-2",
+        },
+      ],
     },
   ],
 
   diagnosis: [
     {
-      category: "Imaging Tests",
+      heading: "Diagnosis of Oesophagus Cancer",
       description:
-        "Used to detect abnormal masses, consisting of CT scans for precise images, staging, and monitoring treatment response.",
-      bgColor: "bg-[#D84498] text-white",
-    },
-    {
-      category: "Chest X-ray",
-      description: "Common diagnostic method for detecting abnormalities.",
-      bgColor: "bg-[#D84498] text-white",
-    },
-    {
-      category: "CT Scan",
-      description: "Detailed imaging of the lungs and surrounding structures.",
-      bgColor: "bg-[#D84498] text-white",
-    },
-    {
-      category: "PET Scan",
-      description:
-        "Used to detect cancerous cells by highlighting areas of increased metabolic activity.",
-      bgColor: "bg-[#D84498] text-white",
-    },
-    {
-      category: "Sputum Cytology",
-      description: "Analysis of lung secretions to check for cancerous cells.",
-      bgColor: "bg-[#D84498] text-white",
-    },
-    {
-      category: "Biopsy",
-      description:
-        "Tissue samples taken for evaluation, either through a transbronchial or needle biopsy.",
-      bgColor: "bg-[#D84498] text-white",
-    },
-    {
-      category: "Molecular Testing",
-      description:
-        "Advanced genetic analysis (e.g., EGFR, ALK) to guide targeted therapies.",
-      bgColor: "bg-[#D84498] text-white",
-    },
-    {
-      category: "Pulmonary Function Tests",
-      description:
-        "Assessing lung function to determine a patient's ability to withstand treatments like surgery.",
-      bgColor: "bg-[#D84498] text-white",
+        "To diagnose oesophagus cancer, the following tests and procedures are typically used:",
+      items: [
+        {
+          title: "Endoscopy",
+          description:
+            "A thin, flexible tube with a camera is inserted into the oesophagus to check for abnormalities.",
+          className: "bg-[#D84498] text-white p-2 rounded mb-2",
+        },
+        {
+          title: "Biopsy",
+          description:
+            "During an endoscopy, a tissue sample is taken from the suspicious area and examined under a microscope to check for cancerous cells.",
+          className: "bg-[#D84498] text-white p-2 rounded mb-2",
+        },
+        {
+          title: "Imaging Tests",
+          description:
+            "Tests such as CT scans, MRI, PET scans, and barium swallow X-rays help determine the location and extent of the cancer.",
+          className: "bg-[#D84498] text-white p-2 rounded mb-2",
+        },
+        {
+          title: "Endoscopic Ultrasound",
+          description:
+            "This combines endoscopy and ultrasound to provide detailed images of the oesophagus and surrounding tissues.",
+          className: "bg-[#D84498] text-white p-2 rounded mb-2",
+        },
+      ],
     },
   ],
 
   treatments: [
     {
       heading: "Surgery",
-      description: "Removes the cancer-containing area of the lung",
-      aneurysmSymptoms: [
-        { description: "Wedge resection: Removal of part of a lobe" },
-        {
-          description:
-            "Lobectomy: Complete lobe removal, typically suitable for larger or more aggressive tumors",
-        },
-        { description: "Pneumonectomy: Entire lung removal in severe cases" },
-      ],
-    },
-    {
-      heading: "Chemotherapy",
-      description:
-        "Chemotherapy is used to kill or shrink cancer cells, and can be given before and after surgery to improve the chances for success as well as minimize treatment for the patient",
-      aneurysmSymptoms: [
-        { description: "May be administered through IV or oral medications" },
-        { description: "Often given in cycles with rest periods between" },
-        { description: "Can be used alongside other treatments" },
-      ],
-    },
-    {
-      heading: "Targeted Therapy",
-      description:
-        "Drugs specifically target specific genetic mutations in tumor cells (such as EGFR, ALK, or ROS1), effectively controlling cancer growth with fewer side effects compared to traditional chemotherapy",
       aneurysmSymptoms: [
         {
+          title: "Esophagectomy",
           description:
-            "Requires genetic testing to identify suitable candidates",
+            "Removal of part or all of the oesophagus, often recommended in early-stage cancer.",
         },
-        { description: "Often used for advanced or metastatic cases" },
-        { description: "May be effective when other treatments have failed" },
+        {
+          title: "Esophagogastrectomy",
+          description:
+            "Surgery that removes part of the stomach and oesophagus.",
+        },
       ],
     },
     {
       heading: "Radiation Therapy",
       description:
-        "Radiation therapy is a local treatment for lung cancer, particularly for patients unable to undergo surgery or for palliative purposes. High-energy beams target cancer cells, killing or damaging them",
-      aneurysmSymptoms: [
-        {
-          description:
-            "External beam radiation: Directed from outside the body",
-        },
-        {
-          description:
-            "Stereotactic body radiotherapy (SBRT): Precise high-dose radiation",
-        },
-        { description: "Brachytherapy: Internal radiation source placement" },
-      ],
+        "High-energy rays are used to kill cancer cells or shrink tumors, often combined with chemotherapy.",
     },
     {
-      heading: "Proton Therapy",
+      heading: "Chemotherapy",
       description:
-        "An advanced form of radiation that precisely targets cancerous cells while minimizing damage to nearby healthy tissues, such as the heart or esophagus. It allows for higher radiation doses, improving the chance of tumor control while reducing potential side effects",
-      aneurysmSymptoms: [
-        {
-          description:
-            "Particularly beneficial for tumors near critical organs",
-        },
-        {
-          description:
-            "Reduces radiation exposure to surrounding healthy tissue",
-        },
-        { description: "May result in fewer short and long-term side effects" },
-      ],
+        "Drugs that kill cancer cells or stop them from dividing are administered orally or intravenously.",
     },
     {
-      heading: "CyberKnife Treatment",
+      heading: "Targeted Therapy",
       description:
-        "CyberKnife is a robotic system that delivers highly targeted radiation to lung tumors with extreme precision. It tracks the tumor in real-time, adjusting for patient breathing and movement, allowing treatment with minimal impact to surrounding healthy tissue",
-      aneurysmSymptoms: [
-        {
-          description:
-            "Non-invasive alternative to surgery for certain patients",
-        },
-        { description: "Typically completed in 1-5 sessions" },
-        {
-          description: "Particularly effective for small, well-defined tumors",
-        },
-      ],
+        "Involves medications that specifically target cancer cells, often used when the cancer is advanced.",
     },
     {
       heading: "Immunotherapy",
       description:
-        "This treatment helps the body's own immune system recognize and fight cancer cells. It's often used in combination with other treatments and may be particularly effective for certain forms of lung cancer",
-      aneurysmSymptoms: [
-        { description: "Checkpoint inhibitors (e.g., PD-1/PD-L1 inhibitors)" },
-        { description: "May be effective for advanced cases" },
-        {
-          description:
-            "Often produces longer-lasting responses than some other treatments",
-        },
-      ],
+        "Boosts the body’s immune system to fight the cancer, often used in later stages or in combination with other treatments.",
     },
     {
-      heading: "Palliative Care",
+      heading: "Endoscopic Treatments",
       description:
-        "For advanced lung cancer, palliative care focuses on relieving symptoms and improving quality of life. This can include pain management, breathing assistance, and emotional support",
-      aneurysmSymptoms: [
-        { description: "Can be provided alongside curative treatments" },
-        { description: "Focuses on quality of life and symptom management" },
-        {
-          description:
-            "May include counseling and support for patients and families",
-        },
-      ],
+        "For very early-stage cancers, treatments such as endoscopic mucosal resection (EMR) may be used to remove small tumors without open surgery.",
     },
   ],
 
   conclusion: [
     {
       header: "Conclusion",
-      paragraph: `Lung cancer is a serious disease, but advancements in surgery, chemotherapy, targeted therapy, and immunotherapy have made treatment outcomes better than in the past. Smoking cessation is the most effective lung cancer prevention strategy. For those already diagnosed, early identification and regular monitoring can ensure timely intervention to manage the disease effectively.`,
+      paragraph:
+        "The treatment outcomes for oesophagus cancer can vary based on the stage at diagnosis and the treatment approach. Early detection improves the likelihood of successful treatment and survival. It is crucial for individuals to seek medical attention if they experience persistent symptoms associated with oesophagus cancer.",
     },
   ],
 
-  best_hospitals: [
-    { city: "India", url: "/best-lung-cancer-hospital-india" },
-    { city: "Bangalore", url: "/best-lung-cancer-hospital-bangalore" },
-    { city: "Chennai", url: "/best-lung-cancer-hospital-chennai" },
-    { city: "Delhi", url: "/best-lung-cancer-hospital-delhi" },
-    { city: "Hyderabad", url: "/best-lung-cancer-hospital-hyderabad" },
-    { city: "Mumbai", url: "/best-lung-cancer-hospital-mumbai" },
+  links: [
+    {
+      text: "To Consult With The Best Doctor For Treatment Of Oesophagus Cancer, Click Here",
+      url: "/best-doctor-oesophagus-cancer-treatment",
+    },
+    {
+      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In India, Click Here",
+      url: "/best-oesophagus-cancer-hospital-india",
+    },
+    {
+      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Bangalore, Click Here",
+      url: "/best-oesophagus-cancer-hospital-bangalore",
+    },
+    {
+      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Chennai, Click Here",
+      url: "/best-oesophagus-cancer-hospital-chennai",
+    },
+    {
+      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Delhi, Click Here",
+      url: "/best-oesophagus-cancer-hospital-delhi",
+    },
+    {
+      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Hyderabad, Click Here",
+      url: "/best-oesophagus-cancer-hospital-hyderabad",
+    },
+    {
+      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Mumbai, Click Here",
+      url: "/best-oesophagus-cancer-hospital-mumbai",
+    },
   ],
 };
 
-function LungCancer() {
-  const router = useRouter();
-  const handleClick = () => {
-    // Navigate to homepage
-    router.push("/");
-
-    // Wait for navigation to complete then scroll to form
-    setTimeout(() => {
-      const formElement = document.querySelector("#consultation-form");
-      if (formElement) {
-        formElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100);
-  };
+function OesophagusCancer() {
   return (
     <>
-      <Banner image={data.bannerImage} />
-      <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
-          <H1 title={data.title} />
-          <div className="mt-6">
-            <p className="text-gray-600  font-light">{data.description}</p>
-          </div>
-
-          <H2
-            title="Causes of Lung Cancer"
-            className="text-2xl font-semibold mb-4 text-center"
-          />
-          <p className="font-light">{data.overview}</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            {data.causes.map((cause, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-lg p-4 shadow-sm"
-              >
-                {/* <H3
-                title={cause.title}
-                className="text-lg font-semibold text-blue-600 mb-2"
-              /> */}
-                <h3 className="text-lg font-medium text-[#0E56A0] mb-2">
-                  {" "}
-                  {cause.title}
-                </h3>
-                <p className="text-gray-700 text-sm font-light">
-                  {cause.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-start mb-8">
-            <KnowMore title={data.title} />
-          </div>
-
-          <div className=" gap-6 mb-8">
-            <div>
-              <H2
-                title="Symptoms of Lung Cancer"
-                className="text-xl font-medium mb-4 text-center"
-              />
-              <p className="mb-4 font-light">
-                In its early stages, lung cancer may not cause noticeable
-                symptoms. As the disease progresses, common symptoms include:
-              </p>
-              <div className="space-y-2">
-                <DataBoxes
-                  title=""
-                  header=""
-                  data={data.symptoms}
-                  myclass="grid grid-cols-1 gap-2"
-                />
-              </div>
-              <div className="text-start mt-4 mb-8">
-                <KnowMore title={data.title} />
-              </div>
-            </div>
-            <div>
-              <H2
-                title="Diagnosis of Lung Cancer"
-                className="text-xl font-medium mb-4 text-center"
-              />
-              <p className="mb-4 font-light">
-                Lung cancer is diagnosed through a combination of physical
-                exams, imaging, and laboratory tests:
-              </p>
-              <div className="space-y-2">
-                <DataBoxes
-                  title=""
-                  header=""
-                  data={data.diagnosis}
-                  myclass="grid grid-cols-1 gap-2"
-                />
-              </div>
-              <div className="text-start mt-4 mb-8">
-                <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
-                  <button
-                    onClick={handleClick}
-                    className="text-start underline"
-                  >
-                    To get the best diagnosis for lung cancer and related issues, click here
-                  </button>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <H2
-            title="Treatment for Lung Cancer"
-            className="text-2xl font-medium mb-4 text-center"
-          />
-          <p className="font-light mb-4">
-            Lung cancer treatment is varialized based on the cancer type, stage,
-            and the patient&apos;s overall health. The most common treatments
-            include:
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Title title={data.title} className="text-pink-500" />
+        <div className="mt-6">
+          <p className="text-gray-600 mb-10 text-lg font-light">
+            {data.description}
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            {data.treatments.slice(0, 3).map((treatment, index) => (
+        </div>
+      </div>
+      <div className="w-full">
+        {/* Banner Image  */}
+        <Banner image="/oncology/oesophagus-cancer-banner.png" />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Causes Section */}
+        <div className="mt-12">
+          <H2
+            title={data.causes[0].heading}
+            className="text-2xl text-center font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.causes[0].description}
+          </p>
+          <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
+            {data.causes[0].items.map((factor, index) => (
               <div
                 key={index}
-                className="border border-pink-400 rounded-lg p-4 shadow-sm"
+                className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col h-full min-h-[120px]"
               >
-                <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
-                  {treatment.heading}
-                </h2>
-                <p className="text-gray-700 mb-2 font-light">
-                  {treatment.description}
+                <h3 className="font-bold text-base mb-1">{factor.title}</h3>
+                <p className="text-sm text-gray-900 leading-snug py-2 font-light">
+                  {factor.description}
                 </p>
-                <ul className="font-light text-gray-600 list-disc pl-5">
-                  {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                    <li key={idx}>{symptom.description}</li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
+        </div>
+        <div className="my-3">
+          <Link href={""} className="text-hciPrimary font-semibold underline">
+            To Know More About Oesophagus Cancer And Its Treatment, Click Here
+          </Link>
+        </div>
+        {/* Symptoms Section */}
+        <div className="mt-12">
+          <H2
+            title={data.symptoms[0].heading}
+            className="text-2xl font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.symptoms[0].description}
+          </p>
+          <div className="space-y-2">
+            {data.symptoms[0].items.map((symptom, idx) => (
+              <div key={idx} className={symptom.className}>
+                <strong>{symptom.title}:</strong>{" "}
+                <span className="font-light">{symptom.description}</span>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {data.treatments.slice(3, 5).map((treatment, index) => (
-              <div
-                key={index}
-                className="border border-pink-400 rounded-lg p-4 shadow-sm"
-              >
-                <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
-                  {treatment.heading}
-                </h2>
-
-                <p className="text-gray-700 mb-2 font-light">
-                  {treatment.description}
-                </p>
-                <ul className="font-light text-gray-600 list-disc pl-5">
-                  {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                    <li key={idx}>{symptom.description}</li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            {data.treatments.slice(5, 8).map((treatment, index) => (
-              <div
-                key={index}
-                className="border border-pink-400 rounded-lg p-4 shadow-sm"
-              >
-                <h2 className="text-lg font-medium text-[#0E56A0] mb-2">
-                  {treatment.heading}
-                </h2>
-
-                <p className="text-gray-700 mb-2 font-light">
-                  {treatment.description}
-                </p>
-                <ul className="font-light text-gray-600 list-disc pl-5">
-                  {treatment.aneurysmSymptoms.map((symptom, idx) => (
-                    <li key={idx}>{symptom.description}</li>
-                  ))}
-                </ul>
+        </div>
+        <div className="mt-6 text-start">
+          <Link
+            href="/treatment/oncology/oesophagus-cancer-causes"
+            className="text-[#0E56A0] font-semibold underline"
+          >
+            To know more about oesophagus cancer and its causes and treatment,
+            click here
+          </Link>
+        </div>
+        {/* Diagnosis Section */}
+        <div className="mt-12">
+          <H2
+            title={data.diagnosis[0].heading}
+            className="text-2xl font-semibold mb-4"
+          />
+          <p className="text-gray-600 mb-6 font-light">
+            {data.diagnosis[0].description}
+          </p>
+          <div className="space-y-2">
+            {data.diagnosis[0].items.map((test, idx) => (
+              <div key={idx} className={test.className}>
+                <strong>{test.title}: </strong>
+                <span className="font-light">{test.description}</span>
               </div>
             ))}
           </div>
-
-          <div className="space-y-4 mt-8">
-            <Conclusion data={data.conclusion} />
-            <FooterLinks head={data.title} />
-            <BookButton />
+        </div>
+        <div className="mt-6 text-start">
+          <Link
+            href="/treatment/oncology/oesophagus-cancer-causes"
+            className="text-[#0E56A0] font-semibold underline"
+          >
+            To get the best diagnosis For liver cancer and related issues, click here
+          </Link>
+        </div>
+        {/* Treatments Section */}
+        <div className="mt-12">
+          <H2
+            title="Treatment for Oesophagus Cancer"
+            className="text-2xl font-semibold mb-6 text-center"
+          />
+          <p className="mt-4 mb-6 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+            Treatment options depend on the cancer stage, location, and the
+            patient&lsquo;s overall health. The common treatments for oesophagus
+            cancer include:
+          </p>
+          <div className="grid grid-cols-1 gap-6">
+            {data.treatments.map((treatment, index) => (
+              <div
+                key={index}
+                className="border border-pink-400 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
+                <h2 className="text-xl text-hciPrimary font-bold">
+                  {treatment.heading}
+                </h2>
+                {treatment.description && (
+                  <p className="text-gray-600 mb-4 font-light">
+                    {treatment.description}
+                  </p>
+                )}
+                <div className="space-y-4">
+                  {treatment?.aneurysmSymptoms?.map((item, idx) => (
+                    <div key={idx} className="text-gray-600 ">
+                      <span className="text-[#D84498]">
+                        {" "}
+                        {item.title && <strong>{item.title}: </strong>}
+                      </span>
+                      <span className="font-light"> {item.description} </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
+        {/* Conclusion */}
+        <div className="mt-12">
+          <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
+          {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
+          <p className="text-gray-600 font-light">
+            {data.conclusion[0].paragraph}
+          </p>
+        </div>
+
+        {/* Links */}
+        <div className="mt-8 space-y-4">
+          {data.links.map((link, index) => (
+            <div key={index} className="text-start">
+              <Link
+                href={link.url}
+                className="text-hciPrimary font-semibold underline"
+              >
+                {link.text}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </>
   );
 }
 
-export default LungCancer;
+export default OesophagusCancer;
