@@ -7,6 +7,8 @@ import Conclusion from "@/components/cardiacComponents/Conclusion";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import IssuesLink from "@/components/ui/IssuesLinks";
 import DiagnosistLink from "@/components/ui/DiagnosistLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+
 
 
 const data = {
@@ -279,6 +281,7 @@ function OvarianCancer() {
         <div className="mt-12">
           <Conclusion data={data.conclusion} />
           <FooterLinks head={data.title} />
+          <BookButton />
         </div>
       </div>
     </>

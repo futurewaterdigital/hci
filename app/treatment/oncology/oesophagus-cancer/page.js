@@ -3,6 +3,8 @@ import Title from "@/components/cardiacComponents/Title";
 import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
+import BookButton from '@/components/cardiacComponents/BookButton'
+
 
 const data = {
   title: "Oesophagus Cancer",
@@ -205,6 +207,10 @@ const data = {
 function OesophagusCancer() {
   return (
     <>
+     <div className="w-full">
+        {/* Banner Image  */}
+        <Banner image="/oncology/oesophagus-cancer-banner.png" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Title title={data.title} className="text-pink-500" />
         <div className="mt-6">
@@ -213,10 +219,7 @@ function OesophagusCancer() {
           </p>
         </div>
       </div>
-      <div className="w-full">
-        {/* Banner Image  */}
-        <Banner image="/oncology/oesophagus-cancer-banner.png" />
-      </div>
+     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Causes Section */}
         <div className="mt-12">
@@ -362,6 +365,8 @@ function OesophagusCancer() {
             </div>
           ))}
         </div>
+        <BookButton />
+
       </div>
     </>
   );

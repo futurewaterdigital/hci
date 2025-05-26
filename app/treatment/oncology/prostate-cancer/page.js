@@ -8,6 +8,7 @@ import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import KnowMore from "@/components/ui/KnowMore";
 import IssuesLinks from "@/components/ui/IssuesLinks";
+
 const data = {
   title: "Prostate Cancer",
   description:

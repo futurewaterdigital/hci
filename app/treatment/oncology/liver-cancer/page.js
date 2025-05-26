@@ -3,6 +3,8 @@ import Title from "@/components/cardiacComponents/Title";
 import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
+import BookButton from '@/components/cardiacComponents/BookButton'
+
 
 const data = {
   title: "Liver Cancer",
@@ -521,6 +523,8 @@ function LiverCancer() {
             </div>
           ))}
         </div>
+        <BookButton />
+
       </div>
     </>
   );

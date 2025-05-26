@@ -2,6 +2,8 @@ import React from "react";
 import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
+import BookButton from '@/components/cardiacComponents/BookButton'
+
 
 const data = {
   title: "Gallbladder Cancer",
@@ -535,6 +537,7 @@ function GallbladderCancer() {
             </div>
           ))}
         </div>
+        <BookButton />
       </div>
     </>
   );

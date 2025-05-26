@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "@/components/Common/Banner";
 import H1 from "@/components/ui/h1";
 // import DataLists from '@/components/cardiacComponents/Bullets'
-// import BookButton from '@/components/cardiacComponents/BookButton'
+import BookButton from '@/components/cardiacComponents/BookButton'
 // import FooterLinks from '@/components/cardiacComponents/FooterLink'
 import H2 from "@/components/ui/h2";
 
@@ -360,8 +360,8 @@ function EndometrialCancer() {
         </p>
 
         <Conclusion data={data.conclusion} />
-
         <FooterLinks head={data.title} />
+        <BookButton />
       </div >
     </>
   );

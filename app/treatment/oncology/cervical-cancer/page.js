@@ -6,6 +6,8 @@ import KnowMore from "@/components/ui/KnowMore";
 import FooterLinks from "@/components/cardiacComponents/FooterLinkOthers";
 import IssuesLinks from "@/components/ui/IssuesLinks";
 import DiagnosistLink from "@/components/ui/DiagnosistLink";
+import BookButton from "@/components/cardiacComponents/BookButton";
+
 
 const data = {
   title: "Cervical Cancer",
@@ -330,6 +332,7 @@ function CervicalCancer() {
         <div className="mt-8 space-y-4">
           <FooterLinks head={data.title} />
         </div>
+        <BookButton />
       </div>
     </>
   );

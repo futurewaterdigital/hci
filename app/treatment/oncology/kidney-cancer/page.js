@@ -5,6 +5,8 @@ import Link from "next/link";
 import Banner from "@/components/Common/Banner";
 import KnowMore from "@/components/ui/KnowMore";
 import IssuesLinks from '@/components/ui/IssuesLinks'
+import BookButton from '@/components/cardiacComponents/BookButton'
+
 
 
 const data = {
@@ -373,6 +375,7 @@ function KidneyCancer() {
             </div>
           ))}
         </div>
+        <BookButton />
       </div>
     </>
   );
