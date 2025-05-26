@@ -462,7 +462,7 @@ export const footerMenu = [
         links: [
           // { name: "Hospitals", url: "/hospitals" },
           // { name: "Get an Opinion", url: "/get-an-opinion" },
-          { name: "Request an Appointment", url: "/request-an-appointment" },
+          { name: "Request an Appointment", url: "/#consultation-form" },
         ],
       },
     ],

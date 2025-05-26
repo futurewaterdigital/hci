@@ -82,9 +82,14 @@ const services = [
     icon: "/images/Ophthalmology.svg",
   },
   {
-    title: "Dental and Cosmetic Surgery",
-    description: "Dental and Cosmetic Surgery",
+    title: "Dental",
+    description: "Dental",
     icon: "/images/DentalCosmetic.svg",
+  },
+  {
+    title: "Cosmetic Surgery",
+    description: "Cosmetic Surgery",
+    icon: "/images/cosmetic_srugery.svg",
   },
 ];
 

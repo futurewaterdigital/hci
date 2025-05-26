@@ -7,7 +7,7 @@ function BookButton() {
 
   const handleClick = () => {
     // Navigate to homepage
-    router.push("/");
+    router.push("/#consultation-form");
 
     // Wait for navigation to complete then scroll to form
     setTimeout(() => {
