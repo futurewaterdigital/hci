@@ -3,7 +3,7 @@ import Banner from "@/components/Common/Banner";
 const bannerImage = "/cardio/transcatheter-aortic-valve-replacement.png";
 import DataBoxes from "@/components/cardiacComponents/Box";
 import DataLists from "@/components/cardiacComponents/Bullets";
-import FooterLinks from "@/components/cardiacComponents/FooterLinkTwo";
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
 import H1 from "@/components/ui/h1";
 import Conclusion from "@/components/cardiacComponents/Conclusion";

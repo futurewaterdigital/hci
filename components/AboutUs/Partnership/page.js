@@ -23,7 +23,7 @@ export default function partnetship() {
         </p>
         <p className="py-4 font-light">
           We welcome partners who share our vision and philosophy and look
-          forward to joining hands towards creating a comfortable and seamless
+          forward to joining hands towards creating a comfortable and <br /> seamless
           healthcare experience for patients worldwide.
         </p>
       </div>
