@@ -55,9 +55,7 @@ const Partners: React.FC = () => {
   return (
     <div className="w-full mt-16 px-2 lg:px-0">
       <div className="bg-white lg:w-11/12 mx-auto text-center">
-        <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 font-bold ">
-          Our Network Hospitals
-        </h3>
+       
 
         {/* Conditionally render Hospitals component if on homepage */}
         {pathname === '/' && (
@@ -66,8 +64,11 @@ const Partners: React.FC = () => {
           </div>
         )}
 
+        <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 font-bold pt-10">
+          Other Network Hospital
+        </h3>
         {/* Partners Slider */}
-        <div className="w-full mx-auto p-10">
+        <div className="w-full mx-auto px-10 pb-10">
           <Slider {...settings}>
             {medicalPartners.map((partner: Partner, index: number) => (
               <div key={index}>

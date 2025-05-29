@@ -4,7 +4,7 @@ import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
 import BookButton from '@/components/cardiacComponents/BookButton'
-
+import FooterLinks from "@/components/cardiacComponents/FooterLink";
 
 const data = {
   title: "Oesophagus Cancer",
@@ -172,36 +172,36 @@ const data = {
     },
   ],
 
-  links: [
-    {
-      text: "To Consult With The Best Doctor For Treatment Of Oesophagus Cancer, Click Here",
-      url: "/best-doctor-oesophagus-cancer-treatment",
-    },
-    {
-      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In India, Click Here",
-      url: "/best-oesophagus-cancer-hospital-india",
-    },
-    {
-      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Bangalore, Click Here",
-      url: "/best-oesophagus-cancer-hospital-bangalore",
-    },
-    {
-      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Chennai, Click Here",
-      url: "/best-oesophagus-cancer-hospital-chennai",
-    },
-    {
-      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Delhi, Click Here",
-      url: "/best-oesophagus-cancer-hospital-delhi",
-    },
-    {
-      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Hyderabad, Click Here",
-      url: "/best-oesophagus-cancer-hospital-hyderabad",
-    },
-    {
-      text: "For The Best Hospital For The Treatment Of Oesophagus Cancer In Mumbai, Click Here",
-      url: "/best-oesophagus-cancer-hospital-mumbai",
-    },
-  ],
+  // links: [
+  //   {
+  //     text: "To Consult With The Best Doctor For Treatment Of Oesophagus Cancer, Click Here",
+  //     url: "/best-doctor-oesophagus-cancer-treatment",
+  //   },
+  //   {
+  //     text: "The Best Hospital For The Treatment Of Oesophagus Cancer In India, Click Here",
+  //     url: "/best-oesophagus-cancer-hospital-india",
+  //   },
+  //   {
+  //     text: "The Best Hospital For The Treatment Of Oesophagus Cancer In Bangalore, Click Here",
+  //     url: "/best-oesophagus-cancer-hospital-bangalore",
+  //   },
+  //   {
+  //     text: "The Best Hospital For The Treatment Of Oesophagus Cancer In Chennai, Click Here",
+  //     url: "/best-oesophagus-cancer-hospital-chennai",
+  //   },
+  //   {
+  //     text: "The Best Hospital For The Treatment Of Oesophagus Cancer In Delhi, Click Here",
+  //     url: "/best-oesophagus-cancer-hospital-delhi",
+  //   },
+  //   {
+  //     text: "The Best Hospital For The Treatment Of Oesophagus Cancer In Hyderabad, Click Here",
+  //     url: "/best-oesophagus-cancer-hospital-hyderabad",
+  //   },
+  //   {
+  //     text: "The Best Hospital For The Treatment Of Oesophagus Cancer In Mumbai, Click Here",
+  //     url: "/best-oesophagus-cancer-hospital-mumbai",
+  //   },
+  // ],
 };
 
 function OesophagusCancer() {
@@ -353,7 +353,7 @@ function OesophagusCancer() {
         </div>
 
         {/* Links */}
-        <div className="mt-8 space-y-4">
+        {/* <div className="mt-8 space-y-4">
           {data.links.map((link, index) => (
             <div key={index} className="text-start">
               <Link
@@ -364,7 +364,8 @@ function OesophagusCancer() {
               </Link>
             </div>
           ))}
-        </div>
+        </div> */}
+        <FooterLinks />
         <BookButton />
 
       </div>

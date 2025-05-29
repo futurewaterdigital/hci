@@ -28,6 +28,10 @@ const hospitalName = [
 
 function HomeHospitals() {
   return (
+    <>
+     <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 font-bold ">
+          Our Network Hospital
+        </h3>
     <div className="grid grid-cols-5 gap-4 ">
       {hospitalName.map((items, index) => (
         <Link href={items.link} key={index}>
@@ -44,6 +48,7 @@ function HomeHospitals() {
         </Link>
       ))}
     </div>
+    </>
   )
 }
 
