@@ -237,7 +237,7 @@ function OesophagusCancer() {
                 className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col h-full min-h-[120px]"
               >
                 <h3 className="font-bold text-base mb-1">{factor.title}</h3>
-                <p className="text-sm text-gray-900 leading-snug py-2 font-light">
+                <p className="text-gray-900 leading-snug py-2 font-light">
                   {factor.description}
                 </p>
               </div>
