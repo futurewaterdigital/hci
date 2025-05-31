@@ -14,6 +14,15 @@ import H3 from "@/components/ui/h3";
 import Link from "next/link";
 
 
+const parseBoldText = (text) => {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+}; 
 
 const data = {
   title: "Gynecological Cancer",
@@ -135,7 +144,7 @@ const data = {
         {
           title: "",
           description: [
-            "Drugs like <b>lenvatinib</b> (used with pembrolizumab) target specific molecular pathways involved in cancer growth.",
+            "Drugs like **lenvatinib** (used with pembrolizumab) target specific molecular pathways involved in cancer growth.",
             "Targeted therapy is mainly used for advanced cases or when cancer has spread.",
           ],
         },
@@ -147,7 +156,7 @@ const data = {
       aneurysmSymptoms: [
         {
           title: "Immune Checkpoint Inhibitors",
-          description:[
+          description: [
             "Immune Checkpoint Inhibitors like pembrolizumab help the immune system fight cancer by blocking proteins that prevent immune attacks.",
             "Immunotherapy is recommended for cases resistant to other treatments or for cancers with specific genetic markers (like MSI-H or dMMR).",
           ],
@@ -334,16 +343,16 @@ function EndometrialCancer() {
                       <div className="space-y-2">
                         <p>
                           {symptom.title && <strong>{symptom.title}: </strong>}
-                          {symptom.description[0]}
+                          {parseBoldText(symptom.description[0])}
                         </p>
                         {symptom.description.slice(1).map((para, i) => (
-                          <p key={i} className="mt-1">{para}</p>
+                          <p key={i} className="mt-1">{parseBoldText(para)}</p>
                         ))}
                       </div>
                     ) : (
                       <p>
                         {symptom.title && <strong>{symptom.title}: </strong>}
-                        {symptom.description}
+                        {parseBoldText(symptom.description)}
                       </p>
                     )}
                   </li>

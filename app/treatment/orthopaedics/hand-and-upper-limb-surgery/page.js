@@ -326,6 +326,7 @@ function GeneralSurgery() {
             complications. Common procedures include:
           </p>
           <DataLists
+          bgColor="min-h-[150px]"
             // desc="If the fracture is unstable or involves displaced bone fragments, surgery is typically required:"
             data={data.complications}
           />

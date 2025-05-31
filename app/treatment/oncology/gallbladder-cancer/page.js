@@ -379,7 +379,7 @@ function GallbladderCancer() {
           ))}
         </div>
         <div className="my-3">
-          <Link href={""} className="text-hciPrimary font-semibold underline">
+          <Link href={""} className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
             To Know More About Gallbladder Cancer and Its Treatment, Click here
           </Link>
         </div>
@@ -407,7 +407,7 @@ function GallbladderCancer() {
             <div className="mt-4">
               <Link
                 href="/treatment/oncology/cervical-cancer-info"
-                className="text-[#0E56A0] font-semibold underline"
+                className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg"
               >
                 To Know More About Gallbladder Cancer and Its Causes and Treatment, Click here
               </Link>
@@ -468,7 +468,7 @@ function GallbladderCancer() {
             <div className="mt-4">
               <Link
                 href="/treatment/oncology/cervical-cancer-diagnosis"
-                className="text-[#0E56A0] font-semibold underline"
+                className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg"
               >
                 To Get the Best Diagnosis of Gallbladder Cancer and Related Issues, Click here
               </Link>

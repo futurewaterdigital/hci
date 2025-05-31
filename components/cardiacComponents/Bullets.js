@@ -14,7 +14,7 @@ function Bullets({
     <div className={`${divClass ? divClass : "space-y-6"}`}>
       {data?.map((data, index) => (
         <div
-          className={`border border-[#D84498] rounded-lg shadow-lg p-6 min-h-[205px] ${boxClass ? boxClass : "flex flex-col"}`}
+          className={`border border-[#D84498] rounded-lg shadow-lg p-6 min-h-[205px] mt-3 ${boxClass ? boxClass : "flex flex-col"}`}
 
           key={index}
         >

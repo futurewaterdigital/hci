@@ -245,7 +245,7 @@ function OesophagusCancer() {
           </div>
         </div>
         <div className="my-3">
-          <Link href={""} className="text-hciPrimary font-semibold underline">
+          <Link href={""} className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
             To Know More About Oesophagus Cancer And Its Treatment, Click Here
           </Link>
         </div>
@@ -271,7 +271,7 @@ function OesophagusCancer() {
         <div className="mt-6 text-start">
           <Link
             href="/treatment/oncology/oesophagus-cancer-causes"
-            className="text-[#0E56A0] font-semibold underline"
+            className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg"
           >
             To know more about oesophagus cancer and its causes and treatment,
             click here
@@ -298,9 +298,9 @@ function OesophagusCancer() {
         <div className="mt-6 text-start">
           <Link
             href="/treatment/oncology/oesophagus-cancer-causes"
-            className="text-[#0E56A0] font-semibold underline"
+            className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg"
           >
-            To get the best diagnosis For liver cancer and related issues, click here
+            To get the best diagnosis of oesophagus cancer and related issues, click here
           </Link>
         </div>
         {/* Treatments Section */}
@@ -324,11 +324,11 @@ function OesophagusCancer() {
                   {treatment.heading}
                 </h2>
                 {treatment.description && (
-                  <p className="text-gray-600 mb-4 font-light">
+                  <p className="text-gray-600 mb-0 font-light">
                     {treatment.description}
                   </p>
                 )}
-                <div className="space-y-4">
+                <div className="space-y-1">
                   {treatment?.aneurysmSymptoms?.map((item, idx) => (
                     <div key={idx} className="text-gray-600 ">
                       <span className="text-[#D84498]">
@@ -358,7 +358,7 @@ function OesophagusCancer() {
             <div key={index} className="text-start">
               <Link
                 href={link.url}
-                className="text-hciPrimary font-semibold underline"
+                className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg"
               >
                 {link.text}
               </Link>

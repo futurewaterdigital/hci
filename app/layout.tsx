@@ -22,9 +22,34 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: '/favicon_io/favicon-32x32.png',
+    icon: [
+      { url: '/favicon_io/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon_io/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon_io/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/favicon_io/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon_io/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
     shortcut: '/favicon_io/favicon.ico',
+    apple: '/favicon_io/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'manifest',
+        url: '/favicon_io/site.webmanifest',
+      },
+      {
+        rel: 'mask-icon',
+        url: '/favicon_io/favicon.ico',
+        color: '#5bbad5'
+      }
+    ],
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Healthcare International',
+  },
+  themeColor: '#ffffff',
+  viewport: 'width=device-width, initial-scale=1.0',
 }
 
 export default function RootLayout({
@@ -34,6 +59,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ scrollBehavior: 'smooth' }}>
+      <head>
+        <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon_io/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body>
         <ScrollToTop />
         <Script id="scroll-to-top">
