@@ -367,12 +367,12 @@ function GallbladderCancer() {
         </p>
         <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
           {data?.riskFactors.map((factor, index) => (
-            <div
+            <div  
               key={index}
-              className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col justify-between h-full min-h-[120px]"
+              className="bg-[#FDE7B0] rounded-md p-5 shadow-sm flex flex-col h-full min-h-[100px]"
             >
-              <h3 className="font-bold text-base mb-1">{factor.title}</h3>
-              <p className="text-sm text-gray-900 leading-snug">
+              <h3 className="font-medium mb-1 text-lg">{factor.title}</h3>
+              <p className="text-gray-800 font-light">
                 {factor.description}
               </p>
             </div>
@@ -397,7 +397,7 @@ function GallbladderCancer() {
               {data.causes[0]?.aneurysmSymptoms?.map((cause, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#0E56A0] text-white font-light p-4 rounded text-sm"
+                  className="bg-[#0E56A0] text-white font-light p-4 rounded "
                 >
                   <span className="font-semibold pr-1">{cause.title}</span>
                   {cause.description}
@@ -428,7 +428,7 @@ function GallbladderCancer() {
               {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#D84498] text-white p-3 rounded text-sm"
+                  className="bg-[#D84498] text-white p-3 rounded"
                 >
                   <div className="font-semibold">{diagnosis.title}</div>
 
