@@ -25,7 +25,7 @@ const parseBoldText = (text) => {
 }; 
 
 const data = {
-  title: "Gynecological Cancer",
+  title: "Gynecological Cancers",
   title_1: "Endometrial / Uterine Cancer",
   bannerImage: "/oncology/gynecological-cancers-banner.png",
   bannerImage_1: "/oncology/gynecological-cancers.png",

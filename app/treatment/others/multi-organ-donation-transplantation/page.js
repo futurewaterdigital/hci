@@ -107,7 +107,7 @@ This life-saving procedure often offers a second chance to individuals in critic
   ],
   contact: {
     title: "Contact Us Today",
-    head: "Contact HCI for Expert in Multi-Organ transplant",
+    head: "Contact HCI for Experts in Multi-Organ transplant",
     content:
       "Contact HCI to learn more about our comprehensive multi-organ donation and transplantation services and discover how we can support your journey to a healthier life.",
   },

@@ -230,8 +230,7 @@ function OvarianCancer() {
               ))}
             </div>
             <div className="mt-4">
-              <DiagnosistLink title="Breast Cancer" />
-
+              <DiagnosistLink title="Ovarian Cancer" />
             </div>
           </div>
         </div>

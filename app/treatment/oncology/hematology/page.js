@@ -381,7 +381,7 @@ function Hematology() {
               />
             </div>
             <div className="mt-4 text-start">
-              <KnowMore title={data.title} />
+              <KnowMore title={title} />
             </div>
           </div>
 
@@ -399,7 +399,7 @@ function Hematology() {
               />
             </div>
             <div className="mt-4 text-start">
-              <IssuesLinks head={data.title} />
+              <IssuesLinks head={title} />
             </div>
           </div>
         </div>

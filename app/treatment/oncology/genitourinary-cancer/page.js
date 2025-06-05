@@ -280,7 +280,7 @@ function GenitourinaryCancer() {
               {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#0E56A0] text-white font-light py-6 px-4 rounded text-sm">
+                  className="bg-[#0E56A0] text-white font-light py-6 px-4 rounded ">
                   <span className="font-medium pr-1">{cause.title}</span>
                   {cause.description}
                 </div>
@@ -305,7 +305,7 @@ function GenitourinaryCancer() {
               {data.diagnosis[0]?.aneurysmSymptoms?.map((diagnosis, idx) => (
                 <div
                   key={idx}
-                  className="bg-hciSecondary text-white p-3 rounded text-sm">
+                  className="bg-hciSecondary text-white p-3 rounded">
                   <div className="font-medium ">{diagnosis.title}</div>
                   {diagnosis.description}
                 </div>

@@ -316,9 +316,9 @@ function CervicalCancer() {
             ))}
           </div>
         </div>
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <IssuesLinks head={data.title} />
-        </div>
+        </div> */}
         {/* Conclusion */}
         <div className="mt-12">
           <h2 className={`text-xl font-medium text-center mb-6`}>Conclusion</h2>

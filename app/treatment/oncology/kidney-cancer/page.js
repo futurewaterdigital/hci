@@ -3,7 +3,7 @@ import Title from "@/components/cardiacComponents/Title";
 import H2 from "@/components/ui/h2";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
-import KnowMore from "@/components/ui/KnowMore";
+import KnowMore from "@/components/ui/CausesKnowMore";
 import IssuesLinks from '@/components/ui/IssuesLinks'
 import BookButton from '@/components/cardiacComponents/BookButton'
 
@@ -265,7 +265,7 @@ function KidneyCancer() {
           </div>
         </div>
         <div className="my-3">
-          <KnowMore title={data.causes[0].heading} />
+          <KnowMore title={data.title} />
         </div>
         {/* Symptoms Section */}
         <div className="mt-12">

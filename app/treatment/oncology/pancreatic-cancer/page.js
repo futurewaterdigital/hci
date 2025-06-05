@@ -7,7 +7,7 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 
 
 const data = {
-  title: "Pancreatic Cancer",
+  title: "Pancreatic Cancers",
   description:
     "Pancreatic cancer is a type of cancer that begins in the tissues of the pancreas, a gland located behind the stomach that plays an essential role in digestion and regulating blood sugar. Pancreatic cancer occurs when abnormal cells in the pancreas grow uncontrollably, forming a tumor.",
 
@@ -162,7 +162,7 @@ function PancreaticCancer() {
         <div className="mt-12">
           <H2
             title={data.types[0].heading}
-            className="text-2xl font-semibold mb-6 text-center"
+            className="text-xl font-semibold mb-6 text-center"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {data.types[0].items.map((type, idx) => (
@@ -186,11 +186,11 @@ function PancreaticCancer() {
         </div>
 
         {/* Symptoms Section */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="mt-12">
             <H2
               title={data.symptoms[0].heading}
-              className="text-2xl font-semibold mb-4"
+              className="text-xl font-semibold mb-4"
             />
             <p className="text-gray-600 mb-6 font-light">
               {data.symptoms[0].description}
@@ -217,7 +217,7 @@ function PancreaticCancer() {
           <div className="mt-12">
             <H2
               title={data.treatments[0].heading}
-              className="text-2xl font-semibold mb-8"
+              className="text-xl font-semibold mb-8"
             />
             <div className="border border-pink-200 rounded-lg p-7">
               <div className="space-y-6">

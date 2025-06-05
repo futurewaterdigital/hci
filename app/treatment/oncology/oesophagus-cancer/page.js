@@ -344,7 +344,7 @@ function OesophagusCancer() {
           </div>
         </div>
         {/* Conclusion */}
-        <div className="mt-12">
+        <div className="my-8">
           <h2 className={`text-xl font-bold text-center mb-6`}>Conclusion</h2>
           {/* <H2 title="Conclusion" className="text-xl font-semibold mb-4" /> */}
           <p className="text-gray-600 font-light">

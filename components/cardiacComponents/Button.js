@@ -21,7 +21,7 @@ function Button({ data }) {
           className={`bg-white border border-hciSecondary rounded-xl 
             flex flex-col justify-between p-4 text-hciSecondary
             hover:bg-hciSecondary hover:text-white group
-            min-h-[200px] h-full`} // ✅ Add min-h and h-full here
+             h-full`} // ✅ Add min-h and h-full here
         >
           <div className="flex-grow flex flex-col items-center justify-start">
             <span className="font-medium capitalize group-hover:text-white text-center py-2">

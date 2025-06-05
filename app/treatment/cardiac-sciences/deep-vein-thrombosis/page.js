@@ -307,7 +307,7 @@ function page() {
           <ul className="list-disc list-inside text-hciSecondary space-y-2 font-medium ml-2 mt-4">
             <li>
               <span className="font-medium text-hciPrimary">
-                Blood Pooling in Venis
+                Blood Pooling in Veins
               </span>
             </li>
             <li>

@@ -193,7 +193,7 @@ function page() {
               for conditions such as:
             </p>
             <div className="mb-10">
-              <DataSurgery data={surgeryData} />
+              <DataSurgery data={surgeryData} myclass="min-h-[20px]" />
             </div>
             <DataBoxes
               title="Causes"
