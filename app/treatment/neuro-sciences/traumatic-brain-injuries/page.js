@@ -198,13 +198,8 @@ function GeneralSurgery() {
           as a simple fall, especially if the patient has underlying conditions
           like osteoporosis that weaken bones.
         </p> */}
-        {/* <KnowMore title={data.title} /> */}
+        <KnowMore title={data.title} />
 
-        <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
-          <button className="text-start underline">
-            To Know More About Trigeminal Neuralgia And Its Treatment, Click Here
-          </button>
-        </p>
 
         <div>
           <div className="grid lg:grid-cols-1 gap-4">

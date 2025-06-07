@@ -12,7 +12,7 @@ import H3 from "@/components/ui/h3";
 const data = {
   title: "Pediatric Cancers",
   bannerImage: "/oncology/pediatric-cancer.png",
-  description: `Pediatric cancers refers to a group of cancer affecting children under 18 years of age. Though adult and pediatric cancers share many similarities, they differ in terms of causes, growth, treatment response, and prognosis. Recent advancements in medicine have significantly improved survival rates, with over 80% of affected children living five years or more post-diagnosis. However, statistics differ based on cancer type and stage, necessitating the understanding of childhood cancer manifestations and treatments.`,
+  description: `Pediatric cancer refers to a group of cancers affecting children under 18 years of age. Though adult and pediatric cancers share many similarities, they differ in terms of causes, growth, treatment response, and prognosis. Recent advancements in medicine have significantly improved survival rates, with over 80% of affected children living five years or more post-diagnosis. However, statistics differ based on cancer type and stage, necessitating the understanding of childhood cancer manifestations and treatments.`,
   overview: "",
 
   cancer_types: [

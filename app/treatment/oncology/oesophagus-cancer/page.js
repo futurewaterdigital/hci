@@ -365,7 +365,7 @@ function OesophagusCancer() {
             </div>
           ))}
         </div> */}
-        <FooterLinks />
+         <FooterLinks head={data.title} />
         <BookButton />
 
       </div>

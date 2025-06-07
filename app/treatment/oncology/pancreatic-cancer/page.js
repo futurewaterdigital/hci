@@ -13,7 +13,7 @@ const data = {
 
   types: [
     {
-      heading: "Types of Pancreatic Cancer",
+      heading: "Types of Pancreatic Cancers",
       items: [
         {
           title: "Exocrine Tumors",
