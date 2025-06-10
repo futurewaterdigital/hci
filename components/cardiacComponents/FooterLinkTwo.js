@@ -2,18 +2,26 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function FooterLinkTwo({ head }) {
   const pathname = usePathname();
+  const router = useRouter();
 
   // Get the base treatment path (e.g., /treatment/cardiac-sciences)
   const basePath = pathname.split('/').slice(0, 3).join('/');
+
+  const handleDoctorClick = (e) => {
+    e.preventDefault();
+    // Navigate using router with a query parameter
+    router.push(basePath + "?scrollTo=doctors");
+  };
 
   const linkshead = [
     {
       text: `To Consult The Best Doctor For ${head}, Click Here`,
       url: `${basePath}#doctors`,
+      onClick: handleDoctorClick
     },
     {
       text: `The Best Hospital For ${head} In India, Click Here`,
@@ -48,7 +56,7 @@ export default function FooterLinkTwo({ head }) {
           key={index}
           className="text-hciPrimary underline block mb-2 font-medium capitalize text-lg"
           href={link.url}
-          scroll={false}
+          onClick={link.onClick}
         >
           {link.text}
         </Link>

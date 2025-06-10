@@ -22,26 +22,35 @@ const Footer = dynamic(() => import("../../../components/Footer/page"), {
 
 export default function City({ params }) {
   const pathname = usePathname();
-  const [selectedCategory] = useState(params.slug); // Default to the slug from params
+  const searchParams = useSearchParams();
+  const [selectedCategory] = useState(params.slug);
   const [network, setNetworks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [noData, setNoData] = useState(null);
+  const cache = useRef(new Map());
+  const doctorsSectionRef = useRef(null);
 
-  const cache = useRef(new Map()); // Cache to store API responses
-
-  // Add useEffect for handling hash-based scrolling
+  // Handle scrolling when the query parameter is present
   useEffect(() => {
-    // Check if there's a hash in the URL
-    if (window.location.hash === '#doctors') {
-      setTimeout(() => {
+    const scrollTo = searchParams.get('scrollTo');
+    if (scrollTo === 'doctors' && !loading) {
+      const attemptScroll = () => {
         const doctorsSection = document.getElementById('doctors');
         if (doctorsSection) {
-          doctorsSection.scrollIntoView({ behavior: 'smooth' });
+          const yOffset = -100; // Adjust this value based on your header height
+          const y = doctorsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
         }
-      }, 1000); // Give enough time for content to load
+      };
+
+      // Try multiple times to ensure the section is found
+      attemptScroll();
+      setTimeout(attemptScroll, 100);
+      setTimeout(attemptScroll, 500);
+      setTimeout(attemptScroll, 1000);
     }
-  }, [pathname]); // Re-run when pathname changes
+  }, [searchParams, loading]);
 
   useEffect(() => {
     // Check if data is already cached to prevent redundant API calls
@@ -137,7 +146,7 @@ export default function City({ params }) {
               <GastroenterologyMenu />
             )}
           </div>
-          <div id="doctors" className="scroll-mt-24">
+          <div id="doctors" ref={doctorsSectionRef} className="scroll-mt-24">
             <TreatmentDoctors pathname={pathname} paramSlug={params.slug} />
           </div>
           <OurNetwork />

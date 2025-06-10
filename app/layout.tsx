@@ -75,7 +75,9 @@ export default function RootLayout({
             if (typeof window !== 'undefined') {
               window.history.scrollRestoration = 'manual';
               window.onbeforeunload = function () {
-                window.scrollTo(0, 0);
+                if (!window.location.hash) {
+                  window.scrollTo(0, 0);
+                }
               };
             }
           `}
