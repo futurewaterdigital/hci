@@ -53,21 +53,21 @@ export async function generateMetadata({ params }) {
       images:
         post && post.acf && post.acf.banner
           ? [
-              {
-                url: post.acf.banner.url, // Adjust to your actual structure
-                width: 800,
-                height: 600,
-                alt: post.title.rendered || 'Healthcare International in India',
-              },
-            ]
+            {
+              url: post.acf.banner.url, // Adjust to your actual structure
+              width: 800,
+              height: 600,
+              alt: post.title.rendered || 'Healthcare International in India',
+            },
+          ]
           : [
-              {
-                url: '/social.png',
-                width: 800,
-                height: 600,
-                alt: 'Healthcare International in India',
-              },
-            ],
+            {
+              url: '/social.png',
+              width: 800,
+              height: 600,
+              alt: 'Healthcare International in India',
+            },
+          ],
     },
   }
 }

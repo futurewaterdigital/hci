@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic"; // Lazy load Footer
 import Header from "../../../components/Header/page";
 import Banner from "../../../components/Treatment/Banner/page";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import CardioMenu from "../../../components/cardiacComponents/Menu";
 import OthersMenu from "../../../components/OthersComppnents/Menu";
 import OrthopaedicsMenu from "../../../components/OrthopaedicsMenu/page";
@@ -29,6 +29,19 @@ export default function City({ params }) {
   const [noData, setNoData] = useState(null);
 
   const cache = useRef(new Map()); // Cache to store API responses
+
+  // Add useEffect for handling hash-based scrolling
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash === '#doctors') {
+      setTimeout(() => {
+        const doctorsSection = document.getElementById('doctors');
+        if (doctorsSection) {
+          doctorsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 1000); // Give enough time for content to load
+    }
+  }, [pathname]); // Re-run when pathname changes
 
   useEffect(() => {
     // Check if data is already cached to prevent redundant API calls
@@ -124,7 +137,9 @@ export default function City({ params }) {
               <GastroenterologyMenu />
             )}
           </div>
-          <TreatmentDoctors pathname={pathname} paramSlug={params.slug} />
+          <div id="doctors" className="scroll-mt-24">
+            <TreatmentDoctors pathname={pathname} paramSlug={params.slug} />
+          </div>
           <OurNetwork />
           <Testimonials />
           <BookNow />

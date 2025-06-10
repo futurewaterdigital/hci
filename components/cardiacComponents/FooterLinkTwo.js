@@ -1,10 +1,19 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function FooterLinkTwo({ head }) {
+  const pathname = usePathname();
+
+  // Get the base treatment path (e.g., /treatment/cardiac-sciences)
+  const basePath = pathname.split('/').slice(0, 3).join('/');
+
   const linkshead = [
     {
       text: `To Consult The Best Doctor For ${head}, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: `${basePath}#doctors`,
     },
     {
       text: `The Best Hospital For ${head} In India, Click Here`,
@@ -39,6 +48,7 @@ export default function FooterLinkTwo({ head }) {
           key={index}
           className="text-hciPrimary underline block mb-2 font-medium capitalize text-lg"
           href={link.url}
+          scroll={false}
         >
           {link.text}
         </Link>
