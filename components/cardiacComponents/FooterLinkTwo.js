@@ -1,8 +1,8 @@
 "use client";
-
 import React from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+
 
 export default function FooterLinkTwo({ head }) {
   const pathname = usePathname();
@@ -20,7 +20,7 @@ export default function FooterLinkTwo({ head }) {
   const linkshead = [
     {
       text: `To Consult The Best Doctor For ${head}, Click Here`,
-      url: `${basePath}#doctors`,
+      url: `${basePath}?scrollTo=doctors`,
       onClick: handleDoctorClick
     },
     {

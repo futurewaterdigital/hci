@@ -9,37 +9,8 @@ import H1 from "@/components/ui/h1";
 import FlexBox from "@/components/cardiacComponents/FlexBox";
 import ListBox from "@/components/cardiacComponents/ListBox";
 import CTaButton from "@/components/cardiacComponents/CtaButton";
+import FooterLinkOthers from "@/components/cardiacComponents/FooterLinkTwo";
 
-const linkshead = [
-  {
-    text: `To Consult The Best Gynecologist, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Gynecology and Infertility In India, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Gynecology and Infertility In Bangalore, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Gynecology and Infertility In Chennai, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Gynecology and Infertility In Delhi, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Gynecology and Infertility In Hyderabad, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Gynecology and Infertility In Mumbai, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-];
 
 const data = {
   bannerImage: "/others/Gynecology.png",
@@ -232,17 +203,7 @@ function GeneralSurgery() {
         <div className="space-y-6 mt-8">
           <CTaButton data={data} />
           {/* Footer Links */}
-          <div className="text-start space-y-4">
-            {linkshead.map((link, index) => (
-              <Link
-                key={index}
-                className="text-hciPrimary underline block mb-2 font-medium capitalize text-lg"
-                href={link.url}
-              >
-                {link.text}
-              </Link>
-            ))}
-          </div>
+          <FooterLinkOthers head={data.title} />
           <BookButton />
         </div>
       </div>

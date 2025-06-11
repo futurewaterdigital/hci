@@ -210,36 +210,6 @@ const data = {
   },
 };
 
-const linkshead = [
-  {
-    text: `To Consult The Best Urologist, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Urology In India, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Urology In Bangalore, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Urology In Chennai, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Urology In Delhi, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Urology In Hyderabad, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-  {
-    text: `The Best Hospital For Urology In Mumbai, Click Here`,
-    url: "#", // Replace "#" with the actual link
-  },
-];
 
 function GeneralSurgery() {
   return (
@@ -335,19 +305,8 @@ function GeneralSurgery() {
           </p>
         </div>
         <CTaButton data={data} />
-        {/* <FooterLinkOthersTwo head={data.title} /> */}
         {/* Footer Links */}
-        <div className="text-start space-y-4">
-          {linkshead.map((link, index) => (
-            <Link
-              key={index}
-              className="text-hciPrimary underline block mb-2 font-medium capitalize text-lg"
-              href={link.url}
-            >
-              {link.text}
-            </Link>
-          ))}
-        </div>
+        <FooterLinkOthersTwo head={data.title} />
         <BookButton />
       </div>
     </>

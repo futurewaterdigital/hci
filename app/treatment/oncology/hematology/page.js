@@ -8,7 +8,7 @@ import KnowMore from "@/components/ui/KnowMore";
 import IssuesLinks from "@/components/ui/IssuesLinks";
 import FooterLinks from "@/components/cardiacComponents/FooterLink";
 import BookButton from "@/components/cardiacComponents/BookButton";
-import FooterNewLinks from "@/components/ui/FooterNewLinks";
+import FooterNewLinks from "@/components/cardiacComponents/FooterNewLinks";
 
 const title = "Hematology Disorders";
 const data = {
