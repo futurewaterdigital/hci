@@ -64,7 +64,7 @@ const services = [
   {
     title: "Orthopedics and Joint Replacement",
     description: "Orthopedics and Joint Replacement",
-    icon: "/images/Orthopaedics.svg",
+    icon: "/images/orthopaedics.svg",
   },
   {
     title: "Organ Transplants (Liver & Kidney)",
@@ -212,7 +212,7 @@ function Page() {
       </div>
       <div className="lg:container mx-auto space-y-6 px-4 lg:px-0">
         <p className="font-light">
-          Whether you&apos;re a Kenyan seeking orthopaedic care in the UAE or
+          Whether you&apos;re a Kenyan seeking orthopedic care in the UAE or
           India, a family from Nigeria seeking neurological care for a child in
           India, or a Bangladeshi couple pursuing transplant surgery, HCI is
           here to guide and support you every step of the way.

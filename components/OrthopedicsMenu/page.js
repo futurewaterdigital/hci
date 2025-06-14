@@ -5,47 +5,47 @@ function Menu() {
   const mainOrtho = [
     {
       menu: 'ACL, PCL, and MCL Surgeries',
-      url: '/treatment/orthopaedics/surgeries',
+      url: '/treatment/orthopedics/surgeries',
     },
     {
       menu: 'Joint Replacement Surgery',
-      url: '/treatment/orthopaedics/joint-replacement-surgery',
+      url: '/treatment/orthopedics/joint-replacement-surgery',
     },
     {
       menu: 'Robotic Knee Replacement Surgery',
-      url: '/treatment/orthopaedics/robotic-knee-replacement-surgery',
+      url: '/treatment/orthopedics/robotic-knee-replacement-surgery',
     },
     {
       menu: 'Spinal Disorders',
-      url: '/treatment/orthopaedics/spinal-disorders',
+      url: '/treatment/orthopedics/spinal-disorders',
     },
   ]
 
   const othersOrtho = [
     {
       menu: 'Acetabular Fractures',
-      url: '/treatment/orthopaedics/acetabular-fractures',
+      url: '/treatment/orthopedics/acetabular-fractures',
     },
     {
       menu: 'Foot and Ankle Surgery',
-      url: '/treatment/orthopaedics/foot-and-ankle-surgery',
+      url: '/treatment/orthopedics/foot-and-ankle-surgery',
     },
     {
       menu: 'Hand and Upper Limb Surgery',
-      url: '/treatment/orthopaedics/hand-and-upper-limb-surgery',
+      url: '/treatment/orthopedics/hand-and-upper-limb-surgery',
     },
-    { menu: 'Osteosarcoma', url: '/treatment/orthopaedics/osteosarcoma' },
+    { menu: 'Osteosarcoma', url: '/treatment/orthopedics/osteosarcoma' },
     {
       menu: 'Pediatric Orthopedic Conditions',
-      url: '/treatment/orthopaedics/pediatric-orthopedic-conditions',
+      url: '/treatment/orthopedics/pediatric-orthopedic-conditions',
     },
     {
       menu: 'Rheumatoid Arthritis',
-      url: '/treatment/orthopaedics/rheumatoid-arthritis',
+      url: '/treatment/orthopedics/rheumatoid-arthritis',
     },
     {
       menu: 'Sports Injuries',
-      url: '/treatment/orthopaedics/sports-injuries',
+      url: '/treatment/orthopedics/sports-injuries',
     },
   ]
 

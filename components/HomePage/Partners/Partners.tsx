@@ -65,7 +65,7 @@ const Partners: React.FC = () => {
         )}
 
         <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 font-bold pt-10">
-          Other Network Hospital
+          Other Network Hospitals
         </h3>
         {/* Partners Slider */}
         <div className="w-full mx-auto px-10 pb-10">

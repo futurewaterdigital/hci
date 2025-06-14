@@ -464,7 +464,7 @@ function page() {
             patients first.
           </p>
           <p className="mb-8 font-light">
-            As per a cost comparison study by the American Medical Association, a knee replacement surgery will cost $75,000 in US, $15,000 in Thailand and $32,000 in Singapore, and only $6200 in India. Similarly, in the US for a bone marrow transplant you will have to pay around $150,000 in UK but in India it will cost just $18,000. No matter what treatment you opt for, you are going to save around 70-75 % of the total cost including health or medical services, wellness travel, accommodation and food services.
+            As per a cost comparison study by the American Medical Association, a knee replacement surgery will cost $75,000 in US, $15,000 in Thailand and $32,000 in Singapore, and only $6200 in India. Similarly, in the US for a bone marrow transplant you will have to pay around $450,000, in UK $150,000 but in India it will cost just $18,000. No matter what treatment you opt for, you are going to save around 70-75 % of the total cost including health or medical services, wellness travel, accommodation and food services.
           </p>
           <p className="mb-8 font-light">
             Refer to the chart below for a comparative analysis of treatment

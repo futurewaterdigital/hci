@@ -1,5 +1,5 @@
 "use client";
-import React, {useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -65,7 +65,7 @@ function Network() {
             state-of-the-art infrastructure with 50,000 enlisted medical beds,
             accredited by the Joint Commission International (JCI). Part of the
             ecosystem are specialised medical centres with expertise in
-            cardiology, oncology, neurology, gastroenterology, orthopaedics,
+            cardiology, oncology, neurology, gastroenterology, orthopedics,
             organ transplant and more. Included are 700 top-tier doctors and
             surgeons providing compassionate care with access to 700 operation
             theatres. This growing ecosystem ensures patients receive the
@@ -83,38 +83,38 @@ function Network() {
             ref={scrollContainerRef}>
             {loading
               ? Array(5)
-                  .fill(0)
-                  .map((_, index) => (
-                    <div
-                      key={index}
-                      className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] rounded-lg shadow flex flex-col items-center animate-pulse w-full">
-                      <div className="bg-gray-300 h-24 w-24 mb-4 rounded-full"></div>
-                      <div className="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
-                      <div className="h-6 bg-gray-300 rounded w-1/2"></div>
-                    </div>
-                  ))
-              : network.map((items, index) => (
+                .fill(0)
+                .map((_, index) => (
                   <div
-                    className="min-w-[250px] p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group mx-auto"
-                    key={index}>
-                    <Image
-                      src={
-                        items.featured_media_url || "/images/placeholder.png"
-                      } // Placeholder for missing images
-                      width={100}
-                      height={100}
-                      alt={`Health Care in ${items.title.rendered}`}
-                    />
-                    <h4 className="text-2xl font-medium text-[#0E56A0] py-4">
-                      {items.title.rendered}
-                    </h4>
-                    <Link
-                      href={`city/${items.slug}`}
-                      className="py-1 px-4 me-2 mb-2 text-1xl font-[30px] text-[#0E56A0] rounded-lg border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white opacity-100 z-20 tracking-wider">
-                      KNOW MORE
-                    </Link>
+                    key={index}
+                    className="p-6 bg-[#EEF7FF] border border-[#EEF7FF] rounded-lg shadow flex flex-col items-center animate-pulse w-full">
+                    <div className="bg-gray-300 h-24 w-24 mb-4 rounded-full"></div>
+                    <div className="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
+                    <div className="h-6 bg-gray-300 rounded w-1/2"></div>
                   </div>
-                ))}
+                ))
+              : network.map((items, index) => (
+                <div
+                  className="min-w-[250px] p-6 bg-[#EEF7FF] border border-[#EEF7FF] hover:border-[#a3caec] rounded-lg shadow flex flex-col items-center group mx-auto"
+                  key={index}>
+                  <Image
+                    src={
+                      items.featured_media_url || "/images/placeholder.png"
+                    } // Placeholder for missing images
+                    width={100}
+                    height={100}
+                    alt={`Health Care in ${items.title.rendered}`}
+                  />
+                  <h4 className="text-2xl font-medium text-[#0E56A0] py-4">
+                    {items.title.rendered}
+                  </h4>
+                  <Link
+                    href={`city/${items.slug}`}
+                    className="py-1 px-4 me-2 mb-2 text-1xl font-[30px] text-[#0E56A0] rounded-lg border border-[#0E56A0] group-hover:bg-[#0E56A0] group-hover:text-white opacity-100 z-20 tracking-wider">
+                    KNOW MORE
+                  </Link>
+                </div>
+              ))}
           </div>
         </div>
       </div>

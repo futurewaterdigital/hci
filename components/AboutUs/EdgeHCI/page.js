@@ -11,7 +11,7 @@ export default function edgeHCI() {
         <p className="font-light">
           Healthcare organizations joining hands with HCI can benefit in more
           ways than one. Considering that we are a reputed and fast-growing
-          medical value travel company , partners could leverage our equity
+          medical value travel company partners could leverage our equity
           effectively to deliver services to patients from across geographies.
           They can also have access to information on the latest in equipment,
           processes and expertise, leveraging our ecosystem.

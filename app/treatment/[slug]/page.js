@@ -6,7 +6,7 @@ import Banner from "../../../components/Treatment/Banner/page";
 import { usePathname, useSearchParams } from "next/navigation";
 import CardioMenu from "../../../components/cardiacComponents/Menu";
 import OthersMenu from "../../../components/OthersComppnents/Menu";
-import OrthopaedicsMenu from "../../../components/OrthopaedicsMenu/page";
+import OrthopedicsMenu from "../../../components/OrthopedicsMenu/page";
 import BookNow from "@/components/cardiacComponents/BookButton";
 import OurNetwork from "@/components/HomePage/Partners/Partners";
 import Testimonials from "@/components/HomePage/Testimonials/page";
@@ -138,7 +138,7 @@ export default function City({ params }) {
           ))}
           <div className="container mx-auto text-center pt-4 space-y-8">
             {pathname === "/treatment/cardiac-sciences" && <CardioMenu />}
-            {pathname === "/treatment/orthopedics" && <OrthopaedicsMenu />}
+            {pathname === "/treatment/orthopedics" && <OrthopedicsMenu />}
             {pathname === "/treatment/neuro-sciences" && <NeuroMenu />}
             {pathname === "/treatment/others" && <OthersMenu />}
             {pathname === "/treatment/oncology" && <OncologyMenu />}

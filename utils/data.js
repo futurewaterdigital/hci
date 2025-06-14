@@ -3,7 +3,7 @@ export const bannerContent = [
   { treatment: "Oncology", linkUrl: "/treatment/oncology" },
   { treatment: "Neuro Sciences", linkUrl: "/treatment/neuro-sciences" },
   { treatment: "Gastroenterology", linkUrl: "/treatment/gastroenterology" },
-  { treatment: "Orthopedics", linkUrl: "/treatment/orthopaedics" },
+  { treatment: "Orthopedics", linkUrl: "/treatment/orthopedics" },
   { treatment: "Others", linkUrl: "/treatment/others" },
 ];
 
@@ -106,7 +106,7 @@ export const menu = [
 //   { condition: 'Oncology' },
 //   { condition: 'Neuro Sciences' },
 //   { condition: 'Gastroenterology' },
-//   { condition: 'Orthopaedics' },
+//   { condition: 'orthopedics' },
 //   { condition: 'Others' },
 // ]
 
@@ -274,7 +274,7 @@ export const medicalConditions = [
     ],
   },
   {
-    condition: "Orthopaedics",
+    condition: "orthopedics",
     hospitals: [
       {
         name: "Apollo Hospital",
@@ -322,7 +322,7 @@ export const footerMenu = [
     links: [
       {
         name: "ACL, PCL, and MCL Surgeries",
-        url: "/treatment/orthopaedics/surgeries",
+        url: "/treatment/orthopedics/surgeries",
       },
       { name: "Angiography", url: "/treatment/cardiac-sciences/angiography" },
       { name: "Angioplasty", url: "/treatment/cardiac-sciences/angioplasty" },
@@ -373,7 +373,7 @@ export const footerMenu = [
       { name: "Hematology", url: "/treatment/oncology/hematology" },
       {
         name: "Joint Replacement Surgery",
-        url: "/treatment/orthopaedics/joint-replacement-surgery",
+        url: "/treatment/orthopedics/joint-replacement-surgery",
       },
       { name: "Lung Cancer", url: "/treatment/oncology/lung-cancer" },
       {
@@ -386,11 +386,11 @@ export const footerMenu = [
       },
       {
         name: "Robotic Knee Replacement Surgery",
-        url: "/treatment/orthopaedics/robotic-knee-replacement-surgery",
+        url: "/treatment/orthopedics/robotic-knee-replacement-surgery",
       },
       {
         name: "Spinal Disorder",
-        url: "/treatment/orthopaedics/spinal-disorders",
+        url: "/treatment/orthopedics/spinal-disorders",
       },
     ],
   },

@@ -245,7 +245,7 @@ function GeneralSurgery() {
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
         <H1 title={data.title} />
         <p
-          dangerouslySetInnerHTML={{__html: data.description}}
+          dangerouslySetInnerHTML={{ __html: data.description }}
           className="text-start font-light"
         />
         <p className="font-light">{data.overview}</p>
@@ -326,7 +326,7 @@ function GeneralSurgery() {
             complications. Common procedures include:
           </p>
           <DataLists
-          bgColor="min-h-[150px]"
+            bgColor="min-h-[150px]"
             // desc="If the fracture is unstable or involves displaced bone fragments, surgery is typically required:"
             data={data.complications}
           />

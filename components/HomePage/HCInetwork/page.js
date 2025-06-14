@@ -1,5 +1,5 @@
 "use client";
-import React, {useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
@@ -108,7 +108,7 @@ function Network() {
             state-of-the-art infrastructure with 50,000 enlisted medical beds,
             accredited by the Joint Commission International (JCI). Part of the
             ecosystem are specialised medical centres with expertise in
-            cardiology, oncology, neurology, gastroenterology, orthopaedics,
+            cardiology, oncology, neurology, gastroenterology, orthopedics,
             organ transplant and more. Included are 700 top-tier doctors and
             surgeons providing compassionate care with access to 700 operation
             theatres. This growing ecosystem ensures patients receive the
