@@ -64,7 +64,7 @@ const services = [
   {
     title: "Orthopedics and Joint Replacement",
     description: "Orthopedics and Joint Replacement",
-    icon: "/images/orthopaedics.svg",
+    icon: "/images/orthopedics.svg",
   },
   {
     title: "Organ Transplants (Liver & Kidney)",
