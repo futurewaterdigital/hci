@@ -346,7 +346,7 @@ function ConsultantForm() {
                   value={yourName}
                   onChange={handleTextChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                  placeholder="Name"
+                  placeholder="Name *"
                 />
                 {errors.yourName && (
                   <p className="text-red-500 text-start text-[14px]">
@@ -390,7 +390,7 @@ function ConsultantForm() {
                       maxLength="10"
                       id="search-dropdown"
                       className="block w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 p-4"
-                      placeholder="Phone Number"
+                      placeholder="Phone Number *"
                     />
                   </div>
                 </div>
@@ -425,7 +425,7 @@ function ConsultantForm() {
                   value={yourEmail}
                   onChange={handleTextChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                  placeholder="Email"
+                  placeholder="Email *"
                 />
                 {errors.yourEmail && (
                   <p className="text-red-500 text-start text-[14px]">
@@ -460,7 +460,7 @@ function ConsultantForm() {
                   onChange={handleFileChange}
                   className="hidden"
                   multiple
-                  accept=".pdf"
+                  accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
                 />
 
                 {/* Custom label to replace the default file input */}
@@ -470,7 +470,7 @@ function ConsultantForm() {
                   <span className="pl-4 text-start">
                     {fileNames.length > 0
                       ? `${fileNames.length} file(s) selected: ${fileNames.join(", ")}`
-                      : "Upload Reports (PDF, up to 4 files, 5MB each)"}
+                      : "Upload Reports (up to 4 files, 5MB each)"}
                   </span>
                   <FaFileAlt className="text-gray-600 mr-2" size={20} />
                 </label>
