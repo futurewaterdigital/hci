@@ -107,7 +107,7 @@ export default function Header() {
   return (
     <div className={`${classnew}`}>
       <div
-        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white`}
+        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white px-2`}
       >
         <div className="lg:h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px] ">
           <div className="relative group flex items-center ">
@@ -117,7 +117,7 @@ export default function Header() {
                 width={80}
                 height={80}
                 loading="lazy"
-                onClick={handleOpen}
+                onClick={handleOpen} 
                 className="cursor-pointer xl:w-[37px] xl:h-[40px] lg:w-[50px]"
                 alt="healthcare international in bangalore"
               />
@@ -167,9 +167,9 @@ export default function Header() {
 
         <div className="lg:flex items-center justify-end gap-4 w-1/2 hidden">
           <div className="z-20 flex flex-row justify-between items-center">
-            <div className="relative flex items-center justify-center right-[40px]">
+            {/* <div className="relative flex items-center justify-center right-[40px]">
               <NewSearch currentPlaceholder={currentPlaceholder} />
-            </div>
+            </div> */}
             <div className="flex items-center gap-4">
               <Link
                 href="/contact-us"
