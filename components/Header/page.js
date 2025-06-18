@@ -90,18 +90,16 @@ export default function Header() {
   // Memoize the class based on scroll and pathname
   const classnew = useMemo(() => {
     if (pathname === "/") {
-      return `z-40 transition-all duration-300  ${
-        isScrolled
+      return `z-40 transition-all duration-300  ${isScrolled
           ? "fixed w-full bg-white shadow-lg top-0"
           : "absolute lg:top-6 w-full"
-      }`;
+        }`;
     }
     // If not home and not scrolled, no shadow
-    return `z-40 w-full bg-white transition-all duration-300 ${
-      isScrolled
+    return `z-40 w-full bg-white transition-all duration-300 ${isScrolled
         ? "shadow fixed top-0 transition-all duration-300 ease-in-out"
         : ""
-    }`;
+      }`;
   }, [pathname, isScrolled]);
 
   return (
@@ -117,7 +115,7 @@ export default function Header() {
                 width={80}
                 height={80}
                 loading="lazy"
-                onClick={handleOpen} 
+                onClick={handleOpen}
                 className="cursor-pointer xl:w-[37px] xl:h-[40px] lg:w-[50px]"
                 alt="healthcare international in bangalore"
               />
@@ -125,7 +123,7 @@ export default function Header() {
             <Drawer isOpen={isOpen} handleClose={handleClose} />
             <div className="hidden lg:block">
               <Image
-                src="/qr-codes/hci.png"
+                src="/qr-codes/hci_qr.png"
                 className="w-16 ml-12"
                 width={200}
                 height={200}
@@ -137,27 +135,24 @@ export default function Header() {
         </div>
 
         <div
-          className={`lg:relative flex lg:justify-center items-center z-10 cursor-pointer ${
-            pathname === "/" ? "lg:h-20" : "lg:h-10 lg:p-12 top-0"
-          }`}
+          className={`lg:relative flex lg:justify-center items-center z-10 cursor-pointer ${pathname === "/" ? "lg:h-20" : "lg:h-10 lg:p-12 top-0"
+            }`}
         >
           <Link href="/">
             <div
-              className={`bg-white lg:rounded-lg lg:w-64 flex justify-center items-center p-4 mx-auto cursor-pointer ${
-                pathname === "/"
+              className={`bg-white lg:rounded-lg lg:w-64 flex justify-center items-center p-4 mx-auto cursor-pointer ${pathname === "/"
                   ? "lg:h-28 xs:h-14 sxs:h-14 sm:h-14"
                   : "lg:h-10 xs:h-14 sxs:h-14 sm:h-14"
-              }`}
+                }`}
             >
               <Image
                 src="/images/logo.svg"
                 width={500}
                 height={100}
-                className={`rounded-lg cursor-pointer ${
-                  isScrolled
+                className={`rounded-lg cursor-pointer ${isScrolled
                     ? "xl:w-9/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300"
                     : "xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300"
-                }`}
+                  }`}
                 loading="lazy"
                 alt="healthcare international in bangalore"
               />
