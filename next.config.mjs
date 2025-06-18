@@ -5,9 +5,16 @@ const nextConfig = {
   },
   compress: true,
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/doctors/oncology/dr-anil-k-dcruz',
+        destination: '/doctors/oncology/dr-anil-k-d-cruz',
+        permanent: true, // or false if it's a temporary redirect
+      },
+    ];
   },
 };
 
