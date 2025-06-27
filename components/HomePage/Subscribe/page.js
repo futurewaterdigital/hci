@@ -96,7 +96,7 @@ export default function Subscribe() {
 
   return (
     <>
-      <div className="relative h-96 flex items-center">
+      <div className="relative h-96 flex items-center px-4 md:px-0">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/images/subscribe.png')]"></div>
         <div className="absolute inset-0 bg-[#0E56A0] opacity-80"></div>
         <div className="relative flex flex-col items-center text-white lg:w-6/12 mx-auto">

@@ -311,8 +311,8 @@ export default function page() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
-              <DataLists data={symptomsData} boxClass="h-[250px]" />
-              <DataLists data={symptomsRData} boxClass="h-[250px]" />
+              <DataLists data={symptomsData} boxClass="md:h-[250px]" />
+              <DataLists data={symptomsRData} boxClass="md:h-[250px]" />
             </div>
 
             <p className="mt-4 text-start font-light">
@@ -355,7 +355,7 @@ export default function page() {
                 header="Medical Management (for small, unruptured aneurysms):"
                 headerCss="text-xl"
                 data={medicalManagement}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2 grid-cols-1"
               />
               <DataBoxes
                 title=""
@@ -363,7 +363,7 @@ export default function page() {
                 header="Surgical Treatment (for large or at-risk aneurysms):"
                 headerCss="text-xl"
                 data={surgicalTreatment}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2 grid-cols-1"
               />
             </div>
           </div>
@@ -371,13 +371,13 @@ export default function page() {
           <div className="grid lg:grid-cols-2 gap-4">
             <div className="space-y-4">
               <H3 title="Recovery and Complications after Surgery" />
-              <p className="h-20 font-light">
+              <p className="md:h-20 font-light">
                 Recovery from aneurysm surgery can take several weeks to months,
                 depending on the procedure type. Patients receive close
                 follow-up to monitor for complications and ensure the aneurysm
                 does not recur or grow.
               </p>
-              <DataLists data={complications} boxClass="h-[340px]" />
+              <DataLists data={complications} boxClass="md:h-[340px]" />
             </div>
             <div className="space-y-4">
               <H3 title="Prevention" />

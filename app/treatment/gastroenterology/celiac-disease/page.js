@@ -312,7 +312,7 @@ function GeneralSurgery() {
         <p className="font-light">{data.overview}</p>
 
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl mt-12" />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
@@ -328,7 +328,7 @@ function GeneralSurgery() {
           <div>
             <H2 title="Symptoms" className="font-medium mb-4 text-center text-2xl mt-12" />
             <DataLists
-              divClass="grid grid-cols-3 gap-4"
+              divClass="grid md:grid-cols-3 gap-4"
               data={data.symptoms_data}
               ulClass=""
             />
@@ -344,7 +344,7 @@ function GeneralSurgery() {
               titleCss="text-black font-medium text-center py-4 mt-4 text-2xl"
               header=""
               data={data.diagnosis}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
           </div>
         </div>
@@ -357,7 +357,7 @@ function GeneralSurgery() {
           />
           <div className="mb-8">
             <DataLists
-              boxClass={"min-h-[80px]"}
+              boxClass={"md:min-h-[80px]"}
               divClass="grid grid-cols-1 gap-4"
               data={data.complications}
               ulClass="list-none list-outside"

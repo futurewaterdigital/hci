@@ -64,11 +64,11 @@ const Partners: React.FC = () => {
           </div>
         )}
 
-        <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 font-bold pt-10">
+        <h3 className="py-4 lg:text-4xl text-2xl p-4 lg:p-4 font-bold pt-10">
           Other Network Hospitals
         </h3>
         {/* Partners Slider */}
-        <div className="w-full mx-auto px-10 pb-10">
+        <div className="w-full mx-auto md:p-10 px-10 pt-5 md:pt-0">
           <Slider {...settings}>
             {medicalPartners.map((partner: Partner, index: number) => (
               <div key={index}>

@@ -281,7 +281,7 @@ function GeneralSurgery() {
           that increase their likelihood of developing multiple polyps. Risk
           factors for colon polyps include:
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
@@ -300,7 +300,7 @@ function GeneralSurgery() {
         </p>
 
 
-        <div className="grid lg:grid-cols-1 gap-4 pt-8">
+        <div className="grid lg:grid-cols-1 gap-4 md:pt-8 ">
           <div className="space-y-4">
             <DataBoxes
               title="Symptoms"
@@ -309,7 +309,7 @@ function GeneralSurgery() {
               textCss="font-light py-4"
               header=""
               data={data.symptoms}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
             <KnowMore title={data.title} />
           </div>
@@ -321,7 +321,7 @@ function GeneralSurgery() {
               textCss="font-light py-4"
               titleCss="text-black font-medium text-center text-2xl"
               data={data.diagnosis}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
           </div>
         </div>

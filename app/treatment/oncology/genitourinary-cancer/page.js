@@ -213,7 +213,7 @@ function GenitourinaryCancer() {
         </div>
         {/* Cancer Types Navigation */}
         <div className="my-4">
-          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-medium">
+          <div className="max-w-8xl mx-auto flex flex-wrap justify-center md:gap-x-20 gap-x-10 md:gap-y-8 gap-y-4 items-center uppercase font-medium">
             {data.cancerTypes.map((item, index) => (
               <Link
                 key={index}
@@ -224,7 +224,7 @@ function GenitourinaryCancer() {
             ))}
           </div>
         </div>
-        <div className="text-3xl mt-14 text-center text-[#D84598] font-medium">
+        <div className="text-3xl md:mt-14 mt-8 text-center text-[#D84598] font-medium">
           Bladder cancer
         </div>
         <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
@@ -276,7 +276,7 @@ function GenitourinaryCancer() {
               but become more noticeable as the disease progresses. Some common
               symptoms include:
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
                 <div
                   key={idx}
@@ -301,7 +301,7 @@ function GenitourinaryCancer() {
               Bladder cancer is typically diagnosed through a combination of the
               following tests:
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.diagnosis[0]?.aneurysmSymptoms?.map((diagnosis, idx) => (
                 <div
                   key={idx}

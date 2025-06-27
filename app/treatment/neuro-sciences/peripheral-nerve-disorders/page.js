@@ -206,7 +206,7 @@ function GeneralSurgery() {
           following are common types of benign peripheral nerve tumours:
         </p> */}
         {/* <DataSurgery data={data.section_1} /> */}
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid md:grid-cols-5 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponentPeripheralNerve
               key={index}
@@ -269,7 +269,7 @@ function GeneralSurgery() {
             symptoms. Options include:
           </p> */}
           <DataLists
-            boxClass={"min-h-[80px]"}
+            boxClass={"md:min-h-[80px]"}
             desc={data.complications[0].description}
             data={data.complications}
           />

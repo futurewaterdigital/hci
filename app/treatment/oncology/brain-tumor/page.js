@@ -678,7 +678,7 @@ function BrainTumor() {
         {/* Banner Image */}
 
         {/* Title and Description */}
-        <div className="text-center mb-12">
+        <div className="text-center md:mb-12 mb-6">
           <H1 title={data.title} />
           <p className="mt-4 text-gray-600 text-start  max-w-7xl mx-auto font-light">
             {data.description}
@@ -686,7 +686,7 @@ function BrainTumor() {
         </div>
         {/* More Link about brain tumor */}
         <div className="my-4">
-          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-medium">
+          <div className="md:max-w-8xl mx-auto flex flex-wrap justify-center md:gap-x-20 md:gap-y-8 gap-y-4 items-center uppercase font-medium">
             {mainGastro.map((item, index) => (
               // <Link
               //   key={index}
@@ -711,14 +711,15 @@ function BrainTumor() {
             </div>
           ))}
         </div>
-        <div className="flex mx-auto justify-center items-center">
-          <div className="bg-[#0E56A0] rounded-l-3xl py-8 px-20 text-xl font-medium text-white">
+        <div className="flex flex-col sm:flex-row mx-auto justify-center items-center">
+          <div className="bg-[#0E56A0] rounded-t-3xl sm:rounded-l-3xl sm:rounded-tr-none py-4 sm:py-8 px-10 sm:px-20 text-base sm:text-xl font-medium text-white w-full sm:w-auto text-center">
             Brain Tumor
           </div>
-          <div className="bg-[#D84498] rounded-r-3xl py-8 px-20 text-xl font-medium text-white">
+          <div className="bg-[#D84498] rounded-b-3xl sm:rounded-r-3xl sm:rounded-bl-none py-4 sm:py-8 px-10 sm:px-20 text-base sm:text-xl font-medium text-white w-full sm:w-auto text-center">
             Brain Cancer
           </div>
         </div>
+
         <div className="my-10">
           <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
             All brain cancers are tumors, but not all brain tumors are
@@ -765,7 +766,7 @@ function BrainTumor() {
         </div>
         {/* More Link about brain tumor */}
         <div className="my-4">
-          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-bold">
+          <div className="max-w-8xl mx-auto flex flex-wrap justify-center md:gap-x-20 gap-x-8 md:gap-y-8 gap-y-4 items-center uppercase font-bold">
             {brainCancerTypes.map((item, index) => (
               <Link
                 key={index}
@@ -791,7 +792,7 @@ function BrainTumor() {
           Brain tumors can form in any part of the brain, but there are certain
           regions where specific tumors form:
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-10 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:my-10 my-5 gap-4">
           {tumorLocationsCard?.map((item, index) => (
             <div
               key={index}
@@ -874,7 +875,7 @@ function BrainTumor() {
             </ul>
           </div>
         </div>
-        <div className="my-10 p-4 font-sans">
+        <div className="md:my-10 md:p-4 font-sans">
           {/* First Section */}
           <div className="flex flex-col md:flex-row gap-4 mb-8">
             <div className="md:w-1/2 bg-white p-4 rounded-md shadow">
@@ -1310,8 +1311,8 @@ function BrainTumor() {
         </p>
 
         {/* Clinical Trials */}
-        <div className="my-10 bg-[#B8DEFF] py-2 px-16">
-          <div className="text-2xl text-center mt-10 py-8 font-medium">
+        <div className="my-10 bg-[#B8DEFF] py-2 md:px-16 px-4">
+          <div className="text-2xl text-center mt-10 md:py-8 font-medium">
             Clinical Trials
           </div>
           <p className="mt-4 text-gray-600 text-start w-full  mx-auto font-light leading-relaxed">
@@ -1346,29 +1347,30 @@ function BrainTumor() {
             may include:
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 py-8 my-8">
-            <span className="bg-[#0E56A0] text-white py-2 px-6 rounded w-[calc(25%-1rem)] text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-8 my-8 px-4 justify-center flex">
+            <span className="bg-[#0E56A0] text-white py-2 px-4 rounded text-center">
               Weakness
             </span>
-            <span className="bg-[#0E56A0] text-white py-2 px-6 rounded w-[calc(25%-1rem)] text-center">
+            <span className="bg-[#0E56A0] text-white py-2 px-4 rounded text-center">
               Loss of balance
             </span>
-            <span className="bg-[#0E56A0] text-white py-2 px-6 rounded w-[calc(25%-1rem)] text-center">
+            <span className="bg-[#0E56A0] text-white py-2 px-4 rounded text-center">
               Loss of vision
             </span>
-            <span className="bg-[#0E56A0] text-white py-2 px-6 rounded w-[calc(25%-1rem)] text-center">
+            <span className="bg-[#0E56A0] text-white py-2 px-4 rounded text-center">
               Loss of memory
             </span>
-            <span className="bg-[#0E56A0] text-white py-2 px-6 rounded w-[calc(25%-1rem)] text-center">
+            <span className="bg-[#0E56A0] text-white py-2 px-4 rounded text-center">
               Difficulty speaking
             </span>
-            <span className="bg-[#0E56A0] whitespace-nowrap text-white py-2 px-6 rounded w-[calc(25%-1rem)] text-center">
+            <span className="bg-[#0E56A0] text-white py-2 px-4 rounded text-center">
               Difficulty doing complex tasks
             </span>
-            <span className="bg-[#0E56A0] whitespace-nowrap  text-white py-2 px-6 rounded w-[calc(25%-1rem)] text-center">
+            <span className="bg-[#0E56A0] text-white py-2 px-4 rounded text-center">
               Difficulty making decisions
             </span>
           </div>
+
         </div>
 
         {/* Clinical Trails */}

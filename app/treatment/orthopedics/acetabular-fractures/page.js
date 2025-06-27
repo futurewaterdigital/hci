@@ -192,7 +192,7 @@ function GeneralSurgery() {
         <p className="font-light">
           Acetabular fractures typically occur from high-energy trauma, such as:
         </p>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {data.causes.map((item, index) => (
             <TextComponent
               key={index}
@@ -218,7 +218,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -230,7 +230,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-xl"
                 textCss="font-light py-4 min-h-[80px]"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLinks head={data.title} />
             </div>
@@ -266,7 +266,7 @@ function GeneralSurgery() {
           </div>
 
           <div className="space-y-4">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
@@ -276,7 +276,7 @@ function GeneralSurgery() {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}

@@ -274,7 +274,7 @@ export default function page() {
               header="Key types and causes of valve malfunction include:"
               headerCss="font-medium text-xl"
               data={valveMalfunction}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
             />
             <DataBoxes
               title=""
@@ -282,7 +282,7 @@ export default function page() {
               header="Common causes:"
               headerCss="font-medium text-xl"
               data={commonCauses}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
             />
           </div>
           {/* <KnowMore title={title} /> */}
@@ -317,7 +317,7 @@ export default function page() {
               header=""
               textCss="font-light py-4"
               data={cardiacTests}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
             />
 
             <IssuesLinks head={title} />
@@ -332,7 +332,7 @@ export default function page() {
               Treatment depends on the severity, the affected valve, and the
               patient’s overall health. Options include:
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
               <DataLists boxClass="h-[250px]" data={medicationsData} />
               <DataLists boxClass="h-[250px]" data={lifestyleChangesData} />
             </div>
@@ -348,7 +348,7 @@ export default function page() {
               header=""
               textCss="font-light py-4"
               data={heartConditions}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
             />
           </div>
         </div>

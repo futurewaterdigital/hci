@@ -32,7 +32,7 @@ function HomeHospitals() {
      <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 font-bold ">
           Our Network Hospitals
         </h3>
-    <div className="grid grid-cols-5 gap-4 ">
+    <div className="grid md:grid-cols-5 md:gap-4 gap-6 px-4">
       {hospitalName.map((items, index) => (
         <Link href={items.link} key={index}>
           <div className="rounded-lg border border-hciSecondary min-h-80 hover:shadow-lg hover:scale-105 transition-all ease-in-out ">

@@ -53,14 +53,14 @@ function Network() {
   }, [selectedCategory]);
 
   return (
-    <div className="py-10 z-10 relative" id="cities">
+    <div className="md:py-10 py-4  z-10 relative" id="cities">
       <div className="w-11/12 mx-auto">
         <div className="text-center ">
           <h4 className="text-3xl font-bold pb-10 font-roboto">
             The HCI Network
-            <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
+            <hr className="w-28 mx-auto h-1 bg-[#D84498]"/>
           </h4>
-          <p className="font-light w-full mx-auto text-start">
+          <p className="font-light w-full mx-auto text-start pb-4 md:pb-0">
             The HCI network consists of leading hospitals and clinics with
             state-of-the-art infrastructure with 50,000 enlisted medical beds,
             accredited by the Joint Commission International (JCI). Part of the

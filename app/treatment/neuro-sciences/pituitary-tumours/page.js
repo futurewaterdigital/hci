@@ -168,7 +168,7 @@ function GeneralSurgery() {
           following are common types of benign peripheral nerve tumours:
         </p> */}
         {/* <DataSurgery data={data.section_1} /> */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
@@ -192,8 +192,8 @@ function GeneralSurgery() {
         </p>
 
         <div>
-          <div className="grid lg:grid-cols-1 gap-4">
-            <div className="space-y-4">
+          <div className="grid md:grid-cols-1 gap-4">
+            <div className="md:space-y-4">
               <DataBoxes
                 title="Symptoms"
                 text="The symptoms of pituitary tumours can vary widely depending on the type of tumour and its size. Common symptoms include:"
@@ -253,7 +253,7 @@ function GeneralSurgery() {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}

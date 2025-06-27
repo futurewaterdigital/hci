@@ -350,11 +350,11 @@ function page() {
           <div className="grid lg:grid-cols-2 gap-4">
             <DataLists
               data={transplantEvaluation}
-              boxClass="h-[290px] font-medium"
+              boxClass="md:h-[290px] h-[200] font-medium"
             />
             <DataLists
               data={SurgeryEvaluation}
-              boxClass="h-[290px] font-medium"
+              boxClass="md:h-[290px] h-[300] font-medium"
             />
           </div>
         </div>
@@ -378,9 +378,9 @@ function page() {
         <div className="container mx-auto mt-4">
           {/* <H3 title="Recovery and Long-Term Outlook" className="font-regular font-roboto text-center font-medium"/> */}
           <div className="grid lg:grid-cols-2 gap-4">
-            <DataLists data={recoveryOutlook} boxClass="h-[340px]" />
+            <DataLists data={recoveryOutlook} boxClass="md:h-[340px]" />
             <div className="space-y-1">
-              <DataLists data={longTermOutlooks} boxClass="h-[340px]" />
+              <DataLists data={longTermOutlooks} boxClass="md:h-[340px]" />
             </div>
           </div>
         </div>

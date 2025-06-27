@@ -149,7 +149,7 @@ function GeneralSurgery() {
           following are common types of benign peripheral nerve tumours:
         </p> */}
         {/* <DataSurgery data={data.section_1} /> */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
@@ -166,7 +166,7 @@ function GeneralSurgery() {
         </p>
   
         <H2 title="Risk Factors" className="font-medium mb-4 text-center text-2xl" />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           <div>
             <p className="font-light h-12">
               Certain risk factors can increase your chances of having a stroke,
@@ -188,7 +188,7 @@ function GeneralSurgery() {
             <img src="/neuro-sciences/ischemic-stroke.png" alt="stroke" />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 pt-4">
+        <div className="grid md:grid-cols-2 gap-4 pt-4">
           <div>
             <H3 title="Symptoms of a Stroke" className="font-medium mb-4 text-2xl"/>
 
@@ -301,7 +301,7 @@ function GeneralSurgery() {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}

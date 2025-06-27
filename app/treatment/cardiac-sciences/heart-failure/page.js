@@ -289,7 +289,7 @@ export default function page() {
               header="Other heart failure causes include:"
               headerCss="text-2xl text-start font-medium capitalize"
               data={otherCauses}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
             />
           </div>
         </div>
@@ -801,8 +801,8 @@ export default function page() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-4">
-          <DataLists data={complications} boxClass="h-[360px]" />
-          <DataLists data={prevention} boxClass="h-[360px]" />
+          <DataLists data={complications} boxClass="md:h-[360px]" />
+          <DataLists data={prevention} boxClass="md:h-[360px]" />
         </div>
 
         <div className="py-8">

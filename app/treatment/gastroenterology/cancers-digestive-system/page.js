@@ -325,7 +325,7 @@ function GeneralSurgery() {
               </p>
             </div>
           </div>
-          <div className="mt-20">
+          <div className="md:mt-20">
             <img src="/gastroenterology/digestive-system.png" alt="" />
           </div>
         </div>
@@ -335,7 +335,7 @@ function GeneralSurgery() {
           cancers. Understanding these risk factors is crucial for prevention
           and early detection:
         </p> */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
@@ -363,7 +363,7 @@ function GeneralSurgery() {
               titleCss="text-black font-medium text-center text-xl pb-4 mt-4"
               header=""
               data={data.symptoms}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
             <KnowMore title={data.title} />
           </div>
@@ -375,7 +375,7 @@ function GeneralSurgery() {
               textCss="font-light py-4"
               titleCss="text-black font-medium text-center text-xl pb-4 mt-4"
               data={data.diagnosis}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
           </div>
           <IssuesLinks head={data.title} />

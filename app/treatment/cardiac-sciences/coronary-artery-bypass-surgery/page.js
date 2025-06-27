@@ -240,26 +240,26 @@ function page() {
               </p>
               <DataLists
                 data={bypassSurgery}
-                boxClass={"border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]"}
-                ulClass="list-disc list-outside text-hciSecondary h-40"
+                boxClass={"border border-hciSecondary rounded-lg md:p-4 shadow-lg md:h-[260px] h-[330px] "}
+                ulClass="list-disc list-outside text-hciSecondary md:h-40 h-32"
               />
             </div>
             <div>
-              <p className="h-12 font-light mb-4">
+              <p className="md:h-12 font-light md:mb-4  mt-4 md:mt-0">
                 Some advanced approaches include:
               </p>
               <DataLists
                 data={advancedApproaches}
-                boxClass={"border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]"}
-                ulClass="list-disc list-outside text-hciSecondary h-40"
+                boxClass={"border border-hciSecondary rounded-lg md:p-4 shadow-lg md:h-[260px] h-[180px]"}
+                ulClass="list-disc list-outside text-hciSecondary md:h-40 h-32"
               />
             </div>
           </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-4">
-          <section className="mb-8 gap-4 grid mt-4">
-            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
+          <section className="md:mb-8 gap-4 grid mt-4">
+            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg md:h-[260px] h-[330px]">
               <H2
                 title="After the Surgery"
                 className="mb-4 font-medium text-lg"
@@ -289,7 +289,7 @@ function page() {
                 </li>
               </ul>
             </div>
-            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
+            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg md:h-[260px] h-[330px]">
               <p className="mb-4 font-medium text-lg ">
                 Contact your healthcare provider if you notice:
               </p>
@@ -306,8 +306,8 @@ function page() {
               </p>
             </div>
           </section>
-          <section className="mb-8 gap-4 grid mt-4">
-            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
+          <section className="mb-8 gap-4 grid md:mt-4">
+            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg md:h-[260px] h-[200px]">
               <H2
                 title="Results and Long-Term Care"
                 className="mb-4 font-medium text-lg"
@@ -318,7 +318,7 @@ function page() {
                 However, grafts or arteries may narrow again over time.
               </p>
             </div>
-            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg h-[260px]">
+            <div className="border border-hciSecondary rounded-lg p-4 shadow-lg md:h-[260px] h-[350px]">
               <p className="mb-4 font-medium text-lg">
                 To maintain your heart health:
               </p>

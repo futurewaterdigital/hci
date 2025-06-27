@@ -258,7 +258,7 @@ export default function page() {
               header=""
               textCss="font-light py-2"
               data={heartConditionsList}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
             />
             <DataBoxes
               titleCss="text-xl font-medium"
@@ -267,7 +267,7 @@ export default function page() {
               header=""
               textCss="font-light py-2"
               data={heartsConditionsList}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
             />
           </div>
         </div>

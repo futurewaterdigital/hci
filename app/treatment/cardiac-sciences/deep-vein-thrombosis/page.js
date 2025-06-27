@@ -343,7 +343,7 @@ function page() {
         </div>
       </section>
 
-      <section className="container mx-auto py-8 px-6">
+      <section className="md:container mx-auto py-8 md:px-6 px-4">
         <div className="grid lg:grid-cols-1 gap-4">
           <div className="space-y-4">
             <DataBoxes
@@ -352,8 +352,8 @@ function page() {
               text="Many people with DVT do not experience symptoms. However, when present, symptoms may include:"
               textCss="font-light py-4"
               header=""
-              myclass="grid grid-cols-2"
-              titleCss="text-2xl font-bold text-center mt-8"
+              myclass="grid md:grid-cols-2 grid-cols-1"
+              titleCss="text-2xl font-bold text-center md:mt-8"
             />
             <KnowMore title={title} />
           </div>
@@ -365,7 +365,7 @@ function page() {
               data={diagnosisDVT}
               text="A healthcare provider will conduct a physical exam, review medical history, and use imaging tests to diagnose DVT. The primary diagnostic tests include:"
               header=""
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
             />
             {/* <KnowMore title={title} /> */}
             <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
@@ -377,7 +377,7 @@ function page() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto px-6">
+      <section className="md:container mx-auto mx-4 md:px-6 px-0">
         <H2
           title="Prevention"
           className="text-center text-2xl font-bold space-y-4"
@@ -385,7 +385,7 @@ function page() {
         <p className="text-center font-light">To reduce the risk of DVT:</p>
         <DataSurgery data={surgeryData} />
       </section>
-      <section className="container mx-auto py-8 px-6">
+      <section className="md:container mx-auto md:px-6 px-0 md:pt-10 pt-8">
         <H2
           title="Treatment and Management"
           className="text-center text-2xl font-bold mb-4"
@@ -398,7 +398,7 @@ function page() {
           headingCss="font-light"
         />
       </section>
-      <section className="container mx-auto py-2 px-6 space-y-6">
+      <section className="md:container mx-auto py-2 md:px-6 px-4 space-y-6 pt-6">
         <Conclusion data={footerData} />
         <FooterLinks head={title} />
         <BookButton />

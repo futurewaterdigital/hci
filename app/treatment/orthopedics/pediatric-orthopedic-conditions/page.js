@@ -236,7 +236,7 @@ function GeneralSurgery() {
           Pediatric orthopedic conditions can develop from multiple factors,
           including:
         </p>
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid md:grid-cols-5 gap-4">
           {data.causes.map((item, index) => (
             <TextComponent
               key={index}
@@ -262,7 +262,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -274,7 +274,7 @@ function GeneralSurgery() {
                 textCss="font-light py-4"
                 titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLinks head={data.title} />
             </div>
@@ -303,23 +303,23 @@ function GeneralSurgery() {
             issues and improve outcomes. Some key recommendations include:
           </p>
           <div className="space-y-4">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary md:h-[100px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary md:h-[100px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>
@@ -335,17 +335,17 @@ function GeneralSurgery() {
             Consult a doctor if your child experiences any of the following:
           </p>
           <div className="space-y-4">
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid md:grid-cols-5 gap-4">
               {data.consideration_1.slice(0).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[120px] w-full hover:bg-hciPrimary hover:text-white"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary md:h-[130px] w-full hover:bg-hciPrimary hover:text-white"
                 />
               ))}
             </div>
-            {/* <div className="grid grid-cols-2 gap-4">
+            {/* <div className="grid md:grid-cols-2 gap-4">
               {data.consideration_1.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
