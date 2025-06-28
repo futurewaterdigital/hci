@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-import React from 'react'
-import { medicalPartners } from '@/utils/data'
-import Image from 'next/image'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import { usePathname } from 'next/navigation'
-import Hospitals from '@/components/HomePage/Hospitals/HomeHospitals'
+import React, { useEffect } from 'react';
+import { medicalPartners } from '@/utils/data';
+import Image from 'next/image';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { usePathname, useSearchParams } from 'next/navigation';
+import Hospitals from '@/components/HomePage/Hospitals/HomeHospitals';
 
 // Define the type for a Partner
 interface Partner {
@@ -15,7 +15,21 @@ interface Partner {
 }
 
 const Partners: React.FC = () => {
-  const pathname = usePathname()
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const scrollTo = searchParams.get("scrollTo");
+
+  // ✅ Correct hook usage: inside the component
+  useEffect(() => {
+    if (scrollTo) {
+      const el = document.getElementById(scrollTo);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 300); // slight delay to allow content to load
+      }
+    }
+  }, [scrollTo]);
 
   const settings = {
     dots: false,
@@ -50,13 +64,11 @@ const Partners: React.FC = () => {
         },
       },
     ],
-  }
+  };
 
   return (
-    <div className="w-full mt-16 px-2 lg:px-0">
+    <div id="hospital" className="w-full mt-16 px-2 lg:px-0 scroll-mt-28">
       <div className="bg-white lg:w-11/12 mx-auto text-center">
-       
-
         {/* Conditionally render Hospitals component if on homepage */}
         {pathname === '/' && (
           <div>
@@ -67,6 +79,7 @@ const Partners: React.FC = () => {
         <h3 className="py-4 lg:text-4xl text-2xl p-4 lg:p-4 font-bold pt-10">
           Other Network Hospitals
         </h3>
+
         {/* Partners Slider */}
         <div className="w-full mx-auto md:p-10 px-10 pt-5 md:pt-0">
           <Slider {...settings}>
@@ -85,7 +98,7 @@ const Partners: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Partners
+export default Partners;

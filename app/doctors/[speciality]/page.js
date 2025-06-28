@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaSearch } from "react-icons/fa";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { useRouter } from "next/navigation";
 
 export default function DoctorsPage({ params }) {
   const [doctors, setDoctors] = useState([]);
@@ -17,7 +18,14 @@ export default function DoctorsPage({ params }) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const slug = params.speciality;
+  const router = useRouter();
 
+
+  const handleDoctorClick = (e) => {
+    e.preventDefault();
+    router.push("/?scrollTo=form");
+  };
+  
   useEffect(() => {
     // Set title based on slug
     if (slug === 'cardiac-sciences') {
@@ -33,6 +41,9 @@ export default function DoctorsPage({ params }) {
     } else if (slug === 'gastroenterology') {
       setTitle('Our Gastroenterologists');
     }
+
+
+
 
     const fetchDoctor = async () => {
       try {
@@ -106,7 +117,7 @@ export default function DoctorsPage({ params }) {
             >
               {/* Skeleton Image */}
               <div className="md:w-[700px] h-[300px] md:h-[280px] bg-gray-200 rounded-lg mb-4 md:mb-0"></div>
-  
+
               {/* Skeleton Text Info */}
               <div className="flex-1 md:pl-4 space-y-4">
                 <div className="h-6 bg-gray-300 rounded w-2/3"></div>
@@ -117,7 +128,7 @@ export default function DoctorsPage({ params }) {
                   <div className="h-3 bg-gray-200 rounded w-10/12"></div>
                 </div>
               </div>
-  
+
               {/* Skeleton Button */}
               <div className="flex justify-center items-center mt-4 md:mt-0 md:w-[500px]">
                 <div className="h-10 w-32 bg-gray-300 rounded-full"></div>
@@ -128,7 +139,7 @@ export default function DoctorsPage({ params }) {
       </div>
     );
   }
-  
+
 
   if (error) {
     return (
@@ -243,7 +254,8 @@ export default function DoctorsPage({ params }) {
 
               {/* Button Section */}
               <div className="flex flex-col items-center justify-center md:w-[500px]">
-                <button className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4 hover:bg-hciSecondary hover:text-white transition-all duration-300">
+                <button onClick={handleDoctorClick}
+                  className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4 hover:bg-hciSecondary hover:text-white transition-all duration-300">
                   ENQUIRE NOW
                 </button>
               </div>
