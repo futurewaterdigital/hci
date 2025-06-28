@@ -76,18 +76,18 @@ function Banner() {
                 ))}
             </div>
           ) : (
-            <div className="grid grid-flow-col lg:grid-cols-3 gap-4 overflow-x-auto lg:overflow-visible px-4 py-4 mt-10 lg:mt-0 scrollbar-hide">
+            <div className="grid lg:grid-cols-3 gap-4 lg:p-[4.4em] lg:min-w-9/12 max-w-full lg:grid-flow-row grid-flow-col overflow-auto lg:overflow-visible  scrollbar-hide mt-10 lg:mt-0">
               {network.map((items, index) => (
                 <Link
                   key={index}
+                  type="button"
                   href={`treatment/${items.slug}`}
-                  className="min-w-[270px] lg:w-auto text-center lg:text-left py-4 px-6 text-[16px] lg:text-[28px] font-light text-[#0E56A0] bg-white rounded-lg border border-gray-200 hover:bg-[#0E56A0] hover:text-white shadow whitespace-nowrap"
+                  className="w-[270px] text-center lg:text-start py-4 px-6 me-2 mb-2 lg:text-[28px] font-light text-[#0E56A0] focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#0E56A0] hover:text-white focus:z-10 focus:ring-4 focus:ring-[#0E56A0] shadow"
                 >
                   {items.title.rendered}
                 </Link>
               ))}
             </div>
-
           )}
         </div>
       </div>
