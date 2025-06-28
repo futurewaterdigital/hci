@@ -137,7 +137,7 @@ const handleDoctorClick = (e) => {
             <button
               onClick={handleDoctorClick}
               className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4">
-              ENQUIRE NOW
+              ENQUIRE NOW 
             </button>
           </div>
           <div className="flex-1">
