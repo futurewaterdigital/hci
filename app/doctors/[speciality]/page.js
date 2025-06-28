@@ -94,11 +94,41 @@ export default function DoctorsPage({ params }) {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      <div className="md:max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-hciPrimary text-center md:text-left mb-6">
+          {title}
+        </h1>
+        <div className="grid md:grid-cols-1 gap-6">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <div
+              key={index}
+              className="w-full flex flex-col md:flex-row border border-gray-200 rounded-lg shadow-md p-4 animate-pulse"
+            >
+              {/* Skeleton Image */}
+              <div className="md:w-[700px] h-[300px] md:h-[280px] bg-gray-200 rounded-lg mb-4 md:mb-0"></div>
+  
+              {/* Skeleton Text Info */}
+              <div className="flex-1 md:pl-4 space-y-4">
+                <div className="h-6 bg-gray-300 rounded w-2/3"></div>
+                <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+                <div className="space-y-2">
+                  <div className="h-3 bg-gray-200 rounded w-full"></div>
+                  <div className="h-3 bg-gray-200 rounded w-11/12"></div>
+                  <div className="h-3 bg-gray-200 rounded w-10/12"></div>
+                </div>
+              </div>
+  
+              {/* Skeleton Button */}
+              <div className="flex justify-center items-center mt-4 md:mt-0 md:w-[500px]">
+                <div className="h-10 w-32 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
+  
 
   if (error) {
     return (
@@ -136,11 +166,12 @@ export default function DoctorsPage({ params }) {
             <FaSearch className="absolute left-3 text-gray-400 text-xl" />
             <input
               type="text"
-              placeholder="Search doctors by name, qualification..."
+              placeholder="Search Doctors by Name"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full md:min-w-[300px] pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hciSecondary placeholder:text-sm"
+              className="w-full md:min-w-[300px] pl-10 pr-4 py-2 h-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hciSecondary placeholder:text-sm placeholder:align-middle"
             />
+
           </div>
         </div>
       </div>
