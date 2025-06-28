@@ -104,7 +104,7 @@ function page() {
     <>
       <Banner image={bannerImage} />
       {/* <!-- Content --> */}
-      <div className="lg:container mx-auto mt-8 space-y-12">
+      <div className="lg:container mx-auto mt-8 space-y-12 px-4">
         <H1 title="Angioplasty" />
         <div className="space-y-4">
           <H2
@@ -188,7 +188,6 @@ function page() {
             ))}
           </div>
 
-
           <p className="mb-4 font-light">
             For more information on angioplasty, including preparation and
             recovery tips, visit our detailed sections:
@@ -210,7 +209,7 @@ function page() {
                 Diagnosis and Imaging Techniques
               </Link>
             </li>
-            <li>Post-Angioplasty Care</li>
+            <li className="pt-2">Post-Angioplasty Care</li>
           </ul>
         </div>
         <Conclusion data={conclusionData} />

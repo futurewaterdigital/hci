@@ -284,7 +284,7 @@ export default function page() {
               desc="Diagnosing PAD involves a combination of medical history, physical examination, and diagnostic tests, such as:"
               data={padDiagnosis}
               footerdata=""
-              boxClass="min-h-[550px]"
+              boxClass="md:min-h-[550px]"
             />
             <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
               <button onClick={handleClick} className="text-start underline">
@@ -303,19 +303,19 @@ export default function page() {
               desc=""
               data={lifestyleChanges}
               footerdata=""
-              boxClass="min-h-[400px]"
+              boxClass="md:min-h-[400px]"
             />
             <DataLists
               desc=""
               data={medicationsData}
               footerdata=""
-              boxClass="min-h-[400px]"
+              boxClass="md:min-h-[400px]"
             />
             <DataLists
               desc=""
               data={minimallyInvasiveSurgery}
               footerdata=""
-              boxClass="min-h-[400px]"
+              boxClass="md:min-h-[400px]"
             />
           </div>
         </div>

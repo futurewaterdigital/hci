@@ -273,7 +273,7 @@ function GeneralSurgery() {
         <p className="font-light" text="">
           Sports injuries can arise from various factors, including:
         </p>
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid md:grid-cols-5 gap-4">
           {data.causes.map((item, index) => (
             <TextComponent
               key={index}
@@ -298,7 +298,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -310,7 +310,7 @@ function GeneralSurgery() {
                 textCss="font-light py-4"
                 titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLinks head={data.title} />
             </div>

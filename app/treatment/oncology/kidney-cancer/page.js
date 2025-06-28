@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "@/components/cardiacComponents/Title";
 import H2 from "@/components/ui/h2";
+import H1 from "@/components/ui/h1";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
 import KnowMore from "@/components/ui/CausesKnowMore";
@@ -233,22 +234,24 @@ function KidneyCancer() {
     <>
       <Banner image="/oncology/kidney-banner.png" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Title title={data.title} className="text-pink-500" />
+      <div className="text-center md:mb-12 ">
+          <H1 title={data.title} />
+        </div>
         <div className="mt-6">
           <p
-            className="text-gray-600 mb-10 text-lg font-light"
+            className="text-gray-600 md:mb-10 text-lg font-light"
             dangerouslySetInnerHTML={{__html: data.description}}
           />
         </div>
         {/* Banner Image  */}
 
         {/* Causes Section */}
-        <div className="mt-12">
+        <div className="md:mt-12 mt-8">
           <H2
             title={data.causes[0].heading}
             className="text-2xl text-center font-semibold mb-4"
           />
-          <p className="text-gray-600 mb-6 font-light">
+          <p className="text-gray-600 md:mb-6 font-light">
             {data.causes[0].description}
           </p>
           <div className="grid grid-cols-1 mt-5 md:grid-cols-2 gap-4">
@@ -264,11 +267,11 @@ function KidneyCancer() {
             ))}
           </div>
         </div>
-        <div className="my-3">
+        <div className="md:my-3">
           <KnowMore title={data.title} />
         </div>
         {/* Symptoms Section */}
-        <div className="mt-12">
+        <div className="md:mt-12 mt-8">
           <H2
             title={data.symptoms[0].heading}
             className="text-2xl font-semibold mb-4"
@@ -276,7 +279,7 @@ function KidneyCancer() {
           <p className="text-gray-600 mb-6 font-light">
             {data.symptoms[0].description}
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 md:gap-4">
             {data.symptoms[0].items.map((symptom, idx) => (
               <div key={idx} className={symptom.className}>
                 <span className="font-light">
@@ -299,7 +302,7 @@ function KidneyCancer() {
           <p className="text-gray-600 mb-6 font-light">
             {data.diagnosis[0].description}
           </p>
-          <div className="space-y-2">
+          <div className="space-y-2 ">
             {data.diagnosis[0].items.map((test, idx) => (
               <div key={idx} className={test.className}>
                 <strong>{test.title}:</strong> {test.description}
@@ -316,7 +319,7 @@ function KidneyCancer() {
             title="Treatment for Kidney Cancer"
             className="text-2xl font-semibold mb-6 text-center"
           />
-          <p className="mt-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
+          <p className="my-4 text-gray-600 text-start w-full text-lg mx-auto font-light leading-relaxed">
             The treatment of kidney cancer depends on the stage, size, and
             spread of the tumor, as well as the patient’s overall health.
             Options include:

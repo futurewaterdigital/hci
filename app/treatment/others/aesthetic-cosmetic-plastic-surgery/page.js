@@ -122,7 +122,7 @@ function GeneralSurgery() {
               src="/others/before_and_after.png"
               width={300}
               height={300}
-              className="w-full h-[335px] object-cover border border-[#D84498] rounded-lg shadow-lg"
+              className="w-full md:h-[325px] object-cover border border-[#D84498] rounded-lg shadow-lg"
             />
           </div>
         </div>

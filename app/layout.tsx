@@ -4,14 +4,16 @@ import Script from 'next/script'
 import './globals.css'
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
 
+// layout.tsx
+
 export const metadata: Metadata = {
-  title: 'Healthcare International',
-  description: 'Healthcare International.',
+  title: 'Healthcare International | Trusted Medical Tourism Services',
+  description: 'Explore Healthcare International, your trusted partner for medical tourism, offering top-notch healthcare services across India. Connect with leading hospitals and expert doctors to access quality treatments tailored to your needs',
   metadataBase: new URL('https://healthcareinternational.in/'),
   openGraph: {
     url: 'https://healthcareinternational.in/',
-    title: 'Healthcare International',
-    description: 'Healthcare International',
+    title: 'Healthcare International | Trusted Medical Tourism Services',
+    description: 'Explore Healthcare International, your trusted partner for medical tourism, offering top-notch healthcare services across India. Connect with leading hospitals and expert doctors to access quality treatments tailored to your needs',
     images: [
       {
         url: 'images/homeBanner.jpg',
@@ -46,11 +48,17 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Healthcare International',
+    title: 'Healthcare International | Trusted Medical Tourism Services',
   },
   themeColor: '#ffffff',
-  viewport: 'width=device-width, initial-scale=1.0',
 }
+
+// ✅ Separate export
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+}
+
 
 export default function RootLayout({
   children,

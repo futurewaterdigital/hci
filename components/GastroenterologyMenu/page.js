@@ -49,29 +49,34 @@ function Menu() {
   ]
 
   return (
-    <div className="container mx-auto space-y-8">
-      <div className="flex gap-8 items-center justify-center uppercase font-semibold ">
+    <div className="container mx-auto px-4 space-y-6">
+      {/* Main Gastro Menu */}
+      <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-8 items-center justify-center text-center uppercase font-semibold text-sm sm:text-base">
         {mainGastro.map((item, index) => (
           <Link
             key={index}
-            className="hover:text-hciSecondary cursor-pointer"
             href={item.url}
+            className="hover:text-hciSecondary transition-colors"
           >
             {item.menu}
           </Link>
         ))}
       </div>
+
+      {/* Section Header */}
       <div>
-        <h2 className="font-semibold text-2xl">
+        <h2 className="font-semibold text-xl sm:text-2xl text-center sm:text-left">
           Other Gastro Conditions
         </h2>
       </div>
-      <div className="flex flex-wrap gap-6 items-center justify-center uppercase font-semibold ">
+
+      {/* Other Gastro Conditions */}
+      <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 items-center justify-center text-center uppercase font-semibold text-sm sm:text-base">
         {otherGastro.map((item, index) => (
           <Link
             key={index}
-            className="hover:text-hciSecondary cursor-pointer"
             href={item.url}
+            className="hover:text-hciSecondary transition-colors"
           >
             {item.menu}
           </Link>

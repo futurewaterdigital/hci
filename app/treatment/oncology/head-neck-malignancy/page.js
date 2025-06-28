@@ -289,10 +289,10 @@ function HeadNeckMalignancy() {
   return (
     <>
       <Banner image={data.bannerImage} />
-      <div className="max-w-7xl relative mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl relative mx-auto px-4 md:px-8">
         {/* Banner Image */}
 
-        <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
+        <div className="lg:container mx-auto space-y-6 md:px-6 lg:px-0">
           <H1 title={data.title} />
           <div className="mt-6">
             <p className="text-gray-600 font-light">{data.description}</p>
@@ -329,7 +329,7 @@ function HeadNeckMalignancy() {
                   title=""
                   header=""
                   data={data.causes}
-                  myclass="grid grid-cols-2 gap-2"
+                  myclass="grid md:grid-cols-2 gap-2"
                 />
               </div>
               <div className="mt-6 text-start">
@@ -343,7 +343,7 @@ function HeadNeckMalignancy() {
                   title=""
                   header=""
                   data={data.diagnosis}
-                  myclass="grid grid-cols-2 gap-2"
+                  myclass="grid md:grid-cols-2 gap-2"
                 />
               </div>
               <div className="mt-6 text-start">

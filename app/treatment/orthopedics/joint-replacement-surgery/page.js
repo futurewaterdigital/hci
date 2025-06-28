@@ -265,7 +265,7 @@ function JointReplacementSurgery() {
                 titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={title} />
             </div>
@@ -277,7 +277,7 @@ function JointReplacementSurgery() {
                 header=""
                 titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLink head={title} />
             </div>

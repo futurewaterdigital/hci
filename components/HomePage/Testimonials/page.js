@@ -60,7 +60,7 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="py-10">
+    <div className="py-10 mx-4">
       <div className="w-11/12 text-center mx-auto">
         <div>
           <h4 className="text-3xl font-bold pb-10 font-roboto">
@@ -72,7 +72,7 @@ export default function Testimonials() {
           </p>
         </div>
         <div>
-          <div className="grid sms:grid-cols-1 md:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 py-10 mx-auto xl:w-7/12 md:w-11/12 sm:w-11/12">
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:py-10 pt-10 mx-auto xl:w-7/12 md:w-11/12 sm:w-11/12">
             {categories.map((item) => (
               <div
                 key={item.categoryId}

@@ -344,7 +344,7 @@ function GeneralSurgery() {
           Common diagnostic approaches include
         </p>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}

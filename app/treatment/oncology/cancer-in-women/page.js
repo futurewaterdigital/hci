@@ -298,14 +298,14 @@ function CancerInWomen() {
   return (
     <>
       <Banner image={data.bannerImage} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="md:container mx-auto space-y-6 md:px-6 lg:px-0">
           <H1 title={data.title} />
           <H2 title={data.description} className="text-center font-light" />
 
           {/* More Link about brain tumor */}
           <div className="my-4">
-            <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-medium">
+            <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 md:gap-y-8 gap-y-4 items-center uppercase font-medium">
               {womenCancerTypes.map((item, index) => (
                 <Link
                   key={index}
@@ -326,38 +326,35 @@ function CancerInWomen() {
               {data.breastCancerIntro}
             </p>
           </div>
-          <div className="pt-2">
+          <div className="pt-2 px-4">
             {data.causes.map((cause, index) => (
               <div key={index}>
                 <H3
                   title={cause.heading}
                   className="text-2xl text-center font-medium text-black mb-2"
                 />
-                <p className="text-gray-600 text-lg mb-4 font-light">
+                <p className="text-gray-600 text-lg mb-4 font-light text-center">
                   {cause.description}
                 </p>
-                <div className="grid grid-cols-5 gap-6">
+
+                <div className="flex flex-col lg:flex-row flex-wrap lg:flex-nowrap gap-6 items-stretch">
                   {cause.aneurysmSymptoms.map((symptom, index) => (
                     <div
                       key={index}
-                      className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+                      className="bg-white rounded-lg shadow-md p-6 border border-gray-200 w-full lg:w-auto flex-1">
                       <h4 className="text-lg text-center font-medium text-[#0E56A0] mb-2">
                         {symptom.title}
                       </h4>
-                      <p className="text-gray-600 text-center  mb-4 font-light">
+                      <p className="text-gray-600 text-center mb-4 font-light">
                         {symptom.description}
                       </p>
                     </div>
                   ))}
                 </div>
-                {/* <DataLists
-                divClass="space-y-4 mb-8"
-                data={cause.aneurysmSymptoms}
-                ulClass="list-disc pl-5 space-y-2"
-              /> */}
               </div>
             ))}
           </div>
+
           <div className="grid grid-cols-1 gap-6 pt-8 mb-8">
             <div>
               {/* <DataLists
@@ -371,7 +368,7 @@ function CancerInWomen() {
                 titleCss="text-black font-medium text-start text-2xl mb-2"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
             </div>
             <div>
@@ -381,7 +378,7 @@ function CancerInWomen() {
                 titleCss="text-black font-medium text-start text-2xl mb-2"
                 header=""
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
 
               <div className="mt-4 text-start">
@@ -390,41 +387,42 @@ function CancerInWomen() {
             </div>
           </div>
 
-          <div className="mb-8">
-            <div className="">
-              {data.treatments.map((treatment, index) => (
-                <div key={index} className="">
-                  <H3
-                    title={treatment.heading}
-                    className="text-2xl text-center font-medium mb-2"
-                  />
-                  <p className="text-gray-600 text-lg mb-4 font-light">
-                    {treatment.description}
-                  </p>
-                  <div
-                    className={`grid grid-cols-${treatment.aneurysmSymptoms.length} gap-6 `}>
-                    {treatment.aneurysmSymptoms.map((item, idx) => (
-                      <div
-                        key={idx}
-                        className="text-gray-600  border p-4 rounded-md shadow-md space-y-2">
-                        {item.title && (
-                          <span className="font-medium text-hciPrimary">
-                            {item.title}:{" "}
-                          </span>
-                        )}
-                        <p
-                          className="text-gray-600 font-light"
-                          dangerouslySetInnerHTML={{
-                            __html: item.description.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br/> <br/>"),
-                          }}
-                        ></p>
-                      </div>
-                    ))}
-                  </div>
+          <div className="mb-8 px-4">
+            {data.treatments.map((treatment, index) => (
+              <div key={index} className="mb-10">
+                <H3
+                  title={treatment.heading}
+                  className="text-2xl text-center font-medium mb-2"
+                />
+                <p className="text-gray-600 text-lg mb-4 font-light text-center">
+                  {treatment.description}
+                </p>
+
+                <div className="flex flex-col lg:flex-row flex-wrap lg:flex-nowrap gap-6 items-stretch">
+                  {treatment.aneurysmSymptoms.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="text-gray-600 border p-4 rounded-md shadow-md space-y-2 w-full lg:w-auto flex-1">
+                      {item.title && (
+                        <span className="font-medium text-hciPrimary">
+                          {item.title}:{" "}
+                        </span>
+                      )}
+                      <p
+                        className="text-gray-600 font-light"
+                        dangerouslySetInnerHTML={{
+                          __html: item.description
+                            .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+                            .replace(/\n/g, "<br/> <br/>"),
+                        }}
+                      ></p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
+
 
           <div className="grid grid-cols-1 gap-6">
             <DataBoxes
@@ -433,7 +431,7 @@ function CancerInWomen() {
               titleCss="text-black text-2xl mb-5 font-medium text-center"
               header=""
               data={data.advantages}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
           </div>
 

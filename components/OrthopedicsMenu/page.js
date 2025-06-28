@@ -51,7 +51,7 @@ function Menu() {
 
   return (
     <div className="container mx-auto space-y-8">
-      <div className="flex gap-8 items-center justify-center uppercase font-semibold ">
+      <div className="flex flex-wrap md:gap-8 gap-6 items-center justify-center uppercase font-semibold ">
         {mainOrtho.map((item, index) => (
           <Link
             key={index}

@@ -445,14 +445,14 @@ function page() {
       <div className="relative">
         <Banner image={bannerImage} />
       </div>
-      <div className="container mx-auto p-6">
-        <section className="relative py-8">
-          <div className="absolute inset-0 flex items-center justify-center">
+      <div className="md:container mx-auto px-4">
+        <div className="relative py-4">
+          <div className=" flex items-center justify-center">
             <H1 title="Cost Comparison" />
           </div>
-        </section>
+        </div>
 
-        <section className="container mx-auto px-6">
+        <section className="md:container mx-auto md:px-6">
           <p className="mb-8 font-light">
             Value based medicine and treatment is a very compelling reason why
             people are travelling abroad to avail the best medical facilities at

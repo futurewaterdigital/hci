@@ -290,8 +290,8 @@ function LungCancer() {
   return (
     <>
       <Banner image={data.bannerImage} />
-      <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
+      <div className="relative mx-auto px-4 md:px-8">
+        <div className="lg:container mx-auto space-y-6 ">
           <H1 title={data.title} />
           <div className="mt-6">
             <p className="text-gray-600  font-light">{data.description}</p>

@@ -337,7 +337,7 @@ function GeneralSurgery() {
         />
         <p className="font-light">{data.overview}</p>
 
-        <div className="grid grid-cols-2 gap-4 pt-12">
+        <div className="grid md:grid-cols-2 gap-4 pt-12">
           <div>
             <H2
               title="There are two main Types of Gastroenteritis"
@@ -368,7 +368,7 @@ function GeneralSurgery() {
         </p>
         <div className="grid grid-cols-1 gap-4">
           <DataLists
-            divClass="grid grid-cols-2 gap-4"
+            divClass="grid md:grid-cols-2 gap-4"
             // key={index}
             // desc={data.complications[0].description}
             data={data.data_2}
@@ -387,12 +387,12 @@ function GeneralSurgery() {
         </p>
         <div className="mb-8 space-y-4">
           <DataLists
-            divClass="grid grid-cols-2 gap-4"
+            divClass="grid md:grid-cols-2 gap-4"
             // key={index}
             // desc={data.complications[0].description}
             data={data.data_10}
             ulClass="list-disc list-outside"
-          // boxClass="grid grid-cols-2"
+          // boxClass="grid md:grid-cols-2"
           />
 
         
@@ -434,7 +434,7 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.complications}
               ulClass="list-disc list-outside"
-            // boxClass="grid grid-cols-2"
+            // boxClass="grid md:grid-cols-2"
             />
           </div>
         </div>

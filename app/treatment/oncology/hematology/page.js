@@ -282,7 +282,7 @@ function Hematology() {
   return (
     <>
       <Banner image={data.bannerImage} />
-      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="md:container relative mx-auto px-4 sm:px-6 lg:px-8">
         <H1 title={data.title} />
         <p className="text-gray-600 font-light">{data.description}</p>
 
@@ -377,7 +377,7 @@ function Hematology() {
                 title=""
                 header=""
                 data={data.causes}
-                myclass="grid grid-cols-2 gap-2"
+                myclass="grid md:grid-cols-2 gap-2"
               />
             </div>
             <div className="mt-4 text-start">
@@ -395,7 +395,7 @@ function Hematology() {
                 title=""
                 header=""
                 data={data.diagnosis}
-                myclass="grid grid-cols-2 gap-2"
+                myclass="grid md:grid-cols-2 gap-2"
               />
             </div>
             <div className="mt-4 text-start">

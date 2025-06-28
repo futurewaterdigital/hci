@@ -382,8 +382,8 @@ function AdvancedRecurrentCancers() {
   return (
     <>
       <Banner image={data.bannerImage} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:container mx-auto space-y-6 px-6 lg:px-0">
+      <div className="max-w-7xl mx-auto px-4  md:px-8">
+        <div className="lg:container mx-auto space-y-6 ">
           <H1 title={data.title} />
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">
             {data.description}{" "}
@@ -393,39 +393,34 @@ function AdvancedRecurrentCancers() {
             <strong className="font-medium"> Advanced </strong> refers to a cancer that has spread beyond its primary site to other organs (metastasis), or a cancer that has recurred after initial treatment. <strong className="font-medium"> Breast cancer</strong>, along with cancers of the <strong className="font-medium"> lung, liver</strong> , and <strong className="font-medium"> cervix</strong>, are among the most common cancers diagnosed at advanced stages.
           </p>
 
-          <div className="flex gap-4">
-            <div>
-              <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-medium">
-                The causes and challenges faced for such cancers are primarily
-                due to the following reasons:
+          <div className="flex flex-col sm:flex-nowrap sm:flex-row sm:items-start gap-6">
+            <div className="md:w-1/3">
+              <p className="mt-4 text-gray-600 text-start font-medium">
+                The causes and challenges faced for such cancers are primarily due to the following reasons:
               </p>
               <div className="space-y-2 mt-4">
-                <div className="text-gray-600 font-light flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
-                  <span>Lack of Awareness</span>
-                </div>
-                <div className="text-gray-600 font-light flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
-                  <span>Late Diagnosis</span>
-                </div>
-                <div className="text-gray-600 font-light flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
-                  <span>Access to Healthcare</span>
-                </div>
-                <div className="text-gray-600 font-light flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
-                  <span>Access to Newer Technologies and Molecules</span>
-                </div>
-                <div className="text-gray-600 font-light flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
-                  <span>Economic Barriers</span>
-                </div>
+                {[
+                  'Lack of Awareness',
+                  'Late Diagnosis',
+                  'Access to Healthcare',
+                  'Access to Newer Technologies and Molecules',
+                  'Economic Barriers',
+                ].map((item, idx) => (
+                  <div key={idx} className="text-gray-600 font-light flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-[#D84498]"></div>
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
-            <img
-              src="/oncology/AdvancedRecurrent2.png"
-              alt="advanced-recurrent-cancers"
-            />
+
+            <div className=" flex justify-center items-center">
+              <img
+                src="/oncology/AdvancedRecurrent2.png"
+                alt="advanced-recurrent-cancers"
+                className="w-full object-contain"
+              />
+            </div>
           </div>
 
           <p className="mt-4 text-gray-600 text-start max-w-7xl mx-auto font-light">

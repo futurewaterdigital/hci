@@ -266,7 +266,7 @@ function GeneralSurgery() {
           The exact cause of rheumatoid arthritis remains unclear, but several
           factors are believed to contribute to its development:
         </p>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-4 gap-4">
           {data.causes.map((item, index) => (
             <TextComponent
               key={index}
@@ -291,7 +291,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -303,7 +303,7 @@ function GeneralSurgery() {
                 textCss="font-light py-4"
                 titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLinks head={data.title} />
             </div>

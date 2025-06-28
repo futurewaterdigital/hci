@@ -12,7 +12,7 @@ function Box({
   textCss,
 }) {
   return (
-    <div className="space-y-0">
+    <div className="md:space-y-4">
       {title && (
         <h2
           className={`${titleCss ? titleCss : "text-2xl font-bold text-center text-black"
@@ -41,7 +41,7 @@ function Box({
           );
 
           return (
-            <div className={`${items.bgColor} p-4 rounded`} key={index}>
+            <div className={`${items.bgColor} md:p-4 p-2 rounded`} key={index}>
               <h3 className="font-medium">{items.category}</h3>
               <div
                 className="font-light"

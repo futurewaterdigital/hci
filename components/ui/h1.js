@@ -31,7 +31,7 @@ import React from 'react';
 
 function H1({ title, className }) {
   return (
-    <h1 className={`w-full ${className ? className : 'font-medium text-[#D84598] text-center mt-8 text-5xl my-12'}`}>
+    <h1 className={`w-full ${className ? className : 'font-medium text-[#D84598] text-center md:mt-8 md:text-5xl text-3xl md:my-10 my-4'}`}>
       {/* {formatTitle(title)} */}
       {title}
     </h1>

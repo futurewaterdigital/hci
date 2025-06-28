@@ -241,19 +241,19 @@ function GeneralSurgery() {
     <>
       <Banner image={data.bannerImage} />
       <div className="lg:container mx-auto space-y-4 px-6 lg:px-0">
-        
+
         <H1 title={data.title} />
         <p dangerouslySetInnerHTML={{ __html: data.description }} className="text-start font-light" />
         <p className="font-light">{data.overview}</p>
 
-       
+
         <H2 title="Causes" className="font-medium mb-4 text-center text-2xl" />
         <p className="font-light">
           The exact cause of UC remains unknown, but it is believed to result
           from a combination of genetic, environmental, and immune system
           factors:
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
@@ -264,23 +264,23 @@ function GeneralSurgery() {
           ))}
         </div>
         <CausesKnowMore title={data.title} />
-        
+
         <H2 title="Symptoms" className="font-medium mb-4 text-center text-2xl pt-12" />
         <div className="mb-8">
           <DataLists
-            divClass="grid grid-cols-3 gap-4"
+            divClass="grid md:grid-cols-3 gap-4"
             // key={index}
             // desc={data.complications[0].description}
             data={data.data_1}
             ulClass="list-disc list-outside"
-            // boxClass="grid grid-cols-2"
+          // boxClass="grid grid-cols-2"
           />
           <KnowMore title={data.title} />
-      
+
         </div>
 
-        <div className="grid grid-cols-1 gap-4">
-         
+        <div className="grid md:grid-cols-1 gap-4">
+
           <div>
             <DataBoxes
               title="Diagnosis"
@@ -289,7 +289,7 @@ function GeneralSurgery() {
               textCss="font-light py-4"
               titleCss="text-black font-medium text-center text-2xl py-4"
               data={data.diagnosis}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
           </div>
           <IssuesLinks head={data.title} />
@@ -308,7 +308,7 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.complications}
               ulClass="list-disc list-outside"
-              // boxClass="grid grid-cols-2"
+            // boxClass="grid grid-cols-2"
             />
           </div>
           {/* <H2

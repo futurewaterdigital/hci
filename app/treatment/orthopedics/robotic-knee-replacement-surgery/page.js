@@ -290,7 +290,7 @@ function GeneralSurgery() {
           Knee replacement surgery is typically recommended for patients
           experiencing joint damage caused by:
         </p>
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid md:grid-cols-5 gap-4">
           {data.causes.map((item, index) => (
             <TextComponent
               key={index}
@@ -315,7 +315,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -327,7 +327,7 @@ function GeneralSurgery() {
                 header=""
                 titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLinks head={data.title} />
             </div>
@@ -358,7 +358,7 @@ function GeneralSurgery() {
         />
         <div>
           {/* First two items */}
-          <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
             {data.DataSurgery.DataLists.slice(0, 2).map((item, index) => (
               <TextComponent
                 key={index}
@@ -370,7 +370,7 @@ function GeneralSurgery() {
           </div>
 
           {/* Remaining items */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-4">
             {data.DataSurgery.DataLists.slice(2).map((item, index) => (
               <TextComponent
                 key={`remaining-${index}`}
@@ -386,12 +386,12 @@ function GeneralSurgery() {
             title="Benefits of Robotic Knee Replacement"
             className="text-2xl font-medium mb-4 text-center"
           />
-          <div className="flex justify-center items-center gap-20">
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+          <div className="flex flex-col md:flex-row md:flex-nowrap justify-center items-center md:gap-20">
+            <div className="w-full md:w-1/2 space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {data.benefits.slice(0, 4).map((item, index) => (
                   <TextComponent
-                    key={`remaining-${index}`}
+                    key={`benefit-${index}`}
                     title={item.title}
                     description={item.description}
                     boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
@@ -404,17 +404,18 @@ function GeneralSurgery() {
                     key={`remaining-${index}`}
                     title={item.title}
                     description={item.description}
-                    boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center"
+                    boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
                   />
                 ))}
               </div>
             </div>
-            <img
-              src="/orthopaedics/joint_1.svg"
-              alt="Benefits of Robotic Knee Replacement"
-              className="w-96 h-96"
-            />
-
+            <div className="w-1/2 md:pt-0 pt-12 ">
+              <img
+                src="/orthopaedics/joint_1.svg"
+                alt="Benefits of Robotic Knee Replacement"
+                className=""
+              />
+              </div>
           </div>
         </div>
         <div className="space-y-4">
@@ -426,7 +427,7 @@ function GeneralSurgery() {
             Consult a doctor if you experience:
           </p>
           <div className="space-y-4">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
@@ -436,7 +437,7 @@ function GeneralSurgery() {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}

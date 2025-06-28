@@ -338,12 +338,12 @@ function GeneralSurgery() {
         />
         <div className="mb-8">
           <DataLists
-            divClass="grid grid-cols-3 gap-4"
+            divClass="grid md:grid-cols-3 gap-4"
             // key={index}
             // desc={data.complications[0].description}
             data={data.data_1}
             ulClass="list-disc list-outside"
-            // boxClass="grid grid-cols-2"
+            // boxClass="grid md:grid-cols-2"
           />
         </div>
         <KnowMore title={data.title} />
@@ -357,9 +357,9 @@ function GeneralSurgery() {
           occurs when the lower esophageal sphincter does not close properly,
           allowing stomach contents to travel back into the esophagus.
         </p>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid md:grid-cols-1 gap-4">
           <DataLists
-            divClass="grid grid-cols-2 gap-4"
+            divClass="grid md:grid-cols-2 gap-4"
             // key={index}
             // desc={data.complications[0].description}
             data={data.data_2}
@@ -369,7 +369,7 @@ function GeneralSurgery() {
           <CausesKnowMore title={data.title} />
         </div>
 
-        <div className="grid grid-cols-1 gap-4 pt-8">
+        <div className="grid md:grid-cols-1 gap-4 pt-8">
           <div>
             <DataBoxes
               title="Diagnosis"
@@ -378,7 +378,7 @@ function GeneralSurgery() {
               titleCss="text-black font-medium text-center text-2xl"
               textCss="font-light py-4"
               data={data.diagnosis}
-              myclass="grid grid-cols-1"
+              myclass="grid md:grid-cols-1"
             />
           </div>
           <IssuesLinks head={data.title} />
@@ -397,7 +397,7 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.complications}
               ulClass="list-disc list-outside"
-              // boxClass="grid grid-cols-2"
+              // boxClass="grid md:grid-cols-2"
             />
           </div>
 
@@ -412,7 +412,7 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.data_3}
               ulClass="list-disc list-outside"
-              // boxClass="grid grid-cols-2"
+              // boxClass="grid md:grid-cols-2"
             />
           </div>
 

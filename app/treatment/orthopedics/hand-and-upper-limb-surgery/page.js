@@ -254,7 +254,7 @@ function GeneralSurgery() {
           Several conditions and injuries may require hand and upper limb
           surgery. These include:
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.causes.slice(0, 2).map((item, index) => (
             <TextComponent
               key={index}
@@ -264,7 +264,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {data.causes.slice(2, 5).map((item, index) => (
             <TextComponent
               key={index}
@@ -274,7 +274,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.causes.slice(5, 7).map((item, index) => (
             <TextComponent
               key={index}
@@ -296,7 +296,7 @@ function GeneralSurgery() {
                 textCss="font-light py-4"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -308,7 +308,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-xl"
                 textCss="font-light py-4"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLinks head={data.title} />
             </div>
@@ -341,7 +341,7 @@ function GeneralSurgery() {
             mobility. Key aspects include:
           </p>
           <div className="space-y-4">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
@@ -351,7 +351,7 @@ function GeneralSurgery() {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}

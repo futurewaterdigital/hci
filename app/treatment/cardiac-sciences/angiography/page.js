@@ -173,8 +173,8 @@ function page() {
   return (
     <>
       <Banner image={bannerImage} />
-      <div className="container mx-auto space-y-8 mt-8">
-        <div className="container mx-auto space-y-2 px-6">
+      <div className="md:container mx-auto space-y-6 mt-8 ">
+        <div className="md:container mx-auto space-y-2 md:px-6 px-4">
           <H1 title="Angiography" />
           <p className="text-start font-light">
             An angiogram is a minimally invasive diagnostic procedure used to
@@ -185,9 +185,9 @@ function page() {
           </p>
         </div>
         {/* <!-- Content --> */}
-        <div className="container mx-auto">
+        <div className="md:container mx-auto">
           {/* <!-- Content Section --> */}
-          <section className="container mx-auto px-6">
+          <section className="md:container mx-auto md:px-6 px-4">
             <p className="mb-8 font-light">
               Angiograms are instrumental in diagnosing and planning treatment
               for conditions such as:
@@ -201,7 +201,7 @@ function page() {
               text="Angiography is typically performed to investigate and address issues caused by:"
               header=""
               textCss="font-light py-4"
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2 grid-cols-1"
               titleCss="text-2xl font-bold text-center mt-8"
             />
             <div className="grid grid-cols-1 gap-4 mt-8">
@@ -210,7 +210,7 @@ function page() {
                 text="Healthcare providers may recommend angiography if you experience symptoms that suggest blood vessel problems, including:"
                 header=""
                 data={symptomsData}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2 grid-cols-1"
                 textCss="font-light py-4"
                 titleCss="text-2xl font-bold text-center mt-8"
               />
@@ -219,7 +219,7 @@ function page() {
                 text="Angiography is a definitive diagnostic tool used to identify blockages, abnormalities, or damages in blood vessels. The procedure includes:"
                 header=""
                 data={diagnosisData}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2 grid-cols-1"
                 textCss="font-light py-4"
                 titleCss="text-2xl font-bold text-center mt-8"
               />

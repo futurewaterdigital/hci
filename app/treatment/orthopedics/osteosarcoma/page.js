@@ -355,7 +355,7 @@ function GeneralSurgery() {
           Pediatric orthopedic conditions can develop from multiple factors,
           including:
         </p> */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {data.data1.map((item, index) => (
             <TextComponent
               key={index}
@@ -376,7 +376,7 @@ function GeneralSurgery() {
         <p className="font-light text-center" text="">
           Osteosarcoma can be classified based on how aggressively it grows:
         </p>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {data.data2.map((item, index) => (
             <TextComponent
               key={index}
@@ -394,7 +394,7 @@ function GeneralSurgery() {
         <p className="font-light text-center" text="">
           Common subtypes include:
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.data3.map((item, index) => (
             <TextComponent
               key={index}
@@ -410,7 +410,7 @@ function GeneralSurgery() {
           increase the risk:
         </p>
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-4 gap-4">
           {data.causes.map((item, index) => (
             <TextComponent
               key={index}
@@ -436,7 +436,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -448,7 +448,7 @@ function GeneralSurgery() {
                 textCss="font-light py-4"
                 titleCss="text-black font-medium text-center text-xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLinks head={data.title} />
             </div>
@@ -465,7 +465,7 @@ function GeneralSurgery() {
             chemotherapy, and sometimes radiation. The goal is to remove the
             tumor, prevent spread, and preserve function.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-4">
             <DataLists
               //   desc="In limb-salvage surgery, the tumor and some healthy bone are removed while preserving the limb. Amputation is necessary when the tumor is large or the limb can’t be saved, and the patient will receive a prosthetic limb."
               data={data.treatment_data}
@@ -501,7 +501,7 @@ function GeneralSurgery() {
         <p className="font-light text-start" text="">
           The outlook for osteosarcoma depends on several factors:
         </p>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {data.data4.map((item, index) => (
             <TextComponent
               key={index}
@@ -524,7 +524,7 @@ function GeneralSurgery() {
             issues and improve outcomes. Some key recommendations include:
           </p>
           <div className="space-y-4">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
@@ -534,7 +534,7 @@ function GeneralSurgery() {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
@@ -553,7 +553,7 @@ function GeneralSurgery() {
             Consult a doctor if your child experiences any of the following:
           </p>
           <div className="space-y-4">
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid md:grid-cols-5 gap-4">
               {data.consideration_1.slice(0).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
@@ -563,7 +563,7 @@ function GeneralSurgery() {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration_1.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}

@@ -254,12 +254,12 @@ function GeneralSurgery() {
         />
         <div className="mb-8">
           <DataLists
-            divClass="grid grid-cols-2 gap-4"
+            divClass="grid md:grid-cols-2 gap-4"
             // key={index}
             // desc={data.complications[0].description}
             data={data.data_1}
             ulClass="list-disc list-outside"
-            // boxClass="grid grid-cols-2"
+            // boxClass="grid md:grid-cols-2"
           />
         </div>
 
@@ -271,7 +271,7 @@ function GeneralSurgery() {
           While the exact cause of gallstones isn’t fully understood, several
           factors may increase the risk:
         </p> */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.section_1.map((item, index) => (
             <TextComponent
               key={index}
@@ -291,7 +291,7 @@ function GeneralSurgery() {
               titleCss="text-black font-medium text-center text-2xl py-4"
               header=""
               data={data.symptoms}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
             <KnowMore title={data.title} />
           </div>
@@ -303,7 +303,7 @@ function GeneralSurgery() {
               textCss="font-light py-4"
               titleCss="text-black font-medium text-center text-2xl"
               data={data.diagnosis}
-              myclass="grid grid-cols-2"
+              myclass="grid md:grid-cols-2"
             />
           </div>
           <IssuesLinks head={data.title} />
@@ -325,7 +325,7 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.complications}
               ulClass="list-disc list-outside"
-              // boxClass="grid grid-cols-2"
+              // boxClass="grid md:grid-cols-2"
             />
           </div>
           {/* <H2
@@ -379,7 +379,7 @@ function GeneralSurgery() {
               // desc={data.complications[0].description}
               data={data.data_1}
               ulClass="list-none list-outside"
-              // boxClass="grid grid-cols-2"
+              // boxClass="grid md:grid-cols-2"
             />
           </div> */}
         </div>

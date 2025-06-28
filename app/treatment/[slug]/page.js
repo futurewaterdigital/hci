@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import dynamic from "next/dynamic"; // Lazy load Footer
+import dynamic from "next/dynamic";
 import Header from "../../../components/Header/page";
 import Banner from "../../../components/Treatment/Banner/page";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -15,9 +15,9 @@ import GastroenterologyMenu from "../../../components/GastroenterologyMenu/page"
 import OncologyMenu from "../../../components/OncologyMenu/page";
 import H1 from "@/components/ui/h1";
 import TreatmentDoctors from "@/components/TreatmentDoctors";
-// Dynamically import Footer to lazy-load
+
 const Footer = dynamic(() => import("../../../components/Footer/page"), {
-  loading: () => <div className="bg-gray-300 h-24 w-full"></div>, // Placeholder while Footer is loading
+  loading: () => <div className="bg-gray-300 h-24 w-full"></div>,
 });
 
 export default function City({ params }) {
@@ -31,20 +31,20 @@ export default function City({ params }) {
   const cache = useRef(new Map());
   const doctorsSectionRef = useRef(null);
 
-  // Handle scrolling when the query parameter is present
   useEffect(() => {
-    const scrollTo = searchParams.get('scrollTo');
-    if (scrollTo === 'doctors' && !loading) {
+    const scrollTo = searchParams.get("scrollTo");
+    if (scrollTo === "doctors" && !loading) {
       const attemptScroll = () => {
-        const doctorsSection = document.getElementById('doctors');
+        const doctorsSection = document.getElementById("doctors");
         if (doctorsSection) {
-          const yOffset = -100; // Adjust this value based on your header height
-          const y = doctorsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
+          const yOffset = -100;
+          const y =
+            doctorsSection.getBoundingClientRect().top +
+            window.pageYOffset +
+            yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
         }
       };
-
-      // Try multiple times to ensure the section is found
       attemptScroll();
       setTimeout(attemptScroll, 100);
       setTimeout(attemptScroll, 500);
@@ -53,7 +53,6 @@ export default function City({ params }) {
   }, [searchParams, loading]);
 
   useEffect(() => {
-    // Check if data is already cached to prevent redundant API calls
     if (cache.current.has(selectedCategory)) {
       setNetworks(cache.current.get(selectedCategory));
       setLoading(false);
@@ -72,13 +71,11 @@ export default function City({ params }) {
       })
       .then((data) => {
         if (data.length > 0) {
-          // Sort the data if necessary
           const sortedData = data.sort((a, b) =>
             a.title.rendered.localeCompare(b.title.rendered)
           );
           setNetworks(sortedData);
-          //console.log(object)
-          cache.current.set(selectedCategory, sortedData); // Cache the response
+          cache.current.set(selectedCategory, sortedData);
           setNoData(null);
         } else {
           setNoData("No Data Available");
@@ -96,47 +93,42 @@ export default function City({ params }) {
     <>
       <Header />
 
-      {error && <p className="text-red-500">{error}</p>}
-      {noData && <p className="text-gray-500">{noData}</p>}
+      {error && <p className="text-red-500 text-center mt-4">{error}</p>}
+      {noData && <p className="text-gray-500 text-center mt-4">{noData}</p>}
 
       {loading ? (
-        // Skeleton Loader
-        <>
-          <div className="animate-pulse">
-            <div className="relative h-screen bg-gray-300"></div>
-            <div className="w-9/12 mx-auto mt-10">
-              <div className="h-10 bg-gray-300 w-full mb-4"></div>
-              <div className="h-6 bg-gray-300 w-full mb-2"></div>
-              <div className="h-6 bg-gray-300 w-3/4 mb-2"></div>
-              <div className="h-6 bg-gray-300 w-1/2 mb-2"></div>
-            </div>
+        <div className="animate-pulse">
+          <div className="relative h-[300px] sm:h-[400px] md:h-screen bg-gray-300"></div>
+          <div className="w-full max-w-screen-md mx-auto mt-10 px-4 space-y-4">
+            <div className="h-10 bg-gray-300 w-full"></div>
+            <div className="h-6 bg-gray-300 w-full"></div>
+            <div className="h-6 bg-gray-300 w-3/4"></div>
+            <div className="h-6 bg-gray-300 w-1/2"></div>
           </div>
-        </>
+        </div>
       ) : (
-        // Actual Content
         <>
           {network.map((items, index) => (
             <React.Fragment key={index}>
               {items.acf?.banner?.url ? (
-                // Render Banner component with the banner URL
                 <Banner city={params.slug} banner={items.acf.banner.url} />
               ) : (
-                // Skeleton Placeholder for banner if no URL
-                <div className="relative h-screen bg-gray-300 animate-pulse"></div>
+                <div className="relative h-[300px] sm:h-[400px] md:h-screen bg-gray-300 animate-pulse"></div>
               )}
 
-              <div className="w-9/12 mx-auto py-4">
-                <div className="">
-                  <H1 title={items.title.rendered} />
-                </div>
+              <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 py-4">
+                <H1 title={items.title.rendered} />
                 <div
-                  dangerouslySetInnerHTML={{ __html: items.content.rendered }}
-                  className="font-light"
+                  className="font-light prose prose-sm sm:prose md:prose-lg max-w-none"
+                  dangerouslySetInnerHTML={{
+                    __html: items.content.rendered,
+                  }}
                 />
               </div>
             </React.Fragment>
           ))}
-          <div className="container mx-auto text-center pt-4 space-y-8">
+
+          <div className="md:container mx-auto text-center pt-4 px-4 md:space-y-8 ">
             {pathname === "/treatment/cardiac-sciences" && <CardioMenu />}
             {pathname === "/treatment/orthopedics" && <OrthopedicsMenu />}
             {pathname === "/treatment/neuro-sciences" && <NeuroMenu />}
@@ -146,12 +138,23 @@ export default function City({ params }) {
               <GastroenterologyMenu />
             )}
           </div>
-          <div id="doctors" ref={doctorsSectionRef} className="scroll-mt-24">
+
+          <div
+            id="doctors"
+            ref={doctorsSectionRef}
+            className="scroll-mt-24 px-4 sm:px-6 lg:px-8"
+          >
             <TreatmentDoctors pathname={pathname} paramSlug={params.slug} />
           </div>
-          <OurNetwork />
-          <Testimonials />
-          <BookNow />
+
+          <div className="px-4 sm:px-6 lg:px-8">
+            <OurNetwork />
+            <Testimonials />
+          </div>
+
+          <div className="w-full px-4 text-center mt-8">
+            <BookNow />
+          </div>
         </>
       )}
 

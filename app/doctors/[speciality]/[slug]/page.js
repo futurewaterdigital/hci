@@ -7,6 +7,37 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import ReviewForm from '@/components/ReviewForm';
 import ReviewList from '@/components/ReviewList';
 
+function DoctorSkeleton() {
+  return (
+    <div className="bg-[#F1F8FF]">
+      <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center animate-pulse">
+        <div className="flex flex-col items-center">
+          <div className="h-[300px] w-[300px] bg-gray-300 rounded-lg"></div>
+          <div className="w-40 h-10 bg-gray-300 rounded-xl mt-4"></div>
+        </div>
+
+        <div className="flex-1 ml-6 space-y-4">
+          <div className="h-8 bg-gray-300 rounded w-2/3"></div>
+          <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+          <div className="h-4 bg-gray-200 rounded w-1/3"></div>
+
+          <div className="h-4 bg-gray-200 rounded w-1/4 mt-4"></div>
+          <div className="flex mt-2 space-x-2">
+            {Array.from({ length: 5 }).map((_, idx) => (
+              <div key={idx} className="w-6 h-6 bg-gray-300 rounded"></div>
+            ))}
+          </div>
+        </div>
+
+        <div className="hidden md:flex flex-col items-center h-[360px] justify-between ml-6">
+          <div className="w-[200px] h-[200px] bg-gray-300 rounded-full"></div>
+          <div className="w-40 h-10 bg-gray-300 rounded-xl mt-4"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function DoctorsPage() {
   const { slug } = useParams();
   const router = useRouter();
@@ -25,8 +56,6 @@ export default function DoctorsPage() {
         if (!response.ok) throw new Error('Failed to fetch doctor');
 
         const data = await response.json();
-        console.log(data);
-        // Redirect if not featured or not verified
         if (!data.isFeatured || !data.isVerified) {
           router.push('/doctors');
           return;
@@ -75,11 +104,7 @@ export default function DoctorsPage() {
   const closeModal = () => setIsModalOpen(false);
 
   if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-      </div>
-    );
+    return <DoctorSkeleton />;
   }
 
   if (error) {
@@ -97,8 +122,8 @@ export default function DoctorsPage() {
   return (
     <>
       <div className='bg-[#F1F8FF]'>
-        <div className="container mx-auto px-6 p-6 flex flex-col md:flex-row items-center">
-          <div className='flex flex-col items-center'>
+        <div className="container mx-auto md:px-6 md:p-6 py-10 gap-6 flex flex-col md:flex-row items-center">
+          <div className='flex flex-col items-center mb-10'>
             <img alt={doctors.name} className="mr-6" src={doctors.image} height={300} width={300} />
             <button className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4">
               ENQUIRE NOW
@@ -116,53 +141,32 @@ export default function DoctorsPage() {
               <strong className='text-hciSecondary'>Years of Experience</strong><br />
               <span className='font-light text-lg'>{doctors.experience}</span>
             </p>
-            
-            
-            {/* temparory rating */}
 
-             {doctors.rating > 0 && (
+            {doctors.rating > 0 && (
               <div className="flex items-center mt-2">
-                <div className="flex ml-0 space-x-2"><strong className='text-xl font-medium '>{doctors.rating}</strong>
+                <div className="flex ml-0 space-x-2">
+                  <strong className='text-xl font-medium '>{doctors.rating}</strong>
                   <div className='flex'>
-                  {Array.from({ length: 5 }).map((_, index) => {
-                    if (index < Math.floor(doctors.rating)) {
-                      return <IoStarSharp key={index} className='text-hciSecondary text-2xl' />;
-                    }
-                    if (index < Math.floor(doctors.rating) + 0.5 && doctors.rating % 1 >= 0.5) {
-                      return <IoStarHalfSharp key={index} className='text-hciSecondary text-2xl' />;
-                    }
-                    return <IoStarOutline key={index} className='text-hciSecondary text-2xl' />;
-                  })}
-                    </div>
+                    {Array.from({ length: 5 }).map((_, index) => {
+                      if (index < Math.floor(doctors.rating)) {
+                        return <IoStarSharp key={index} className='text-hciSecondary text-2xl' />;
+                      }
+                      if (index < Math.floor(doctors.rating) + 0.5 && doctors.rating % 1 >= 0.5) {
+                        return <IoStarHalfSharp key={index} className='text-hciSecondary text-2xl' />;
+                      }
+                      return <IoStarOutline key={index} className='text-hciSecondary text-2xl' />;
+                    })}
+                  </div>
                 </div>
                 <span className="text-gray-600 ml-2 font-light">({doctors.reviews} reviews)</span>
               </div>
             )}
-
-            {/* temparory rating end here */}
-
-            {/* {reviews.total > 0 && (
-              <div className="flex items-center mt-2">
-                <div className="flex ml-2">
-                  {Array.from({ length: 5 }).map((_, index) => {
-                    if (index < Math.floor(reviews.total)) {
-                      return <IoStarSharp key={index} className='text-hciSecondary text-2xl' />;
-                    }
-                    if (index < Math.floor(reviews.total) + 0.5 && reviews.total % 1 >= 0.5) {
-                      return <IoStarHalfSharp key={index} className='text-hciSecondary text-2xl' />;
-                    }
-                    return <IoStarOutline key={index} className='text-hciSecondary text-2xl' />;
-                  })}
-                </div>
-                <span className="text-gray-600 ml-2 font-light">({reviews.total} reviews)</span>
-              </div>
-            )} */}
           </div>
 
-          <div className="card mt-8 md:mt-0 md:ml-6 flex flex-col items-center h-[360px] justify-between">
+          <div className="card mt-8 md:mt-0 md:ml-6 flex flex-col items-center md:h-[320px] h-[300px] justify-between">
             {doctors.isVerified && (
               <div className={`card ${flipped ? 'flipped' : ''}`}>
-                <h2 className='text-hciPrimary text-2xl font-bold mb-4'>Accredited by HCI</h2>
+                <h2 className='text-hciPrimary text-2xl font-bold mb-8'>Accredited by HCI</h2>
                 <div className="card__content text-center relative p-20 transition-transform duration-1000 text-white font-bold">
                   <div className="card__front absolute top-0 bottom-0 right-0 left-0 flex items-center justify-center">
                     <img alt="Accredited by HCI" height="200" src="/doctors/accredited.svg" width="200" />
@@ -237,7 +241,6 @@ export default function DoctorsPage() {
           <p className="text-gray-600 text-lg font-light" dangerouslySetInnerHTML={{ __html: doctors.aboutData.about }} />
         </section>
 
-        {/* Reviews Section */}
         {reviews.total > 0 && (
           <section className="mt-12">
             <h2 className="text-pink-500 text-2xl font-bold mb-6">Patient Reviews</h2>

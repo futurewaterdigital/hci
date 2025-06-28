@@ -47,7 +47,7 @@ function Menu() {
 
   return (
     <div className="container mx-auto space-y-8">
-      <div className="flex gap-8 items-center justify-center uppercase font-semibold ">
+      <div className="flex flex-wrap gap-6 items-center justify-center uppercase font-semibold ">
         {mainCardio.map((item, index) => (
           <Link
             key={index}
@@ -60,7 +60,7 @@ function Menu() {
       <div>
         <h2 className="font-semibold text-2xl">Other Cardiac Conditions</h2>
       </div>
-      <div className="flex flex-wrap gap-6 items-center justify-center uppercase font-semibold ">
+      <div className="flex flex-wrap gap-6 items-center justify-center uppercase font-semibold pb-6 md:pb-0 ">
         {othersCardio.map((item, index) => (
           <Link
             key={index}

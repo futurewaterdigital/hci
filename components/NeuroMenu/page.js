@@ -79,7 +79,7 @@ function Menu() {
 
   return (
     <div className="container mx-auto space-y-8">
-      <div className="flex gap-8 items-center justify-center uppercase font-semibold ">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center justify-center uppercase font-semibold px-4 py-2">
         {mainNeuro.map((item, index) => (
           <Link
             key={index}
@@ -90,6 +90,7 @@ function Menu() {
           </Link>
         ))}
       </div>
+
       <div>
         <h2 className="font-semibold text-2xl">
           Other Neurological Conditions

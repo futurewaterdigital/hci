@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaSearch } from "react-icons/fa";
+import { IoMdArrowRoundBack } from "react-icons/io";
+
 export default function DoctorsPage({ params }) {
   const [doctors, setDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -11,6 +14,7 @@ export default function DoctorsPage({ params }) {
   const [expandedDoctors, setExpandedDoctors] = useState({});
   const [title, setTitle] = useState('Our Doctors');
   const [noData, setNoData] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const slug = params.speciality;
 
@@ -44,8 +48,8 @@ export default function DoctorsPage({ params }) {
           (doc) => !(doc.isFeatured && doc.isVerified)
         );
 
-        if(filteredDoctors.length === 0){
-          setNoData(true)
+        if (filteredDoctors.length === 0) {
+          setNoData(true);
         }
 
         setDoctors(filteredDoctors);
@@ -59,6 +63,11 @@ export default function DoctorsPage({ params }) {
     fetchDoctor();
   }, [slug]);
 
+  // Reset visible count on new search
+  useEffect(() => {
+    setVisibleCount(10);
+  }, [searchTerm]);
+
   const toggleReadMore = (id) => {
     setExpandedDoctors((prev) => ({
       ...prev,
@@ -69,6 +78,19 @@ export default function DoctorsPage({ params }) {
   const loadMoreDoctors = () => {
     setVisibleCount((prevCount) => prevCount + 10);
   };
+
+  // Filtered doctors based on search term
+  const filteredDoctors = doctors.filter((doctor) => {
+    const term = searchTerm.toLowerCase();
+    const name = doctor.name.toLowerCase();
+    const qualification = doctor.qualification?.join(' ').toLowerCase() || '';
+    const about = doctor.aboutData?.about?.toLowerCase() || '';
+    return (
+      name.includes(term) ||
+      qualification.includes(term) ||
+      about.includes(term)
+    );
+  });
 
   if (loading) {
     return (
@@ -87,35 +109,60 @@ export default function DoctorsPage({ params }) {
       </div>
     );
   }
- 
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      
-      <div className="flex justify-center items-center relative">
-        <h1 className="text-3xl font-bold text-hciPrimary mb-8 text-center">{title}</h1>
-        {!noData &&
-          <div className="absolute left-0">
-            <Link href={`/treatment/${slug}`} className="text-hciSecondary font-semibold">Back to <span className='text-hciSecondary capitalize'>{slug} page</span></Link>
-          </div>}
-      </div>
-    
-     {/* No profiles available message */}
-      {!loading && doctors.length === 0 && (
-        <>
-        <div className="text-center text-gray-500 text-lg mt-10">
-            <h2 className='text-2xl font-light'>No profiles available at the moment.</h2>
-            
-            <div className="mt-12">
-          <Link href={`/treatment/${slug}`} className="text-hciSecondary font-semibold border border-hciSecondary px-4 py-2 rounded-lg">Back to <span className='text-hciSecondary capitalize'>{slug} page</span></Link>
-        </div>
+    <div className="md:max-w-7xl mx-auto px-4 py-8">
+      {/* Title */}
+      <h1 className="text-2xl sm:text-3xl font-bold text-hciPrimary text-center md:text-left">
+        {title}
+      </h1>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+        {/* Back Link (conditionally rendered) */}
+        {!noData && (
+          <div className="flex items-center gap-2 text-center md:text-left">
+            <IoMdArrowRoundBack className="text-hciSecondary text-2xl" />
+            <Link
+              href={`/treatment/${slug}`}
+              className="text-hciSecondary font-semibold text-lg"
+            >
+              Back to <span className="capitalize">{slug} page</span>
+            </Link>
           </div>
-         
-        </>
+        )}
+
+        {/* Search Input */}
+        <div className="w-full md:w-auto">
+          <div className="relative flex items-center">
+            <FaSearch className="absolute left-3 text-gray-400 text-xl" />
+            <input
+              type="text"
+              placeholder="Search doctors by name, qualification..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full md:min-w-[300px] pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-hciSecondary placeholder:text-sm"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* No search results */}
+      {!loading && filteredDoctors.length === 0 && (
+        <div className="text-center text-gray-500 text-lg mt-10">
+          <h2 className="text-2xl font-light">No doctors match your search.</h2>
+          <div className="mt-12">
+            <Link
+              href={`/treatment/${slug}`}
+              className="text-hciSecondary font-semibold border border-hciSecondary px-4 py-2 rounded-lg"
+            >
+              Back to{' '}
+              <span className="text-hciSecondary capitalize">{slug} page</span>
+            </Link>
+          </div>
+        </div>
       )}
 
-      <div className="grid grid-cols-1 gap-6">
-        {doctors.slice(0, visibleCount).map((doctor) => {
+      <div className="grid md:grid-cols-1 gap-6">
+        {filteredDoctors.slice(0, visibleCount).map((doctor) => {
           const isExpanded = expandedDoctors[doctor._id];
           const aboutText = doctor.aboutData.about;
           const shouldTruncate = aboutText.length > 300;
@@ -127,25 +174,29 @@ export default function DoctorsPage({ params }) {
           return (
             <div
               key={doctor._id}
-              className={`relative w-full flex flex-row border border-hciSecondary rounded-lg shadow-lg overflow-hidden ${
-                isExpanded ? 'h-full' : 'min-h-[300px]'
-              }`}
+              className={`relative w-full flex flex-col md:flex-row border border-hciSecondary rounded-lg shadow-lg overflow-hidden p-2 transition-all duration-300 ${isExpanded ? 'h-auto' : 'min-h-[300px]'
+                }`}
             >
-              <div className="relative w-[300px]">
+              {/* Image Section */}
+              <div className="relative md:w-[700px] h-[300px] md:h-[280px] ">
                 <Image
                   src={doctor.image || '/default-doctor.jpg'}
                   alt={doctor.name}
                   fill
-                  className="w-full h-[200px] object-cover"
+                  className="w-[200px] h-[200px]"
                 />
               </div>
-              <div className="p-4 w-[800px]">
-                <div className="flex items-start gap-2 flex-col">
-                  <h2 className="text-3xl font-bold text-hciSecondary">{doctor.name}</h2>
-                  <p className="text-hciSecondary font-semibold">
+
+              {/* Info Section */}
+              <div className="p-4 md:w-[1800px]">
+                <div className="flex flex-col gap-3">
+                  <h2 className="text-2xl md:text-3xl font-bold text-hciSecondary">
+                    {doctor.name}
+                  </h2>
+                  <p className="text-hciSecondary font-semibold text-sm md:text-base">
                     {doctor.qualification[0]?.slice(0, 100)}
                   </p>
-                  <p className="text-gray-600 font-light">
+                  <p className="text-gray-600 font-light text-sm md:text-base">
                     {displayText}
                     {shouldTruncate && (
                       <span
@@ -158,7 +209,9 @@ export default function DoctorsPage({ params }) {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center w-[200px]">
+
+              {/* Button Section */}
+              <div className="flex flex-col items-center justify-center md:w-[500px]">
                 <button className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4 hover:bg-hciSecondary hover:text-white transition-all duration-300">
                   ENQUIRE NOW
                 </button>
@@ -169,7 +222,7 @@ export default function DoctorsPage({ params }) {
       </div>
 
       {/* Load More Button */}
-      {visibleCount < doctors.length && (
+      {visibleCount < filteredDoctors.length && (
         <div className="flex justify-center mt-6">
           <button
             onClick={loadMoreDoctors}

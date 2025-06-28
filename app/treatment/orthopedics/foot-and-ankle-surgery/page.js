@@ -287,7 +287,7 @@ function GeneralSurgery() {
           Foot and ankle conditions requiring surgical intervention can arise
           from a variety of causes, including:
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.causes.slice(0, 2).map((item, index) => (
             <TextComponent
               key={index}
@@ -297,7 +297,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {data.causes.slice(2, 5).map((item, index) => (
             <TextComponent
               key={index}
@@ -307,7 +307,7 @@ function GeneralSurgery() {
             />
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {data.causes.slice(5, 7).map((item, index) => (
             <TextComponent
               key={index}
@@ -329,7 +329,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-2xl"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={data.title} />
             </div>
@@ -342,7 +342,7 @@ function GeneralSurgery() {
                 textCss="font-light py-4"
                 titleCss="text-black font-medium text-center text-2xl"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               {/* <IssuesLinks title={data.title} /> */}
               <p className="text-start text-hciPrimary underline font-semibold capitalize pt-4 text-lg">
@@ -366,7 +366,7 @@ function GeneralSurgery() {
             measures like medication, physical therapy, or orthotics have not
             provided relief. Common surgical procedures include:
           </p>
-          <div className="grid grid-cols-2 gap-4 items-stretch">
+          <div className="grid md:grid-cols-2 gap-4 items-stretch">
             {/* Left Column */}
             <div className="flex flex-col h-full">
               <DataLists data={data.complications} className="flex-1" />
@@ -403,23 +403,23 @@ function GeneralSurgery() {
             rehabilitation include:
           </p>
           <div className="space-y-4">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {data.consideration.slice(0, 3).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary md:h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {data.consideration.slice(3, 5).map((item, index) => (
                 <TextComponent
                   key={`remaining-${index}`}
                   title={item.title}
                   description={item.description}
-                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
+                  boxCss="border-hciPrimary border shadow-sm rounded-lg text-hciPrimary md:h-[100px] w-full hover:bg-hciPrimary hover:text-white flex items-center justify-center text-center"
                 />
               ))}
             </div>

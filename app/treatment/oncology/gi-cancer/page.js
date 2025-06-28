@@ -269,7 +269,7 @@ function GICancer() {
         </div>
         {/* Cancer Types Navigation */}
         <div className="my-4">
-          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 gap-y-8 items-center uppercase font-semibold">
+          <div className="max-w-8xl mx-auto flex flex-wrap justify-center gap-x-20 md:gap-y-8 gap-y-4  items-center uppercase font-semibold">
             {data.cancerTypes.map((item, index) => (
               <Link
                 key={index}
@@ -332,7 +332,7 @@ function GICancer() {
               Bowel cancer may not present symptoms in its early stages.
               However, as the cancer grows, common symptoms include:
             </p>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid md:grid-cols-2 gap-2">
               {data.causes[0].aneurysmSymptoms.map((cause, idx) => (
                 <div
                   key={idx}
@@ -363,11 +363,11 @@ function GICancer() {
               cancer, helping doctors determine the stage and plan the
               appropriate treatment.
             </p>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid md:grid-cols-2 gap-2">
               {data.diagnosis[0].aneurysmSymptoms.map((diagnosis, idx) => (
                 <div
                   key={idx}
-                  className="bg-hciSecondary text-white p-3 rounded h-24 font-light">
+                  className="bg-hciSecondary text-white p-3 rounded md:h-24 font-light">
                   <div className="font-medium">{diagnosis.title}</div>
                   <div className="font-light">{diagnosis.description}</div>
                 </div>

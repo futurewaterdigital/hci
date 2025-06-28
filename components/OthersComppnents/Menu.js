@@ -32,7 +32,7 @@ function Menu() {
 
   return (
     <div className="container mx-auto space-y-8">
-      <div className="flex gap-8 items-center justify-center uppercase font-semibold ">
+      <div className="flex flex-wrap gap-6 items-center justify-center uppercase font-semibold ">
         {mainCardio.map((item, index) => (
           <Link
             key={index}

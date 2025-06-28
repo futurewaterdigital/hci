@@ -282,7 +282,7 @@ function GeneralSurgery() {
                 titleCss="text-black font-medium text-center text-2xl mt-4"
                 header=""
                 data={data.symptoms}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <KnowMore title={title} />
             </div>
@@ -294,7 +294,7 @@ function GeneralSurgery() {
                 textCss="font-light py-2 min-h-[80px]"
                 titleCss="text-black font-medium text-center text-2xl mt-4"
                 data={data.diagnosis}
-                myclass="grid grid-cols-2"
+                myclass="grid md:grid-cols-2"
               />
               <IssuesLinks head={title} />
             </div>

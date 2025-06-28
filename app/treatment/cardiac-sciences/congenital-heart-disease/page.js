@@ -248,7 +248,7 @@ function page() {
 
 
         </div>
-        <div className="py-8">
+        <div className="md:py-8">
           <H2
             title="Diagnosis"
             className="text-center mb-4 text-2xl font-medium"
@@ -286,7 +286,7 @@ function page() {
             full recovery.
           </p>
         </div>
-        <div className="container mx-auto py-8 space-y-6">
+        <div className="container mx-auto md:py-8 py-4 space-y-6">
           <Conclusion data={footerData} />
           <FooterLinks head={title} />
           <BookButton />
