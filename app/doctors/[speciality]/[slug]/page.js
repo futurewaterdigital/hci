@@ -7,6 +7,8 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import ReviewForm from '@/components/ReviewForm';
 import ReviewList from '@/components/ReviewList';
 
+
+
 function DoctorSkeleton() {
   return (
     <div className="bg-[#F1F8FF]">
@@ -48,6 +50,13 @@ export default function DoctorsPage() {
   const [error, setError] = useState(null);
   const [flipped, setFlipped] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+const handleDoctorClick = (e) => {
+  e.preventDefault();
+  router.push("/?scrollTo=form");
+};
+
 
   useEffect(() => {
     const fetchDoctor = async () => {
@@ -125,7 +134,9 @@ export default function DoctorsPage() {
         <div className="container mx-auto md:px-6 md:p-6 py-10 gap-6 flex flex-col md:flex-row items-center">
           <div className='flex flex-col items-center mb-10'>
             <img alt={doctors.name} className="mr-6" src={doctors.image} height={300} width={300} />
-            <button className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4">
+            <button
+              onClick={handleDoctorClick}
+              className="border border-hciSecondary text-hciSecondary px-4 py-2 rounded-xl mt-4">
               ENQUIRE NOW
             </button>
           </div>

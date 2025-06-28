@@ -140,7 +140,7 @@ export default function City({ params }) {
           </div>
 
           <div
-            id="doctors"
+            id="doctors" 
             ref={doctorsSectionRef}
             className="scroll-mt-24 px-4 sm:px-6 lg:px-8"
           >

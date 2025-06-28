@@ -16,7 +16,7 @@ export default function FooterLink({ head }) {
     // Navigate using router with a query parameter
     router.push(basePath + "?scrollTo=doctors");
   };
-  const linkshead = [
+  const linkshead = [ 
     {
       text: `To Consult The Best Doctor For Treatment Of ${head}, Click Here`,
       url: `${basePath}?scrollTo=doctors`,
@@ -24,27 +24,27 @@ export default function FooterLink({ head }) {
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In India, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Bangalore, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Chennai, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Delhi, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Hyderabad, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Mumbai, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
   ];
 

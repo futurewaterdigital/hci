@@ -23,27 +23,27 @@ export default function FooterLinkThree({ head }) {
     },
     {
       text: `The Best Hospital For ${head} In India, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For ${head} In Bangalore, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For ${head} In Chennai, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For ${head} In Delhi, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For ${head} In Hyderabad, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
     {
       text: `The Best Hospital For ${head} In Mumbai, Click Here`,
-      url: "#", // Replace "#" with the actual link
+      url: "/?scrollTo=hospital", // Replace "#" with the actual link
     },
   ];
 

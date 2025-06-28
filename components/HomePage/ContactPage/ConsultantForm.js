@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { medicalConditions, countryCode } from "@/utils/data"; // Assuming you've updated the data to include hospital and doctor mappings
 import { FaFileAlt } from "react-icons/fa";
 import axios from "axios";
+import { useSearchParams } from "next/navigation";
 
 function ConsultantForm() {
   const [yourName, setYourName] = useState("");
@@ -25,6 +26,7 @@ function ConsultantForm() {
 
   const [filteredCountryCodes, setFilteredCountryCodes] = useState([]);
   const [selectedCode, setSelectedCode] = useState("+91");
+  const searchParams = useSearchParams();
 
   // Handle input change for filtering country codes
   const handleCodeInputChange = (e) => {
@@ -191,6 +193,17 @@ function ConsultantForm() {
     }
   };
 
+  useEffect(() => {
+    const scrollTo = searchParams.get("scrollTo");
+    if (scrollTo === "form") {
+      const formElement = document.getElementById("consultation-form");
+      if (formElement) {
+        formElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [searchParams]);
+
+
   // Handle change in hospital
   const handleHospitalChange = (selectedHospital) => {
     setHospital(selectedHospital);
@@ -308,7 +321,8 @@ function ConsultantForm() {
   };
 
   return (
-    <div id="consultation-form" className="w-full my-20 px-2 lg:px-0">
+    <div id="consultation-form"
+      className="scroll-mt-32 mt-32 mb-20 px-2 lg:px-0 w-full">
       {/* Success Modal */}
       {showSuccessModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
