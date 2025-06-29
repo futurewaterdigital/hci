@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Hospitals from '@/components/HomePage/Hospitals/HomeHospitals';
 
 // Define the type for a Partner
@@ -16,8 +16,19 @@ interface Partner {
 
 const Partners: React.FC = () => {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const scrollTo = searchParams.get("scrollTo");
+  
+  // Conditionally use useSearchParams only when available
+  let searchParams;
+  let scrollTo;
+  try {
+    const { useSearchParams } = require('next/navigation');
+    searchParams = useSearchParams();
+    scrollTo = searchParams?.get("scrollTo");
+  } catch (error) {
+    // If useSearchParams is not available (during SSR), use a fallback
+    searchParams = null;
+    scrollTo = null;
+  }
 
   // ✅ Correct hook usage: inside the component
   useEffect(() => {
