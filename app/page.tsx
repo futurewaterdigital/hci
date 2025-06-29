@@ -11,7 +11,7 @@ import Blogs from '../components/HomePage/MedicalUpdates/page'
 import Faqs from '../components/HomePage/Faqs/page'
 // import Appointment from '../components/HomePage/Appointment/page'
 import Footer from '../components/Footer/page'
-import ConsultantFormHome from '../components/HomePage/ContactPage/ConsultantFormHome'
+import ConsultantFormHome from '../components/HomePage/ContactPage/ConsultantForm'
 import PriceComparison from '../components/HomePage/PriceComparison/page'
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
       <Subscribe />
       <Blogs />
       <Faqs />
-      <ConsultantFormHome />
+      {/* <ConsultantFormHome /> */}
       <PriceComparison />
       <Footer /> 
     </main>
