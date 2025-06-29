@@ -166,7 +166,7 @@ Increasing knowledge about seizure disorders is essential to busting stereotypes
   ],
 };
 
-console.log(data.complications[0].heading);
+// console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (

@@ -18,7 +18,7 @@ export default function DoctorsPage() {
           throw new Error('Failed to fetch doctors');
         }
         const data = await response.json();
-        console.log('Fetched doctors:', data); // Debug log
+        // console.log('Fetched doctors:', data); // Debug log
         setDoctors(data);
       } catch (err) {
         console.error('Error fetching doctors:', err); // Debug log

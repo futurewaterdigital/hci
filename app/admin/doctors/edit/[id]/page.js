@@ -43,7 +43,7 @@ export default function EditDoctorPage({ params }) {
   };
 
   const handleSubmit = async (formData) => {
-    console.log('formData',formData);
+    // console.log('formData',formData);
     
 
     try {

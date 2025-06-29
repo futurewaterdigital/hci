@@ -49,7 +49,7 @@ export default function DoctorForm({ onSubmit, onChange, initialData, isEditing 
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    console.log(name, value, type, checked);
+    // console.log(name, value, type, checked);
     updateFormData({
       ...formData,
       [name]: type === 'checkbox' ? checked : value

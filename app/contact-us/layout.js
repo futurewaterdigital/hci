@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "../../components/Header/page";
-import Footer from "../../components/Footer/page";
 
 export const metadata = {
   title: "Contact Healthcare International | Get in Touch Today",

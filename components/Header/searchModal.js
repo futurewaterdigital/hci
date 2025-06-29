@@ -27,7 +27,7 @@ export default function SearchModal() {
       )
       const data = await response.json()
       const endTime = performance.now() // End timer
-      console.log(data)
+      // console.log(data)
       setResults(data) // Assuming the response data is an array of results
       setResultCount(data.length) // Set the count of results
       setFetchTime((endTime - startTime).toFixed(2)) // Calculate and set fetch time in milliseconds

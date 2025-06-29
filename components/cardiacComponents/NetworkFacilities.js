@@ -1,7 +1,7 @@
 import React from 'react'
 
 function NetworkFacilities({ dataFile }) {
-  console.log(dataFile)
+  // console.log(dataFile)
   return (
     <>
       <h2

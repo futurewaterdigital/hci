@@ -26,7 +26,7 @@ export async function POST(request) {
     // Remove the bucket name and domain from the path
     const key = url.pathname.split('/').slice(2).join('/');
 
-    console.log('Deleting image with key:', key);
+    // console.log('Deleting image with key:', key);
 
     const params = {
       Bucket: process.env.NEXT_PUBLIC_DO_SPACES_BUCKET,

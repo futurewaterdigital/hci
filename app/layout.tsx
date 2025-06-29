@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'Healthcare International | Trusted Medical Tourism Services',
   },
-  themeColor: '#ffffff',
+
 }
 
 // ✅ Separate export

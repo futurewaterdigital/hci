@@ -7,13 +7,13 @@ export async function GET(request, { params }) {
   try {
     const { db } = await connectToDatabase();
     const { slug } = params;
-    console.log('Received slug:', slug);
+    // console.log('Received slug:', slug);
 
     const doctors = await db.collection('doctors').find({
       'category': slug
     }).toArray();
 
-    console.log('Found doctors:', doctors);
+    // console.log('Found doctors:', doctors);
 
     if (!doctors || doctors.length === 0) {
       return NextResponse.json(

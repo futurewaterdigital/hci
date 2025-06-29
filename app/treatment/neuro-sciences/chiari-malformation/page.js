@@ -9,7 +9,7 @@ import KnowMore from '@/components/ui/KnowMore'
 import DataBoxes from '@/components/cardiacComponents/Box'
 import Conclusion from '@/components/cardiacComponents/Conclusion'
 import TextComponent from '@/components/Common/TextComponent'
-import IssuesLinks from '@/components/ui/IssuesLinks'
+// import IssuesLinks from '@/components/ui/IssuesLinks'
 const data = {
   title: 'Chiari Malformation',
   bannerImage: '/neuro-sciences/chiari-malformation.png',
@@ -161,7 +161,7 @@ These may also be used to evaluate structural changes in the skull and spine.`,
   ],
 };
 
-console.log(data.complications[0].heading);
+// console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (

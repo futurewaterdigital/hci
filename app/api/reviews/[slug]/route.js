@@ -14,9 +14,9 @@ const createNameFromSlug = (slug) => {
     .map(part => `(?=.*${part})`)  // Positive lookahead for each part
     .join('');
 
-  console.log('Slug:', slug);  // Debug log
-  console.log('Clean slug:', cleanSlug);  // Debug log
-  console.log('Name pattern:', namePattern);  // Debug log
+  // console.log('Slug:', slug);  // Debug log
+  // console.log('Clean slug:', cleanSlug);  // Debug log
+  // console.log('Name pattern:', namePattern);  // Debug log
 
   return new RegExp(namePattern, 'i');
 };
@@ -25,11 +25,11 @@ export async function GET(request, { params }) {
   try {
     const { db } = await connectToDatabase();
     const { slug } = params;
-    console.log('Received slug:', slug);  // Debug log
+    // console.log('Received slug:', slug);  // Debug log
 
     // Create a name pattern from the slug
     const namePattern = createNameFromSlug(slug);
-    console.log('Searching with pattern:', namePattern);  // Debug log
+    // console.log('Searching with pattern:', namePattern);  // Debug log
 
     // Use a regular expression directly in the query without $options
     const reviewsCursor = await db.collection('reviews').find({
@@ -40,10 +40,10 @@ export async function GET(request, { params }) {
 
     // Get the count of reviews (length)
     const totalReviews = reviews.length;
-    console.log('Found reviews:', reviews);  // Debug log
+    // console.log('Found reviews:', reviews);  // Debug log
 
     if (totalReviews === 0) {
-      console.log('No reviews found for pattern:', namePattern);  // Debug log
+      // console.log('No reviews found for pattern:', namePattern);  // Debug log
       return NextResponse.json(
         { error: 'Review not found' },
         { status: 404 }

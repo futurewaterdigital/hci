@@ -1,10 +1,9 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { countryCode } from "@/utils/data";
 import { FaFileAlt } from "react-icons/fa";
-import { useSearchParams } from "next/navigation";
 
-function ConsultantForm() {
+function ConsultantFormHome() {
   const [yourName, setYourName] = useState("");
   const [yourPhone, setYourPhone] = useState("");
   const [yourEmail, setYourEmail] = useState("");
@@ -20,9 +19,6 @@ function ConsultantForm() {
 
   const [filteredCountryCodes, setFilteredCountryCodes] = useState([]);
   const [selectedCode, setSelectedCode] = useState("+91");
-  
-  // Use useSearchParams hook properly
-  const searchParams = useSearchParams();
 
   // Handle input change for filtering country codes
   const handleCodeInputChange = (e) => {
@@ -78,13 +74,6 @@ function ConsultantForm() {
   const numErrors = {
     field: "yourPhone",
     message: "Please enter a valid phone number (up to 10 digits).",
-  };
-
-  // Validate file input
-  const fileErrors = {
-    field: "yourFile",
-    message:
-      "Please upload a valid file (PDF, JPG, JPEG,PNG) not exceeding 4MB.",
   };
 
   const handleTextChange = (e) => {
@@ -155,19 +144,6 @@ function ConsultantForm() {
     setYourFile(validFiles);
     setFileNames(validFiles.map(file => file.name));
   };
-
-  useEffect(() => {
-    // Only try to access searchParams if it's available
-    if (searchParams) {
-      const scrollTo = searchParams.get("scrollTo");
-      if (scrollTo === "form") {
-        const formElement = document.getElementById("consultation-form");
-        if (formElement) {
-          formElement.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    }
-  }, [searchParams]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -468,4 +444,4 @@ function ConsultantForm() {
   );
 }
 
-export default ConsultantForm;
+export default ConsultantFormHome; 

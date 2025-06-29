@@ -15,9 +15,9 @@ const createNameFromSlug = (slug) => {
     .map(part => `(?=.*${part})`)  // Positive lookahead for each part
     .join('');
 
-  console.log('Slug:', slug);  // Debug log
-  console.log('Clean slug:', cleanSlug);  // Debug log
-  console.log('Name pattern:', namePattern);  // Debug log
+  // console.log('Slug:', slug);  // Debug log
+  // console.log('Clean slug:', cleanSlug);  // Debug log
+  // console.log('Name pattern:', namePattern);  // Debug log
 
   return new RegExp(namePattern, 'i');
 };
@@ -26,19 +26,19 @@ export async function GET(request, { params }) {
   try {
     const { db } = await connectToDatabase();
     const { slug } = params;
-    console.log('Received slug:', slug);  // Debug log
+    // console.log('Received slug:', slug);  // Debug log
 
     const namePattern = createNameFromSlug(slug);
-    console.log('Searching with pattern:', namePattern);  // Debug log
+    // console.log('Searching with pattern:', namePattern);  // Debug log
 
     const doctor = await db.collection('doctors').findOne({ 
       name: { $regex: namePattern } 
     });
     
-    console.log('Found doctor:', doctor);  // Debug log
+    // console.log('Found doctor:', doctor);  // Debug log
 
     if (!doctor) {
-      console.log('No doctor found for pattern:', namePattern);  // Debug log
+      // console.log('No doctor found for pattern:', namePattern);  // Debug log
       return NextResponse.json(
         { error: 'Doctor not found' },
         { status: 404 }

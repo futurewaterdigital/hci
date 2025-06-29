@@ -7,7 +7,7 @@ export async function POST(request) {
   try {
     await dbConnect();
     const body = await request.json();
-    console.log('Login attempt with:', body);
+    // console.log('Login attempt with:', body);
 
     const { email, password } = body;
 
@@ -20,7 +20,7 @@ export async function POST(request) {
 
     // Find admin by email
     const admin = await Admin.findOne({ email });
-    console.log('Found admin:', admin ? 'yes' : 'no');
+    // console.log('Found admin:', admin ? 'yes' : 'no');
 
     if (!admin) {
       return NextResponse.json(
@@ -31,7 +31,7 @@ export async function POST(request) {
 
     // Compare password
     const isMatch = await admin.comparePassword(password);
-    console.log('Password match:', isMatch);
+    // console.log('Password match:', isMatch);
 
     if (!isMatch) {
       return NextResponse.json(

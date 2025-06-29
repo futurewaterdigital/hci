@@ -214,7 +214,7 @@ const data = {
   ],
 };
 
-console.log(data.complications[0].heading);
+// console.log(data.complications[0].heading);
 
 function GeneralSurgery() {
   return (

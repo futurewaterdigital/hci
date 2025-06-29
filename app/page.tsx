@@ -11,25 +11,25 @@ import Blogs from '../components/HomePage/MedicalUpdates/page'
 import Faqs from '../components/HomePage/Faqs/page'
 // import Appointment from '../components/HomePage/Appointment/page'
 import Footer from '../components/Footer/page'
-import ConsultantForm from '../components/HomePage/ContactPage/ConsultantForm'
+import ConsultantFormHome from '../components/HomePage/ContactPage/ConsultantFormHome'
 import PriceComparison from '../components/HomePage/PriceComparison/page'
-export default function Page() {
+
+export default function Home() {
   return (
-    <>
+    <main>
       <Header />
       <Banner />
-      <Partners />
-      <PriceComparison />
-      <ConsultantForm />
+      {/* <Partners /> */}
       <WhoWeAre />
       <Network />
       <Patients />
       <Testimonials />
-      <Subscribe />
+      {/* <Subscribe />
       <Blogs />
-      <Faqs /> 
-      {/* <Appointment /> */}
-      <Footer />
-    </>
+      <Faqs />
+      <ConsultantFormHome />*/}
+      <PriceComparison />
+      <Footer /> 
+    </main>
   )
 }
