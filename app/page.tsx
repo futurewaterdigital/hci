@@ -21,7 +21,7 @@ export default function Home() {
       <Banner />
       {/* <Partners /> */}
       <PriceComparison />
-      <ConsultantFormHome />
+      {/* <ConsultantFormHome /> */}
       <WhoWeAre />
       <Network />
       <Patients />
