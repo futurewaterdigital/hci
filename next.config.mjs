@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["cdn.healthcareinternational.in", "blr1.digitaloceanspaces.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.healthcareinternational.in',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'blr1.digitaloceanspaces.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   compress: true,
   eslint: {
