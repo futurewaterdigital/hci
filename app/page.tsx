@@ -24,10 +24,10 @@ export default function Home() {
       <Network />
       <Patients />
       <Testimonials />
-      {/* <Subscribe />
+      <Subscribe />
       <Blogs />
       <Faqs />
-      <ConsultantFormHome />*/}
+      <ConsultantFormHome />
       <PriceComparison />
       <Footer /> 
     </main>
