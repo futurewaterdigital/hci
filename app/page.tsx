@@ -20,6 +20,8 @@ export default function Home() {
       <Header />
       <Banner />
       {/* <Partners /> */}
+      <PriceComparison />
+      <ConsultantFormHome />
       <WhoWeAre />
       <Network />
       <Patients />
@@ -27,8 +29,8 @@ export default function Home() {
       <Subscribe />
       <Blogs />
       <Faqs />
-      {/* <ConsultantFormHome /> */}
-      <PriceComparison />
+      
+     
       <Footer /> 
     </main>
   )
