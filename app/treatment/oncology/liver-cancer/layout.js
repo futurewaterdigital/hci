@@ -1,24 +1,29 @@
 import React from "react";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: "Liver Cancer",
-  description:
-    "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
-  keywords:
-    "gynecological cancer treatment, endometrial cancer, ovarian cancer, cervical cancer, cancer treatment India, gynecologic oncology, women cancer care",
+  title: "Liver Cancer Treatment: Hepatitis Care, Transplants & LFT Testing",
+  description: "Explore advanced liver cancer care including hepatitis B & C treatment, liver function tests (LFT), AFP screening, liver transplant options, and hepatectomy procedures.",
+  metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "hepatitis b, hepatitis c, livercancer, hepatitis d, hepatitis treatment, livertransplant, ebrt, protontherapy, sbrt, liver transplant surgery",
+
   openGraph: {
-    title: "Gynecological Cancers Treatment in India | HCI",
-    description:
-      "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
-    url: "https://hci.care/treatment/oncology/gynecological-cancers",
-    type: "website",
+    url: "https://healthcareinternational.in/",
+    title: "Liver Cancer Treatment: Hepatitis Care, Transplants & LFT Testing",
+    description: "Explore advanced liver cancer care including hepatitis B & C treatment, liver function tests (LFT), AFP screening, liver transplant options, and hepatectomy procedures.",
+    images: [
+      {
+        url: "images/homeBanner.jpg",
+        width: 800,
+        height: 600,
+        alt: "Liver Cancer Treatment: Hepatitis Care, Transplants & LFT Testing",
+      },
+    ],
   },
-  twitter: {
-    title: "Gynecological Cancers Treatment in India | HCI",
-    description:
-      "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
+  icons: {
+    icon: "favicon_io/favicon-32x32.png",
+    shortcut: "favicon_io/favicon.ico",
   },
 };
 

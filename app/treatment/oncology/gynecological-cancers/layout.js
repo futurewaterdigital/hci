@@ -1,26 +1,31 @@
-import React from 'react'
-import Header from '@/components/Header/page'
-import Footer from '@/components/Footer/page'
+import React from "react";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: 'Gynecological Cancers Treatment in India | HCI',
-  description:
-    'Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.',
-  keywords:
-    'gynecological cancer treatment, endometrial cancer, ovarian cancer, cervical cancer, cancer treatment India, gynecologic oncology, women cancer care',
+  title: "Gynecological Cancer | Hysterectomy Surgery, TVS Ultrasound & Uterus Operation",
+  description: "Explore gynecological cancer treatments including hysterectomy, uterus operation, and TVS ultrasound. Know costs, recovery, and find top hysterectomy surgeons near you.",
+  metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "",
+
   openGraph: {
-    title: 'Gynecological Cancers Treatment in India | HCI',
-    description:
-      'Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.',
-    url: 'https://hci.care/treatment/oncology/gynecological-cancers',
-    type: 'website',
+    url: "https://healthcareinternational.in/",
+    title: "Gynecological Cancer | Hysterectomy Surgery, TVS Ultrasound & Uterus Operation",
+    description: "Explore gynecological cancer treatments including hysterectomy, uterus operation, and TVS ultrasound. Know costs, recovery, and find top hysterectomy surgeons near you.",
+    images: [
+      {
+        url: "images/homeBanner.jpg",
+        width: 800,
+        height: 600,
+        alt: "Gynecological Cancer | Hysterectomy Surgery, TVS Ultrasound & Uterus Operation",
+      },
+    ],
   },
-  twitter: {
-    title: 'Gynecological Cancers Treatment in India | HCI',
-    description:
-      'Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.',
+  icons: {
+    icon: "favicon_io/favicon-32x32.png",
+    shortcut: "favicon_io/favicon.ico",
   },
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -29,5 +34,5 @@ export default function RootLayout({ children }) {
       {children}
       <Footer />
     </>
-  )
+  );
 }

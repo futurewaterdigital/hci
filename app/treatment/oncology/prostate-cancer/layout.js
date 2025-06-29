@@ -1,21 +1,23 @@
 import React from "react";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: "Prostate Cancer",
-  description: "Healthcare International.",
+  title: "Prostate Cancer: Advanced Treatment, Screening & Supportive Care",
+  description: "Explore comprehensive prostate cancer care including PSA tests, DRE, brachytherapy, hormone therapy, proton therapy, surgery, and supportive treatments for all stages.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "prostate cancer, signs of prostate cancer, stage 1 prostate cancer symptoms, metastatic prostate cancer, prostate problems, prostatitis treatment, blood, sbrt, protontherapy",
+
   openGraph: {
     url: "https://healthcareinternational.in/",
-    title: "Prostate Cancer",
-    description: "Prostate Cancer",
+    title: "Prostate Cancer: Advanced Treatment, Screening & Supportive Care",
+    description: "Explore comprehensive prostate cancer care including PSA tests, DRE, brachytherapy, hormone therapy, proton therapy, surgery, and supportive treatments for all stages.",
     images: [
       {
         url: "images/homeBanner.jpg",
         width: 800,
         height: 600,
-        alt: "Healthcare International",
+        alt: "Prostate Cancer: Advanced Treatment, Screening & Supportive Care",
       },
     ],
   },

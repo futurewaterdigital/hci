@@ -1,24 +1,29 @@
 import React from "react";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: "Lung Cancer",
-  description:
-    "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
-  keywords:
-    "gynecological cancer treatment, endometrial cancer, ovarian cancer, cervical cancer, cancer treatment India, gynecologic oncology, women cancer care",
+  title: "Lung Cancer: Diagnosis, Surgery & Advanced Treatment Options",
+  description: "Discover treatment options for lung cancer, including pneumonectomy, proton therapy, and targeted therapy. Learn about small cell and non-small cell lung cancer, survival rates, and stage-wise care.",
+  metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "lung cancer, pneumonectomy, protontherapy, targeted therapy, small cell lung cancer, non small cell lung cancer, stage 4 lung cancer, stage 1 lung cancer symptoms, types of lung cancer, stage 4 lung cancer symptoms, lung, small cell carcinoma lung cancer",
+
   openGraph: {
-    title: "Gynecological Cancers Treatment in India | HCI",
-    description:
-      "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
-    url: "https://hci.care/treatment/oncology/gynecological-cancers",
-    type: "website",
+    url: "https://healthcareinternational.in/",
+    title: "Lung Cancer: Diagnosis, Surgery & Advanced Treatment Options",
+    description: "Discover treatment options for lung cancer, including pneumonectomy, proton therapy, and targeted therapy. Learn about small cell and non-small cell lung cancer, survival rates, and stage-wise care.",
+    images: [
+      {
+        url: "images/homeBanner.jpg",
+        width: 800,
+        height: 600,
+        alt: "Lung Cancer: Diagnosis, Surgery & Advanced Treatment Options",
+      },
+    ],
   },
-  twitter: {
-    title: "Gynecological Cancers Treatment in India | HCI",
-    description:
-      "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
+  icons: {
+    icon: "favicon_io/favicon-32x32.png",
+    shortcut: "favicon_io/favicon.ico",
   },
 };
 

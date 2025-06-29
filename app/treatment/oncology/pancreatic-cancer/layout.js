@@ -1,24 +1,29 @@
 import React from "react";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: "Liver Cancer",
-  description:
-    "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
-  keywords:
-    "gynecological cancer treatment, endometrial cancer, ovarian cancer, cervical cancer, cancer treatment India, gynecologic oncology, women cancer care",
+  title: "Pancreatic Cancer Treatment: Whipple Procedure & Targeted Therapy",
+  description: "Explore advanced care for pancreatic cancer including adenocarcinoma treatment, pancreatectomy, radiation therapy, targeted therapy, and Whipple procedure for stage 4 cases.",
+  metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "pancreatic adenocarcinoma, pancreaticcancer, pnet, parp inhibitor, radiationtherapy, targetedtherapy, whippleprocedure, nausea",
+
   openGraph: {
-    title: "Gynecological Cancers Treatment in India | HCI",
-    description:
-      "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
-    url: "https://hci.care/treatment/oncology/gynecological-cancers",
-    type: "website",
+    url: "https://healthcareinternational.in/",
+    title: "Pancreatic Cancer Treatment: Whipple Procedure & Targeted Therapy",
+    description: "Explore advanced care for pancreatic cancer including adenocarcinoma treatment, pancreatectomy, radiation therapy, targeted therapy, and Whipple procedure for stage 4 cases.",
+    images: [
+      {
+        url: "images/homeBanner.jpg",
+        width: 800,
+        height: 600,
+        alt: "Pancreatic Cancer Treatment: Whipple Procedure & Targeted Therapy",
+      },
+    ],
   },
-  twitter: {
-    title: "Gynecological Cancers Treatment in India | HCI",
-    description:
-      "Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.",
+  icons: {
+    icon: "favicon_io/favicon-32x32.png",
+    shortcut: "favicon_io/favicon.ico",
   },
 };
 

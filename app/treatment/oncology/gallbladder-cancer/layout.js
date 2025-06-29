@@ -1,21 +1,23 @@
 import React from "react";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: "Cerebral Palsy",
-  description: "Healthcare International.",
+  title: "Gallbladder Cancer: Surgery, Brachytherapy & Proton Therapy Options",
+  description: "Learn about gallbladder cancer treatment including cholecystectomy, lap and open surgery, brachytherapy, and proton therapy options near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "gallbladder, bile, gallstones, chronic inflammation, cholecystitis, familial adenomatous, cholecystectomy, Best Oncologist in India, Best Oncologist in the city, Best Oncologist in Bengaluru, Best Oncologist in Chennai, Best Oncologist in Mumbai, Best Oncologist in Hyderabad, Best Oncologist in Delhi",
+
   openGraph: {
     url: "https://healthcareinternational.in/",
-    title: "Healthcare International",
-    description: "Healthcare International",
+    title: "Gallbladder Cancer: Surgery, Brachytherapy & Proton Therapy Options",
+    description: "Learn about gallbladder cancer treatment including cholecystectomy, lap and open surgery, brachytherapy, and proton therapy options near you.",
     images: [
       {
         url: "images/homeBanner.jpg",
         width: 800,
         height: 600,
-        alt: "Healthcare International",
+        alt: "Gallbladder Cancer: Surgery, Brachytherapy & Proton Therapy Options",
       },
     ],
   },
@@ -25,10 +27,10 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({children}) {
   return (
     <>
-      <Header />
+    <Header />
       {children}
       <Footer />
     </>

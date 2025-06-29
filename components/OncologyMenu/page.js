@@ -31,10 +31,10 @@ function Menu() {
       menu: 'Genitourinary Cancer',
       url: '/treatment/oncology/genitourinary-cancer',
     },
-    {
-      menu: 'Skin Cancer',
-      url: '/treatment/oncology/skin-cancer',
-    },
+    // {
+    //   menu: 'Skin Cancer',
+    //   url: '/treatment/oncology/skin-cancer',
+    // },
   ]
 
   const otherGastro = [

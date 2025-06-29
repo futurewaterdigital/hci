@@ -1,21 +1,23 @@
 import React from "react";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: "Kindey Cancer",
-  description: "Healthcare International.",
+  title: "Kidney Cancer: Diagnosis, Robotic Surgery & Treatment Options",
+  description: "Learn about kidney cancer care including nephrectomy, cryoablation, robotic surgery, urinalysis tests, Wilms tumour, RCC, and urothelial carcinoma diagnosis.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "chromophobe rcc, kidneycancer, renalcancer, kidneytumor, kidneys, rcc, robotic surgery",
+
   openGraph: {
     url: "https://healthcareinternational.in/",
-    title: "Healthcare International",
-    description: "Healthcare International",
+    title: "Kidney Cancer: Diagnosis, Robotic Surgery & Treatment Options",
+    description: "Learn about kidney cancer care including nephrectomy, cryoablation, robotic surgery, urinalysis tests, Wilms tumour, RCC, and urothelial carcinoma diagnosis.",
     images: [
       {
         url: "images/homeBanner.jpg",
         width: 800,
         height: 600,
-        alt: "Healthcare International",
+        alt: "Kidney Cancer: Diagnosis, Robotic Surgery & Treatment Options",
       },
     ],
   },

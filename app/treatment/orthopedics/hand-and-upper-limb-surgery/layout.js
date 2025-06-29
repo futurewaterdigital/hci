@@ -1,40 +1,30 @@
-import React from 'react'
-import Header from '@/components/Header/page'
-import Footer from '@/components/Footer/page'
+import React from "react";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: 'Hand and Upper Limb Surgery',
-  description: 'Healthcare International.',
-  metadataBase: new URL('https://healthcareinternational.in/'),
+  title: "Hand and Upper Limb Surgery | Splinting and Bracing Solutions",
+  description: "Explore treatments for hand and upper limb conditions with a range of splints and braces including thumb, finger, wrist, and spica splints. Find support for injuries, rheumatoid arthritis, and post-surgical care with custom and ready-made options.",
+  metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "splinting, bracing, sprain, osteomyelitis, osteomyelitis disease, hand injuries, wrist bones, wrist, wrist brace, finger splint, thumb splint, wrist splint, mallet finger splint, pinky finger splint, ring splint, spica splint, broken finger splint, index finger splint, plantar fascia night splint, thermoplastic splint, finger extension splint, little finger splint, ribbond splint",
   openGraph: {
-    url: 'https://healthcareinternational.in/',
-    title: 'Healthcare International',
-    description: 'Healthcare International',
+    url: "https://healthcareinternational.in/",
+    title: "Hand and Upper Limb Surgery | Splinting and Bracing Solutions",
+    description: "Explore treatments for hand and upper limb conditions with a range of splints and braces including thumb, finger, wrist, and spica splints. Find support for injuries, rheumatoid arthritis, and post-surgical care with custom and ready-made options.",
     images: [
       {
-        url: 'images/homeBanner.jpg',
+        url: "images/homeBanner.jpg",
         width: 800,
         height: 600,
-        alt: 'Healthcare International',
+        alt: "Hand and Upper Limb Surgery | Splinting and Bracing Solutions",
       },
     ],
   },
   icons: {
-    icon: [
-      { url: '/favicon_io/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon_io/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon_io/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-      { url: '/favicon_io/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon_io/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
-    ],
-    shortcut: '/favicon_io/favicon.ico',
-    apple: '/favicon_io/apple-touch-icon.png',
-    other: {
-      rel: 'manifest',
-      url: '/favicon_io/site.webmanifest',
-    },
+    icon: "favicon_io/favicon-32x32.png",
+    shortcut: "favicon_io/favicon.ico",
   },
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -43,5 +33,5 @@ export default function RootLayout({ children }) {
       {children}
       <Footer />
     </>
-  )
+  );
 }
