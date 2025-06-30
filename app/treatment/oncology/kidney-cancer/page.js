@@ -13,7 +13,7 @@ import BookButton from '@/components/cardiacComponents/BookButton'
 const data = {
   title: "Kidney Cancer",
   description:
-    "Kidney cancer, also known as <span class='font-semibold'>renal cancer</span>, originates in the kidneys, two bean-shaped organs located in the back of the abdomen. The most common type of kidney cancer is <span class='font-semibold'>renal cell carcinoma (RCC)</span>, which starts in the lining of the small tubes in the kidney. Other types include <span class='font-semibold'>urothelial carcinoma</span>, <span class='font-semibold'>Wilms tumor</span> (more common in children), and <span class='font-semibold'>renal sarcoma</span>.",
+    "Kidney cancer, also known as <span className='font-semibold'>renal cancer</span>, originates in the kidneys, two bean-shaped organs located in the back of the abdomen. The most common type of kidney cancer is <span className='font-semibold'>renal cell carcinoma (RCC)</span>, which starts in the lining of the small tubes in the kidney. Other types include <span className='font-semibold'>urothelial carcinoma</span>, <span className='font-semibold'>Wilms tumor</span> (more common in children), and <span className='font-semibold'>renal sarcoma</span>.",
 
   causes: [
     {
@@ -128,12 +128,12 @@ const data = {
         {
           title: "Angiogenesis Inhibitors",
           description:
-            "These drugs block the formation of new blood vessels that tumors need to grow. Examples include <span class='font-semibold'>sunitinib</span> and <span class='font-semibold'>pazopanib</span>.",
+            "These drugs block the formation of new blood vessels that tumors need to grow. Examples include <span className='font-semibold'>sunitinib</span> and <span className='font-semibold'>pazopanib</span>.",
         },
         {
           title: "mTOR Inhibitors",
           description:
-            "Drugs like <span class='font-semibold'>everolimus</span> target the mTOR protein, which plays a role in cancer cell growth.",
+            "Drugs like <span className='font-semibold'>everolimus</span> target the mTOR protein, which plays a role in cancer cell growth.",
         },
         {
           title: "",
@@ -148,12 +148,12 @@ const data = {
         {
           title: "Immune Checkpoint Inhibitors",
           description:
-            "Drugs such as <span class='font-semibold'>nivolumab</span> and <span class='font-semibold'>pembrolizumab</span> work by enhancing the body's immune response to fight cancer. These therapies block proteins that prevent the immune system from attacking cancer cells.",
+            "Drugs such as <span className='font-semibold'>nivolumab</span> and <span className='font-semibold'>pembrolizumab</span> work by enhancing the body's immune response to fight cancer. These therapies block proteins that prevent the immune system from attacking cancer cells.",
         },
         {
           title: "Cytokines",
           description:
-            "Older forms of immunotherapy, including <span class='font-semibold'>interleukin-2</span>, stimulate the immune system to destroy cancer cells.",
+            "Older forms of immunotherapy, including <span className='font-semibold'>interleukin-2</span>, stimulate the immune system to destroy cancer cells.",
         },
         {
           title: "",
@@ -185,7 +185,7 @@ const data = {
     {
       heading: "Chemotherapy",
       description:
-        "While not commonly used for kidney cancer, chemotherapy may be an option for rare types like <span class='font-semibold'>transitional cell carcinoma</span>.",
+        "While not commonly used for kidney cancer, chemotherapy may be an option for rare types like <span className='font-semibold'>transitional cell carcinoma</span>.",
     },
   ],
 

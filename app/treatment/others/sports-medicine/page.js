@@ -41,16 +41,16 @@ const data = {
 
       aneurysmSymptoms: [
         {
-          description: `<span class='font-medium'>Sports medicine specialist:</span>  to provide expert opinion and solutions for sports injury related. `,
+          description: `<span className='font-medium'>Sports medicine specialist:</span>  to provide expert opinion and solutions for sports injury related. `,
         },
         {
-          description: `<span class='font-medium'>Physical Therapists:</span> To aid in recovery and improve mobility. `,
+          description: `<span className='font-medium'>Physical Therapists:</span> To aid in recovery and improve mobility. `,
         },
         {
-          description: `<span class='font-medium'>Certified Athletic Trainers:</span> To design rehabilitation programs and prevent future injuries.`,
+          description: `<span className='font-medium'>Certified Athletic Trainers:</span> To design rehabilitation programs and prevent future injuries.`,
         },
         {
-          description: `<span class='font-medium'>Nutritionists:</span> To optimize performance and assist with weight management.`,
+          description: `<span className='font-medium'>Nutritionists:</span> To optimize performance and assist with weight management.`,
         },
       ],
     },

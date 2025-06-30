@@ -235,10 +235,10 @@ const symptoms = [
   {
     category: "Types of Heart Failure",
     description: `The main types of heart failure are named for where they occur in the heart:
-    <ul class='list-disc list-inside text-hciSecondary my-3'>
-      <li><span class="text-black">Left-sided heart failure</span></li>
-      <li><span class="text-black">Right-sided heart failure</span></li>
-      <li><span class="text-black">Biventricular heart failure (both sides)</span></li>
+    <ul className='list-disc list-inside text-hciSecondary my-3'>
+      <li><span className="text-black">Left-sided heart failure</span></li>
+      <li><span className="text-black">Right-sided heart failure</span></li>
+      <li><span className="text-black">Biventricular heart failure (both sides)</span></li>
     </ul>
     `,
     bgColor: "bg-hciYellow text-black",
@@ -319,23 +319,23 @@ export default function page() {
         <CausesKnowMore title={title} />
 
 
-        <div class="my-12">
-          <div class="border border-pink-200 rounded-lg p-6">
-            <h2 class="text-2xl font-medium mb-6">
+        <div className="my-12">
+          <div className="border border-pink-200 rounded-lg p-6">
+            <h2 className="text-2xl font-medium mb-6">
               Clinicians also may classify Heart Failure as:
             </h2>
 
-            <div class="space-y-4 mb-6">
+            <div className="space-y-4 mb-6">
               <div>
-                <h3 class="text-pink-500 font-medium">Acute:</h3>
-                <p class="text-gray-700 font-light">
+                <h3 className="text-pink-500 font-medium">Acute:</h3>
+                <p className="text-gray-700 font-light">
                   You have active symptoms of heart failure, with either a new
                   diagnosis or with long-term (chronic) heart failure.
                 </p>
               </div>
               <div>
-                <h3 class="text-pink-500 font-medium">Chronic:</h3>
-                <p class="text-gray-700 font-light">
+                <h3 className="text-pink-500 font-medium">Chronic:</h3>
+                <p className="text-gray-700 font-light">
                   You have a history of heart failure, but your condition is
                   relatively stable with no symptoms or with manageable
                   symptoms.
@@ -343,11 +343,11 @@ export default function page() {
               </div>
             </div>
 
-            <div class="mb-6">
-              <h3 class="text-pink-500 font-medium mb-2">
+            <div className="mb-6">
+              <h3 className="text-pink-500 font-medium mb-2">
                 Left-sided heart failure
               </h3>
-              <p class="text-gray-700 font-light mb-4">
+              <p className="text-gray-700 font-light mb-4">
                 Left-sided heart failure involves the left ventricle (bottom
                 left chamber of the heart). When the left ventricle doesn&apos;t
                 pump enough blood, it backs up in the blood vessels that carry
@@ -355,13 +355,13 @@ export default function page() {
                 heart failure, and tends to cause breathing symptoms.
               </p>
 
-              <h4 class="text-pink-500 font-medium mb-2">
+              <h4 className="text-pink-500 font-medium mb-2">
                 Left-sided heart failure can be classified further as heart
                 failure with reduced or preserved ejection fraction:
               </h4>
-              <ul class="list-disc pl-6 space-y-2 font-light text-hciSecondary">
+              <ul className="list-disc pl-6 space-y-2 font-light text-hciSecondary">
                 <li>
-                  <span class="text-black">
+                  <span className="text-black">
                     In heart failure with preserved ejection fraction (sometimes
                     called diastolic heart failure), the left ventricle
                     can&apos;t relax normally. As a result, the heart can&apos;t
@@ -369,14 +369,14 @@ export default function page() {
                   </span>
                 </li>
                 <li>
-                  <span class="text-black">
+                  <span className="text-black">
                     In heart failure with reduced ejection fraction (or systolic
                     heart failure), the left ventricle can&apos;t contract
                     (squeeze) normally, so less blood gets into circulation.
                   </span>
                 </li>
                 <li>
-                  <span class="text-black ">
+                  <span className="text-black ">
                     Ejection fraction is the percentage of blood the left
                     ventricle of the heart pumps out with every beat. A normal,
                     healthy ejection fraction is 55% to 65%.
@@ -385,11 +385,11 @@ export default function page() {
               </ul>
             </div>
 
-            <div class="mb-6">
-              <h3 class="text-pink-500 font-medium mb-2">
+            <div className="mb-6">
+              <h3 className="text-pink-500 font-medium mb-2">
                 Right-sided heart failure
               </h3>
-              <p class="text-gray-700 font-light mb-4">
+              <p className="text-gray-700 font-light mb-4">
                 Right-sided heart failure involves the right ventricle (bottom
                 right chamber of the heart). When the right ventricle
                 doesn&apos;t pump well, blood backs up in the blood vessels that
@@ -399,22 +399,22 @@ export default function page() {
               </p>
             </div>
 
-            <div class="mb-6">
-              <h3 class="text-pink-500 font-medium mb-2">
+            <div className="mb-6">
+              <h3 className="text-pink-500 font-medium mb-2">
                 Biventricular heart failure
               </h3>
-              <p class="text-gray-700 font-light mb-4">
+              <p className="text-gray-700 font-light mb-4">
                 Biventricular heart failure is a combination of left-sided and
                 right-sided heart failure. It involves both sides of the heart,
                 and can cause a mix of both types of symptoms.
               </p>
             </div>
 
-            <div class="mb-6">
-              <h3 class="text-pink-500 font-medium mb-2">
+            <div className="mb-6">
+              <h3 className="text-pink-500 font-medium mb-2">
                 Acute versus chronic heart failure
               </h3>
-              <p class="text-gray-700 font-light mb-4">
+              <p className="text-gray-700 font-light mb-4">
                 Acute heart failure is any heart failure that develops suddenly,
                 such as after a heart attack or with arrhythmia. Chronic heart
                 failure develops over time from medical conditions such as
@@ -424,10 +424,10 @@ export default function page() {
             </div>
 
             <div>
-              <h3 class="text-pink-500 font-medium mb-2">
+              <h3 className="text-pink-500 font-medium mb-2">
                 Congestive heart failure
               </h3>
-              <ul class="space-y-2 text-gray-700 font-light">
+              <ul className="space-y-2 text-gray-700 font-light">
                 <li>
                   Many people use the terms heart failure and congestive heart
                   failure interchangeably.
@@ -445,70 +445,70 @@ export default function page() {
           <KnowMore title={title} />
         </div>
 
-        <div class="mb-12">
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="border border-pink-200 rounded-lg p-6">
-              <h2 class="text-2xl font-medium mb-4">
+        <div className="mb-12">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="border border-pink-200 rounded-lg p-6">
+              <h2 className="text-2xl font-medium mb-4">
                 How is Heart Failure Diagnosed?
               </h2>
-              <p class="mb-4 font-light">
+              <p className="mb-4 font-light">
                 Your health care team may use a variety of strategies and tests
                 to diagnose heart failure.
               </p>
-              <p class="mb-4 font-light">History and physical exam.</p>
-              <p class="mb-4 font-medium">
+              <p className="mb-4 font-light">History and physical exam.</p>
+              <p className="mb-4 font-medium">
                 A clinician listens to your heart and lungs and measures your
                 blood pressure and weight. They will also ask about your:
               </p>
-              <ul class="space-y-2">
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-                  <span class="text-md font-light">
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                  <span className="text-md font-light">
                     Family&apos;s medical history, especially previous cardiac
                     problems
                   </span>
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-                  <span class="text-md font-light">
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                  <span className="text-md font-light">
                     Lifestyle (such as whether you smoke or exercise)
                   </span>
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-                  <span class="text-md font-light">
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                  <span className="text-md font-light">
                     Medications, including prescriptions, over-the-counter drugs
                     and supplements
                   </span>
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-                  <span class="text-md font-light">
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                  <span className="text-md font-light">
                     Personal medical history
                   </span>
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-                  <span class="text-md font-light">Symptoms</span>
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                  <span className="text-md font-light">Symptoms</span>
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-                  <span class="text-md font-light">Blood tests</span>
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                  <span className="text-md font-light">Blood tests</span>
                 </li>
               </ul>
-              <p class="mt-4 font-medium">
+              <p className="mt-4 font-medium">
                 Blood tests can measure several things related to heart failure:
               </p>
-              <ul class="space-y-2">
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-                  <span class="text-md font-light">
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                  <span className="text-md font-light">
                     Sodium and potassium levels (electrolytes)
                   </span>
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-                  <span class="text-md font-light">
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                  <span className="text-md font-light">
                     Creatinine, which helps measure how well your kidneys are
                     working
                   </span>
@@ -516,40 +516,40 @@ export default function page() {
               </ul>
             </div>
 
-            <div class="border border-pink-200 rounded-lg p-6">
-              <h2 class="text-2xl font-medium mb-4">Imaging and Other Tests</h2>
-              <p class="text-gray-700 mb-4 font-light">
+            <div className="border border-pink-200 rounded-lg p-6">
+              <h2 className="text-2xl font-medium mb-4">Imaging and Other Tests</h2>
+              <p className="text-gray-700 mb-4 font-light">
                 Other tests provide pictures of the heart and surrounding
                 structures or show how well the heart is working.
               </p>
 
-              <h3 class="text-pink-500 font-medium mb-2">
+              <h3 className="text-pink-500 font-medium mb-2">
                 Electrocardiogram (EKG or ECG):
               </h3>
-              <p class="text-gray-700 mb-4 font-light">
+              <p className="text-gray-700 mb-4 font-light">
                 An electrocardiogram test uses small sensors to measure heart
                 rate (how fast the heart is beating), rhythm (steady or
                 irregular) and electrical impulses.
               </p>
 
-              <h3 class="text-pink-500 font-medium mb-2">Chest X-ray:</h3>
-              <p class="text-gray-700 mb-4 font-light">
+              <h3 className="text-pink-500 font-medium mb-2">Chest X-ray:</h3>
+              <p className="text-gray-700 mb-4 font-light">
                 A chest X-ray is a picture of your lungs, heart and surrounding
                 structures. It can show whether there is fluid in your lungs
                 from heart failure, or if your heart muscle is enlarged.
               </p>
 
-              <h3 class="text-pink-500 font-medium mb-2">
+              <h3 className="text-pink-500 font-medium mb-2">
                 Echocardiogram (also called an echo):
               </h3>
-              <p class="text-gray-700 mb-4 font-light">
+              <p className="text-gray-700 mb-4 font-light">
                 Echocardiography uses sound waves to create images of your
                 heart. It can show how thick the heart muscle has become, as
                 well as measure ejection fraction.
               </p>
 
-              <h3 class="text-pink-500 font-medium mb-2">MRI:</h3>
-              <p class="text-gray-700 mb-4 font-light">
+              <h3 className="text-pink-500 font-medium mb-2">MRI:</h3>
+              <p className="text-gray-700 mb-4 font-light">
                 MRI is an advanced imaging test that takes pictures of the heart
                 and surrounding structures. It helps determine your heart
                 function and size and whether there are any changes in the heart
@@ -563,48 +563,48 @@ export default function page() {
 
         </div>
 
-        <div class="mb-12">
-          <h2 class="text-2xl font-medium mb-6">
+        <div className="mb-12">
+          <h2 className="text-2xl font-medium mb-6">
             What are the Four Stages of Heart Failure?
           </h2>
-          <p class="mb-8 font-light">
+          <p className="mb-8 font-light">
             There are two classification systems for heart failure, which
             indicate how severe the condition is. Your doctor might use one or
             both systems.
           </p>
 
-          <div class="mb-8">
-            <h3 class="text-2xl font-medium mb-4">
+          <div className="mb-8">
+            <h3 className="text-2xl font-medium mb-4">
               NYHA Functional Classification System
             </h3>
-            <p class="text-gray-700 font-light mb-6">
+            <p className="text-gray-700 font-light mb-6">
               The New York Heart Association (NYHA) functional classification
               considers heart failure symptoms that happen during exercise to
               determine stage. Patients can go back and forth between stages
               depending on how well-controlled symptoms are on a given day.
             </p>
 
-            <div class="grid md:grid-cols-4 gap-4">
-              <div class="border border-pink-200 rounded-lg p-4">
-                <p class="text-pink-500 text-center font-medium">
+            <div className="grid md:grid-cols-4 gap-4">
+              <div className="border border-pink-200 rounded-lg p-4">
+                <p className="text-pink-500 text-center font-medium">
                   The person has heart disease, but it isn&apos;t yet causing
                   symptoms or limiting activities.
                 </p>
               </div>
-              <div class="border border-pink-200 rounded-lg p-4">
-                <p class="text-pink-500 text-center font-medium">
+              <div className="border border-pink-200 rounded-lg p-4">
+                <p className="text-pink-500 text-center font-medium">
                   The person has mild symptoms that only slightly limits
                   activity.
                 </p>
               </div>
-              <div class="border border-pink-200 rounded-lg p-4">
-                <p class="text-pink-500 text-center font-medium">
+              <div className="border border-pink-200 rounded-lg p-4">
+                <p className="text-pink-500 text-center font-medium">
                   The person has significant limitations to activities. He or
                   she is only comfortable when resting.
                 </p>
               </div>
-              <div class="border border-pink-200 rounded-lg p-4">
-                <p class="text-pink-500 text-center font-medium">
+              <div className="border border-pink-200 rounded-lg p-4">
+                <p className="text-pink-500 text-center font-medium">
                   The person has major limitations and experiences symptoms when
                   at rest.
                 </p>
@@ -613,43 +613,43 @@ export default function page() {
           </div>
 
           <div>
-            <h3 class="text-2xl font-medium mb-4">
+            <h3 className="text-2xl font-medium mb-4">
               ACC/AHA Classification System
             </h3>
-            <p class="text-gray-700 mb-6">
+            <p className="text-gray-700 mb-6">
               The American College of Cardiology (ACC) and American Heart
               Association (AHA) developed a separate system to classify heart
               failure. Once you reach a specific stage, you remain there or
               progress, but you do not go backwards.
             </p>
 
-            <div class="grid md:grid-cols-4 gap-4">
-              <div class="border border-pink-200 rounded-lg p-4">
-                <h4 class="text-pink-500 font-medium mb-2">Stage A:</h4>
-                <p class="text-gray-700 font-light">
+            <div className="grid md:grid-cols-4 gap-4">
+              <div className="border border-pink-200 rounded-lg p-4">
+                <h4 className="text-pink-500 font-medium mb-2">Stage A:</h4>
+                <p className="text-gray-700 font-light">
                   This describes a person who has a high risk of developing
                   heart failure because of family history or personal medical
                   conditions. It&apos;s also called pre-heart failure.
                 </p>
               </div>
-              <div class="border border-pink-200 rounded-lg p-4">
-                <h4 class="text-pink-500 font-medium mb-2">Stage B:</h4>
-                <p class="text-gray-700 font-light">
+              <div className="border border-pink-200 rounded-lg p-4">
+                <h4 className="text-pink-500 font-medium mb-2">Stage B:</h4>
+                <p className="text-gray-700 font-light">
                   This stage is sometimes called silent heart failure. It means
                   you have changes in your heart function, but you haven&apos;t
                   developed heart failure symptoms yet.
                 </p>
               </div>
-              <div class="border border-pink-200 rounded-lg p-4">
-                <h4 class="text-pink-500 font-medium mb-2">Stage C:</h4>
-                <p class="text-gray-700 font-light">
+              <div className="border border-pink-200 rounded-lg p-4">
+                <h4 className="text-pink-500 font-medium mb-2">Stage C:</h4>
+                <p className="text-gray-700 font-light">
                   Stage C means heart failure has been diagnosed, and the person
                   has had symptoms.
                 </p>
               </div>
-              <div class="border border-pink-200 rounded-lg p-4">
-                <h4 class="text-pink-500 font-medium mb-2">Stage D:</h4>
-                <p class="text-gray-700 font-light">
+              <div className="border border-pink-200 rounded-lg p-4">
+                <h4 className="text-pink-500 font-medium mb-2">Stage D:</h4>
+                <p className="text-gray-700 font-light">
                   Stage D is advanced heart failure that isn&apos;t responding
                   to standard treatment. A person usually has symptoms when they
                   are being mildly active or even resting.
@@ -659,35 +659,35 @@ export default function page() {
           </div>
         </div>
 
-        <div class="mb-12 grid md:grid-cols-2 gap-8">
+        <div className="mb-12 grid md:grid-cols-2 gap-8">
           <div>
-            <h2 class="text-2xl font-medium mb-6">
+            <h2 className="text-2xl font-medium mb-6">
               How is Heart Failure Treated?
             </h2>
-            <p class="mb-6 font-light">
+            <p className="mb-6 font-light">
               We have many proven treatments to improve heart function, symptoms
               and survival for patients.
             </p>
 
-            <div class="mb-6">
-              <h3 class="text-pink-500 font-medium mb-4">
+            <div className="mb-6">
+              <h3 className="text-pink-500 font-medium mb-4">
                 Treatments also improve quality of life by:
               </h3>
-              <ul class="space-y-2 text-gray-700 font-light">
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <ul className="space-y-2 text-gray-700 font-light">
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   Addressing any underlying causes
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   Relieving symptoms
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   Improving overall health
                 </li>
-                <li class="flex items-center">
-                  <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+                <li className="flex items-center">
+                  <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                   Education and lifestyle choices
                 </li>
               </ul>
@@ -695,43 +695,43 @@ export default function page() {
           </div>
 
           <div>
-            <h3 class="text-pink-500 font-medium mb-4">
+            <h3 className="text-pink-500 font-medium mb-4">
               Education is an important part of heart failure treatment. Your
               team will talk with you about the importance of:
             </h3>
-            <ul class="space-y-2 text-gray-700 font-light">
-              <li class="flex items-center">
-                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+            <ul className="space-y-2 text-gray-700 font-light">
+              <li className="flex items-center">
+                <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Controlling blood pressure and controlling blood sugar (if you
                 have diabetes)
               </li>
-              <li class="flex items-center">
-                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <li className="flex items-center">
+                <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Eating a heart-healthy diet, including controlling sodium
               </li>
-              <li class="flex items-center">
-                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <li className="flex items-center">
+                <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Participating in moderate exercise
               </li>
-              <li class="flex items-center">
-                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <li className="flex items-center">
+                <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Recognizing small warning signs in your body, such as swelling
                 or weight gain
               </li>
-              <li class="flex items-center">
-                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <li className="flex items-center">
+                <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Getting enough sleep
               </li>
-              <li class="flex items-center">
-                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <li className="flex items-center">
+                <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Losing weight if necessary
               </li>
-              <li class="flex items-center">
-                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <li className="flex items-center">
+                <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Quitting smoking
               </li>
-              <li class="flex items-center">
-                <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <li className="flex items-center">
+                <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
                 Avoiding alcohol
               </li>
             </ul>
@@ -739,7 +739,7 @@ export default function page() {
         </div>
 
         <div className="mb-12">
-          <h2 class="text-2xl font-medium mb-6">
+          <h2 className="text-2xl font-medium mb-6">
             Medications for Heart Failure
           </h2>
           <div className="grid lg:grid-cols-1 gap-4">
@@ -760,40 +760,40 @@ export default function page() {
           </div>
         </div>
 
-        <div class="mb-12">
-          <h2 class="text-2xl font-medium mb-6">Surgery for Heart Failure</h2>
-          <p class="text-gray-700 mb-6 font-light">
+        <div className="mb-12">
+          <h2 className="text-2xl font-medium mb-6">Surgery for Heart Failure</h2>
+          <p className="text-gray-700 mb-6 font-light">
             Your doctor may recommend surgery to implant a medical device that
             helps the heart function more effectively:
           </p>
 
-          <ul class="space-y-4 mb-6 list-disc list-inside ml-4">
-            <li class="flex items-center">
-              <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-              <p class="text-gray-700 font-light text-md">
+          <ul className="space-y-4 mb-6 list-disc list-inside ml-4">
+            <li className="flex items-center">
+              <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <p className="text-gray-700 font-light text-md">
                 Pacemaker, which maintains a steady heart beat in people with a
                 slow or irregular heartbeat
               </p>
             </li>
 
-            <li class="flex items-center">
-              <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-              <p class="text-gray-700 font-light text-md">
+            <li className="flex items-center">
+              <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <p className="text-gray-700 font-light text-md">
                 Implantable cardioverter defibrillator (ICD), which monitors the
                 heart for fast rhythm and delivers an electrical shock to reset
                 normal rhythm
               </p>
             </li>
-            <li class="flex items-center">
-              <span class="text-pink-500 mr-2 text-2xl leading-none">•</span>
-              <p class="text-gray-700 font-light text-md">
+            <li className="flex items-center">
+              <span className="text-pink-500 mr-2 text-2xl leading-none">•</span>
+              <p className="text-gray-700 font-light text-md">
                 Left ventricular assist device (LVAD), which takes over the
                 pumping action of the heart
               </p>
             </li>
           </ul>
 
-          <p class="text-gray-700 font-light text-md">
+          <p className="text-gray-700 font-light text-md">
             People with advanced heart failure may be candidates for heart
             transplantation. A heart transplant replaces the diseased heart with
             a donated heart from a person who has died.

@@ -109,8 +109,8 @@ const symptomsDVT = [
   },
   {
     category: "",
-    description: `<p ><strong class="font-light">When a clot moves to the lungs, signs of pulmonary embolism (PE) can develop, including:</strong></p>
-    <ul class="list-disc list-inside ml-2">
+    description: `<p ><strong className="font-light">When a clot moves to the lungs, signs of pulmonary embolism (PE) can develop, including:</strong></p>
+    <ul className="list-disc list-inside ml-2">
     <li>Chest pain and shortness of breath</li>
     <li>Lightheadedness or fainting</li>
     <li>Coughing up blood</li>
@@ -150,27 +150,27 @@ const diagnosisDVT = [
 const surgeryData = [
   {
     title: "",
-    description: `<strong>Stay active:</strong><span class="text-black"> Avoid sitting or lying down for long periods.</span>`,
+    description: `<strong>Stay active:</strong><span className="text-black"> Avoid sitting or lying down for long periods.</span>`,
     minHeight: "min-h-[100px] text-center",
   },
   {
     title: "",
-    description: `<strong>Use compression stockings</strong><span class="text-black"> after surgery if recommended.</span>`,
+    description: `<strong>Use compression stockings</strong><span className="text-black"> after surgery if recommended.</span>`,
     minHeight: "min-h-[100px] text-center",
   },
   {
     title: "",
-    description: `<strong>Quit smoking</strong><span class="text-black"> and manage conditions like obesity and hypertension.</span>`,
+    description: `<strong>Quit smoking</strong><span className="text-black"> and manage conditions like obesity and hypertension.</span>`,
     minHeight: "min-h-[100px] text-center",
   },
   {
     title: "",
-    description: `<strong>Hydrate</strong><span class="text-black"> during long flights or car rides.</span>`,
+    description: `<strong>Hydrate</strong><span className="text-black"> during long flights or car rides.</span>`,
     minHeight: "min-h-[100px] text-center",
   },
   {
     title: "",
-    description: `<strong>Take medications as prescribed</strong><span class="text-black"> to prevent clotting.</span>`,
+    description: `<strong>Take medications as prescribed</strong><span className="text-black"> to prevent clotting.</span>`,
     minHeight: "min-h-[100px] text-center",
   },
 ];

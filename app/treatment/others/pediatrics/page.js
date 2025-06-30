@@ -16,10 +16,10 @@ const data = {
   bannerImage: "/others/pediatrics_banner.png",
   title: "Pediatric",
   description: ``,
-  overview: ` <p class="text-lg mb-6 font-light">
+  overview: ` <p className="text-lg mb-6 font-light">
      At HCI, the pediatrics department is dedicated to providing compassionate, comprehensive healthcare for children from infancy through adolescence. We offer a wide range of services, from routine check-ups and vaccinations to the diagnosis and treatment of more complex pediatric conditions. Our team of experienced pediatricians, specialists, and nursing staff are committed to ensuring that every child receives personalized, expert care in a safe and nurturing environment.
     </p>
-    <p class="text-lg mb-6">
+    <p className="text-lg mb-6">
      We understand that children's healthcare requires a unique approach that is sensitive to their physical, emotional, and developmental needs. Whether managing chronic conditions, addressing acute illnesses, or supporting child development, we strive to create positive healthcare experiences for both the child and their family.
     </p>`,
   sections: [
