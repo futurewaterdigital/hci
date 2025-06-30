@@ -1,21 +1,23 @@
 import React from "react";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: "Cerebral Palsy",
-  description: "Healthcare International.",
+  title: "Bladder Cancer: Diagnosis, Treatment & Surgery Options",
+  description: "lung cancer, pneumonectomy, protontherapy, targeted therapy, small cell lung cancer, non small cell lung cancer, stage 4 lung cancer, stage 1 lung cancer symptoms, types of lung cancer, stage 4 lung cancer symptoms, lung, small cell carcinoma lung cancer",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "bladder cancer, urinary bladder cancer, cystoscopy, urothelial carcinoma, bladder, smoking, cystoscopy procedure, protontherapy, targeted therapy",
+
   openGraph: {
     url: "https://healthcareinternational.in/",
-    title: "Healthcare International",
-    description: "Healthcare International",
+    title: "Bladder Cancer: Diagnosis, Treatment & Surgery Options",
+    description: "lung cancer, pneumonectomy, protontherapy, targeted therapy, small cell lung cancer, non small cell lung cancer, stage 4 lung cancer, stage 1 lung cancer symptoms, types of lung cancer, stage 4 lung cancer symptoms, lung, small cell carcinoma lung cancer",
     images: [
       {
         url: "images/homeBanner.jpg",
         width: 800,
         height: 600,
-        alt: "Healthcare International",
+        alt: "Bladder Cancer: Diagnosis, Treatment & Surgery Options",
       },
     ],
   },

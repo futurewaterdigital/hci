@@ -1,29 +1,31 @@
-import React from 'react'
-import Header from '@/components/Header/page'
-import Footer from '@/components/Footer/page'
+import React from "react";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: 'Brain Tumours and Brain Cancer',
-  description: 'Healthcare International.',
-  metadataBase: new URL('https://healthcareinternational.in/'),
+  title: "Celiac Disease | Symptoms, Diagnosis & Gluten-Free Diet Management",
+  description: "Explore the symptoms and causes of celiac disease, gluten and wheat intolerance, and gut-related issues. Find guidance on testing, non-celiac gluten sensitivity, and managing the condition with a gluten-free diet.",
+  metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "celiacdisease, celiac, gut infection, glutenfree diet, gluten intolerance, wheat intolerance, gluten, intestine, diarrhoea, nausea",
+
   openGraph: {
-    url: 'https://healthcareinternational.in/',
-    title: 'Healthcare International',
-    description: 'Healthcare International',
+    url: "https://healthcareinternational.in/",
+    title: "Celiac Disease | Symptoms, Diagnosis & Gluten-Free Diet Management",
+    description: "Explore the symptoms and causes of celiac disease, gluten and wheat intolerance, and gut-related issues. Find guidance on testing, non-celiac gluten sensitivity, and managing the condition with a gluten-free diet.",
     images: [
       {
-        url: 'images/homeBanner.jpg',
+        url: "images/homeBanner.jpg",
         width: 800,
         height: 600,
-        alt: 'Healthcare International',
+        alt: "Celiac Disease | Symptoms, Diagnosis & Gluten-Free Diet Management",
       },
     ],
   },
   icons: {
-    icon: 'favicon_io/favicon-32x32.png',
-    shortcut: 'favicon_io/favicon.ico',
+    icon: "favicon_io/favicon-32x32.png",
+    shortcut: "favicon_io/favicon.ico",
   },
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -32,5 +34,5 @@ export default function RootLayout({ children }) {
       {children}
       <Footer />
     </>
-  )
+  );
 }

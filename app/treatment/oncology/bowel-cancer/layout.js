@@ -1,21 +1,23 @@
 import React from "react";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import Header from "../../../../components/Header/page";
+import Footer from "../../../../components/Footer/page";
 
 export const metadata = {
-  title: "Cerebral Palsy",
-  description: "Healthcare International.",
+  title: "Bowel Cancer: Symptoms, Treatment & IBD Care | Crohn’s & Ulcerative Colitis",
+  description: "Understand bowel cancer and its link to Crohn's disease and ulcerative colitis. Explore symptoms, diagnosis, latest treatments, and diet tips for long-term management.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  keywords: "coloncancer, rectalcancer, gicancer, fit, fobt, crohn's disease, colectomy, radiationtherapy, targetedtherapy, protontherapy",
+
   openGraph: {
     url: "https://healthcareinternational.in/",
-    title: "Healthcare International",
-    description: "Healthcare International",
+    title: "Bowel Cancer: Symptoms, Treatment & IBD Care | Crohn’s & Ulcerative Colitis",
+    description: "Understand bowel cancer and its link to Crohn's disease and ulcerative colitis. Explore symptoms, diagnosis, latest treatments, and diet tips for long-term management.",
     images: [
       {
         url: "images/homeBanner.jpg",
         width: 800,
         height: 600,
-        alt: "Healthcare International",
+        alt: "Bowel Cancer: Symptoms, Treatment & IBD Care | Crohn’s & Ulcerative Colitis",
       },
     ],
   },
@@ -32,5 +34,6 @@ export default function RootLayout({ children }) {
       {children}
       <Footer />
     </>
+
   );
 }

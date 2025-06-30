@@ -377,7 +377,7 @@ function page() {
           </div>
         </div>
       </section>
-      <section className="md:container mx-auto mx-4 md:px-6 px-0">
+      <section className="md:container mx-auto md:px-6 px-0">
         <H2
           title="Prevention"
           className="text-center text-2xl font-bold space-y-4"

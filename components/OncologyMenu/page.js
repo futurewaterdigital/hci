@@ -32,8 +32,8 @@ function Menu() {
       url: '/treatment/oncology/genitourinary-cancer',
     },
     {
-      menu: 'Skin Cancer',
-      url: '/treatment/oncology/skin-cancer',
+      menu: 'Stomach Cancer',
+      url: '/treatment/oncology/stomach-cancer',
     },
   ]
 
@@ -67,7 +67,7 @@ function Menu() {
       </div>
 
       {/* Remaining 2 items in a second row */}
-      <div className="flex md:gap-8 justify-center uppercase font-semibold">
+      <div className="flex md:gap-8 gap-4 justify-center uppercase font-semibold">
         {mainGastro.slice(6).map((item, index) => (
           <Link
             key={index}
