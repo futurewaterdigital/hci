@@ -118,27 +118,27 @@ const data = {
   symptoms: [
     {
       category: '',
-      description: `<span class='font-medium'>Increased Head Size:</span> In infants, a rapid increase in head circumference may be noticeable.`,
+      description: `<span className='font-medium'>Increased Head Size:</span> In infants, a rapid increase in head circumference may be noticeable.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Nausea and Vomiting:</span> These symptoms can arise due to increased intracranial pressure.`,
+      description: `<span className='font-medium'>Nausea and Vomiting:</span> These symptoms can arise due to increased intracranial pressure.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Headaches:</span> Persistent headaches, particularly in older children and adults, may be a common complaint.`,
+      description: `<span className='font-medium'>Headaches:</span> Persistent headaches, particularly in older children and adults, may be a common complaint.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Vision Problems:</span> Blurred or double vision may occur due to pressure on the optic nerve.`,
+      description: `<span className='font-medium'>Vision Problems:</span> Blurred or double vision may occur due to pressure on the optic nerve.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Cognitive Impairments:</span> Difficulty in concentrating, memory issues, or behavioural changes can be observed.`,
+      description: `<span className='font-medium'>Cognitive Impairments:</span> Difficulty in concentrating, memory issues, or behavioural changes can be observed.`,
       bgColor: 'bg-hciPrimary text-white',
     },
   ],
@@ -146,17 +146,17 @@ const data = {
   diagnosis: [
     {
       category: '',
-      description: `<span class='font-medium'>Physical Examination:</span> A thorough assessment of symptoms and medical history, including neurological evaluation.`,
+      description: `<span className='font-medium'>Physical Examination:</span> A thorough assessment of symptoms and medical history, including neurological evaluation.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Imaging Studies:</span> MRI and CT scans are critical for visualising the brain's structure and identifying fluid accumulation.`,
+      description: `<span className='font-medium'>Imaging Studies:</span> MRI and CT scans are critical for visualising the brain's structure and identifying fluid accumulation.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Ultrasound:</span> In infants, cranial ultrasound can be used to detect hydrocephalus and monitor the size of the ventricles.`,
+      description: `<span className='font-medium'>Ultrasound:</span> In infants, cranial ultrasound can be used to detect hydrocephalus and monitor the size of the ventricles.`,
       bgColor: 'bg-hciSecondary text-white',
     },
   ],

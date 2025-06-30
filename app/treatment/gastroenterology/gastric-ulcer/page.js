@@ -53,15 +53,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold">Description:</span> These ulcers form quickly, usually due to severe stress, trauma, or medication use.',
+            '<span className="font-semibold">Description:</span> These ulcers form quickly, usually due to severe stress, trauma, or medication use.',
         },
         {
           description:
-            '<span class="font-semibold">Symptoms:</span> Sudden onset of sharp abdominal pain, often accompanied by nausea.',
+            '<span className="font-semibold">Symptoms:</span> Sudden onset of sharp abdominal pain, often accompanied by nausea.',
         },
         {
           description:
-            '<span class="font-semibold">Treatment:</span> Focuses on relieving symptoms and addressing the trigger, such as medications or stress.',
+            '<span className="font-semibold">Treatment:</span> Focuses on relieving symptoms and addressing the trigger, such as medications or stress.',
         },
       ],
     },
@@ -71,15 +71,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold">Description:</span> Long-standing ulcers that develop gradually, often due to persistent irritation or infections like H. pylori.',
+            '<span className="font-semibold">Description:</span> Long-standing ulcers that develop gradually, often due to persistent irritation or infections like H. pylori.',
         },
         {
           description:
-            '<span class="font-semibold">Symptoms:</span> Burning or gnawing stomach pain, typically worse on an empty stomach.',
+            '<span className="font-semibold">Symptoms:</span> Burning or gnawing stomach pain, typically worse on an empty stomach.',
         },
         {
           description:
-            '<span class="font-semibold">Treatment:</span> Requires a combination of lifestyle changes, medications, and infection control.',
+            '<span className="font-semibold">Treatment:</span> Requires a combination of lifestyle changes, medications, and infection control.',
         },
       ],
     },
@@ -89,15 +89,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold">Description:</span>  A severe form of gastric ulcer that erodes a blood vessel, leading to gastrointestinal bleeding.',
+            '<span className="font-semibold">Description:</span>  A severe form of gastric ulcer that erodes a blood vessel, leading to gastrointestinal bleeding.',
         },
         {
           description:
-            '<span class="font-semibold">Symptoms:</span> Symptoms include black or tarry stools, vomiting blood, and dizziness.',
+            '<span className="font-semibold">Symptoms:</span> Symptoms include black or tarry stools, vomiting blood, and dizziness.',
         },
         {
           description:
-            '<span class="font-semibold">Treatment:</span> Immediate medical intervention is necessary, possibly including endoscopic treatment or surgery.',
+            '<span className="font-semibold">Treatment:</span> Immediate medical intervention is necessary, possibly including endoscopic treatment or surgery.',
         },
       ],
     },
@@ -107,14 +107,14 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold">Description:</span> A life-threatening condition where the ulcer creates a hole in the stomach wall, allowing contents to leak into the abdominal cavity.',
+            '<span className="font-semibold">Description:</span> A life-threatening condition where the ulcer creates a hole in the stomach wall, allowing contents to leak into the abdominal cavity.',
         },
         {
-          description: '<span class="font-semibold">Symptoms:</span> Sudden, severe abdominal pain and fever.',
+          description: '<span className="font-semibold">Symptoms:</span> Sudden, severe abdominal pain and fever.',
         },
         {
           description:
-            '<span class="font-semibold">Treatment:</span> Emergency surgery is required to close the perforation and prevent infection.',
+            '<span className="font-semibold">Treatment:</span> Emergency surgery is required to close the perforation and prevent infection.',
         },
       ],
     },
@@ -138,18 +138,18 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Proton Pump Inhibitors (PPIs):</span> Decrease stomach acid production, allowing the ulcer to heal.',
+            '<span className="font-semibold text-hciSecondary">Proton Pump Inhibitors (PPIs):</span> Decrease stomach acid production, allowing the ulcer to heal.',
         },
         {
-          description: '<span class="font-semibold text-hciSecondary">Antibiotics:</span> Used to treat H. pylori infection.',
-        },
-        {
-          description:
-            '<span class="font-semibold text-hciSecondary">Antacids:</span> Provide quick relief from stomach pain by neutralizing acid.',
+          description: '<span className="font-semibold text-hciSecondary">Antibiotics:</span> Used to treat H. pylori infection.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">H2 Receptor Blockers:</span> Reduce acid production to help manage symptoms.',
+            '<span className="font-semibold text-hciSecondary">Antacids:</span> Provide quick relief from stomach pain by neutralizing acid.',
+        },
+        {
+          description:
+            '<span className="font-semibold text-hciSecondary">H2 Receptor Blockers:</span> Reduce acid production to help manage symptoms.',
         },
       ],
     },
@@ -195,31 +195,31 @@ const data = {
     {
       category: "",
       description:
-        '<span class="font-semibold">Abdominal Pain:</span> Burning or dull ache, usually located in the upper abdomen, often worsening after meals.',
+        '<span className="font-semibold">Abdominal Pain:</span> Burning or dull ache, usually located in the upper abdomen, often worsening after meals.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        '<span class="font-semibold">Nausea or Vomiting:</span> May include vomiting blood in severe cases.',
+        '<span className="font-semibold">Nausea or Vomiting:</span> May include vomiting blood in severe cases.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        '<span class="font-semibold">Bloating and Indigestion:</span> Discomfort and a feeling of fullness after eating.',
+        '<span className="font-semibold">Bloating and Indigestion:</span> Discomfort and a feeling of fullness after eating.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        '<span class="font-semibold">Weight Loss:</span> Due to loss of appetite or fear of eating because of pain.',
+        '<span className="font-semibold">Weight Loss:</span> Due to loss of appetite or fear of eating because of pain.',
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        '<span class="font-semibold">Black or Tarry Stools:</span> A sign of bleeding in the digestive tract.',
+        '<span className="font-semibold">Black or Tarry Stools:</span> A sign of bleeding in the digestive tract.',
       bgColor: 'bg-hciPrimary text-white',
     },
   ],
@@ -228,24 +228,24 @@ const data = {
     {
       category: "",
       description:
-        '<span class="font-semibold">Medical History and Symptoms:</span> Healthcare professionals will assess symptoms, medication use, and lifestyle factors.',
+        '<span className="font-semibold">Medical History and Symptoms:</span> Healthcare professionals will assess symptoms, medication use, and lifestyle factors.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class="font-semibold">Endoscopy:</span> A small camera is inserted through the mouth to visually examine the stomach lining and take tissue samples if necessary.`,
+      description: `<span className="font-semibold">Endoscopy:</span> A small camera is inserted through the mouth to visually examine the stomach lining and take tissue samples if necessary.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: "",
       description:
-        '<span class="font-semibold">H. pylori Testing:</span> Blood, stool, or breath tests can confirm the presence of the H. pylori infection.',
+        '<span className="font-semibold">H. pylori Testing:</span> Blood, stool, or breath tests can confirm the presence of the H. pylori infection.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: "",
       description:
-        '<span class="font-semibold">Imaging Tests:</span> In some cases, X-rays or CT scans may be used to detect perforation or obstruction.',
+        '<span className="font-semibold">Imaging Tests:</span> In some cases, X-rays or CT scans may be used to detect perforation or obstruction.',
       bgColor: 'bg-hciSecondary text-white',
     },
   ],

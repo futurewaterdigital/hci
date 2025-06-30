@@ -105,7 +105,7 @@ export default function RareCancers() {
       {/* Banner Image */}
       <Banner image="/oncology/rare-cancer-banner.png" />
       {/* <!-- Main Content --> */}
-      <main class="md:container mx-auto md:py-12 py-1 md:px-6 px-4">
+      <main className="md:container mx-auto md:py-12 py-1 md:px-6 px-4">
         <H1 title="Rare Cancers" />
         <p className="mt-4 text-gray-600 text-start  max-w-7xl mx-auto font-light">
           Rare cancers are defined as cancers that occur in a small percentage of the population, often with unique characteristics, and are not as commonly diagnosed as more prevalent cancers like breast, lung and colorectal cancers. In India, the occurrence of rare cancers poses unique challenges, as the healthcare infrastructure is not always equipped to handle these less common conditions, and awareness among the public and healthcare providers is limited.
@@ -126,7 +126,7 @@ export default function RareCancers() {
           knowledge or diagnostic tools required.
         </p>
 
-        <h2 class="text-2xl md:my-16 my-8 font-medium text-center text-black">
+        <h2 className="text-2xl md:my-16 my-8 font-medium text-center text-black">
           Some of the Rare Cancers identified in the context could include:
         </h2>
 
@@ -163,7 +163,7 @@ export default function RareCancers() {
           </p>
         </div>
 
-        <h2 class="text-2xl my-6 font-medium text-center text-black">
+        <h2 className="text-2xl my-6 font-medium text-center text-black">
           Challenges in Managing Rare Cancers
         </h2>
 

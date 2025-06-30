@@ -2,7 +2,7 @@ import Link from "next/link";
 export default function PriceComparison() {
   return (
     <div className="bg-white container mx-auto">
-      <h3 class="py-4 lg:text-3xl text-2xl p-4 lg:p-4 text-center">
+      <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 text-center">
         Cost Comparison - India vs Other Countries
       </h3>
       <div className="flex justify-center items-center">

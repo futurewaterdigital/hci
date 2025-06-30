@@ -109,9 +109,9 @@ const data = {
       description:
         `
       <p>Tumours may lead to an overproduction or underproduction of hormones, causing a range of symptoms, such as:</p>
-        <li class="text-hciSecondary"><span class="font-medium">Cushing&apos;s Disease:</span> <span class='text-black'>Caused by excessive production of cortisol, leading to weight gain, high blood pressure, and diabetes.</span></li>
-        <li class="text-hciSecondary"><span class="font-medium">Acromegaly:</span> <span class='text-black'>Caused by excess growth hormone, resulting in enlarged hands, feet, and facial features.</span></li>
-        <li class="text-hciSecondary"><span class="font-medium">Prolactinoma:</span> <span class='text-black'>A type of tumour that produces excess prolactin, causing menstrual irregularities in women and erectile dysfunction in men.</span></li>
+        <li className="text-hciSecondary"><span className="font-medium">Cushing&apos;s Disease:</span> <span className='text-black'>Caused by excessive production of cortisol, leading to weight gain, high blood pressure, and diabetes.</span></li>
+        <li className="text-hciSecondary"><span className="font-medium">Acromegaly:</span> <span className='text-black'>Caused by excess growth hormone, resulting in enlarged hands, feet, and facial features.</span></li>
+        <li className="text-hciSecondary"><span className="font-medium">Prolactinoma:</span> <span className='text-black'>A type of tumour that produces excess prolactin, causing menstrual irregularities in women and erectile dysfunction in men.</span></li>
 `,
       bgColor: 'text-black',
     },

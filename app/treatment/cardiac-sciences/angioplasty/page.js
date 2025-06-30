@@ -61,10 +61,10 @@ function page() {
       title: "What happens during Angioplasty?",
       description: "",
       list: [
-        "<span class='text-hciSecondary font-semibold'>Sedation:</span> You'll receive medication to help you relax but remain awake.",
-        "<span class='text-hciSecondary font-semibold'>Insertion:</span> A catheter is inserted through a sheath into the blood vessel.",
-        "<span class='text-hciSecondary font-semibold'>Imaging and Inflation:</span> Contrast dye is used to locate the blockage, and the balloon is inflated to open the artery.",
-        "<span class='text-hciSecondary font-semibold'>Stent Placement:</span> A stent is deployed, if necessary, to maintain blood flow.",
+        "<span className='text-hciSecondary font-semibold'>Sedation:</span> You'll receive medication to help you relax but remain awake.",
+        "<span className='text-hciSecondary font-semibold'>Insertion:</span> A catheter is inserted through a sheath into the blood vessel.",
+        "<span className='text-hciSecondary font-semibold'>Imaging and Inflation:</span> Contrast dye is used to locate the blockage, and the balloon is inflated to open the artery.",
+        "<span className='text-hciSecondary font-semibold'>Stent Placement:</span> A stent is deployed, if necessary, to maintain blood flow.",
       ],
       extra:
         "The procedure typically takes 1-2 hours, and most patients spend one night in the hospital for observation.",

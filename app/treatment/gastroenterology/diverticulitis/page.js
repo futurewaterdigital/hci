@@ -22,27 +22,27 @@ const data = {
     {
       title: "",
       description:
-        '<span class="font-semibold ">Tear or injury to the diverticula:</span> This can trigger inflammation or infection.',
+        '<span className="font-semibold ">Tear or injury to the diverticula:</span> This can trigger inflammation or infection.',
     },
     {
       title: "",
       description:
-        '<span class="font-semibold ">Straining during bowel movements:</span> Hard stools may stretch and injure the diverticula.',
+        '<span className="font-semibold ">Straining during bowel movements:</span> Hard stools may stretch and injure the diverticula.',
     },
     {
       title: "",
       description:
-        '<span class="font-semibold ">Colitis or viral infections:</span> Chronic colon inflammation may predispose diverticula to rupture.',
+        '<span className="font-semibold ">Colitis or viral infections:</span> Chronic colon inflammation may predispose diverticula to rupture.',
     },
     {
       title: "",
       description:
-        '<span class="font-semibold ">Bacterial infection:</span> Fecal matter trapped in the diverticula can provide a breeding ground for bacteria.',
+        '<span className="font-semibold ">Bacterial infection:</span> Fecal matter trapped in the diverticula can provide a breeding ground for bacteria.',
     },
     {
       title: "",
       description:
-        '<span class="font-semibold ">Low-fibre diet:</span> A lack of dietary fibre can lead to constipation, increasing pressure on the colon.',
+        '<span className="font-semibold ">Low-fibre diet:</span> A lack of dietary fibre can lead to constipation, increasing pressure on the colon.',
     },
   ],
 
@@ -96,19 +96,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Rest and liquid diet:</span> Allows the digestive tract to heal.',
+            '<span className="font-semibold text-hciSecondary">Rest and liquid diet:</span> Allows the digestive tract to heal.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Antibiotics:</span> Prescribed if there is an infection.',
+            '<span className="font-semibold text-hciSecondary">Antibiotics:</span> Prescribed if there is an infection.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Over-the-counter pain relief:</span> Extends survival in ALS patients by slowing the progression of the disease.',
+            '<span className="font-semibold text-hciSecondary">Over-the-counter pain relief:</span> Extends survival in ALS patients by slowing the progression of the disease.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Antidepressants/Anxiolytics:</span> Paracetamol/acetaminophen is recommended over NSAIDs to reduce the risk of GI bleeding.',
+            '<span className="font-semibold text-hciSecondary">Antidepressants/Anxiolytics:</span> Paracetamol/acetaminophen is recommended over NSAIDs to reduce the risk of GI bleeding.',
         },
       ],
     },
@@ -119,19 +119,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Intravenous antibiotics or antivirals:</span> For infections that need immediate care.',
+            '<span className="font-semibold text-hciSecondary">Intravenous antibiotics or antivirals:</span> For infections that need immediate care.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Fluid and electrolyte management:</span> Through IV drips to maintain hydration.',
+            '<span className="font-semibold text-hciSecondary">Fluid and electrolyte management:</span> Through IV drips to maintain hydration.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Endoscopic procedures:</span> To manage complications like bleeding or abscess drainage.',
+            '<span className="font-semibold text-hciSecondary">Endoscopic procedures:</span> To manage complications like bleeding or abscess drainage.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Surgery:</span> In chronic or recurrent cases, a bowel resection may be necessary to remove the affected part of the colon.',
+            '<span className="font-semibold text-hciSecondary">Surgery:</span> In chronic or recurrent cases, a bowel resection may be necessary to remove the affected part of the colon.',
         },
       ],
     },
@@ -156,7 +156,7 @@ const data = {
   symptoms: [
     {
       category: "",
-      description: `<span class="font-semibold ">Severe abdominal pain:</span> Typically felt on the lower left side, though it can vary based on ethnicity (e.g., upper right pain in some populations).`,
+      description: `<span className="font-semibold ">Severe abdominal pain:</span> Typically felt on the lower left side, though it can vary based on ethnicity (e.g., upper right pain in some populations).`,
       bgColor: "bg-hciPrimary text-white",
     },
     {
@@ -167,7 +167,7 @@ const data = {
     {
       category: "",
       description:
-        '<span class="font-semibold ">Fever:</span> Indicating possible infection.',
+        '<span className="font-semibold ">Fever:</span> Indicating possible infection.',
       bgColor: "bg-hciPrimary text-white",
     },
     {
@@ -191,32 +191,32 @@ const data = {
     {
       category: "",
       description:
-        '<span class="font-semibold ">Medical history and physical exam:</span> A healthcare provider may suspect diverticulitis based on symptoms and abdominal tenderness.',
+        '<span className="font-semibold ">Medical history and physical exam:</span> A healthcare provider may suspect diverticulitis based on symptoms and abdominal tenderness.',
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description: `
-      <span class="font-semibold ">CT Scan:</span> This imaging test helps identify inflammation, infections, or complications.
+      <span className="font-semibold ">CT Scan:</span> This imaging test helps identify inflammation, infections, or complications.
       `,
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description:
-        '<span class="font-semibold ">Blood tests:</span> To check for signs of infection or inflammation.',
+        '<span className="font-semibold ">Blood tests:</span> To check for signs of infection or inflammation.',
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description:
-        '<span class="font-semibold ">Colonoscopy:</span> Sometimes used to assess the colon directly, though it is avoided during acute flare-ups to reduce the risk of perforation.',
+        '<span className="font-semibold ">Colonoscopy:</span> Sometimes used to assess the colon directly, though it is avoided during acute flare-ups to reduce the risk of perforation.',
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description:
-        '<span class="font-semibold ">Stool and urine tests:</span> Used to rule out other conditions like infections or gastrointestinal bleeding.',
+        '<span className="font-semibold ">Stool and urine tests:</span> Used to rule out other conditions like infections or gastrointestinal bleeding.',
       bgColor: "bg-hciSecondary text-white",
     },
   ],

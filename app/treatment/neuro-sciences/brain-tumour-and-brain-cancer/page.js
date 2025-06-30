@@ -100,19 +100,19 @@ const data = {
         // },
         {
           description:
-            '<strong class="text-hciSecondary">Craniotomy:</strong> A portion of the skull is removed to access the tumour.',
+            '<strong className="text-hciSecondary">Craniotomy:</strong> A portion of the skull is removed to access the tumour.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Minimally Invasive Surgery:</strong> Small incisions with the use of endoscopes or robotic systems for hard-to-reach tumours.',
+            '<strong className="text-hciSecondary">Minimally Invasive Surgery:</strong> Small incisions with the use of endoscopes or robotic systems for hard-to-reach tumours.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Awake Brain Surgery:</strong> Performed while the patient is conscious to ensure no critical functions (e.g., speech) are impacted during tumour removal.',
+            '<strong className="text-hciSecondary">Awake Brain Surgery:</strong> Performed while the patient is conscious to ensure no critical functions (e.g., speech) are impacted during tumour removal.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Challenges:</strong> Tumours near critical brain regions may not be fully removable, requiring additional treatments.',
+            '<strong className="text-hciSecondary">Challenges:</strong> Tumours near critical brain regions may not be fully removable, requiring additional treatments.',
         },
       ],
     },
@@ -124,19 +124,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<strong class="text-hciSecondary">External Beam Radiation Therapy (EBRT):</strong> Directs radiation from outside the body over multiple sessions.',
+            '<strong className="text-hciSecondary">External Beam Radiation Therapy (EBRT):</strong> Directs radiation from outside the body over multiple sessions.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Stereotactic Radiosurgery (SRS):</strong> Delivers highly focused radiation in a single or few sessions (e.g., Gamma Knife, Cyber Knife). Ideal for small, inoperable tumours.',
+            '<strong className="text-hciSecondary">Stereotactic Radiosurgery (SRS):</strong> Delivers highly focused radiation in a single or few sessions (e.g., Gamma Knife, Cyber Knife). Ideal for small, inoperable tumours.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Proton Therapy:</strong> Uses protons as conventional radiation therapy to minimize damage to surrounding healthy tissue.',
+            '<strong className="text-hciSecondary">Proton Therapy:</strong> Uses protons as conventional radiation therapy to minimize damage to surrounding healthy tissue.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Side Effects:</strong> Fatigue, hair loss, and brain swelling can occur, requiring supportive care.',
+            '<strong className="text-hciSecondary">Side Effects:</strong> Fatigue, hair loss, and brain swelling can occur, requiring supportive care.',
         },
       ],
     },
@@ -146,19 +146,19 @@ const data = {
         "Chemotherapy drugs stop tumour growth or kill cancer cells directly.",
       aneurysmSymptoms: [
         {
-          description: `<p><strong class="text-hciSecondary">Administration Methods:</strong> Directs radiation from outside the body over multiple sessions.</p>
-            <p><strong class="text-hciSecondary">1. Oral:</strong> Pills taken at home</p>
-            <p><strong class="text-hciSecondary">2. Intravenous (IV):</strong> Delivered directly into the bloodstream.</p>
-            <p><strong class="text-hciSecondary">3. Intrathecal:</strong> Injected into the cerebrospinal fluid for central nervous system cancers.</p>
+          description: `<p><strong className="text-hciSecondary">Administration Methods:</strong> Directs radiation from outside the body over multiple sessions.</p>
+            <p><strong className="text-hciSecondary">1. Oral:</strong> Pills taken at home</p>
+            <p><strong className="text-hciSecondary">2. Intravenous (IV):</strong> Delivered directly into the bloodstream.</p>
+            <p><strong className="text-hciSecondary">3. Intrathecal:</strong> Injected into the cerebrospinal fluid for central nervous system cancers.</p>
             `,
         },
         {
           description:
-            '<strong class="text-hciSecondary">Common Drugs:</strong> Temozolomide (for glioblastoma) and Carmustine.',
+            '<strong className="text-hciSecondary">Common Drugs:</strong> Temozolomide (for glioblastoma) and Carmustine.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Challenges:</strong> Chemotherapy can lead to side effects like nausea, hair loss, and lowered immunity.',
+            '<strong className="text-hciSecondary">Challenges:</strong> Chemotherapy can lead to side effects like nausea, hair loss, and lowered immunity.',
         },
       ],
     },
@@ -170,19 +170,19 @@ const data = {
 
         {
           description:
-            '<strong class="text-hciSecondary">EGFR Inhibitors:</strong> Effective for tumours with EGFR mutations (common in glioblastoma).',
+            '<strong className="text-hciSecondary">EGFR Inhibitors:</strong> Effective for tumours with EGFR mutations (common in glioblastoma).',
         },
         {
           description:
-            '<strong class="text-hciSecondary">VEGF Inhibitors:</strong> Prevent tumour blood vessel formation.',
+            '<strong className="text-hciSecondary">VEGF Inhibitors:</strong> Prevent tumour blood vessel formation.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">mTOR Inhibitors:</strong> Blocks proteins involved in cell growth and survival.',
+            '<strong className="text-hciSecondary">mTOR Inhibitors:</strong> Blocks proteins involved in cell growth and survival.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Advantages:</strong> Fewer side effects than chemotherapy since healthy cells are less affected.',
+            '<strong className="text-hciSecondary">Advantages:</strong> Fewer side effects than chemotherapy since healthy cells are less affected.',
         },
       ],
     },
@@ -193,19 +193,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<strong class="text-hciSecondary">Checkpoint Inhibitors:</strong> Blocks proteins that prevent immune cells from attacking the tumour.',
+            '<strong className="text-hciSecondary">Checkpoint Inhibitors:</strong> Blocks proteins that prevent immune cells from attacking the tumour.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Vaccine Therapies:</strong> Trains the immune system to target tumour-specific antigens.',
+            '<strong className="text-hciSecondary">Vaccine Therapies:</strong> Trains the immune system to target tumour-specific antigens.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">CAR-T Cell Therapy:</strong> Immune cells are modified to recognize and destroy brain cancer cells.',
+            '<strong className="text-hciSecondary">CAR-T Cell Therapy:</strong> Immune cells are modified to recognize and destroy brain cancer cells.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Limitations:</strong> Brain tumours can evade immune detection, so immunotherapy may not always be effective alone.',
+            '<strong className="text-hciSecondary">Limitations:</strong> Brain tumours can evade immune detection, so immunotherapy may not always be effective alone.',
         },
       ],
     },
@@ -216,19 +216,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<strong class="text-hciSecondary">Physical Therapy:</strong> Restores strength and mobility affected by surgery or radiation.',
+            '<strong className="text-hciSecondary">Physical Therapy:</strong> Restores strength and mobility affected by surgery or radiation.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Occupational Therapy:</strong> Helps patients adapt to changes in cognitive or motor functions.',
+            '<strong className="text-hciSecondary">Occupational Therapy:</strong> Helps patients adapt to changes in cognitive or motor functions.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Speech Therapy:</strong> Addresses communication challenges if speech areas are impacted.',
+            '<strong className="text-hciSecondary">Speech Therapy:</strong> Addresses communication challenges if speech areas are impacted.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Counselling and Mental Health Support:</strong> Supports patients and families in coping with emotional stress and life adjustments.',
+            '<strong className="text-hciSecondary">Counselling and Mental Health Support:</strong> Supports patients and families in coping with emotional stress and life adjustments.',
         },
       ],
     },
@@ -239,11 +239,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<strong class="text-hciSecondary">Emerging Therapies:</strong> New drug combinations, gene therapies, and advanced surgical techniques are tested.',
+            '<strong className="text-hciSecondary">Emerging Therapies:</strong> New drug combinations, gene therapies, and advanced surgical techniques are tested.',
         },
         {
           description:
-            '<strong class="text-hciSecondary">Eligibility:</strong> Trials may have specific criteria, such as tumour type and previous treatments.',
+            '<strong className="text-hciSecondary">Eligibility:</strong> Trials may have specific criteria, such as tumour type and previous treatments.',
         },
       ],
     },

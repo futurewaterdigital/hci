@@ -203,15 +203,15 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Hydration:</span> Drink water, oral rehydration solutions, or clear broths.',
+            '<span className= "font-semibold text-hciSecondary">Hydration:</span> Drink water, oral rehydration solutions, or clear broths.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Diet:</span> Follow the BRAT diet (Bananas, Rice, Applesauce, Toast) to reduce gastrointestinal stress.',
+            '<span className= "font-semibold text-hciSecondary">Diet:</span> Follow the BRAT diet (Bananas, Rice, Applesauce, Toast) to reduce gastrointestinal stress.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Avoid irritants:</span> Limit alcohol, caffeine, and dairy products during recovery.',
+            '<span className= "font-semibold text-hciSecondary">Avoid irritants:</span> Limit alcohol, caffeine, and dairy products during recovery.',
         },
       ],
     },
@@ -222,11 +222,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Intravenous fluids:</span> If dehydration is severe.',
+            '<span className= "font-semibold text-hciSecondary">Intravenous fluids:</span> If dehydration is severe.',
         },
         {
-          description: `<span class="font-semibold text-hciSecondary">Medications:</span> 
-          <ul class="list-disc list-inside">
+          description: `<span className= "font-semibold text-hciSecondary">Medications:</span> 
+          <ul className= "list-disc list-inside">
           <li>Antiemetics to control vomiting.</li>
           <li>Antidiarrheal agents (in some cases).</li>
           <li>Antibiotics or antiparasitic drugs for specific infections.</li>
@@ -241,7 +241,7 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Detoxification:</span> If poisoning is involved, medical intervention may be needed to remove the toxins.',
+            '<span className= "font-semibold text-hciSecondary">Detoxification:</span> If poisoning is involved, medical intervention may be needed to remove the toxins.',
         },
       ],
     },
@@ -299,18 +299,18 @@ const data = {
     {
       category: "",
       description:
-        '<span class="font-semibold">Stool tests:</span> To detect viral, bacterial, or parasitic infections.',
+        '<span className= "font-semibold">Stool tests:</span> To detect viral, bacterial, or parasitic infections.',
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
-      description: `<span class="font-semibold">Blood tests:</span> To assess dehydration or other underlying health issues`,
+      description: `<span className= "font-semibold">Blood tests:</span> To assess dehydration or other underlying health issues`,
       bgColor: "bg-hciSecondary text-white",
     },
     {
       category: "",
       description:
-        '<span class="font-semibold">Electrolyte panel:</span> To monitor for imbalances caused by dehydration.',
+        '<span className= "font-semibold">Electrolyte panel:</span> To monitor for imbalances caused by dehydration.',
       bgColor: "bg-hciSecondary text-white",
     },
   ],

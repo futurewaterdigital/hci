@@ -157,14 +157,14 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Esophagitis:</span> Inflammation that can cause bleeding or ulcers.',
+            '<span className="font-semibold text-hciSecondary">Esophagitis:</span> Inflammation that can cause bleeding or ulcers.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Esophageal Stricture:</span> Narrowing of the esophagus due to scar tissue, leading to swallowing difficulties.',
+            '<span className="font-semibold text-hciSecondary">Esophageal Stricture:</span> Narrowing of the esophagus due to scar tissue, leading to swallowing difficulties.',
         },
         {
-          description: `<span class="font-semibold text-hciSecondary">Barrett's Esophagus:</span> Precancerous changes in the esophageal lining, increasing the risk of esophageal cancer.`,
+          description: `<span className="font-semibold text-hciSecondary">Barrett's Esophagus:</span> Precancerous changes in the esophageal lining, increasing the risk of esophageal cancer.`,
         },
       ],
     },
@@ -202,19 +202,19 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Antacids:</span> Provide quick relief by neutralizing stomach acid.',
+            '<span className="font-semibold text-hciSecondary">Antacids:</span> Provide quick relief by neutralizing stomach acid.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">H2-Receptor Blockers:</span> Reduce acid production (e.g., ranitidine, famotidine).',
+            '<span className="font-semibold text-hciSecondary">H2-Receptor Blockers:</span> Reduce acid production (e.g., ranitidine, famotidine).',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Proton Pump Inhibitors (PPIs):</span> Stronger medications that block acid production (e.g., omeprazole, esomeprazole).',
+            '<span className="font-semibold text-hciSecondary">Proton Pump Inhibitors (PPIs):</span> Stronger medications that block acid production (e.g., omeprazole, esomeprazole).',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Prokinetics:</span> Help with stomach emptying and improve LES function (e.g., metoclopramide).',
+            '<span className="font-semibold text-hciSecondary">Prokinetics:</span> Help with stomach emptying and improve LES function (e.g., metoclopramide).',
         },
       ],
     },
@@ -224,11 +224,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Fundoplication:</span> The upper part of the stomach is wrapped around the lower esophagus to strengthen the LES.',
+            '<span className="font-semibold text-hciSecondary">Fundoplication:</span> The upper part of the stomach is wrapped around the lower esophagus to strengthen the LES.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">LINX Device:</span> A magnetic ring placed around the LES to prevent reflux while allowing food to pass normally.',
+            '<span className="font-semibold text-hciSecondary">LINX Device:</span> A magnetic ring placed around the LES to prevent reflux while allowing food to pass normally.',
         },
       ],
     },

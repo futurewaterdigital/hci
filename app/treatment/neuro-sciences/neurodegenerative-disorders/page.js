@@ -145,37 +145,37 @@ const data = {
   symptoms: [
     {
       category: '',
-      description: `<span class='font-medium'>Memory Loss:</span> Especially in disorders like Alzheimer's disease, where cognitive decline is prominent.`,
+      description: `<span className='font-medium'>Memory Loss:</span> Especially in disorders like Alzheimer's disease, where cognitive decline is prominent.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Motor Symptoms:</span> Tremors, muscle rigidity, difficulty walking, and coordination issues are common in disorders such as Parkinson's disease.`,
+      description: `<span className='font-medium'>Motor Symptoms:</span> Tremors, muscle rigidity, difficulty walking, and coordination issues are common in disorders such as Parkinson's disease.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Speech and Swallowing Difficulties:</span> Many neurodegenerative conditions affect the muscles involved in speech and swallowing, leading to slurred speech and difficulty eating.`,
+      description: `<span className='font-medium'>Speech and Swallowing Difficulties:</span> Many neurodegenerative conditions affect the muscles involved in speech and swallowing, leading to slurred speech and difficulty eating.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Cognitive Impairment:</span> A decline in thinking abilities, reasoning, judgment, and problem-solving is seen in diseases like Alzheimer's and frontotemporal dementia.`,
+      description: `<span className='font-medium'>Cognitive Impairment:</span> A decline in thinking abilities, reasoning, judgment, and problem-solving is seen in diseases like Alzheimer's and frontotemporal dementia.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Personality Changes:</span> Some conditions, like frontotemporal dementia, result in dramatic shifts in personality and behavior.`,
+      description: `<span className='font-medium'>Personality Changes:</span> Some conditions, like frontotemporal dementia, result in dramatic shifts in personality and behavior.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Muscle Weakness:</span> Progressive muscle weakness is characteristic of diseases such as ALS.`,
+      description: `<span className='font-medium'>Muscle Weakness:</span> Progressive muscle weakness is characteristic of diseases such as ALS.`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Fatigue:</span> Persistent tiredness and exhaustion are common across many neurodegenerative disorders.`,
+      description: `<span className='font-medium'>Fatigue:</span> Persistent tiredness and exhaustion are common across many neurodegenerative disorders.`,
       bgColor: 'bg-hciPrimary text-white',
     },
   ],
@@ -183,32 +183,32 @@ const data = {
   diagnosis: [
     {
       category: '',
-      description: `<span class='font-medium'>Neurological Examination:</span> A thorough assessment of motor skills, coordination, reflexes, and cognitive abilities by a neurologist.`,
+      description: `<span className='font-medium'>Neurological Examination:</span> A thorough assessment of motor skills, coordination, reflexes, and cognitive abilities by a neurologist.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>MRI and CT Scans:</span> Brain imaging techniques to detect changes in brain structure, such as atrophy, which is common in many neurodegenerative conditions.`,
+      description: `<span className='font-medium'>MRI and CT Scans:</span> Brain imaging techniques to detect changes in brain structure, such as atrophy, which is common in many neurodegenerative conditions.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>PET Scans:</span> Used to observe brain activity and detect abnormalities associated with disorders like Alzheimer's disease.`,
+      description: `<span className='font-medium'>PET Scans:</span> Used to observe brain activity and detect abnormalities associated with disorders like Alzheimer's disease.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Genetic Testing:</span> Helpful in diagnosing inherited conditions like Huntington’s disease or familial ALS.`,
+      description: `<span className='font-medium'>Genetic Testing:</span> Helpful in diagnosing inherited conditions like Huntington’s disease or familial ALS.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Electromyography (EMG):</span> Tests nerve and muscle function, particularly useful for diagnosing ALS and related disorders.`,
+      description: `<span className='font-medium'>Electromyography (EMG):</span> Tests nerve and muscle function, particularly useful for diagnosing ALS and related disorders.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class='font-medium'>Cerebrospinal Fluid (CSF) Analysis:</span> Examines the fluid around the brain and spinal cord for signs of disease markers, like abnormal proteins in Alzheimer's or prion diseases.`,
+      description: `<span className='font-medium'>Cerebrospinal Fluid (CSF) Analysis:</span> Examines the fluid around the brain and spinal cord for signs of disease markers, like abnormal proteins in Alzheimer's or prion diseases.`,
       bgColor: 'bg-hciSecondary text-white',
     },
   ],

@@ -57,22 +57,22 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            `<span class="font-medium text-hciSecondary">Gastrectomy:</span> Partial or complete removal of the stomach (used for stomach cancer).`,
+            `<span className="font-medium text-hciSecondary">Gastrectomy:</span> Partial or complete removal of the stomach (used for stomach cancer).`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Colectomy:</span> Removal of a section or the entire colon (for colon cancer).`,
+            `<span className="font-medium text-hciSecondary">Colectomy:</span> Removal of a section or the entire colon (for colon cancer).`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Pancreatectomy:</span> Removal of the pancreas or part of it (used for pancreatic cancer).`,
+            `<span className="font-medium text-hciSecondary">Pancreatectomy:</span> Removal of the pancreas or part of it (used for pancreatic cancer).`,
         },
         {
-          description: `<span class="font-medium text-hciSecondary">Whipple Procedure:</span> A complex surgery that removes parts of the pancreas, bile duct, and stomach (for advanced pancreatic or bile duct cancer).`,
+          description: `<span className="font-medium text-hciSecondary">Whipple Procedure:</span> A complex surgery that removes parts of the pancreas, bile duct, and stomach (for advanced pancreatic or bile duct cancer).`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Esophagectomy:</span> Removal of a portion of the oesophagus (used in oesophageal cancer).`,
+            `<span className="font-medium text-hciSecondary">Esophagectomy:</span> Removal of a portion of the oesophagus (used in oesophageal cancer).`,
         },
       ],
       footer:
@@ -86,11 +86,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            `<span class="font-medium text-hciSecondary">Systemic Chemotherapy:</span> Drugs travel through the bloodstream to attack cancer cells throughout the body.`,
+            `<span className="font-medium text-hciSecondary">Systemic Chemotherapy:</span> Drugs travel through the bloodstream to attack cancer cells throughout the body.`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Regional Chemotherapy:</span> Targets cancer cells in specific areas of the body.`,
+            `<span className="font-medium text-hciSecondary">Regional Chemotherapy:</span> Targets cancer cells in specific areas of the body.`,
         },
       ],
       footer:
@@ -103,11 +103,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            `<span class="font-medium text-hciSecondary">External Beam Radiation:</span> A machine directs radiation at the tumour from outside the body.`,
+            `<span className="font-medium text-hciSecondary">External Beam Radiation:</span> A machine directs radiation at the tumour from outside the body.`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Brachytherapy:</span> Radioactive material is placed inside or near the tumour.`,
+            `<span className="font-medium text-hciSecondary">Brachytherapy:</span> Radioactive material is placed inside or near the tumour.`,
         },
       ],
       footer:
@@ -120,11 +120,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            `<span class="font-medium text-hciSecondary">Monoclonal Antibodies:</span> Target specific proteins on cancer cells, such as HER2 (used in stomach cancer).`,
+            `<span className="font-medium text-hciSecondary">Monoclonal Antibodies:</span> Target specific proteins on cancer cells, such as HER2 (used in stomach cancer).`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Tyrosine Kinase Inhibitors:</span> Block enzymes responsible for cancer cell growth and spread.`,
+            `<span className="font-medium text-hciSecondary">Tyrosine Kinase Inhibitors:</span> Block enzymes responsible for cancer cell growth and spread.`,
         },
       ],
       footer:
@@ -137,11 +137,11 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            `<span class="font-medium text-hciSecondary">Checkpoint Inhibitors:</span> Drugs that block proteins used by cancer cells to evade the immune system.`,
+            `<span className="font-medium text-hciSecondary">Checkpoint Inhibitors:</span> Drugs that block proteins used by cancer cells to evade the immune system.`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Cancer Vaccines:</span> Help the immune system recognize cancer cells.`,
+            `<span className="font-medium text-hciSecondary">Cancer Vaccines:</span> Help the immune system recognize cancer cells.`,
         },
       ],
       footer:
@@ -153,19 +153,19 @@ const data = {
         "For advanced or metastatic cancers, palliative care focuses on relieving symptoms and improving quality of life. This can include:",
       aneurysmSymptoms: [
         {
-          description: `<span class="font-medium text-hciSecondary">Pain management</span> through medications or nerve blocks`,
+          description: `<span className="font-medium text-hciSecondary">Pain management</span> through medications or nerve blocks`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Nutritional support</span> for patients with difficulty eating or swallowing`,
+            `<span className="font-medium text-hciSecondary">Nutritional support</span> for patients with difficulty eating or swallowing`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Counselling and emotional support</span> for patients and families`,
+            `<span className="font-medium text-hciSecondary">Counselling and emotional support</span> for patients and families`,
         },
         {
           description:
-            `<span class="font-medium text-hciSecondary">Management of side effects</span> such as fatigue, nausea, or bowel issues`,
+            `<span className="font-medium text-hciSecondary">Management of side effects</span> such as fatigue, nausea, or bowel issues`,
         },
       ],
       footer:
@@ -194,28 +194,28 @@ const data = {
     {
       category: "",
       description:
-        `<span class="font-medium">Difficulty swallowing:</span> (especially with oesophageal cancer)`,
+        `<span className="font-medium">Difficulty swallowing:</span> (especially with oesophageal cancer)`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: "",
       description:
-        `<span class="font-medium">Changes in bowel habits:</span> Constipation, diarrhoea, or blood in the stool`,
+        `<span className="font-medium">Changes in bowel habits:</span> Constipation, diarrhoea, or blood in the stool`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class="font-medium">Bloating</span>, nausea, or vomiting`,
+      description: `<span className="font-medium">Bloating</span>, nausea, or vomiting`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class="font-medium">Jaundice</span> (common in gallbladder and pancreatic cancers)`,
+      description: `<span className="font-medium">Jaundice</span> (common in gallbladder and pancreatic cancers)`,
       bgColor: 'bg-hciPrimary text-white',
     },
     {
       category: '',
-      description: `<span class="font-medium">Loss of appetite</span> and general fatigue`,
+      description: `<span className="font-medium">Loss of appetite</span> and general fatigue`,
       bgColor: 'bg-hciPrimary text-white',
     },
   ],
@@ -223,30 +223,30 @@ const data = {
   diagnosis: [
     {
       category: '',
-      description: `<span class="font-medium">Endoscopy/Colonoscopy:</span> Visual examination of the GI tract.`,
+      description: `<span className="font-medium">Endoscopy/Colonoscopy:</span> Visual examination of the GI tract.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
-      description: `<span class="font-medium">Biopsy:</span> Tissue samples examined under a microscope.`,
+      description: `<span className="font-medium">Biopsy:</span> Tissue samples examined under a microscope.`,
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: '',
       description:
-        '<span class="font-medium">Imaging Tests:</span> CT scans, MRIs, and PET scans to evaluate tumour size and spread.',
+        '<span className="font-medium">Imaging Tests:</span> CT scans, MRIs, and PET scans to evaluate tumour size and spread.',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: "",
       description:
-        '<span class="font-medium">Blood Tests:</span> Check for tumour markers (e.g., CEA, CA 19-9).',
+        '<span className="font-medium">Blood Tests:</span> Check for tumour markers (e.g., CEA, CA 19-9).',
       bgColor: 'bg-hciSecondary text-white',
     },
     {
       category: "",
       description:
-        '<span class="font-medium">Barium Studies:</span> X-ray with contrast to detect abnormalities.',
+        '<span className="font-medium">Barium Studies:</span> X-ray with contrast to detect abnormalities.',
       bgColor: 'bg-hciSecondary text-white',
     },
   ],

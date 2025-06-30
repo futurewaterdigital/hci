@@ -117,23 +117,23 @@ const data = {
       aneurysmSymptoms: [
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Aminosalicylates (5-ASA):</span> Sulfasalazine and mesalamine are used to manage mild to moderate inflammation.',
+            '<span className="font-semibold text-hciSecondary">Aminosalicylates (5-ASA):</span> Sulfasalazine and mesalamine are used to manage mild to moderate inflammation.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Corticosteroids:</span> Used for short-term relief during severe flare-ups but not recommended for long-term use due to side effects.',
+            '<span className="font-semibold text-hciSecondary">Corticosteroids:</span> Used for short-term relief during severe flare-ups but not recommended for long-term use due to side effects.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Immunosuppressants:</span> Medications like azathioprine or methotrexate reduce immune system activity.',
+            '<span className="font-semibold text-hciSecondary">Immunosuppressants:</span> Medications like azathioprine or methotrexate reduce immune system activity.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Biologics:</span> Drugs such as infliximab and adalimumab target specific immune responses.',
+            '<span className="font-semibold text-hciSecondary">Biologics:</span> Drugs such as infliximab and adalimumab target specific immune responses.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Janus kinase (JAK) inhibitors:</span> Medications like tofacitinib help control inflammation.',
+            '<span className="font-semibold text-hciSecondary">Janus kinase (JAK) inhibitors:</span> Medications like tofacitinib help control inflammation.',
         },
       ],
     },
@@ -148,11 +148,11 @@ const data = {
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Proctocolectomy with ileal pouch-anal anastomosis (IPAA):</span> Removes the colon and rectum while preserving normal defecation.',
+            '<span className="font-semibold text-hciSecondary">Proctocolectomy with ileal pouch-anal anastomosis (IPAA):</span> Removes the colon and rectum while preserving normal defecation.',
         },
         {
           description:
-            '<span class="font-semibold text-hciSecondary">Ileostomy:</span> In cases where pouch surgery is not feasible, an external pouch is used to collect waste.',
+            '<span className="font-semibold text-hciSecondary">Ileostomy:</span> In cases where pouch surgery is not feasible, an external pouch is used to collect waste.',
         },
       ],
     },

@@ -39,25 +39,25 @@ const vascularConditions = [
   {
     category: "",
     description:
-      "There is a <strong class='font-medium'>blockage in the left main coronary artery</strong>, which supplies most of the heart's blood.",
+      "There is a <strong className='font-medium'>blockage in the left main coronary artery</strong>, which supplies most of the heart's blood.",
     bgColor: "bg-hciYellow",
   },
   {
     category: "",
     description:
-      "A blockage can't be managed with less invasive treatments like <strong class='font-medium'>angioplasty or stenting</strong>, or if previous procedures have failed.",
+      "A blockage can't be managed with less invasive treatments like <strong className='font-medium'>angioplasty or stenting</strong>, or if previous procedures have failed.",
     bgColor: "bg-hciYellow",
   },
   {
     category: "",
     description:
-      "You experience <strong class='font-medium'>severe chest pain</strong> due to narrowed arteries that limit blood flow even during rest.",
+      "You experience <strong className='font-medium'>severe chest pain</strong> due to narrowed arteries that limit blood flow even during rest.",
     bgColor: "bg-hciYellow",
   },
   {
     category: "",
     description:
-      "An emergency bypass is needed during a <strong class='font-medium'>heart attack</strong> when other treatments are ineffective.",
+      "An emergency bypass is needed during a <strong className='font-medium'>heart attack</strong> when other treatments are ineffective.",
     bgColor: "bg-hciYellow",
   },
   {
@@ -70,44 +70,44 @@ const vascularConditions = [
 const dataLists = [
   {
     title:
-      '<span class="text-hciSecondary font-medium">Bleeding</span><span class="text-black"> or infection at the surgical site</span> ',
+      '<span className="text-hciSecondary font-medium">Bleeding</span><span className="text-black"> or infection at the surgical site</span> ',
     description: "",
   },
   {
     title:
-      '<span class="text-hciSecondary font-medium">Arrhythmias</span><span class="text-black"> (irregular heartbeats)</span>',
+      '<span className="text-hciSecondary font-medium">Arrhythmias</span><span className="text-black"> (irregular heartbeats)</span>',
     description: "",
   },
   {
     title:
-      '<span class="text-black">Blood clots, which can lead to a</span> <span class="text-hciSecondary font-medium">heart attack or stroke</span><span class="text-black">.</span>',
+      '<span className="text-black">Blood clots, which can lead to a</span> <span className="text-hciSecondary font-medium">heart attack or stroke</span><span className="text-black">.</span>',
     description: "",
   },
   {
     title:
-      '<span class="text-hciSecondary font-medium">Kidney problems</span><span class="text-black"> or temporary memory issues</span>',
+      '<span className="text-hciSecondary font-medium">Kidney problems</span><span className="text-black"> or temporary memory issues</span>',
     description: "",
   },
   {
     title:
-      '<span class="text-black">Prolonged dependence on a breathing machine in rare cases</span>',
+      '<span className="text-black">Prolonged dependence on a breathing machine in rare cases</span>',
     description: "",
   },
 ];
 const dataList = [
   {
     title:
-      '<span class="text-black">Follow instructions on dietary changes and medication adjustments.</span>',
+      '<span className="text-black">Follow instructions on dietary changes and medication adjustments.</span>',
     description: "",
   },
   {
     title:
-      '<span class="text-black">Arrange for someone to assist you after discharge.</span>',
+      '<span className="text-black">Arrange for someone to assist you after discharge.</span>',
     description: "",
   },
   {
     title:
-      '<span class="text-black">Undergo necessary heart and blood tests in the days leading up to surgery.</span>',
+      '<span className="text-black">Undergo necessary heart and blood tests in the days leading up to surgery.</span>',
     description: "",
   },
 ];
@@ -117,15 +117,15 @@ const bypassSurgery = [
     aneurysmSymptoms: [
       {
         title: "",
-        description: `<span class="text-hciSecondary font-medium ">General Anesthesia</span> is administered, ensuring you're in a sleep-like state.`,
+        description: `<span className="text-hciSecondary font-medium ">General Anesthesia</span> is administered, ensuring you're in a sleep-like state.`,
       },
       {
         title: "",
-        description: `A <span class="text-hciSecondary font-medium">breathing tube</span> is inserted and connected to a ventilator.`,
+        description: `A <span className="text-hciSecondary font-medium">breathing tube</span> is inserted and connected to a ventilator.`,
       },
       {
         title: "",
-        description: `If on-pump surgery is performed, a <span class="text-hciSecondary font-medium">heart-lung machine</span> takes over the heart's functions while the heart is temporarily stopped.`,
+        description: `If on-pump surgery is performed, a <span className="text-hciSecondary font-medium">heart-lung machine</span> takes over the heart's functions while the heart is temporarily stopped.`,
       },
       {
         title: "",
@@ -140,11 +140,11 @@ const advancedApproaches = [
     aneurysmSymptoms: [
       {
         title: "",
-        description: `<span class="text-hciSecondary font-medium">Off-pump or beating-heart surgery</span>, which doesn't use a heart-lung machine.`,
+        description: `<span className="text-hciSecondary font-medium">Off-pump or beating-heart surgery</span>, which doesn't use a heart-lung machine.`,
       },
       {
         title: "",
-        description: `<span class="text-hciSecondary font-medium">Minimally invasive bypass surgery</span>, performed through small incisions instead of opening the chest.`,
+        description: `<span className="text-hciSecondary font-medium">Minimally invasive bypass surgery</span>, performed through small incisions instead of opening the chest.`,
       },
     ],
   },
@@ -198,7 +198,7 @@ function page() {
           <DataBoxes
             title="Why is it Performed"
             titleCss="text-2xl font-medium text-center text-black mb-4"
-            text="This surgery is recommended for restoring blood flow when one or more coronary arteries are severely blocked or narrowed.<p class='py-4 font-medium text-lg'><strong class='font-medium'>Your healthcare provider may suggest coronary artery bypass surgery if:</strong></p>"
+            text="This surgery is recommended for restoring blood flow when one or more coronary arteries are severely blocked or narrowed.<p className='py-4 font-medium text-lg'><strong className='font-medium'>Your healthcare provider may suggest coronary artery bypass surgery if:</strong></p>"
             data={vascularConditions}
             myclass="grid lg:grid-cols-2"
             textCss="font-light"

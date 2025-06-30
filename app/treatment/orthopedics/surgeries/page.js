@@ -134,7 +134,7 @@ While minor injuries may respond to conservative management, severe tears often 
       paragraph: `
       <p>ACL, PCL, and MCL surgeries play a vital role in restoring knee stability and preventing chronic pain and dysfunction. With advancements in arthroscopic techniques, patients can benefit from minimally invasive procedures, shorter recovery periods, and improved outcomes.
 Timely surgical intervention, followed by a comprehensive rehabilitation plan, enables individuals to return to their regular activities and athletic pursuits without compromising knee health.</p>
-<p><span class="text-hciSecondary font-semibold">Don’t let knee injuries hold you back</span> - consult with our expert orthopaedic surgeons to explore the best treatment options for your knee condition.</p>
+<p><span className="text-hciSecondary font-semibold">Don’t let knee injuries hold you back</span> - consult with our expert orthopaedic surgeons to explore the best treatment options for your knee condition.</p>
           `,
     },
   ],
