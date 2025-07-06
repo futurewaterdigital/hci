@@ -19,7 +19,7 @@ export default function FooterLink({ head }) {
     {
       text: `To Consult with The Best Doctor For Treatment Of ${head}, Click Here`,
       url: `${basePath}?scrollTo=doctors`,
-      onClick: handleDoctorClick 
+      onClick: handleDoctorClick
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In India, Click Here`,

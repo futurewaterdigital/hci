@@ -134,7 +134,7 @@ const Partners = ({ pathname, paramSlug }) => {
                       className="block"
                     >
                       <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 p-1 border border-hciSecondary m-1">
-                        <div className="relative h-48 w-full">
+                        <div className="relative lg:h-[230px] h-[350px] w-full">
                           <Image
                             src={doctor.image || '/default-doctor.jpg'}
                             alt={doctor.name}
@@ -142,7 +142,7 @@ const Partners = ({ pathname, paramSlug }) => {
                             className="object-cover w-full"
                           />
                         </div>
-                        <div className="py-2">
+                        <div className="p-4">
                           <div className="flex gap-2 flex-col">
                             <h2 className="text-sm font-semibold text-hciSecondary text-start">{doctor.name}</h2>
                             <p

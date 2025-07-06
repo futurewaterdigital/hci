@@ -25,7 +25,7 @@ export default function DoctorsPage({ params }) {
     e.preventDefault();
     router.push("/?scrollTo=form");
   };
-  
+
   useEffect(() => {
     // Set title based on slug
     if (slug === 'cardiac-sciences') {
@@ -154,21 +154,22 @@ export default function DoctorsPage({ params }) {
   return (
     <div className="md:max-w-7xl mx-auto px-4 py-8">
       {/* Title */}
-      <h1 className="text-2xl sm:text-3xl font-bold text-hciPrimary text-center md:text-left">
+      <h1 className="text-2xl sm:text-3xl font-bold text-hciPrimary text-center md:text-left mb-6">
         {title}
       </h1>
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         {/* Back Link (conditionally rendered) */}
         {!noData && (
           <div className="flex items-center gap-2 text-center md:text-left">
-            <IoMdArrowRoundBack className="text-hciSecondary text-2xl" />
             <Link
               href={`/treatment/${slug}`}
-              className="text-hciSecondary font-semibold text-lg"
+              className="flex items-center gap-1 text-hciSecondary font-semibold text-lg"
             >
+              <IoMdArrowRoundBack className="text-hciSecondary text-2xl" />
               Back to <span className="capitalize">{slug} page</span>
             </Link>
           </div>
+
         )}
 
         {/* Search Input */}
@@ -220,7 +221,7 @@ export default function DoctorsPage({ params }) {
                 }`}
             >
               {/* Image Section */}
-              <div className="relative md:w-[700px] h-[300px] md:h-[280px] ">
+              <div className="relative md:w-[700px] h-[350px] md:h-[280px] ">
                 <Image
                   src={doctor.image || '/default-doctor.jpg'}
                   alt={doctor.name}
