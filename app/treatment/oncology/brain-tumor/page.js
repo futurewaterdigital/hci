@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Link from "next/link";
 import Banner from "@/components/Common/Banner";
@@ -1459,8 +1460,24 @@ function BrainTumor() {
 
         {/* CTA Section */}
         <Conclusion data={data.conclusion} />
+
+        {/* Best Hospitals Section */}
+        <div id="hospital-section" className="my-10">
+          <h2 className="text-2xl text-center font-medium mb-6">Best Hospitals for {data.title} Treatment</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {data.best_hospitals.map((hospital, index) => (
+              <Link key={index} href={hospital.url} className="block p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 text-center">
+                <p className="text-hciPrimary font-semibold text-lg">{hospital.city}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <FooterLinks head={data.title} />
-        <BookButton />
+        {/* Doctors Section - Wrapped BookButton for scrolling */}
+        <div id="doctors-section">
+          <BookButton />
+        </div>
       </div>
     </>
   );

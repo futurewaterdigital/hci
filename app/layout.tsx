@@ -4,6 +4,7 @@ import Script from 'next/script'
 import './globals.css'
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
 import ScrollHandler from '@/components/ScrollHandler';
+import React, { Suspense } from 'react';
 
 // layout.tsx
 
@@ -101,7 +102,9 @@ export default function RootLayout({
         </noscript>
 
         <ScrollToTop />
-        <ScrollHandler />
+        <Suspense fallback={<div></div>}>
+          <ScrollHandler />
+        </Suspense>
         <Script id="scroll-to-top">
           {`
             if (typeof window !== 'undefined') {

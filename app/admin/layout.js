@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import {usePathname, useRouter} from "next/navigation";
-import {logout} from "@/lib/auth";
-import {RiLogoutCircleRLine} from "react-icons/ri";
-import {useEffect, useState} from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { logout } from "@/lib/auth";
+import { RiLogoutCircleRLine } from "react-icons/ri";
+import { useEffect, useState, Suspense } from "react";
 
-export default function AdminLayout({children}) {
+export default function AdminLayout({ children }) {
   const pathname = usePathname();
   const router = useRouter();
   const [adminToken, setAdminToken] = useState(null);
@@ -52,29 +52,26 @@ export default function AdminLayout({children}) {
                   <div className="flex space-x-8">
                     <Link
                       href="/admin/doctors"
-                      className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                        pathname.startsWith("/admin/doctors")
+                      className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${pathname.startsWith("/admin/doctors")
                           ? "border-indigo-500 text-gray-900"
                           : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                      }`}>
+                        }`}>
                       Doctors
                     </Link>
                     <Link
                       href="/admin/reviews"
-                      className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                        pathname === "/admin/reviews"
+                      className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${pathname === "/admin/reviews"
                           ? "border-indigo-500 text-gray-900"
                           : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                      }`}>
+                        }`}>
                       Reviews
                     </Link>
                     <Link
                       href="/admin/cost-compare"
-                      className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                        pathname === "/admin/cost-compare"
+                      className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${pathname === "/admin/cost-compare"
                           ? "border-indigo-500 text-gray-900"
                           : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                      }`}>
+                        }`}>
                       Cost Comparison
                     </Link>
                   </div>
@@ -93,7 +90,9 @@ export default function AdminLayout({children}) {
         )}
         <main className="py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {children}
+            <Suspense fallback={<div>Loading Admin Panel...</div>}>
+              {children}
+            </Suspense>
           </div>
         </main>
       </div>

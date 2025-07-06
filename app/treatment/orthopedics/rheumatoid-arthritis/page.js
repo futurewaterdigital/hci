@@ -1,3 +1,4 @@
+'use client'
 // generalSurgery.js
 import React from 'react'
 import Banner from '@/components/Common/Banner'
