@@ -12,38 +12,37 @@ export default function FooterLink({ head }) {
 
   const handleDoctorClick = (e) => {
     e.preventDefault();
-    // Navigate using router with a query parameter
-    router.push(basePath + "?scrollTo=doctors");
+    router.push(pathname + "?scrollTo=doctors");
   };
   const linkshead = [
     {
       text: `To Consult with The Best Doctor For Treatment Of ${head}, Click Here`,
-      url: `${basePath}?scrollTo=doctors`,
+      url: `${pathname}?scrollTo=doctors`,
       onClick: handleDoctorClick
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In India, Click Here`,
-      url: "/?scrollTo=hospital", // Replace "#" with the actual link
+      url: `${pathname}?scrollTo=hospital`,
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Bangalore, Click Here`,
-      url: "/?scrollTo=hospital", // Replace "#" with the actual link
+      url: `${pathname}?scrollTo=hospital`,
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Chennai, Click Here`,
-      url: "/?scrollTo=hospital", // Replace "#" with the actual link
+      url: `${pathname}?scrollTo=hospital`,
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Delhi, Click Here`,
-      url: "/?scrollTo=hospital", // Replace "#" with the actual link
+      url: `${pathname}?scrollTo=hospital`,
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Hyderabad, Click Here`,
-      url: "/?scrollTo=hospital", // Replace "#" with the actual link
+      url: `${pathname}?scrollTo=hospital`,
     },
     {
       text: `The Best Hospital For The Treatment Of ${head} In Mumbai, Click Here`,
-      url: "/?scrollTo=hospital", // Replace "#" with the actual link
+      url: `${pathname}?scrollTo=hospital`,
     },
   ];
 

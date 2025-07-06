@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -73,7 +73,9 @@ export async function generateMetadata({ params }) {
 export default function RootLayout({ children }) {
   return (
     <>
-      {children}
+      <Suspense fallback={<div>Loading...</div>}>
+        {children}
+      </Suspense>
     </>
   );
 }
