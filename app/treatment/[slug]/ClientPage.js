@@ -148,7 +148,7 @@ export default function ClientPage({ params }) {
           </div>
 
           <div className="w-full px-4 text-center mt-8">
-            <BookNow />
+            {/* <BookNow /> */}
           </div>
         </>
       )}
