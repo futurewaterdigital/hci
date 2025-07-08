@@ -85,7 +85,7 @@ export default function Blogs() {
           <h4 className="text-3xl font-bold pb-10 font-roboto">
             Medical Updates <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
           </h4>
-          <p className="text-1xl font-light lg:w-6/12 mx-auto">
+          <p className="text-1xl font-light lg:w-6/12 mx-auto px-4 md:px-0">
             Update yourself with the latest happenings and knowledge in the
             field of healthcare. Stay updated with expert analyses, trends, and
             all the information that you may want to know to stay ahead in

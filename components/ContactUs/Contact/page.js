@@ -5,8 +5,8 @@ import Link from 'next/link'
 
 export default function contactUs() {
   return (
-    <div className="mt-0 flex flex-col justify-center items-center text-center py-8">
-      <div className="pt-0 w-10/12 gap-10">
+    <div className="mt-0 flex flex-col justify-center items-center text-center py-8 px-4">
+      <div className="pt-0 md:w-10/12 gap-10">
         <h4 className="text-3xl font-bold pb-10 font-roboto">
           Contact Us <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
         </h4>
@@ -21,46 +21,42 @@ export default function contactUs() {
         </p>
       </div>
 
-      <div className="pt-0 w-10/12 gap-10">
-        <div className="pt-28 w-10/12 gap-4 grid lg:grid-cols-3 mx-auto ">
-          {locations.map((items, index) => (
-            <div
-              className="bg-white border border-gray-200 border-t-0 rounded-lg shadow-lg shadow-b shadow-custom justify-center mt-20"
-              key={index}
-            >
-              <div className="flex items-center bg-red-500 justify-center relative">
-                <Image
-                  className="rounded-t-lg w-40 absolute text-center"
-                  src={items.icon}
-                  alt={items.title}
-                  width={100}
-                  height={100}
-                />
-              </div>
+      <div className="pt-0 md:w-10/12 gap-10">
+        <div className="md:pt-28 pt-10 md:w-10/12 gap-4 grid lg:grid-cols-3 mx-auto ">
+          {locations.map((items, index) => {
+            const CardContent = (
+              <div className="bg-white border border-gray-200 border-t-0 rounded-lg shadow-lg shadow-b shadow-custom justify-center mt-20 hover:cursor-pointer">
+                <div className="flex items-center bg-red-500 justify-center relative">
+                  <Image
+                    className="rounded-t-lg w-40 absolute text-center"
+                    src={items.icon}
+                    alt={items.title}
+                    width={100}
+                    height={100}
+                  />
+                </div>
 
-              <div className="p-5 mt-20">
-                <h5 className="mb-2 text-[25px] font-normal tracking-tight text-[#0E56A0]">
-                  {items.title}
-                </h5>
-
-                {/* Only show the link if items.url exists */}
-                {items.url ? (
-                  <Link href={items.url}>
-                    <p
-                      className="mb-3 font-normal text-[#333333] text-[18px]"
-                      dangerouslySetInnerHTML={{ __html: items.excerpt }}
-                    />
-                  </Link>
-                ) : (
-                  // Show only the excerpt if the URL is missing, and no "no" text.
+                <div className="p-5 mt-20">
+                  <h5 className="mb-2 text-[25px] font-normal tracking-tight text-[#0E56A0]">
+                    {items.title}
+                  </h5>
                   <p
-                    className="mb-3 font-normal text-[#333333] text-[18px] text-start"
+                    className="mb-3 font-normal text-[#333333] text-[18px] text-center"
                     dangerouslySetInnerHTML={{ __html: items.excerpt }}
                   />
-                )}
+                </div>
               </div>
-            </div>
-          ))}
+            )
+
+            return items.url ? (
+              <Link href={items.url} key={index}>
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={index}>{CardContent}</div>
+            )
+          })}
+
         </div>
       </div>
     </div>

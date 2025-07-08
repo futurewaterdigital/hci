@@ -10,7 +10,7 @@ export default function partnetship() {
         <p className="font-light">
           Pursuing a vision of becoming one of the most recognised healthcare
           ecosystems, HCI envisages partnering with leading healthcare providers
-          with world class infrastructure and competent expertise. We welcome
+          with world-class infrastructure and competent expertise. We welcome
           partners who share our ideals of shaping a collaborative approach to
           align services that deliver optimal patient outcomes.
         </p>
@@ -23,7 +23,7 @@ export default function partnetship() {
         </p>
         <p className="py-4 font-light">
           We welcome partners who share our vision and philosophy and look
-          forward to joining hands towards creating a comfortable and seamless
+          forward to joining hands towards creating a comfortable and <br /> seamless
           healthcare experience for patients worldwide.
         </p>
       </div>

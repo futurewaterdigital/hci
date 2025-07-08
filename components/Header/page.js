@@ -1,91 +1,111 @@
-'use client'
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import NewSearch from '../../components/Header/searchModal'
-import { usePathname } from 'next/navigation'
-import Drawer from '../../components/Header/Drawer'
+"use client";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import NewSearch from "../../components/Header/searchModal";
+import { usePathname, useRouter } from "next/navigation";
+import Drawer from "../../components/Header/Drawer";
+import { logout } from "@/lib/auth";
 
 // Debounce utility function
 const debounce = (fn, delay) => {
-  let timeout
+  let timeout;
   return (...args) => {
-    clearTimeout(timeout)
-    timeout = setTimeout(() => fn(...args), delay)
-  }
-}
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn(...args), delay);
+  };
+};
 
 export default function Header() {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const placeholders = ['Hospital', 'Doctor', 'Treatment']
-  const [currentPlaceholder, setCurrentPlaceholder] = useState(placeholders[0])
-  const [index, setIndex] = useState(0)
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const placeholders = ["Hospital", "Doctor", "Treatment"];
+  const [currentPlaceholder, setCurrentPlaceholder] = useState(placeholders[0]);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    // Check authentication status on component mount
+    const checkAuth = () => {
+      const isAuth = localStorage.getItem("isAuthenticated") === "true";
+      setIsAuthenticated(isAuth);
+    };
+    checkAuth();
+  }, []);
+
+  const handleLogout = async () => {
+    const success = await logout();
+    if (success) {
+      setIsAuthenticated(false);
+      router.push("/admin/login");
+    }
+  };
 
   // Memoized handler to open the drawer
   const handleOpen = useCallback(() => {
     if (!isOpen) {
-      setIsOpen(true)
+      setIsOpen(true);
     }
-  }, [isOpen])
+  }, [isOpen]);
 
   // Memoized handler to close the drawer
-  const handleClose = useCallback(() => setIsOpen(false), [])
+  const handleClose = useCallback(() => setIsOpen(false), []);
 
   // Update the placeholder every 2 seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % placeholders.length)
-    }, 2000) // Change text every 2 seconds
+      setIndex((prevIndex) => (prevIndex + 1) % placeholders.length);
+    }, 2000); // Change text every 2 seconds
 
-    return () => clearInterval(intervalId)
-  }, [placeholders.length])
+    return () => clearInterval(intervalId);
+  }, [placeholders.length]);
 
   useEffect(() => {
-    setCurrentPlaceholder(placeholders[index])
-  }, [index, placeholders])
+    setCurrentPlaceholder(placeholders[index]);
+  }, [index, placeholders]);
 
   // Debounced scroll handler
   useEffect(() => {
     const handleScroll = debounce(() => {
       if (window.scrollY > 70) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }, 50) // 50ms debounce delay
+    }, 50); // 50ms debounce delay
 
     const scrollListener = () => {
-      requestAnimationFrame(handleScroll)
-    }
+      requestAnimationFrame(handleScroll);
+    };
 
-    window.addEventListener('scroll', scrollListener)
+    window.addEventListener("scroll", scrollListener);
 
     return () => {
-      window.removeEventListener('scroll', scrollListener)
-    }
-  }, [])
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
 
   // Memoize the class based on scroll and pathname
   const classnew = useMemo(() => {
-    if (pathname === '/') {
-      return `z-40 transition-all duration-300  ${
-        isScrolled
-          ? 'fixed w-full bg-white shadow-lg top-0'
-          : 'absolute lg:top-6 w-full'
-      }`
+    if (pathname === "/") {
+      return `z-40 transition-all duration-300  ${isScrolled
+          ? "fixed w-full bg-white shadow-lg top-0"
+          : "absolute lg:top-6 w-full"
+        }`;
     }
     // If not home and not scrolled, no shadow
-    return `fixed z-40 w-full bg-white transition-all duration-300 ${
-      isScrolled ? 'shadow' : ''
-    }`
-  }, [pathname, isScrolled])
+    return `z-40 w-full bg-white transition-all duration-300 ${isScrolled
+        ? "shadow fixed top-0 transition-all duration-300 ease-in-out"
+        : ""
+      }`;
+  }, [pathname, isScrolled]);
 
   return (
-    <div className={classnew}>
+    <div className={`${classnew}`}>
       <div
-        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white`}
+        className={`lg:w-11/12 mx-auto lg:rounded-lg lg:px-6 flex justify-between items-center bg-white px-2`}
       >
         <div className="lg:h-20 flex items-center justify-start gap-10 p-2 lg:w-1/2 w-[100px] ">
           <div className="relative group flex items-center ">
@@ -103,7 +123,7 @@ export default function Header() {
             <Drawer isOpen={isOpen} handleClose={handleClose} />
             <div className="hidden lg:block">
               <Image
-                src="/qr-codes/hci.png"
+                src="/qr-codes/hci_qr.png"
                 className="w-16 ml-12"
                 width={200}
                 height={200}
@@ -115,27 +135,24 @@ export default function Header() {
         </div>
 
         <div
-          className={`lg:relative flex lg:justify-center items-center z-10 cursor-pointer ${
-            pathname === '/' ? 'lg:h-20 ' : 'lg:h-10 lg:p-12 top-0 '
-          }`}
+          className={`lg:relative flex lg:justify-center items-center z-10 cursor-pointer ${pathname === "/" ? "lg:h-20" : "lg:h-10 lg:p-12 top-0"
+            }`}
         >
           <Link href="/">
             <div
-              className={`bg-white lg:rounded-lg lg:w-64 flex justify-center items-center p-4 mx-auto cursor-pointer ${
-                pathname === '/'
-                  ? 'lg:h-28 xs:h-14 sxs:h-14 sm:h-14'
-                  : 'lg:h-10 xs:h-14 sxs:h-14 sm:h-14'
-              }`}
+              className={`bg-white lg:rounded-lg lg:w-64 flex justify-center items-center p-4 mx-auto cursor-pointer ${pathname === "/"
+                  ? "lg:h-28 xs:h-14 sxs:h-14 sm:h-14"
+                  : "lg:h-10 xs:h-14 sxs:h-14 sm:h-14"
+                }`}
             >
               <Image
                 src="/images/logo.svg"
                 width={500}
                 height={100}
-                className={`rounded-lg cursor-pointer ${
-                  isScrolled
-                    ? 'xl:w-9/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300'
-                    : 'xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300'
-                }`}
+                className={`rounded-lg cursor-pointer ${isScrolled
+                    ? "xl:w-9/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300"
+                    : "xl:w-10/12 lg:w-[70%] w-[120px] cursor-pointer lg:p-4 transition-all duration-300"
+                  }`}
                 loading="lazy"
                 alt="healthcare international in bangalore"
               />
@@ -143,22 +160,12 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center lg:hidden">
-          <Link
-            href="/contact-us"
-            className="lg:w-full py-2 px-2 text-[12px]
-                font-medium text-[#D84498] rounded-lg border border-[#D84498] 
-                hover:bg-[#D84498] hover:text-white opacity-100 z-30 tracking-[2px] mr-2"
-          >
-            CONTACT US
-          </Link>
-        </div>
-        <div className="lg:flex items-center justify-end gap-0 w-1/2 hidden">
-          <div className="z-20 flex flex-row justify-between">
-            <div className="relative flex items-center justify-center right-[40px]">
+        <div className="lg:flex items-center justify-end gap-4 w-1/2 hidden">
+          <div className="z-20 flex flex-row justify-between items-center">
+            {/* <div className="relative flex items-center justify-center right-[40px]">
               <NewSearch currentPlaceholder={currentPlaceholder} />
-            </div>
-            <div className="flex items-center">
+            </div> */}
+            <div className="flex items-center gap-4">
               <Link
                 href="/contact-us"
                 className="lg:w-full xs:py-2 xs:px-4 lg:px-2 lg:py-2 xl:text-lg lg:text-[12px]
@@ -167,10 +174,40 @@ export default function Header() {
               >
                 CONTACT US
               </Link>
+              {isAuthenticated && (
+                <button
+                  onClick={handleLogout}
+                  className="lg:w-full xs:py-2 xs:px-4 lg:px-2 lg:py-2 xl:text-lg lg:text-[12px]
+                  font-medium text-red-600 rounded-lg border border-red-600
+                  hover:bg-red-600 hover:text-white opacity-100 z-50 tracking-[2px]"
+                >
+                  LOGOUT
+                </button>
+              )}
             </div>
           </div>
         </div>
+
+        {/* Mobile view buttons */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <Link
+            href="/contact-us"
+            className="py-2 px-2 text-[12px] font-medium text-[#D84498] rounded-lg border border-[#D84498] 
+            hover:bg-[#D84498] hover:text-white opacity-100 z-30 tracking-[2px]"
+          >
+            CONTACT US
+          </Link>
+          {isAuthenticated && (
+            <button
+              onClick={handleLogout}
+              className="py-2 px-2 text-[12px] font-medium text-red-600 rounded-lg border border-red-600
+              hover:bg-red-600 hover:text-white opacity-100 z-30 tracking-[2px]"
+            >
+              LOGOUT
+            </button>
+          )}
+        </div>
       </div>
     </div>
-  )
+  );
 }

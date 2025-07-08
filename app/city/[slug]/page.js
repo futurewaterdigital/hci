@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic' // Lazy load Footer
 import Header from '../../../components/Header/page'
 import Banner from '../../../components/Treatment/Banner/page'
 import Link from 'next/link'
+import H1 from '@/components/ui/h1'
 
 // Dynamically import Footer to lazy-load
 const Footer = dynamic(() => import('../../../components/Footer/page'), {
@@ -93,9 +94,7 @@ export default function City({ params }) {
 
               <div className="w-9/12 mx-auto">
                 <div className="">
-                  <h1 className="w-full text-[#D84598] lg:text-[60px] text-center font-normal text-[40px]">
-                    {items.title.rendered}
-                  </h1>
+                  <H1 title={items.title.rendered} />
                 </div>
                 <div
                   dangerouslySetInnerHTML={{ __html: items.content.rendered }}

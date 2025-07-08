@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Banner({ banner, name }) {
   return (
     <div className="relative h-[74vh]">

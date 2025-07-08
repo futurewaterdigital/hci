@@ -1,6 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import H1 from '@/components/ui/h1'
+
 
 function Banner() {
   const [selectedCategory] = useState('11')
@@ -59,9 +61,7 @@ function Banner() {
           <p className="lg:text-4xl text-center text-2xl">
             The Best Doctors and Hospitals for your
           </p>
-          <h1 className="lg:text-5xl text-4xl text-center font-medium lg:pt-2">
-            Medical Condition Guided by Us
-          </h1>
+          <H1 title="Medical Condition Guided by Us" className="text-5xl font-semibold lg:text-[60px] text-[40px] text-center" />
           {error && <p>{error}</p>}
           {noData && <p>{noData}</p>}
           {loading ? (

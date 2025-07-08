@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
 export default function edgeHCI() {
   return (
@@ -9,17 +9,17 @@ export default function edgeHCI() {
           The HCI Edge <hr className="w-28 mx-auto h-1 bg-[#D84498]" />
         </h4>
         <p className="font-light">
-          Healthcare organisations joining hands with HCI can benefit in more
-          ways than one. Considering that we are a reputed and fast expanding
-          facilitator of medical tourism, partners could leverage our equity
+          Healthcare organizations joining hands with HCI can benefit in more
+          ways than one. Considering that we are a reputed and fast-growing
+          medical value travel company partners could leverage our equity
           effectively to deliver services to patients from across geographies.
           They can also have access to information on the latest in equipment,
           processes and expertise, leveraging our ecosystem.
         </p>
-        <p className="font-light text-blue-500">
+        <p className="font-light mt-3 text-[#0E56A0]">
           <Link href="/contact-us">For more information, contact us.</Link>
         </p>
       </div>
     </div>
-  )
+  );
 }

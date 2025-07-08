@@ -1,13 +1,16 @@
 'use client'
 
 import React from 'react'
-import { medicalPartners } from '@/utils/data' // Assuming you've updated the data to include hospital and doctor mappings
+import { medicalPartners } from '@/utils/data'
 import Image from 'next/image'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { usePathname } from 'next/navigation'
+import Hospitals from '@/components/HomePage/Hospitals/HomeHospitals'
 
-function ConsultantForm() {
+const Partners = () => {
+  const pathname = usePathname()
   var settings = {
     dots: false,
     infinite: true,
@@ -20,21 +23,21 @@ function ConsultantForm() {
     touchMove: true,
     responsive: [
       {
-        breakpoint: 1024, // For tablet and below
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
         },
       },
       {
-        breakpoint: 768, // For mobile
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
         },
       },
       {
-        breakpoint: 480, // For smaller devices
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -49,6 +52,12 @@ function ConsultantForm() {
         <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4">
           Our Network Hospitals
         </h3>
+        {pathname === '/' && (
+          <div>
+            <Hospitals />
+          </div>
+        )}
+
         <div className="w-full mx-auto p-10 ">
           <Slider {...settings}>
             {medicalPartners.map((partner, index) => (
@@ -69,4 +78,4 @@ function ConsultantForm() {
   )
 }
 
-export default ConsultantForm
+export default Partners 
