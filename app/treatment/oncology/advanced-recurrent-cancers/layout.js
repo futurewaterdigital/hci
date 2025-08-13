@@ -6,6 +6,9 @@ export const metadata = {
   title: "Advanced & Recurrent Cancer: Radiation Therapy and Technological Advancements",
   description: "Explore comprehensive treatment for advanced and recurrent cancers with cutting-edge radiation therapy, including options for prostate cancer, lung cancer, and melanoma. Know about side effects and advancements in medical physics and radiation therapy technologist programmes.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+  canonical: "https://healthcareinternational.in/treatment/oncology/advanced-recurrent-cancer"
+  },
   keywords: "metastaticcancer, genetictesting, radiationtherapy, lung, liver, car t",
 
   openGraph: {

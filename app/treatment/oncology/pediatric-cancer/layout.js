@@ -6,6 +6,9 @@ export const metadata = {
   title: "Pediatric Cancer Care: Retinoblastoma Treatment & Proton Therapy Options",
   description: "Discover advanced pediatric cancer care with targeted therapies including retinoblastoma treatment, radiation therapy, and access to proton therapy centres near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/pediatric-cancer"
+  },
   keywords: "pediatriccancer, wilmstumor, childhoodcancer, retinoblastoma, osteosarcoma, neuroblastoma, bone marrow, ewing sarcoma, radiationtherapy, protontherapy",
 
   openGraph: {

@@ -7,6 +7,9 @@ export const metadata = {
   description: "Understand peripheral nerve disorders, seizure types like tonic-clonic and petit mal, and get EMG testing near you. Find expert epileptologists and personalised PNES and seizure treatment options.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "seizure, electromyography, epileptologist near me, pnes treatment, focal seizure, tonic clonic seizure, febrile seizure, petit mal seizure, seizure causes, brain seizures, types of epileptic seizures, fever seizure, seizure doctor, emg machine, generalized tonic clonic seizure, tonic clonic seizure treatment",
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/peripheral-nerve-disorders",
+  },
 
   openGraph: {
     url: "https://healthcareinternational.in/",

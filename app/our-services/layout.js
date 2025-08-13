@@ -3,9 +3,12 @@ import Header from "../../components/Header/page";
 import Footer from "../../components/Footer/page";
 
 export const metadata = {
-  title: "Cost Comparison",
+  title: "Our Services",
   description: "Healthcare International.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/our-services",
+  },
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Healthcare International",
@@ -25,7 +28,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
       <Header />

@@ -7,6 +7,10 @@ export const metadata = {
   description: "Explore ulcerative colitis, a chronic inflammatory bowel condition. Understand symptoms, possible causes, treatment options, and supportive therapies for managing intestinal inflammation.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "ulcerative colitis, ibd, uc treatment, intestinal inflammation, inflamed intestines treatment, natural remedies for colitis, nausea, fever, diarrhoea",
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/gastroenterology/ulcerative-colitis",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Ulcerative Colitis: Causes, Symptoms & Treatment Approaches",

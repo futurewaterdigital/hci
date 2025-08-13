@@ -7,7 +7,9 @@ export const metadata = {
   description: "Discover common causes and symptoms of gallbladder stones. Explore diagnostic tools like HIDA scan, treatment options such as cholecystectomy, non-surgical remedies, and diet tips for gallstone management.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "gallbladder, gallstones, gall bladder issues, hida scan, cholecystectomy, cholelithiasis, gall stone, cholecystitis treatment",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/gastroenterology/gallbladder-stones",
+  },
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Gallbladder Stones | Causes, Symptoms, Diagnosis & Treatment Options",

@@ -6,6 +6,9 @@ export const metadata = {
   title: "General Surgery | Gallbladder Treatments & Expert Surgeons Near You",
   description: "Discover expert general surgery services including gallbladder removal, gallstones treatment, and HIDA scan. Visit Healthcare International for advanced surgical care and find a general surgeon near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/others/general-surgery"
+  },
   keywords: "healthcareinternational, hci, healthcare international, general surgery, gallbladder, general surgeon near me, gallstones, gall bladder issues, hida scan, cholecystectomy, gall stone symptoms, cholecystitis treatment",
   openGraph: {
     url: "https://healthcareinternational.in/",

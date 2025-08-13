@@ -6,6 +6,9 @@ export const metadata = {
   title: "Pediatric Orthopedic Conditions | Child Orthopaedic Care & Support",
   description: "Explore paediatric orthopaedic care including bracing, splinting, and specialised treatments for joint, bone, and sports-related conditions. Find trusted orthopaedists and paediatric support near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/orthopedics/pediatric-orthopedic-conditions"
+  },
   keywords: "pediatric, orthopedist, bracing, splinting, orthopedic near me, pediatrician near me, sports orthopedic, childrens hospital near me",
   openGraph: {
     url: "https://healthcareinternational.in/",

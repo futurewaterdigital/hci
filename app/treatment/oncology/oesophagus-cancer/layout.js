@@ -6,6 +6,9 @@ export const metadata = {
   title: "Oesophagus Cancer Treatment: Esophagectomy & Radiation Therapy",
   description: "Get expert care for oesophageal cancer with treatments like esophagectomy, esophagogastrectomy, and bladder cancer radiation therapy for complex cases.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/oesophagus-cancer"
+  },
   keywords: "esophagectomy, esophagogastrectomy, protontherapy, oesophagus, gerd, gastroesophageal reflux disease, acid reflux, heartburn",
 
   openGraph: {

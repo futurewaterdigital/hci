@@ -7,6 +7,9 @@ export const metadata = {
   description: "Explore the symptoms and causes of celiac disease, gluten and wheat intolerance, and gut-related issues. Find guidance on testing, non-celiac gluten sensitivity, and managing the condition with a gluten-free diet.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "celiacdisease, celiac, gut infection, glutenfree diet, gluten intolerance, wheat intolerance, gluten, intestine, diarrhoea, nausea",
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/gastroenterology/celiac-disease",
+  },
 
   openGraph: {
     url: "https://healthcareinternational.in/",

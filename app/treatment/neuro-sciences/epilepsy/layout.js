@@ -7,7 +7,10 @@ export const metadata = {
   description: "Explore effective treatment options for epilepsy, including deep brain stimulation (DBS), brain stimulation devices, and seizure management strategies. Learn about different types of seizures and find expert epileptologists near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "chiari malformation, chiari treatment, chiari 1 malformation, chiari one malformation, brain, cerebellum, cerebrospinal fluid",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/epilepsy",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Epilepsy Treatment & Seizure Management | Brain Stimulation & DBS",

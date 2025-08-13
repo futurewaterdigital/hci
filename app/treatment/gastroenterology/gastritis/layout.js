@@ -7,6 +7,10 @@ export const metadata = {
   description: "Understand different forms of gastritis including acute, erosive, and atrophic. Explore symptoms, causes, and available treatments for effective relief and digestive health management.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "acute gastritis, atrophic gastritis, erosive gastritis, acute pangastritis, nausea, vomiting",
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/gastroenterology/gastritis",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Gastritis: Types, Causes & Treatment Approaches",

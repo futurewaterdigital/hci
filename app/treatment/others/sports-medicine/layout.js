@@ -6,6 +6,9 @@ export const metadata = {
   title: "Advanced Sports Medicine Care | Knee Cartilage & Injury Treatment",
   description: "Get expert treatment for sports-related injuries including knee cartilage damage, chondromalacia patella, and meniscus issues. Non-surgical and regenerative options available.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/others/sports-medicine"
+  },
   keywords: "injury prevention, physical rehabilitation, exercise counselling, shoulder injuries, nutritionist, nutritionist near me, asthma",
   openGraph: {
     url: "https://healthcareinternational.in/",

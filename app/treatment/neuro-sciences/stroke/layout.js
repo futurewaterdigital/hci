@@ -7,7 +7,10 @@ export const metadata = {
   description: "Understand stroke types including hemorrhagic stroke and brain attack. Explore treatments such as TPA (Tissue Plasminogen Activator), craniotomy, and care for intracerebral hemorrhage.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "brain attack, hemorrhagic stroke, tpa, tissue plasminogen activator, craniotomy, brain, plaque, headache, intracerebral hemorrhage treatments",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/stroke",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Stroke | Types, Emergency Care & Treatment Options",

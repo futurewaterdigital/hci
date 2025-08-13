@@ -6,6 +6,9 @@ export const metadata = {
   title: "Pancreatic Cancer Treatment: Whipple Procedure & Targeted Therapy",
   description: "Explore advanced care for pancreatic cancer including adenocarcinoma treatment, pancreatectomy, radiation therapy, targeted therapy, and Whipple procedure for stage 4 cases.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/pancreatic-cancer"
+  },
   keywords: "pancreatic adenocarcinoma, pancreaticcancer, pnet, parp inhibitor, radiationtherapy, targetedtherapy, whippleprocedure, nausea",
 
   openGraph: {

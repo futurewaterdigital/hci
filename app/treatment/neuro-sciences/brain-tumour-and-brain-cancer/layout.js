@@ -6,6 +6,9 @@ export const metadata = {
   title: "Brain Tumour & Brain Cancer: Glioblastoma, Targeted Therapy & CTCs",
   description: "Explore brain tumour and brain cancer treatment options including targeted therapy for glioblastoma. Learn about circulating tumour cells (CTCs), diagnosis, and personalised care approaches.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/brain-tumour-and-brain-cancer",
+  },
   keywords: "",
 
   openGraph: {

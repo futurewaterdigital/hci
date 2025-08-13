@@ -7,7 +7,10 @@ export const metadata = {
   description: "Explore Chiari malformation, including Type 1 and Arnold-Chiari malformation. Know about symptoms, diagnosis, and the latest treatments for Chiari 1 malformation.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "chiari malformation, chiari treatment, chiari 1 malformation, chiari one malformation, brain, cerebellum, cerebrospinal fluid",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/chiari-malformation",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Chiari Malformation : Symptoms, Types & Advanced Treatments",

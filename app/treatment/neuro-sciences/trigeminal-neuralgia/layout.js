@@ -7,7 +7,10 @@ export const metadata = {
   description: "Understand trigeminal neuralgia (tic douloureux), its symptoms, and treatment options including radiofrequency and endoscopic rhizotomy. Explore procedures, potential side effects, and surgical considerations.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "tic douloureux, rhizotomy, ms, multiple sclerosis, trauma, trigeminalnerve",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/trigeminal-neuralgia",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Trigeminal Neuralgia and Rhizotomy Options | Symptoms & Procedures",

@@ -5,6 +5,9 @@ export const metadata = {
   title: "Heart Valve Disease (HVD) | Internal Bleeding Causes & Signs",
   description: "Explore heart valve disease (HVD), its link to internal bleeding, causes of internal blood loss, and signs of bleeding inside the body. Learn symptoms, diagnosis, and treatment options.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/cardiac-sciences/heart-valve-disease",
+  },
   keywords: "valve repair, atresia, heart, mitral valve repair surgery, mvr surgery, mitral clipping, mitral repair",
   openGraph: {
     url: "https://healthcareinternational.in/",
@@ -25,12 +28,12 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
 
       {children}
- 
+
     </>
   );
 }

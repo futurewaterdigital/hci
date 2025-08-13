@@ -6,6 +6,9 @@ export const metadata = {
   title: "Gynecological Cancer | Hysterectomy Surgery, TVS Ultrasound & Uterus Operation",
   description: "Explore gynecological cancer treatments including hysterectomy, uterus operation, and TVS ultrasound. Know costs, recovery, and find top hysterectomy surgeons near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/gynecological-cancers"
+  },
   keywords: "",
 
   openGraph: {

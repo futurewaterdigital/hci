@@ -7,7 +7,9 @@ export const metadata = {
   description: "Understand colon polyps and their link to colon cancer. Explore prevention strategies, hereditary conditions like FAP, and advanced treatment options including robotic surgery for colon cancer.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "coloncancer, colonpolyps, Best Gastroentrologist in India, Best Gastroentrologist in the city, Best Gastroentrologist in Bengaluru, Best Gastroentrologist in Chennai, Best Gastroentrologist in Mumbai, Best Gastroentrologist in Hyderabad, Best Gastroentrologist in Delhi",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/gastroenterology/colon-polyps",
+  },
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Colon Polyps and Colon Cancer | Symptoms, Prevention & Surgery Options",

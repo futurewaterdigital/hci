@@ -7,7 +7,10 @@ export const metadata = {
   description: "Explore types of seizure disorders including focal, tonic-clonic, and febrile seizures. Access information on encephalitis, PNES treatment, vagus nerve stimulators, and find specialists near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "seizure, encephalitis, epileptologist near me, febrile convulsions, pnes treatment, vagus stimulator, vns stimulator",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/seizure-disorders",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Seizure Disorders | Diagnosis, Types & Treatment Options",

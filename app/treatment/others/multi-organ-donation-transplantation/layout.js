@@ -6,6 +6,9 @@ export const metadata = {
   title: "Multi-Organ Donation & Transplantation | Liver, Kidney, Heart & Lung Transplants",
   description: "Discover advanced multi-organ transplantation services including liver, kidney, heart, lung, and pancreas transplants. Learn about costs, living donors, and success rates at leading hospitals.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/others/multi-organ-donation-transplantation"
+  },
   keywords: "asthma, peak flow meter, vaccination, pediatrician, newborn",
   openGraph: {
     url: "https://healthcareinternational.in/",

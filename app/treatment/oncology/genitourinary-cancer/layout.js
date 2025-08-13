@@ -6,6 +6,9 @@ export const metadata = {
   title: "Cerebral Palsy",
   description: "Healthcare International.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/genitourinary-cancer"
+  },
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Healthcare International",

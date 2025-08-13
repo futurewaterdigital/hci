@@ -5,6 +5,9 @@ export const metadata = {
   title: "Peripheral Artery Disease (PAD) | ABI Test, PVR & PAD Treatment Options",
   description: "Know about PAD symptoms, treatment, and diagnostic tests like Pulse Volume Recording (PVR) and Ankle Brachial Index (ABI). Find ABI tests and PAD treatment centres near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/cardiac-sciences/peripheral-artery-disease",
+  },
   keywords: "pad, claudication, leg cramps, hardening of the arteries, muscle cramps treatment, Best Cardiologist in Bengaluru, Best Cardiologist in Chennai, Best Cardiologist in Mumbai, Best Cardiologist in Hyderabad, Best Cardiologist in Delhi",
   openGraph: {
     url: "https://healthcareinternational.in/",
@@ -25,12 +28,12 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
 
       {children}
- 
+
     </>
   );
 }

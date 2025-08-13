@@ -6,6 +6,9 @@ export const metadata = {
   title: "Foot and Ankle Surgery | Fusion and Gait Analysis",
   description: "Discover advanced foot and ankle surgery options, including arthrodesis, ankle and subtalar fusion, and triple arthrodesis. Understand the role of gait analysis and 3D gait lab assessments in treatment planning and recovery.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/orthopedics/foot-and-ankle-surgery"
+  },
   keywords: "gait analysis, arthrodesis, ankle fusion, subtalar fusion, rheumatoid arthritis, Best Orthopedist in india, Best Orthopedist in the city, Best Orthopedist in Bengaluru, Best Orthopedist in Chennai, Best Orthopedist in Mumbai, Best Orthopedist in Hyderabad, Best Orthopedist in Delhi",
   openGraph: {
     url: "https://healthcareinternational.in/",

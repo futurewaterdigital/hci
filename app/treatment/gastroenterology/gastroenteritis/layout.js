@@ -7,6 +7,10 @@ export const metadata = {
   description: "Get insights on gastroenteritis, commonly known as stomach flu. Explore symptoms, causes, and available treatments including detox and gut health support.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "stomach flu, detoxification, detox, gastroenteritis treatments, stomach bug symptoms, nausea, vomiting, diarrhoea",
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/gastroenterology/gastroenteritis",
+  },
+ 
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Gastroenteritis: Causes, Symptoms & Treatment Options",
