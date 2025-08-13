@@ -6,6 +6,9 @@ export const metadata = {
   title: "About Healthcare International - Trusted Global Medical Partner",
   description: "Learn more about Healthcare International (HCI), your trusted partner in medical tourism, connecting you to world-class healthcare services across India. Discover our expertise in patient care, hospital networks, and seamless international medical coordination.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/about-us",
+  },
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Healthcare International",
@@ -25,7 +28,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
       {/* <Header /> */}

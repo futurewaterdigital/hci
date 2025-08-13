@@ -6,6 +6,9 @@ export const metadata = {
   title: "Prostate Cancer: Advanced Treatment, Screening & Supportive Care",
   description: "Explore comprehensive prostate cancer care including PSA tests, DRE, brachytherapy, hormone therapy, proton therapy, surgery, and supportive treatments for all stages.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/prostate-cancer"
+  },
   keywords: "prostate cancer, signs of prostate cancer, stage 1 prostate cancer symptoms, metastatic prostate cancer, prostate problems, prostatitis treatment, blood, sbrt, protontherapy",
 
   openGraph: {

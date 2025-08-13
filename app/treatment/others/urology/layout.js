@@ -6,6 +6,9 @@ export const metadata = {
   title: "Expert Urology Care | UTI, ED & Robotic Urological Surgery",
   description: "Comprehensive urology services for UTI, erectile dysfunction (ED), hematuria, and overactive bladder. Advanced treatments, robotic surgery, and discreet care at Healthcare International.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/others/urology"
+  },
   keywords: "urology, healthcare international, uti, urinary tract infection, ed, erectile dysfunction, hematuria, blood in urine, robotic surgery, bladder infection, vasectomy near me, hydronephrosis, harder erection supplements",
   openGraph: {
     url: "https://healthcareinternational.in/",

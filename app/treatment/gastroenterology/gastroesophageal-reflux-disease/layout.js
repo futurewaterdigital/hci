@@ -6,6 +6,9 @@ export const metadata = {
   title: "Gastroesophageal Reflux Disease (GERD): Symptoms & Treatment Options",
   description: "Understand gastroesophageal reflux disease (GERD), acid reflux, and heartburn. Discover effective treatment options, over-the-counter medicines, and remedies to manage symptoms.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/gastroenterology/gastroesophageal-reflux-disease",
+  },
   keywords: "gerd, gastroesophageal reflux disease, acid reflux, heartburn, reflux, laryngitis, Best Gastroentrologist in India, Best Gastroentrologist in the city, Best Gastroentrologist in Bengaluru, Best Gastroentrologist in Chennai, Best Gastroentrologist in Mumbai, Best Gastroentrologist in Hyderabad, Best Gastroentrologist in Delhi",
   openGraph: {
     url: "https://healthcareinternational.in/",

@@ -50,6 +50,9 @@ export async function generateMetadata({ params }) {
     description: meta.description,
     keywords: meta.keywords,
     metadataBase: new URL("https://healthcareinternational.in/"),
+    alternates: {
+      canonical: `https://healthcareinternational.in/treatment/${slug}`,
+    },
     openGraph: {
       url: "https://healthcareinternational.in/",
       title: meta.title,

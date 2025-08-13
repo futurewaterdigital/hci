@@ -6,6 +6,9 @@ export const metadata = {
   title: "Spinal Disorders: Cervical Radiculopathy & Laminectomy Treatments",
   description: "Explore treatment options for spinal disorders including cervical radiculopathy and laminectomy with or without fusion. Access therapy details, specialist care, and cost-related insights.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/orthopedics/spinal-disorders"
+  },
   keywords: "cervical radiculopathy, laminectomy, radiculopathy treatment, spinal cord, Best Orthopedist in india, Best Orthopedist in the city, Best Orthopedist in Bengaluru, Best Orthopedist in Chennai, Best Orthopedist in Mumbai, Best Orthopedist in Hyderabad, Best Orthopedist in Delhi",
   openGraph: {
     url: "https://healthcareinternational.in/",

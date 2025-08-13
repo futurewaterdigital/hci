@@ -6,6 +6,9 @@ export const metadata = {
   title: "Liver Cancer Treatment: Hepatitis Care, Transplants & LFT Testing",
   description: "Explore advanced liver cancer care including hepatitis B & C treatment, liver function tests (LFT), AFP screening, liver transplant options, and hepatectomy procedures.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/liver-cancer"
+  },
   keywords: "hepatitis b, hepatitis c, livercancer, hepatitis d, hepatitis treatment, livertransplant, ebrt, protontherapy, sbrt, liver transplant surgery",
 
   openGraph: {

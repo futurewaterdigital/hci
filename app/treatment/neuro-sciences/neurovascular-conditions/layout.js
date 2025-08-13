@@ -7,7 +7,10 @@ export const metadata = {
   description: "Explore care for neurovascular conditions including arteriovenous malformation (AVM), hypertension, and pulmonary hypertension. Understand symptoms, treatments, and options to manage and monitor blood pressure effectively.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "arteriovenous malformation, hypertension, avm, blood pressure, pulmonary hypertension, hypertension symptoms, pulmonary hypertension treatment, pulmonary hypertension symptoms, pulmonary arterial hypertension, hypertension treatments, hypertension headache, most accurate blood pressure monitor, lower blood pressure naturally, normal blood pressure for women, systolic blood pressure, reduce blood pressure, blood pressure doctor near me, diastolic blood pressure",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/neurovascular-conditions",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Neurovascular Conditions | AVM, Hypertension & Pulmonary Care",

@@ -6,6 +6,9 @@ export const metadata = {
   title: "ACL, PCL & MCL Surgeries: Injury Management & Recovery",
   description: "Understand treatment options for ACL, PCL, and MCL injuries. Explore surgical procedures, therapy methods, and recovery support for ligament damage and knee stability restoration.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/orthopedics/surgeries"
+  },
   keywords: "acl, mcl, pcl, medial collateral ligament, ligament, knee, joints",
   openGraph: {
     url: "https://healthcareinternational.in/",

@@ -7,7 +7,10 @@ export const metadata = {
   description: "Learn about pituitary tumours, acromegaly, and prolactinoma. Get hormone tests like cortisol, estrogen, AMH, FSH, LH, and full hormone panels. Book hormone check-ups and tests near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "acromegaly, cushing's disease, hormonal testing, prolactinoma, cortisol test, perimenopause test, menopause test, estrogen, fsh test, pituitary gland, lh test, prolactin test, amh test near me, dht test",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/pituitary-tumours",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Pituitary Tumour: Hormonal Testing, Prolactinoma & Cushing’s Disease Care",

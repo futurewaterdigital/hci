@@ -5,6 +5,9 @@ export const metadata = {
   title: "Pacemaker of the Heart | Abbott, Medtronic, Micra & Dual Chamber Pacemakers",
   description: "Discover types of pacemakers including Micra, Abbott, Medtronic, and Boston Scientific. Know pacemaker costs, dual chamber options, surgery details, and nearby pacemaker doctors.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/cardiac-sciences/pacemakers",
+  },
   keywords: "pacemaker, pace maker machine, pace makers, heart, Best Cardiologist in Bengaluru, Best Cardiologist in Chennai, Best Cardiologist in Mumbai, Best Cardiologist in Hyderabad, Best Cardiologist in Delhi, Best Cardiologist in the city, Best Cardiologist in India",
   openGraph: {
     url: "https://healthcareinternational.in/",
@@ -25,12 +28,12 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
 
       {children}
- 
+
     </>
   );
 }

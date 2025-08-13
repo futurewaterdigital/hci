@@ -6,6 +6,9 @@ export const metadata = {
   title: "Comprehensive Pediatric Asthma Care | Diagnosis & Treatment Options",
   description: "Expert care for children with asthma – from diagnosis and inhaler therapy to allergy management and severe asthma treatment. Find asthma specialists and supportive therapies near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/others/pediatrics"
+  },
   keywords: "asthma, peak flow meter, vaccination, pediatrician, newborn",
   openGraph: {
     url: "https://healthcareinternational.in/",

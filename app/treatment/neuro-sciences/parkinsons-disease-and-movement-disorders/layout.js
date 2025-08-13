@@ -7,7 +7,10 @@ export const metadata = {
   description: "Get insights on Parkinson's disease and other movement disorders. Access electromyography (EMG) testing services, understand micrographia, and explore care for neurodegenerative conditions.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "brain damage, neurodegenerative disorders, electromyography, micrographia, emg testing, brain, dystonia",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/parkinsons-disease-and-movement-disorders",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Parkinson's Disease & Movement Disorders | EMG Testing & Neuro Care",

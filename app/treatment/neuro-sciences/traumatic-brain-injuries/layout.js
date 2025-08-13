@@ -7,7 +7,10 @@ export const metadata = {
   description: "Explore traumatic brain injury (TBI), its assessment using the Glasgow Coma Scale (GCS), and recovery strategies for head trauma. Understand how TBIs are managed and treated.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "tbi, glasgow coma scale, gcs, brain, tbis, recovery from head trauma, Best Neurologist in india, Best Neurologist in the city, Best Neurologist in Bengaluru, Best Neurologist in Chennai, Best Neurologist in Mumbai, Best Neurologist in Hyderabad, Best Neurologist in Delhi",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/traumatic-brain-injuries",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Traumatic Brain Injury (TBI) | Symptoms, Diagnosis & Recovery",

@@ -6,6 +6,9 @@ export const metadata = {
   title: "Cost Comparison",
   description: "Healthcare International.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/cost-comparison",
+  },
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Healthcare International",
@@ -25,7 +28,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
       <Header />

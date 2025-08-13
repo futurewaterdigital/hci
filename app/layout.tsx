@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'Healthcare International | Trusted Medical Tourism Services',
   description: 'Explore Healthcare International, your trusted partner for medical tourism, offering top-notch healthcare services across India. Connect with leading hospitals and expert doctors to access quality treatments tailored to your needs',
   metadataBase: new URL('https://healthcareinternational.in/'),
+  alternates: {
+    canonical: 'https://healthcareinternational.in/',
+  },
   openGraph: {
     url: 'https://healthcareinternational.in/',
     title: 'Healthcare International | Trusted Medical Tourism Services',
@@ -80,6 +83,24 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-MMXV7DNS');
           `}
         </Script>
+
+        {/* ✅ Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org/",
+              "@type": "WebSite",
+              "name": "Healthcare International",
+              "url": "https://www.healthcareinternational.in/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.healthcareinternational.in/{search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
 
         {/* Favicon & Meta */}
         <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />

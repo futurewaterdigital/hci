@@ -6,6 +6,9 @@ export const metadata = {
   title: "Kidney Cancer: Diagnosis, Robotic Surgery & Treatment Options",
   description: "Learn about kidney cancer care including nephrectomy, cryoablation, robotic surgery, urinalysis tests, Wilms tumour, RCC, and urothelial carcinoma diagnosis.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/kidney-cancer"
+  },
   keywords: "chromophobe rcc, kidneycancer, renalcancer, kidneytumor, kidneys, rcc, robotic surgery",
 
   openGraph: {

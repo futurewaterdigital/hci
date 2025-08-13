@@ -5,6 +5,9 @@ export const metadata = {
   title: "Heart and Lung Transplant Surgery | Advanced Transplant Care & Treatment",
   description: "Explore expert heart and lung transplant procedures, recovery, and post-operative care. Learn about eligibility, success rates, and trusted transplant hospitals near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/cardiac-sciences/heart-and-lung-transplants",
+  },
   keywords: "hearttransplant, lungtransplant, heart transplant success rate, first heart transplant, organtransplant, lung, heart",
 
   openGraph: {
@@ -26,12 +29,12 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
 
       {children}
- 
+
     </>
   );
 }

@@ -5,6 +5,9 @@ export const metadata = {
   title: "Angioplasty & Heart Stent Surgery | Abbott, Xience, Synergy Stents",
   description: "Explore advanced angioplasty procedures with Abbott, Synergy, and Xience stents. Learn about heart stent surgery, medical stents, and solutions for heart blockages.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/cardiac-sciences/angioplasty",
+  },
   keywords: "heart, stent, pci, Best Cardiologist in Bengaluru, Best Cardiologist in Chennai, Best Cardiologist in Mumbai, Best Cardiologist in Hyderabad, Best Cardiologist in Delhi, Best Cardiologist in the city, Best Cardiologist in India",
 
   openGraph: {

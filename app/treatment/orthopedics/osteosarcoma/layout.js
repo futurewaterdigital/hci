@@ -6,6 +6,9 @@ export const metadata = {
   title: "Osteosarcoma | Treatment Options and Cryosurgery Support",
   description: "Understand osteosarcoma and its treatment options including chemotherapy and cryosurgery. Access support for bone cancer care and explore local cryosurgery services for improved outcomes.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/orthopedics/osteosarcoma"
+  },
   keywords: "osteosarcoma, cryosurgery, osteosarcom, wrist bones, bones, tibia, limping, humerus, osteosarcoma treatment, cryotherapy skin tag, chemotherapy for osteosarcoma",
   openGraph: {
     url: "https://healthcareinternational.in/",

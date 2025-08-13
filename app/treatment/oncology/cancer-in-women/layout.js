@@ -3,9 +3,13 @@ import Header from '@/components/Header/page'
 import Footer from '@/components/Footer/page'
 
 export const metadata = {
-  title: 'Cerebral Palsy',
+  title: 'Cancer in Women',
   description: 'Healthcare International.',
   metadataBase: new URL('https://healthcareinternational.in/'),
+  canonical: 'https://healthcareinternational.in/treatment/oncology/cancer-in-women',
+  alternates: {
+    canonical: 'https://healthcareinternational.in/treatment/oncology/cancer-in-women',
+  },
   openGraph: {
     url: 'https://healthcareinternational.in/',
     title: 'Healthcare International',

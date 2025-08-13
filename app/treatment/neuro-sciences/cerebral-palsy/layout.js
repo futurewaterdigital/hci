@@ -7,7 +7,10 @@ export const metadata = {
   description: "Understand cerebral palsy and its symptoms, including dyskinetic movements. Discover treatment options like anticonvulsants, therapies, and personalised care plans.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "cerebral palasy, brain, seizure, anticovulsants, dyskinetic movement, Best Neurologist in india, Best Neurologist in the city, Best Neurologist in Bengaluru, Best Neurologist in Chennai, Best Neurologist in Mumbai, Best Neurologist in Hyderabad, Best Neurologist in Delhi",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/cerebral-palsy",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Cerebral Palsy: Managing Dyskinetic Movement & Anticonvulsant Therapy",

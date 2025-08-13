@@ -20,6 +20,10 @@ export const metadata = {
     description:
       'Get comprehensive treatment for gynecological cancers including endometrial, ovarian, and cervical cancers. Expert care with advanced diagnostic and therapeutic options.',
   },
+  metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/oncology/gi-cancer"
+  },
 }
 
 export default function RootLayout({ children }) {

@@ -7,7 +7,10 @@ export const metadata = {
   description: "Explore treatment options for multiple sclerosis (MS), including disease-modifying therapies (DMT), plasma exchange, and corticosteroids. Learn about MS diagnosis, PPMS, and topical corticosteroid treatments like clobetasol and triamcinolone.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "multiplesclerosis, ms, spinal tap, disease modifying therapies, dmt, plasma exchange, corticosteroids, clobetasol, triamcinolone cream, ppms",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/multiple-sclerosis",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Multiple Sclerosis Treatment & Diagnosis | Disease Modifying Therapies & Plasma Exchange",

@@ -7,7 +7,10 @@ export const metadata = {
   description: "Explore spinal cord disorders, including cervical spinal cord damage and available treatments. Learn about symptoms, spinal cord damage recovery, and advanced care options.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "inflamation, surgery, recovery, spinal cord, apoptosis, regeneration, multiple sclerosis, disorder, spinal canal, spinal column, pott's disease, spinal muscular atrophy",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/spinal-cord-disorders",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Spinal Cord Disorders: Cervical Damage & Treatment Options",

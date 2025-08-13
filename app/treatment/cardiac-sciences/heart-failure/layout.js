@@ -5,6 +5,9 @@ export const metadata = {
   title: "Heart Failure Treatment | CHF, Ejection Fraction & Cardiac Care",
   description: "Understand heart failure (CHF), its symptoms, causes, and treatment options including diastolic heart failure, low ejection fraction, and advanced cardiac care for all age groups.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/cardiac-sciences/heart-failure",
+  },
   keywords: "aneurysms, heart, stent, aneurysm causes, claudication, aorta, Best Cardiologist in Bengaluru, Best Cardiologist in Chennai, Best Cardiologist in Mumbai, Best Cardiologist in Hyderabad, Best Cardiologist in Delhi, Best Cardiologist in the city, Best Cardiologist in India",
   openGraph: {
     url: "https://healthcareinternational.in/",
@@ -25,12 +28,12 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
 
       {children}
- 
+
     </>
   );
 }

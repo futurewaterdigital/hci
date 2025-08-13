@@ -7,7 +7,10 @@ export const metadata = {
   description: "Discover treatment options for neurodegenerative disorders like ALS and dementia. Explore brain stimulation therapies, deep brain stimulation (DBS) devices, memory care facilities, and the latest ALS treatments.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "dementia, als, dbs, Best Neurologist in india, Best Neurologist in the city, Best Neurologist in Bengaluru, Best Neurologist in Chennai, Best Neurologist in Mumbai, Best Neurologist in Hyderabad, Best Neurologist in Delhi",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/neurodegenerative-disorders",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Neurodegenerative Disorders Treatment | ALS, Dementia & Brain Stimulation",

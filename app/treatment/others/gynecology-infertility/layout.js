@@ -6,6 +6,9 @@ export const metadata = {
   title: "Gynecology & Infertility | Menopause & UTI Treatments | Healthcare International",
   description: "Explore expert care in gynecology, infertility, menopause, and UTI treatments at Healthcare International. Consult endocrinologists near you for hormone support, supplements, and personalised care.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/others/gynecology-infertility"
+  },
   keywords: "healthcare international, hci, menstrual health, pregnancy, menstrual, pregnancy symptoms, pregnancy test, abnormal bleeding, ovarian cysts, menopause, uti, hormonal assessment, ovulation",
   openGraph: {
     url: "https://healthcareinternational.in/",

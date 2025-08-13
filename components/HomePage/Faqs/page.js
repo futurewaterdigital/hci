@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import Script from 'next/script'
 
 export default function Faqs() {
   const [selectedIndex, setSelectedIndex] = useState(null)
@@ -65,8 +66,41 @@ export default function Faqs() {
     return <div>Error: {error}</div> // Display error message if any
   }
 
+  // Generate structured data for FAQs
+  const generateStructuredData = () => {
+    if (faqs.length === 0) return null;
+
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((item) => ({
+        "@type": "Question",
+        "name": item.title.rendered,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.content.rendered.replace(/<[^>]*>/g, '') // Remove HTML tags for clean text
+        }
+      }))
+    };
+
+    return structuredData;
+  };
+
   return (
     <div className="pb-4" id="faqs">
+      {/* Structured Data for SEO */}
+      {faqs.length > 0 && (
+        <Script
+          id="faq-structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {`
+${JSON.stringify(generateStructuredData(), null, 2)}
+          `}
+        </Script>
+      )}
+
       <div className="w-11/12 text-center mx-auto">
         <div>
           <h4 className="text-3xl font-bold pb-2 font-roboto">
@@ -78,9 +112,8 @@ export default function Faqs() {
           {faqs.map((item, index) => (
             <div
               key={index}
-              className={`collapse collapse-arrow my-4 shadow-md ${
-                selectedIndex === index ? 'bg-white' : 'bg-base-200'
-              }`}
+              className={`collapse collapse-arrow my-4 shadow-md ${selectedIndex === index ? 'bg-white' : 'bg-base-200'
+                }`}
             >
               <input
                 type="radio"
@@ -90,19 +123,17 @@ export default function Faqs() {
                 className="hidden"
               />
               <div
-                className={`collapse-title text-xl font-normal cursor-pointer font-roboto ${
-                  selectedIndex === index
-                    ? 'bg-[#EEB133] text-black'
-                    : 'bg-white'
-                } hover:bg-[#EEB133]`}
+                className={`collapse-title text-xl font-normal cursor-pointer font-roboto ${selectedIndex === index
+                  ? 'bg-[#EEB133] text-black'
+                  : 'bg-white'
+                  } hover:bg-[#EEB133]`}
                 onClick={() => handleAccordionClick(index)}
               >
                 {item.title.rendered}
               </div>
               <div
-                className={`collapse-content ${
-                  selectedIndex === index ? 'block' : 'hidden'
-                }`}
+                className={`collapse-content ${selectedIndex === index ? 'block' : 'hidden'
+                  }`}
               >
                 <div
                   className="font-light py-6"

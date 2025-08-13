@@ -6,6 +6,9 @@ export const metadata = {
   title: "Expert Aesthetic & Plastic Surgery | Rhinoplasty, Tummy Tuck, Fillers",
   description: "Enhance your natural beauty with expert cosmetic and plastic surgery. Services include rhinoplasty, tummy tuck, breast augmentation, liposuction, fillers, and more. Find trusted surgeons near you.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/others/aesthetic-cosmetic-plastic-surgery"
+  },
   keywords: "cosmetic surgery, plastic surgery, rhinoplasty, tummy tuck, breast implants, blepharoplasty, healthcare international, hci, nose reshaping, eye surgery, fat grafting, chemical peels, laser treatments, contouring",
   openGraph: {
     url: "https://healthcareinternational.in/",

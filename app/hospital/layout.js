@@ -6,6 +6,9 @@ export const metadata = {
   title: 'Hospitals',
   description: 'Healthcare International.',
   metadataBase: new URL('https://healthcareinternational.in/'),
+  alternates: {
+    canonical: 'https://healthcareinternational.in/hospital',
+  },
   openGraph: {
     url: 'https://healthcareinternational.in/',
     title: 'Healthcare International',

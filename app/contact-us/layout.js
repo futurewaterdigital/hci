@@ -4,6 +4,9 @@ export const metadata = {
   title: "Contact Healthcare International | Get in Touch Today",
   description: "Reach out to Healthcare International for all your medical tourism inquiries. Connect with our team to explore top healthcare services and patient care solutions in India.",
   metadataBase: new URL("https://healthcareinternational.in/"),
+  alternates: {
+    canonical: "https://healthcareinternational.in/contact-us",
+  },
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Contact Healthcare International | Get in Touch Today",
@@ -23,7 +26,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({children}) {
+export default function RootLayout({ children }) {
   return (
     <>
       {children}

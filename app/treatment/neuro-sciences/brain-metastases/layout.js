@@ -7,7 +7,10 @@ export const metadata = {
   description: "Learn about brain metastases, spinal tap procedures, and treatment options like SRT, WBRT, and radiation therapy. Discover how to manage secondary brain tumours with advanced neuro-oncology care.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "metastases, brain metastases, spinal tap, seizure, nausea, headache, vomiting, srt, wbrt, radiationtherapy",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/neuro-sciences/brain-metastases",
+  },
+  
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Brain Metastases: Diagnosis, Spinal Tap, SRT & Radiation Therapy",

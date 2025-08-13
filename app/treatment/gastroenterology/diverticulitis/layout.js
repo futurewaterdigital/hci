@@ -7,7 +7,9 @@ export const metadata = {
   description: "Understand diverticulitis and diverticular disease including colonic and sigmoid diverticulosis. Get insights on symptoms, recommended diet plans, and available treatment options for better digestive health.",
   metadataBase: new URL("https://healthcareinternational.in/"),
   keywords: "diverticulosis, diverticular disease, nausea, diverticula, Best Gastroentrologist in India, Best Gastroentrologist in the city, Best Gastroentrologist in Bengaluru, Best Gastroentrologist in Chennai, Best Gastroentrologist in Mumbai, Best Gastroentrologist in Hyderabad, Best Gastroentrologist in Delhi",
-
+  alternates: {
+    canonical: "https://healthcareinternational.in/treatment/gastroenterology/diverticulitis",
+  },
   openGraph: {
     url: "https://healthcareinternational.in/",
     title: "Diverticulitis and Diverticular Disease | Symptoms, Diet & Treatment Options",
