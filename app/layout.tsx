@@ -84,7 +84,16 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* ✅ Schema.org Structured Data */}
+        {/* Favicon & Meta */}
+        <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon_io/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+
+        {/* ✅ Schema.org Structured Data - General Website Schema for ALL pages */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -101,15 +110,6 @@ export default function RootLayout({
             })
           }}
         />
-
-        {/* Favicon & Meta */}
-        <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
-        <link rel="manifest" href="/favicon_io/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="theme-color" content="#ffffff" />
       </head>
       <body>
         {/* ✅ GTM NoScript Fallback */}
