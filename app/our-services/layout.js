@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/page";
 import Footer from "../../components/Footer/page";
-import Script from "next/script";
 
 export const metadata = {
   title: "Our Services",
@@ -91,10 +90,13 @@ export default function RootLayout({ children }) {
       {children}
       <Footer />
 
-      {/* ✅ Structured Data for SEO */}
-      <Script id="our-services-itemlist-schema" type="application/ld+json">
-        {JSON.stringify(itemListSchema)}
-      </Script>
+      {/* ✅ Pretty-printed schema in page source */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itemListSchema, null, 2), // formatted
+        }}
+      />
     </>
   );
 }

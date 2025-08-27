@@ -30,27 +30,59 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // ✅ Example Contact Page Schema
-  const contactSchema = {
+  const itemListSchema = {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    url: "https://www.healthcareinternational.in/contact-us",
-    name: "Contact Healthcare International",
-    description:
-      "Get in touch with Healthcare International for medical tourism inquiries and healthcare solutions.",
-    mainEntity: {
-      "@type": "Organization",
-      name: "Healthcare International",
-      url: "https://www.healthcareinternational.in/",
-      logo: "https://www.healthcareinternational.in/images/logo.png",
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+91-XXXXXXXXXX",
-        contactType: "customer support",
-        areaServed: "IN",
-        availableLanguage: ["English", "Hindi", "Tamil"],
+    "@type": "ItemList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "WebPage",
+          url: "https://www.healthcareinternational.in/about-us",
+          name: "About Us",
+          description:
+            "HCI has forged enduring alliances with some of India’s best known names in healthcare to offer patients a range of advanced treatments and procedures in various cities of their choice. We offer patients access to competent specialists, proven treatment protocols, and the best possible care, giving them the best possible chance of recovery.",
+          provider: {
+            "@type": "Organization",
+            name: "Healthcare International",
+            sameAs: "https://www.healthcareinternational.in",
+          },
+        },
       },
-    },
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "WebPage",
+          url: "https://www.healthcareinternational.in/our-services",
+          name: "Healthcare International Services",
+          description:
+            "Healthcare International (HCI) is your trusted partner, supporting you at every stage of your medical journey.",
+          provider: {
+            "@type": "Organization",
+            name: "Healthcare International",
+            sameAs: "https://www.healthcareinternational.in",
+          },
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        item: {
+          "@type": "WebPage",
+          url: "https://www.healthcareinternational.in/contact-us",
+          name: "HCI Contact Us",
+          description:
+            "Healthcare International is committed to building a strong, dependable healthcare universe that supports both patients and partners.",
+          provider: {
+            "@type": "Organization",
+            name: "Healthcare International",
+            sameAs: "https://www.healthcareinternational.in/",
+          },
+        },
+      },
+    ],
   };
 
   return (
@@ -58,9 +90,12 @@ export default function RootLayout({ children }) {
       {children}
 
       {/* ✅ Add ContactPage schema (formatted output) */}
-      <Script id="contact-schema" type="application/ld+json">
-        {JSON.stringify(contactSchema, null, 2)}
-      </Script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itemListSchema, null, 2), // formatted
+        }}
+      />
     </>
   );
 }
