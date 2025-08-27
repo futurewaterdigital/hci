@@ -6,11 +6,11 @@ import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
 import ScrollHandler from '@/components/ScrollHandler';
 import React, { Suspense } from 'react';
 
-// layout.tsx
-
+// ✅ Metadata for SEO
 export const metadata: Metadata = {
   title: 'Healthcare International | Trusted Medical Tourism Services',
-  description: 'Explore Healthcare International, your trusted partner for medical tourism, offering top-notch healthcare services across India. Connect with leading hospitals and expert doctors to access quality treatments tailored to your needs',
+  description:
+    'Explore Healthcare International, your trusted partner for medical tourism, offering top-notch healthcare services across India. Connect with leading hospitals and expert doctors to access quality treatments tailored to your needs',
   metadataBase: new URL('https://healthcareinternational.in/'),
   alternates: {
     canonical: 'https://healthcareinternational.in/',
@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   openGraph: {
     url: 'https://healthcareinternational.in/',
     title: 'Healthcare International | Trusted Medical Tourism Services',
-    description: 'Explore Healthcare International, your trusted partner for medical tourism, offering top-notch healthcare services across India. Connect with leading hospitals and expert doctors to access quality treatments tailored to your needs',
+    description:
+      'Explore Healthcare International, your trusted partner for medical tourism, offering top-notch healthcare services across India. Connect with leading hospitals and expert doctors to access quality treatments tailored to your needs',
     images: [
       {
         url: 'images/homeBanner.jpg',
@@ -46,8 +47,8 @@ export const metadata: Metadata = {
       {
         rel: 'mask-icon',
         url: '/favicon_io/favicon.ico',
-        color: '#5bbad5'
-      }
+        color: '#5bbad5',
+      },
     ],
   },
   appleWebApp: {
@@ -55,25 +56,36 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'Healthcare International | Trusted Medical Tourism Services',
   },
-
 }
 
-// ✅ Separate export
+// ✅ Separate viewport export
 export const viewport = {
   width: 'device-width',
   initialScale: 1.0,
 }
-
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // ✅ Schema object (pretty-print)
+  const websiteSchema = {
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    "name": "Healthcare International",
+    "url": "https://www.healthcareinternational.in/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.healthcareinternational.in/{search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+
   return (
     <html lang="en" style={{ scrollBehavior: 'smooth' }}>
       <head>
-        {/* ✅ Google Tag Manager Script */}
+        {/* ✅ Google Tag Manager */}
         <Script id="gtm-head" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -84,24 +96,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* ✅ Schema.org Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org/",
-              "@type": "WebSite",
-              "name": "Healthcare International",
-              "url": "https://www.healthcareinternational.in/",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.healthcareinternational.in/{search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            })
-          }}
-        />
-
         {/* Favicon & Meta */}
         <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
@@ -110,9 +104,17 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#ffffff" />
+
+        {/* ✅ Pretty-printed Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema, null, 2), // pretty format
+          }}
+        />
       </head>
       <body>
-        {/* ✅ GTM NoScript Fallback */}
+        {/* ✅ GTM NoScript */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MMXV7DNS"
@@ -126,6 +128,8 @@ export default function RootLayout({
         <Suspense fallback={<div></div>}>
           <ScrollHandler />
         </Suspense>
+
+        {/* ✅ Scroll restoration */}
         <Script id="scroll-to-top">
           {`
             if (typeof window !== 'undefined') {
@@ -138,11 +142,14 @@ export default function RootLayout({
             }
           `}
         </Script>
+
+        {/* Flowbite */}
         <link
           href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
           rel="stylesheet"
         />
         <Script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></Script>
+
         {children}
       </body>
     </html>
