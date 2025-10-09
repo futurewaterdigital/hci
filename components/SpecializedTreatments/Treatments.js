@@ -1,14 +1,15 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const treatments = [
-    { title: "Cardiac Sciences", img: "/specialized-treatments/cardiac-science.png" },
-    { title: "Oncology", img: "/specialized-treatments/oncology.png" },
-    { title: "Neurosciences", img: "/specialized-treatments/neurosciences.png" },
-    { title: "Gastroenterology", img: "/specialized-treatments/gastroenterology.png" },
-    { title: "Orthopedics", img: "/specialized-treatments/orthopedic.png" },
-    { title: "Other Conditions", img: "/specialized-treatments/other-conditions.png" },
+    { title: "Cardiac Sciences", img: "/specialized-treatments/cardiac-science.png", link: "/treatment/cardiac-sciences" },
+    { title: "Oncology", img: "/specialized-treatments/oncology.png", link: "/treatment/oncology" },
+    { title: "Neurosciences", img: "/specialized-treatments/neurosciences.png", link: "/treatment/neuro-sciences" },
+    { title: "Gastroenterology", img: "/specialized-treatments/gastroenterology.png", link: "/treatment/gastroenterology" },
+    { title: "Orthopedics", img: "/specialized-treatments/orthopedic.png", link: "/treatment/orthopedics" },
+    { title: "Other Conditions", img: "/specialized-treatments/other-conditions.png", link: "/treatment/others" },
 ]
 
 const Treatments = () => {
@@ -27,7 +28,7 @@ const Treatments = () => {
             {/* Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 {treatments.map((item, index) => (
-                    <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col items-center">
+                    <Link key={index} href={item.link} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition flex flex-col items-center cursor-pointer">
                         <Image
                             src={item.img}
                             alt={item.title}
@@ -35,7 +36,7 @@ const Treatments = () => {
                             height={250}
                             className="object-cover w-full h-48"
                         />
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>

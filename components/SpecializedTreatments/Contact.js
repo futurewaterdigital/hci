@@ -25,10 +25,10 @@ const Contact = () => {
   ]
 
   return (
-    <div className="text-center py-10 container mx-auto">
-      <h2 className="text-lg font-semibold mb-6">
+    <div className="text-center pb-10 container mx-auto">
+      <h3 className="text-lg font-semibold mb-6">
         Healthcare International’s Patient Coordinators are here to help you.
-      </h2>
+      </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {contacts.map((item, index) =>
           item.type === "link" ? (

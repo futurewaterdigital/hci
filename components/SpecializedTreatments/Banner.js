@@ -8,7 +8,7 @@ const Banner = () => {
             {/* Background Image */}
             <div className="absolute inset-0 bg-right bg-no-repeat bg-[url('/specialized-treatments/SpecializedTreatmentsBanner.png')] bg-cover"></div>
             {/* Gradient + Content */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0e57a0] via-[#0e57a0cf] to-transparent opacity-90"></div>
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0e57a0] via-[#0e57a0cf] to-transparent opacity-90"></div> */}
 
             <div className="relative flex flex-col items-center justify-end h-full text-white p-6 pb-12">
                 <H1
