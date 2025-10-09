@@ -4,7 +4,7 @@ import H1 from '@/components/ui/h1'
 
 const Banner = () => {
     return (
-        <div className="relative lg:h-screen h-[100vh]" id="home">
+        <div className="relative lg:h-[740px] h-[100vh]" id="home">
             {/* Background Image */}
             <div className="absolute inset-0 bg-right bg-no-repeat bg-[url('/specialized-treatments/SpecializedTreatmentsBanner.png')] bg-cover"></div>
             {/* Gradient + Content */}
