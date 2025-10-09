@@ -8,7 +8,7 @@ const treatments = [
     { title: "Neurosciences", img: "/specialized-treatments/neurosciences.png" },
     { title: "Gastroenterology", img: "/specialized-treatments/gastroenterology.png" },
     { title: "Orthopedics", img: "/specialized-treatments/orthopedic.png" },
-    { title: "Other Conditions", img: "/specialized-treatments/Other-conditions.png" },
+    { title: "Other Conditions", img: "/specialized-treatments/other-conditions.png" },
 ]
 
 const Treatments = () => {
