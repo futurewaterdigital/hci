@@ -456,6 +456,9 @@ function ConsultantForm() {
                 <h3 className="text-lg md:text-xl mt-2 pt-10">
                     Our Expert Team of doctors will provide a customized treatment plan for your medical condition.
                 </h3>
+                <h3 className="text-lg md:text-xl mt-2 pt-3">
+                Recognised by most insurance companies and corporates.
+                </h3>
                 <hr className="w-64 h-1 mx-auto my-6 bg-[#D84498] border-0 rounded" />
             </div>
         </div>
