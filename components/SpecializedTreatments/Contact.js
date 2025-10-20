@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Contact = () => {
   const contacts = [
     {
-      title: "Phone",
+      title: "WhatsApp",
       value: "+91 9008 764 954",
       link: "tel:+919008764954",
       type: "external"
@@ -25,11 +25,11 @@ const Contact = () => {
   ]
 
   return (
-    <div className="text-center pb-10 container mx-auto">
-      <h3 className="text-lg font-semibold mb-6">
+    <div className="text-center pb-10 container mx-auto px-4">
+      <h3 className="text-xl font-semibold mb-6">
         Healthcare International’s Patient Coordinators are here to help you.
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
         {contacts.map((item, index) =>
           item.type === "link" ? (
             <Link
@@ -37,7 +37,7 @@ const Contact = () => {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="shadow-md rounded-lg p-10 bg-white hover:shadow-lg transition block"
+              className="shadow-md rounded-lg p-5 sm:p-8 md:p-10 bg-white hover:shadow-lg transition block"
             >
               <h3 className="text-[#0E56A0] font-medium text-lg mb-2">{item.title}</h3>
               <p className="text-gray-800">{item.value}</p>
@@ -46,7 +46,7 @@ const Contact = () => {
             <a
               key={index}
               href={item.link}
-              className="shadow-md rounded-lg p-10 bg-white hover:shadow-lg transition block"
+              className="shadow-md rounded-lg p-5 sm:p-8 md:p-10 bg-white hover:shadow-lg transition block"
             >
               <h3 className="text-[#0E56A0] font-medium text-lg mb-2">{item.title}</h3>
               <p className="text-gray-800">{item.value}</p>
