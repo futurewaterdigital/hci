@@ -17,7 +17,7 @@ export const metadata = {
       {
         url: "/images/homeBanner.jpg",
         width: 1200,
-        height: 630,
+        height: 630,  
         alt: "Healthcare International",
       },
     ],
