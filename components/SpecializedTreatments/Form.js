@@ -153,7 +153,6 @@ function ConsultantForm() {
 
         const validationErrors = {};
         if (!yourName) validationErrors.yourName = "Name is required.";
-        if (!yourEmail) validationErrors.yourEmail = "Email is required.";
         if (!yourPhone) validationErrors.yourPhone = "Phone number is required.";
         if (yourPhone.length > 10)
             validationErrors.yourPhone = "Phone number cannot exceed 10 digits.";
@@ -238,7 +237,7 @@ function ConsultantForm() {
     };
 
     return (
-        <div id="form" className="w-full my-10 px-2 lg:px-0">
+        <div id="form" className="w-full my-10 px-3 sm:px-4 lg:px-0">
             {/* Success Modal */}
             {showSuccessModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -263,19 +262,19 @@ function ConsultantForm() {
             )}
 
             <div className="bg-white lg:w-9/12 mx-auto text-center rounded-lg drop-shadow-lg border border-grey-100">
-                <h3 className="py-4 lg:text-3xl text-2xl p-4 lg:p-4 bg-[#0E56A0] text-white">
+                <h3 className="py-3 sm:py-4 lg:text-3xl text-xl sm:text-2xl px-3 sm:px-4 lg:p-4 bg-[#0E56A0] text-white">
                     Please fill in your details to get expert advice
                 </h3>
-                <div className="w-full mx-auto p-10">
+                <div className="w-full mx-auto p-4 sm:p-6 md:p-8 lg:p-10">
                     <form onSubmit={handleSubmit}>
-                        <div className="grid gap-6 mb-6 md:grid-cols-3">
+                        <div className="grid gap-4 sm:gap-6 mb-6 md:grid-cols-3">
                             <div>
                                 <input
                                     type="text"
                                     name="yourName"
                                     value={yourName}
                                     onChange={handleTextChange}
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 sm:p-4"
                                     placeholder="Name *"
                                 />
                                 {errors.yourName && (
@@ -293,7 +292,7 @@ function ConsultantForm() {
                                     onChange={handleTextChange}
                                     min="1"
                                     max="120"
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 sm:p-4"
                                     placeholder="Age *"
                                 />
                                 {errors.age && (
@@ -309,7 +308,7 @@ function ConsultantForm() {
                                     name="city"
                                     value={city}
                                     onChange={handleTextChange}
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 sm:p-4"
                                     placeholder="City *"
                                 />
                                 {errors.city && (
@@ -337,7 +336,7 @@ function ConsultantForm() {
                                 )}
                             </div> */}
                         </div>
-                        <div className="grid gap-6 mb-6 md:grid-cols-2">
+                        <div className="grid gap-4 sm:gap-6 mb-6 md:grid-cols-2">
                             <div>
                                 <div className="flex">
                                     <div>
@@ -346,11 +345,11 @@ function ConsultantForm() {
                                             name="countryCode"
                                             value={selectedCode}
                                             onChange={handleCodeInputChange}
-                                            className="block w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-s-lg border border-gray-300 p-4"
+                                            className="block w-28 sm:w-40 z-20 text-sm text-gray-900 bg-gray-50 rounded-s-lg border border-gray-300 p-3 sm:p-4"
                                             placeholder="Country Code"
                                         />
                                         {filteredCountryCodes.length > 0 && (
-                                            <div className="absolute z-10 bg-white border border-gray-300 mt-1 w-2/12 max-h-40 overflow-y-auto rounded-md shadow-lg text-start">
+                                            <div className="absolute z-10 bg-white border border-gray-300 mt-1 w-40 sm:w-60 max-h-40 overflow-y-auto rounded-md shadow-lg text-start">
                                                 <ul className="py-2 text-sm text-gray-700">
                                                     {filteredCountryCodes.map((country) => (
                                                         <li
@@ -372,7 +371,7 @@ function ConsultantForm() {
                                             onChange={handleTextChange}
                                             maxLength="10"
                                             id="search-dropdown"
-                                            className="block w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 p-4"
+                                            className="block w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 p-3 sm:p-4"
                                             placeholder="Phone Number *"
                                         />
                                     </div>
@@ -390,8 +389,8 @@ function ConsultantForm() {
                                     name="yourEmail"
                                     value={yourEmail}
                                     onChange={handleTextChange}
-                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-4"
-                                    placeholder="Email *"
+                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 sm:p-4"
+                                    placeholder="Email ID"
                                 />
                                 {errors.yourEmail && (
                                     <p className="text-red-500 text-start text-[14px]">
@@ -400,13 +399,13 @@ function ConsultantForm() {
                                 )}
                             </div>
                         </div>
-                        <div className="grid gap-6 mb-6 md:grid-cols-3">
+                        <div className="grid gap-4 sm:gap-6 mb-6 md:grid-cols-3">
                             <div className="col-span-3">
                                 <textarea
                                     name="medicalReports"
                                     value={medicalReports}
                                     onChange={(e) => setMedicalReports(e.target.value)}
-                                    className={`bg-gray-50 border ${errors.medicalReports ? 'border-red-500' : 'border-gray-300'} text-gray-900 text-sm rounded-lg block w-full p-4`}
+                                    className={`bg-gray-50 border ${errors.medicalReports ? 'border-red-500' : 'border-gray-300'} text-gray-900 text-sm rounded-lg block w-full p-3 sm:p-4`}
                                     placeholder="Medical Reports and Clinical Findings *"
                                     rows="4"
                                 />
@@ -421,7 +420,7 @@ function ConsultantForm() {
                             <button
                                 type="submit"
                                 disabled={isLoading}
-                                className={`text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white ${isLoading ? "opacity-50 cursor-not-allowed" : ""
+                                className={`text-[#D84498] focus:ring-1 focus:outline-none focus:ring-[#D84498] font-medium rounded-xl text-sm w-full sm:w-auto lg:px-60 sm:px-12 md:px-24 px-8 py-2.5 text-center border border-[#D84498] hover:bg-[#D84498] hover:text-white ${isLoading ? "opacity-50 cursor-not-allowed" : ""
                                     }`}>
                                 {isLoading ? (
                                     <span className="flex items-center justify-center">
@@ -454,11 +453,11 @@ function ConsultantForm() {
             </div>
             <div className="text-center">
                 <h3 className="text-lg md:text-xl mt-2 pt-10">
-                    Our Expert Team of doctors will provide a customized treatment plan for your medical condition.
+                Our Expert Team of doctors will provide a customized treatment plan for your medical condition.
                 </h3>
-                <h3 className="text-lg md:text-xl mt-2 pt-3">
-                Recognised by most insurance companies and corporates.
-                </h3>
+                {/* <h3 className="text-lg md:text-xl mt-2 pt-3">
+                    Recognised by most insurance companies and corporates.
+                </h3> */}
                 <hr className="w-64 h-1 mx-auto my-6 bg-[#D84498] border-0 rounded" />
             </div>
         </div>

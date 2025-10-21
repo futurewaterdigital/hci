@@ -1462,7 +1462,7 @@ function BrainTumor() {
         <Conclusion data={data.conclusion} />
 
         {/* Best Hospitals Section */}
-        <div id="hospital-section" className="my-10">
+        {/* <div id="hospital-section" className="my-10">
           <h2 className="text-2xl text-center font-medium mb-6">Best Hospitals for {data.title} Treatment</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.best_hospitals.map((hospital, index) => (
@@ -1471,7 +1471,7 @@ function BrainTumor() {
               </Link>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <FooterLinks head={data.title} />
         {/* Doctors Section - Wrapped BookButton for scrolling */}
